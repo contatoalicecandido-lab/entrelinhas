@@ -1,0 +1,24 @@
+
+{
+  "name": "entrelinhas",
+  "version": "1.0.0",
+  "description": "Freshness-aware evidence verification layer for AI applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "node teste-atualidade.js && node teste-evidencia.js && node teste-preparar-evidencia.js && node teste-integracao-persistencia-comparador.js && node teste-rastreabilidade-fluxo-controlado.js",
+    "test:benchmark": "node teste-benchmark.js"
+  },
+  "keywords": [
+    "ai",
+    "evidence-verification",
+    "freshness",
+    "bifrost",
+    "tavily"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^18.0.9"
+  }
+}
