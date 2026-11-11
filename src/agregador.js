@@ -1,7 +1,7 @@
 
 const { validarData } = require("./atualidade");
 
-const VERSAO_REGRAS = "1.1.0";
+const VERSAO_REGRAS = "1.2.0";
 
 const VEREDITOS = [
   "ATUAL",
@@ -138,6 +138,16 @@ function dataVerificavel(fonte) {
   return true;
 }
 
+function obterStatusDatasDeclaradas(fonte) {
+  const temPublicacao = fonte?.data_publicacao !== null &&
+    fonte?.data_publicacao !== undefined;
+  const temAtualizacao = fonte?.data_atualizacao !== null &&
+    fonte?.data_atualizacao !== undefined;
+
+  if (!temPublicacao && !temAtualizacao) return "AUSENTE";
+  return dataVerificavel(fonte) ? "VERIFICAVEL" : "INVALIDA_OU_INCOERENTE";
+}
+
 function prepararEvidencias(afirmacao, dominiosOficiais) {
   const evidencias = afirmacao.evidencias ?? [];
 
@@ -166,6 +176,8 @@ function prepararEvidencias(afirmacao, dominiosOficiais) {
       );
 
       const possuiDataVerificavel = dataVerificavel(fonte);
+      const statusDatasDeclaradas = obterStatusDatasDeclaradas(fonte);
+      const consultadoEm = fonte.coletado_em ?? evidencia?.coleta?.coletado_em ?? null;
 
       const atual =
         utilizavel &&
@@ -182,6 +194,8 @@ function prepararEvidencias(afirmacao, dominiosOficiais) {
         oficial,
         atual,
         status_atualidade: atualidade.status ?? "UNVERIFIABLE",
+        status_datas_declaradas: statusDatasDeclaradas,
+        consultado_em: consultadoEm,
         data_publicacao: fonte.data_publicacao ?? null,
         data_atualizacao: fonte.data_atualizacao ?? null,
         justificativa: classificacao.justificativa ?? null
@@ -344,6 +358,39 @@ function determinarVeredito(grupos) {
   return "NAO_VERIFICAVEL";
 }
 
+function criarResumo(veredito) {
+  const resumos = {
+    ATUAL:
+      "As evidências utilizáveis incluem uma fonte oficial atual que apoia a afirmação, sem contradição atual identificada entre as fontes analisadas. Isso não é uma garantia absoluta de verdade.",
+    CONTRADITA_POR_FONTE_ATUAL:
+      "Uma fonte oficial atual contradiz a afirmação. As evidências analisadas não sustentam a afirmação como foi apresentada.",
+    CONFLITO:
+      "As fontes utilizáveis apresentam posições divergentes. Não foi possível resolver o conflito com as evidências disponíveis.",
+    SUPORTE_FRACO:
+      "Há evidências que apoiam a afirmação, mas não foi identificada uma fonte oficial atual suficiente para uma conclusão mais forte.",
+    NAO_VERIFICAVEL:
+      "Não foi possível verificar a afirmação com as evidências utilizáveis encontradas. Isso não significa que ela seja falsa."
+  };
+
+  return resumos[veredito];
+}
+
+function criarResumoComDatas(veredito, evidencias) {
+  if (veredito === "SUPORTE_FRACO") {
+    const apoioOficialSemDataDeclarada = evidencias.some(evidencia =>
+      evidencia.oficial &&
+      evidencia.postura === "SUPPORTS" &&
+      evidencia.status_datas_declaradas === "AUSENTE"
+    );
+
+    if (apoioOficialSemDataDeclarada) {
+      return "Uma fonte oficial apoia a afirmação, mas não declara data de publicação ou atualização verificável. A data da consulta informa quando a página foi observada, não quando seu conteúdo foi atualizado; por isso, não é possível confirmar a atualidade.";
+    }
+  }
+
+  return criarResumo(veredito);
+}
+
 function agregarEvidencias(afirmacao, opcoes = {}) {
   if (
     !afirmacao ||
@@ -386,6 +433,12 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
     );
   }
 
+  if (evidencias.some(evidencia => evidencia.status_datas_declaradas === "AUSENTE")) {
+    limitacoes.push(
+      "A data da consulta registra quando a página foi observada; não substitui uma data declarada de publicação ou atualização."
+    );
+  }
+
   if (!evidencias.some(evidencia => evidencia.oficial)) {
     limitacoes.push(
       "Nenhuma fonte pertence ao cadastro de domínios oficiais informado."
@@ -420,6 +473,7 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
   return {
     status: "CLASSIFICADO",
     veredito,
+    resumo: criarResumoComDatas(veredito, evidencias),
     afirmacao: afirmacao.texto,
     score_qualidade_evidencia: score,
     versao_regras: VERSAO_REGRAS,
@@ -439,6 +493,8 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
         postura: evidencia.postura,
         atual: evidencia.atual,
         status_atualidade: evidencia.status_atualidade,
+        status_datas_declaradas: evidencia.status_datas_declaradas,
+        consultado_em: evidencia.consultado_em,
         data_publicacao: evidencia.data_publicacao,
         data_atualizacao: evidencia.data_atualizacao
       }))
@@ -451,6 +507,7 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
 module.exports = {
   agregarEvidencias,
   determinarVeredito,
+  criarResumo,
   calcularScore,
   normalizarDominio,
   VERSAO_REGRAS,

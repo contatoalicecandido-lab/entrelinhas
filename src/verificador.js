@@ -5,6 +5,7 @@ const { classificarEvidencia } = require("./classificador");
 const { avaliarCorrespondencia } = require("./correspondencia");
 const { prepararEvidencia } = require("./preparar-evidencia");
 const { criarBanco } = require("./banco");
+const { agregarEvidencias, normalizarDominio } = require("./agregador");
 const { randomUUID } = require("node:crypto");
 
 const {
@@ -127,10 +128,121 @@ function validarOpcoes(opcoes) {
     throw new Error("Os tipos de afirmação são inválidos.");
   }
 
+  const dominiosOficiais = opcoes.dominiosOficiais ?? [];
+
+  if (!Array.isArray(dominiosOficiais)) {
+    throw new Error("dominiosOficiais precisa ser uma lista.");
+  }
+
+  function validarMapaDeDominios(valor, nome) {
+    if (!valor || typeof valor !== "object" || Array.isArray(valor)) {
+      throw new Error(`${nome} precisa ser um objeto de listas de domínios.`);
+    }
+    for (const [chave, dominios] of Object.entries(valor)) {
+      if (!chave.trim() || !Array.isArray(dominios)) {
+        throw new Error(`${nome} contém uma chave ou lista inválida.`);
+      }
+    }
+    return valor;
+  }
+
+  const dominiosOficiaisPorTipo = validarMapaDeDominios(
+    opcoes.dominiosOficiaisPorTipo ?? {},
+    "dominiosOficiaisPorTipo"
+  );
+  const dominiosOficiaisPorAfirmacao = validarMapaDeDominios(
+    opcoes.dominiosOficiaisPorAfirmacao ?? {},
+    "dominiosOficiaisPorAfirmacao"
+  );
+
   return {
     maxEvidencias: limite,
     dataReferencia,
-    tiposPorAfirmacao
+    tiposPorAfirmacao,
+    dominiosOficiais,
+    dominiosOficiaisPorTipo,
+    dominiosOficiaisPorAfirmacao
+  };
+}
+
+function obterDominiosOficiais(resultado, opcoes) {
+  return opcoes.dominiosOficiaisPorAfirmacao[resultado.id] ??
+    opcoes.dominiosOficiaisPorTipo[resultado.tipo_afirmacao] ??
+    opcoes.dominiosOficiais;
+}
+
+function agregarResultadoAfirmacao(resultado, opcoes) {
+  const dominiosOficiais = obterDominiosOficiais(resultado, opcoes);
+  resultado.dominios_oficiais_usados = [...dominiosOficiais];
+  resultado.agregacao = agregarEvidencias(
+    {
+      texto: resultado.texto,
+      evidencias: resultado.evidencias
+    },
+    { dominiosOficiais }
+  );
+
+  return resultado;
+}
+
+function priorizarFontesOficiais(evidencias, dominiosOficiais) {
+  if (!dominiosOficiais.length) {
+    return evidencias;
+  }
+
+  return evidencias
+    .map((evidencia, indice) => {
+      const dominioFonte = normalizarDominio(evidencia.url);
+      const oficial = Boolean(
+        dominioFonte && dominiosOficiais.some(dominioOficial =>
+          dominioFonte === dominioOficial ||
+          dominioFonte.endsWith(`.${dominioOficial}`)
+        )
+      );
+
+      return { evidencia, indice, oficial };
+    })
+    .sort((a, b) => Number(b.oficial) - Number(a.oficial) || a.indice - b.indice)
+    .map(item => item.evidencia);
+}
+
+function resumirVerificacao(afirmacoes) {
+  if (afirmacoes.length === 0) {
+    return {
+      veredito: "NAO_VERIFICAVEL",
+      resumo:
+        "Não foi possível identificar afirmações verificáveis no texto enviado.",
+      total_afirmacoes: 0,
+      contagem_vereditos: {}
+    };
+  }
+
+  const contagem = {};
+  for (const afirmacao of afirmacoes) {
+    const veredito = afirmacao.agregacao?.veredito ?? "NAO_VERIFICAVEL";
+    contagem[veredito] = (contagem[veredito] ?? 0) + 1;
+  }
+
+  if (afirmacoes.length === 1) {
+    return {
+      veredito: afirmacoes[0].agregacao.veredito,
+      resumo: afirmacoes[0].agregacao.resumo,
+      total_afirmacoes: 1,
+      contagem_vereditos: contagem
+    };
+  }
+
+  const partes = Object.entries(contagem).map(
+    ([veredito, quantidade]) => `${quantidade} ${veredito}`
+  );
+
+  return {
+    veredito: "MULTIPLAS_AFIRMACOES",
+    resumo:
+      `O texto foi dividido em ${afirmacoes.length} afirmações. ` +
+      `Resultados por afirmação: ${partes.join(", ")}. Consulte cada afirmação e suas fontes antes de formar uma conclusão geral.`,
+    total_afirmacoes: afirmacoes.length,
+    contagem_vereditos: contagem
   };
 }
 
@@ -166,8 +278,11 @@ async function verificarAfirmacao(afirmacao, opcoes) {
     );
   } catch (erro) {
     resultado.erro_busca = erro.message;
-    return resultado;
+    return agregarResultadoAfirmacao(resultado, opcoes);
   }
+
+  const dominiosOficiais = obterDominiosOficiais(resultado, opcoes);
+  resultado.dominios_oficiais_usados = [...dominiosOficiais];
 
   let evidenciasEncontradas;
 
@@ -177,20 +292,31 @@ async function verificarAfirmacao(afirmacao, opcoes) {
       {
         idVerificacao: opcoes.idVerificacao,
         idAfirmacao: afirmacao.id,
+        dominiosOficiais,
         onMetadata: opcoes.onMetadataPesquisa
       }
     );
   } catch (erro) {
     resultado.erro_busca = erro.message;
-    return resultado;
+    return agregarResultadoAfirmacao(resultado, opcoes);
   }
 
-  const evidenciasSelecionadas = evidenciasEncontradas.slice(
+  const evidenciasPrioritarias = priorizarFontesOficiais(
+    evidenciasEncontradas,
+    dominiosOficiais.map(normalizarDominio)
+  );
+
+  const evidenciasSelecionadas = evidenciasPrioritarias.slice(
     0,
     opcoes.maxEvidencias
   );
 
   for (const evidencia of evidenciasSelecionadas) {
+    // Separa os dados de aquisição da fonte original.
+    // Compatível com evidências antigas sem objeto de coleta.
+
+    const { coleta = null, ...fonte } = evidencia;
+
     let preparacao;
     let correspondencia;
     let classificacao;
@@ -200,11 +326,12 @@ async function verificarAfirmacao(afirmacao, opcoes) {
     try {
       preparacao = prepararEvidencia(
         afirmacao.texto,
-        evidencia
+        fonte
       );
     } catch (erro) {
       resultado.evidencias.push({
-        fonte: evidencia,
+        fonte,
+        coleta,
         preparacao: {
           motivo_preparacao: "PREPARATION_ERROR",
           erro: erro.message
@@ -218,7 +345,7 @@ async function verificarAfirmacao(afirmacao, opcoes) {
           justificativa: "A análise não foi executada."
         },
         atualidade: avaliarAtualidade(
-          evidencia,
+          fonte,
           resultado.tipo_afirmacao,
           opcoes.dataReferencia
         )
@@ -246,7 +373,7 @@ async function verificarAfirmacao(afirmacao, opcoes) {
           {
             idVerificacao: opcoes.idVerificacao,
             idAfirmacao: afirmacao.id,
-            urlEvidencia: evidencia.url ?? null,
+            urlEvidencia: fonte.url ?? null,
             tentativa,
             onMetadata: opcoes.onMetadata
           }
@@ -271,7 +398,7 @@ async function verificarAfirmacao(afirmacao, opcoes) {
             {
               idVerificacao: opcoes.idVerificacao,
               idAfirmacao: afirmacao.id,
-              urlEvidencia: evidencia.url ?? null,
+              urlEvidencia: fonte.url ?? null,
               tentativa,
               onMetadata: opcoes.onMetadata
             }
@@ -314,15 +441,16 @@ async function verificarAfirmacao(afirmacao, opcoes) {
     // 4. Avalia a atualidade usando os metadados originais da fonte.
 
     const atualidade = avaliarAtualidade(
-      evidencia,
+      fonte,
       resultado.tipo_afirmacao,
       opcoes.dataReferencia
     );
 
-    // 5. Guarda a fonte original e os dados da preparação.
+    // 5. Guarda a fonte original separada dos dados de coleta.
 
     resultado.evidencias.push({
-      fonte: evidencia,
+      fonte,
+      coleta,
       preparacao: metadadosPreparacao,
       correspondencia,
       classificacao,
@@ -330,7 +458,7 @@ async function verificarAfirmacao(afirmacao, opcoes) {
     });
   }
 
-  return resultado;
+  return agregarResultadoAfirmacao(resultado, opcoes);
 }
 
 async function verificarTexto(texto, opcoes = {}) {
@@ -341,6 +469,7 @@ async function verificarTexto(texto, opcoes = {}) {
   const configuracao = validarOpcoes(opcoes);
 
   // Usa o banco fornecido ou inicializa o banco padrão sob demanda.
+
   const bancoExecucao =
     opcoes.banco ?? (bancoPadrao ??= criarBanco());
 
@@ -409,6 +538,7 @@ async function verificarTexto(texto, opcoes = {}) {
     texto_original: texto.trim(),
     verificado_em: new Date().toISOString(),
     total_afirmacoes: resultados.length,
+    sintese: resumirVerificacao(resultados),
     afirmacoes: resultados,
     rastreabilidade_modelo: chamadasModelo,
     rastreabilidade_pesquisa: chamadasPesquisa

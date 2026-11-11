@@ -1,4 +1,3 @@
-
 const { createHash } = require("node:crypto");
 
 const {
@@ -96,6 +95,127 @@ function obterMetadadosNormalizacao(anterior, atual) {
   };
 }
 
+/*
+ * Obtém a data da coleta considerando tanto o formato
+ * direto do histórico quanto o objeto de coleta aninhado.
+ */
+function obterDataColeta(registro) {
+  return registro?.coletado_em ??
+    registro?.coleta?.coletado_em ??
+    null;
+}
+
+/*
+ * Aceita datas ISO 8601 completas com indicação de fuso horário.
+ * Também verifica os componentes da data para impedir que datas
+ * impossíveis sejam aceitas por normalizações automáticas do JavaScript.
+ */
+function interpretarDataColeta(valor) {
+  if (
+    typeof valor !== "string" ||
+    valor.trim() === ""
+  ) {
+    return null;
+  }
+
+  const correspondencia = valor.match(
+    /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})(?:\.(\d{1,9}))?(Z|[+-]\d{2}:\d{2})$/
+  );
+
+  if (!correspondencia) {
+    return null;
+  }
+
+  const ano = Number(correspondencia[1]);
+  const mes = Number(correspondencia[2]);
+  const dia = Number(correspondencia[3]);
+  const hora = Number(correspondencia[4]);
+  const minuto = Number(correspondencia[5]);
+  const segundo = Number(correspondencia[6]);
+  const fuso = correspondencia[8];
+
+  if (
+    mes < 1 ||
+    mes > 12 ||
+    hora > 23 ||
+    minuto > 59 ||
+    segundo > 59
+  ) {
+    return null;
+  }
+
+  const dataCalendario = new Date(Date.UTC(ano, mes - 1, dia));
+
+  if (
+    dataCalendario.getUTCFullYear() !== ano ||
+    dataCalendario.getUTCMonth() !== mes - 1 ||
+    dataCalendario.getUTCDate() !== dia
+  ) {
+    return null;
+  }
+
+  if (fuso !== "Z") {
+    const horasFuso = Number(fuso.slice(1, 3));
+    const minutosFuso = Number(fuso.slice(4, 6));
+
+    if (
+      horasFuso > 23 ||
+      minutosFuso > 59
+    ) {
+      return null;
+    }
+  }
+
+  const timestamp = Date.parse(valor);
+
+  if (!Number.isFinite(timestamp)) {
+    return null;
+  }
+
+  return timestamp;
+}
+
+/*
+ * Valida se existe uma ordem temporal confiável entre as duas coletas.
+ */
+function validarOrdemTemporal(anterior, atual) {
+  const dataAnteriorOriginal = obterDataColeta(anterior);
+  const dataAtualOriginal = obterDataColeta(atual);
+
+  const timestampAnterior =
+    interpretarDataColeta(dataAnteriorOriginal);
+
+  const timestampAtual =
+    interpretarDataColeta(dataAtualOriginal);
+
+  if (
+    timestampAnterior === null ||
+    timestampAtual === null
+  ) {
+    return {
+      valida: false,
+      status: "NOT_COMPUTED_INVALID_DATE",
+      justificativa:
+        "Uma ou ambas as coletas não possuem uma data ISO 8601 válida e interpretável."
+    };
+  }
+
+  if (timestampAtual <= timestampAnterior) {
+    return {
+      valida: false,
+      status: "NOT_COMPUTED_UNORDERABLE_DATE",
+      justificativa:
+        "Não foi possível confirmar uma ordem temporal válida: a coleta atual precisa ser posterior à coleta anterior."
+    };
+  }
+
+  return {
+    valida: true,
+    timestamp_anterior: timestampAnterior,
+    timestamp_atual: timestampAtual
+  };
+}
+
 function gerarHash(conteudo) {
   return createHash("sha256")
     .update(conteudo, "utf8")
@@ -103,7 +223,7 @@ function gerarHash(conteudo) {
 }
 
 function tokenizar(conteudo) {
-  return conteudo.match(/\S+/g) ?? [];
+  return conteudo.match(/\n+|[^\s]+/g) ?? [];
 }
 
 function agruparTokens(tokens) {
@@ -240,8 +360,31 @@ function agruparAlteracoes(operacoes) {
 }
 
 function calcularDiferencas(conteudoAnterior, conteudoAtual) {
-  const tokensAnteriores = tokenizar(conteudoAnterior);
-  const tokensAtuais = tokenizar(conteudoAtual);
+  const normalizacaoAnterior = normalizarFonte(conteudoAnterior);
+  const normalizacaoAtual = normalizarFonte(conteudoAtual);
+
+  if (
+    normalizacaoAnterior.status !== "NORMALIZED" ||
+    normalizacaoAtual.status !== "NORMALIZED"
+  ) {
+    return {
+      status: "NOT_COMPUTED_INVALID_CONTENT",
+      justificativa:
+        "Não foi possível calcular as diferenças porque um ou ambos os conteúdos não possuem texto suficiente.",
+      trechos_removidos: [],
+      trechos_adicionados: [],
+      alteracoes: []
+    };
+  }
+
+  const textoAnterior =
+    normalizacaoAnterior.conteudo_normalizado;
+
+  const textoAtual =
+    normalizacaoAtual.conteudo_normalizado;
+
+  const tokensAnteriores = tokenizar(textoAnterior);
+  const tokensAtuais = tokenizar(textoAtual);
 
   if (
     tokensAnteriores.length > LIMITE_TOKENS_DIFF ||
@@ -416,7 +559,6 @@ function persistirComparacao(banco, dados) {
         })
       );
 
-      
       const classificadas = avaliacoes.filter(
         item => item.impacto?.status === "CLASSIFICADO"
       );
@@ -439,7 +581,6 @@ function persistirComparacao(banco, dados) {
             item => item.impacto?.nivel === nivel
           )
         ) ?? "INDETERMINADO";
-
 
       const avaliacaoConsolidada = {
         status: statusConsolidado,
@@ -489,6 +630,204 @@ function montarResultadoSemPersistencia(resultado, justificativa) {
   };
 }
 
+function montarResultadoNaoComparavel(dadosBase, validacaoTemporal) {
+  return {
+    status: "NOT_COMPARABLE",
+    justificativa: validacaoTemporal.justificativa,
+    ...dadosBase,
+    detalhamento: {
+      status: validacaoTemporal.status,
+      justificativa: validacaoTemporal.justificativa
+    },
+    persistencia: {
+      status: "NOT_PERSISTED",
+      justificativa:
+        "Comparações sem identidade de fonte ou ordem temporal confiável não são registradas como válidas."
+    }
+  };
+}
+
+function validarCompatibilidadeUrlCanonica(anterior, atual) {
+  function normalizarUrl(valor) {
+    if (typeof valor !== "string" || valor.trim() === "") {
+      return null;
+    }
+
+    try {
+      const url = new URL(valor);
+      if (!["http:", "https:"].includes(url.protocol)) {
+        return null;
+      }
+      return url.toString();
+    } catch {
+      return null;
+    }
+  }
+
+  const canonicaAnterior = anterior?.coleta?.url_canonica;
+  const canonicaAtual = atual?.coleta?.url_canonica;
+  const ambasLegadas =
+    canonicaAnterior == null && canonicaAtual == null;
+
+  // Registros legados não armazenavam metadados de coleta. Quando ambos
+  // são legados, a URL registrada na evidência é a única identidade comum
+  // disponível; não se cria ID de coleta nem se mistura legado com coleta nova.
+  const urlAnterior = ambasLegadas
+    ? normalizarUrl(anterior?.url)
+    : normalizarUrl(canonicaAnterior);
+  const urlAtual = ambasLegadas
+    ? normalizarUrl(atual?.url)
+    : normalizarUrl(canonicaAtual);
+
+  if (!urlAnterior || !urlAtual) {
+    return {
+      valida: false,
+      status: "NOT_COMPUTED_INVALID_CANONICAL_URL",
+      justificativa:
+        "Uma ou ambas as coletas não possuem URL canônica HTTP(S) válida. Não é possível confirmar que representam a mesma fonte."
+    };
+  }
+
+  if (urlAnterior !== urlAtual) {
+    return {
+      valida: false,
+      status: "NOT_COMPUTED_INCOMPATIBLE_CANONICAL_URL",
+      justificativa:
+        "As coletas possuem URLs canônicas diferentes. Não é seguro comparar seus conteúdos como versões da mesma fonte."
+    };
+  }
+
+  return { valida: true };
+}
+
+
+function normalizarParametrosBusca(parametros) {
+  if (
+    !parametros ||
+    typeof parametros !== "object" ||
+    Array.isArray(parametros)
+  ) {
+    return null;
+  }
+
+  function ordenarChaves(valor) {
+    if (Array.isArray(valor)) {
+      return valor.map(ordenarChaves);
+    }
+
+    if (valor && typeof valor === "object") {
+      return Object.keys(valor)
+        .sort()
+        .reduce((resultado, chave) => {
+          resultado[chave] = ordenarChaves(valor[chave]);
+          return resultado;
+        }, {});
+    }
+
+    return valor;
+  }
+
+  return JSON.stringify(ordenarChaves(parametros));
+}
+
+function validarCompatibilidadeBusca(anterior, atual) {
+  const consultaAnterior =
+    typeof anterior?.consulta === "string"
+      ? anterior.consulta.trim()
+      : "";
+
+  const consultaAtual =
+    typeof atual?.consulta === "string"
+      ? atual.consulta.trim()
+      : "";
+
+  const parametrosAnterior = anterior?.parametros_busca;
+  const parametrosAtual = atual?.parametros_busca;
+
+  if (!consultaAnterior || !consultaAtual) {
+    return {
+      valida: false,
+      justificativa:
+        "Uma ou ambas as coletas de busca não possuem consulta registrada. Não é possível comprovar a compatibilidade dos snippets."
+    };
+  }
+
+  if (consultaAnterior !== consultaAtual) {
+    return {
+      valida: false,
+      justificativa:
+        "As coletas de busca utilizaram consultas diferentes. Os snippets não podem ser interpretados como evolução temporal da mesma busca."
+    };
+  }
+
+  if (
+    !parametrosAnterior ||
+    !parametrosAtual ||
+    typeof parametrosAnterior !== "object" ||
+    typeof parametrosAtual !== "object" ||
+    Array.isArray(parametrosAnterior) ||
+    Array.isArray(parametrosAtual)
+  ) {
+    return {
+      valida: false,
+      justificativa:
+        "Uma ou ambas as coletas não possuem parâmetros de busca válidos. Não é possível comprovar a compatibilidade dos snippets."
+    };
+  }
+
+  if (
+    typeof parametrosAnterior.query !== "string" ||
+    typeof parametrosAtual.query !== "string" ||
+    parametrosAnterior.query.trim() !== consultaAnterior ||
+    parametrosAtual.query.trim() !== consultaAtual
+  ) {
+    return {
+      valida: false,
+      justificativa:
+        "A consulta registrada não corresponde à consulta armazenada nos parâmetros de busca."
+    };
+  }
+
+  const assinaturaAnterior =
+    normalizarParametrosBusca(parametrosAnterior);
+
+  const assinaturaAtual =
+    normalizarParametrosBusca(parametrosAtual);
+
+  if (assinaturaAnterior !== assinaturaAtual) {
+    return {
+      valida: false,
+      justificativa:
+        "As coletas utilizaram parâmetros de busca diferentes. Não é seguro interpretar a diferença entre snippets como evolução temporal da fonte."
+    };
+  }
+
+  return {
+    valida: true,
+    justificativa:
+      "As consultas e os parâmetros de busca são compatíveis."
+  };
+}
+
+function montarResultadoBuscaNaoComparavel(dadosBase, justificativa) {
+  return {
+    status: "NOT_COMPARABLE",
+    justificativa,
+    ...dadosBase,
+    tipo_fonte_anterior: "tavily_search",
+    tipo_fonte_atual: "tavily_search",
+    detalhamento: {
+      status: "NOT_COMPUTED_INCOMPATIBLE_SEARCH",
+      justificativa
+    },
+    persistencia: {
+      status: "NOT_PERSISTED",
+      justificativa:
+        "Coletas com consultas ou parâmetros de busca incompatíveis não são registradas como comparações válidas."
+    }
+  };
+}
+
 function compararHistoricoFonte(banco, url) {
   if (!banco || typeof banco.listarHistoricoFonte !== "function") {
     throw new Error("A conexão com o histórico do banco é inválida.");
@@ -512,7 +851,24 @@ function compararHistoricoFonte(banco, url) {
     };
   }
 
-  const ultimaColeta = historico[historico.length - 1];
+  // Consolida as evidências por verificação.
+  // Evidências da mesma verificação não representam versões temporais distintas.
+  const historicoPorVerificacao = new Map();
+
+  for (const registro of historico) {
+    const idVerificacao = registro.id_verificacao;
+
+    const identidade = idVerificacao !== null &&
+      idVerificacao !== undefined
+      ? `verificacao:${idVerificacao}`
+      : `evidencia:${registro.id_evidencia}`;
+
+    historicoPorVerificacao.set(identidade, registro);
+  }
+
+  const aquisicoes = [...historicoPorVerificacao.values()];
+
+  const ultimaColeta = aquisicoes[aquisicoes.length - 1];
   const normalizacaoAtual = obterNormalizacaoColeta(ultimaColeta);
   const conteudoAtual = normalizacaoAtual.conteudo;
 
@@ -526,14 +882,14 @@ function compararHistoricoFonte(banco, url) {
     }
   };
 
-  if (historico.length === 1) {
+  if (aquisicoes.length === 1) {
     const resultado = {
       status: conteudoAtual ? "NEW" : "NOT_ENOUGH_DATA",
       justificativa: conteudoAtual
         ? "Esta é a primeira coleta registrada para essa URL. Ainda não existe uma versão anterior para comparação."
         : "A primeira coleta não contém conteúdo suficiente para comparação.",
       total_coletas: 1,
-      ultima_coleta: ultimaColeta.coletado_em,
+      ultima_coleta: obterDataColeta(ultimaColeta),
       ...metadadosNormalizacaoAtual,
       detalhamento: {
         status: "NOT_APPLICABLE",
@@ -548,7 +904,7 @@ function compararHistoricoFonte(banco, url) {
     return resultado;
   }
 
-  const coletaAnterior = historico[historico.length - 2];
+  const coletaAnterior = aquisicoes[aquisicoes.length - 2];
   const normalizacaoAnterior = obterNormalizacaoColeta(coletaAnterior);
   const conteudoAnterior = normalizacaoAnterior.conteudo;
 
@@ -563,8 +919,8 @@ function compararHistoricoFonte(banco, url) {
   const dadosBase = {
     url,
     total_coletas: historico.length,
-    coleta_anterior: coletaAnterior.coletado_em,
-    ultima_coleta: ultimaColeta.coletado_em,
+    coleta_anterior: obterDataColeta(coletaAnterior),
+    ultima_coleta: obterDataColeta(ultimaColeta),
     ...metadadosNormalizacao
   };
 
@@ -573,6 +929,32 @@ function compararHistoricoFonte(banco, url) {
     idEvidenciaAnterior !== undefined &&
     idEvidenciaAtual !== null &&
     idEvidenciaAtual !== undefined;
+
+  // A comparação temporal precisa ser validada antes de avaliar
+  // conteúdo, hashes ou diferenças textuais.
+  const validacaoTemporal = validarOrdemTemporal(
+    coletaAnterior,
+    ultimaColeta
+  );
+
+  if (!validacaoTemporal.valida) {
+    return montarResultadoNaoComparavel(
+      dadosBase,
+      validacaoTemporal
+    );
+  }
+
+  const compatibilidadeUrlCanonica = validarCompatibilidadeUrlCanonica(
+    coletaAnterior,
+    ultimaColeta
+  );
+
+  if (!compatibilidadeUrlCanonica.valida) {
+    return montarResultadoNaoComparavel(
+      dadosBase,
+      compatibilidadeUrlCanonica
+    );
+  }
 
   if (!conteudoAnterior || !conteudoAtual) {
     const resultado = {
@@ -625,6 +1007,21 @@ function compararHistoricoFonte(banco, url) {
           "Tentativas com métodos de coleta incompatíveis não são registradas como comparações válidas."
       }
     };
+  }
+
+
+  if (tipoAtual === "tavily_search") {
+    const compatibilidadeBusca = validarCompatibilidadeBusca(
+      coletaAnterior.coleta,
+      ultimaColeta.coleta
+    );
+
+    if (!compatibilidadeBusca.valida) {
+      return montarResultadoBuscaNaoComparavel(
+        dadosBase,
+        compatibilidadeBusca.justificativa
+      );
+    }
   }
 
   const hashAnterior = gerarHash(conteudoAnterior);

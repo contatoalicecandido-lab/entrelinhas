@@ -1,6 +1,6 @@
 
 const { DatabaseSync } = require("node:sqlite");
-const { randomUUID } = require("node:crypto");
+const { randomUUID, createHash } = require("node:crypto");
 const fs = require("node:fs");
 const path = require("node:path");
 
@@ -121,6 +121,231 @@ function criarBanco(opcoes = {}) {
       ON avaliacoes_impacto(comparacao_id);
   `);
 
+
+  // Migração v1: separa os registros de aquisição das evidências.
+  function executarMigracoes() {
+    const versaoAtual = banco.prepare("PRAGMA user_version").get().user_version;
+
+    if (versaoAtual > 1) {
+      throw new Error(
+        `O banco possui uma versão de esquema (${versaoAtual}) mais nova que esta aplicação suporta.`
+      );
+    }
+
+    banco.exec("BEGIN IMMEDIATE");
+
+    try {
+      banco.exec(`
+        CREATE TABLE IF NOT EXISTS coletas (
+          id TEXT PRIMARY KEY,
+          id_verificacao TEXT NOT NULL,
+          url_original TEXT NOT NULL,
+          url_canonica TEXT NOT NULL,
+          versao_canonicalizacao TEXT NOT NULL,
+          tipo_fonte TEXT NOT NULL
+            CHECK (tipo_fonte IN ('tavily_search', 'tavily_extract')),
+          status_coleta TEXT NOT NULL
+            CHECK (status_coleta IN ('SUCCESS', 'PARTIAL', 'FAILED')),
+          conteudo TEXT,
+          hash_conteudo TEXT,
+          coletado_em TEXT NOT NULL,
+          id_operacao_busca TEXT,
+          id_operacao_extracao TEXT,
+          consulta TEXT,
+          parametros_busca_json TEXT,
+          parametros_extracao_json TEXT,
+          metadados_json TEXT,
+          FOREIGN KEY (id_verificacao)
+            REFERENCES verificacoes(id)
+            ON DELETE CASCADE
+        );
+      `);
+
+      const colunas = banco.prepare("PRAGMA table_info(evidencias)").all();
+      if (!colunas.some((coluna) => coluna.name === "id_coleta")) {
+        banco.exec(`
+          ALTER TABLE evidencias
+          ADD COLUMN id_coleta TEXT
+          REFERENCES coletas(id)
+          ON DELETE SET NULL
+        `);
+      }
+
+      banco.exec(`
+        CREATE INDEX IF NOT EXISTS idx_coletas_verificacao
+          ON coletas(id_verificacao);
+        CREATE INDEX IF NOT EXISTS idx_coletas_url_canonica
+          ON coletas(url_canonica);
+        CREATE INDEX IF NOT EXISTS idx_evidencias_coleta
+          ON evidencias(id_coleta);
+
+        CREATE TRIGGER IF NOT EXISTS trg_evidencias_coleta_insert
+        BEFORE INSERT ON evidencias
+        WHEN NEW.id_coleta IS NOT NULL
+          AND NOT EXISTS (
+            SELECT 1
+            FROM coletas c
+            INNER JOIN afirmacoes a ON a.id = NEW.afirmacao_id
+            WHERE c.id = NEW.id_coleta
+              AND c.id_verificacao = a.verificacao_id
+          )
+        BEGIN
+          SELECT RAISE(ABORT, 'A coleta não pertence à verificação da evidência.');
+        END;
+
+        CREATE TRIGGER IF NOT EXISTS trg_evidencias_coleta_update
+        BEFORE UPDATE OF id_coleta, afirmacao_id ON evidencias
+        WHEN NEW.id_coleta IS NOT NULL
+          AND NOT EXISTS (
+            SELECT 1
+            FROM coletas c
+            INNER JOIN afirmacoes a ON a.id = NEW.afirmacao_id
+            WHERE c.id = NEW.id_coleta
+              AND c.id_verificacao = a.verificacao_id
+          )
+        BEGIN
+          SELECT RAISE(ABORT, 'A coleta não pertence à verificação da evidência.');
+        END;
+      `);
+
+      banco.exec("PRAGMA user_version = 1");
+      banco.exec("COMMIT");
+    } catch (erro) {
+      banco.exec("ROLLBACK");
+      throw erro;
+    }
+  }
+
+  executarMigracoes();
+
+  function calcularHashConteudo(conteudo) {
+    if (typeof conteudo !== "string") return null;
+    return createHash("sha256").update(conteudo, "utf8").digest("hex");
+  }
+
+  function prepararColeta(coleta, idVerificacao) {
+    if (!coleta || typeof coleta !== "object") return null;
+
+    const obrigatorios = [
+      ["id_coleta", coleta.id_coleta],
+      ["url_original", coleta.url_original],
+      ["url_canonica", coleta.url_canonica],
+      ["versao_canonicalizacao", coleta.versao_canonicalizacao],
+      ["coletado_em", coleta.coletado_em]
+    ];
+
+    for (const [campo, valor] of obrigatorios) {
+      if (typeof valor !== "string" || !valor.trim()) {
+        throw new Error(`Campo obrigatório da coleta inválido: ${campo}.`);
+      }
+    }
+
+    if (!["tavily_search", "tavily_extract"].includes(coleta.tipo_fonte)) {
+      throw new Error("O tipo de fonte da coleta é inválido.");
+    }
+
+    if (!["SUCCESS", "PARTIAL", "FAILED"].includes(coleta.status_coleta)) {
+      throw new Error("O status da coleta é inválido.");
+    }
+
+    if (
+      coleta.id_verificacao != null &&
+      coleta.id_verificacao !== idVerificacao
+    ) {
+      throw new Error("A coleta não pertence à verificação que está sendo salva.");
+    }
+
+    const conteudo = typeof coleta.conteudo === "string"
+      ? coleta.conteudo
+      : null;
+    const hashCalculado = calcularHashConteudo(conteudo);
+
+    if (
+      coleta.hash_conteudo &&
+      hashCalculado &&
+      coleta.hash_conteudo !== hashCalculado
+    ) {
+      throw new Error("O hash informado para a coleta não corresponde ao conteúdo.");
+    }
+
+    return {
+      id: coleta.id_coleta,
+      id_verificacao: idVerificacao,
+      url_original: coleta.url_original,
+      url_canonica: coleta.url_canonica,
+      versao_canonicalizacao: coleta.versao_canonicalizacao,
+      tipo_fonte: coleta.tipo_fonte,
+      status_coleta: coleta.status_coleta,
+      conteudo,
+      hash_conteudo: coleta.hash_conteudo ?? hashCalculado,
+      coletado_em: coleta.coletado_em,
+      id_operacao_busca: coleta.id_operacao_busca ?? null,
+      id_operacao_extracao: coleta.id_operacao_extracao ?? null,
+      consulta: coleta.consulta ?? null,
+      parametros_busca_json: coleta.parametros_busca == null
+        ? null : JSON.stringify(coleta.parametros_busca),
+      parametros_extracao_json: coleta.parametros_extracao == null
+        ? null : JSON.stringify(coleta.parametros_extracao),
+      metadados_json: coleta.metadados == null
+        ? null : JSON.stringify(coleta.metadados)
+    };
+  }
+
+  function inserirColeta(coleta) {
+    banco.prepare(`
+      INSERT INTO coletas (
+        id, id_verificacao, url_original, url_canonica,
+        versao_canonicalizacao, tipo_fonte, status_coleta,
+        conteudo, hash_conteudo, coletado_em,
+        id_operacao_busca, id_operacao_extracao, consulta,
+        parametros_busca_json, parametros_extracao_json, metadados_json
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `).run(
+      coleta.id,
+      coleta.id_verificacao,
+      coleta.url_original,
+      coleta.url_canonica,
+      coleta.versao_canonicalizacao,
+      coleta.tipo_fonte,
+      coleta.status_coleta,
+      coleta.conteudo,
+      coleta.hash_conteudo,
+      coleta.coletado_em,
+      coleta.id_operacao_busca,
+      coleta.id_operacao_extracao,
+      coleta.consulta,
+      coleta.parametros_busca_json,
+      coleta.parametros_extracao_json,
+      coleta.metadados_json
+    );
+  }
+
+  function converterColeta(registro) {
+    if (!registro.coleta_id) return null;
+
+    return {
+      id_coleta: registro.coleta_id,
+      id_verificacao: registro.coleta_id_verificacao,
+      url_original: registro.coleta_url_original,
+      url_canonica: registro.coleta_url_canonica,
+      versao_canonicalizacao: registro.coleta_versao_canonicalizacao,
+      tipo_fonte: registro.coleta_tipo_fonte,
+      status_coleta: registro.coleta_status_coleta,
+      conteudo: registro.coleta_conteudo,
+      hash_conteudo: registro.coleta_hash_conteudo,
+      coletado_em: registro.coleta_coletado_em,
+      id_operacao_busca: registro.coleta_id_operacao_busca,
+      id_operacao_extracao: registro.coleta_id_operacao_extracao,
+      consulta: registro.coleta_consulta,
+      parametros_busca: registro.coleta_parametros_busca_json == null
+        ? null : JSON.parse(registro.coleta_parametros_busca_json),
+      parametros_extracao: registro.coleta_parametros_extracao_json == null
+        ? null : JSON.parse(registro.coleta_parametros_extracao_json),
+      metadados: registro.coleta_metadados_json == null
+        ? null : JSON.parse(registro.coleta_metadados_json)
+    };
+  }
+
   function salvarVerificacao(resultado) {
     if (
       !resultado ||
@@ -181,9 +406,12 @@ function criarBanco(opcoes = {}) {
           preparacao_json,
           correspondencia_json,
           classificacao_json,
-          atualidade_json
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+          atualidade_json,
+          id_coleta
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
       `);
+
+      const coletasInseridas = new Map();
 
       for (const afirmacao of resultadoCompleto.afirmacoes) {
         const afirmacaoInserida = inserirAfirmacao.run(
@@ -200,6 +428,20 @@ function criarBanco(opcoes = {}) {
 
         for (const evidencia of afirmacao.evidencias ?? []) {
           const fonte = evidencia.fonte ?? {};
+          const coleta = prepararColeta(evidencia.coleta, idVerificacao);
+
+          if (coleta) {
+            const existente = coletasInseridas.get(coleta.id);
+
+            if (existente) {
+              if (existente !== coleta.id_verificacao) {
+                throw new Error("O ID da coleta foi reutilizado em outra verificação.");
+              }
+            } else {
+              inserirColeta(coleta);
+              coletasInseridas.set(coleta.id, coleta.id_verificacao);
+            }
+          }
 
           inserirEvidencia.run(
             idAfirmacaoBanco,
@@ -215,7 +457,8 @@ function criarBanco(opcoes = {}) {
             JSON.stringify(evidencia.preparacao ?? null),
             JSON.stringify(evidencia.correspondencia ?? null),
             JSON.stringify(evidencia.classificacao ?? null),
-            JSON.stringify(evidencia.atualidade ?? null)
+            JSON.stringify(evidencia.atualidade ?? null),
+            coleta?.id ?? null
           );
         }
       }
@@ -329,12 +572,30 @@ function criarBanco(opcoes = {}) {
         e.fonte_json,
         e.correspondencia_json,
         e.classificacao_json,
-        e.atualidade_json
+        e.atualidade_json,
+        c.id AS coleta_id,
+        c.id_verificacao AS coleta_id_verificacao,
+        c.url_original AS coleta_url_original,
+        c.url_canonica AS coleta_url_canonica,
+        c.versao_canonicalizacao AS coleta_versao_canonicalizacao,
+        c.tipo_fonte AS coleta_tipo_fonte,
+        c.status_coleta AS coleta_status_coleta,
+        c.conteudo AS coleta_conteudo,
+        c.hash_conteudo AS coleta_hash_conteudo,
+        c.coletado_em AS coleta_coletado_em,
+        c.id_operacao_busca AS coleta_id_operacao_busca,
+        c.id_operacao_extracao AS coleta_id_operacao_extracao,
+        c.consulta AS coleta_consulta,
+        c.parametros_busca_json AS coleta_parametros_busca_json,
+        c.parametros_extracao_json AS coleta_parametros_extracao_json,
+        c.metadados_json AS coleta_metadados_json
       FROM evidencias e
       INNER JOIN afirmacoes a
         ON a.id = e.afirmacao_id
       INNER JOIN verificacoes v
         ON v.id = a.verificacao_id
+      LEFT JOIN coletas c
+        ON c.id = e.id_coleta
       WHERE e.url = ?
       ORDER BY v.verificado_em ASC, e.id ASC
     `).all(url.trim());
@@ -350,7 +611,8 @@ function criarBanco(opcoes = {}) {
       ),
       atualidade: JSON.parse(
         registro.atualidade_json ?? "null"
-      )
+      ),
+      coleta: converterColeta(registro)
     }));
   }
 

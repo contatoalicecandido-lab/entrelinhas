@@ -1,13 +1,42 @@
 
 const assert = require("node:assert/strict");
+
 const { criarBanco } = require("./src/banco");
-const { normalizarFonte } = require("./src/normalizar-fonte");
+
+const {
+  normalizarFonte,
+  VERSAO_NORMALIZACAO
+} = require("./src/normalizar-fonte");
 
 const banco = criarBanco({ caminho: ":memory:" });
+
 const url = "https://exemplo.com/normalizacao";
 
+let totalTestes = 0;
+let testesAprovados = 0;
+let testesFalhos = 0;
+
+function executarTeste(nome, funcao) {
+  totalTestes++;
+
+  try {
+    funcao();
+    testesAprovados++;
+    console.log(`OK ${totalTestes}: ${nome}`);
+  } catch (erro) {
+    testesFalhos++;
+    console.error(`FALHA ${totalTestes}: ${nome}`);
+    console.error(`  ${erro.message}`);
+  }
+}
+
 try {
-  const conteudoOriginal = "Primeiro parágrafo.\r\nSegundo parágrafo.";
+  console.log("\n======================================");
+  console.log("ENTRELINHAS — INTEGRAÇÃO DA NORMALIZAÇÃO");
+  console.log("======================================");
+
+  const conteudoOriginal =
+    "Primeiro parágrafo.\r\nSegundo   parágrafo.";
 
   const normalizacao = normalizarFonte(conteudoOriginal);
 
@@ -40,45 +69,82 @@ try {
 
   const id = banco.salvarVerificacao(verificacao);
 
-  assert.ok(id, "A verificação precisa ser salva.");
+  executarTeste("A verificação foi salva", () => {
+    assert.ok(id);
+  });
 
   const historico = banco.listarHistoricoFonte(url);
 
-  assert.equal(historico.length, 1);
+  executarTeste("O histórico recuperou a evidência", () => {
+    assert.equal(historico.length, 1);
+  });
 
   const fonteRecuperada = historico[0].fonte;
 
-  assert.equal(
-    fonteRecuperada.conteudo,
-    conteudoOriginal
-  );
+  executarTeste("O conteúdo original foi preservado", () => {
+    assert.equal(
+      fonteRecuperada.conteudo,
+      conteudoOriginal
+    );
+  });
 
-  assert.deepEqual(
-    fonteRecuperada.normalizacao,
-    normalizacao
-  );
+  executarTeste("A normalização foi persistida", () => {
+    assert.deepEqual(
+      fonteRecuperada.normalizacao,
+      normalizacao
+    );
+  });
 
-  assert.equal(
-    fonteRecuperada.normalizacao.versao,
-    "1.0.0"
-  );
+  executarTeste("A versão atual da normalização foi preservada", () => {
+    assert.equal(
+      fonteRecuperada.normalizacao.versao,
+      VERSAO_NORMALIZACAO
+    );
 
-  assert.equal(
-    fonteRecuperada.normalizacao.conteudo_normalizado,
-    "Primeiro parágrafo.\nSegundo parágrafo."
-  );
+    assert.equal(VERSAO_NORMALIZACAO, "2.0.0");
+  });
 
-  console.log("OK 1: A verificação foi salva.");
-  console.log("OK 2: O histórico recuperou a evidência.");
-  console.log("OK 3: O conteúdo original foi preservado.");
-  console.log("OK 4: A normalização foi persistida.");
-  console.log("OK 5: A versão da normalização foi preservada.");
-  console.log("OK 6: O conteúdo normalizado foi recuperado.");
+  executarTeste("O conteúdo normalizado foi recuperado", () => {
+    assert.equal(
+      fonteRecuperada.normalizacao.conteudo_normalizado,
+      "Primeiro parágrafo.\nSegundo parágrafo."
+    );
+  });
 
-  console.log("\nSTATUS: TODOS OS TESTES PASSARAM");
+  executarTeste("As transformações foram registradas", () => {
+    const regras = fonteRecuperada.normalizacao.transformacoes.map(
+      item => item.regra
+    );
+
+    assert.ok(regras.includes("LINE_ENDINGS"));
+    assert.ok(regras.includes("HORIZONTAL_WHITESPACE"));
+  });
+
+  executarTeste("A estrutura dos parágrafos foi preservada", () => {
+    assert.equal(
+      fonteRecuperada.normalizacao.conteudo_normalizado.split("\n").length,
+      2
+    );
+  });
+
+  console.log("\n======================================");
+  console.log("RESULTADO FINAL");
+  console.log("======================================");
+  console.log(`TESTES EXECUTADOS: ${totalTestes}`);
+  console.log(`APROVADOS: ${testesAprovados}`);
+  console.log(`FALHOS: ${testesFalhos}`);
+
+  if (testesFalhos === 0) {
+    console.log("STATUS: TODOS PASSARAM");
+  } else {
+    console.log("STATUS: EXISTEM FALHAS");
+    process.exitCode = 1;
+  }
+
+  console.log("======================================\n");
 
 } catch (erro) {
-  console.error("\nFALHA:", erro.message);
+  console.error("\nERRO NA EXECUÇÃO:", erro);
   process.exitCode = 1;
 
 } finally {

@@ -1,7 +1,7 @@
 
 const assert = require("node:assert/strict");
 const Module = require("node:module");
-const { randomUUID } = require("node:crypto");
+const { randomUUID, createHash } = require("node:crypto");
 const path = require("node:path");
 
 const { criarBanco } = require("./src/banco");
@@ -125,38 +125,81 @@ const dependenciasSimuladas = {
       assert.notEqual(indice, -1);
       assert.ok(opcoes.idVerificacao);
       assert.ok(opcoes.idAfirmacao);
+      assert.deepEqual(opcoes.dominiosOficiais, ["example.com"]);
       assert.equal(typeof opcoes.onMetadata, "function");
 
-      const evidencia = evidenciasSimuladas[indice];
+      const fonte = evidenciasSimuladas[indice];
 
-      opcoes.onMetadata(
-        criarMetadadosPesquisa(
-          opcoes,
-          "BUSCA",
-          pergunta,
-          evidencia.url,
-          evidencia.data_publicacao
-        )
+      const metadadosBusca = criarMetadadosPesquisa(
+        opcoes,
+        "BUSCA",
+        pergunta,
+        fonte.url,
+        fonte.data_publicacao
       );
+
+      opcoes.onMetadata(metadadosBusca);
 
       totalExtracoesTavily++;
 
-      opcoes.onMetadata(
-        criarMetadadosPesquisa(
-          opcoes,
-          "EXTRACAO",
-          pergunta,
-          evidencia.url,
-          evidencia.data_publicacao
-        )
+      const metadadosExtracao = criarMetadadosPesquisa(
+        opcoes,
+        "EXTRACAO",
+        pergunta,
+        fonte.url,
+        fonte.data_publicacao
       );
 
-      return [evidencia];
+      opcoes.onMetadata(metadadosExtracao);
+
+      const coleta = {
+        id_coleta: randomUUID(),
+        id_verificacao: opcoes.idVerificacao,
+        url_original: fonte.url,
+        url_canonica: fonte.url,
+        versao_canonicalizacao: "1.0.0",
+        tipo_fonte: fonte.tipo_fonte,
+        status_coleta: "SUCCESS",
+        conteudo: fonte.conteudo,
+        hash_conteudo: createHash("sha256")
+          .update(fonte.conteudo, "utf8")
+          .digest("hex"),
+        coletado_em: fonte.coletado_em,
+        id_operacao_busca: metadadosBusca.id_operacao,
+        id_operacao_extracao: metadadosExtracao.id_operacao,
+        consulta: pergunta,
+        parametros_busca: {
+          query: pergunta,
+          search_depth: "basic",
+          max_results: 5,
+          include_answer: false,
+          include_published_date: true
+        },
+        parametros_extracao: {
+          urls: [fonte.url],
+          extract_depth: "basic",
+          format: "markdown",
+          include_images: false
+        },
+        metadados_provedor: {
+          provedor: "tavily",
+          resultado_id: metadadosBusca.resultados[0].resultado_id,
+          relevancia: fonte.relevancia
+        }
+      };
+
+      return [{
+        ...fonte,
+        coleta
+      }];
     }
   },
 
   "./preparar-evidencia": {
     prepararEvidencia(afirmacao, evidencia) {
+      // A preparação deve receber somente a fonte.
+      assert.equal(Object.hasOwn(evidencia, "coleta"), false);
+
       return {
         conteudo_original: evidencia.conteudo,
         conteudo_para_analise: evidencia.conteudo,
@@ -245,7 +288,8 @@ async function executarTeste() {
         tiposPorAfirmacao: {
           afirmacao_001: "empresa",
           afirmacao_002: "empresa"
-        }
+        },
+        dominiosOficiais: ["example.com"]
       }
     );
 
@@ -255,20 +299,51 @@ async function executarTeste() {
     assert.ok(resultado.id_verificacao);
     assert.equal(resultado.total_afirmacoes, 2);
     assert.equal(resultado.afirmacoes.length, 2);
+    assert.equal(resultado.sintese.veredito, "MULTIPLAS_AFIRMACOES");
+    assert.equal(resultado.sintese.contagem_vereditos.ATUAL, 2);
+    assert.match(resultado.sintese.resumo, /2 afirmações/);
     assert.equal(totalBuscasTavily, 2);
     assert.equal(totalExtracoesTavily, 2);
 
-    for (const afirmacao of resultado.afirmacoes) {
+    for (let i = 0; i < resultado.afirmacoes.length; i++) {
+      const afirmacao = resultado.afirmacoes[i];
+
       assert.equal(afirmacao.evidencias.length, 1);
 
       const evidencia = afirmacao.evidencias[0];
+      const fonteEsperada = evidenciasSimuladas[i];
 
       assert.equal(evidencia.correspondencia.status, "MATCH");
       assert.equal(evidencia.classificacao.postura, "SUPPORTS");
       assert.equal(evidencia.atualidade.status, "FRESH");
+      assert.equal(afirmacao.agregacao.veredito, "ATUAL");
+      assert.match(afirmacao.agregacao.resumo, /fonte oficial atual/i);
+      assert.equal(afirmacao.agregacao.fontes.length, 1);
+      assert.equal(afirmacao.agregacao.fontes[0].urls[0], fonteEsperada.url);
 
+      // A fonte permanece separada dos dados de coleta.
+
+      assert.equal(Object.hasOwn(evidencia.fonte, "coleta"), false);
+      assert.equal(evidencia.fonte.url, fonteEsperada.url);
       assert.equal(evidencia.fonte.data_publicacao, "2026-11-04");
       assert.equal(evidencia.fonte.data_atualizacao, null);
+
+      // A coleta permanece como objeto independente.
+
+      assert.ok(evidencia.coleta);
+      assert.ok(evidencia.coleta.id_coleta);
+      assert.equal(
+        evidencia.coleta.id_verificacao,
+        resultado.id_verificacao
+      );
+      assert.equal(evidencia.coleta.url_original, fonteEsperada.url);
+      assert.equal(evidencia.coleta.url_canonica, fonteEsperada.url);
+      assert.equal(evidencia.coleta.status_coleta, "SUCCESS");
+      assert.equal(evidencia.coleta.conteudo, fonteEsperada.conteudo);
+      assert.equal(evidencia.coleta.tipo_fonte, "tavily_extract");
+      assert.equal(evidencia.coleta.id_operacao_busca != null, true);
+      assert.equal(evidencia.coleta.id_operacao_extracao != null, true);
+      assert.equal(evidencia.coleta.hash_conteudo.length, 64);
 
       assert.equal(
         evidencia.atualidade.data_utilizada,
@@ -342,6 +417,29 @@ async function executarTeste() {
       );
     }
 
+    // Confere se os IDs de operação da coleta correspondem
+    // às operações registradas na rastreabilidade da Tavily.
+
+    for (const afirmacao of resultado.afirmacoes) {
+      const coleta = afirmacao.evidencias[0].coleta;
+
+      assert.ok(
+        rastreabilidadePesquisa.some(
+          item =>
+            item.id_operacao === coleta.id_operacao_busca &&
+            item.etapa === "BUSCA"
+        )
+      );
+
+      assert.ok(
+        rastreabilidadePesquisa.some(
+          item =>
+            item.id_operacao === coleta.id_operacao_extracao &&
+            item.etapa === "EXTRACAO"
+        )
+      );
+    }
+
     console.log("6. Conferindo persistência no SQLite em memória...");
 
     const recuperado = bancoTeste.obterVerificacao(
@@ -364,6 +462,7 @@ async function executarTeste() {
       recuperado.rastreabilidade_pesquisa,
       JSON.parse(JSON.stringify(rastreabilidadePesquisa))
     );
+    assert.deepEqual(recuperado.sintese, resultado.sintese);
 
     for (let i = 0; i < recuperado.afirmacoes.length; i++) {
       const evidenciaOriginal =
@@ -383,8 +482,27 @@ async function executarTeste() {
       );
 
       assert.equal(
+        Object.hasOwn(evidenciaRecuperada.fonte, "coleta"),
+        false
+      );
+
+      assert.deepEqual(
+        evidenciaRecuperada.coleta,
+        JSON.parse(JSON.stringify(evidenciaOriginal.coleta))
+      );
+
+      assert.equal(
+        evidenciaRecuperada.coleta.id_coleta,
+        evidenciaOriginal.coleta.id_coleta
+      );
+
+      assert.equal(
         evidenciaRecuperada.atualidade.status,
         evidenciaOriginal.atualidade.status
+      );
+      assert.deepEqual(
+        recuperado.afirmacoes[i].agregacao,
+        resultado.afirmacoes[i].agregacao
       );
     }
 
@@ -402,9 +520,11 @@ async function executarTeste() {
     console.log("Extrações Tavily simuladas:", totalExtracoesTavily);
     console.log("Chamadas de modelo simuladas:", rastreabilidadeModelo.length);
     console.log("Registros de pesquisa:", rastreabilidadePesquisa.length);
+    console.log("Fonte e coleta separadas: SIM");
+    console.log("IDs de coleta vinculados às operações: SIM");
+    console.log("Coleta preservada no resultado recuperado: SIM");
     console.log("Datas de publicação preservadas: SIM");
     console.log("Atualidade avaliada com a data da fonte: SIM");
-    console.log("Datas preservadas no SQLite: SIM");
     console.log("Histórico de fontes preservado: SIM");
     console.log("Banco real: não utilizado");
     console.log("APIs externas: nenhuma chamada realizada.");

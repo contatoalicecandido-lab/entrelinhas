@@ -95,6 +95,19 @@ The integration captures available request and response metadata for traceabilit
 
 This is an HTTP API integration with Bifrost, not a native Bifrost plugin or extension.
 
+### Run one claim through the verification flow
+
+```bash
+node demo.js --type versao_api --official-domain platform.openai.com \
+  "The API provides the Chat Completions endpoint."
+```
+
+The demo runs claim decomposition, Tavily Search and Extract, source correspondence and stance analysis, freshness assessment, and deterministic aggregation. It prints each result with its source URL and date fields. It uses real Bifrost and Tavily requests but stores verification data in SQLite `:memory:`; it does not write to `dados/entrelinhas.db`.
+
+Available claim types are `preco`, `versao_api`, `regulamento`, and `empresa`. Official domains are optional. When supplied, Entrelinhas makes one additional Tavily search per claim to seek those domains while retaining the general search. This adds Tavily usage.
+
+Missing publication or update dates remain `UNVERIFIABLE`; collection time is shown separately and is not treated as proof that a page was updated. The result is evidence-based support, conflict, weak support, or not verifiable, not a guarantee of truth.
+
 ## Requirements
 
 - Node.js 22.5 or later
@@ -165,13 +178,23 @@ The Groq provider API key belongs in the Bifrost configuration, not in the Entre
 npm test
 ```
 
-The command runs the project's automated test suite, covering:
+The command runs the core automated suite, covering:
 
 - Freshness assessment
 - Evidence validation
 - Evidence preparation
 - Persistence and source comparison
 - Controlled verification and traceability
+
+Additional isolated checks can be run separately:
+
+```bash
+node teste-tavily-busca-oficial.js
+node teste-politica-fontes-e-datas.js
+node teste-integracao-sintese-controlada.js
+```
+
+These tests use simulated external services and SQLite in memory.
 
 ### 6. Run the integration smoke test
 
@@ -184,6 +207,7 @@ This script checks communication with the configured Bifrost and Tavily services
 Both services must be running and correctly configured.
 
 This is an integration smoke test, not a complete application interface.
+It sends real requests to Bifrost and Tavily. Use `node demo.js` for a full claim-level verification flow.
 
 ### 7. Run the benchmark
 
