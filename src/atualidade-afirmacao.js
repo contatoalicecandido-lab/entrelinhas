@@ -63,9 +63,19 @@ function calcularAtualidadeAfirmacao({ freshness, recenciaPagina, recenciaGeral,
   const nota = Math.round(recencia * apoio);
   if (concordancia.coverage === "WEAK" || concordancia.coverage === "NONE") confianca = rebaixar(confianca);
 
+  // Dentro da janela de validade? Ex.: salário mínimo vigente desde 1º de
+  // janeiro continua atual em novembro (janela de 365 dias), mesmo com a
+  // nota numérica já mais baixa pela meia-vida.
+  const janela = base.window_days;
+  const referencia = Date.parse(freshness?.as_of ?? recenciaPagina?.as_of ?? recenciaGeral?.as_of ?? "");
+  const idadeDias = dataMaisNova && Number.isFinite(referencia)
+    ? Math.floor((referencia - Date.parse(`${dataMaisNova}T00:00:00Z`)) / 86400000)
+    : null;
+  const dentroDaJanela = Number.isInteger(janela) && idadeDias !== null && idadeDias <= janela;
+
   let status;
   if (concordancia.contradicting > 0 && apoio < 0.5) status = "CONTRADICTED";
-  else if (nota >= 70) status = "CURRENT";
+  else if (apoio >= 0.75 && (nota >= 70 || dentroDaJanela)) status = "CURRENT";
   else if (apoio >= 0.75) status = "AGING";
   else status = "UNCERTAIN";
 
@@ -77,7 +87,9 @@ function calcularAtualidadeAfirmacao({ freshness, recenciaPagina, recenciaGeral,
     confidence: confianca,
     evidence_recency: recencia,
     support_share: apoio,
-    newest_date: dataMaisNova
+    newest_date: dataMaisNova,
+    newest_age_days: idadeDias,
+    within_window: dentroDaJanela
   };
 }
 

@@ -38,6 +38,22 @@ const conc = (score, sup, con, cobertura = "STRONG") => ({ score, supporting: su
   ok("só datas de página: nota existe, 'Aging', confiança baixa");
 }
 
+// 3b. Regra anual vigente desde janeiro, confirmada em novembro: nota baixa
+//     pela meia-vida, mas ainda dentro da janela de 365 dias → 'Current'.
+{
+  const r = calcularAtualidadeAfirmacao({
+    freshness: { score: 30, confidence: "LIMITED", as_of: "2026-11-12T12:00:00Z", drivers: [{ date: "2026-01-01" }] },
+    concordancia: conc(100, 5, 0), janelaDias: 365
+  });
+  assert.equal(r.score, 30); assert.equal(r.within_window, true); assert.equal(r.status, "CURRENT");
+  const velho = calcularAtualidadeAfirmacao({
+    freshness: { score: 10, confidence: "LIMITED", as_of: "2026-11-12T12:00:00Z", drivers: [{ date: "2025-06-01" }] },
+    concordancia: conc(100, 3, 0), janelaDias: 365
+  });
+  assert.equal(velho.status, "AGING");
+  ok("dentro da janela de validade e confirmada: 'Current'; fora dela: 'Aging'");
+}
+
 // 4. Sem categoria: janela geral de 180 dias.
 {
   const r = calcularAtualidadeAfirmacao({

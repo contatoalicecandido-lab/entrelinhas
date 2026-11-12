@@ -400,7 +400,7 @@ function corDoValor(valor) {
 }
 
 const STATUS_ATUALIDADE = {
-  CURRENT: { texto: "Current: recent sources confirm it", cor: "var(--verde)" },
+  CURRENT: { texto: "Current: confirmed within its validity window", cor: "var(--verde)" },
   AGING: { texto: "Aging: only older sources confirm it", cor: "#d9a520" },
   UNCERTAIN: { texto: "Uncertain: sources are split", cor: "#d9a520" },
   CONTRADICTED: { texto: "Outdated: current sources contradict it", cor: "var(--vermelho)" }
