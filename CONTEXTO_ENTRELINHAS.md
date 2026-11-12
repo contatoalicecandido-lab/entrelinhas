@@ -1938,4 +1938,8 @@ Sessão de continuidade com Claude (auditoria em `MATRIZ_AUDITORIA.md`,
   trecho efetivamente analisado (`preparacao.trecho_analisado`).
 - Testes: `teste-recencia-pagina.js` (8/8), `teste-classificador-data.js` (2/2);
   suíte 43/43.
+- **Novo veredito `CONTRADICAO_FRACA`** (agregador): só há contradição, sem
+  fonte oficial com data ligada ao fato. Antes virava NAO_VERIFICAVEL e
+  escondia a contradição. Segunda execução real (Node.js 20 LTS) → 58 s,
+  CONTRADICAO_FRACA. `teste-agregador.js` atualizado.
 

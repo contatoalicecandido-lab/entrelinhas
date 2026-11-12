@@ -189,7 +189,10 @@ testar("Não transforma contradição de fonte fraca em veredito definitivo", ()
     ])
   );
 
-  assert.equal(resultado.veredito, "NAO_VERIFICAVEL");
+  // Desde 12/11/2026: sinaliza a contradição sem torná-la definitiva
+  // (antes era NAO_VERIFICAVEL, o que escondia a contradição encontrada).
+  assert.equal(resultado.veredito, "CONTRADICAO_FRACA");
+  assert.notEqual(resultado.veredito, "CONTRADITA_POR_FONTE_ATUAL");
 });
 
 testar("Score é heurístico e fica entre 0 e 100", () => {

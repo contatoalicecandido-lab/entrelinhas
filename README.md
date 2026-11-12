@@ -115,7 +115,7 @@ npm run web:exemplo    # example mode only: no keys, no network, no cost
 
 Open <http://localhost:3000>, paste an AI-generated answer and click **Check claims**. Each claim gets a card with:
 
-- a verdict (*Current*, *Likely outdated*, *Supported, freshness unconfirmed*, *Conflicting* or *Not verifiable*);
+- a verdict (*Current*, *Likely outdated*, *Contradicted by sources*, *Supported, freshness unconfirmed*, *Conflicting* or *Not verifiable*);
 - the freshness score (0–100), or “no fact-level date” when no source ties a date to the specific fact; in that case a separate, clearly labeled **page-date recency** (low confidence) shows whether the dated sources found are recent or old, without replacing the official score;
 - the detected category and its validity window, and whether the category was set by the user, suggested by the model or matched by keyword rules;
 - every source with its stance, official badge, excerpt, model justification and the published / updated / retrieved dates, with an explicit note on whether the date is tied to the specific fact;

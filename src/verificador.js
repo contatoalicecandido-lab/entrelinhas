@@ -462,7 +462,7 @@ async function verificarAfirmacao(afirmacao, opcoes) {
         ...metadadosPreparacao,
         // Trecho efetivamente enviado ao modelo (encurtado), para explicar o veredito.
         trecho_analisado: typeof conteudo_para_analise === "string"
-          ? conteudo_para_analise.slice(0, 1200)
+          ? conteudo_para_analise.slice(0, 6000)
           : null
       },
       correspondencia,

@@ -109,6 +109,7 @@ button:focus-visible { outline: 2px solid var(--destaque); outline-offset: 2px; 
 .estado-desatualizada { background: var(--vermelho-fundo); color: var(--vermelho); }
 .estado-fraco { background: var(--ambar-fundo); color: var(--ambar); }
 .estado-conflito { background: var(--laranja-fundo); color: var(--laranja); }
+.estado-contradita { background: var(--vermelho-fundo); color: var(--vermelho); }
 .estado-neutro { background: var(--cinza-fundo); color: var(--cinza); }
 
 .cartao { padding: 22px 24px; border-left-width: 5px; }
@@ -116,6 +117,7 @@ button:focus-visible { outline: 2px solid var(--destaque); outline-offset: 2px; 
 .cartao.estado-desatualizada { border-left-color: var(--vermelho); background: var(--cartao); color: inherit; }
 .cartao.estado-fraco { border-left-color: #d9a520; background: var(--cartao); color: inherit; }
 .cartao.estado-conflito { border-left-color: #e07b2c; background: var(--cartao); color: inherit; }
+.cartao.estado-contradita { border-left-color: #e5735f; background: var(--cartao); color: inherit; }
 .cartao.estado-neutro { border-left-color: #9aa0aa; background: var(--cartao); color: inherit; }
 
 .cartao-topo { display: grid; grid-template-columns: minmax(0, 1fr) 120px; gap: 20px; align-items: start; }

@@ -29,11 +29,13 @@ const TEXTOS = {
     st_CONTRADITA_POR_FONTE_ATUAL: "Likely outdated",
     st_SUPORTE_FRACO: "Supported, freshness unconfirmed",
     st_CONFLITO: "Conflicting",
+    st_CONTRADICAO_FRACA: "Contradicted by sources",
     st_NAO_VERIFICAVEL: "Not verifiable",
     lg_ATUAL: "An official source with a date tied to this exact fact supports the claim.",
     lg_CONTRADITA_POR_FONTE_ATUAL: "A recent official source says something different. The AI answer is probably stale.",
     lg_SUPORTE_FRACO: "Sources agree, but no date proves the information is still current.",
     lg_CONFLITO: "Sources disagree and none settles it. Check them yourself.",
+    lg_CONTRADICAO_FRACA: "The sources found contradict the claim, but none has a date tied to this fact. Possibly outdated: review before trusting it.",
     lg_NAO_VERIFICAVEL: "No usable evidence was found. This does not mean the claim is false.",
     formula: "Freshness index (0–100): how recent the dated evidence is, relative to the validity window of the claim type (prices 30 days, API versions 90, companies 180, regulations 365). It halves every half-window: 7 days old for a price = 72. It is not a probability of truth, and it is only shown when a date is explicitly tied to the fact being checked.",
     rodape: "Entrelinhas · Tavily for search and extraction · Bifrost as model gateway · SQLite in-memory traceability",
@@ -70,6 +72,7 @@ const TEXTOS = {
     expl_CONTRADITA_POR_FONTE_ATUAL: f => `A current official source contradicts this claim${f !== null ? ` (that evidence scores ${f}/100 on freshness)` : ""}. If an AI said this, the answer is probably outdated.`,
     expl_SUPORTE_FRACO: () => "Sources support the claim, but none has a date tied to this specific fact, so we cannot confirm it is still current.",
     expl_CONFLITO: () => "Sources disagree and none of them resolves the conflict. Review the evidence before relying on this claim.",
+    expl_CONTRADICAO_FRACA: () => "The sources we found contradict this claim. None has a date tied to this exact fact, so this is a warning rather than a final verdict: the AI answer is possibly outdated or wrong.",
     expl_NAO_VERIFICAVEL: () => "We could not find usable evidence. That does not mean the claim is false."
   },
   pt: {
@@ -98,11 +101,13 @@ const TEXTOS = {
     st_CONTRADITA_POR_FONTE_ATUAL: "Provavelmente desatualizada",
     st_SUPORTE_FRACO: "Apoiada, atualidade não confirmada",
     st_CONFLITO: "Em conflito",
+    st_CONTRADICAO_FRACA: "Contradita pelas fontes",
     st_NAO_VERIFICAVEL: "Não verificável",
     lg_ATUAL: "Uma fonte oficial, com data ligada a esse fato específico, apoia a afirmação.",
     lg_CONTRADITA_POR_FONTE_ATUAL: "Uma fonte oficial recente diz outra coisa. A resposta da IA provavelmente está desatualizada.",
     lg_SUPORTE_FRACO: "As fontes concordam, mas nenhuma data prova que a informação ainda vale.",
     lg_CONFLITO: "As fontes discordam e nenhuma resolve a dúvida. Confira você mesma.",
+    lg_CONTRADICAO_FRACA: "As fontes encontradas contradizem a afirmação, mas nenhuma tem data ligada a esse fato. Possivelmente desatualizada: revise antes de confiar.",
     lg_NAO_VERIFICAVEL: "Não encontramos evidência utilizável. Isso não quer dizer que a afirmação é falsa.",
     formula: "Índice de atualidade (0–100): o quão recente é a evidência datada, em relação à janela de validade do tipo de afirmação (preços 30 dias, versões de API 90, empresas 180, regulamentos 365). Cai pela metade a cada meia janela: um preço com 7 dias = 72. Não é probabilidade de verdade, e só aparece quando há uma data explicitamente ligada ao fato verificado.",
     rodape: "Entrelinhas · Tavily para busca e extração · Bifrost como gateway de modelos · rastreabilidade em SQLite na memória",
@@ -139,6 +144,7 @@ const TEXTOS = {
     expl_CONTRADITA_POR_FONTE_ATUAL: f => `Uma fonte oficial atual contradiz esta afirmação${f !== null ? ` (essa evidência tem atualidade ${f}/100)` : ""}. Se uma IA disse isso, a resposta provavelmente está desatualizada.`,
     expl_SUPORTE_FRACO: () => "As fontes apoiam a afirmação, mas nenhuma tem data ligada a esse fato específico, então não dá para confirmar que ainda vale.",
     expl_CONFLITO: () => "As fontes discordam e nenhuma resolve o conflito. Revise as evidências antes de confiar nesta afirmação.",
+    expl_CONTRADICAO_FRACA: () => "As fontes encontradas contradizem esta afirmação. Nenhuma tem data ligada a esse fato exato, então é um alerta, não um veredito final: a resposta da IA possivelmente está desatualizada ou errada.",
     expl_NAO_VERIFICAVEL: () => "Não encontramos evidência utilizável. Isso não quer dizer que a afirmação é falsa."
   }
 };
@@ -148,9 +154,10 @@ const CLASSE_ESTADO = {
   CONTRADITA_POR_FONTE_ATUAL: "estado-desatualizada",
   SUPORTE_FRACO: "estado-fraco",
   CONFLITO: "estado-conflito",
+  CONTRADICAO_FRACA: "estado-contradita",
   NAO_VERIFICAVEL: "estado-neutro"
 };
-const ORDEM_ESTADOS = ["CONTRADITA_POR_FONTE_ATUAL", "CONFLITO", "SUPORTE_FRACO", "ATUAL", "NAO_VERIFICAVEL"];
+const ORDEM_ESTADOS = ["CONTRADITA_POR_FONTE_ATUAL", "CONTRADICAO_FRACA", "CONFLITO", "SUPORTE_FRACO", "ATUAL", "NAO_VERIFICAVEL"];
 const JANELAS = { preco: 30, versao_api: 90, regulamento: 365, empresa: 180 };
 
 const estado = {
@@ -323,7 +330,7 @@ function configurarMedidor(medidor, freshness, veredito) {
     medidor.setAttribute("aria-label", `${t("medidorAria")}: ${t("naoDeterminavel")}`);
     return;
   }
-  const contra = veredito === "CONTRADITA_POR_FONTE_ATUAL";
+  const contra = veredito === "CONTRADITA_POR_FONTE_ATUAL" || veredito === "CONTRADICAO_FRACA";
   if (contra) medidor.classList.add("tom-alerta");
   else if (veredito !== "ATUAL" || nota < 50) medidor.classList.add("tom-cautela");
   circulo.style.strokeDashoffset = String(circunferencia * (1 - nota / 100));
@@ -355,8 +362,43 @@ function dominioDe(url) {
 }
 
 function ehOficial(afirmacao, url) {
-  const grupos = afirmacao.agregacao?.fontes ?? [];
-  return grupos.some(g => g.oficial && (g.urls ?? []).includes(url));
+  const host = dominioDe(url);
+  if (!host) return false;
+  return (afirmacao.dominios_oficiais_usados ?? []).some(dominio => {
+    const d = String(dominio).toLowerCase().replace(/^www\./, "");
+    return host === d || host.endsWith(`.${d}`);
+  });
+}
+
+// Escolhe a janela do texto que mais fala do assunto da afirmação:
+// procura o termo da afirmação que aparece menos vezes (o mais específico).
+const PALAVRAS_VAZIAS = new Set(["the", "and", "for", "with", "that", "this", "from", "are", "was", "has", "have", "its", "não", "que", "com", "para", "uma", "dos", "das", "por", "mais", "como", "current", "atual"]);
+function janelaRelevante(texto, afirmacao, tamanho = 600) {
+  if (texto.length <= tamanho) return texto;
+  const minusculo = texto.toLowerCase();
+  const termos = [...new Set(String(afirmacao).toLowerCase().match(/[\p{L}\p{N}.$/-]{3,}/gu) ?? [])]
+    .filter(termo => !PALAVRAS_VAZIAS.has(termo));
+  let melhor = null;
+  for (const termo of termos) {
+    const ocorrencias = minusculo.split(termo).length - 1;
+    if (ocorrencias === 0) continue;
+    if (!melhor || ocorrencias < melhor.ocorrencias) melhor = { termo, ocorrencias };
+  }
+  if (!melhor) return `${texto.slice(0, tamanho)}…`;
+  // Entre as ocorrências do termo, prefere a que tem mais termos da afirmação por perto.
+  let melhorInicio = 0;
+  let melhorPontos = -1;
+  let posicao = minusculo.indexOf(melhor.termo);
+  while (posicao !== -1) {
+    const inicio = Math.max(0, posicao - Math.floor(tamanho / 3));
+    const janela = minusculo.slice(inicio, inicio + tamanho);
+    const pontos = termos.filter(termo => janela.includes(termo)).length;
+    if (pontos > melhorPontos) { melhorPontos = pontos; melhorInicio = inicio; }
+    posicao = minusculo.indexOf(melhor.termo, posicao + 1);
+  }
+  const prefixo = melhorInicio > 0 ? "…" : "";
+  const sufixo = melhorInicio + tamanho < texto.length ? "…" : "";
+  return `${prefixo}${texto.slice(melhorInicio, melhorInicio + tamanho).trim()}${sufixo}`;
 }
 
 function formatarData(valor) {
@@ -391,8 +433,10 @@ function criarFonte(afirmacao, evidencia, simulado) {
 
   // Prefere o trecho que o modelo realmente leu; senão, o começo da página.
   const trechoBruto = evidencia.preparacao?.trecho_analisado || fonte.conteudo || "";
-  const trecho = trechoBruto.replace(/\s+/g, " ").trim();
-  if (trecho) item.append(elemento("p", "fonte-trecho", trecho.length > 600 ? `${trecho.slice(0, 600)}…` : trecho));
+  const trecho = trechoBruto
+    .replace(/^[\s\S]*?CONTEÚDO SELECIONADO PARA ANÁLISE:\s*/, "")
+    .replace(/\s+/g, " ").trim();
+  if (trecho) item.append(elemento("p", "fonte-trecho", janelaRelevante(trecho, afirmacao.texto)));
   const motivo = evidencia.classificacao?.justificativa || evidencia.correspondencia?.justificativa;
   if (motivo) item.append(elemento("p", "fonte-motivo", motivo));
 

@@ -10,6 +10,7 @@ const VEREDITOS = [
   "CONTRADITA_POR_FONTE_ATUAL",
   "CONFLITO",
   "SUPORTE_FRACO",
+  "CONTRADICAO_FRACA",
   "NAO_VERIFICAVEL"
 ];
 
@@ -370,6 +371,12 @@ function determinarVeredito(grupos) {
     return "SUPORTE_FRACO";
   }
 
+  // Só há contradição, mas sem fonte oficial com data ligada ao fato:
+  // sinal relevante de resposta desatualizada ou incorreta, não definitivo.
+  if (haContradicao) {
+    return "CONTRADICAO_FRACA";
+  }
+
   return "NAO_VERIFICAVEL";
 }
 
@@ -422,6 +429,8 @@ function criarResumo(veredito) {
       "As fontes utilizáveis apresentam posições divergentes. Não foi possível resolver o conflito com as evidências disponíveis.",
     SUPORTE_FRACO:
       "Há evidências que apoiam a afirmação, mas não foi identificada uma fonte oficial atual suficiente para uma conclusão mais forte.",
+    CONTRADICAO_FRACA:
+      "As evidências utilizáveis contradizem a afirmação, mas nenhuma fonte oficial com data ligada ao fato confirma a contradição. Trate a afirmação como possivelmente desatualizada ou incorreta e revise as fontes.",
     NAO_VERIFICAVEL:
       "Não foi possível verificar a afirmação com as evidências utilizáveis encontradas. Isso não significa que ela seja falsa."
   };

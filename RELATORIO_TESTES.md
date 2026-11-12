@@ -60,3 +60,11 @@ Texto: "Node.js 20 is the current Active LTS release. The OpenAI API offers the 
 - Conclusões: fluxo real íntegro (decomposição, categoria, busca dupla, extração, correspondência, postura, agregação). Duas limitações de produto ficaram evidentes: (a) com fontes reais, quase nenhuma data é vinculada ao atributo, então o índice tende a ser `null`; (b) a latência é dominada pelo limite de taxa do Groq.
 - Falha encontrada e corrigida durante a espera: chamadas à Tavily sem tempo-limite (agora 45 s, com erro claro para resposta não-JSON). A tela de espera agora mostra o tempo decorrido e explica a demora.
 
+## Rodada 4 — execução real após correções (12/11/2026, ~15h)
+Servidor reiniciado com o código novo (2 fontes por afirmação). Afirmação: "Node.js 20 is the current Active LTS release." (domínio oficial nodejs.org).
+- 1ª rodada: **54 s** (antes ~307 s), resposta de 37 KB (antes 3,5 MB). O classificador, agora com a data de referência, marcou CONTRADICTS na página do 20.9.0 ("Active LTS até outubro de 2024 … fim de vida em abril de 2026"). Mas o veredito saiu NAO_VERIFICAVEL: o agregador não tinha veredito para "só contradição, sem fonte oficial com data ligada ao fato".
+- Correção: novo veredito **CONTRADICAO_FRACA** ("Contradita pelas fontes"), simétrico a SUPORTE_FRACO — sinaliza sem ser definitivo.
+- 2ª rodada: **58 s**, veredito **CONTRADICAO_FRACA**; recência pela data da página 0/100 (fonte datada mais recente 2023-10-24). A resposta desatualizada foi detectada.
+- Ajustes de interface: etiqueta "Oficial" pelos domínios configurados (inclui fontes classificadas como insuficientes); trecho exibido é a janela do texto mais ligada à afirmação.
+- Suíte offline: 43/43.
+
