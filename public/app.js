@@ -300,6 +300,12 @@ function mostrarCorrigida(dados) {
   }
 }
 
+const RITMOS = {
+  preco: "prices change ~monthly",
+  versao_api: "software versions ~quarterly",
+  empresa: "company facts ~every 6 months",
+  regulamento: "laws and rules ~yearly"
+};
 const RISCOS = { HIGH: "High stale risk", MEDIUM: "Medium stale risk", LOW: "Low stale risk" };
 
 // Triagem: quais afirmações podem ter envelhecido, e por quê (antes da busca).
@@ -318,8 +324,11 @@ function mostrarTriagem(afirmacoes) {
     li.append(el("p", "dica", r.motivos.join(" · ")));
     lista.append(li);
   }
-  const sensiveis = comRisco.filter(a => a.risco_desatualizacao.sensivel_ao_tempo).length;
-  $("titulo-triagem").textContent = `Stale-risk triage · ${sensiveis} of ${comRisco.length} claim${comRisco.length === 1 ? "" : "s"} time-sensitive`;
+  const sensiveis = comRisco.filter(a => a.risco_desatualizacao.sensivel_ao_tempo);
+  const ritmos = [...new Set(sensiveis.map(a => a.tipo_afirmacao).filter(t => RITMOS[t]))].map(t => RITMOS[t]);
+  $("titulo-triagem").textContent =
+    `${comRisco.length} claim${comRisco.length === 1 ? "" : "s"} found · ${sensiveis.length} time-sensitive` +
+    (ritmos.length ? ` (${ritmos.join(", ")})` : "");
 }
 
 // Painel do Bifrost: cadeia de modelos, quem respondeu, failover e tokens.
