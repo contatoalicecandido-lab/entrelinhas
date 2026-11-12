@@ -70,6 +70,7 @@
     </section>
 
     <section id="resultado" class="resultado" hidden aria-labelledby="titulo-resultado">
+      <div id="aviso-gravado" class="aviso gravado" hidden></div>
       <div id="aviso-simulado" class="aviso" hidden>Example mode: sources are fictional (<code>.example</code> domains) and the search and model responses are simulated. Categories, Portuguese handling, agreement, freshness and verdicts come from the real engine.</div>
       <div class="painel resumo">
         <div>
@@ -103,6 +104,13 @@
         <div id="gateway-conteudo"></div>
       </section>
       <p id="rastreio" class="rastreio"></p>
+    </section>
+
+    <section id="favorito-secao" class="painel secao favorito-secao" aria-labelledby="titulo-favorito">
+      <h2 id="titulo-favorito">Check any AI answer, on any site</h2>
+      <p>Entrelinhas is a verification layer for any AI app. Drag this button to your bookmarks bar. Then, on ChatGPT, Gemini or any page, select an answer and click it: Entrelinhas opens with the text ready to check.</p>
+      <p><a id="favorito" class="botao-favorito" href="#">✓ Check with Entrelinhas</a></p>
+      <p class="dica">Opens <span id="favorito-destino"></span>. Nothing is sent anywhere until you click Check answer. Developers can call the same check directly: <code>POST /api/verificar</code> with <code>{"texto": "...", "modo": "real"}</code>.</p>
     </section>
 
     <section id="como-funciona" class="painel secao">

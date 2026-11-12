@@ -20,3 +20,5 @@ submission/.build/
 
 # Decks em revisão (versões B4_T1 refletem estratégia abandonada)
 submission/*.pptx
+gravacoes/*
+!gravacoes/selecao.json

@@ -216,6 +216,26 @@ async function executarVerificacao(pedido) {
   }
 }
 
+// Gravações de checagens reais, para a demonstração pública (docs/), que as
+// reproduz sem chaves. Só com ENTRELINHAS_GRAVAR=1. Nada de credenciais vai
+// para o arquivo; identificadores de organização do provedor são removidos.
+function gravarVerificacao(resultado) {
+  try {
+    const pasta = path.join(__dirname, "gravacoes");
+    fs.mkdirSync(pasta, { recursive: true });
+    const slug = String(resultado.texto_original ?? "verificacao")
+      .normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 48);
+    const nome = `${new Date().toISOString().replace(/[:.]/g, "-")}-${slug}.json`;
+    const texto = JSON.stringify({ ...resultado, gravado_em: new Date().toISOString() }, null, 1)
+      .replace(/org_[A-Za-z0-9]+/g, "org_<redacted>");
+    fs.writeFileSync(path.join(pasta, nome), texto);
+    console.log(`[gravação] ${nome}`);
+  } catch (erro) {
+    console.warn("Não foi possível gravar a verificação:", erro.message);
+  }
+}
+
 async function tratarVerificacao(req, res) {
   if (!String(req.headers["content-type"] ?? "").includes("application/json")) {
     return responderJson(res, 415, { erro: "Envie JSON." });
@@ -232,6 +252,7 @@ async function tratarVerificacao(req, res) {
     const pedido = validarPedido(dados);
     const resultado = await executarVerificacao(pedido);
     resultado.duracao_ms = Date.now() - inicio;
+    if (pedido.modo === "real" && process.env.ENTRELINHAS_GRAVAR === "1") gravarVerificacao(resultado);
     console.log(`[${new Date().toISOString()}] verificação ${pedido.modo}: ${resultado.total_afirmacoes} afirmação(ões) em ${resultado.duracao_ms} ms`);
     responderJson(res, 200, resultado);
   } catch (erro) {

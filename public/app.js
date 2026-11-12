@@ -1,3 +1,21 @@
+/* ---------- acesso aos dados ----------
+   Servidor local (padrão) ou site estático da demonstração pública, que
+   define window.ENTRELINHAS_API (docs/estatico.js) e reproduz gravações. */
+const API = window.ENTRELINHAS_API ?? {
+  estatico: false,
+  async status() { return (await fetch("/api/status")).json(); },
+  async verificar(corpo) {
+    const resposta = await fetch("/api/verificar", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(corpo)
+    });
+    const dados = await resposta.json().catch(() => ({}));
+    if (!resposta.ok) throw new Error(dados.erro || "Something went wrong. Please try again.");
+    return dados;
+  }
+};
+
 "use strict";
 
 // Interface do Entrelinhas (inglês). Todo conteúdo vindo do servidor é
@@ -107,9 +125,12 @@ function configurarModo() {
   const radio = opcao.querySelector("input");
   radio.disabled = !real;
   opcao.classList.toggle("desativado", !real);
-  opcao.querySelector("span").textContent = real
-    ? "Live check: searches the web now"
-    : "Live check: needs TAVILY_API_KEY and BIFROST_KEY on the server";
+  opcao.querySelector("span").textContent = API.estatico
+    ? "Recorded live checks: real Tavily + Bifrost runs"
+    : real
+      ? "Live check: searches the web now"
+      : "Live check: needs TAVILY_API_KEY and BIFROST_KEY on the server";
+  if (API.estatico) selo.textContent = "Public demo";
   (real ? radio : document.querySelector('input[name="modo"][value="exemplo"]')).checked = true;
   const atualizarQueda = () => {
     const temReserva = (estado.status?.bifrost?.reservas ?? []).length > 0;
@@ -134,6 +155,33 @@ function montarExemplos() {
     });
     caixa.append(b);
   }
+  // Gravações de checagens reais (só na demonstração pública).
+  for (const g of estado.status?.gravacoes ?? []) {
+    const b = el("button", "gravacao", g.rotulo);
+    b.type = "button";
+    b.title = "Recorded live check: real Tavily search and Bifrost model calls";
+    b.addEventListener("click", () => {
+      $("texto").value = g.texto;
+      $("dominios").value = "";
+      const real = document.querySelector('input[name="modo"][value="real"]');
+      if (real && !real.disabled) real.checked = true;
+      atualizarEntrada();
+      mostrarMensagem("");
+    });
+    caixa.append(b);
+  }
+}
+
+// Botão de favoritos: selecione um trecho em qualquer site (ChatGPT, Gemini,
+// um blog) e clique; o Entrelinhas abre com o texto preenchido.
+function configurarFavorito() {
+  const link = $("favorito");
+  if (!link) return;
+  const destino = API.estatico ? "http://localhost:3000" : location.origin;
+  const codigo = `(()=>{const t=String(getSelection()).trim()||prompt('Paste the AI answer to check');if(t)open('${destino}/?text='+encodeURIComponent(t.slice(0,4000)),'_blank')})()`;
+  link.setAttribute("href", `javascript:${codigo}`);
+  link.addEventListener("click", e => { e.preventDefault(); mostrarMensagem("Drag this button to your bookmarks bar, then use it on any page with an AI answer."); });
+  $("favorito-destino").textContent = destino;
 }
 
 function montarLegenda() {
@@ -193,7 +241,7 @@ async function verificar() {
   const texto = $("texto").value.trim();
   if (!texto) { mostrarMensagem("Paste an AI answer first."); $("texto").focus(); return; }
   const norm = v => String(v ?? "").replace(/\s+/g, " ").trim().toLowerCase();
-  if (modo() === "exemplo" && !(estado.status?.exemplos ?? []).some(e => norm(e.texto) === norm(texto))) {
+  if (!API.estatico && modo() === "exemplo" && !(estado.status?.exemplos ?? []).some(e => norm(e.texto) === norm(texto))) {
     mostrarMensagem("Example mode only checks the built-in examples. Pick one above, or run the server with Tavily and Bifrost keys to check your own text.");
     return;
   }
@@ -205,13 +253,7 @@ async function verificar() {
   $("resultado").hidden = true;
   iniciarProgresso();
   try {
-    const resposta = await fetch("/api/verificar", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ texto, modo: modo(), dominiosOficiais, simularQuedaModelo: modo() === "real" && $("simular-queda").checked })
-    });
-    const dados = await resposta.json().catch(() => ({}));
-    if (!resposta.ok) throw new Error(dados.erro || "Something went wrong. Please try again.");
+    const dados = await API.verificar({ texto, modo: modo(), dominiosOficiais, simularQuedaModelo: modo() === "real" && $("simular-queda").checked });
     renderizarResultado(dados);
     $("resultado").scrollIntoView({ behavior: "smooth", block: "start" });
   } catch (erro) {
@@ -228,6 +270,9 @@ async function verificar() {
 function renderizarResultado(dados) {
   $("resultado").hidden = false;
   $("aviso-simulado").hidden = !dados.simulado;
+  const g = dados.gravacao;
+  $("aviso-gravado").hidden = !g;
+  if (g) $("aviso-gravado").textContent = `Recorded live check from ${formatarDataCurta(String(g.data).slice(0, 10))}: real web sources found with Tavily and real model calls through Bifrost, replayed here without API keys. To check your own text, run Entrelinhas locally (see the GitHub README).`;
   const afirmacoes = dados.afirmacoes ?? [];
   const porVeredito = {};
   for (const a of afirmacoes) {
@@ -619,13 +664,20 @@ async function iniciar() {
   $("botao-verificar").addEventListener("click", verificar);
   $("texto").addEventListener("keydown", e => { if ((e.metaKey || e.ctrlKey) && e.key === "Enter") verificar(); });
   try {
-    estado.status = await (await fetch("/api/status")).json();
+    estado.status = await API.status();
   } catch {
     estado.status = { modo_real_disponivel: false, exemplos: [] };
   }
   configurarModo();
   montarExemplos();
   montarLegenda();
+  configurarFavorito();
+  // Texto vindo de um link ou do botão de favoritos: ?text=...
+  const recebido = new URLSearchParams(location.search).get("text") ?? new URLSearchParams(location.search).get("texto");
+  if (recebido) {
+    $("texto").value = recebido.slice(0, 4000);
+    mostrarMensagem(API.estatico ? "" : "Text received. Choose a mode and click Check answer.");
+  }
   atualizarEntrada();
 }
 
