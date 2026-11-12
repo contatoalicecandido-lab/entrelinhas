@@ -207,7 +207,8 @@ async function executarVerificacao(pedido) {
       incluirNoticias: true,
       fontesDiversas: true,
       paisAutomatico: true,
-      cienciaAutomatica: true
+      cienciaAutomatica: true,
+      respostaCorrigida: true
     }));
     return prepararParaNavegador(resultado, "real");
   } finally {

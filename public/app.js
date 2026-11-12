@@ -249,9 +249,55 @@ function renderizarResultado(dados) {
   $("omitidas").hidden = omitidas.length === 0;
   $("omitidas").textContent = omitidas.length ? `${omitidas.length} more claim(s) were not checked to limit cost. Send them separately.` : "";
   $("cartoes").replaceChildren(...afirmacoes.map(a => criarCartao(a, dados.simulado)));
+  mostrarCorrigida(dados);
   mostrarTriagem(afirmacoes);
   mostrarGateway(dados.gateway, dados.simulado);
   $("rastreio").textContent = `Verification ${dados.id_verificacao} · ${dados.rastreabilidade_modelo?.length ?? 0} model calls via ${dados.simulado ? "simulated provider" : "Bifrost"} · ${dados.rastreabilidade_pesquisa?.length ?? 0} search operations via ${dados.simulado ? "simulated provider" : "Tavily"} · ${dados.duracao_ms ?? "—"} ms · stored in SQLite (in memory)`;
+}
+
+// Resposta corrigida: texto com citações [n] viradas em links seguros.
+function mostrarCorrigida(dados) {
+  const rc = dados.resposta_corrigida;
+  const painel = $("corrigida");
+  if (!rc || !rc.texto) { painel.hidden = true; return; }
+  painel.hidden = false;
+  $("corrigida-original").textContent = dados.texto_original ?? "";
+  const alvo = $("corrigida-texto");
+  alvo.replaceChildren();
+  const porNumero = new Map((rc.fontes ?? []).map(f => [f.n, f]));
+  for (const parte of rc.texto.split(/(\[\d{1,2}\])/)) {
+    const m = /^\[(\d{1,2})\]$/.exec(parte);
+    const fonte = m ? porNumero.get(Number(m[1])) : null;
+    if (fonte) {
+      const sup = el("sup");
+      const a = el("a", "ref", `[${fonte.n}]`);
+      a.href = `#ref-${fonte.n}`;
+      sup.append(a);
+      alvo.append(sup);
+    } else {
+      alvo.append(document.createTextNode(parte));
+    }
+  }
+  const lista = $("corrigida-fontes");
+  lista.replaceChildren();
+  for (const n of rc.fontes_citadas ?? []) {
+    const f = porNumero.get(n);
+    if (!f) continue;
+    const li = el("li");
+    li.id = `ref-${n}`;
+    li.value = n;
+    li.append(el("span", `selo-postura ${f.postura === "CONTRADICTS" ? "c" : "a"}`, f.postura === "CONTRADICTS" ? "Contradicts the AI" : "Supports"));
+    li.append(el("span", "tipo-ref", TIPOS_FONTE[f.tipo] ?? f.tipo));
+    if (f.url && /^https?:\/\//.test(f.url)) {
+      const a = el("a", null, f.titulo || f.url);
+      a.href = f.url; a.target = "_blank"; a.rel = "noopener noreferrer";
+      li.append(a);
+    } else {
+      li.append(el("span", null, f.titulo || "Source"));
+    }
+    if (f.data) li.append(el("span", "data-ref", formatarDataCurta(f.data)));
+    lista.append(li);
+  }
 }
 
 const RISCOS = { HIGH: "High stale risk", MEDIUM: "Medium stale risk", LOW: "Low stale risk" };

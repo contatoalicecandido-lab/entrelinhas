@@ -7,6 +7,7 @@
 // Serve para demonstrar o produto sem credenciais e sem custo.
 const Module = require("node:module");
 const path = require("node:path");
+const { montarFontesNumeradas, GRUPO_VEREDITO } = require("./resposta-corrigida");
 
 const DIA_MS = 24 * 60 * 60 * 1000;
 
@@ -38,7 +39,7 @@ function exemplos(agora) {
           f("https://docs.acme.example/changelog", "OFICIAL", "Acme API changelog", `Breaking change (${diasAtras(agora, 12)}): the /v1/completions endpoint has been retired. Use /v2/responses.`, "CONTRADICTS", "The official changelog states that /v1/completions was retired and replaced by /v2/responses.", { upd: diasAtras(agora, 12), escopo: "ATTRIBUTE" }),
           f("https://devnews.example/acme-retires-v1", "NOTICIA", "Acme retires its v1 completions API", "Developers have until the end of the month to migrate away from /v1/completions, Acme said.", "CONTRADICTS", "A news article reports the retirement of the endpoint.", { pub: diasAtras(agora, 20) }),
           f("https://devblog.example/acme-completions-tutorial", "BLOG_FORUM", "Tutorial: calling /v1/completions", "Send a POST request to /v1/completions with your prompt.", "SUPPORTS", "An old tutorial shows /v1/completions working: exactly what an outdated AI answer would repeat.", { pub: diasAtras(agora, 480) })
-        ]],
+        ], "The Acme API no longer supports the /v1/completions endpoint: it was retired and replaced by /v2/responses."],
         ["Under the Data Act of 2025, companies with more than 50 employees must appoint a data protection officer.", "regulamento", [
           f("https://gov.example/data-act-2025", "OFICIAL", "Data Act of 2025 — full text", "Article 12. Organisations employing more than 50 persons shall designate a data protection officer.", "SUPPORTS", "The official text contains the 50-employee threshold; the page declares no publication or update date."),
           f("https://lawnews.example/data-act-explained", "NOTICIA", "What the Data Act means for mid-size firms", "Firms with more than 50 staff now need a data protection officer under the new act.", "SUPPORTS", "A legal news article describes the same obligation and threshold.", { pub: diasAtras(agora, 90) }),
@@ -59,7 +60,7 @@ function exemplos(agora) {
           f("https://noticiasbr.example/negocios/ficticia-demissoes", "NOTICIA", "Fictícia Telecom reduz quadro para 3.200 pessoas", "Após a reestruturação, a Fictícia Telecom passou a ter 3.200 funcionários.", "CONTRADICTS", "A recent news report says the company now has 3,200 employees, not about 5,000.", { pub: diasAtras(agora, 25) }),
           f("https://enciclopedia.example/wiki/Ficticia_Telecom", "REFERENCIA", "Fictícia Telecom — verbete", "Funcionários: 3.200 (2026). A empresa chegou a ter 5 mil funcionários em 2022.", "CONTRADICTS", "The reference entry says 5,000 was the 2022 figure; 'atualmente' (currently) makes the claim about today, when it is 3,200.", { pub: diasAtras(agora, 60) }),
           f("https://blogdeempregos.example/ficticia", "BLOG_FORUM", "Trabalhar na Fictícia Telecom", "Com cerca de 5 mil funcionários, a Fictícia Telecom é uma das maiores do setor.", "SUPPORTS", "An old blog post repeats the 5,000 figure.", { pub: diasAtras(agora, 900) })
-        ]]
+        ], "A Fictícia Telecom tem hoje 3.200 funcionários, após uma reestruturação; os 5 mil eram o número de 2022."]
       ]
     }
   };
@@ -116,6 +117,39 @@ function criarVerificadorExemplo({ agora = new Date() } = {}) {
         return { conteudo_original: fonte.conteudo, conteudo_para_analise: fonte.conteudo, motivo_preparacao: "MODO_EXEMPLO", caracteres_originais: fonte.conteudo.length };
       }
     },
+    "./resposta-corrigida": {
+      // Determinística: mesma montagem de fontes numeradas do modo real, sem modelo.
+      async gerarRespostaCorrigida(_texto, resultados, opcoes) {
+        registrar(opcoes, "RESPOSTA_CORRIGIDA");
+        const fontes = montarFontesNumeradas(resultados);
+        const pt = atual === todos.pt;
+        const partes = []; const mudancas = [];
+        resultados.forEach((r, i) => {
+          const grupo = GRUPO_VEREDITO[r.agregacao?.veredito] ?? "NOT_VERIFIABLE";
+          const daAfirmacao = fontes.filter(f => f.claim_id === r.id);
+          const cita = postura => daAfirmacao.filter(f => f.stance === postura).map(f => `[${f.n}]`).join("");
+          const correcao = atual?.afirmacoes[i]?.[3];
+          if (grupo === "CONTRADICTED" && correcao) {
+            partes.push(`${correcao.replace(/\.$/, "")} ${cita("CONTRADICTS")}.`);
+            mudancas.push({ claim_id: r.id, what: "Replaced with what current sources say." });
+          } else if (grupo === "SUPPORTED" || grupo === "WEAKLY_SUPPORTED") {
+            partes.push(`${r.texto.replace(/\.$/, "")} ${cita("SUPPORTS")}.`);
+            mudancas.push({ claim_id: r.id, what: "Kept: current sources confirm it." });
+          } else {
+            partes.push(`${r.texto.replace(/\.$/, "")} (${pt ? "não foi possível confirmar" : "could not be confirmed"}).`);
+            mudancas.push({ claim_id: r.id, what: "Kept with a note: could not be confirmed." });
+          }
+        });
+        const texto = partes.join(" ").replace(/ \./g, ".");
+        return {
+          texto,
+          mudancas,
+          fontes_citadas: [...new Set([...texto.matchAll(/\[(\d+)\]/g)].map(m => Number(m[1])))],
+          fontes: fontes.map(({ n, url, title, type, stance, date }) => ({ n, url, titulo: title, tipo: type, postura: stance, data: date })),
+          metodo: "EXAMPLE_MODE_TEMPLATE"
+        };
+      }
+    },
     "./correspondencia": {
       async avaliarCorrespondencia(_a, _c, opcoes) {
         registrar(opcoes, "CORRESPONDENCIA", { url_evidencia: opcoes.urlEvidencia });
@@ -150,6 +184,7 @@ function criarVerificadorExemplo({ agora = new Date() } = {}) {
     return verificarTexto(texto, {
       ...opcoes,
       analiseEmLote: false,
+      respostaCorrigida: true,
       dominiosOficiais: id ? todos[id].dominios : [],
       dataReferencia: agora
     });

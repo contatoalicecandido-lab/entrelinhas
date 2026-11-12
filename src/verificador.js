@@ -10,6 +10,7 @@ const { randomUUID } = require("node:crypto");
 const { resolverTipoAfirmacao } = require("./tipo-afirmacao");
 const { analisarFontesEmLote } = require("./analise-lote");
 const { avaliarRiscoDesatualizacao } = require("./risco-desatualizacao");
+const { gerarRespostaCorrigida } = require("./resposta-corrigida");
 const { analisarNuances } = require("./portugues");
 const { pedeEvidenciaCientifica } = require("./tipo-fonte");
 
@@ -708,7 +709,24 @@ async function verificarTexto(texto, opcoes = {}) {
     resultados.push(resultado);
   }
 
-  // 3. Resultado completo, incluindo rastreabilidade.
+  // 3. Resposta corrigida, escrita só com as evidências verificadas.
+  //    Opcional e não bloqueante: uma falha aqui não invalida a verificação.
+
+  let respostaCorrigida = null;
+
+  if (opcoes.respostaCorrigida === true && resultados.length > 0) {
+    try {
+      respostaCorrigida = await gerarRespostaCorrigida(texto.trim(), resultados, {
+        idVerificacao,
+        onMetadata: registrarChamadaModelo,
+        dataReferencia: opcoes.dataReferencia
+      });
+    } catch (erro) {
+      respostaCorrigida = { texto: null, erro: erro.message };
+    }
+  }
+
+  // 4. Resultado completo, incluindo rastreabilidade.
 
   const resultadoFinal = {
     sistema: "Entrelinhas",
@@ -719,11 +737,12 @@ async function verificarTexto(texto, opcoes = {}) {
     sintese: resumirVerificacao(resultados),
     afirmacoes: resultados,
     afirmacoes_omitidas: afirmacoesOmitidas,
+    resposta_corrigida: respostaCorrigida,
     rastreabilidade_modelo: chamadasModelo,
     rastreabilidade_pesquisa: chamadasPesquisa
   };
 
-  // 4. Persistência no SQLite.
+  // 5. Persistência no SQLite.
 
   const idSalvo = bancoExecucao.salvarVerificacao(resultadoFinal);
 

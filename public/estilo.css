@@ -240,3 +240,19 @@ a.fonte-titulo:hover { color: var(--azul); text-decoration: underline; }
 .pilula-risco.risco-high { color: #8a1c1c; background: #fbe1e1; }
 .pilula-risco.risco-medium { color: #6b4e00; background: #fbefcc; }
 .pilula-risco.risco-low { color: #4a505c; background: #e8ebf0; }
+
+/* Resposta corrigida */
+.corrigida h3 { margin: 0 0 4px; font-size: 18px; }
+.comparacao { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 12px; }
+@media (max-width: 760px) { .comparacao { grid-template-columns: 1fr; } }
+.rotulo-comparacao { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--suave); margin: 0 0 6px; }
+.comparacao blockquote { margin: 0; padding: 14px 16px; border-radius: 10px; background: #f6f7f9; border-left: 4px solid #c9ced8; line-height: 1.55; font-size: 15px; white-space: pre-wrap; }
+.comparacao blockquote.novo { background: #eef9f2; border-left-color: #2f9e62; }
+.comparacao a.ref { text-decoration: none; font-weight: 700; color: #1d5fbf; margin-left: 1px; }
+.corrigida-fontes { margin: 14px 0 0; padding-left: 22px; display: grid; gap: 6px; font-size: 14px; }
+.corrigida-fontes li { display: list-item; }
+.corrigida-fontes li > * { margin-right: 8px; }
+.corrigida-fontes .selo-postura { font-size: 11.5px; font-weight: 700; border-radius: 999px; padding: 2px 8px; }
+.corrigida-fontes .selo-postura.a { color: #0f5b33; background: #dff3e7; }
+.corrigida-fontes .selo-postura.c { color: #8a1c1c; background: #fbe1e1; }
+.corrigida-fontes .tipo-ref, .corrigida-fontes .data-ref { font-size: 12.5px; color: var(--suave); }
