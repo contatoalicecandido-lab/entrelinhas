@@ -106,7 +106,40 @@ Per-entity windows (Selic 45 days, inflation monthly) are next on the list. Cali
 
 Run it against a live server with `node avaliacao/rodar-casos-reais.js`. It pauses 45 s between claims because of the free model tier's tokens-per-minute limit.
 
-<!-- RESULTADOS_BENCHMARK -->
+**Result of the live run on 12 Nov 2026** (`avaliacao/resultado-casos-reais-2026-11-12.json`):
+
+| | |
+|---|---|
+| Exact verdict (Current/Corroborated for true claims, Contradicted for outdated ones) | **11 of 15** (73%) |
+| Right direction (also counting “Supported but unconfirmed” and “Conflicting”) | **15 of 15** |
+| Outdated claims confirmed as true | **0** |
+| True claims marked as contradicted | **0** |
+
+| Claim | Known answer | Verdict |
+|---|---|---|
+| Salário mínimo 2026 é R$ 1.621 | true | Current |
+| Salário mínimo 2026 é R$ 1.518 | outdated | Contradicted by sources |
+| Selic está em 13,75% | true | Supported but unconfirmed |
+| Selic está em 10,5% | outdated | Contradicted by sources |
+| Netflix Padrão custa R$ 44,90 | outdated (R$ 51,90 since 15 Oct) | Contradicted by sources |
+| Qdenga no SUS, 10 a 14 anos | true | Supported but unconfirmed |
+| LGPD em vigor desde 2020 | true | Corroborated |
+| Pix gratuito para pessoa física | true | Corroborated |
+| Node.js 20 is Active LTS | outdated (EOL 30 Apr 2026) | Contradicted by sources |
+| Node.js 22 still gets security updates | true | Supported but unconfirmed |
+| ChatGPT Plus costs $20/month | true | Corroborated |
+| Sam Altman is CEO of OpenAI | true | Corroborated |
+| Python 2.7 still gets security updates | outdated | Contradicted by sources |
+| Jack Dorsey is CEO of Twitter | outdated | Contradicted by sources |
+| GPT-4 is OpenAI's newest model | outdated | Conflicting |
+
+What the run taught us, already fixed:
+- Portuguese claims got international English news (Selic), so news search now uses Brazilian outlets only.
+- Long-standing facts (“em vigor desde 2020”) were labeled *Aging*, so freshness now uses the most recent confirmation.
+- The updated answer, which is the last call, sometimes hit the free tier's per-minute limit, so the client now waits for Bifrost's `retry_after_ms`.
+- One updated answer came back in the wrong language, so the language is now pinned.
+
+15 claims is a small sample: this shows behavior on real cases, not a statistical accuracy estimate.
 
 ## Technology stack
 

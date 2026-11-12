@@ -44,10 +44,11 @@ async function principal() {
     return new Response(JSON.stringify({ choices: [{ message: { content: "```json\n{\"answer\":\"O salário mínimo em 2026 é de R$ 1.621 [1][2]. Pix é gratuito para pessoas físicas [4].\",\"changes\":[{\"claim_id\":\"afirmacao_1\",\"what\":\"Updated the value.\"}]}\n```" } }] }), { status: 200 });
   };
   try {
-    const r = await gerarRespostaCorrigida("texto original", resultados, { onMetadata: m => { meta = m; }, dataReferencia: new Date("2026-11-12T00:00:00Z") });
+    const r = await gerarRespostaCorrigida("The minimum wage is R$ 1,518 and Pix is free.", resultados, { onMetadata: m => { meta = m; }, dataReferencia: new Date("2026-11-12T00:00:00Z") });
     const pergunta = JSON.parse(corpo.messages.at(-1).content);
     assert.equal(meta.etapa, "RESPOSTA_CORRIGIDA");
     assert.equal(pergunta.reference_date, "2026-11-12");
+    assert.equal(pergunta.answer_language, "English", "texto original em inglês: resposta em inglês");
     assert.deepEqual(pergunta.claims.map(c => c.verdict), ["CONTRADICTED", "SUPPORTED"]);
     assert.equal(r.texto, "O salário mínimo em 2026 é de R$ 1.621 [1][2]. Pix é gratuito para pessoas físicas [4].");
     assert.equal(r.fontes.length, 4);

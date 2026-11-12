@@ -25,7 +25,7 @@ Record the screen at 1920×1080 and the voice separately. Cut on actions, not on
 | 1:30–1:55 | Paste text **B**. Show the Portuguese panel open: "44,90 conto → R$ 44,90", "atualmente = must hold today", official BR source searched. | "And it is built for Portuguese. It reads slang, Brazilian money formats and words like *atualmente*, and it goes to the Central Bank on its own." |
 | 1:55–2:10 | Netflix card *Outdated* with the quote "passa de R$ 44,90 para R$ 51,90"; Selic card contradicted (13,75%). | "Netflix raised the price in October; the Selic is 13.75%. Both claims are flagged, with the exact quote and date." |
 | 2:10–2:30 | Tick **Simulate an outage of the main model**, run a short claim. Show the **AI gateway · Bifrost** panel: main model crossed out, "answered by a backup". | "Every model call goes through Bifrost. If the main model fails or hits a rate limit, Bifrost switches to a backup model by itself. Here I simulate an outage, and the check still finishes." |
-| 2:30–2:45 | Benchmark result on screen (README section "Accuracy on real claims"), then the GitHub repo. | "On 15 real claims with known answers, Entrelinhas got [X of 15] right. It's open source, with 52 automated test files." |
+| 2:30–2:45 | Benchmark result on screen (README section "Accuracy on real claims"), then the GitHub repo. | "On 15 real claims with known answers, Entrelinhas got 11 exactly right and all 15 in the right direction. It never confirmed an outdated claim. It's open source, with 52 automated test files." |
 | 2:45–2:50 | Logo / headline. | "Entrelinhas. Read between the lines of any AI answer." |
 
 ## Editing tips
@@ -34,4 +34,4 @@ Record the screen at 1920×1080 and the voice separately. Cut on actions, not on
 - Add on-screen captions for the key numbers: "Node 20 EOL: 30 Apr 2026", "Netflix: R$ 44,90 → R$ 51,90 (15 Oct 2026)".
 - Keep music low and without lyrics.
 - If a live check is slow, cut from the click to the result and keep a 1 s shot of the progress steps.
-- Fill in "[X of 15]" with the final benchmark number.
+- Caption for the benchmark: "15 real claims · 11 exact · 15/15 right direction · 0 stale claims confirmed".

@@ -3,6 +3,8 @@
 // referências numeradas. Uma chamada ao modelo via Bifrost por verificação.
 // Se falhar, a verificação continua válida: o campo fica com o erro.
 const { perguntarAoModelo } = require("./bifrost");
+const { detectarIdioma } = require("./portugues");
+const NOMES_IDIOMA = { pt: "Brazilian Portuguese", en: "English" };
 
 const MAX_FONTES = 12;
 const MAX_POR_AFIRMACAO = 3;
@@ -23,7 +25,7 @@ const INSTRUCOES = `You correct an AI-generated answer so that it is accurate as
 You receive: the original answer, the verdict for each claim found in it, and numbered sources whose quotes were verified against the source text.
 
 Rules:
-- Keep the language, tone and structure of the original answer. Portuguese stays Portuguese.
+- Write the answer in answer_language (the language of the original answer), keeping its tone and structure. Never translate it.
 - Use ONLY facts present in the provided source quotes. Never add numbers, dates or names that are not in them.
 - CONTRADICTED: replace the claim with what the sources say, and cite them like [1] or [2][3].
 - SUPPORTED: keep the claim and cite a supporting source.
@@ -105,6 +107,7 @@ async function gerarRespostaCorrigida(textoOriginal, resultados, opcoes = {}) {
   const ids = new Set(afirmacoes.map(a => a.claim_id));
   const pergunta = JSON.stringify({
     reference_date: (opcoes.dataReferencia instanceof Date ? opcoes.dataReferencia : new Date()).toISOString().slice(0, 10),
+    answer_language: NOMES_IDIOMA[detectarIdioma(textoOriginal).idioma] ?? "the language of original_answer",
     original_answer: textoOriginal,
     claims: afirmacoes,
     sources: fontes.map(({ n, claim_id, stance, type, title, date, quote }) => ({ n, claim_id, stance, type, title, date, quote }))

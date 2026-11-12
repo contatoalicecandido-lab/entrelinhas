@@ -1,0 +1,37 @@
+{
+  "executado_em": "2026-11-12",
+  "servidor": "http://localhost:3001 (modo real: Tavily + Bifrost, Groq gpt-oss-20b com reservas)",
+  "versao_codigo": "commit 18b21b3 (antes das correções e5cf89d, 36f376e e da espera automática em limite de uso)",
+  "resumo": {
+    "total": 15,
+    "acertos": 11,
+    "parciais": 4,
+    "sem_decisao": 0,
+    "erros": 0,
+    "erros_graves_confirmou_desatualizada": 0,
+    "acuracia_estrita": 0.733,
+    "direcao_correta": 1.0,
+    "observacoes": [
+      "Parciais: Selic 13,75% e Qdenga (apoio fraco: busca de notícias trouxe notícias internacionais em inglês; corrigido em e5cf89d), Node.js 22 (apoio fraco, sem datas), GPT-4 (conflito: uma fonte antiga ainda o chama de mais avançado).",
+      "Rótulos 'Aging' em LGPD, Pix e ChatGPT Plus vieram da data de início do fato (2020, etc.) usada como recência; corrigido em 36f376e (vale a confirmação mais recente). Os vereditos não mudam.",
+      "7 de 15 respostas corrigidas falharam por limite de tokens por minuto do Groq gratuito (última chamada da verificação); espera automática pelo retry_after_ms do Bifrost adicionada em 1867d3f."
+    ]
+  },
+  "linhas": [
+    {"id":"pt-salario-1621","esperado":"ATUAL","veredito":"ATUAL","resultado":"ACERTO","fontes_a_favor":5,"fontes_contra":0,"respostas_de_reserva":1,"resposta_corrigida":"O salário mínimo em 2026 é de R$ 1.621[1][2][3]."},
+    {"id":"pt-salario-1518","esperado":"DESATUALIZADA","veredito":"CONTRADICAO_FRACA","resultado":"ACERTO","fontes_a_favor":0,"fontes_contra":5,"respostas_de_reserva":1,"resposta_corrigida":"O salário mínimo em 2026 é de R$ 1.621,00. [1][3]"},
+    {"id":"pt-selic-1375","esperado":"ATUAL","veredito":"SUPORTE_FRACO","resultado":"PARCIAL","fontes_a_favor":1,"fontes_contra":0,"respostas_de_reserva":0,"resposta_corrigida":"A taxa Selic está atualmente em 13,75% ao ano, segundo uma fonte."},
+    {"id":"pt-selic-105","esperado":"DESATUALIZADA","veredito":"CONTRADICAO_FRACA","resultado":"ACERTO","fontes_a_favor":0,"fontes_contra":4,"respostas_de_reserva":2,"resposta_corrigida":"A taxa Selic está atualmente em 13,75% ao ano. [2][3]"},
+    {"id":"pt-netflix-4490","esperado":"DESATUALIZADA","veredito":"CONTRADICAO_FRACA","resultado":"ACERTO","fontes_a_favor":0,"fontes_contra":2,"respostas_de_reserva":1,"resposta_corrigida":null},
+    {"id":"pt-qdenga-sus","esperado":"ATUAL","veredito":"SUPORTE_FRACO","resultado":"PARCIAL","fontes_a_favor":2,"fontes_contra":0,"respostas_de_reserva":1,"resposta_corrigida":"A vacina da dengue Qdenga é aplicada pelo SUS em crianças e adolescentes de 10 a 14 anos (não foi possível confirmar)."},
+    {"id":"pt-lgpd-vigor","esperado":"ATUAL","veredito":"CORROBORADA","resultado":"ACERTO","fontes_a_favor":5,"fontes_contra":0,"respostas_de_reserva":1,"resposta_corrigida":"A LGPD está em vigor no Brasil desde 2020. [1][2][3]"},
+    {"id":"pt-pix-gratis-pf","esperado":"ATUAL","veredito":"CORROBORADA","resultado":"ACERTO","fontes_a_favor":3,"fontes_contra":0,"respostas_de_reserva":3,"resposta_corrigida":"O Pix é gratuito para pessoas físicas que fazem transferências.[1]"},
+    {"id":"en-node20-lts","esperado":"DESATUALIZADA","veredito":"CONTRADICAO_FRACA","resultado":"ACERTO","fontes_a_favor":0,"fontes_contra":4,"respostas_de_reserva":2,"resposta_corrigida":null},
+    {"id":"en-node22-security","esperado":"ATUAL","veredito":"SUPORTE_FRACO","resultado":"PARCIAL","fontes_a_favor":2,"fontes_contra":0,"respostas_de_reserva":1,"resposta_corrigida":null},
+    {"id":"en-chatgpt-plus-20","esperado":"ATUAL","veredito":"CORROBORADA","resultado":"ACERTO","fontes_a_favor":5,"fontes_contra":0,"respostas_de_reserva":2,"resposta_corrigida":null},
+    {"id":"en-openai-ceo","esperado":"ATUAL","veredito":"CORROBORADA","resultado":"ACERTO","fontes_a_favor":5,"fontes_contra":0,"respostas_de_reserva":2,"resposta_corrigida":null},
+    {"id":"en-python2-security","esperado":"DESATUALIZADA","veredito":"CONTRADICAO_FRACA","resultado":"ACERTO","fontes_a_favor":0,"fontes_contra":4,"respostas_de_reserva":2,"resposta_corrigida":null},
+    {"id":"en-twitter-dorsey","esperado":"DESATUALIZADA","veredito":"CONTRADICAO_FRACA","resultado":"ACERTO","fontes_a_favor":0,"fontes_contra":3,"respostas_de_reserva":1,"resposta_corrigida":null},
+    {"id":"en-gpt4-newest","esperado":"DESATUALIZADA","veredito":"CONFLITO","resultado":"PARCIAL","fontes_a_favor":1,"fontes_contra":2,"respostas_de_reserva":3,"resposta_corrigida":"As fontes discordam sobre se o GPT-4 é o modelo mais recente e avançado da OpenAI. [1][2][3] (idioma errado; corrigido depois)"}
+  ]
+}

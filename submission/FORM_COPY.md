@@ -79,7 +79,12 @@ Entrelinhas works in six steps.
 
 ## Accuracy on real claims
 
-<!-- BENCH_FORM -->
+On 15 real claims with answers known on 12 Nov 2026 (8 true, 7 outdated, in Portuguese and English):
+- **11 of 15** got the exact verdict;
+- **15 of 15** went in the right direction;
+- **0** outdated claims were confirmed as true, and **0** true claims were marked as contradicted.
+
+The cases, their sources and the results are in `avaliacao/`. It is a small sample, not a statistical accuracy estimate.
 
 ## Architecture and technology
 
