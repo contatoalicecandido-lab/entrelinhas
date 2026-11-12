@@ -78,7 +78,14 @@
         </div>
         <div id="contagens" class="contagens"></div>
       </div>
+      <section id="triagem" class="painel triagem" hidden aria-labelledby="titulo-triagem">
+        <p class="rotulo-comparacao">Step 1 · Before searching</p>
+        <h3 id="titulo-triagem">Stale-risk triage</h3>
+        <p class="dica">Before searching, each claim is flagged by how likely it is to have gone out of date, and why.</p>
+        <ol id="triagem-lista" class="triagem-lista"></ol>
+      </section>
       <section id="corrigida" class="painel corrigida" hidden aria-labelledby="titulo-corrigida">
+        <p class="rotulo-comparacao">Step 2 · After checking</p>
         <h3 id="titulo-corrigida">Updated answer</h3>
         <p class="dica">The original answer rewritten using only the verified sources below. Numbers link to the sources.</p>
         <div class="comparacao">
@@ -88,12 +95,7 @@
         <ol id="corrigida-fontes" class="corrigida-fontes"></ol>
       </section>
       <div id="omitidas" class="aviso neutro" hidden></div>
-      <section id="triagem" class="painel triagem" hidden aria-labelledby="titulo-triagem">
-        <p class="rotulo-comparacao">Step 1 · Stale-risk triage</p>
-        <h3 id="titulo-triagem">Stale-risk triage</h3>
-        <p class="dica">Before searching, each claim is flagged by how likely it is to have gone out of date, and why.</p>
-        <ol id="triagem-lista" class="triagem-lista"></ol>
-      </section>
+
       <div id="cartoes" class="cartoes"></div>
       <section id="gateway" class="painel gateway" hidden aria-labelledby="titulo-gateway">
         <h3 id="titulo-gateway">AI gateway · Bifrost</h3>

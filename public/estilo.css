@@ -256,3 +256,9 @@ a.fonte-titulo:hover { color: var(--azul); text-decoration: underline; }
 .corrigida-fontes .selo-postura.a { color: #0f5b33; background: #dff3e7; }
 .corrigida-fontes .selo-postura.c { color: #8a1c1c; background: #fbe1e1; }
 .corrigida-fontes .tipo-ref, .corrigida-fontes .data-ref { font-size: 12.5px; color: var(--suave); }
+
+/* Painéis do relatório: mesma margem interna e espaçamento dos demais */
+.corrigida, .triagem, .gateway { padding: 22px 28px; margin-top: 18px; }
+.corrigida h3, .triagem h3, .gateway h3 { font-family: var(--serifa); font-weight: 600; font-size: 21px; margin: 2px 0 4px; }
+.triagem .rotulo-comparacao { margin-bottom: 2px; }
+@media (max-width: 640px) { .corrigida, .triagem, .gateway { padding-left: 18px; padding-right: 18px; } }
