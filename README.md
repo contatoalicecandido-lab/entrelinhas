@@ -22,6 +22,10 @@ It is **built for Portuguese, not translated into it**. It reads:
 - slang such as “9 pau” (R$ 9 mil), “50 conto” and “zap”;
 - Brazilian authorities (Banco Central, gov.br, Anatel…), which it searches automatically.
 
+**Try it now, no install:** <https://contatoalicecandido-lab.github.io/entrelinhas/>. The public demo replays real live checks (real Tavily searches, real model calls through Bifrost) and the built-in examples, without API keys. To check your own text, run it locally (see [Getting started](#getting-started)).
+
+**Check any AI answer from any site:** with Entrelinhas running locally, drag the **✓ Check with Entrelinhas** button (on the page, under “Check any AI answer, on any site”) to your bookmarks bar. Select an answer on ChatGPT, Gemini or any page and click it: Entrelinhas opens with the text ready. Apps can call the same check with `POST /api/verificar`.
+
 ## The problem
 
 Large language models confidently repeat facts that have changed: prices go up, API versions reach end of life, rates and laws are updated, executives leave. Retrieval does not solve it alone. A cited page can be official and relevant while the fact it supports has already changed. A claim can be repeated by ten copies of one article. A price written “a partir de R$ 99,90” can be read as an exact price.
@@ -317,7 +321,16 @@ Both services must be running and correctly configured.
 This is an integration smoke test, not a complete application interface.
 It sends real requests to Bifrost and Tavily. Use `node demo.js` for a full claim-level verification flow.
 
-### 8. Measure accuracy on real claims
+### 8. Rebuild the public demo
+
+```bash
+ENTRELINHAS_GRAVAR=1 PORT=3001 npm run web   # live checks are saved to gravacoes/
+node scripts/montar-demo-estatica.js         # builds docs/ from gravacoes/selecao.json and the examples
+```
+
+GitHub Pages serves `docs/` from the `main` branch. Recordings keep no credentials; provider organization IDs are redacted.
+
+### 9. Measure accuracy on real claims
 
 ```bash
 node avaliacao/rodar-casos-reais.js            # needs the live server running

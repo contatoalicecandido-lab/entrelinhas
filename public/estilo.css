@@ -275,3 +275,79 @@ a.fonte-titulo:hover { color: var(--azul); text-decoration: underline; }
 .marca { display: inline-flex; align-items: center; gap: 10px; }
 .marca-icone { width: 30px; height: 30px; flex: none; }
 @media (max-width: 1100px) and (min-width: 761px) { .passos { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* =====================================================================
+   Tema 2 — escuro com brilho laranja, seções claras arredondadas,
+   títulos sem serifa grandes e finos, pílulas com seta.
+   ===================================================================== */
+:root {
+  --laranja: #ff6a2b;
+  --laranja-escuro: #e2531a;
+  --noite: #0b0b0d;
+  --noite-2: #17171a;
+  --fundo: #ececee;
+  --painel: #f7f7f8;
+  --linha: #dcdce0;
+  --tinta: #121214;
+  --suave: #5f6068;
+  --serifa: var(--sans);
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --raio: 18px;
+  --sombra: 0 1px 2px rgba(0, 0, 0, .04);
+}
+body {
+  background:
+    radial-gradient(60% 520px at 50% -80px, rgba(255, 106, 43, .55), rgba(255, 106, 43, 0) 70%),
+    radial-gradient(40% 380px at 85% 120px, rgba(120, 60, 200, .18), rgba(0, 0, 0, 0) 70%),
+    var(--noite);
+  background-repeat: no-repeat;
+}
+.barra { background: rgba(11, 11, 13, .72); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, .06); }
+.marca-nome { font-family: var(--sans); font-weight: 600; font-size: 21px; letter-spacing: -.02em; }
+.marca-nome em { font-style: normal; color: var(--laranja); }
+.selo { background: rgba(255, 255, 255, .08); color: #e8e8ea; border: 1px solid rgba(255, 255, 255, .14); }
+.selo.real { background: rgba(255, 106, 43, .14); color: #ffb58f; border-color: rgba(255, 106, 43, .35); }
+
+.hero { background: transparent; text-align: center; padding: 72px 0 128px; }
+.hero-interno { max-width: 900px; }
+.sobretitulo { color: #ffb58f; letter-spacing: .14em; font-weight: 600; font-size: 12px; }
+.hero h1 { font-family: var(--sans); font-weight: 500; font-size: clamp(38px, 6.4vw, 72px); letter-spacing: -.035em; line-height: 1.02; margin: 0 auto 22px; max-width: 860px; }
+.hero h1 .destaque { color: var(--laranja); }
+.hero-texto { color: #b9b9c0; margin: 0 auto; max-width: 720px; font-size: 18px; }
+
+main {
+  max-width: 1120px; margin: -80px auto 0; padding: 36px 40px 56px;
+  background: var(--fundo); border-radius: 32px 32px 0 0;
+}
+.painel, .cartao { background: var(--painel); border: 1px solid var(--linha); box-shadow: none; }
+.entrada h2, .secao h2, .resumo h2, .corrigida h3, .triagem h3, .gateway h3, #favorito-secao h2 {
+  font-family: var(--sans); font-weight: 500; letter-spacing: -.025em;
+}
+.entrada h2, .secao h2, .resumo h2 { font-size: 30px; }
+.cartao h3, .cartao-titulo { font-family: var(--sans); letter-spacing: -.02em; }
+
+.exemplos button { background: transparent; border: 1px solid #c9c9ce; border-radius: 999px; font-weight: 500; }
+.exemplos button::after { content: " ↗"; color: var(--laranja); font-weight: 700; }
+.exemplos button:hover { border-color: var(--laranja); }
+.exemplos button.gravacao::before { color: var(--laranja); }
+
+.botao-principal { background: var(--laranja); color: #fff; border-radius: 8px; font-weight: 600; letter-spacing: -.01em; }
+.botao-principal:hover { background: var(--laranja-escuro); }
+textarea, input[type="text"] { background: #fff; }
+
+/* Seções explicativas em bloco escuro, como na referência */
+.secao#como-funciona, #favorito-secao {
+  background: var(--noite); color: #ededf0; border-color: #222226;
+  background-image: radial-gradient(70% 300px at 100% 0%, rgba(255, 106, 43, .22), rgba(0, 0, 0, 0) 70%);
+}
+#como-funciona h2, #favorito-secao h2 { color: #fff; }
+#como-funciona .passos li, #como-funciona .diferenciais > div { background: rgba(255, 255, 255, .04); border: 1px solid rgba(255, 255, 255, .08); }
+#como-funciona .passos h3, #como-funciona .diferenciais h3 { color: #fff; }
+#como-funciona .passos p, #como-funciona .diferenciais p, #favorito-secao p, #favorito-secao .dica { color: #b9b9c0; }
+#como-funciona .passos .num { background: var(--laranja); color: #fff; }
+.botao-favorito { background: var(--laranja); color: #fff; border-radius: 8px; }
+#favorito-secao code { color: #ffb58f; }
+
+.rodape { background: var(--noite); color: #8b8b93; padding: 28px 24px 40px; margin: 0; }
+@media (max-width: 760px) { main { padding: 24px 16px 40px; border-radius: 22px 22px 0 0; } }
+#como-funciona .diferenciais > div { padding: 16px; border-radius: 12px; }

@@ -1,4 +1,4 @@
-# Entrelinhas · demo video script (2:30–2:50)
+# Entrelinhas · demo video script (about 2:55)
 
 Narration in English (the judges are global), with one Portuguese moment that shows the differentiator.
 Record the screen at 1920×1080 and the voice separately. Cut on actions, not on pauses.
@@ -24,9 +24,10 @@ Record the screen at 1920×1080 and the voice separately. Cut on actions, not on
 | 1:10–1:30 | Node.js card: verdict *Contradicted by sources*, Freshness score near 0 "Outdated", "Who says what", the nodejs.org source with its quote. | "Each claim gets a verdict and a freshness score: how recent the sources are, times how many of them support the claim. Official sources weigh most and blogs least, so it does not just agree with you." |
 | 1:30–1:55 | Paste text **B**. Show the Portuguese panel open: "44,90 conto → R$ 44,90", "atualmente = must hold today", official BR source searched. | "And it is built for Portuguese. It reads slang, Brazilian money formats and words like *atualmente*, and it goes to the Central Bank on its own." |
 | 1:55–2:10 | Netflix card *Outdated* with the quote "passa de R$ 44,90 para R$ 51,90"; Selic card contradicted (13,75%). | "Netflix raised the price in October; the Selic is 13.75%. Both claims are flagged, with the exact quote and date." |
-| 2:10–2:30 | Tick **Simulate an outage of the main model**, run a short claim. Show the **AI gateway · Bifrost** panel: main model crossed out, "answered by a backup". | "Every model call goes through Bifrost. If the main model fails or hits a rate limit, Bifrost switches to a backup model by itself. Here I simulate an outage, and the check still finishes." |
+| 2:10–2:20 | Tick **Simulate an outage of the main model**, run a short claim. Show the **AI gateway · Bifrost** panel: main model crossed out, "answered by a backup". | "Every model call goes through Bifrost. If the main model fails or hits a rate limit, Bifrost switches to a backup model by itself. Here I simulate an outage, and the check still finishes." |
+| 2:20–2:30 | On ChatGPT (or any page), select an answer and click the **✓ Check with Entrelinhas** bookmark. Entrelinhas opens with the text filled in. | "And it works wherever you already use AI: select an answer on any site, one click, and it's ready to check." |
 | 2:30–2:45 | Benchmark result on screen (README section "Accuracy on real claims"), then the GitHub repo. | "On 15 real claims with known answers, Entrelinhas got 11 exactly right and all 15 in the right direction. It never confirmed an outdated claim. It's open source, with 52 automated test files." |
-| 2:45–2:50 | Logo / headline. | "Entrelinhas. Read between the lines of any AI answer." |
+| 2:45–2:55 | Public demo page, then logo / headline. | "You can try it right now, no install: the link is in the description. Entrelinhas. Read between the lines of any AI answer." |
 
 ## Editing tips
 
