@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Entrelinhas — read between the lines of AI answers</title>
+  <title>Entrelinhas — is this AI answer really true?</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2310182B'/%3E%3Cpath d='M8 11h16M8 16h10M8 21h13' stroke='%23F0A15B' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="/estilo.css">
   <script src="/app.js" defer></script>
@@ -22,9 +22,9 @@
 
   <section class="hero">
     <div class="hero-interno">
-      <p class="sobretitulo">Stale-answer and fact checker for AI applications</p>
-      <h1>Is this AI answer still true today?</h1>
-      <p class="hero-texto">Paste an answer from any AI. Entrelinhas splits it into claims and checks each one against official sites, news, references and blogs found live with <strong>Tavily</strong>, read by a model through <strong>Bifrost</strong>. For every claim you get a verdict, how strongly independent sources agree, how fresh the evidence is, and the exact sources behind it, in English or Portuguese.</p>
+      <p class="sobretitulo">Fact-checking for AI answers · English and Portuguese</p>
+      <h1>Is this AI answer really true?</h1>
+      <p class="hero-texto">AI assistants often just agree with what you ask. Entrelinhas checks every claim in an answer against official sources, news and scientific articles found live with <strong>Tavily</strong> and read by a model through <strong>Bifrost</strong>. For each claim you see whether independent sources agree, whether the information is still current, and exactly where it comes from.</p>
     </div>
   </section>
 
@@ -41,13 +41,13 @@
       <div class="opcoes">
         <fieldset class="modo">
           <legend>Mode</legend>
-          <label id="opcao-real"><input type="radio" name="modo" value="real"> <span>Live: Tavily search + model via Bifrost</span></label>
-          <label><input type="radio" name="modo" value="exemplo" checked> <span>Example: built-in answers, simulated sources, no cost</span></label>
+          <label id="opcao-real"><input type="radio" name="modo" value="real"> <span>Live check: searches the web now</span></label>
+          <label><input type="radio" name="modo" value="exemplo" checked> <span>Demo: built-in examples, no keys, no cost</span></label>
         </fieldset>
         <div>
-          <label class="rotulo" for="dominios">Official domains <span class="opcional">optional</span></label>
-          <input id="dominios" type="text" placeholder="platform.openai.com, gov.br" autocomplete="off">
-          <p class="dica">Sources from these domains count as official and get an extra targeted search.</p>
+          <label class="rotulo" for="dominios">Trusted sites <span class="opcional">optional</span></label>
+          <input id="dominios" type="text" placeholder="e.g. gov.br, who.int, nodejs.org" autocomplete="off">
+          <p class="dica">Sites you consider the authority on this topic. They are searched first and count as official. Brazilian authorities and the company's own site are detected automatically.</p>
         </div>
       </div>
 
@@ -61,7 +61,7 @@
       <div class="barra-progresso"><span></span></div>
       <ol>
         <li>Splitting the answer into atomic claims and detecting their category and language</li>
-        <li>Searching the web, news and official domains, then extracting diverse sources (Tavily)</li>
+        <li>Searching official sites, news and scientific articles, then extracting diverse sources (Tavily)</li>
         <li>Reading every source against its claim, with today's date (model via Bifrost)</li>
         <li>Weighing agreement between independent sources and checking dates</li>
       </ol>
@@ -86,12 +86,12 @@
       <h2>How it works</h2>
       <ol class="passos">
         <li><span class="num">1</span><h3>Split and categorize</h3><p>The answer becomes atomic claims. Each gets a category with its own validity window: prices 30 days, API versions 90, companies 180, regulations 365.</p></li>
-        <li><span class="num">2</span><h3>Gather diverse sources</h3><p>Tavily runs a general search, a news search and, if given, an official-domain search. Up to five sources of different types are extracted, never two from the same site.</p></li>
+        <li><span class="num">2</span><h3>Gather diverse sources</h3><p>Tavily searches the web, the news, official sites and, for science and health claims, scientific articles. Up to five sources of different types are read, never two from the same site; blogs come last.</p></li>
         <li><span class="num">3</span><h3>Read them together</h3><p>One model call through Bifrost reads all sources for a claim: same object? supports or contradicts? It knows today's date and Portuguese conventions.</p></li>
         <li><span class="num">4</span><h3>Weigh and explain</h3><p>Deterministic rules group copies, weigh source types, compute agreement and freshness, and give a verdict you can audit source by source.</p></li>
       </ol>
       <div class="diferenciais">
-        <div><h3>Many voices, not one link</h3><p>A claim is judged by how independent sources agree, weighted by type. Ten copies of one article count once.</p></div>
+        <div><h3>Not just agreeing with you</h3><p>An AI tends to confirm what you ask. Entrelinhas looks for independent official, news and scientific sources that support or contradict the claim, weighted by type. Ten copies of one blog post count once and weigh almost nothing.</p></div>
         <div><h3>Freshness that refuses to guess</h3><p>Only a date tied to the specific fact feeds the freshness score. A page's publish date is shown separately, with low confidence.</p></div>
         <div><h3>Portuguese-aware</h3><p>Brazilian numbers and money (R$ 1.234,56, “5 mil”), qualifiers (“a partir de”, “até”, “cerca de”), payment conditions (“no Pix”, “12x sem juros”), change words (“deixou de”, “entrou em vigor”), colloquial time (“ano que vem”) and day/month dates are read the way a Brazilian means them. Terms like Selic, LGPD or Anatel send the search to the right Brazilian authority.</p></div>
         <div><h3>Traceable</h3><p>Every verification is stored with its sources, model calls and search operations, so any verdict can be checked later.</p></div>

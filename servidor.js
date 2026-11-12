@@ -170,7 +170,8 @@ async function executarVerificacao(pedido) {
       analiseEmLote: true,
       incluirNoticias: true,
       fontesDiversas: true,
-      paisAutomatico: true
+      paisAutomatico: true,
+      cienciaAutomatica: true
     });
     return prepararParaNavegador(resultado, "real");
   } finally {

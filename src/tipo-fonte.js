@@ -19,10 +19,22 @@ const NOTICIAS = [
   "tecnoblog.net", "nexojornal.com.br", "bbc.com/portuguese", "jota.info", "conjur.com.br"
 ];
 
+// Ciência: artigos revisados, bases acadêmicas e universidades.
+const ACADEMICO = [
+  "scholar.google.com", "arxiv.org", "nature.com", "science.org", "sciencedirect.com", "springer.com",
+  "link.springer.com", "wiley.com", "onlinelibrary.wiley.com", "pubmed.ncbi.nlm.nih.gov", "ncbi.nlm.nih.gov",
+  "nih.gov", "thelancet.com", "nejm.org", "bmj.com", "jamanetwork.com", "cell.com", "plos.org",
+  "frontiersin.org", "mdpi.com", "acm.org", "dl.acm.org", "ieee.org", "ieeexplore.ieee.org",
+  "semanticscholar.org", "researchgate.net", "ssrn.com", "jstor.org", "cochranelibrary.com",
+  "scielo.org", "scielo.br", "periodicos.capes.gov.br", "fapesp.br", "revistapesquisa.fapesp.br", "fiocruz.br"
+];
+const SUFIXOS_ACADEMICOS = [/\.edu$/, /\.edu\.[a-z]{2}$/, /\.ac\.[a-z]{2}$/, /(^|\.)(usp|unicamp|ufsc|ufrj|ufmg|ufrgs|unb|unesp|ufpr|ufpe|ufba|ufc|puc-?rio|pucsp|fgv)\.br$/];
+
 const REFERENCIA = [
   "wikipedia.org", "britannica.com", "developer.mozilla.org", "w3.org", "ietf.org",
   "rfc-editor.org", "iso.org", "who.int", "worldbank.org", "imf.org", "oecd.org",
-  "ibge.gov.br", "scholar.google.com", "arxiv.org", "nature.com", "sciencedirect.com"
+  "ibge.gov.br", "endoflife.date", "snopes.com", "factcheck.org", "politifact.com",
+  "lupa.uol.com.br", "aosfatos.org", "e-farsas.com", "boatos.org"
 ];
 
 const BLOG_FORUM = [
@@ -71,6 +83,7 @@ function ehSiteDaEntidade(h, afirmacao) {
 const ROTULOS = {
   OFICIAL: "Official",
   NOTICIA: "News",
+  ACADEMICO: "Scientific",
   REFERENCIA: "Reference",
   BLOG_FORUM: "Blog / forum",
   OUTRO: "Other website"
@@ -105,6 +118,9 @@ function classificarFonte(url, opcoes = {}) {
   if (oficiais.some(d => h === d || h.endsWith(`.${d}`))) {
     return { tipo: "OFICIAL", rotulo: ROTULOS.OFICIAL, motivo: "CONFIGURED_OFFICIAL_DOMAIN" };
   }
+  if (pertence(h, ACADEMICO) || SUFIXOS_ACADEMICOS.some(re => re.test(h))) {
+    return { tipo: "ACADEMICO", rotulo: ROTULOS.ACADEMICO, motivo: "ACADEMIC_SOURCE" };
+  }
   if (pareceGoverno(h)) return { tipo: "OFICIAL", rotulo: ROTULOS.OFICIAL, motivo: "GOVERNMENT_DOMAIN" };
   if (!pertence(h, BLOG_FORUM) && !pertence(h, NOTICIAS) && ehSiteDaEntidade(h, opcoes.afirmacao)) {
     return { tipo: "OFICIAL", rotulo: ROTULOS.OFICIAL, motivo: "ENTITY_OWN_DOMAIN" };
@@ -117,4 +133,11 @@ function classificarFonte(url, opcoes = {}) {
   return { tipo: "OUTRO", rotulo: ROTULOS.OUTRO, motivo: "UNCLASSIFIED" };
 }
 
-module.exports = { classificarFonte, ehSiteDaEntidade, ROTULOS };
+// Afirmações que pedem evidência científica (saúde, ciência, pesquisa).
+const PISTAS_CIENCIA = /\b(estudos?|pesquisas?|cientistas?|cient[ií]fic[ao]s?|comprovad[ao]|study|studies|research|scientists?|scientific|proven|vacinas?|vaccines?|c[aâ]ncer|cancer|sa[uú]de|health|doen[cç]as?|disease|tratamento|treatment|rem[eé]dio|medicamento|drug|v[ií]rus|virus|clima|climate|aquecimento global|global warming|dieta|diet|nutri|sono|sleep|c[eé]rebro|brain|gen[eé]tic|evolu[cç][aã]o|evolution|efic[aá]cia|efficacy|causa|causes|risco|risk)\b/i;
+
+function pedeEvidenciaCientifica(texto) {
+  return PISTAS_CIENCIA.test(String(texto ?? ""));
+}
+
+module.exports = { classificarFonte, ehSiteDaEntidade, pedeEvidenciaCientifica, ROTULOS, ACADEMICO };

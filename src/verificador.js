@@ -10,6 +10,7 @@ const { randomUUID } = require("node:crypto");
 const { resolverTipoAfirmacao } = require("./tipo-afirmacao");
 const { analisarFontesEmLote } = require("./analise-lote");
 const { analisarNuances } = require("./portugues");
+const { pedeEvidenciaCientifica } = require("./tipo-fonte");
 
 const {
   avaliarAtualidade,
@@ -171,7 +172,7 @@ function validarOpcoes(opcoes) {
     throw new Error("maxAfirmacoes precisa ser um inteiro entre 1 e 50.");
   }
 
-  for (const chave of ["analiseEmLote", "incluirNoticias", "fontesDiversas", "paisAutomatico"]) {
+  for (const chave of ["analiseEmLote", "incluirNoticias", "fontesDiversas", "paisAutomatico", "cienciaAutomatica"]) {
     if (opcoes[chave] !== undefined && typeof opcoes[chave] !== "boolean") {
       throw new Error(`${chave} precisa ser verdadeiro ou falso.`);
     }
@@ -183,6 +184,7 @@ function validarOpcoes(opcoes) {
     incluirNoticias: opcoes.incluirNoticias ?? false,
     fontesDiversas: opcoes.fontesDiversas ?? false,
     paisAutomatico: opcoes.paisAutomatico ?? false,
+    cienciaAutomatica: opcoes.cienciaAutomatica ?? false,
     maxAfirmacoes,
     inferirTipo: opcoes.inferirTipo ?? true,
     dataReferencia,
@@ -435,6 +437,7 @@ async function verificarAfirmacao(afirmacao, opcoes) {
         tipoAfirmacao: resultado.tipo_afirmacao,
         onMetadata: opcoes.onMetadataPesquisa,
         incluirNoticias: opcoes.incluirNoticias,
+        incluirCiencia: Boolean(opcoes.cienciaAutomatica && pedeEvidenciaCientifica(afirmacao.texto)),
         selecaoDiversa: opcoes.fontesDiversas,
         maxFontes: opcoes.fontesDiversas ? opcoes.maxEvidencias : undefined,
         // Afirmação em português: prioriza resultados do Brasil na busca geral.

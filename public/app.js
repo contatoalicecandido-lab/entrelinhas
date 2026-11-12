@@ -24,8 +24,10 @@ const ORDEM = ["CONTRADITA_POR_FONTE_ATUAL", "CONTRADICAO_FRACA", "CONFLITO", "S
 const CATEGORIAS = {
   preco: ["Price", 30], versao_api: ["API / software version", 90], empresa: ["Company information", 180], regulamento: ["Regulation", 365]
 };
+const PLURAIS = { preco: "prices", versao_api: "API versions", empresa: "company facts", regulamento: "regulations" };
 const ORIGEM = { CONFIGURADO: "set by you", MODELO: "detected by the model", HEURISTICA: "detected by keyword rules" };
-const TIPOS_FONTE = { OFICIAL: "Official", NOTICIA: "News", REFERENCIA: "Reference", OUTRO: "Other site", BLOG_FORUM: "Blog / forum" };
+const TIPOS_FONTE = { OFICIAL: "Official", NOTICIA: "News", ACADEMICO: "Scientific", REFERENCIA: "Reference", OUTRO: "Other website", BLOG_FORUM: "Blog / forum" };
+const ORDEM_TIPOS = ["OFICIAL", "NOTICIA", "ACADEMICO", "REFERENCIA", "OUTRO", "BLOG_FORUM"];
 const COBERTURA = { STRONG: "strong coverage", MODERATE: "moderate coverage", WEAK: "a single source", NONE: "no usable source" };
 
 // O motor escreve algumas notas em português; aqui ficam as versões em inglês.
@@ -99,15 +101,15 @@ function mostrarMensagem(texto) { $("mensagem").textContent = texto || ""; }
 function configurarModo() {
   const real = Boolean(estado.status?.modo_real_disponivel);
   const selo = $("selo-modo");
-  selo.textContent = real ? "Live mode ready" : "Example mode";
+  selo.textContent = real ? "Live checks on" : "Demo mode";
   selo.classList.toggle("real", real);
   const opcao = $("opcao-real");
   const radio = opcao.querySelector("input");
   radio.disabled = !real;
   opcao.classList.toggle("desativado", !real);
   opcao.querySelector("span").textContent = real
-    ? "Live: Tavily search + model via Bifrost"
-    : "Live: needs TAVILY_API_KEY and BIFROST_KEY on the server";
+    ? "Live check: searches the web now"
+    : "Live check: needs TAVILY_API_KEY and BIFROST_KEY on the server";
   (real ? radio : document.querySelector('input[name="modo"][value="exemplo"]')).checked = true;
 }
 
@@ -138,9 +140,8 @@ function montarLegenda() {
     caixa.append(bloco);
   }
   const extras = [
-    ["Source agreement (0–100)", "How much independent sources agree with the claim, weighted by type: official 3, news 2, reference 2, other sites 1, blogs and forums 0.5. Copies and pages of one site count once."],
-    ["Freshness (0–100)", "How recent the date tied to this exact fact is, against the claim type's validity window: it halves every half window, so a price dated 7 days ago scores 72. Without such a date, the card says so and shows page-date recency with low confidence."],
-    ["Portuguese-aware reading", "R$ 1.234,56 is 1234.56 and “5 mil” is 5,000; “a partir de” is a starting price, “até” an upper bound, “cerca de” approximate; “no Pix”, “12x sem juros” and “para novos clientes” are conditions; “deixou de” and “entrou em vigor” mark changes; “atualmente” must hold today; “ano que vem” and 03/04/2027 are resolved (3 April); Selic, LGPD, Anatel or salário mínimo send the search to the Brazilian authority."]
+    ["Source agreement (0–100)", "How much independent sources agree with the claim. Official and scientific sources weigh 3, news 2, references 1.5, other websites 1, blogs and forums 0.25. Copies and pages of one site count once."],
+    ["Freshness (0–100)", "For prices, API versions, regulations and company facts: how recent the date tied to this exact fact is. A page's publish date never counts as proof."]
   ];
   for (const [titulo, texto] of extras) {
     const bloco = el("div");
@@ -283,32 +284,37 @@ function criarMetricas(afirmacao) {
   const rec = ag.recencia_pagina ?? null;
   const grade = el("div", "metricas");
 
+  // 1. Concordância entre fontes
   const m1 = metrica("Source agreement");
-  valorComBarra(m1, conc?.score ?? null, corDoValor(conc?.score));
-  m1.append(el("p", "metrica-nota", conc && conc.independent_sources > 0
-    ? `${conc.supporting} support · ${conc.contradicting} contradict${conc.split ? ` · ${conc.split} split` : ""} · ${conc.independent_sources} independent source${conc.independent_sources > 1 ? "s" : ""}, ${COBERTURA[conc.coverage]}`
-    : "No source took a clear position on this claim."));
+  if (conc && conc.independent_sources > 0) {
+    valorComBarra(m1, conc.score, corDoValor(conc.score));
+    m1.append(el("p", "metrica-nota", `${conc.independent_sources} independent source${conc.independent_sources > 1 ? "s" : ""}: ${conc.supporting} agree, ${conc.contradicting} disagree${conc.split ? `, ${conc.split} mixed` : ""}.`));
+  } else {
+    m1.append(el("p", "metrica-etiqueta", "No source took a position"));
+  }
   grade.append(m1);
 
+  // 2. Atualidade
   const contra = ag.veredito === "CONTRADITA_POR_FONTE_ATUAL" || ag.veredito === "CONTRADICAO_FRACA";
-  const m2 = metrica(contra ? "Freshness of the evidence" : "Freshness");
+  const m2 = metrica("Freshness");
   const nota = fr && Number.isFinite(fr.score) ? fr.score : null;
-  valorComBarra(m2, nota, contra ? "var(--vermelho)" : corDoValor(nota));
   const cat = CATEGORIAS[afirmacao.tipo_afirmacao];
-  let textoFr;
   if (nota !== null) {
-    textoFr = `${cat ? `${cat[0]} · ${cat[1]}-day window` : ""}. Based on a date tied to this fact${contra ? "; that recent evidence contradicts the claim" : ""}.`;
+    valorComBarra(m2, nota, contra ? "var(--vermelho)" : corDoValor(nota));
+    m2.append(el("p", "metrica-nota", `${contra ? "The evidence against the claim is recent. " : ""}Based on a date tied to this fact${cat ? ` · ${cat[1]}-day window for ${PLURAIS[afirmacao.tipo_afirmacao]}` : ""}.`));
   } else if (!cat) {
-    textoFr = "No category, so no validity window.";
-  } else if (rec && Number.isFinite(rec.score)) {
-    textoFr = `No date tied to this fact. Page dates suggest ${rec.score}/100 (newest ${rec.newest_date}), low confidence.`;
+    m2.append(el("p", "metrica-etiqueta", "Not time-sensitive"));
+    m2.append(el("p", "metrica-nota", "This claim is not a price, API version, regulation or company fact."));
   } else {
-    textoFr = "No date tied to this fact, and no dated page either.";
+    m2.append(el("p", "metrica-etiqueta", "No date found for this fact"));
+    m2.append(el("p", "metrica-nota", rec && Number.isFinite(rec.score)
+      ? `The newest source page is from ${formatarDataCurta(rec.newest_date)} (page date, not proof of when the fact changed).`
+      : "None of the sources says when this fact changed."));
   }
-  m2.append(el("p", "metrica-nota", textoFr));
   grade.append(m2);
 
-  const m3 = metrica("Evidence mix");
+  // 3. Quem diz o quê
+  const m3 = metrica("Who says what");
   const lista = el("ul", "mix");
   const porTipo = {};
   for (const e of afirmacao.evidencias ?? []) {
@@ -317,23 +323,38 @@ function criarMetricas(afirmacao) {
     const p = e.classificacao?.postura;
     if (p === "SUPPORTS") porTipo[tipo].a += 1; else if (p === "CONTRADICTS") porTipo[tipo].c += 1; else porTipo[tipo].n += 1;
   }
-  const tipos = Object.keys(TIPOS_FONTE).filter(t => porTipo[t]);
+  const tipos = ORDEM_TIPOS.filter(t => porTipo[t]);
   if (tipos.length === 0) lista.append(el("li", null, "No sources were analysed."));
   for (const t of tipos) {
-    const li = el("li");
-    li.append(el("span", null, TIPOS_FONTE[t]));
-    const contas = el("span", "contas");
     const { a, c, n } = porTipo[t];
-    if (a) contas.append(el("span", "a", `${a} ✓`));
-    if (c) { if (a) contas.append(document.createTextNode("  ")); contas.append(el("span", "c", `${c} ✗`)); }
-    if (n) { if (a || c) contas.append(document.createTextNode("  ")); contas.append(el("span", null, `${n} ○`)); }
-    li.append(contas);
+    const li = el("li");
+    li.append(el("span", "mix-tipo", TIPOS_FONTE[t]));
+    const partes = el("span", "contas");
+    const add = (txt, cls) => { if (partes.childNodes.length) partes.append(document.createTextNode(", ")); partes.append(el("span", cls, txt)); };
+    if (a) add(`${a} agree${a > 1 ? "" : "s"}`, "a");
+    if (c) add(`${c} disagree${c > 1 ? "" : "s"}`, "c");
+    if (n) add(`${n} unclear`, "n");
+    li.append(partes);
     lista.append(li);
   }
   m3.append(lista);
-  m3.append(el("p", "metrica-nota", "✓ supports   ✗ contradicts   ○ no position"));
   grade.append(m3);
   return grade;
+}
+
+function formatarDataCurta(valor) {
+  if (!valor) return "an unknown date";
+  const d = new Date(/T/.test(valor) ? valor : `${valor}T12:00:00Z`);
+  if (Number.isNaN(d.getTime())) return String(valor);
+  return d.toLocaleDateString("en-US", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+}
+
+function limparTrecho(texto) {
+  return String(texto ?? "")
+    .replace(/!?\[([^\]]*)\]\([^)]*\)/g, "$1")
+    .replace(/[#*_`>|]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function rotuloPostura(postura) {
@@ -351,41 +372,41 @@ function criarFonte(evidencia, simulado) {
   const item = el("li", "fonte");
   const cab = el("div", "fonte-cabeca");
   const [rotulo, classe] = rotuloPostura(evidencia.classificacao?.postura);
-  cab.append(el("span", `etiqueta ${classe}`, rotulo));
-  cab.append(el("span", "etiqueta e-tipo", TIPOS_FONTE[fonte.categoria_fonte] ?? "Other site"));
-  const url = /^https?:\/\//i.test(fonte.url ?? "") ? fonte.url : null;
-  let titulo;
-  if (url && !simulado) {
-    titulo = el("a", "fonte-titulo", fonte.titulo || url);
-    titulo.href = url; titulo.target = "_blank"; titulo.rel = "noopener noreferrer";
-  } else {
-    titulo = el("span", "fonte-titulo", fonte.titulo || fonte.url || "—");
-  }
-  cab.append(titulo, el("span", "fonte-dominio", dominioDe(fonte.url)));
+  cab.append(el("span", `etiqueta ${classe}`, rotulo), el("span", "etiqueta e-tipo", TIPOS_FONTE[fonte.categoria_fonte] ?? "Other website"));
   item.append(cab);
 
-  const citacao = evidencia.preparacao?.citacao_chave;
-  if (citacao) {
-    item.append(el("blockquote", "citacao", `“${citacao}”`));
+  const url = /^https?:\/\//i.test(fonte.url ?? "") ? fonte.url : null;
+  const linhaTitulo = el("p", "fonte-linha-titulo");
+  let titulo;
+  if (url && !simulado) {
+    titulo = el("a", "fonte-titulo", limparTrecho(fonte.titulo) || dominioDe(url));
+    titulo.href = url; titulo.target = "_blank"; titulo.rel = "noopener noreferrer";
   } else {
-    const bruto = (evidencia.preparacao?.trecho_analisado || fonte.conteudo || "").replace(/\s+/g, " ").trim();
-    if (bruto) item.append(el("p", "trecho", bruto.length > 360 ? `${bruto.slice(0, 360)}…` : bruto));
+    titulo = el("span", "fonte-titulo", limparTrecho(fonte.titulo) || fonte.url || "—");
   }
-  const motivo = evidencia.classificacao?.justificativa || evidencia.correspondencia?.justificativa;
-  if (motivo) item.append(el("p", "motivo", emIngles(motivo)));
+  linhaTitulo.append(titulo, el("span", "fonte-dominio", dominioDe(fonte.url)));
+  item.append(linhaTitulo);
 
-  const datas = el("dl", "datas");
-  for (const [rot, valor] of [["Published", fonte.data_publicacao], ["Updated", fonte.data_atualizacao], ["Retrieved", fonte.coletado_em]]) {
-    const b = el("div");
-    b.append(el("dt", null, rot), el("dd", null, formatarData(valor)));
-    datas.append(b);
+  const motivo = evidencia.classificacao?.justificativa || evidencia.correspondencia?.justificativa;
+  if (motivo) item.append(el("p", "motivo", emIngles(motivo).replace(/^(The )?source S\d+\s*/i, "The source ")));
+
+  const citacao = evidencia.preparacao?.citacao_chave;
+  if (citacao) item.append(el("blockquote", "citacao", `“${limparTrecho(citacao)}”`));
+
+  const datas = [];
+  if (fonte.data_fato?.citacao) datas.push(`Fact date: ${formatarDataCurta(fonte.data_fato.data)} (quoted in the source)`);
+  else if (fonte.escopo_data === "ATTRIBUTE" && fonte.data_atualizacao) datas.push(`Fact date: ${formatarDataCurta(fonte.data_atualizacao)}`);
+  else if (fonte.data_atualizacao) datas.push(`Page updated ${formatarDataCurta(fonte.data_atualizacao)}`);
+  if (fonte.data_publicacao) datas.push(`Published ${formatarDataCurta(fonte.data_publicacao)}`);
+  if (fonte.coletado_em) datas.push(`Read ${formatarDataCurta(fonte.coletado_em)}`);
+  item.append(el("p", "datas-linha", datas.join("  ·  ")));
+
+  const bruto = limparTrecho(evidencia.preparacao?.trecho_analisado || fonte.conteudo || "");
+  if (bruto) {
+    const det = el("details", "trecho-det");
+    det.append(el("summary", null, "Show excerpt"), el("p", "trecho", bruto.length > 700 ? `${bruto.slice(0, 700)}…` : bruto));
+    item.append(det);
   }
-  item.append(datas);
-  const temData = Boolean(fonte.data_publicacao || fonte.data_atualizacao);
-  if (fonte.data_fato?.citacao) item.append(el("p", "escopo ok", `✓ Fact date found in the source text, quote verified: “${fonte.data_fato.citacao}”. It counts for freshness.`));
-  else if (fonte.escopo_data === "ATTRIBUTE" && temData) item.append(el("p", "escopo ok", "✓ This date is tied to the specific fact, so it counts for freshness."));
-  else if (temData) item.append(el("p", "escopo pagina", "Page-level date: it does not prove when this specific fact changed."));
-  else item.append(el("p", "escopo sem", "No publication or update date found. Retrieval time is never used as one."));
   return item;
 }
 
@@ -410,19 +431,24 @@ function criarCartao(afirmacao, simulado) {
   cartao.append(criarMetricas(afirmacao));
 
   const notas = afirmacao.nuances?.notas ?? [];
-  if (notas.length) {
-    const caixa = el("div", "idioma");
-    caixa.append(el("h4", null, afirmacao.nuances.idioma === "pt" ? "How Entrelinhas read the Portuguese" : "How Entrelinhas read this claim"));
+  if (notas.length && afirmacao.nuances?.idioma === "pt") {
+    const caixa = el("details", "idioma");
+    caixa.append(el("summary", null, `How the Portuguese was read (${notas.length})`));
     const ul = el("ul");
     for (const n of notas) ul.append(el("li", null, n));
     caixa.append(ul);
     cartao.append(caixa);
   }
 
-  const evidencias = afirmacao.evidencias ?? [];
+  const prioridade = e => {
+    const i = ORDEM_TIPOS.indexOf(e.fonte?.categoria_fonte ?? "OUTRO");
+    const usado = ["SUPPORTS", "CONTRADICTS"].includes(e.classificacao?.postura) ? 0 : 10;
+    return usado + (i === -1 ? 9 : i);
+  };
+  const evidencias = [...(afirmacao.evidencias ?? [])].sort((a, b) => prioridade(a) - prioridade(b));
   const blocoFontes = el("details", "bloco");
   blocoFontes.open = true;
-  blocoFontes.append(el("summary", null, `Evidence (${evidencias.length} source${evidencias.length === 1 ? "" : "s"})`));
+  blocoFontes.append(el("summary", null, `Sources (${evidencias.length})`));
   const lista = el("ul", "fontes");
   if (evidencias.length === 0) lista.append(el("li", "fonte", "No source could be analysed for this claim."));
   for (const e of evidencias) lista.append(criarFonte(e, simulado));

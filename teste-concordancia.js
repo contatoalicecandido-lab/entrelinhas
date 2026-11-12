@@ -31,11 +31,11 @@ caso("páginas do mesmo domínio contam como uma voz", () => {
 caso("uma contradição impede CORROBORADA e baixa o índice", () => {
   const r = agregar([ev("https://g1.globo.com/a", "SUPPORTS", "NOTICIA"), ev("https://pt.wikipedia.org/a", "SUPPORTS", "REFERENCIA"), ev("https://site.com.br/a", "SUPPORTS", "OUTRO"), ev("https://reuters.com/a", "CONTRADICTS", "NOTICIA")]);
   assert.equal(r.veredito, "CONFLITO");
-  assert.equal(r.concordancia.score, Math.round(100 * 5 / 7));
+  assert.equal(r.concordancia.score, Math.round(100 * 4.5 / 6.5));
 });
 caso("pesos: um blog contra uma fonte oficial pesa pouco", () => {
   const r = agregar([ev("https://gov.br/a", "SUPPORTS", "OFICIAL"), ev("https://medium.com/a", "CONTRADICTS", "BLOG_FORUM")]);
-  assert.equal(r.concordancia.score, Math.round(100 * 3 / 3.5));
+  assert.equal(r.concordancia.score, Math.round(100 * 3 / 3.25));
 });
 caso("sem fontes utilizáveis o índice é null", () => {
   const r = agregar([]);
@@ -54,7 +54,7 @@ caso("fonte oficial atual continua prevalecendo sobre a concordância", () => {
 });
 caso("contradição dominante (notícia + referência contra um blog) vira CONTRADICAO_FRACA", () => {
   const r = agregar([ev("https://g1.globo.com/a", "CONTRADICTS", "NOTICIA"), ev("https://pt.wikipedia.org/a", "CONTRADICTS", "REFERENCIA"), ev("https://medium.com/a", "SUPPORTS", "BLOG_FORUM")]);
-  assert.equal(r.concordancia.score, 11);
+  assert.equal(r.concordancia.score, Math.round(100 * 0.25 / 3.75));
   assert.equal(r.veredito, "CONTRADICAO_FRACA");
 });
 caso("apoio dominante com uma contradição continua CONFLITO (não tranquiliza)", () => {
@@ -68,5 +68,12 @@ caso("site da própria entidade citada conta como oficial (nodejs.org, openai.co
   assert.equal(c("https://nubank.com.br/tarifas", { afirmacao: "O Nubank não cobra anuidade." }).tipo, "OFICIAL");
   assert.equal(c("https://nubank.com.br/tarifas", { afirmacao: "A Selic está em 15%." }).tipo, "OUTRO", "sem a entidade na afirmação, não é oficial");
   assert.equal(c("https://g1.globo.com/openai", { afirmacao: "ChatGPT Plus costs $20." }).tipo, "NOTICIA", "veículo de notícia continua notícia");
+});
+caso("artigo científico pesa como fonte oficial; blog quase não pesa", () => {
+  const { classificarFonte: c } = require("./src/tipo-fonte");
+  assert.equal(c("https://pubmed.ncbi.nlm.nih.gov/123").tipo, "ACADEMICO");
+  assert.equal(c("https://www.scielo.br/j/x").tipo, "ACADEMICO");
+  const r = agregar([ev("https://pubmed.ncbi.nlm.nih.gov/1", "CONTRADICTS", "ACADEMICO"), ev("https://medium.com/a", "SUPPORTS", "BLOG_FORUM"), ev("https://reddit.com/a", "SUPPORTS", "BLOG_FORUM")]);
+  assert.equal(r.concordancia.score, Math.round(100 * 0.5 / 3.5));
 });
 console.log(`Resultado: ${n}/${n} casos de concordância passaram. Sem rede e sem banco.`);

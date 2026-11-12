@@ -7,7 +7,10 @@
 // agrupadas antes (um grupo = uma voz), e cada tipo de fonte tem um peso
 // para que vários blogs não valham mais do que uma fonte oficial.
 
-const PESOS = { OFICIAL: 3, REFERENCIA: 2, NOTICIA: 2, OUTRO: 1, BLOG_FORUM: 0.5 };
+// Prioridade: fontes oficiais e científicas, depois notícias, depois
+// referências. Blogs e fóruns quase não pesam: servem para mostrar o que
+// circula (e muitas vezes é exatamente o que precisa ser checado).
+const PESOS = { OFICIAL: 3, ACADEMICO: 3, NOTICIA: 2, REFERENCIA: 1.5, OUTRO: 1, BLOG_FORUM: 0.25 };
 const ALGORITMO = "SOURCE_AGREEMENT_INDEX";
 const VERSAO = "1.0.0";
 

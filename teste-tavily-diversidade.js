@@ -57,14 +57,15 @@ async function main() {
     assert.equal(extraidas.length, 5);
     assert.equal(hosts[0], "operadora.com.br", "fonte oficial primeiro");
     assert.equal(new Set(hosts).size, 5, "nenhum domínio repetido");
-    assert.ok(hosts.includes("g1.globo.com") && hosts.includes("pt.wikipedia.org") && hosts.includes("medium.com"));
-    console.log("PASSOU: seleção diversa: oficial, notícia, referência, outro site e blog, sem repetir domínio.");
+    assert.ok(hosts.includes("g1.globo.com") && hosts.includes("pt.wikipedia.org") && hosts.includes("reuters.com"));
+    assert.ok(!hosts.includes("medium.com"), "blog só entra se faltar fonte melhor");
+    console.log("PASSOU: seleção diversa prioriza oficial, notícias e referência; blog fica de fora quando há fontes melhores.");
 
     const categorias = Object.fromEntries(evidencias.filter(e => e.tipo_fonte === "tavily_extract").map(e => [new URL(e.url).hostname.replace(/^www\./, ""), e.categoria_fonte]));
     assert.equal(categorias["operadora.com.br"], "OFICIAL");
     assert.equal(categorias["g1.globo.com"], "NOTICIA");
     assert.equal(categorias["pt.wikipedia.org"], "REFERENCIA");
-    assert.equal(categorias["medium.com"], "BLOG_FORUM");
+    assert.equal(categorias["reuters.com"], "NOTICIA");
     console.log("PASSOU: cada evidência traz o tipo da fonte.");
 
     buscas.length = 0;

@@ -3,7 +3,7 @@ const { randomUUID, createHash } = require("node:crypto");
 const { validarEvidencia } = require("./evidencia");
 const { normalizarFonte } = require("./normalizar-fonte");
 const sinaisTemporais = require("./sinais-temporais");
-const { classificarFonte } = require("./tipo-fonte");
+const { classificarFonte, ACADEMICO } = require("./tipo-fonte");
 
 const MAX_RESULTADOS_BUSCA = 5;
 const MAX_FONTES_EXTRAIDAS = 3;
@@ -267,6 +267,9 @@ async function executarBusca(pergunta, opcoes, dominiosOficiais = [], extras = {
   if (dominiosOficiais.length > 0) {
     parametros.include_domains = dominiosOficiais;
     registro.modo_busca = "DOMINIOS_OFICIAIS";
+  } else if (extras.dominiosCiencia) {
+    parametros.include_domains = ACADEMICO.slice(0, 30);
+    registro.modo_busca = "CIENCIA";
   } else if (extras.topic === "news") {
     // Busca de notícias: amplia o contexto com cobertura jornalística.
     parametros.topic = "news";
@@ -310,13 +313,15 @@ async function executarBusca(pergunta, opcoes, dominiosOficiais = [], extras = {
   }
 }
 
-const ORDEM_TIPOS_DIVERSOS = ["OFICIAL", "NOTICIA", "REFERENCIA", "OUTRO", "BLOG_FORUM"];
+// Ordem de prioridade na seleção: oficial, notícia, ciência, referência e
+// outros sites. Blogs e fóruns só entram se não houver fonte melhor.
+const ORDEM_TIPOS_DIVERSOS = ["OFICIAL", "NOTICIA", "ACADEMICO", "REFERENCIA", "OUTRO"];
 
 function selecionarFontesDiversas(candidatos, maxFontes, dominiosOficiais, afirmacao = "") {
   const hostDe = url => {
     try { return new URL(url).hostname.toLowerCase().replace(/^www\./, ""); } catch { return url; }
   };
-  const porTipo = new Map(ORDEM_TIPOS_DIVERSOS.map(tipo => [tipo, []]));
+  const porTipo = new Map([...ORDEM_TIPOS_DIVERSOS, "BLOG_FORUM"].map(tipo => [tipo, []]));
   for (const resultado of candidatos) {
     const tipo = classificarFonte(resultado.url, {
       dominiosOficiais,
@@ -333,7 +338,7 @@ function selecionarFontesDiversas(candidatos, maxFontes, dominiosOficiais, afirm
     for (const tipo of ORDEM_TIPOS_DIVERSOS) {
       if (escolhidos.length >= maxFontes) break;
       if (tipo === "OFICIAL" && rodada >= 2) continue;
-      const fila = porTipo.get(tipo);
+      const fila = porTipo.get(tipo) ?? [];
       const indice = fila.findIndex(r => !dominiosUsados.has(hostDe(r.url)));
       if (indice === -1) continue;
       const [r] = fila.splice(indice, 1);
@@ -343,7 +348,11 @@ function selecionarFontesDiversas(candidatos, maxFontes, dominiosOficiais, afirm
     }
     if (!adicionou) break;
   }
-  // Se faltar, completa por relevância (mesmo repetindo domínio).
+  // Se faltar, primeiro blogs/fóruns de domínios novos, depois o que sobrar.
+  for (const r of porTipo.get("BLOG_FORUM")) {
+    if (escolhidos.length >= maxFontes) break;
+    if (!dominiosUsados.has(hostDe(r.url))) { escolhidos.push(r); dominiosUsados.add(hostDe(r.url)); }
+  }
   for (const r of candidatos) {
     if (escolhidos.length >= maxFontes) break;
     if (!escolhidos.includes(r)) escolhidos.push(r);
@@ -367,6 +376,12 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
   if (buscaGeral.erro) throw buscaGeral.erro;
 
   const buscas = [buscaGeral];
+  if (opcoes.incluirCiencia) {
+    // Busca em bases científicas e universidades: artigos para corroborar ou
+    // contradizer afirmações sobre saúde, ciência e pesquisa.
+    const buscaCiencia = await executarBusca(pergunta, opcoes, [], { dominiosCiencia: true, maxResultados: 3 });
+    if (!buscaCiencia.erro) buscas.push(buscaCiencia);
+  }
   if (opcoes.incluirNoticias) {
     const buscaNoticias = await executarBusca(pergunta, opcoes, [], {
       topic: "news",
