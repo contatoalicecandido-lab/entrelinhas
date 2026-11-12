@@ -54,6 +54,18 @@ const conc = (score, sup, con, cobertura = "STRONG") => ({ score, supporting: su
   ok("dentro da janela de validade e confirmada: 'Current'; fora dela: 'Aging'");
 }
 
+// 3c. "Em vigor desde 2020" (data do fato antiga) confirmado por páginas
+//     recentes: vale a confirmação mais recente, com confiança baixa.
+{
+  const r = calcularAtualidadeAfirmacao({
+    freshness: { score: 0, confidence: "LIMITED", as_of: "2026-11-12T12:00:00Z", drivers: [{ date: "2020-09-18" }] },
+    recenciaPagina: { score: 88, newest_date: "2026-10-20", as_of: "2026-11-12T12:00:00Z" },
+    concordancia: conc(100, 5, 0), janelaDias: 365
+  });
+  assert.equal(r.score, 88); assert.equal(r.basis, "PAGE_DATE"); assert.equal(r.confidence, "LOW"); assert.equal(r.status, "CURRENT");
+  ok("fato antigo confirmado por páginas recentes: vale a confirmação mais recente");
+}
+
 // 4. Sem categoria: janela geral de 180 dias.
 {
   const r = calcularAtualidadeAfirmacao({

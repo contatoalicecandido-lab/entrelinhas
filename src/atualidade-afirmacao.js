@@ -29,25 +29,28 @@ function calcularAtualidadeAfirmacao({ freshness, recenciaPagina, recenciaGeral,
     window_days: Number.isInteger(janelaDias) ? janelaDias : null
   };
 
-  let recencia = null; let fundamento = null; let confianca = null; let dataMaisNova = null;
+  // Candidatas: data do FATO citada na fonte (confiança maior) e data das
+  // páginas que se posicionam (confiança baixa). Vale a confirmação MAIS
+  // RECENTE: "em vigor desde 2020" confirmado por páginas de 2026 continua
+  // atual; a data em que o fato começou a valer não é a data da confirmação.
+  const candidatas = [];
   if (freshness && Number.isFinite(freshness.score)) {
-    recencia = freshness.score;
-    fundamento = "FACT_DATE";
-    confianca = freshness.confidence === "ADEQUATE" ? "HIGH" : "MEDIUM";
     const datas = (freshness.drivers ?? []).map(d => d.date).filter(Boolean).sort();
-    dataMaisNova = datas.at(-1) ?? null;
-  } else if (recenciaPagina && Number.isFinite(recenciaPagina.score)) {
-    recencia = recenciaPagina.score;
-    fundamento = "PAGE_DATE";
-    confianca = "LOW";
-    dataMaisNova = recenciaPagina.newest_date ?? null;
-  } else if (recenciaGeral && Number.isFinite(recenciaGeral.score)) {
-    recencia = recenciaGeral.score;
-    fundamento = "PAGE_DATE_GENERAL_WINDOW";
-    confianca = "LOW";
-    dataMaisNova = recenciaGeral.newest_date ?? null;
-    base.window_days = JANELA_GERAL_DIAS;
+    candidatas.push({ recencia: freshness.score, fundamento: "FACT_DATE",
+      confianca: freshness.confidence === "ADEQUATE" ? "HIGH" : "MEDIUM", data: datas.at(-1) ?? null });
   }
+  if (recenciaPagina && Number.isFinite(recenciaPagina.score)) {
+    candidatas.push({ recencia: recenciaPagina.score, fundamento: "PAGE_DATE", confianca: "LOW", data: recenciaPagina.newest_date ?? null });
+  } else if (recenciaGeral && Number.isFinite(recenciaGeral.score)) {
+    candidatas.push({ recencia: recenciaGeral.score, fundamento: "PAGE_DATE_GENERAL_WINDOW", confianca: "LOW", data: recenciaGeral.newest_date ?? null });
+  }
+  // Maior recência vence; em empate, a data do fato (mais confiável).
+  const escolhida = candidatas.sort((a, b) => b.recencia - a.recencia)[0] ?? null;
+  const recencia = escolhida?.recencia ?? null;
+  const fundamento = escolhida?.fundamento ?? null;
+  let confianca = escolhida?.confianca ?? null;
+  const dataMaisNova = escolhida?.data ?? null;
+  if (fundamento === "PAGE_DATE_GENERAL_WINDOW") base.window_days = JANELA_GERAL_DIAS;
 
   const temPosicao = concordancia && concordancia.independent_sources > 0 && Number.isFinite(concordancia.score);
   if (!temPosicao) {
