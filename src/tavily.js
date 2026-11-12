@@ -9,6 +9,14 @@ const MAX_RESULTADOS_BUSCA = 5;
 const MAX_FONTES_EXTRAIDAS = 3;
 const LIMITE_FONTES_EXTRAIDAS = 6;
 const MAX_RESULTADOS_NOTICIAS = 4;
+// Veículos jornalísticos brasileiros usados na busca de notícias de
+// afirmações em português.
+const NOTICIAS_BR = [
+  "g1.globo.com", "oglobo.globo.com", "valor.globo.com", "folha.uol.com.br", "uol.com.br",
+  "estadao.com.br", "agenciabrasil.ebc.com.br", "cnnbrasil.com.br", "infomoney.com.br",
+  "exame.com", "poder360.com.br", "correiobraziliense.com.br", "metropoles.com",
+  "veja.abril.com.br", "terra.com.br", "band.com.br", "r7.com", "bbc.com", "jota.info", "canaltech.com.br"
+];
 const VERSAO_CANONICALIZACAO = "1.0.0";
 
 async function notificarRastreabilidade(callback, dados) {
@@ -274,6 +282,13 @@ async function executarBusca(pergunta, opcoes, dominiosOficiais = [], extras = {
     // Busca de notícias: amplia o contexto com cobertura jornalística.
     parametros.topic = "news";
     registro.modo_busca = "NOTICIAS";
+    // Afirmações em português: só veículos brasileiros. O reforço de país da
+    // Tavily não vale no tópico de notícias, e sem isso vinham notícias
+    // internacionais em inglês sem relação (teste ao vivo da Selic).
+    if (Array.isArray(extras.dominiosNoticias) && extras.dominiosNoticias.length > 0) {
+      parametros.include_domains = extras.dominiosNoticias;
+      registro.modo_busca = "NOTICIAS_BR";
+    }
   } else {
     registro.modo_busca = "GERAL";
   }
@@ -337,7 +352,7 @@ function selecionarFontesDiversas(candidatos, maxFontes, dominiosOficiais, afirm
     const tipo = classificarFonte(resultado.url, {
       dominiosOficiais,
       afirmacao,
-      deBuscaDeNoticias: (resultado._origens_busca ?? []).some(origem => origem.modo_busca === "NOTICIAS")
+      deBuscaDeNoticias: (resultado._origens_busca ?? []).some(origem => String(origem.modo_busca).startsWith("NOTICIAS"))
     }).tipo;
     porTipo.get(tipo).push(resultado);
   }
@@ -396,7 +411,8 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
   if (opcoes.incluirNoticias) {
     const buscaNoticias = await executarBusca(pergunta, opcoes, [], {
       topic: "news",
-      maxResultados: MAX_RESULTADOS_NOTICIAS
+      maxResultados: MAX_RESULTADOS_NOTICIAS,
+      dominiosNoticias: opcoes.pais === "brazil" ? NOTICIAS_BR : undefined
     });
     // Falha na busca de notícias não impede a verificação.
     if (!buscaNoticias.erro) buscas.push(buscaNoticias);
@@ -597,7 +613,7 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
     const categoria = classificarFonte(resultado.url, {
       dominiosOficiais,
       afirmacao: pergunta,
-      deBuscaDeNoticias: (resultado._origens_busca ?? []).some(origem => origem.modo_busca === "NOTICIAS")
+      deBuscaDeNoticias: (resultado._origens_busca ?? []).some(origem => String(origem.modo_busca).startsWith("NOTICIAS"))
     });
 
     return {
@@ -735,6 +751,7 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
 
 module.exports = {
   ehResultadoUtil,
+  NOTICIAS_BR,
   selecionarFontesDiversas,
   pesquisarComTavily
 };

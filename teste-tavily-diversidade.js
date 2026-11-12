@@ -51,7 +51,9 @@ async function main() {
     assert.equal(geral.country, "brazil");
     assert.ok(noticias, "busca de notícias executada");
     assert.equal(noticias.country, undefined, "country não vai na busca de notícias");
-    console.log("PASSOU: busca geral com país Brasil e busca de notícias sem país.");
+    assert.ok(noticias.include_domains.includes("g1.globo.com") && noticias.include_domains.includes("agenciabrasil.ebc.com.br"),
+      "afirmação em português: notícias só de veículos brasileiros");
+    console.log("PASSOU: busca geral com país Brasil; notícias limitadas a veículos brasileiros.");
 
     const hosts = extraidas.map(u => new URL(u).hostname.replace(/^www\./, ""));
     assert.equal(extraidas.length, 5);
