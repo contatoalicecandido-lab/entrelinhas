@@ -44,4 +44,20 @@ const ref = new Date("2026-11-12T12:00:00Z");
   ok("SUS, Anvisa, FDA e elegibilidade são tratados como regulamento");
 }
 
+// 5. Teste ao vivo do iPhone: menu e imagens no começo da página escondiam o
+//    preço. A seleção limpa o ruído e acha o trecho com o valor.
+{
+  const { selecionarTrechosParaLimite, limparRuidoPagina } = require("./src/preparar-evidencia");
+  const pagina = "[Hoje](https://www.estadao.com.br/ \"H\")\n![](https://img.example/x.png)\n* [Política](https://x.example)\n* [Economia](https://y.example)\n" +
+    "Texto genérico sobre tecnologia e mercado. ".repeat(80) +
+    "\nO iPhone 17 Pro custa R$ 11.499 no Brasil na versão de 256 GB, segundo a Apple.\n" +
+    "Outro parágrafo qualquer sem relação. ".repeat(60);
+  const limpo = limparRuidoPagina(pagina);
+  assert.ok(!/https?:|!\[|\]\(/.test(limpo), "sem links nem imagens");
+  const sel = selecionarTrechosParaLimite("O iPhone 17 Pro tá saindo por uns 9 pau no Brasil. O iPhone 17 Pro tá saindo por uns R$ 9 mil no Brasil.", pagina, 600);
+  assert.ok(sel.length <= 600);
+  assert.ok(sel.includes("O iPhone 17 Pro custa R$ 11.499 no Brasil"));
+  ok("página com menu no topo: o trecho com o preço chega ao modelo");
+}
+
 console.log(`\n${n} testes passaram.`);

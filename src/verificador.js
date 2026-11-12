@@ -328,11 +328,14 @@ async function analisarEvidenciasEmLote(afirmacao, evidenciasSelecionadas, resul
         url: p.fonte.url ?? "",
         titulo: p.fonte.titulo ?? "",
         tipo: p.fonte.categoria_fonte ?? "OUTRO",
-        texto: p.preparacao.conteudo_para_analise
+        // Página completa: a análise em lote escolhe os trechos mais
+        // relevantes (com a afirmação normalizada: "9 pau" → "R$ 9 mil").
+        texto: p.preparacao.conteudo_original
       })),
       {
         dataReferencia: opcoes.dataReferencia,
         nuances: resultado.nuances,
+        consultaSelecao: [afirmacao.texto, resultado.nuances?.consulta_busca].filter(Boolean).join(" "),
         idVerificacao: opcoes.idVerificacao,
         idAfirmacao: afirmacao.id,
         tentativa,

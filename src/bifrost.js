@@ -166,8 +166,10 @@ async function perguntarAoModelo(
     const { principal, reservas } = configuracaoModelos();
     const quedaSimulada = contextoGateway.getStore()?.simularQuedaPrincipal === true && reservas.length > 0;
     const modeloPedido = quedaSimulada ? MODELO_QUEDA_SIMULADA : principal;
+    // Na simulação, o modelo principal real vira o primeiro reserva.
+    const reservasDoPedido = quedaSimulada ? [principal, ...reservas] : reservas;
     rastreabilidade.modelo_solicitado = modeloPedido;
-    rastreabilidade.cadeia_modelos = [modeloPedido, ...reservas];
+    rastreabilidade.cadeia_modelos = [modeloPedido, ...reservasDoPedido];
     rastreabilidade.queda_simulada = quedaSimulada;
     headers["x-bf-dim-app"] = "entrelinhas";
     headers["x-bf-dim-stage"] = rastreabilidade.etapa;
@@ -184,7 +186,7 @@ async function perguntarAoModelo(
             model: modeloPedido,
             messages,
             stream: false,
-            ...(reservas.length ? { fallbacks: reservas } : {})
+            ...(reservasDoPedido.length ? { fallbacks: reservasDoPedido } : {})
           }),
           signal: controller.signal
         }

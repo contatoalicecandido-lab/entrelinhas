@@ -51,7 +51,8 @@ async function principal() {
     assert.equal(corpo.model, MODELO_QUEDA_SIMULADA);
     assert.equal(meta.queda_simulada, true);
     assert.equal(meta.foi_fallback, true);
-    assert.deepEqual(meta.cadeia_modelos, [MODELO_QUEDA_SIMULADA, "groq/openai/gpt-oss-120b", "groq/llama-3.3-70b-versatile"]);
+    assert.deepEqual(meta.cadeia_modelos, [MODELO_QUEDA_SIMULADA, "groq/openai/gpt-oss-20b", "groq/openai/gpt-oss-120b", "groq/llama-3.3-70b-versatile"]);
+    assert.deepEqual(corpo.fallbacks, ["groq/openai/gpt-oss-20b", "groq/openai/gpt-oss-120b", "groq/llama-3.3-70b-versatile"]);
     // Fora do contexto, nada é simulado.
     await perguntarAoModelo("pergunta", null, { onMetadata: m => { meta = m; } });
     assert.equal(corpo.model, "groq/openai/gpt-oss-20b");

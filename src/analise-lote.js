@@ -7,10 +7,11 @@
 // afirmação. As regras de segurança e de interpretação são as mesmas dos
 // módulos de correspondência e classificação, mais as nuances do português.
 const { perguntarAoModelo } = require("./bifrost");
+const { selecionarTrechosParaLimite } = require("./preparar-evidencia");
 
 const CORRESPONDENCIAS = ["MATCH", "RELATED_INSUFFICIENT", "UNRELATED"];
 const POSTURAS = ["SUPPORTS", "CONTRADICTS", "INSUFFICIENT"];
-const MAX_CARACTERES_POR_FONTE = 2500;
+const MAX_CARACTERES_POR_FONTE = 2200;
 const MAX_FONTES = 8;
 
 const INSTRUCOES_LOTE = `
@@ -207,7 +208,14 @@ async function analisarFontesEmLote(afirmacao, fontes, opcoes = {}) {
 
   const dataReferencia = opcoes.dataReferencia instanceof Date && Number.isFinite(opcoes.dataReferencia.getTime())
     ? opcoes.dataReferencia : new Date();
-  const fontesPreparadas = fontes.map(f => ({ ...f, texto: encurtar(f.texto) }));
+  // Trechos mais relevantes de cada página (sem menus, imagens e links),
+  // dentro do limite por fonte; a citação do modelo é conferida neste texto.
+  const consultaSelecao = typeof opcoes.consultaSelecao === "string" && opcoes.consultaSelecao.trim()
+    ? opcoes.consultaSelecao : afirmacao;
+  const fontesPreparadas = fontes.map(f => ({
+    ...f,
+    texto: encurtar(selecionarTrechosParaLimite(consultaSelecao, f.texto, MAX_CARACTERES_POR_FONTE))
+  }));
   const pergunta = JSON.stringify({
     reference_date: dataReferencia.toISOString().slice(0, 10),
     claim: afirmacao.trim(),

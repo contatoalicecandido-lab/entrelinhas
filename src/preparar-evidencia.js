@@ -297,7 +297,35 @@ function prepararEvidencia(afirmacao, evidencia) {
   };
 }
 
+// Remove ruído de páginas extraídas em markdown: imagens, links sem texto,
+// listas de navegação e linhas muito curtas sem número.
+function limparRuidoPagina(texto) {
+  return String(texto ?? "")
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
+    .replace(/\[([^\]]*)\]\((?:[^()]|\([^)]*\))*\)/g, "$1")
+    .replace(/https?:\/\/\S+/g, " ")
+    .split(/\n+/)
+    .map(linha => linha.replace(/^[\s>#*|\-_=]+/, "").replace(/\s+/g, " ").trim())
+    .filter(linha => linha.length >= 25 || (/\d/.test(linha) && linha.length >= 6))
+    .join("\n");
+}
+
+// Seleciona, dentro de um limite pequeno, os trechos mais relevantes para a
+// afirmação (com vizinhos), na ordem do documento. Usado na análise em lote.
+function selecionarTrechosParaLimite(afirmacao, texto, limite) {
+  const limpo = limparRuidoPagina(texto);
+  if (limpo.length <= limite) return limpo;
+  const termos = obterTermosSignificativos(afirmacao);
+  const trechos = dividirEmTrechos(limpo);
+  const pontuacoes = trechos.map((t, indice) => ({ indice, ...pontuarTrecho(t, termos) }));
+  const selecionados = selecionarTrechos(trechos, pontuacoes, limite);
+  if (selecionados.size === 0) return limpo.slice(0, limite);
+  return [...selecionados].sort((a, b) => a - b).map(i => trechos[i]).join(" … ");
+}
+
 module.exports = {
   prepararEvidencia,
+  limparRuidoPagina,
+  selecionarTrechosParaLimite,
   LIMITE_CARACTERES
 };
