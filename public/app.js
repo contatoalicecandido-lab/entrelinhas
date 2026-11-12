@@ -134,7 +134,7 @@ function configurarModo() {
   (real ? radio : document.querySelector('input[name="modo"][value="exemplo"]')).checked = true;
   const atualizarQueda = () => {
     const temReserva = (estado.status?.bifrost?.reservas ?? []).length > 0;
-    $("opcao-queda").hidden = !(modo() === "real" && temReserva);
+    $("opcao-queda").hidden = API.estatico || !(modo() === "real" && temReserva);
   };
   for (const r of document.querySelectorAll('input[name="modo"]')) r.addEventListener("change", atualizarQueda);
   atualizarQueda();

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entrelinhas — is this AI answer really true?</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2310182B'/%3E%3Cpath d='M16 22h32M16 42h27' stroke='%23ffffff' stroke-opacity='.45' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M16 32h22' stroke='%23F0A15B' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='32' r='4' fill='%233F9D99'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="estilo.css">
+  <script src="estatico.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="barra">
+    <div class="barra-interna">
+      <a class="marca" href="./" aria-label="Entrelinhas home"><svg class="marca-icone" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#F0A15B" fill-opacity=".14"/><path d="M16 22h32M16 42h27" stroke="#ffffff" stroke-opacity=".5" stroke-width="5" stroke-linecap="round"/><path d="M16 32h22" stroke="#F0A15B" stroke-width="5" stroke-linecap="round"/><circle cx="45" cy="32" r="4" fill="#3F9D99"/></svg><span class="marca-nome">Entre<em>linhas</em></span></a>
+      <nav class="barra-links" aria-label="Sections">
+        <a href="#como-funciona">How it works</a>
+        <a href="#como-ler">How to read</a>
+        <span id="selo-modo" class="selo"></span>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-interno">
+      <p class="sobretitulo">Fact-checking for AI answers · English and Portuguese</p>
+      <h1>Is this AI answer <span class="destaque">really true?</span></h1>
+      <p class="hero-texto">AI assistants often just agree with what you ask. Entrelinhas checks every claim in an answer against official sources, news and scientific articles found live with <strong>Tavily</strong> and read by a model through <strong>Bifrost</strong>. For each claim you see whether independent sources agree, whether the information is still current, and exactly where it comes from.</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="painel entrada" aria-labelledby="titulo-entrada">
+      <div class="entrada-topo">
+        <h2 id="titulo-entrada">Check an answer</h2>
+        <div id="exemplos" class="exemplos" aria-label="Load an example"></div>
+      </div>
+      <label class="rotulo" for="texto">AI-generated answer</label>
+      <textarea id="texto" rows="6" maxlength="4000" spellcheck="false" placeholder="Paste an AI-generated answer here, for example: “ChatGPT Plus costs $20 per month and Node.js 20 is the current LTS release.”"></textarea>
+      <div class="linha-contador"><span id="idioma-detectado" class="dica"></span><span class="dica"><span id="contador">0</span> / 4,000</span></div>
+
+      <div class="opcoes">
+        <fieldset class="modo">
+          <legend>Mode</legend>
+          <label id="opcao-real"><input type="radio" name="modo" value="real"> <span>Live check: searches the web now</span></label>
+          <label><input type="radio" name="modo" value="exemplo" checked> <span>Demo: built-in examples, no keys, no cost</span></label>
+        </fieldset>
+        <div>
+          <label class="rotulo" for="dominios">Trusted sites <span class="opcional">optional</span></label>
+          <input id="dominios" type="text" placeholder="e.g. gov.br, who.int, nodejs.org" autocomplete="off">
+          <p class="dica">Sites you consider the authority on this topic. They are searched first and count as official. Brazilian authorities and the company's own site are detected automatically.</p>
+          <label id="opcao-queda" class="opcao-queda" hidden><input id="simular-queda" type="checkbox"> <span>Simulate an outage of the main model <span class="opcional">shows Bifrost switching to a backup model</span></span></label>
+        </div>
+      </div>
+
+      <div class="acoes">
+        <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
+        <button id="botao-verificar" class="botao-principal" type="button">Check answer</button>
+      </div>
+    </section>
+
+    <section id="progresso" class="painel progresso" hidden aria-live="polite">
+      <div class="barra-progresso"><span></span></div>
+      <ol>
+        <li>Splitting the answer into atomic claims and detecting their category and language</li>
+        <li>Searching official sites, news and scientific articles, then extracting diverse sources (Tavily)</li>
+        <li>Reading every source against its claim, with today's date (model via Bifrost)</li>
+        <li>Weighing agreement between independent sources and checking dates</li>
+      </ol>
+      <p id="tempo-decorrido" class="dica"></p>
+    </section>
+
+    <section id="resultado" class="resultado" hidden aria-labelledby="titulo-resultado">
+      <div id="aviso-gravado" class="aviso gravado" hidden></div>
+      <div id="aviso-simulado" class="aviso" hidden>Example mode: sources are fictional (<code>.example</code> domains) and the search and model responses are simulated. Categories, Portuguese handling, agreement, freshness and verdicts come from the real engine.</div>
+      <div class="painel resumo">
+        <div>
+          <h2 id="titulo-resultado">Answer report</h2>
+          <p id="resumo-frase" class="resumo-frase"></p>
+        </div>
+        <div id="contagens" class="contagens"></div>
+      </div>
+      <section id="triagem" class="painel triagem" hidden aria-labelledby="titulo-triagem">
+        <p class="rotulo-comparacao">Step 1 · Before searching</p>
+        <h3 id="titulo-triagem">Stale-risk triage</h3>
+        <p class="dica">Before searching, each claim is flagged by how likely it is to have gone out of date, and why.</p>
+        <ol id="triagem-lista" class="triagem-lista"></ol>
+      </section>
+      <section id="corrigida" class="painel corrigida" hidden aria-labelledby="titulo-corrigida">
+        <p class="rotulo-comparacao">Step 2 · After checking</p>
+        <h3 id="titulo-corrigida">Updated answer</h3>
+        <p class="dica">The original answer rewritten using only the verified sources below. Numbers link to the sources.</p>
+        <div class="comparacao">
+          <div><p class="rotulo-comparacao">What the AI said</p><blockquote id="corrigida-original"></blockquote></div>
+          <div><p class="rotulo-comparacao">What current sources support</p><blockquote id="corrigida-texto" class="novo"></blockquote></div>
+        </div>
+        <ol id="corrigida-fontes" class="corrigida-fontes"></ol>
+      </section>
+      <div id="omitidas" class="aviso neutro" hidden></div>
+
+      <div id="cartoes" class="cartoes"></div>
+      <section id="gateway" class="painel gateway" hidden aria-labelledby="titulo-gateway">
+        <h3 id="titulo-gateway">AI gateway · Bifrost</h3>
+        <p class="dica">Every model call goes through Bifrost. It routes to the main model and, if that model fails or hits a rate limit, retries a backup model on its own: no retry code in Entrelinhas.</p>
+        <div id="gateway-conteudo"></div>
+      </section>
+      <p id="rastreio" class="rastreio"></p>
+    </section>
+
+    <section id="favorito-secao" class="painel secao favorito-secao" aria-labelledby="titulo-favorito">
+      <h2 id="titulo-favorito">Check any AI answer, on any site</h2>
+      <p>Entrelinhas is a verification layer for any AI app. Drag this button to your bookmarks bar. Then, on ChatGPT, Gemini or any page, select an answer and click it: Entrelinhas opens with the text ready to check.</p>
+      <p><a id="favorito" class="botao-favorito" href="#">✓ Check with Entrelinhas</a></p>
+      <p class="dica">Opens <span id="favorito-destino"></span>. Nothing is sent anywhere until you click Check answer. Developers can call the same check directly: <code>POST /api/verificar</code> with <code>{"texto": "...", "modo": "real"}</code>.</p>
+    </section>
+
+    <section id="como-funciona" class="painel secao">
+      <h2>How it works</h2>
+      <ol class="passos">
+        <li><span class="num">1</span><h3>Split and flag</h3><p>The answer becomes atomic claims. Before searching, each one is flagged by how fast it goes stale: prices in about a month, software versions in a quarter, company facts in six months, laws and official rules in a year.</p></li>
+        <li><span class="num">2</span><h3>Gather many voices</h3><p>Tavily searches official sites, the news (Brazilian outlets for Portuguese claims) and, for health and science, scientific articles. Up to five sources of different types; never two from one site; blogs last.</p></li>
+        <li><span class="num">3</span><h3>Read them together</h3><p>One model call through Bifrost reads every source for a claim, knowing today's date: does it support or contradict? Every quote it returns is checked against the source text.</p></li>
+        <li><span class="num">4</span><h3>Weigh and score</h3><p>Copies count once, official and scientific sources weigh most. Each claim gets a verdict and a freshness score: how recent the sources are × how many of them agree.</p></li>
+        <li><span class="num">5</span><h3>Give the right answer</h3><p>A final call writes the answer again using only verified quotes, with numbered citations, next to what the AI said.</p></li>
+      </ol>
+      <div class="diferenciais">
+        <div><h3>Not just agreeing with you</h3><p>Chatbots tend to confirm what you ask. Entrelinhas looks for independent sources that support or contradict the claim, weighted by type: official and scientific 3, news 2, reference 1.5, other sites 1, blogs a quarter.</p></div>
+        <div><h3>Measured on real claims</h3><p>On 15 real claims with known answers: 11 exact verdicts, 15 of 15 in the right direction, and no outdated claim ever confirmed as true.</p></div>
+        <div><h3>Built for Portuguese</h3><p>Brazilian money and numbers (R$ 1.234,56, “5 mil”), qualifiers (“a partir de”, “cerca de”), “atualmente”, day/month dates and slang (“9 pau”, “50 conto”, “zap”) are read the way a Brazilian means them. Selic, LGPD or Anatel send the search to the right Brazilian authority.</p></div>
+        <div><h3>Resilient by design</h3><p>Every model call goes through the Bifrost gateway with a backup model. When the main model hits a rate limit, Bifrost answers from the backup; the report shows which model answered each step.</p></div>
+      </div>
+    </section>
+
+    <section id="como-ler" class="painel secao">
+      <h2>How to read the results</h2>
+      <div id="legenda" class="legenda"></div>
+      <p class="dica">Source agreement and freshness are deterministic indexes, not probabilities of truth. Independent sources can share the same mistake, and a recent page can still be wrong.</p>
+    </section>
+  </main>
+
+  <footer class="rodape">Entrelinhas · Geek Room Global AI Hackathon 2026 · Tavily for search and extraction · Bifrost as model gateway · SQLite traceability</footer>
+</body>
+</html>

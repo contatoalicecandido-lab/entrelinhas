@@ -1,0 +1,81 @@
+{
+ "modo_real_disponivel": true,
+ "estatico": true,
+ "exemplos": [
+  {
+   "id": "en",
+   "rotulo": "Example · English",
+   "texto": "Acme Cloud's Pro plan costs $20 per month. The Acme API still supports the /v1/completions endpoint. Under the Data Act of 2025, companies with more than 50 employees must appoint a data protection officer.",
+   "dominios": [
+    "acme.example",
+    "gov.example"
+   ],
+   "arquivo": "dados/exemplos/en.json"
+  },
+  {
+   "id": "pt",
+   "rotulo": "Exemplo · Português",
+   "texto": "O plano Premium da Fictícia Telecom custa a partir de R$ 99,90 por mês. A Fictícia Telecom atualmente tem cerca de 5 mil funcionários.",
+   "dominios": [
+    "ficticiatelecom.example"
+   ],
+   "arquivo": "dados/exemplos/pt.json"
+  }
+ ],
+ "gravacoes": [
+  {
+   "rotulo": "Live · Node.js 20 + ChatGPT Plus",
+   "texto": "Node.js 20 is the current Active LTS release and the recommended version for production. ChatGPT Plus costs $20 per month.",
+   "arquivo": "dados/gravacoes/2026-11-12T23-26-59-580Z-node-js-20-is-the-current-active-lts-release-and.json",
+   "data": "2026-11-12T23:26:59.580Z"
+  },
+  {
+   "rotulo": "Ao vivo · Salário mínimo + Selic",
+   "texto": "O salário mínimo em 2026 é de R$ 1.518 e a taxa Selic está atualmente em 10,5% ao ano.",
+   "arquivo": "dados/gravacoes/2026-11-12T23-45-04-017Z-o-salario-minimo-em-2026-e-de-r-1-518-e-a-taxa-s.json",
+   "data": "2026-11-12T23:45:04.018Z"
+  },
+  {
+   "rotulo": "Ao vivo · Netflix, com gíria",
+   "texto": "O Netflix padrão tá saindo por 44,90 conto por mês.",
+   "arquivo": "dados/gravacoes/2026-11-12T23-10-42-867Z-o-netflix-padrao-ta-saindo-por-44-90-conto-por-m.json",
+   "data": "2026-11-12T23:10:42.867Z"
+  },
+  {
+   "rotulo": "Ao vivo · Vacina Qdenga no SUS",
+   "texto": "A vacina da dengue Qdenga é aplicada pelo SUS em crianças e adolescentes de 10 a 14 anos.",
+   "arquivo": "dados/gravacoes/2026-11-12T23-15-31-545Z-a-vacina-da-dengue-qdenga-e-aplicada-pelo-sus-em.json",
+   "data": "2026-11-12T23:15:31.545Z"
+  },
+  {
+   "rotulo": "Live · Twitter CEO + Python 2",
+   "texto": "Jack Dorsey is the current CEO of Twitter, and Python 2.7 still receives official security updates.",
+   "arquivo": "dados/gravacoes/2026-11-12T23-13-12-110Z-jack-dorsey-is-the-current-ceo-of-twitter-and-py.json",
+   "data": "2026-11-12T23:13:12.110Z"
+  },
+  {
+   "rotulo": "Live · Bifrost outage drill",
+   "texto": "Sam Altman is the CEO of OpenAI.",
+   "arquivo": "dados/gravacoes/2026-11-12T23-17-52-501Z-sam-altman-is-the-ceo-of-openai.json",
+   "data": "2026-11-12T23:17:52.501Z"
+  }
+ ],
+ "limites": {
+  "caracteres": 4000,
+  "afirmacoes": 6,
+  "evidencias_por_afirmacao": 5,
+  "dominios": 5
+ },
+ "tipos": [
+  "preco",
+  "versao_api",
+  "regulamento",
+  "empresa"
+ ],
+ "bifrost": {
+  "principal": "groq/openai/gpt-oss-20b",
+  "reservas": [
+   "groq/openai/gpt-oss-120b"
+  ]
+ }
+}
