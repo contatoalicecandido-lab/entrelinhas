@@ -10,7 +10,9 @@ const MODELO_PADRAO = "groq/openai/gpt-oss-20b";
 // llama-3.3-70b-versatile foi desligado pelo Groq em 16/08/2026; o substituto
 // recomendado é qwen/qwen3.6-27b. Cada modelo tem seu próprio limite de
 // tokens por minuto no plano gratuito, então reservas ampliam a capacidade.
-const RESERVAS_PADRAO = ["groq/openai/gpt-oss-120b", "groq/qwen/qwen3.6-27b"];
+// qwen/qwen3.6-27b (prévia) e modelos de outros provedores (ex.: Gemini)
+// entram por BIFROST_FALLBACKS quando liberados na chave virtual.
+const RESERVAS_PADRAO = ["groq/openai/gpt-oss-120b"];
 // Limite de uso (HTTP 429) em todos os modelos: espera o tempo indicado pelo
 // Bifrost (retry_after_ms) e tenta de novo, no máximo uma vez.
 const ESPERA_MAXIMA_LIMITE_MS = 25000;
@@ -206,8 +208,16 @@ async function perguntarAoModelo(
 
     try {
       resposta = await enviar();
-      if (resposta.status === 429) {
-        const dados429 = await resposta.clone().json().catch(() => null);
+      // Limite de uso: 429 direto, ou o Bifrost devolve o erro do modelo
+      // principal depois que todos os reservas bateram limite (429).
+      const dadosErro = resposta.ok || typeof resposta.clone !== "function"
+        ? null
+        : await resposta.clone().json().catch(() => null);
+      const tentativasReserva = dadosErro?.extra_fields?.fallback_attempts ?? [];
+      const limitado = resposta.status === 429 ||
+        (tentativasReserva.length > 0 && tentativasReserva.some(t => t?.status_code === 429));
+      if (limitado) {
+        const dados429 = dadosErro ?? tentativasReserva.find(t => t?.status_code === 429);
         const espera = tempoDeEspera(resposta, dados429);
         if (espera <= ESPERA_MAXIMA_LIMITE_MS) {
           rastreabilidade.espera_limite_ms = espera + 500;

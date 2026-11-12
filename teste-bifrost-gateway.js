@@ -23,7 +23,7 @@ async function principal() {
   const fetchOriginal = global.fetch;
   try {
     // 1. Configuração padrão e por variável de ambiente.
-    assert.deepEqual(configuracaoModelos(), { principal: "groq/openai/gpt-oss-20b", reservas: ["groq/openai/gpt-oss-120b", "groq/qwen/qwen3.6-27b"] });
+    assert.deepEqual(configuracaoModelos(), { principal: "groq/openai/gpt-oss-20b", reservas: ["groq/openai/gpt-oss-120b"] });
     process.env.BIFROST_FALLBACKS = "none";
     assert.deepEqual(configuracaoModelos().reservas, []);
     process.env.BIFROST_MODEL = "groq/x"; process.env.BIFROST_FALLBACKS = "groq/y, groq/x ,groq/z";
@@ -36,7 +36,7 @@ async function principal() {
     global.fetch = async (url, cfg) => { corpo = JSON.parse(cfg.body); cabecalhos = cfg.headers; return respostaBifrost(); };
     await perguntarAoModelo("pergunta", "instruções", { etapa: "ANALISE_EM_LOTE", onMetadata: m => { meta = m; } });
     assert.equal(corpo.model, "groq/openai/gpt-oss-20b");
-    assert.deepEqual(corpo.fallbacks, ["groq/openai/gpt-oss-120b", "groq/qwen/qwen3.6-27b"]);
+    assert.deepEqual(corpo.fallbacks, ["groq/openai/gpt-oss-120b"]);
     assert.equal(cabecalhos["x-bf-dim-stage"], "ANALISE_EM_LOTE");
     assert.equal(meta.foi_fallback, false);
     assert.deepEqual(meta.servido_por, { provedor: "groq", modelo: "openai/gpt-oss-20b" });
@@ -51,8 +51,8 @@ async function principal() {
     assert.equal(corpo.model, MODELO_QUEDA_SIMULADA);
     assert.equal(meta.queda_simulada, true);
     assert.equal(meta.foi_fallback, true);
-    assert.deepEqual(meta.cadeia_modelos, [MODELO_QUEDA_SIMULADA, "groq/openai/gpt-oss-20b", "groq/openai/gpt-oss-120b", "groq/qwen/qwen3.6-27b"]);
-    assert.deepEqual(corpo.fallbacks, ["groq/openai/gpt-oss-20b", "groq/openai/gpt-oss-120b", "groq/qwen/qwen3.6-27b"]);
+    assert.deepEqual(meta.cadeia_modelos, [MODELO_QUEDA_SIMULADA, "groq/openai/gpt-oss-20b", "groq/openai/gpt-oss-120b"]);
+    assert.deepEqual(corpo.fallbacks, ["groq/openai/gpt-oss-20b", "groq/openai/gpt-oss-120b"]);
     // Fora do contexto, nada é simulado.
     await perguntarAoModelo("pergunta", null, { onMetadata: m => { meta = m; } });
     assert.equal(corpo.model, "groq/openai/gpt-oss-20b");
@@ -82,6 +82,19 @@ async function principal() {
       assert.equal(meta.espera_limite_ms, 510);
       assert.equal(meta.status, "SUCESSO");
       ok("limite de uso em toda a cadeia: espera o tempo pedido e tenta de novo");
+
+      // Erro do principal (403) com todos os reservas em 429: também é limite.
+      chamadas = 0;
+      global.fetch = async () => {
+        chamadas += 1;
+        if (chamadas === 1) return new Response(JSON.stringify({ status_code: 403, extra_fields: { fallback_attempts: [
+          { model: "openai/gpt-oss-120b", status_code: 429, message: "Please try again in 0.01s." }] } }), { status: 403 });
+        return respostaBifrost();
+      };
+      await perguntarAoModelo("pergunta", null, { onMetadata: m => { meta = m; } });
+      assert.equal(chamadas, 2);
+      assert.equal(meta.status, "SUCESSO");
+      ok("reservas todos limitados por trás de outro erro do principal: também espera");
     }
   } finally {
     global.fetch = fetchOriginal;

@@ -148,16 +148,16 @@ What the run taught us, already fixed:
 | Node.js 22.5+ (no framework) | Server, pipeline and tests; built-in `node:sqlite` |
 | Tavily Search and Extract | General, news, scientific and official-domain search; page extraction |
 | Bifrost by Maxim AI | AI gateway for every model call: fallback chain, routing info, rate-limit handling, per-stage labels |
-| Groq (gpt-oss-20b, gpt-oss-120b, qwen3.6-27b) | Models served through Bifrost |
+| Groq (gpt-oss-20b, gpt-oss-120b) | Models served through Bifrost; more models or providers can be chained |
 | SQLite | Full verification trace |
 
 ### What Bifrost does in Entrelinhas
 
 Every model call goes to `http://localhost:8080/v1/chat/completions` with the virtual key from `BIFROST_KEY`. The gateway does real work:
 
-- **Fallback chain.** Each request names a main model and backups: `groq/openai/gpt-oss-20b` → `groq/openai/gpt-oss-120b` → `groq/qwen/qwen3.6-27b`. You can change it with `BIFROST_MODEL` and `BIFROST_FALLBACKS`. When the main model fails or hits the free tier's per-minute token limit, Bifrost retries the backups on its own, so Entrelinhas has no retry code for that. In the 15-claim benchmark, backup models answered **23 of 50** model calls when the main model hit its limit, and every check finished.
+- **Fallback chain.** Each request names a main model and backups: `groq/openai/gpt-oss-20b` → `groq/openai/gpt-oss-120b` by default. Set `BIFROST_MODEL` and `BIFROST_FALLBACKS` (comma-separated) to add more, for example a Gemini model, for failover across providers. When the main model fails or hits the free tier's per-minute token limit, Bifrost retries the backups on its own, so Entrelinhas has no retry code for that. In the 15-claim benchmark, backup models answered **23 of 50** model calls when the main model hit its limit, and every check finished.
 - **Routing info.** `extra_fields.routing_info` (provider, model, `is_fallback`), token usage and latency are recorded for every call and shown in the **AI gateway · Bifrost** panel.
-- **Rate limits.** If the whole chain is limited, Entrelinhas waits the `retry_after_ms` that Bifrost reports (at most 25 s) and tries once more.
+- **Rate limits.** If the whole chain is limited, Entrelinhas waits the `retry_after_ms` that Bifrost reports (at most 25 s) and tries once more. A daily quota cannot be waited out: on Groq's free tier, gpt-oss-20b has a daily token limit, which is why a second provider in the chain matters.
 - **Labels for observability.** Requests carry `x-bf-dim-app` and `x-bf-dim-stage` (decomposition, batch analysis, updated answer), plus request and verification IDs.
 - **Outage drill.** In live mode, the option *Simulate an outage of the main model* sends that check to a model that does not exist. The panel then shows Bifrost serving every step from a backup, without any change to the request code.
 
@@ -267,7 +267,6 @@ Make sure the configured models are allowed for your virtual key (all models, or
 ```text
 groq/openai/gpt-oss-20b
 groq/openai/gpt-oss-120b
-groq/qwen/qwen3.6-27b
 ```
 
 Optional: add a second provider (for example Gemini) to the virtual key and append one of its models to `BIFROST_FALLBACKS`. Bifrost will then fail over across providers, not only across models.

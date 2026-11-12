@@ -39,7 +39,7 @@ Entrelinhas works in six steps.
 6. **Records.** Everything is stored in SQLite.
 
 **Bifrost does visible work.**
-- Every call carries a fallback chain of three Groq models, so rate limits and failures are absorbed by the gateway. In the 15-claim benchmark, backups answered 23 of 50 model calls.
+- Every call carries a fallback chain of Groq models, so rate limits and failures are absorbed by the gateway. In the 15-claim benchmark, backups answered 23 of 50 model calls.
 - The report shows which model answered each step, plus tokens and latency.
 - An outage drill sends a check to a non-existent model and shows Bifrost finishing it with a backup.
 
@@ -90,7 +90,7 @@ The cases, their sources and the results are in `avaliacao/`. It is a small samp
 
 - Node.js 22.5+ (built-in `node:sqlite`), no framework; local web server on 127.0.0.1.
 - Tavily Search (general, Brazilian news, scientific and official domains) and Tavily Extract.
-- Bifrost HTTP gateway: fallback chain (gpt-oss-20b → gpt-oss-120b → qwen3.6-27b on Groq), routing info, `x-bf-dim-*` labels, rate-limit retry.
+- Bifrost HTTP gateway: fallback chain (gpt-oss-20b → gpt-oss-120b on Groq; more models or providers by configuration), routing info, `x-bf-dim-*` labels, rate-limit retry.
 - Deterministic modules: categories, triage, Portuguese reading, source types, dependency grouping, agreement, freshness, verdicts.
 - SQLite traceability.
 
