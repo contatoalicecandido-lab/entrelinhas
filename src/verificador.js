@@ -348,6 +348,17 @@ async function analisarEvidenciasEmLote(afirmacao, evidenciasSelecionadas, resul
   }
 
   for (const p of preparadas) {
+    // Data do fato encontrada no texto e conferida pela citação: passa a ser a
+    // data ligada ao atributo, a menos que a fonte já tenha uma melhor.
+    const dataFato = analise.get(p.id)?.dataFato;
+    if (dataFato && p.fonte.escopo_data !== "ATTRIBUTE") {
+      p.fonte = {
+        ...p.fonte,
+        data_atualizacao: dataFato.data,
+        escopo_data: "ATTRIBUTE",
+        data_fato: { ...dataFato, origem: "QUOTED_IN_SOURCE_TEXT" }
+      };
+    }
     const atualidade = avaliarAtualidade(p.fonte, resultado.tipo_afirmacao, opcoes.dataReferencia);
     if (!p.preparacao) {
       resultado.evidencias.push({
@@ -413,8 +424,10 @@ async function verificarAfirmacao(afirmacao, opcoes) {
   let evidenciasEncontradas;
 
   try {
+    // Afirmações informais em português são buscadas com nomes oficiais
+    // ("zap" → WhatsApp, "50 conto" → R$ 50); a análise usa o texto original.
     evidenciasEncontradas = await pesquisarComTavily(
-      afirmacao.texto,
+      resultado.nuances?.consulta_busca || afirmacao.texto,
       {
         idVerificacao: opcoes.idVerificacao,
         idAfirmacao: afirmacao.id,

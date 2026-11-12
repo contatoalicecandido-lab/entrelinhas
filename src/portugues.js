@@ -120,7 +120,7 @@ function extrairValores(texto) {
     const periodo = PERIODO_DEPOIS.exec(depois);
     valores.push({
       tipo: "MONETARIO",
-      texto: (m[0] + (periodo ? periodo[0] : "")).trim(),
+      texto: (m[0] + (periodo ? periodo[0] : "")).trim().replace(/[.,;:]$/, ""),
       valor: Math.round(numero * 100) / 100,
       moeda,
       periodo: periodo ? (/ano|year|yr|anuais/i.test(periodo[0]) ? "ANUAL" : "MENSAL") : null,
@@ -249,6 +249,76 @@ const AUTORIDADES_BR = [
   [/\bprocon\b|\bc[oó]digo de defesa do consumidor\b|\bcdc\b/i, "planalto.gov.br", "Consumer Protection Code (Planalto)"]
 ];
 
+// Linguagem informal brasileira que aparece em respostas de IA treinadas com
+// fóruns, redes sociais e blogs. Não muda o fato, mas muda como ele precisa
+// ser lido e buscado.
+const GIRIAS_DINHEIRO = [
+  // "50 conto", "100 pila", "30 mangos": reais por extenso informal
+  { re: /\b(\d[\d.,]*)\s?(contos?|pilas?|mangos?|pratas?)\b/i, fator: 1, rotulo: "slang for reais" },
+  // "1 pau", "2 paus", "mil pau": mil reais
+  { re: /\b(\d[\d.,]*|um|uma|dois|duas|tr[eê]s)\s?(paus?|bar[aã]o|bar[oõ]es)\b/i, fator: 1000, rotulo: "slang for a thousand reais" },
+  // "5k", "10k": milhares
+  { re: /\b(\d[\d.,]*)\s?k\b/i, fator: 1000, rotulo: "shorthand for thousands" }
+];
+const PALAVRAS_NUMERO = { um: 1, uma: 1, dois: 2, duas: 2, tres: 3, "três": 3 };
+
+const APROXIMACOES_INFORMAIS = /\b(uns|umas|na faixa de|por volta de|mais ou menos|tipo|coisa de|quase|beirando)\s+(R\$\s?)?\d/i;
+
+const ALIASES = [
+  [/\bzap(zap)?\b|\bwhats\b|\bwpp\b/i, "WhatsApp"],
+  [/\binsta\b/i, "Instagram"],
+  [/\bface\b(?!\s?id)/i, "Facebook"],
+  [/\bgpt\b(?!-)/i, "ChatGPT"],
+  [/\bnetflixx?\b/i, "Netflix"],
+  [/\bbanco central\b|\bbc\b(?=.*\b(juros|selic|pix)\b)/i, "Banco Central do Brasil"],
+  [/\bbolsa\b(?=.*\b(a[cç][oõ]es|ibovespa|b3)\b)/i, "B3"],
+  [/\bsus\b/i, "SUS (Sistema Único de Saúde)"],
+  [/\bfgts\b/i, "FGTS"],
+  [/\bmei\b/i, "MEI (Microempreendedor Individual)"]
+];
+
+const EXPRESSOES_INFORMAIS = [
+  [/\bde gra[cç]a\b|\bgr[aá]tis\b|\bfree\b/i, "free of charge: price is zero"],
+  [/\bj[aá] era\b|\bacabou\b|\bmorreu\b|\bsaiu do ar\b|\bfoi pro saco\b/i, "informal: ended / no longer available"],
+  [/\bt[aá] rolando\b|\bt[aá] valendo\b|\bt[aá] na pista\b/i, "informal: currently happening / in effect"],
+  [/\bvoltou\b|\bt[aá] de volta\b/i, "informal: available again"],
+  [/\bt[aá] custando\b|\bt[aá] saindo (a|por)\b|\bsai por\b/i, "informal: current price (present tense)"],
+  [/\bcaro pra caramba\b|\bbaratinho\b|\bcarinho\b/i, "subjective price judgment, not a verifiable fact"],
+  [/\bdizem que\b|\bparece que\b|\bouvi dizer\b|\bsegundo boatos\b/i, "hedged / hearsay: the claim is not asserted as fact"],
+  [/\bt[aá]\b|\bpra\b|\bvc\b|\bq\b|\bn[eé]\b/i, "informal register: read as spoken Brazilian Portuguese"]
+];
+
+function lerGirias(texto) {
+  const original = String(texto ?? "");
+  const valores = [];
+  for (const g of GIRIAS_DINHEIRO) {
+    const m = g.re.exec(original);
+    if (!m) continue;
+    const base = PALAVRAS_NUMERO[semAcento(m[1])] ?? converterNumero(m[1].replace(/[.,]$/, ""), "pt");
+    if (base === null || base === undefined) continue;
+    valores.push({ tipo: "MONETARIO", texto: m[0].trim(), valor: base * g.fator, moeda: "BRL", periodo: null,
+      qualificador: qualificadorAntes(original, m.index), informal: true, rotulo: g.rotulo });
+  }
+  const aliases = [];
+  for (const [re, canonico] of ALIASES) {
+    const m = re.exec(original);
+    if (m && m[0].toLowerCase() !== canonico.toLowerCase()) aliases.push({ texto: m[0], canonico });
+  }
+  const expressoes = encontrar(EXPRESSOES_INFORMAIS, original);
+  const aproximacaoInformal = APROXIMACOES_INFORMAIS.exec(original)?.[1] ?? null;
+  return { valores, aliases, expressoes, aproximacaoInformal };
+}
+
+// Versão da afirmação para BUSCA: troca apelidos por nomes oficiais
+// ("zap" → WhatsApp) e gírias de dinheiro por valores ("50 conto" → R$ 50).
+function normalizarParaBusca(texto) {
+  let t = String(texto ?? "");
+  for (const [re, canonico] of ALIASES) t = t.replace(re, canonico);
+  t = t.replace(/\b(\d[\d.,]*)\s?(contos?|pilas?|mangos?|pratas?)\b/gi, "R$ $1");
+  t = t.replace(/\b(\d[\d.,]*)\s?(paus?|bar[aã]o|bar[oõ]es)\b/gi, "R$ $1 mil");
+  return t;
+}
+
 // Português europeu: mesma língua, outras convenções (e às vezes outros fatos).
 const PT_PT = /\b(facto|telem[oó]vel|equipa|autocarro|ecr[aã]|utilizador|registo|est(ou|á|amos|ão) a [a-z]+r)\b/i;
 
@@ -308,10 +378,26 @@ function analisarNuances(texto, opcoes = {}) {
   const coloquiais = idioma === "pt" ? resolverTempoColoquial(texto, referencia) : [];
   const autoridades = idioma === "pt" ? sugerirDominiosOficiaisBr(texto) : [];
   const variante = idioma === "pt" ? (PT_PT.test(texto) ? "pt-PT" : "pt-BR") : null;
+  const girias = idioma === "pt" ? lerGirias(texto) : { valores: [], aliases: [], expressoes: [], aproximacaoInformal: null };
+  // Gírias de dinheiro entram como valores normais, marcados como informais.
+  for (const v of girias.valores) {
+    if (!valores.some(x => x.texto.includes(v.texto) || v.texto.includes(x.texto))) {
+      if (girias.aproximacaoInformal && !v.qualificador) v.qualificador = { tipo: "APROXIMADO", rotulo: "approximately" };
+      valores.push(v);
+    }
+  }
+  if (girias.aproximacaoInformal) {
+    for (const v of valores) if (!v.qualificador) v.qualificador = { tipo: "APROXIMADO", rotulo: "approximately" };
+  }
+  const consultaBusca = idioma === "pt" ? normalizarParaBusca(texto) : String(texto ?? "");
   const notas = [];
   for (const v of valores) {
-    if (v.qualificador && v.tipo !== "QUANTIDADE") {
+    if (v.qualificador && v.tipo !== "QUANTIDADE" && !v.informal) {
       notas.push(`"${v.texto}" is qualified as ${v.qualificador.rotulo}: a source with a different exact value can still be compatible.`);
+    }
+    if (v.informal) {
+      notas.push(`"${v.texto}" is ${v.rotulo}: about BRL ${v.valor.toLocaleString("en-US")}${v.qualificador ? ` (${v.qualificador.rotulo})` : ""}.`);
+      continue;
     }
     if (v.tipo === "QUANTIDADE") {
       notas.push(`"${v.texto}" means ${v.valor.toLocaleString("en-US")}${v.qualificador ? ` (${v.qualificador.rotulo})` : ""}.`);
@@ -334,11 +420,16 @@ function analisarNuances(texto, opcoes = {}) {
   for (const m of mudancas) notas.push(`"${m.texto}": ${m.rotulo}.`);
   for (const c of coloquiais) notas.push(`"${c.texto}": ${c.rotulo}.`);
   for (const a of autoridades) notas.push(`"${a.termo}" points to a Brazilian authority: ${a.autoridade} (${a.dominio}) is searched as an official source.`);
+  for (const a of girias.aliases) notas.push(`"${a.texto}" is an informal name for ${a.canonico}; the search uses the official name.`);
+  for (const e of girias.expressoes) notas.push(`"${e.texto}": ${e.rotulo}.`);
+  if (girias.aproximacaoInformal) notas.push(`"${girias.aproximacaoInformal}" makes the value approximate.`);
   if (variante === "pt-PT") notas.push("European Portuguese detected: spelling and facts may refer to Portugal, not Brazil.");
   for (const e of temporais) notas.push(`"${e.texto}": ${e.rotulo}.`);
   return {
     idioma, variante, confianca_idioma: confianca, valores, datas, expressoes_temporais: temporais,
     condicoes, mudancas, tempo_coloquial: coloquiais,
+    girias: { aliases: girias.aliases, expressoes: girias.expressoes },
+    consulta_busca: consultaBusca,
     dominios_oficiais_sugeridos: autoridades.map(a => a.dominio),
     autoridades, notas
   };
@@ -376,6 +467,7 @@ module.exports = {
   extrairExpressoesTemporais,
   analisarNuances,
   sugerirDominiosOficiaisBr,
+  normalizarParaBusca,
   resolverTempoColoquial,
   compararValores,
   converterNumero

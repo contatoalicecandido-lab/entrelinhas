@@ -34,6 +34,20 @@ const fontes = [
   ok("postura fora da lista é rejeitada");
 }
 
+// 1b. Data do fato: só vale com citação real que contém a data.
+{
+  const { validarDataDoFato: v } = require("./src/analise-lote");
+  const ref = new Date("2026-11-12T12:00:00Z");
+  const texto = "O governo anunciou que, a partir de 1º de janeiro de 2026, o salário mínimo passa a R$ 1.621. Copyright 2019.";
+  assert.equal(v({ date: "2026-01-01", quote: "a partir de 1º de janeiro de 2026" }, texto, ref).data, "2026-01-01");
+  assert.equal(v({ date: "2026-01-01", quote: "uma citação que não existe 2026" }, texto, ref), null);
+  assert.equal(v({ date: "2019-05-01", quote: "Copyright 2019" }, texto, ref), null, "ano do copyright não vira data do fato");
+  assert.equal(v({ date: "2027-01-01", quote: "a partir de 1º de janeiro de 2026" }, texto, ref), null, "data diferente da citação");
+  assert.equal(v({ date: "2027-02-01", quote: "Copyright 2019" }, "Copyright 2019 e 2027", ref), null, "data futura");
+  assert.equal(v({ date: "2026-11", quote: "updated on 10/11/2026" }, "Prices updated on 10/11/2026.", ref).precisao, "MES");
+  ok("data do fato aceita só com citação verificada, ano e mês presentes e data não futura");
+}
+
 // 2. Integração com o verificador: uma chamada por afirmação.
 async function integracao() {
   const ARQ = path.join(__dirname, "src", "verificador.js");
@@ -47,7 +61,8 @@ async function integracao() {
       assert.match(instrucoes, /untrusted external data/);
       return JSON.stringify({ sources: perguntaLote.sources.map((s, i) => ({
         id: s.id, correspondence: "MATCH", stance: i === 0 ? "SUPPORTS" : "CONTRADICTS",
-        reason: "Simulated.", key_quote: s.text.slice(0, 20)
+        reason: "Simulated.", key_quote: s.text.slice(0, 20),
+        fact_date: i === 0 ? { date: "2026-10-01", quote: "desde outubro de 2026" } : null
       })) });
     }
   };
@@ -59,7 +74,7 @@ async function integracao() {
         assert.equal(opcoes.selecaoDiversa, true);
         assert.equal(opcoes.pais, "brazil", "afirmação em português busca no Brasil");
         return ["https://g1.globo.com/p", "https://pt.wikipedia.org/p", "https://medium.com/p"].map((url, i) => ({
-          tipo_fonte: "tavily_extract", titulo: `F${i}`, url, conteudo: `Texto da fonte ${i}: o plano Pro custa R$ 59,90 por mês.`,
+          tipo_fonte: "tavily_extract", titulo: `F${i}`, url, conteudo: `Texto da fonte ${i}: o plano Pro custa R$ 59,90 por mês desde outubro de 2026.`,
           coletado_em: "2026-11-12T10:00:00.000Z", data_publicacao: null, data_atualizacao: null, relevancia: 0.9,
           categoria_fonte: ["NOTICIA", "REFERENCIA", "BLOG_FORUM"][i]
         }));
@@ -91,6 +106,9 @@ async function integracao() {
     assert.equal(a.evidencias[0].preparacao.metodo_analise, "LOTE");
     assert.ok(a.evidencias[0].preparacao.citacao_chave);
     assert.equal(a.nuances.idioma, "pt");
+    assert.equal(a.evidencias[0].fonte.escopo_data, "ATTRIBUTE", "data do fato vira data ligada ao atributo");
+    assert.equal(a.evidencias[0].fonte.data_fato.origem, "QUOTED_IN_SOURCE_TEXT");
+    assert.ok(Number.isFinite(a.agregacao.freshness.score), "com data do fato há nota de atualidade");
     assert.ok(a.agregacao.concordancia);
     assert.ok(banco.obterVerificacao(r.id_verificacao));
     ok("verificador em lote: 1 chamada, nuances do português e data de referência enviadas, resultado persistido");

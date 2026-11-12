@@ -382,7 +382,8 @@ function criarFonte(evidencia, simulado) {
   }
   item.append(datas);
   const temData = Boolean(fonte.data_publicacao || fonte.data_atualizacao);
-  if (fonte.escopo_data === "ATTRIBUTE" && temData) item.append(el("p", "escopo ok", "✓ This date is tied to the specific fact, so it counts for freshness."));
+  if (fonte.data_fato?.citacao) item.append(el("p", "escopo ok", `✓ Fact date found in the source text, quote verified: “${fonte.data_fato.citacao}”. It counts for freshness.`));
+  else if (fonte.escopo_data === "ATTRIBUTE" && temData) item.append(el("p", "escopo ok", "✓ This date is tied to the specific fact, so it counts for freshness."));
   else if (temData) item.append(el("p", "escopo pagina", "Page-level date: it does not prove when this specific fact changed."));
   else item.append(el("p", "escopo sem", "No publication or update date found. Retrieval time is never used as one."));
   return item;

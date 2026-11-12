@@ -121,4 +121,22 @@ caso("salário mínimo e Selic são regulamento, mesmo com R$", () => {
   assert.equal(inferirTipoPorRegras("O salário mínimo é R$ 1.518."), "regulamento");
   assert.equal(inferirTipoPorRegras("A taxa Selic está em 15%."), "regulamento");
 });
+caso("gíria: 'uns 50 conto' é cerca de R$ 50 e 'zap' vira WhatsApp na busca", () => {
+  const r = p.analisarNuances("O plano do zap business tá custando uns 50 conto por mês.");
+  const v = r.valores.find(x => x.informal);
+  assert.equal(v.valor, 50); assert.equal(v.moeda, "BRL"); assert.equal(v.qualificador.tipo, "APROXIMADO");
+  assert.match(r.consulta_busca, /WhatsApp/); assert.match(r.consulta_busca, /R\$ 50/);
+});
+caso("gíria: '2 paus' é R$ 2.000 e '80k' é 80 mil", () => {
+  assert.equal(p.analisarNuances("Sai por 2 paus no Pix.").valores.find(x => x.informal).valor, 2000);
+  assert.equal(p.analisarNuances("O carro custa 80k.").valores.find(x => x.informal).valor, 80000);
+});
+caso("'dizem que' marca boato; 'de graça' é preço zero; 'já era' é fim", () => {
+  assert.ok(p.analisarNuances("Dizem que o Insta deixou de mostrar curtidas.").notas.some(t => /hearsay/.test(t)));
+  assert.ok(p.analisarNuances("O app é de graça.").notas.some(t => /price is zero/.test(t)));
+  assert.ok(p.analisarNuances("Esse plano já era.").notas.some(t => /ended/.test(t)));
+});
+caso("valor no fim da frase não leva o ponto final junto", () => {
+  assert.equal(p.extrairValores("O salário mínimo é de R$ 1.518.")[0].texto, "R$ 1.518");
+});
 console.log(`Resultado: ${n}/${n} casos de português passaram. Sem rede e sem banco.`);

@@ -69,6 +69,13 @@ RULES
    marks a promotion. Dates like 12/11/2026 are day/month/year. Use the
    language notes when given.
 7. Do not invent facts that are not in the source text.
+8. FACT DATE: if the source text explicitly says WHEN the fact it states
+   became valid, changed or was announced (for example "a partir de 1º de
+   janeiro de 2026", "since March 2025", "updated on 10/11/2026", "em
+   dezembro de 2025 o governo anunciou"), return it in "fact_date" with the
+   date (YYYY-MM-DD, or YYYY-MM when only the month is given) and the exact
+   quote that contains it. Do not use the page's publication date, the
+   copyright year or any date not tied to this fact. Otherwise use null.
 
 OUTPUT
 Reply with valid JSON only, no Markdown:
@@ -79,7 +86,8 @@ Reply with valid JSON only, no Markdown:
       "correspondence": "MATCH",
       "stance": "SUPPORTS",
       "reason": "One or two short sentences in ENGLISH explaining the decision.",
-      "key_quote": "An exact short quote (max 200 characters) copied from this source's text that justifies the decision, or empty string."
+      "key_quote": "An exact short quote (max 200 characters) copied from this source's text that justifies the decision, or empty string.",
+      "fact_date": { "date": "2026-01-01", "quote": "exact text from the source containing that date" }
     }
   ]
 }
@@ -114,7 +122,39 @@ function normalizarParaBusca(texto) {
 
 // Valida a resposta do modelo; nunca aceita ids desconhecidos, valores fora
 // da lista ou citações que não existem no texto da fonte.
-function validarResposta(dados, fontes) {
+const MESES_PT = ["janeiro", "fevereiro", "marco", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
+const MESES_EN = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
+
+function semAcento(t) {
+  return String(t ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
+// A data do fato só é aceita se: (1) a citação existe no texto da fonte;
+// (2) a citação contém o ano e, quando houver, o mês da data; (3) a data é
+// válida e não está no futuro. Assim o modelo não consegue inventar uma data.
+function validarDataDoFato(dataFato, textoFonte, dataReferencia = new Date()) {
+  if (!dataFato || typeof dataFato !== "object") return null;
+  const data = typeof dataFato.date === "string" ? dataFato.date.trim() : "";
+  const citacao = typeof dataFato.quote === "string" ? dataFato.quote.trim().slice(0, 240) : "";
+  const m = /^(\d{4})-(\d{2})(?:-(\d{2}))?$/.exec(data);
+  if (!m || !citacao) return null;
+  if (!normalizarParaBusca(textoFonte).includes(normalizarParaBusca(citacao))) return null;
+  const ano = Number(m[1]); const mes = Number(m[2]); const dia = m[3] ? Number(m[3]) : 1;
+  const d = new Date(Date.UTC(ano, mes - 1, dia));
+  if (d.getUTCFullYear() !== ano || d.getUTCMonth() !== mes - 1 || d.getUTCDate() !== dia) return null;
+  if (d.getTime() > dataReferencia.getTime() + 24 * 3600 * 1000) return null;
+  const q = semAcento(citacao);
+  if (!q.includes(String(ano))) return null;
+  const mesNaCitacao =
+    q.includes(MESES_PT[mes - 1]) || q.includes(MESES_EN[mes - 1]) ||
+    q.includes(MESES_PT[mes - 1].slice(0, 3) + "/") || q.includes(MESES_EN[mes - 1].slice(0, 3) + " ") ||
+    new RegExp(`(^|\\D)0?${mes}[/.-]${ano}|${ano}-${String(mes).padStart(2, "0")}|(^|\\D)\\d{1,2}[/.]0?${mes}[/.]${ano}`).test(q);
+  // Só o ano na citação ("em 2026"): aceito apenas como precisão de ano.
+  if (!mesNaCitacao && !(mes === 1 && dia === 1)) return null;
+  return { data: m[3] ? data : `${data}-01`, precisao: m[3] ? "DIA" : (mesNaCitacao ? "MES" : "ANO"), citacao };
+}
+
+function validarResposta(dados, fontes, opcoesValidacao = {}) {
   if (!dados || typeof dados !== "object" || !Array.isArray(dados.sources)) {
     throw new Error("Estrutura inválida na análise em lote.");
   }
@@ -137,7 +177,8 @@ function validarResposta(dados, fontes) {
       // Citação não encontrada no texto: descartada para não exibir algo inventado.
       citacao = "";
     }
-    resultado.set(item.id, { correspondencia, postura, motivo, citacao });
+    const dataFato = validarDataDoFato(item.fact_date, porId.get(item.id).texto, opcoesValidacao.dataReferencia);
+    resultado.set(item.id, { correspondencia, postura, motivo, citacao, dataFato });
   }
   return resultado;
 }
@@ -170,9 +211,9 @@ async function analisarFontesEmLote(afirmacao, fontes, opcoes = {}) {
     onMetadata: opcoes.onMetadata,
     etapa: "ANALISE_EM_LOTE"
   });
-  const resultado = validarResposta(extrairJSON(resposta), fontesPreparadas);
+  const resultado = validarResposta(extrairJSON(resposta), fontesPreparadas, { dataReferencia });
   if (resultado.size === 0) throw new Error("A análise em lote não trouxe nenhuma fonte válida.");
   return resultado;
 }
 
-module.exports = { analisarFontesEmLote, validarResposta, INSTRUCOES_LOTE, MAX_FONTES };
+module.exports = { analisarFontesEmLote, validarResposta, validarDataDoFato, INSTRUCOES_LOTE, MAX_FONTES };
