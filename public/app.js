@@ -44,7 +44,8 @@ const TEXTOS = {
     dias: "days",
     indice: "freshness",
     indiceContra: "contrary evidence",
-    naoDeterminavel: "no dated evidence",
+    naoDeterminavel: "no fact-level date",
+    recencia: (n, d) => `Page-date recency: ${n}/100 (low confidence) · newest dated source ${d}. This uses the date the page was published or updated, not the date this specific fact changed, so it is not the official freshness score.`,
     medidorAria: "Freshness index",
     fontesTitulo: "Evidence",
     semFontes: "No source could be analysed for this claim.",
@@ -112,7 +113,8 @@ const TEXTOS = {
     dias: "dias",
     indice: "atualidade",
     indiceContra: "evidência contrária",
-    naoDeterminavel: "sem data vinculada",
+    naoDeterminavel: "sem data do fato",
+    recencia: (n, d) => `Recência pela data da página: ${n}/100 (confiança baixa) · fonte datada mais recente ${d}. Usa a data em que a página foi publicada ou atualizada, não a data em que esse fato mudou, por isso não é a nota oficial de atualidade.`,
     medidorAria: "Índice de atualidade",
     fontesTitulo: "Evidências",
     semFontes: "Nenhuma fonte pôde ser analisada para esta afirmação.",
@@ -387,7 +389,10 @@ function criarFonte(afirmacao, evidencia, simulado) {
   cabecalho.append(titulo, elemento("span", "fonte-dominio", dominioDe(fonte.url)));
   item.append(cabecalho);
 
-  if (fonte.conteudo) item.append(elemento("p", "fonte-trecho", fonte.conteudo));
+  // Prefere o trecho que o modelo realmente leu; senão, o começo da página.
+  const trechoBruto = evidencia.preparacao?.trecho_analisado || fonte.conteudo || "";
+  const trecho = trechoBruto.replace(/\s+/g, " ").trim();
+  if (trecho) item.append(elemento("p", "fonte-trecho", trecho.length > 600 ? `${trecho.slice(0, 600)}…` : trecho));
   const motivo = evidencia.classificacao?.justificativa || evidencia.correspondencia?.justificativa;
   if (motivo) item.append(elemento("p", "fonte-motivo", motivo));
 
@@ -425,6 +430,11 @@ function criarCartao(afirmacao, simulado) {
   cartao.querySelector(".afirmacao").textContent = afirmacao.texto;
   cartao.querySelector(".categoria").textContent = textoCategoria(afirmacao);
   configurarMedidor(cartao.querySelector(".medidor"), freshness, veredito);
+  const recencia = agregacao.recencia_pagina;
+  if (nota === null && recencia && Number.isFinite(recencia.score)) {
+    const linha = elemento("p", "recencia", t("recencia")(recencia.score, recencia.newest_date));
+    cartao.querySelector(".categoria").after(linha);
+  }
 
   const explicar = TEXTOS[estado.idioma][`expl_${veredito}`];
   cartao.querySelector(".explicacao").textContent = explicar ? explicar(nota) : (agregacao.resumo ?? "");

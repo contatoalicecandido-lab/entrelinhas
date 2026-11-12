@@ -122,6 +122,10 @@ button:focus-visible { outline: 2px solid var(--destaque); outline-offset: 2px; 
 .afirmacao { font-family: var(--serifa); font-weight: 500; font-size: 21px; line-height: 1.3; margin: 10px 0 6px; overflow-wrap: anywhere; }
 .categoria { margin: 0; font-size: 13px; color: var(--tinta-suave); }
 
+.recencia {
+  margin: 10px 0 0; font-size: 13px; color: #6b4a00; background: var(--ambar-fundo);
+  border-radius: 8px; padding: 8px 10px; max-width: 640px;
+}
 .medidor { position: relative; width: 120px; height: 120px; }
 .medidor svg { width: 120px; height: 120px; transform: rotate(-90deg); }
 .medidor circle { fill: none; stroke-width: 10; }

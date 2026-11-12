@@ -122,11 +122,28 @@ Velocidade contratada não é velocidade efetivamente medida.
 Se a métrica for diferente, mas a empresa ou assunto for relacionado,
 use INSUFFICIENT, não CONTRADICTS.
 
-6. ATUALIDADE
+6. ATUALIDADE E DATA DE REFERÊNCIA
 
-Não avalie se a informação é recente ou antiga nesta etapa.
-Não pesquise externamente.
-A atualidade é responsabilidade de outro módulo do Entrelinhas.
+O campo "data_referencia" informa a data de hoje.
+
+Não julgue a evidência pela idade da página, nem pesquise externamente:
+a avaliação de datas da fonte é responsabilidade de outro módulo.
+
+Mas compare o CONTEÚDO da evidência com a data de referência quando
+a afirmação fala do presente ("é", "atual", "ainda", "current", "still",
+"is", "now") e a própria evidência declara até quando o fato vale.
+Se a evidência diz explicitamente que a situação valia só até uma data
+anterior à data de referência, ou que mudaria em uma data já passada,
+use CONTRADICTS para a afirmação no presente.
+
+Exemplo, com data_referencia 2026-11-12:
+- Afirmação: "A versão 20 é a versão LTS ativa atual."
+- Evidência: "A versão 20 fica em Active LTS até outubro de 2024 e depois
+  entra em manutenção até o fim de vida em abril de 2026."
+- Resultado: CONTRADICTS, porque as duas datas já passaram.
+
+Se a evidência não declara prazo ou data de mudança, não presuma que
+a informação mudou: aplique as demais regras normalmente.
 
 7. EVIDÊNCIA COM TEXTO ADICIONAL
 
@@ -283,7 +300,13 @@ async function classificarEvidencia(
   validarEntrada(afirmacao, "A afirmação");
   validarEntrada(evidencia, "A evidência");
 
+  const dataReferencia =
+    opcoes.dataReferencia instanceof Date && Number.isFinite(opcoes.dataReferencia.getTime())
+      ? opcoes.dataReferencia
+      : new Date();
+
   const dados = {
+    data_referencia: dataReferencia.toISOString().slice(0, 10),
     afirmacao: afirmacao.trim(),
     evidencia: evidencia.trim()
   };

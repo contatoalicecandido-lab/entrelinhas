@@ -406,6 +406,7 @@ async function verificarAfirmacao(afirmacao, opcoes) {
               idAfirmacao: afirmacao.id,
               urlEvidencia: fonte.url ?? null,
               tentativa,
+              dataReferencia: opcoes.dataReferencia,
               onMetadata: opcoes.onMetadata
             }
           )
@@ -457,7 +458,13 @@ async function verificarAfirmacao(afirmacao, opcoes) {
     resultado.evidencias.push({
       fonte,
       coleta,
-      preparacao: metadadosPreparacao,
+      preparacao: {
+        ...metadadosPreparacao,
+        // Trecho efetivamente enviado ao modelo (encurtado), para explicar o veredito.
+        trecho_analisado: typeof conteudo_para_analise === "string"
+          ? conteudo_para_analise.slice(0, 1200)
+          : null
+      },
       correspondencia,
       classificacao,
       atualidade

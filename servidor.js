@@ -24,7 +24,14 @@ const HOST = "127.0.0.1";
 const LIMITE_CORPO_BYTES = 32 * 1024;
 const LIMITE_TEXTO = 4000;
 const MAX_AFIRMACOES = 6;
-const MAX_EVIDENCIAS = 3;
+// O modo real lê 2 fontes por afirmação por padrão: cada fonte custa duas
+// chamadas ao modelo, e o limite de uso do provedor domina a latência.
+// Ajustável com ENTRELINHAS_MAX_FONTES (1 a 5).
+const MAX_EVIDENCIAS_REAL = (() => {
+  const valor = Number(process.env.ENTRELINHAS_MAX_FONTES);
+  return Number.isInteger(valor) && valor >= 1 && valor <= 5 ? valor : 2;
+})();
+const MAX_EVIDENCIAS_EXEMPLO = 3;
 const MAX_DOMINIOS = 5;
 const TIPOS = ["preco", "versao_api", "regulamento", "empresa"];
 
@@ -111,7 +118,8 @@ function validarPedido(dados) {
   return { texto, modo, dominiosOficiais, tipo };
 }
 
-// Reduz o tamanho da resposta: trechos longos das fontes são encurtados.
+// Reduz o tamanho da resposta enviada ao navegador. A verificação completa,
+// com todo o conteúdo coletado, continua no resultado salvo no SQLite.
 function prepararParaNavegador(resultado, modo) {
   const copia = structuredClone(resultado);
   for (const afirmacao of copia.afirmacoes ?? []) {
@@ -119,6 +127,12 @@ function prepararParaNavegador(resultado, modo) {
       const conteudo = evidencia?.fonte?.conteudo;
       if (typeof conteudo === "string" && conteudo.length > 700) {
         evidencia.fonte.conteudo = `${conteudo.slice(0, 700)}…`;
+      }
+      // Textos completos (coleta e normalização) ficam só no SQLite: uma única
+      // página extraída pode ter vários MB e a interface não os exibe.
+      if (evidencia?.fonte?.normalizacao) delete evidencia.fonte.normalizacao;
+      if (evidencia?.coleta && typeof evidencia.coleta === "object") {
+        delete evidencia.coleta.conteudo;
       }
     }
   }
@@ -132,7 +146,7 @@ async function executarVerificacao(pedido) {
   try {
     const opcoesComuns = {
       banco,
-      maxEvidencias: MAX_EVIDENCIAS,
+      maxEvidencias: pedido.modo === "exemplo" ? MAX_EVIDENCIAS_EXEMPLO : MAX_EVIDENCIAS_REAL,
       maxAfirmacoes: MAX_AFIRMACOES
     };
 
@@ -213,7 +227,7 @@ function criarServidor() {
         modo_real_disponivel: modoRealDisponivel,
         texto_exemplo: TEXTO_EXEMPLO,
         dominios_exemplo: DOMINIOS_OFICIAIS_EXEMPLO,
-        limites: { caracteres: LIMITE_TEXTO, afirmacoes: MAX_AFIRMACOES, evidencias_por_afirmacao: MAX_EVIDENCIAS, dominios: MAX_DOMINIOS },
+        limites: { caracteres: LIMITE_TEXTO, afirmacoes: MAX_AFIRMACOES, evidencias_por_afirmacao: MAX_EVIDENCIAS_REAL, dominios: MAX_DOMINIOS },
         tipos: TIPOS
       });
     }

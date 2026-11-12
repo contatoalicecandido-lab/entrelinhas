@@ -1916,3 +1916,26 @@ Sessão de continuidade com Claude (auditoria em `MATRIZ_AUDITORIA.md`,
   ajustados (fixtures com `escopo_data: "ATTRIBUTE"`); novos
   `teste-tipo-afirmacao.js` e `teste-servidor.js`; `npm test` passou a rodar
   `rodar-testes.js` com toda a suíte offline.
+
+## 35. Primeira execução real pela interface e ajustes — 12/11/2026 (tarde)
+
+- Execução real (Node.js 20 LTS + Chat Completions; domínios nodejs.org e
+  platform.openai.com): fluxo íntegro em ~307 s, dominado por esperas de
+  limite de uso do Groq. Resultado: CONFLITO e SUPORTE_FRACO, índice null.
+- **Falha de produto encontrada:** a página oficial do Node 20.9 diz "Active
+  LTS até outubro de 2024 … fim de vida em abril de 2026", mas o
+  classificador marcou SUPPORTS para "Node 20 é a LTS ativa atual". Causa:
+  o modelo não recebia a data de hoje e a regra 6 proibia considerar tempo.
+  **Correção:** o classificador recebe `data_referencia` e passa a usar
+  CONTRADICTS quando a própria evidência declara prazo já vencido para uma
+  afirmação no presente; continua sem julgar a idade da página.
+- **Índice secundário** `agregacao.recencia_pagina` (PAGE_DATE_RECENCY_INDEX,
+  confiança LOW): mesma meia-vida, usando datas de página. Decisão da Alice:
+  manter o índice oficial rigoroso e mostrar o secundário separado.
+- Modo real da interface lê 2 fontes por afirmação (`ENTRELINHAS_MAX_FONTES`).
+- Tavily com tempo-limite de 45 s; resposta ao navegador sem textos completos
+  de coleta/normalização (3,5 MB → ~85 KB no caso real); a interface mostra o
+  trecho efetivamente analisado (`preparacao.trecho_analisado`).
+- Testes: `teste-recencia-pagina.js` (8/8), `teste-classificador-data.js` (2/2);
+  suíte 43/43.
+

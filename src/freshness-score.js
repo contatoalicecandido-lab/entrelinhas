@@ -20,10 +20,12 @@ function validISODateOrTimestamp(value, day) {
   return Number.isFinite(parsed.getTime()) && parsed.toISOString().slice(0, 10) === day;
 }
 
-function freshnessForClaim(evidence, { claimType, validityDays, asOf }) {
+function freshnessForClaim(evidence, { claimType, validityDays, asOf, acceptPageScope = false }) {
   if (!VALID_POSTURES.has(evidence.postura)) return null;
-  if (!VALID_STATUSES.has(evidence.temporalStatus)) return null;
-  if (evidence.temporalStatus === "UNVERIFIABLE") return null;
+  if (!acceptPageScope) {
+    if (!VALID_STATUSES.has(evidence.temporalStatus)) return null;
+    if (evidence.temporalStatus === "UNVERIFIABLE") return null;
+  }
   if (evidence.match !== true) return null;
   if (typeof evidence.domain !== "string" || !evidence.domain) return null;
 
@@ -40,7 +42,7 @@ function freshnessForClaim(evidence, { claimType, validityDays, asOf }) {
 
   const selectedDate = updated || published;
   // A page-level date is not proof that the specific claim attribute was updated.
-  if (evidence.dateScope !== "ATTRIBUTE") return null;
+  if (!acceptPageScope && evidence.dateScope !== "ATTRIBUTE") return null;
 
   const ageDays = Math.floor((asOf.getTime() - Date.parse(`${selectedDate}T00:00:00Z`)) / 86400000);
   if (ageDays < 0 || !Number.isFinite(ageDays)) return null;
@@ -158,4 +160,68 @@ function calculateClaimFreshnessScore(evidences, options = {}) {
   };
 }
 
-module.exports = { calculateClaimFreshnessScore, ALGORITHM_ID, ALGORITHM_VERSION };
+// Indicador SECUNDÁRIO, de confiança baixa: mesma fórmula de meia-vida,
+// mas aceitando datas de página (publicação/atualização do documento).
+// Nunca substitui o índice principal; serve para mostrar, quando não há
+// data vinculada ao atributo, se as fontes encontradas são recentes ou antigas.
+const PAGE_ALGORITHM_ID = "PAGE_DATE_RECENCY_INDEX";
+const PAGE_ALGORITHM_VERSION = "1.0.0";
+
+function calculatePageDateRecency(evidences, options = {}) {
+  if (!Array.isArray(evidences)) throw new TypeError("evidences precisa ser uma lista.");
+  const { claimType, validityDays, asOf = new Date() } = options;
+  const base = {
+    algorithm_id: PAGE_ALGORITHM_ID,
+    algorithm_version: PAGE_ALGORITHM_VERSION,
+    basis: "PAGE_DATE",
+    confidence: "LOW",
+    as_of: asOf.toISOString()
+  };
+  if (!Number.isInteger(validityDays) || validityDays <= 0) {
+    return { ...base, score: null, status: "UNVERIFIABLE", newest_date: null, sources: [],
+      limitations: ["Sem categoria temporal, não há janela de validade para comparar as datas."] };
+  }
+
+  const eligible = evidences
+    .map(item => freshnessForClaim(item, { claimType, validityDays, asOf, acceptPageScope: true }))
+    .filter(Boolean);
+  const byGroup = new Map();
+  for (const item of eligible) {
+    const prior = byGroup.get(item.dependencyGroup);
+    if (!prior || item.score > prior.score) byGroup.set(item.dependencyGroup, item);
+  }
+  const groups = [...byGroup.values()];
+  if (!groups.length) {
+    return { ...base, score: null, status: "UNVERIFIABLE", newest_date: null, sources: [],
+      limitations: ["Nenhuma fonte utilizável declara data de publicação ou atualização válida."] };
+  }
+
+  const score = Math.round(groups.reduce((sum, item) => sum + item.score, 0) / groups.length);
+  const hasFresh = groups.some(item => item.status === "FRESH");
+  const hasStale = groups.some(item => item.status === "STALE");
+  const status = hasFresh && hasStale ? "MIXED" : hasFresh ? "FRESH" : "STALE";
+  const newest = groups.reduce((a, b) => (a.selectedDate >= b.selectedDate ? a : b));
+  return {
+    ...base,
+    score,
+    status,
+    policy_id: `${claimType}:${validityDays}d:page:v1`,
+    newest_date: newest.selectedDate,
+    sources: groups.map(item => ({
+      date: item.selectedDate, age_days: item.ageDays, status: item.status,
+      posture: item.posture, domain: item.domain, evidence_id: item.evidenceId
+    })),
+    limitations: [
+      "Baseado na data da página, não na data em que o dado específico mudou: confiança baixa.",
+      "Não substitui o índice de atualidade principal e não é probabilidade de verdade."
+    ]
+  };
+}
+
+module.exports = {
+  calculateClaimFreshnessScore,
+  calculatePageDateRecency,
+  ALGORITHM_ID,
+  ALGORITHM_VERSION,
+  PAGE_ALGORITHM_ID
+};

@@ -45,7 +45,9 @@ const TESTES = [
   "teste-tavily-busca-oficial.js",
   "teste-politica-fontes-e-datas.js",
   "teste-tipo-afirmacao.js",
-  "teste-servidor.js"
+  "teste-servidor.js",
+  "teste-recencia-pagina.js",
+  "teste-classificador-data.js"
 ];
 
 const extras = process.argv.slice(2);

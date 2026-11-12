@@ -1,6 +1,6 @@
 
 const { validarData, VALIDADE_MAX_DIAS } = require("./atualidade");
-const { calculateClaimFreshnessScore } = require("./freshness-score");
+const { calculateClaimFreshnessScore, calculatePageDateRecency } = require("./freshness-score");
 const { clusterizarDependencias } = require("./independencia-fontes");
 
 const VERSAO_REGRAS = "1.2.0";
@@ -506,6 +506,24 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
     }
   );
 
+  // Indicador secundário (confiança baixa) pela data da página.
+  const recenciaPagina = calculatePageDateRecency(
+    evidencias.map(evidencia => ({
+      match: true,
+      postura: evidencia.postura,
+      domain: evidencia.dominio,
+      dependencyGroup: evidencia.grupo_dependencia_id,
+      publicationDate: evidencia.data_publicacao,
+      updateDate: evidencia.data_atualizacao,
+      evidenceId: evidencia.id_evidencia
+    })),
+    {
+      claimType: afirmacao.tipo_afirmacao ?? "unknown",
+      validityDays: validade ?? null,
+      asOf: opcoes.asOf ?? new Date()
+    }
+  );
+
   const limitacoes = [];
 
   if (evidencias.length === 0) {
@@ -577,6 +595,7 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
     afirmacao: afirmacao.texto,
     score_qualidade_evidencia: score,
     freshness: freshnessScore,
+    recencia_pagina: recenciaPagina,
     versao_regras: VERSAO_REGRAS,
     metodo: "AGREGACAO_DETERMINISTICA",
     fontes_independentes: grupos.length,

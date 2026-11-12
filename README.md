@@ -116,14 +116,16 @@ npm run web:exemplo    # example mode only: no keys, no network, no cost
 Open <http://localhost:3000>, paste an AI-generated answer and click **Check claims**. Each claim gets a card with:
 
 - a verdict (*Current*, *Likely outdated*, *Supported, freshness unconfirmed*, *Conflicting* or *Not verifiable*);
-- the freshness score (0–100) or “no dated evidence”;
+- the freshness score (0–100), or “no fact-level date” when no source ties a date to the specific fact; in that case a separate, clearly labeled **page-date recency** (low confidence) shows whether the dated sources found are recent or old, without replacing the official score;
 - the detected category and its validity window, and whether the category was set by the user, suggested by the model or matched by keyword rules;
 - every source with its stance, official badge, excerpt, model justification and the published / updated / retrieved dates, with an explicit note on whether the date is tied to the specific fact;
 - limitations and a traceability footer (verification ID, model calls, search operations).
 
 **Example mode** runs the real verdict and freshness engine on a fixed demo answer with fictional sources and simulated search/model responses; the page labels it as simulated. It shows the three key outcomes: a current price (score 72), an API endpoint contradicted by a recent official changelog (likely outdated), and a regulation supported by an undated official page (no score).
 
-The server binds to `127.0.0.1` only, handles one verification at a time, caps input (4,000 characters, 6 claims, 3 sources per claim), sends a strict Content-Security-Policy, renders all content as text, never returns credentials and stores every verification in SQLite `:memory:`.
+Live mode reads 2 sources per claim by default (`ENTRELINHAS_MAX_FONTES`, 1–5): every source costs two model calls, and on free model tiers the provider's rate limit dominates latency (a first live run with 3 sources per claim took about 5 minutes for 2 claims because of automatic waits and retries).
+
+The server binds to `127.0.0.1` only, handles one verification at a time, caps input (4,000 characters, 6 claims), sends a strict Content-Security-Policy, renders all content as text, never returns credentials and stores every verification in SQLite `:memory:`.
 
 ### Run one claim through the verification flow
 
@@ -143,6 +145,8 @@ For up to three extracted URLs, production execution attempts a separate direct 
 Evidence aggregation now groups pages by domain, declared canonical URL, exact normalized-content hash, or conservative near-duplicate five-token shingle Jaccard similarity (minimum 40 tokens, threshold 0.88). This reduces obvious republication inflation. It cannot establish editorial provenance, detect heavily edited copies, or prove independence when no duplicate signal is found; the output says this directly. See [public implementation research and design choices](PESQUISA_REFERENCIAS.md).
 
 Four public pages have human labels recorded before parsing in [`avaliacao/rotulos-paginas-reais-v1.json`](avaliacao/rotulos-paginas-reais-v1.json). Their short visible excerpts are covered offline; they are not raw HTML fixtures or a real-web accuracy benchmark. A separate live check is available as `node avaliacao/validar-paginas-reais.js --live` and performs bounded GET requests to those pages.
+
+The stance classifier receives the reference date (today) and must answer CONTRADICTS when a present-tense claim is contradicted by deadlines stated in the evidence itself (for example, a release page saying a version stayed in Active LTS only until a date that has already passed). It still does not judge a page by its age; that remains the job of the deterministic date rules.
 
 The demo shows factual verdict and temporal state separately. A source can support an assertion while freshness remains inconclusive. The 0–100 value is a deterministic temporal index under a documented half-life formula, not a probability or calibrated confidence. A reproducible synthetic evaluation is available with `node avaliacao/teste-avaliacao-rotulada-v1.js`; it tests rules and regression cases, not accuracy on real-world sources.
 

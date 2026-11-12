@@ -44,7 +44,7 @@ The project uses Bifrost as its model gateway; it does not claim to extend the B
 | Identify potentially stale information in LLM answers | Done: answer → atomic claims → verdict per claim (*Likely outdated* when a current official source contradicts). |
 | Focus on prices, API versions, regulations, company info | Done: four categories with their own validity windows; assigned automatically. |
 | Re-verify claims against live web sources | Done: Tavily Search + Extract, optional official-domain search. Live end-to-end runs recorded on 11 Nov; re-run with the final code pending (see below). |
-| Freshness score per claim | Done: 0–100 deterministic score or explicit “not determinable”; uncalibrated. |
+| Freshness score per claim | Done: 0–100 deterministic score from dates tied to the specific fact, or explicit “not determinable”; when absent, a separate low-confidence page-date recency index is shown. Uncalibrated. |
 | Use Tavily and Bifrost | Done: Tavily for search/extraction; every model call goes through the Bifrost HTTP gateway. |
 | Clear demo | Done: local web interface with a no-key example mode; CLI demo for live runs. |
 
