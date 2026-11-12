@@ -1,6 +1,7 @@
 
 const { validarData, VALIDADE_MAX_DIAS } = require("./atualidade");
 const { calculateClaimFreshnessScore, calculatePageDateRecency } = require("./freshness-score");
+const { calcularAtualidadeAfirmacao, JANELA_GERAL_DIAS } = require("./atualidade-afirmacao");
 const { clusterizarDependencias } = require("./independencia-fontes");
 const { calcularConcordancia, estaCorroborada } = require("./concordancia");
 const { classificarFonte } = require("./tipo-fonte");
@@ -561,6 +562,31 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
     }
   );
 
+  // Sem categoria temporal: recência das páginas numa janela geral, só para
+  // que a nota de atualidade da afirmação exista (confiança baixa).
+  const recenciaGeral = validade
+    ? null
+    : calculatePageDateRecency(
+        evidencias.map(evidencia => ({
+          match: true,
+          postura: evidencia.postura,
+          domain: evidencia.dominio,
+          dependencyGroup: evidencia.grupo_dependencia_id,
+          publicationDate: evidencia.data_publicacao,
+          updateDate: evidencia.data_atualizacao,
+          evidenceId: evidencia.id_evidencia
+        })),
+        { claimType: "general", validityDays: JANELA_GERAL_DIAS, asOf: opcoes.asOf ?? new Date() }
+      );
+
+  const atualidadeAfirmacao = calcularAtualidadeAfirmacao({
+    freshness: freshnessScore,
+    recenciaPagina,
+    recenciaGeral,
+    concordancia,
+    janelaDias: validade ?? null
+  });
+
   const limitacoes = [];
 
   if (evidencias.length === 0) {
@@ -634,6 +660,7 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
     freshness: freshnessScore,
     concordancia,
     recencia_pagina: recenciaPagina,
+    atualidade_afirmacao: atualidadeAfirmacao,
     versao_regras: VERSAO_REGRAS,
     metodo: "AGREGACAO_DETERMINISTICA",
     fontes_independentes: grupos.length,

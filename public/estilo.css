@@ -197,3 +197,14 @@ a.fonte-titulo:hover { color: var(--azul); text-decoration: underline; }
   .mensagem { text-align: left; }
 }
 @media (max-width: 460px) { .passos { grid-template-columns: 1fr; } }
+
+/* Nota de atualidade: rótulo do estado e nível de confiança */
+.metrica-etiqueta.status-current { color: #0f5b33; background: #dff3e7; }
+.metrica-etiqueta.status-aging,
+.metrica-etiqueta.status-uncertain { color: #6b4e00; background: #fbefcc; }
+.metrica-etiqueta.status-contradicted { color: #8a1c1c; background: #fbe1e1; }
+.confianca { font-size: 12px; font-weight: 700; margin: 6px 0 0; letter-spacing: .02em; }
+.confianca::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; background: currentColor; }
+.conf-high { color: #1d7a46; }
+.conf-medium { color: #9a6b00; }
+.conf-low { color: #8b919c; }

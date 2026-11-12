@@ -277,6 +277,19 @@ function corDoValor(valor) {
   return "var(--vermelho)";
 }
 
+const STATUS_ATUALIDADE = {
+  CURRENT: { texto: "Current: recent sources confirm it", cor: "var(--verde)" },
+  AGING: { texto: "Aging: only older sources confirm it", cor: "#d9a520" },
+  UNCERTAIN: { texto: "Uncertain: sources are split", cor: "#d9a520" },
+  CONTRADICTED: { texto: "Outdated: current sources contradict it", cor: "var(--vermelho)" }
+};
+const FUNDAMENTOS = {
+  FACT_DATE: "dates the sources give for this fact",
+  PAGE_DATE: "page dates (not proof of when the fact changed)",
+  PAGE_DATE_GENERAL_WINDOW: "page dates (not proof of when the fact changed)"
+};
+const CONFIANCAS = { HIGH: "High", MEDIUM: "Medium", LOW: "Low" };
+
 function criarMetricas(afirmacao) {
   const ag = afirmacao.agregacao ?? {};
   const conc = ag.concordancia ?? null;
@@ -294,22 +307,27 @@ function criarMetricas(afirmacao) {
   }
   grade.append(m1);
 
-  // 2. Atualidade
-  const contra = ag.veredito === "CONTRADITA_POR_FONTE_ATUAL" || ag.veredito === "CONTRADICAO_FRACA";
-  const m2 = metrica("Freshness");
-  const nota = fr && Number.isFinite(fr.score) ? fr.score : null;
+  // 2. Nota de atualidade da afirmação (recência das fontes × apoio)
+  const m2 = metrica("Freshness score");
+  const at = ag.atualidade_afirmacao ?? null;
   const cat = CATEGORIAS[afirmacao.tipo_afirmacao];
-  if (nota !== null) {
-    valorComBarra(m2, nota, contra ? "var(--vermelho)" : corDoValor(nota));
-    m2.append(el("p", "metrica-nota", `${contra ? "The evidence against the claim is recent. " : ""}Based on a date tied to this fact${cat ? ` · ${cat[1]}-day window for ${PLURAIS[afirmacao.tipo_afirmacao]}` : ""}.`));
-  } else if (!cat) {
-    m2.append(el("p", "metrica-etiqueta", "Not time-sensitive"));
-    m2.append(el("p", "metrica-nota", "This claim is not a price, API version, regulation or company fact."));
+  if (at && Number.isFinite(at.score)) {
+    const st = STATUS_ATUALIDADE[at.status] ?? STATUS_ATUALIDADE.UNCERTAIN;
+    valorComBarra(m2, at.score, st.cor);
+    m2.append(el("p", `metrica-etiqueta status-${at.status.toLowerCase()}`, st.texto));
+    const janela = at.basis === "PAGE_DATE_GENERAL_WINDOW"
+      ? `general ${at.window_days}-day window`
+      : cat ? `${cat[1]}-day window for ${PLURAIS[afirmacao.tipo_afirmacao]}` : "";
+    m2.append(el("p", "metrica-nota",
+      `Source recency ${at.evidence_recency} × support ${Math.round(at.support_share * 100)}%. ` +
+      `Based on ${FUNDAMENTOS[at.basis] ?? "source dates"}${janela ? ` · ${janela}` : ""}` +
+      `${at.newest_date ? ` · newest ${formatarDataCurta(at.newest_date)}` : ""}.`));
+    m2.append(el("p", `confianca conf-${(at.confidence ?? "low").toLowerCase()}`, `${CONFIANCAS[at.confidence] ?? "Low"} confidence`));
   } else {
-    m2.append(el("p", "metrica-etiqueta", "No date found for this fact"));
-    m2.append(el("p", "metrica-nota", rec && Number.isFinite(rec.score)
-      ? `The newest source page is from ${formatarDataCurta(rec.newest_date)} (page date, not proof of when the fact changed).`
-      : "None of the sources says when this fact changed."));
+    m2.append(el("p", "metrica-etiqueta", at?.reason === "NO_SOURCE_DATE" ? "Not scored: no source gave a date" : "Not scored: no source took a position"));
+    m2.append(el("p", "metrica-nota", at?.reason === "NO_SOURCE_DATE"
+      ? "Sources discussed the claim but none says when it was published or updated."
+      : "None of the sources found confirms or contradicts this claim."));
   }
   grade.append(m2);
 
