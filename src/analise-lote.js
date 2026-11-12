@@ -149,9 +149,20 @@ function validarDataDoFato(dataFato, textoFonte, dataReferencia = new Date()) {
     q.includes(MESES_PT[mes - 1]) || q.includes(MESES_EN[mes - 1]) ||
     q.includes(MESES_PT[mes - 1].slice(0, 3) + "/") || q.includes(MESES_EN[mes - 1].slice(0, 3) + " ") ||
     new RegExp(`(^|\\D)0?${mes}[/.-]${ano}|${ano}-${String(mes).padStart(2, "0")}|(^|\\D)\\d{1,2}[/.]0?${mes}[/.]${ano}`).test(q);
-  // Só o ano na citação ("em 2026"): aceito apenas como precisão de ano.
-  if (!mesNaCitacao && !(mes === 1 && dia === 1)) return null;
-  return { data: m[3] ? data : `${data}-01`, precisao: m[3] ? "DIA" : (mesNaCitacao ? "MES" : "ANO"), citacao };
+  if (!mesNaCitacao) {
+    // Só o ano na citação ("em 2026"): aceito apenas como precisão de ano, e
+    // nunca quando o ano faz parte de um número de documento ("Nota nº 15/2026").
+    if (!(mes === 1 && dia === 1)) return null;
+    const anoEmNumeroDeDocumento = new RegExp(`(n[ºo°]\\.?\\s*\\d+[/.-]${ano})|((^|\\D)(1[3-9]|[2-9]\\d|\\d{3,})[/.-]${ano})`).test(q);
+    if (anoEmNumeroDeDocumento) return null;
+    return { data: `${ano}-01-01`, precisao: "ANO", citacao };
+  }
+  const diaNaCitacao = Boolean(m[3]) && new RegExp(`(^|\\D)0?${dia}(\\D|$)`).test(q.replace(String(ano), " "));
+  return {
+    data: diaNaCitacao ? data : `${ano}-${String(mes).padStart(2, "0")}-01`,
+    precisao: diaNaCitacao ? "DIA" : "MES",
+    citacao
+  };
 }
 
 function validarResposta(dados, fontes, opcoesValidacao = {}) {

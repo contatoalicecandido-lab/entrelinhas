@@ -51,7 +51,8 @@ const TESTES = [
   "teste-portugues.js",
   "teste-tavily-diversidade.js",
   "teste-concordancia.js",
-  "teste-analise-lote.js"
+  "teste-analise-lote.js",
+  "teste-correcoes-ao-vivo.js"
 ];
 
 const extras = process.argv.slice(2);

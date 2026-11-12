@@ -39,9 +39,14 @@ function tipoValido(tipo) {
 // alíquotas): mesmo com "R$", são regulamento, não preço de mercado.
 const VALOR_REGULADO_BR = /\b(sal[aá]rio m[ií]nimo|selic|al[ií]quota|teto do inss|faixa de isen[cç][aã]o|imposto de renda)\b/i;
 
+// Regras de políticas públicas (quem tem direito, o que o SUS oferece, o que
+// um órgão aprovou ou recomenda): mudam por decisão oficial, como regulamento.
+const POLITICA_PUBLICA = /(\bSUS\b|\bAnvisa\b|\bMinist[ée]rio d[ao]s? \w+|\bcalend[áa]rio (vacinal|de vacina)|\bvacina[çc][ãa]o\b.*\b(gratuit|p[úu]blic|posto)|\bquem (tem direito|pode tomar|pode receber)\b|\bBolsa Fam[íi]lia\b|\bFGTS\b|\bINSS\b|\bbenef[íi]cio\b|\bFDA[- ]approved\b|\bapproved by the FDA\b|\bCDC recommends\b|\beligib(le|ility)\b)/i;
+
 function inferirTipoPorRegras(texto) {
   if (typeof texto !== "string" || !texto.trim()) return null;
   if (VALOR_REGULADO_BR.test(texto)) return "regulamento";
+  if (POLITICA_PUBLICA.test(texto)) return "regulamento";
   for (const regra of REGRAS) {
     if (regra.padrao.test(texto)) return regra.tipo;
   }

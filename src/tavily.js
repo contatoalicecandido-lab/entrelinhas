@@ -317,6 +317,17 @@ async function executarBusca(pergunta, opcoes, dominiosOficiais = [], extras = {
 // outros sites. Blogs e fóruns só entram se não houver fonte melhor.
 const ORDEM_TIPOS_DIVERSOS = ["OFICIAL", "NOTICIA", "ACADEMICO", "REFERENCIA", "OUTRO"];
 
+// Resultados que não são páginas de conteúdo: fichas internas da própria
+// Tavily (tavily.com/knowledge/...) e itens com relevância quase nula.
+const RELEVANCIA_MINIMA = 0.05;
+function ehResultadoUtil(resultado) {
+  let host = "";
+  try { host = new URL(resultado.url).hostname.toLowerCase().replace(/^www\./, ""); } catch { return false; }
+  if (host === "tavily.com" || host.endsWith(".tavily.com")) return false;
+  if (typeof resultado.score === "number" && resultado.score < RELEVANCIA_MINIMA) return false;
+  return true;
+}
+
 function selecionarFontesDiversas(candidatos, maxFontes, dominiosOficiais, afirmacao = "") {
   const hostDe = url => {
     try { return new URL(url).hostname.toLowerCase().replace(/^www\./, ""); } catch { return url; }
@@ -468,7 +479,8 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
   const candidatos = [...resultadosBusca]
     .filter(resultado =>
       typeof resultado.url === "string" &&
-      resultado.url.startsWith("http")
+      resultado.url.startsWith("http") &&
+      (!opcoes.selecaoDiversa || ehResultadoUtil(resultado))
     )
     .sort((a, b) =>
       Number(dominioEhOficial(b)) - Number(dominioEhOficial(a)) ||
@@ -514,7 +526,10 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
 
   // Combina busca e extração.
   const buscaPrincipal = buscaGeral;
-  const evidencias = resultadosBusca.map(resultado => {
+  // Com seleção diversa, só as fontes escolhidas (e extraídas) viram evidência,
+  // na ordem da seleção; senão, um corte posterior descartaria a escolha.
+  const baseEvidencias = opcoes.selecaoDiversa ? selecionadosParaExtracao : resultadosBusca;
+  const evidencias = baseEvidencias.map(resultado => {
     const origemPrincipal = resultado._origem_principal;
     const buscaDaFonte = buscas.find(
       busca => busca.registro.id_operacao === origemPrincipal?.id_operacao
@@ -719,6 +734,7 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
 }
 
 module.exports = {
+  ehResultadoUtil,
   selecionarFontesDiversas,
   pesquisarComTavily
 };
