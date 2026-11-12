@@ -61,3 +61,25 @@ const ref = new Date("2026-11-12T12:00:00Z");
 }
 
 console.log(`\n${n} testes passaram.`);
+
+// 6. Gravação ao vivo: resposta em inglês virou afirmações em português.
+//    A decomposição agora recebe o idioma do texto e a regra de não traduzir.
+(async () => {
+  process.env.BIFROST_KEY = "chave-ficticia-para-teste";
+  const fetchOriginal = global.fetch;
+  let corpo = null;
+  global.fetch = async (_u, cfg) => {
+    corpo = JSON.parse(cfg.body);
+    return new Response(JSON.stringify({ choices: [{ message: { content: "{\"afirmacoes\":[{\"texto\":\"Node.js 20 is the current LTS release.\",\"categoria\":\"versao_api\"}]}" } }] }), { status: 200 });
+  };
+  try {
+    const { decomporEmAfirmacoes } = require("./src/afirmacoes");
+    await decomporEmAfirmacoes("Node.js 20 is the current LTS release and the recommended version for production.");
+    const pergunta = JSON.parse(corpo.messages.at(-1).content);
+    assert.equal(pergunta.idioma_do_texto, "inglês (English)");
+    assert.match(corpo.messages[0].content, /NO MESMO IDIOMA/);
+    console.log("PASSOU: decomposição recebe o idioma do texto e a regra de nunca traduzir");
+  } finally {
+    global.fetch = fetchOriginal;
+  }
+})().catch(e => { console.error("FALHOU:", e); process.exit(1); });

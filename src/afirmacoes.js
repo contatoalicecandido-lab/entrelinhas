@@ -1,6 +1,8 @@
 
 const { perguntarAoModelo } = require("./bifrost");
 const { tipoValido } = require("./tipo-afirmacao");
+const { detectarIdioma } = require("./portugues");
+const NOMES_IDIOMA = { pt: "português", en: "inglês (English)" };
 
 const INSTRUCOES_DECOMPOSICAO = `
 Você é o módulo de decomposição de afirmações do Entrelinhas.
@@ -33,6 +35,9 @@ REGRAS FUNDAMENTAIS:
 10. Não transforme opiniões em fatos.
 11. Evite duplicações.
 12. Se não houver afirmações verificáveis, retorne uma lista vazia.
+13. Escreva cada afirmação NO MESMO IDIOMA do texto original (campo
+    "idioma_do_texto"). Nunca traduza: texto em inglês gera afirmações em
+    inglês; texto em português gera afirmações em português.
 
 EXEMPLOS IMPORTANTES:
 
@@ -149,7 +154,7 @@ async function decomporEmAfirmacoes(texto, opcoes = {}) {
   validarTexto(texto);
 
   const resposta = await perguntarAoModelo(
-    JSON.stringify({ texto: texto.trim() }),
+    JSON.stringify({ idioma_do_texto: NOMES_IDIOMA[detectarIdioma(texto).idioma] ?? "o mesmo do texto", texto: texto.trim() }),
     INSTRUCOES_DECOMPOSICAO,
     {
       ...opcoes,
