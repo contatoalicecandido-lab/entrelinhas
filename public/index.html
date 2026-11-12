@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Entrelinhas — is this AI answer really true?</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2310182B'/%3E%3Cpath d='M8 11h16M8 16h10M8 21h13' stroke='%23F0A15B' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2310182B'/%3E%3Cpath d='M16 22h32M16 42h27' stroke='%23ffffff' stroke-opacity='.45' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M16 32h22' stroke='%23F0A15B' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='32' r='4' fill='%233F9D99'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="/estilo.css">
   <script src="/app.js" defer></script>
 </head>
 <body>
   <header class="barra">
     <div class="barra-interna">
-      <a class="marca" href="/" aria-label="Entrelinhas home"><span class="marca-nome">Entre<em>linhas</em></span></a>
+      <a class="marca" href="/" aria-label="Entrelinhas home"><svg class="marca-icone" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#F0A15B" fill-opacity=".14"/><path d="M16 22h32M16 42h27" stroke="#ffffff" stroke-opacity=".5" stroke-width="5" stroke-linecap="round"/><path d="M16 32h22" stroke="#F0A15B" stroke-width="5" stroke-linecap="round"/><circle cx="45" cy="32" r="4" fill="#3F9D99"/></svg><span class="marca-nome">Entre<em>linhas</em></span></a>
       <nav class="barra-links" aria-label="Sections">
         <a href="#como-funciona">How it works</a>
         <a href="#como-ler">How to read</a>
@@ -116,16 +116,17 @@
     <section id="como-funciona" class="painel secao">
       <h2>How it works</h2>
       <ol class="passos">
-        <li><span class="num">1</span><h3>Split and categorize</h3><p>The answer becomes atomic claims. Each gets a category with its own validity window: prices 30 days, API versions 90, companies 180, regulations 365.</p></li>
-        <li><span class="num">2</span><h3>Gather diverse sources</h3><p>Tavily searches the web, the news, official sites and, for science and health claims, scientific articles. Up to five sources of different types are read, never two from the same site; blogs come last.</p></li>
-        <li><span class="num">3</span><h3>Read them together</h3><p>One model call through Bifrost reads all sources for a claim: same object? supports or contradicts? It knows today's date and Portuguese conventions.</p></li>
-        <li><span class="num">4</span><h3>Weigh and explain</h3><p>Deterministic rules group copies, weigh source types, compute agreement and freshness, and give a verdict you can audit source by source.</p></li>
+        <li><span class="num">1</span><h3>Split and flag</h3><p>The answer becomes atomic claims. Before searching, each one is flagged by how fast it goes stale: prices in about a month, software versions in a quarter, company facts in six months, laws and official rules in a year.</p></li>
+        <li><span class="num">2</span><h3>Gather many voices</h3><p>Tavily searches official sites, the news (Brazilian outlets for Portuguese claims) and, for health and science, scientific articles. Up to five sources of different types; never two from one site; blogs last.</p></li>
+        <li><span class="num">3</span><h3>Read them together</h3><p>One model call through Bifrost reads every source for a claim, knowing today's date: does it support or contradict? Every quote it returns is checked against the source text.</p></li>
+        <li><span class="num">4</span><h3>Weigh and score</h3><p>Copies count once, official and scientific sources weigh most. Each claim gets a verdict and a freshness score: how recent the sources are × how many of them agree.</p></li>
+        <li><span class="num">5</span><h3>Give the right answer</h3><p>A final call writes the answer again using only verified quotes, with numbered citations, next to what the AI said.</p></li>
       </ol>
       <div class="diferenciais">
-        <div><h3>Not just agreeing with you</h3><p>An AI tends to confirm what you ask. Entrelinhas looks for independent official, news and scientific sources that support or contradict the claim, weighted by type. Ten copies of one blog post count once and weigh almost nothing.</p></div>
-        <div><h3>Freshness that refuses to guess</h3><p>Only a date tied to the specific fact feeds the freshness score. A page's publish date is shown separately, with low confidence.</p></div>
-        <div><h3>Portuguese-aware</h3><p>Brazilian numbers and money (R$ 1.234,56, “5 mil”), qualifiers (“a partir de”, “até”, “cerca de”), payment conditions (“no Pix”, “12x sem juros”), change words (“deixou de”, “entrou em vigor”), colloquial time (“ano que vem”) and day/month dates are read the way a Brazilian means them. Terms like Selic, LGPD or Anatel send the search to the right Brazilian authority.</p></div>
-        <div><h3>Traceable</h3><p>Every verification is stored with its sources, model calls and search operations, so any verdict can be checked later.</p></div>
+        <div><h3>Not just agreeing with you</h3><p>Chatbots tend to confirm what you ask. Entrelinhas looks for independent sources that support or contradict the claim, weighted by type: official and scientific 3, news 2, reference 1.5, other sites 1, blogs a quarter.</p></div>
+        <div><h3>Measured on real claims</h3><p>On 15 real claims with known answers: 11 exact verdicts, 15 of 15 in the right direction, and no outdated claim ever confirmed as true.</p></div>
+        <div><h3>Built for Portuguese</h3><p>Brazilian money and numbers (R$ 1.234,56, “5 mil”), qualifiers (“a partir de”, “cerca de”), “atualmente”, day/month dates and slang (“9 pau”, “50 conto”, “zap”) are read the way a Brazilian means them. Selic, LGPD or Anatel send the search to the right Brazilian authority.</p></div>
+        <div><h3>Resilient by design</h3><p>Every model call goes through the Bifrost gateway with a backup model. When the main model hits a rate limit, Bifrost answers from the backup; the report shows which model answered each step.</p></div>
       </div>
     </section>
 
