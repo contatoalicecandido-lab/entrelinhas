@@ -312,7 +312,7 @@ async function executarBusca(pergunta, opcoes, dominiosOficiais = [], extras = {
 
 const ORDEM_TIPOS_DIVERSOS = ["OFICIAL", "NOTICIA", "REFERENCIA", "OUTRO", "BLOG_FORUM"];
 
-function selecionarFontesDiversas(candidatos, maxFontes, dominiosOficiais) {
+function selecionarFontesDiversas(candidatos, maxFontes, dominiosOficiais, afirmacao = "") {
   const hostDe = url => {
     try { return new URL(url).hostname.toLowerCase().replace(/^www\./, ""); } catch { return url; }
   };
@@ -320,6 +320,7 @@ function selecionarFontesDiversas(candidatos, maxFontes, dominiosOficiais) {
   for (const resultado of candidatos) {
     const tipo = classificarFonte(resultado.url, {
       dominiosOficiais,
+      afirmacao,
       deBuscaDeNoticias: (resultado._origens_busca ?? []).some(origem => origem.modo_busca === "NOTICIAS")
     }).tipo;
     porTipo.get(tipo).push(resultado);
@@ -464,7 +465,7 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
   // que a verificação junte contexto de fontes diferentes (oficial, notícia,
   // referência, outros sites, blogs), e não várias páginas do mesmo lugar.
   const selecionadosParaExtracao = opcoes.selecaoDiversa
-    ? selecionarFontesDiversas(candidatos, maxFontes, dominiosOficiais)
+    ? selecionarFontesDiversas(candidatos, maxFontes, dominiosOficiais, pergunta)
     : candidatos.slice(0, maxFontes);
 
   const urlsSelecionadas = selecionadosParaExtracao.map(
@@ -565,6 +566,7 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
 
     const categoria = classificarFonte(resultado.url, {
       dominiosOficiais,
+      afirmacao: pergunta,
       deBuscaDeNoticias: (resultado._origens_busca ?? []).some(origem => origem.modo_busca === "NOTICIAS")
     });
 

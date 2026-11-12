@@ -61,4 +61,12 @@ caso("apoio dominante com uma contradição continua CONFLITO (não tranquiliza)
   const r = agregar([ev("https://g1.globo.com/a", "SUPPORTS", "NOTICIA"), ev("https://pt.wikipedia.org/a", "SUPPORTS", "REFERENCIA"), ev("https://medium.com/a", "CONTRADICTS", "BLOG_FORUM")]);
   assert.equal(r.veredito, "CONFLITO");
 });
+caso("site da própria entidade citada conta como oficial (nodejs.org, openai.com, nubank.com.br)", () => {
+  const { classificarFonte: c } = require("./src/tipo-fonte");
+  assert.equal(c("https://nodejs.org/en/blog/x", { afirmacao: "Node.js 20 is the current LTS." }).tipo, "OFICIAL");
+  assert.equal(c("https://help.openai.com/x", { afirmacao: "ChatGPT Plus costs $20." }).tipo, "OFICIAL");
+  assert.equal(c("https://nubank.com.br/tarifas", { afirmacao: "O Nubank não cobra anuidade." }).tipo, "OFICIAL");
+  assert.equal(c("https://nubank.com.br/tarifas", { afirmacao: "A Selic está em 15%." }).tipo, "OUTRO", "sem a entidade na afirmação, não é oficial");
+  assert.equal(c("https://g1.globo.com/openai", { afirmacao: "ChatGPT Plus costs $20." }).tipo, "NOTICIA", "veículo de notícia continua notícia");
+});
 console.log(`Resultado: ${n}/${n} casos de concordância passaram. Sem rede e sem banco.`);

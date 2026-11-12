@@ -176,10 +176,12 @@ function prepararEvidencias(afirmacao, dominiosOficiais) {
         POSTURAS_UTILIZAVEIS.includes(postura) &&
         Boolean(dominio);
 
+      // Oficial: domínio configurado, governo, ou o próprio site da entidade
+      // citada na afirmação (classificado na coleta).
       const oficial = dominioEhOficial(
         dominio,
         dominiosOficiais
-      );
+      ) || fonte.categoria_fonte === "OFICIAL";
 
       const possuiDataVerificavel = dataVerificavel(fonte);
       const dataVinculadaAoAtributo = fonte.escopo_data === "ATTRIBUTE";

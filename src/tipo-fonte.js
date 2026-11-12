@@ -32,6 +32,42 @@ const BLOG_FORUM = [
   "instagram.com", "github.io", "tumblr.com", "brainly.com.br", "reclameaqui.com.br"
 ];
 
+// Produtos cujo site oficial não tem o nome do produto no domínio.
+const ENTIDADES = {
+  chatgpt: ["openai.com"], openai: ["openai.com"], dalle: ["openai.com"], sora: ["openai.com"],
+  gemini: ["google.com", "blog.google"], bard: ["google.com"], android: ["android.com", "google.com"],
+  claude: ["anthropic.com", "claude.ai"], anthropic: ["anthropic.com"],
+  copilot: ["microsoft.com", "github.com"], windows: ["microsoft.com"], azure: ["microsoft.com", "azure.com"],
+  iphone: ["apple.com"], ipad: ["apple.com"], macos: ["apple.com"], ios: ["apple.com"],
+  whatsapp: ["whatsapp.com", "meta.com"], instagram: ["instagram.com", "meta.com"], facebook: ["facebook.com", "meta.com"],
+  llama: ["meta.com", "llama.com"], aws: ["amazon.com", "aws.amazon.com"], kindle: ["amazon.com"],
+  pix: ["bcb.gov.br"], selic: ["bcb.gov.br"], lgpd: ["gov.br"], sus: ["gov.br"]
+};
+
+// Sufixos que não identificam a organização (para achar o "nome" do site).
+const SUFIXOS = new Set(["com", "org", "net", "io", "dev", "co", "ai", "app", "br", "uk", "us", "eu", "pt", "gov", "edu", "info", "tech", "www", "docs", "help", "support", "developer", "developers", "blog", "news", "status", "platform", "api"]);
+
+function nomeDoSite(h) {
+  const partes = h.split(".").filter(p => !SUFIXOS.has(p));
+  return partes.length ? partes[partes.length - 1] : null;
+}
+
+function compacto(texto) {
+  return String(texto ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
+}
+
+// O site oficial da entidade citada: nodejs.org para "Node.js", openai.com
+// para "ChatGPT", nubank.com.br para "Nubank".
+function ehSiteDaEntidade(h, afirmacao) {
+  if (!afirmacao) return false;
+  const texto = compacto(afirmacao);
+  for (const [termo, dominios] of Object.entries(ENTIDADES)) {
+    if (texto.includes(termo) && dominios.some(d => h === d || h.endsWith(`.${d}`))) return true;
+  }
+  const nome = nomeDoSite(h);
+  return Boolean(nome && nome.length >= 4 && texto.includes(nome));
+}
+
 const ROTULOS = {
   OFICIAL: "Official",
   NOTICIA: "News",
@@ -70,6 +106,9 @@ function classificarFonte(url, opcoes = {}) {
     return { tipo: "OFICIAL", rotulo: ROTULOS.OFICIAL, motivo: "CONFIGURED_OFFICIAL_DOMAIN" };
   }
   if (pareceGoverno(h)) return { tipo: "OFICIAL", rotulo: ROTULOS.OFICIAL, motivo: "GOVERNMENT_DOMAIN" };
+  if (!pertence(h, BLOG_FORUM) && !pertence(h, NOTICIAS) && ehSiteDaEntidade(h, opcoes.afirmacao)) {
+    return { tipo: "OFICIAL", rotulo: ROTULOS.OFICIAL, motivo: "ENTITY_OWN_DOMAIN" };
+  }
   if (pertence(h, BLOG_FORUM)) return { tipo: "BLOG_FORUM", rotulo: ROTULOS.BLOG_FORUM, motivo: "KNOWN_BLOG_OR_FORUM" };
   if (pertence(h, REFERENCIA)) return { tipo: "REFERENCIA", rotulo: ROTULOS.REFERENCIA, motivo: "KNOWN_REFERENCE" };
   if (pertence(h, NOTICIAS)) return { tipo: "NOTICIA", rotulo: ROTULOS.NOTICIA, motivo: "KNOWN_NEWS_OUTLET" };
@@ -78,4 +117,4 @@ function classificarFonte(url, opcoes = {}) {
   return { tipo: "OUTRO", rotulo: ROTULOS.OUTRO, motivo: "UNCLASSIFIED" };
 }
 
-module.exports = { classificarFonte, ROTULOS };
+module.exports = { classificarFonte, ehSiteDaEntidade, ROTULOS };
