@@ -1,262 +1,199 @@
 "use strict";
 
-// Todo conteúdo vindo do servidor é inserido com textContent (nunca innerHTML).
+// Interface do Entrelinhas (inglês). Todo conteúdo vindo do servidor é
+// inserido com textContent, nunca innerHTML.
 
-const TEXTOS = {
-  en: {
-    tagline: "Is this AI answer still true today?",
-    titulo: "Paste an AI answer. We check every claim against live sources and tell you how fresh the evidence is.",
-    rotuloTexto: "AI-generated answer",
-    modo: "Mode",
-    modoExemplo: "Example (simulated sources, no cost)",
-    modoReal: "Live (Tavily + Bifrost)",
-    modoRealIndisponivel: "Live (needs TAVILY_API_KEY and BIFROST_KEY)",
-    rotuloDominios: "Official domains (optional)",
-    dicaDominios: "Sources from these domains are treated as official. Adds one extra search per claim.",
-    carregarExemplo: "Load example",
-    verificar: "Check claims",
-    verificando: "Checking…",
-    etapa1: "Splitting the answer into atomic claims",
-    etapa2: "Searching and extracting live sources (Tavily)",
-    etapa3: "Reading each source against the claim (model via Bifrost)",
-    etapa4: "Checking dates and computing the freshness index",
-    avisoSimulado: "Example mode: the sources below are fictional and the model and search responses are simulated. The verdict and freshness logic is the real engine.",
-    resumoTitulo: "Result",
-    seloExemplo: "Example mode",
-    seloReal: "Live mode available",
-    comoLerTitulo: "How to read the results",
-    st_ATUAL: "Current",
-    st_CONTRADITA_POR_FONTE_ATUAL: "Likely outdated",
-    st_SUPORTE_FRACO: "Supported, freshness unconfirmed",
-    st_CONFLITO: "Conflicting",
-    st_CONTRADICAO_FRACA: "Contradicted by sources",
-    st_NAO_VERIFICAVEL: "Not verifiable",
-    lg_ATUAL: "An official source with a date tied to this exact fact supports the claim.",
-    lg_CONTRADITA_POR_FONTE_ATUAL: "A recent official source says something different. The AI answer is probably stale.",
-    lg_SUPORTE_FRACO: "Sources agree, but no date proves the information is still current.",
-    lg_CONFLITO: "Sources disagree and none settles it. Check them yourself.",
-    lg_CONTRADICAO_FRACA: "The sources found contradict the claim, but none has a date tied to this fact. Possibly outdated: review before trusting it.",
-    lg_NAO_VERIFICAVEL: "No usable evidence was found. This does not mean the claim is false.",
-    formula: "Freshness index (0–100): how recent the dated evidence is, relative to the validity window of the claim type (prices 30 days, API versions 90, companies 180, regulations 365). It halves every half-window: 7 days old for a price = 72. It is not a probability of truth, and it is only shown when a date is explicitly tied to the fact being checked.",
-    rodape: "Entrelinhas · Tavily for search and extraction · Bifrost as model gateway · SQLite in-memory traceability",
-    cat_preco: "Price", cat_versao_api: "API / software version", cat_regulamento: "Regulation", cat_empresa: "Company information", cat_nenhuma: "No category (timeless or unknown)",
-    origem_CONFIGURADO: "set by you", origem_MODELO: "detected by the model", origem_HEURISTICA: "detected by keyword rules",
-    categoria: "Category",
-    janela: "validity window",
-    dias: "days",
-    indice: "freshness",
-    indiceContra: "contrary evidence",
-    naoDeterminavel: "no fact-level date",
-    recencia: (n, d) => `Page-date recency: ${n}/100 (low confidence) · newest dated source ${d}. This uses the date the page was published or updated, not the date this specific fact changed, so it is not the official freshness score.`,
-    medidorAria: "Freshness index",
-    fontesTitulo: "Evidence",
-    semFontes: "No source could be analysed for this claim.",
-    apoia: "Supports", contradiz: "Contradicts", insuficiente: "Insufficient", irrelevante: "Not about this claim", erro: "Analysis error",
-    oficial: "Official",
-    publicada: "Published", atualizada: "Updated", consultada: "Retrieved",
-    naoInformada: "not stated",
-    dataVinculada: "✓ This date is tied to the specific fact being checked, so it counts for freshness.",
-    dataPagina: "This is a page-level date. It does not prove when this specific fact changed, so it does not count for freshness.",
-    dataAusente: "No publication or update date was found. Retrieval time is not treated as an update date.",
-    limitacoesTitulo: "Limitations and engine notes",
-    notaMotor: "Engine note (Portuguese): ",
-    omitidas: n => `${n} additional claim(s) were not checked to limit cost. Send them separately.`,
-    contagem: (n, rotulo) => `${n} ${rotulo}`,
-    rastreio: r => `verification ${r.id} · ${r.modelo} model calls · ${r.pesquisa} search operations · ${r.duracao} ms · ${r.modo === "exemplo" ? "simulated" : "live"} · stored in SQLite :memory:`,
-    erroGenerico: "Something went wrong. Please try again.",
-    textoVazio: "Paste an AI answer first.",
-    decorrido: s => `${s}s elapsed.`,
-    avisoLento: " Each source is read by the model; when the model provider's rate limit is hit, Entrelinhas waits and retries, so a live check can take a few minutes.",
-    soExemplo: "Example mode only checks the demo answer. Click “Load example”, or run the server with Tavily and Bifrost keys to check your own text.",
-    expl_ATUAL: f => `An official source supports this claim and its date is tied to this exact fact${f !== null ? ` (freshness ${f}/100)` : ""}. This is not an absolute guarantee of truth.`,
-    expl_CONTRADITA_POR_FONTE_ATUAL: f => `A current official source contradicts this claim${f !== null ? ` (that evidence scores ${f}/100 on freshness)` : ""}. If an AI said this, the answer is probably outdated.`,
-    expl_SUPORTE_FRACO: () => "Sources support the claim, but none has a date tied to this specific fact, so we cannot confirm it is still current.",
-    expl_CONFLITO: () => "Sources disagree and none of them resolves the conflict. Review the evidence before relying on this claim.",
-    expl_CONTRADICAO_FRACA: () => "The sources we found contradict this claim. None has a date tied to this exact fact, so this is a warning rather than a final verdict: the AI answer is possibly outdated or wrong.",
-    expl_NAO_VERIFICAVEL: () => "We could not find usable evidence. That does not mean the claim is false."
-  },
-  pt: {
-    tagline: "Essa resposta de IA ainda vale hoje?",
-    titulo: "Cole uma resposta de IA. Verificamos cada afirmação em fontes atuais e mostramos o quão recente é a evidência.",
-    rotuloTexto: "Resposta gerada por IA",
-    modo: "Modo",
-    modoExemplo: "Exemplo (fontes simuladas, sem custo)",
-    modoReal: "Real (Tavily + Bifrost)",
-    modoRealIndisponivel: "Real (precisa de TAVILY_API_KEY e BIFROST_KEY)",
-    rotuloDominios: "Domínios oficiais (opcional)",
-    dicaDominios: "Fontes desses domínios contam como oficiais. Faz uma busca extra por afirmação.",
-    carregarExemplo: "Carregar exemplo",
-    verificar: "Verificar afirmações",
-    verificando: "Verificando…",
-    etapa1: "Separando a resposta em afirmações",
-    etapa2: "Buscando e extraindo fontes atuais (Tavily)",
-    etapa3: "Lendo cada fonte contra a afirmação (modelo via Bifrost)",
-    etapa4: "Conferindo datas e calculando o índice de atualidade",
-    avisoSimulado: "Modo exemplo: as fontes abaixo são fictícias e as respostas da busca e do modelo são simuladas. A lógica de veredito e atualidade é a do motor real.",
-    resumoTitulo: "Resultado",
-    seloExemplo: "Modo exemplo",
-    seloReal: "Modo real disponível",
-    comoLerTitulo: "Como ler os resultados",
-    st_ATUAL: "Atual",
-    st_CONTRADITA_POR_FONTE_ATUAL: "Provavelmente desatualizada",
-    st_SUPORTE_FRACO: "Apoiada, atualidade não confirmada",
-    st_CONFLITO: "Em conflito",
-    st_CONTRADICAO_FRACA: "Contradita pelas fontes",
-    st_NAO_VERIFICAVEL: "Não verificável",
-    lg_ATUAL: "Uma fonte oficial, com data ligada a esse fato específico, apoia a afirmação.",
-    lg_CONTRADITA_POR_FONTE_ATUAL: "Uma fonte oficial recente diz outra coisa. A resposta da IA provavelmente está desatualizada.",
-    lg_SUPORTE_FRACO: "As fontes concordam, mas nenhuma data prova que a informação ainda vale.",
-    lg_CONFLITO: "As fontes discordam e nenhuma resolve a dúvida. Confira você mesma.",
-    lg_CONTRADICAO_FRACA: "As fontes encontradas contradizem a afirmação, mas nenhuma tem data ligada a esse fato. Possivelmente desatualizada: revise antes de confiar.",
-    lg_NAO_VERIFICAVEL: "Não encontramos evidência utilizável. Isso não quer dizer que a afirmação é falsa.",
-    formula: "Índice de atualidade (0–100): o quão recente é a evidência datada, em relação à janela de validade do tipo de afirmação (preços 30 dias, versões de API 90, empresas 180, regulamentos 365). Cai pela metade a cada meia janela: um preço com 7 dias = 72. Não é probabilidade de verdade, e só aparece quando há uma data explicitamente ligada ao fato verificado.",
-    rodape: "Entrelinhas · Tavily para busca e extração · Bifrost como gateway de modelos · rastreabilidade em SQLite na memória",
-    cat_preco: "Preço", cat_versao_api: "API / versão de software", cat_regulamento: "Regulamento", cat_empresa: "Informação de empresa", cat_nenhuma: "Sem categoria (atemporal ou desconhecida)",
-    origem_CONFIGURADO: "definida por você", origem_MODELO: "detectada pelo modelo", origem_HEURISTICA: "detectada por palavras-chave",
-    categoria: "Categoria",
-    janela: "janela de validade",
-    dias: "dias",
-    indice: "atualidade",
-    indiceContra: "evidência contrária",
-    naoDeterminavel: "sem data do fato",
-    recencia: (n, d) => `Recência pela data da página: ${n}/100 (confiança baixa) · fonte datada mais recente ${d}. Usa a data em que a página foi publicada ou atualizada, não a data em que esse fato mudou, por isso não é a nota oficial de atualidade.`,
-    medidorAria: "Índice de atualidade",
-    fontesTitulo: "Evidências",
-    semFontes: "Nenhuma fonte pôde ser analisada para esta afirmação.",
-    apoia: "Apoia", contradiz: "Contradiz", insuficiente: "Insuficiente", irrelevante: "Não trata disso", erro: "Erro na análise",
-    oficial: "Oficial",
-    publicada: "Publicada", atualizada: "Atualizada", consultada: "Consultada",
-    naoInformada: "não informada",
-    dataVinculada: "✓ Esta data está ligada ao fato verificado, por isso conta para a atualidade.",
-    dataPagina: "Esta é uma data da página. Ela não prova quando esse fato específico mudou, por isso não conta para a atualidade.",
-    dataAusente: "Nenhuma data de publicação ou atualização foi encontrada. A hora da consulta não é tratada como data de atualização.",
-    limitacoesTitulo: "Limitações e notas do motor",
-    notaMotor: "",
-    omitidas: n => `${n} afirmação(ões) a mais não foram verificadas para limitar o custo. Envie-as separadamente.`,
-    contagem: (n, rotulo) => `${n} ${rotulo}`,
-    rastreio: r => `verificação ${r.id} · ${r.modelo} chamadas ao modelo · ${r.pesquisa} operações de busca · ${r.duracao} ms · ${r.modo === "exemplo" ? "simulado" : "real"} · gravado em SQLite :memory:`,
-    erroGenerico: "Algo deu errado. Tente de novo.",
-    textoVazio: "Cole uma resposta de IA primeiro.",
-    decorrido: s => `${s}s decorridos.`,
-    avisoLento: " Cada fonte é lida pelo modelo; quando o provedor do modelo atinge o limite de uso, o Entrelinhas espera e tenta de novo, então uma verificação real pode levar alguns minutos.",
-    soExemplo: "O modo exemplo só verifica a resposta de demonstração. Clique em “Carregar exemplo” ou rode o servidor com as chaves da Tavily e do Bifrost para verificar seu próprio texto.",
-    expl_ATUAL: f => `Uma fonte oficial apoia esta afirmação e a data dela está ligada a esse fato específico${f !== null ? ` (atualidade ${f}/100)` : ""}. Isso não é garantia absoluta de verdade.`,
-    expl_CONTRADITA_POR_FONTE_ATUAL: f => `Uma fonte oficial atual contradiz esta afirmação${f !== null ? ` (essa evidência tem atualidade ${f}/100)` : ""}. Se uma IA disse isso, a resposta provavelmente está desatualizada.`,
-    expl_SUPORTE_FRACO: () => "As fontes apoiam a afirmação, mas nenhuma tem data ligada a esse fato específico, então não dá para confirmar que ainda vale.",
-    expl_CONFLITO: () => "As fontes discordam e nenhuma resolve o conflito. Revise as evidências antes de confiar nesta afirmação.",
-    expl_CONTRADICAO_FRACA: () => "As fontes encontradas contradizem esta afirmação. Nenhuma tem data ligada a esse fato exato, então é um alerta, não um veredito final: a resposta da IA possivelmente está desatualizada ou errada.",
-    expl_NAO_VERIFICAVEL: () => "Não encontramos evidência utilizável. Isso não quer dizer que a afirmação é falsa."
-  }
+const VEREDITOS = {
+  ATUAL: { nome: "Current", tom: "tom-bom", atencao: false,
+    texto: "An official source with a date tied to this exact fact supports the claim. Not an absolute guarantee of truth." },
+  CORROBORADA: { nome: "Corroborated", tom: "tom-corroborado", atencao: false,
+    texto: "Several independent sources of different types support the claim and none contradicts it. No official source dates this exact fact." },
+  SUPORTE_FRACO: { nome: "Supported, unconfirmed", tom: "tom-cautela", atencao: false,
+    texto: "Some sources support the claim, but not enough independent or official evidence to confirm it is true today." },
+  CONFLITO: { nome: "Conflicting", tom: "tom-conflito", atencao: true,
+    texto: "Sources disagree and none settles it. Review the evidence before relying on this claim." },
+  CONTRADICAO_FRACA: { nome: "Contradicted by sources", tom: "tom-ruim", atencao: true,
+    texto: "The sources found contradict this claim. If an AI said it, the answer is possibly outdated or wrong. No official source dates this exact fact, so treat it as a strong warning, not a final ruling." },
+  CONTRADITA_POR_FONTE_ATUAL: { nome: "Likely outdated", tom: "tom-ruim", atencao: true,
+    texto: "A current official source contradicts this claim. If an AI said it, the answer is probably outdated." },
+  NAO_VERIFICAVEL: { nome: "Not verifiable", tom: "tom-neutro", atencao: false,
+    texto: "No usable evidence was found. This does not mean the claim is false." }
 };
+const ORDEM = ["CONTRADITA_POR_FONTE_ATUAL", "CONTRADICAO_FRACA", "CONFLITO", "SUPORTE_FRACO", "CORROBORADA", "ATUAL", "NAO_VERIFICAVEL"];
 
-const CLASSE_ESTADO = {
-  ATUAL: "estado-atual",
-  CONTRADITA_POR_FONTE_ATUAL: "estado-desatualizada",
-  SUPORTE_FRACO: "estado-fraco",
-  CONFLITO: "estado-conflito",
-  CONTRADICAO_FRACA: "estado-contradita",
-  NAO_VERIFICAVEL: "estado-neutro"
+const CATEGORIAS = {
+  preco: ["Price", 30], versao_api: ["API / software version", 90], empresa: ["Company information", 180], regulamento: ["Regulation", 365]
 };
-const ORDEM_ESTADOS = ["CONTRADITA_POR_FONTE_ATUAL", "CONTRADICAO_FRACA", "CONFLITO", "SUPORTE_FRACO", "ATUAL", "NAO_VERIFICAVEL"];
-const JANELAS = { preco: 30, versao_api: 90, regulamento: 365, empresa: 180 };
+const ORIGEM = { CONFIGURADO: "set by you", MODELO: "detected by the model", HEURISTICA: "detected by keyword rules" };
+const TIPOS_FONTE = { OFICIAL: "Official", NOTICIA: "News", REFERENCIA: "Reference", OUTRO: "Other site", BLOG_FORUM: "Blog / forum" };
+const COBERTURA = { STRONG: "strong coverage", MODERATE: "moderate coverage", WEAK: "a single source", NONE: "no usable source" };
 
-const estado = {
-  idioma: (navigator.language || "en").toLowerCase().startsWith("pt") ? "pt" : "en",
-  status: null,
-  ultimoResultado: null
-};
+// O motor escreve algumas notas em português; aqui ficam as versões em inglês.
+const TRADUCOES = [
+  [/^Índice temporal determinístico/, "Deterministic freshness index; not a probability of truth."],
+  [/^Datas de página sem vínculo explícito/, "Page dates not explicitly tied to this fact were excluded from the freshness score."],
+  [/^Não há evidência com data verificável ligada ao atributo/, "No source gives a verifiable date tied to this specific fact."],
+  [/^Não existe uma janela temporal definida/, "This claim has no category, so there is no validity window for its dates."],
+  [/^Uma data da página ou do resultado de busca não comprova/, "A page or search-result date does not prove when this specific fact was published or updated."],
+  [/^A data da consulta registra quando a página foi observada/, "Retrieval time shows when we read the page; it never replaces a publication or update date."],
+  [/^Evidências do mesmo domínio, URL canônica/, "Sources from the same site, the same canonical URL or near-identical text were grouped so they cannot inflate agreement."],
+  [/^Cópias exatas, quase duplicadas/, "Copies, near-duplicates, identical canonical URLs and pages from one site count as one voice; other sites are not proven editorially independent."],
+  [/^Domínios sem sinal detectado de duplicação/, "Sites without a detected copy signal are not proven independent; heavily edited republications can slip through."],
+  [/^Existe uma evidência contraditória antiga/, "An older contradicting source was considered but did not outweigh the current official source."],
+  [/^Foram encontradas posturas divergentes/, "Sources, or pages of the same site, disagree. The conflict was not resolved."],
+  [/^Nenhuma fonte pertence ao cadastro de domínios oficiais/, "No source belongs to the official domains you provided."],
+  [/^Nenhuma evidência possui data verificável e status/, "No source has a verifiable, current date."],
+  [/^Nenhuma evidência utilizável/, "No usable source both matched the claim and took a position on it."],
+  [/^Não há evidências utilizáveis/, "There is no usable evidence to say whether the claim is supported or contradicted."],
+  [/^Baseado na data da página/, "Based on page dates, not on when this specific fact changed: low confidence."],
+  [/^Não substitui o índice de atualidade principal/, "Does not replace the main freshness score and is not a probability of truth."],
+  [/^Nenhuma fonte utilizável declara data/, "No usable source declares a valid publication or update date."],
+  [/^Sem categoria temporal/, "Without a category there is no validity window to compare dates against."],
+  [/^Qualidade estrutural das evidências/, "Structural quality of the evidence, not a probability of truth."]
+];
+const emIngles = texto => (TRADUCOES.find(([re]) => re.test(texto))?.[1]) ?? texto;
 
+const estado = { status: null, inicio: 0, temporizador: null };
 const $ = id => document.getElementById(id);
-const t = chave => TEXTOS[estado.idioma][chave] ?? TEXTOS.en[chave] ?? chave;
 
-function elemento(tag, classe, texto) {
-  const el = document.createElement(tag);
-  if (classe) el.className = classe;
-  if (texto !== undefined && texto !== null) el.textContent = String(texto);
-  return el;
+function el(tag, classe, texto) {
+  const e = document.createElement(tag);
+  if (classe) e.className = classe;
+  if (texto !== undefined && texto !== null) e.textContent = String(texto);
+  return e;
 }
 
-function aplicarIdioma() {
-  document.documentElement.lang = estado.idioma === "pt" ? "pt-BR" : "en";
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const valor = t(el.dataset.i18n);
-    if (typeof valor === "string") el.textContent = valor;
-  });
-  $("botao-idioma").textContent = estado.idioma === "pt" ? "EN" : "PT";
-  $("botao-idioma").setAttribute("aria-label", estado.idioma === "pt" ? "Mudar para inglês" : "Switch to Portuguese");
-  atualizarSeloEModo();
-  if (estado.ultimoResultado) renderizarResultado(estado.ultimoResultado);
-}
-
-function atualizarSeloEModo() {
-  const selo = $("selo-modo");
-  const realDisponivel = Boolean(estado.status?.modo_real_disponivel);
-  selo.textContent = realDisponivel ? t("seloReal") : t("seloExemplo");
-  selo.classList.toggle("real", realDisponivel);
-  const opcaoReal = $("opcao-real");
-  const radioReal = opcaoReal.querySelector("input");
-  radioReal.disabled = !realDisponivel;
-  opcaoReal.classList.toggle("desativado", !realDisponivel);
-  opcaoReal.querySelector("span").textContent = realDisponivel ? t("modoReal") : t("modoRealIndisponivel");
-  if (!realDisponivel && radioReal.checked) {
-    document.querySelector('input[name="modo"][value="exemplo"]').checked = true;
-  }
-}
-
-function modoSelecionado() {
+function modo() {
   return document.querySelector('input[name="modo"]:checked')?.value ?? "exemplo";
 }
 
-function atualizarContador() {
-  $("contador").textContent = String($("texto").value.length);
+function dominioDe(url) {
+  try { return new URL(url).hostname.replace(/^www\./, ""); } catch { return ""; }
 }
 
-function mostrarMensagem(texto) {
-  $("mensagem").textContent = texto || "";
+function formatarData(valor) {
+  if (!valor) return "not stated";
+  const d = new Date(valor);
+  if (Number.isNaN(d.getTime())) return String(valor);
+  return /T\d/.test(String(valor)) ? d.toISOString().replace("T", " ").slice(0, 16) + " UTC" : String(valor).slice(0, 10);
 }
 
-let temporizadorEtapas = null;
+/* ---------- entrada ---------- */
+
+function detectarIdiomaRapido(texto) {
+  const t = ` ${texto.toLowerCase()} `;
+  const pt = (t.match(/ (de|do|da|que|não|nao|para|com|uma|custa|atualmente|é) /g) ?? []).length + (/r\$\s?\d/.test(t) ? 2 : 0) + (t.match(/[ãõç]/g) ?? []).length;
+  const en = (t.match(/ (the|of|and|is|are|with|for|costs|still|current) /g) ?? []).length;
+  if (pt + en < 2) return "";
+  return pt > en ? "Portuguese detected: numbers, qualifiers and dates will be read the Brazilian way." : "";
+}
+
+function atualizarEntrada() {
+  const texto = $("texto").value;
+  $("contador").textContent = texto.length.toLocaleString("en-US");
+  $("idioma-detectado").textContent = detectarIdiomaRapido(texto);
+}
+
+function mostrarMensagem(texto) { $("mensagem").textContent = texto || ""; }
+
+function configurarModo() {
+  const real = Boolean(estado.status?.modo_real_disponivel);
+  const selo = $("selo-modo");
+  selo.textContent = real ? "Live mode ready" : "Example mode";
+  selo.classList.toggle("real", real);
+  const opcao = $("opcao-real");
+  const radio = opcao.querySelector("input");
+  radio.disabled = !real;
+  opcao.classList.toggle("desativado", !real);
+  opcao.querySelector("span").textContent = real
+    ? "Live: Tavily search + model via Bifrost"
+    : "Live: needs TAVILY_API_KEY and BIFROST_KEY on the server";
+  (real ? radio : document.querySelector('input[name="modo"][value="exemplo"]')).checked = true;
+}
+
+function montarExemplos() {
+  const caixa = $("exemplos");
+  caixa.replaceChildren();
+  for (const ex of estado.status?.exemplos ?? []) {
+    const b = el("button", null, ex.rotulo);
+    b.type = "button";
+    b.addEventListener("click", () => {
+      $("texto").value = ex.texto;
+      $("dominios").value = ex.dominios.join(", ");
+      document.querySelector('input[name="modo"][value="exemplo"]').checked = true;
+      atualizarEntrada();
+      mostrarMensagem("");
+    });
+    caixa.append(b);
+  }
+}
+
+function montarLegenda() {
+  const caixa = $("legenda");
+  caixa.replaceChildren();
+  for (const codigo of ["ATUAL", "CORROBORADA", "SUPORTE_FRACO", "CONFLITO", "CONTRADICAO_FRACA", "CONTRADITA_POR_FONTE_ATUAL", "NAO_VERIFICAVEL"]) {
+    const v = VEREDITOS[codigo];
+    const bloco = el("div");
+    bloco.append(el("span", `pilula ${v.tom}`, v.nome), el("p", null, v.texto));
+    caixa.append(bloco);
+  }
+  const extras = [
+    ["Source agreement (0–100)", "How much independent sources agree with the claim, weighted by type: official 3, news 2, reference 2, other sites 1, blogs and forums 0.5. Copies and pages of one site count once."],
+    ["Freshness (0–100)", "How recent the date tied to this exact fact is, against the claim type's validity window: it halves every half window, so a price dated 7 days ago scores 72. Without such a date, the card says so and shows page-date recency with low confidence."],
+    ["Portuguese-aware reading", "R$ 1.234,56 is 1234.56; “a partir de” is a starting price; “até” is an upper bound; “cerca de” is approximate; “atualmente” means it must hold today; 12/11/2026 is 12 November."]
+  ];
+  for (const [titulo, texto] of extras) {
+    const bloco = el("div");
+    bloco.append(el("strong", null, titulo), el("p", null, texto));
+    caixa.append(bloco);
+  }
+}
+
+/* ---------- progresso ---------- */
+
 function iniciarProgresso() {
   const secao = $("progresso");
   const itens = [...secao.querySelectorAll("li")];
   secao.hidden = false;
-  let indice = 0;
-  const marcar = () => itens.forEach((li, i) => li.classList.toggle("ativa", i === indice));
-  marcar();
-  const intervalo = modoSelecionado() === "exemplo" ? 350 : 4000;
-  const inicio = Date.now();
-  const tempo = $("tempo-decorrido");
-  tempo.textContent = "";
-  let ultimoAvanco = Date.now();
-  temporizadorEtapas = setInterval(() => {
-    if (Date.now() - ultimoAvanco >= intervalo) {
-      indice = Math.min(indice + 1, itens.length - 1);
-      ultimoAvanco = Date.now();
-      marcar();
-    }
-    const segundos = Math.round((Date.now() - inicio) / 1000);
-    if (modoSelecionado() === "real") {
-      tempo.textContent = t("decorrido")(segundos) + (segundos >= 20 ? t("avisoLento") : "");
+  estado.inicio = Date.now();
+  const real = modo() === "real";
+  const marcos = real ? [0, 6, 20, 0] : [0, 0.3, 0.6, 0.9];
+  clearInterval(estado.temporizador);
+  estado.temporizador = setInterval(() => {
+    const s = (Date.now() - estado.inicio) / 1000;
+    let ativa = 0;
+    marcos.forEach((m, i) => { if (s >= m && (i < 3 || !real)) ativa = i; });
+    if (real && s > 40) ativa = 3;
+    itens.forEach((li, i) => { li.classList.toggle("ativa", i === ativa); li.classList.toggle("feita", i < ativa); });
+    if (real) {
+      $("tempo-decorrido").textContent = `${Math.round(s)} s elapsed.` + (s >= 20
+        ? " Each claim is searched and read live; free model tiers add short waits when rate limits are hit, so a full answer can take a minute or two."
+        : "");
+    } else {
+      $("tempo-decorrido").textContent = "";
     }
   }, 250);
 }
+
 function pararProgresso() {
-  clearInterval(temporizadorEtapas);
+  clearInterval(estado.temporizador);
   $("progresso").hidden = true;
 }
 
+/* ---------- verificação ---------- */
+
 async function verificar() {
   const texto = $("texto").value.trim();
-  if (!texto) { mostrarMensagem(t("textoVazio")); $("texto").focus(); return; }
-  const normalizar = valor => String(valor ?? "").replace(/\s+/g, " ").trim().toLowerCase();
-  if (modoSelecionado() === "exemplo" && normalizar(texto) !== normalizar(estado.status?.texto_exemplo)) {
-    mostrarMensagem(t("soExemplo"));
+  if (!texto) { mostrarMensagem("Paste an AI answer first."); $("texto").focus(); return; }
+  const norm = v => String(v ?? "").replace(/\s+/g, " ").trim().toLowerCase();
+  if (modo() === "exemplo" && !(estado.status?.exemplos ?? []).some(e => norm(e.texto) === norm(texto))) {
+    mostrarMensagem("Example mode only checks the built-in examples. Pick one above, or run the server with Tavily and Bifrost keys to check your own text.");
     return;
   }
   const dominiosOficiais = $("dominios").value.split(/[\s,;]+/).map(d => d.trim()).filter(Boolean);
   const botao = $("botao-verificar");
   botao.disabled = true;
-  botao.textContent = t("verificando");
+  botao.textContent = "Checking…";
   mostrarMensagem("");
   $("resultado").hidden = true;
   iniciarProgresso();
@@ -264,278 +201,263 @@ async function verificar() {
     const resposta = await fetch("/api/verificar", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ texto, modo: modoSelecionado(), dominiosOficiais })
+      body: JSON.stringify({ texto, modo: modo(), dominiosOficiais })
     });
     const dados = await resposta.json().catch(() => ({}));
-    if (!resposta.ok) throw new Error(dados.erro || t("erroGenerico"));
-    estado.ultimoResultado = dados;
+    if (!resposta.ok) throw new Error(dados.erro || "Something went wrong. Please try again.");
     renderizarResultado(dados);
     $("resultado").scrollIntoView({ behavior: "smooth", block: "start" });
   } catch (erro) {
-    mostrarMensagem(erro.message || t("erroGenerico"));
+    mostrarMensagem(erro.message || "Something went wrong. Please try again.");
   } finally {
     pararProgresso();
     botao.disabled = false;
-    botao.textContent = t("verificar");
+    botao.textContent = "Check answer";
   }
 }
 
-function nomeEstado(veredito) {
-  return t(`st_${veredito}`) || veredito;
-}
+/* ---------- resultado ---------- */
 
 function renderizarResultado(dados) {
   $("resultado").hidden = false;
   $("aviso-simulado").hidden = !dados.simulado;
-
+  const afirmacoes = dados.afirmacoes ?? [];
+  const porVeredito = {};
+  for (const a of afirmacoes) {
+    const v = a.agregacao?.veredito ?? "NAO_VERIFICAVEL";
+    porVeredito[v] = (porVeredito[v] ?? 0) + 1;
+  }
+  const atencao = afirmacoes.filter(a => VEREDITOS[a.agregacao?.veredito]?.atencao).length;
+  $("resumo-frase").textContent = afirmacoes.length === 0
+    ? "No verifiable claims were found in this text."
+    : `${afirmacoes.length} claim${afirmacoes.length > 1 ? "s" : ""} checked. ` +
+      (atencao === 0 ? "None was contradicted by the sources found." : `${atencao} need${atencao > 1 ? "" : "s"} attention: the sources contradict or dispute ${atencao > 1 ? "them" : "it"}.`);
   const contagens = $("contagens");
   contagens.replaceChildren();
-  const porEstado = {};
-  for (const a of dados.afirmacoes ?? []) {
-    const v = a.agregacao?.veredito ?? "NAO_VERIFICAVEL";
-    porEstado[v] = (porEstado[v] ?? 0) + 1;
+  for (const v of ORDEM) {
+    if (!porVeredito[v]) continue;
+    contagens.append(el("span", `pilula ${VEREDITOS[v].tom}`, `${porVeredito[v]} ${VEREDITOS[v].nome}`));
   }
-  for (const v of ORDEM_ESTADOS) {
-    if (!porEstado[v]) continue;
-    contagens.append(elemento("span", `pilula ${CLASSE_ESTADO[v]}`, t("contagem")(porEstado[v], nomeEstado(v))));
-  }
-
   const omitidas = dados.afirmacoes_omitidas ?? [];
   $("omitidas").hidden = omitidas.length === 0;
-  $("omitidas").textContent = omitidas.length ? t("omitidas")(omitidas.length) : "";
-
-  const cartoes = $("cartoes");
-  cartoes.replaceChildren(...(dados.afirmacoes ?? []).map(a => criarCartao(a, dados.simulado)));
-
-  $("rastreio").textContent = t("rastreio")({
-    id: dados.id_verificacao,
-    modelo: dados.rastreabilidade_modelo?.length ?? 0,
-    pesquisa: dados.rastreabilidade_pesquisa?.length ?? 0,
-    duracao: dados.duracao_ms ?? "—",
-    modo: dados.modo
-  });
+  $("omitidas").textContent = omitidas.length ? `${omitidas.length} more claim(s) were not checked to limit cost. Send them separately.` : "";
+  $("cartoes").replaceChildren(...afirmacoes.map(a => criarCartao(a, dados.simulado)));
+  $("rastreio").textContent = `Verification ${dados.id_verificacao} · ${dados.rastreabilidade_modelo?.length ?? 0} model calls via ${dados.simulado ? "simulated provider" : "Bifrost"} · ${dados.rastreabilidade_pesquisa?.length ?? 0} search operations via ${dados.simulado ? "simulated provider" : "Tavily"} · ${dados.duracao_ms ?? "—"} ms · stored in SQLite (in memory)`;
 }
 
-function configurarMedidor(medidor, freshness, veredito) {
-  const circulo = medidor.querySelector(".medidor-valor");
-  const circunferencia = 2 * Math.PI * 50;
-  circulo.style.strokeDasharray = String(circunferencia);
-  const nota = freshness && Number.isFinite(freshness.score) ? freshness.score : null;
-  medidor.classList.remove("tom-alerta", "tom-cautela", "vazio");
-  if (nota === null) {
-    medidor.classList.add("vazio");
-    circulo.style.strokeDashoffset = String(circunferencia);
-    medidor.querySelector(".medidor-numero").textContent = "—";
-    medidor.querySelector(".medidor-legenda").textContent = t("naoDeterminavel");
-    medidor.setAttribute("aria-label", `${t("medidorAria")}: ${t("naoDeterminavel")}`);
+function metrica(rotulo) {
+  const caixa = el("div", "metrica");
+  caixa.append(el("p", "metrica-rotulo", rotulo));
+  return caixa;
+}
+
+function valorComBarra(caixa, valor, cor) {
+  if (valor === null || valor === undefined) {
+    caixa.append(el("p", "metrica-valor vazio", "Not determinable"));
+    const trilho = el("div", "trilho"); trilho.append(el("span")); trilho.firstChild.style.width = "0";
+    caixa.append(trilho);
     return;
   }
-  const contra = veredito === "CONTRADITA_POR_FONTE_ATUAL" || veredito === "CONTRADICAO_FRACA";
-  if (contra) medidor.classList.add("tom-alerta");
-  else if (veredito !== "ATUAL" || nota < 50) medidor.classList.add("tom-cautela");
-  circulo.style.strokeDashoffset = String(circunferencia * (1 - nota / 100));
-  medidor.querySelector(".medidor-numero").textContent = String(nota);
-  medidor.querySelector(".medidor-legenda").textContent = `/100 ${contra ? t("indiceContra") : t("indice")}`;
-  medidor.setAttribute("aria-label", `${t("medidorAria")}: ${nota}/100`);
+  const v = el("p", "metrica-valor", String(valor));
+  v.append(el("small", null, " / 100"));
+  caixa.append(v);
+  const trilho = el("div", "trilho");
+  const barra = el("span");
+  barra.style.width = `${Math.max(2, Math.min(100, valor))}%`;
+  barra.style.setProperty("--cor-barra", cor);
+  trilho.append(barra);
+  caixa.append(trilho);
 }
 
-function textoCategoria(afirmacao) {
-  const tipo = afirmacao.tipo_afirmacao;
-  if (!tipo) return `${t("categoria")}: ${t("cat_nenhuma")}`;
-  const origem = afirmacao.origem_tipo_afirmacao ? ` (${t(`origem_${afirmacao.origem_tipo_afirmacao}`)})` : "";
-  const janela = JANELAS[tipo] ? ` · ${t("janela")}: ${JANELAS[tipo]} ${t("dias")}` : "";
-  return `${t("categoria")}: ${t(`cat_${tipo}`)}${origem}${janela}`;
+function corDoValor(valor) {
+  if (valor === null || valor === undefined) return "#9aa0aa";
+  if (valor >= 70) return "var(--verde)";
+  if (valor >= 40) return "#d9a520";
+  return "var(--vermelho)";
+}
+
+function criarMetricas(afirmacao) {
+  const ag = afirmacao.agregacao ?? {};
+  const conc = ag.concordancia ?? null;
+  const fr = ag.freshness ?? null;
+  const rec = ag.recencia_pagina ?? null;
+  const grade = el("div", "metricas");
+
+  const m1 = metrica("Source agreement");
+  valorComBarra(m1, conc?.score ?? null, corDoValor(conc?.score));
+  m1.append(el("p", "metrica-nota", conc && conc.independent_sources > 0
+    ? `${conc.supporting} support · ${conc.contradicting} contradict${conc.split ? ` · ${conc.split} split` : ""} · ${conc.independent_sources} independent source${conc.independent_sources > 1 ? "s" : ""}, ${COBERTURA[conc.coverage]}`
+    : "No source took a clear position on this claim."));
+  grade.append(m1);
+
+  const contra = ag.veredito === "CONTRADITA_POR_FONTE_ATUAL" || ag.veredito === "CONTRADICAO_FRACA";
+  const m2 = metrica(contra ? "Freshness of the evidence" : "Freshness");
+  const nota = fr && Number.isFinite(fr.score) ? fr.score : null;
+  valorComBarra(m2, nota, contra ? "var(--vermelho)" : corDoValor(nota));
+  const cat = CATEGORIAS[afirmacao.tipo_afirmacao];
+  let textoFr;
+  if (nota !== null) {
+    textoFr = `${cat ? `${cat[0]} · ${cat[1]}-day window` : ""}. Based on a date tied to this fact${contra ? "; that recent evidence contradicts the claim" : ""}.`;
+  } else if (!cat) {
+    textoFr = "No category, so no validity window.";
+  } else if (rec && Number.isFinite(rec.score)) {
+    textoFr = `No date tied to this fact. Page dates suggest ${rec.score}/100 (newest ${rec.newest_date}), low confidence.`;
+  } else {
+    textoFr = "No date tied to this fact, and no dated page either.";
+  }
+  m2.append(el("p", "metrica-nota", textoFr));
+  grade.append(m2);
+
+  const m3 = metrica("Evidence mix");
+  const lista = el("ul", "mix");
+  const porTipo = {};
+  for (const e of afirmacao.evidencias ?? []) {
+    const tipo = e.fonte?.categoria_fonte ?? "OUTRO";
+    porTipo[tipo] ??= { a: 0, c: 0, n: 0 };
+    const p = e.classificacao?.postura;
+    if (p === "SUPPORTS") porTipo[tipo].a += 1; else if (p === "CONTRADICTS") porTipo[tipo].c += 1; else porTipo[tipo].n += 1;
+  }
+  const tipos = Object.keys(TIPOS_FONTE).filter(t => porTipo[t]);
+  if (tipos.length === 0) lista.append(el("li", null, "No sources were analysed."));
+  for (const t of tipos) {
+    const li = el("li");
+    li.append(el("span", null, TIPOS_FONTE[t]));
+    const contas = el("span", "contas");
+    const { a, c, n } = porTipo[t];
+    if (a) contas.append(el("span", "a", `${a} ✓`));
+    if (c) { if (a) contas.append(document.createTextNode("  ")); contas.append(el("span", "c", `${c} ✗`)); }
+    if (n) { if (a || c) contas.append(document.createTextNode("  ")); contas.append(el("span", null, `${n} ○`)); }
+    li.append(contas);
+    lista.append(li);
+  }
+  m3.append(lista);
+  m3.append(el("p", "metrica-nota", "✓ supports   ✗ contradicts   ○ no position"));
+  grade.append(m3);
+  return grade;
 }
 
 function rotuloPostura(postura) {
   switch (postura) {
-    case "SUPPORTS": return [t("apoia"), "apoia"];
-    case "CONTRADICTS": return [t("contradiz"), "contradiz"];
-    case "INSUFFICIENT": return [t("insuficiente"), "neutra"];
-    case "IRRELEVANT": return [t("irrelevante"), "neutra"];
-    default: return [t("erro"), "neutra"];
+    case "SUPPORTS": return ["Supports", "e-apoia"];
+    case "CONTRADICTS": return ["Contradicts", "e-contradiz"];
+    case "INSUFFICIENT": return ["Inconclusive", "e-neutra"];
+    case "IRRELEVANT": return ["Not about this", "e-neutra"];
+    default: return ["Not analysed", "e-neutra"];
   }
 }
 
-function dominioDe(url) {
-  try { return new URL(url).hostname.replace(/^www\./, ""); } catch { return ""; }
-}
-
-function ehOficial(afirmacao, url) {
-  const host = dominioDe(url);
-  if (!host) return false;
-  return (afirmacao.dominios_oficiais_usados ?? []).some(dominio => {
-    const d = String(dominio).toLowerCase().replace(/^www\./, "");
-    return host === d || host.endsWith(`.${d}`);
-  });
-}
-
-// Escolhe a janela do texto que mais fala do assunto da afirmação:
-// procura o termo da afirmação que aparece menos vezes (o mais específico).
-const PALAVRAS_VAZIAS = new Set(["the", "and", "for", "with", "that", "this", "from", "are", "was", "has", "have", "its", "não", "que", "com", "para", "uma", "dos", "das", "por", "mais", "como", "current", "atual"]);
-function janelaRelevante(texto, afirmacao, tamanho = 600) {
-  if (texto.length <= tamanho) return texto;
-  const minusculo = texto.toLowerCase();
-  const termos = [...new Set(String(afirmacao).toLowerCase().match(/[\p{L}\p{N}.$/-]{3,}/gu) ?? [])]
-    .filter(termo => !PALAVRAS_VAZIAS.has(termo));
-  let melhor = null;
-  for (const termo of termos) {
-    const ocorrencias = minusculo.split(termo).length - 1;
-    if (ocorrencias === 0) continue;
-    if (!melhor || ocorrencias < melhor.ocorrencias) melhor = { termo, ocorrencias };
-  }
-  if (!melhor) return `${texto.slice(0, tamanho)}…`;
-  // Entre as ocorrências do termo, prefere a que tem mais termos da afirmação por perto.
-  let melhorInicio = 0;
-  let melhorPontos = -1;
-  let posicao = minusculo.indexOf(melhor.termo);
-  while (posicao !== -1) {
-    const inicio = Math.max(0, posicao - Math.floor(tamanho / 3));
-    const janela = minusculo.slice(inicio, inicio + tamanho);
-    const pontos = termos.filter(termo => janela.includes(termo)).length;
-    if (pontos > melhorPontos) { melhorPontos = pontos; melhorInicio = inicio; }
-    posicao = minusculo.indexOf(melhor.termo, posicao + 1);
-  }
-  const prefixo = melhorInicio > 0 ? "…" : "";
-  const sufixo = melhorInicio + tamanho < texto.length ? "…" : "";
-  return `${prefixo}${texto.slice(melhorInicio, melhorInicio + tamanho).trim()}${sufixo}`;
-}
-
-function formatarData(valor) {
-  if (!valor) return t("naoInformada");
-  const data = new Date(valor);
-  if (Number.isNaN(data.getTime())) return String(valor);
-  return /T\d/.test(String(valor))
-    ? data.toISOString().replace("T", " ").slice(0, 16) + " UTC"
-    : String(valor).slice(0, 10);
-}
-
-function criarFonte(afirmacao, evidencia, simulado) {
+function criarFonte(evidencia, simulado) {
   const fonte = evidencia.fonte ?? {};
-  const item = elemento("li", "fonte");
-  const cabecalho = elemento("div", "fonte-cabecalho");
+  const item = el("li", "fonte");
+  const cab = el("div", "fonte-cabeca");
   const [rotulo, classe] = rotuloPostura(evidencia.classificacao?.postura);
-  cabecalho.append(elemento("span", `etiqueta ${classe}`, rotulo));
-  if (ehOficial(afirmacao, fonte.url)) cabecalho.append(elemento("span", "etiqueta oficial", t("oficial")));
-
-  const urlSegura = /^https?:\/\//i.test(fonte.url ?? "") ? fonte.url : null;
+  cab.append(el("span", `etiqueta ${classe}`, rotulo));
+  cab.append(el("span", "etiqueta e-tipo", TIPOS_FONTE[fonte.categoria_fonte] ?? "Other site"));
+  const url = /^https?:\/\//i.test(fonte.url ?? "") ? fonte.url : null;
   let titulo;
-  if (urlSegura && !simulado) {
-    titulo = elemento("a", "fonte-titulo", fonte.titulo || urlSegura);
-    titulo.href = urlSegura;
-    titulo.target = "_blank";
-    titulo.rel = "noopener noreferrer";
+  if (url && !simulado) {
+    titulo = el("a", "fonte-titulo", fonte.titulo || url);
+    titulo.href = url; titulo.target = "_blank"; titulo.rel = "noopener noreferrer";
   } else {
-    titulo = elemento("span", "fonte-titulo", fonte.titulo || fonte.url || "—");
+    titulo = el("span", "fonte-titulo", fonte.titulo || fonte.url || "—");
   }
-  cabecalho.append(titulo, elemento("span", "fonte-dominio", dominioDe(fonte.url)));
-  item.append(cabecalho);
+  cab.append(titulo, el("span", "fonte-dominio", dominioDe(fonte.url)));
+  item.append(cab);
 
-  // Prefere o trecho que o modelo realmente leu; senão, o começo da página.
-  const trechoBruto = evidencia.preparacao?.trecho_analisado || fonte.conteudo || "";
-  const trecho = trechoBruto
-    .replace(/^[\s\S]*?CONTEÚDO SELECIONADO PARA ANÁLISE:\s*/, "")
-    .replace(/\s+/g, " ").trim();
-  if (trecho) item.append(elemento("p", "fonte-trecho", janelaRelevante(trecho, afirmacao.texto)));
+  const citacao = evidencia.preparacao?.citacao_chave;
+  if (citacao) {
+    item.append(el("blockquote", "citacao", `“${citacao}”`));
+  } else {
+    const bruto = (evidencia.preparacao?.trecho_analisado || fonte.conteudo || "").replace(/\s+/g, " ").trim();
+    if (bruto) item.append(el("p", "trecho", bruto.length > 360 ? `${bruto.slice(0, 360)}…` : bruto));
+  }
   const motivo = evidencia.classificacao?.justificativa || evidencia.correspondencia?.justificativa;
-  if (motivo) item.append(elemento("p", "fonte-motivo", motivo));
+  if (motivo) item.append(el("p", "motivo", emIngles(motivo)));
 
-  const datas = elemento("dl", "datas");
-  for (const [chave, valor] of [["publicada", fonte.data_publicacao], ["atualizada", fonte.data_atualizacao], ["consultada", fonte.coletado_em]]) {
-    const bloco = elemento("div");
-    bloco.append(elemento("dt", null, t(chave)), elemento("dd", null, formatarData(valor)));
-    datas.append(bloco);
+  const datas = el("dl", "datas");
+  for (const [rot, valor] of [["Published", fonte.data_publicacao], ["Updated", fonte.data_atualizacao], ["Retrieved", fonte.coletado_em]]) {
+    const b = el("div");
+    b.append(el("dt", null, rot), el("dd", null, formatarData(valor)));
+    datas.append(b);
   }
   item.append(datas);
-
   const temData = Boolean(fonte.data_publicacao || fonte.data_atualizacao);
-  if (fonte.escopo_data === "ATTRIBUTE" && temData) {
-    item.append(elemento("p", "escopo vinculada", t("dataVinculada")));
-  } else if (temData) {
-    item.append(elemento("p", "escopo pagina", t("dataPagina")));
-  } else {
-    item.append(elemento("p", "escopo", t("dataAusente")));
-  }
+  if (fonte.escopo_data === "ATTRIBUTE" && temData) item.append(el("p", "escopo ok", "✓ This date is tied to the specific fact, so it counts for freshness."));
+  else if (temData) item.append(el("p", "escopo pagina", "Page-level date: it does not prove when this specific fact changed."));
+  else item.append(el("p", "escopo sem", "No publication or update date found. Retrieval time is never used as one."));
   return item;
 }
 
 function criarCartao(afirmacao, simulado) {
-  const cartao = $("modelo-cartao").content.firstElementChild.cloneNode(true);
-  const agregacao = afirmacao.agregacao ?? {};
-  const veredito = agregacao.veredito ?? "NAO_VERIFICAVEL";
-  const classe = CLASSE_ESTADO[veredito] ?? "estado-neutro";
-  const freshness = agregacao.freshness ?? null;
-  const nota = freshness && Number.isFinite(freshness.score) ? freshness.score : null;
+  const ag = afirmacao.agregacao ?? {};
+  const codigo = ag.veredito ?? "NAO_VERIFICAVEL";
+  const v = VEREDITOS[codigo] ?? VEREDITOS.NAO_VERIFICAVEL;
+  const cartao = el("article", `cartao ${v.tom}`);
 
-  cartao.classList.add(classe);
-  const pilula = cartao.querySelector(".pilula");
-  pilula.textContent = nomeEstado(veredito);
-  pilula.classList.add(classe);
-  cartao.querySelector(".afirmacao").textContent = afirmacao.texto;
-  cartao.querySelector(".categoria").textContent = textoCategoria(afirmacao);
-  configurarMedidor(cartao.querySelector(".medidor"), freshness, veredito);
-  const recencia = agregacao.recencia_pagina;
-  if (nota === null && recencia && Number.isFinite(recencia.score)) {
-    const linha = elemento("p", "recencia", t("recencia")(recencia.score, recencia.newest_date));
-    cartao.querySelector(".categoria").after(linha);
+  const cab = el("div", "cartao-cabeca");
+  cab.append(el("span", `pilula ${v.tom}`, v.nome));
+  const cat = CATEGORIAS[afirmacao.tipo_afirmacao];
+  cab.append(el("span", "chip", cat
+    ? `${cat[0]}${afirmacao.origem_tipo_afirmacao ? ` · ${ORIGEM[afirmacao.origem_tipo_afirmacao]}` : ""}`
+    : "No category"));
+  if (afirmacao.nuances?.idioma === "pt") cab.append(el("span", "chip", "Portuguese"));
+  cartao.append(cab);
+
+  cartao.append(el("h3", "afirmacao", afirmacao.texto));
+  cartao.append(el("p", "explicacao", afirmacao.erro_busca ? `${v.texto} Search error: ${afirmacao.erro_busca}` : v.texto));
+  cartao.append(criarMetricas(afirmacao));
+
+  const notas = afirmacao.nuances?.notas ?? [];
+  if (notas.length) {
+    const caixa = el("div", "idioma");
+    caixa.append(el("h4", null, afirmacao.nuances.idioma === "pt" ? "How Entrelinhas read the Portuguese" : "How Entrelinhas read this claim"));
+    const ul = el("ul");
+    for (const n of notas) ul.append(el("li", null, n));
+    caixa.append(ul);
+    cartao.append(caixa);
   }
 
-  const explicar = TEXTOS[estado.idioma][`expl_${veredito}`];
-  cartao.querySelector(".explicacao").textContent = explicar ? explicar(nota) : (agregacao.resumo ?? "");
-  const notaMotor = cartao.querySelector(".nota-motor");
-  notaMotor.textContent = agregacao.resumo ? `${t("notaMotor")}${agregacao.resumo}` : "";
-  if (afirmacao.erro_busca) notaMotor.textContent += ` ${afirmacao.erro_busca}`;
-
-  cartao.querySelector(".titulo-fontes").textContent = t("fontesTitulo");
-  const lista = cartao.querySelector(".fontes");
   const evidencias = afirmacao.evidencias ?? [];
-  if (evidencias.length === 0) {
-    lista.append(elemento("li", "sem-fontes", t("semFontes")));
-  } else {
-    for (const evidencia of evidencias) lista.append(criarFonte(afirmacao, evidencia, simulado));
-  }
+  const blocoFontes = el("details", "bloco");
+  blocoFontes.open = true;
+  blocoFontes.append(el("summary", null, `Evidence (${evidencias.length} source${evidencias.length === 1 ? "" : "s"})`));
+  const lista = el("ul", "fontes");
+  if (evidencias.length === 0) lista.append(el("li", "fonte", "No source could be analysed for this claim."));
+  for (const e of evidencias) lista.append(criarFonte(e, simulado));
+  blocoFontes.append(lista);
+  cartao.append(blocoFontes);
 
-  const limitacoes = [...new Set([...(freshness?.limitations ?? []), ...(agregacao.limitacoes ?? [])])];
-  const detalhes = cartao.querySelector(".limitacoes");
-  if (limitacoes.length === 0) {
-    detalhes.remove();
-  } else {
-    detalhes.querySelector("summary").textContent = `${t("limitacoesTitulo")} (${limitacoes.length})`;
-    detalhes.querySelector("ul").replaceChildren(...limitacoes.map(texto => elemento("li", null, texto)));
+  const limitacoes = [...new Set([
+    ...(ag.concordancia?.limitations ?? []),
+    ...(ag.freshness?.limitations ?? []),
+    ...(ag.limitacoes ?? [])
+  ].map(emIngles))];
+  if (limitacoes.length) {
+    const bloco = el("details", "bloco");
+    bloco.append(el("summary", null, `Limitations (${limitacoes.length})`));
+    const ul = el("ul", "limites");
+    for (const t of limitacoes) ul.append(el("li", null, t));
+    bloco.append(ul);
+    cartao.append(bloco);
   }
   return cartao;
 }
 
-async function iniciar() {
-  $("texto").addEventListener("input", atualizarContador);
-  $("botao-verificar").addEventListener("click", verificar);
-  $("texto").addEventListener("keydown", evento => {
-    if ((evento.metaKey || evento.ctrlKey) && evento.key === "Enter") verificar();
-  });
-  $("botao-idioma").addEventListener("click", () => {
-    estado.idioma = estado.idioma === "pt" ? "en" : "pt";
-    aplicarIdioma();
-  });
-  $("botao-exemplo").addEventListener("click", () => {
-    if (!estado.status) return;
-    $("texto").value = estado.status.texto_exemplo;
-    $("dominios").value = estado.status.dominios_exemplo.join(", ");
-    document.querySelector('input[name="modo"][value="exemplo"]').checked = true;
-    atualizarContador();
-    mostrarMensagem("");
-  });
+/* ---------- início ---------- */
 
+async function iniciar() {
+  $("texto").addEventListener("input", atualizarEntrada);
+  $("botao-verificar").addEventListener("click", verificar);
+  $("texto").addEventListener("keydown", e => { if ((e.metaKey || e.ctrlKey) && e.key === "Enter") verificar(); });
   try {
-    const resposta = await fetch("/api/status");
-    estado.status = await resposta.json();
+    estado.status = await (await fetch("/api/status")).json();
   } catch {
-    estado.status = { modo_real_disponivel: false, texto_exemplo: "", dominios_exemplo: [] };
+    estado.status = { modo_real_disponivel: false, exemplos: [] };
   }
-  aplicarIdioma();
-  if (estado.status.modo_real_disponivel) {
-    document.querySelector('input[name="modo"][value="real"]').checked = true;
-  }
-  atualizarContador();
+  configurarModo();
+  montarExemplos();
+  montarLegenda();
+  atualizarEntrada();
 }
 
 document.addEventListener("DOMContentLoaded", iniciar);

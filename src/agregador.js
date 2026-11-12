@@ -369,6 +369,19 @@ function determinarVeredito(grupos, concordancia = null) {
   );
 
   if (haApoio && haContradicao) {
+    // Contradição dominante: fontes independentes de tipos mais fortes
+    // contradizem e só sobra apoio fraco (ex.: um blog antigo). Sinaliza como
+    // contradita. O inverso (apoio dominante) continua CONFLITO, de propósito:
+    // o sistema só arrisca na direção de alertar, nunca na de tranquilizar.
+    if (
+      concordancia &&
+      concordancia.score !== null &&
+      concordancia.score <= 20 &&
+      concordancia.contradicting >= 2 &&
+      concordancia.split === 0
+    ) {
+      return "CONTRADICAO_FRACA";
+    }
     return "CONFLITO";
   }
 

@@ -52,4 +52,13 @@ caso("fonte oficial atual continua prevalecendo sobre a concordância", () => {
   const r = agregar([oficial, ev("https://g1.globo.com/a", "SUPPORTS", "NOTICIA"), ev("https://pt.wikipedia.org/a", "SUPPORTS", "REFERENCIA")], { dominiosOficiais: ["gov.br"] });
   assert.equal(r.veredito, "CONTRADITA_POR_FONTE_ATUAL");
 });
+caso("contradição dominante (notícia + referência contra um blog) vira CONTRADICAO_FRACA", () => {
+  const r = agregar([ev("https://g1.globo.com/a", "CONTRADICTS", "NOTICIA"), ev("https://pt.wikipedia.org/a", "CONTRADICTS", "REFERENCIA"), ev("https://medium.com/a", "SUPPORTS", "BLOG_FORUM")]);
+  assert.equal(r.concordancia.score, 11);
+  assert.equal(r.veredito, "CONTRADICAO_FRACA");
+});
+caso("apoio dominante com uma contradição continua CONFLITO (não tranquiliza)", () => {
+  const r = agregar([ev("https://g1.globo.com/a", "SUPPORTS", "NOTICIA"), ev("https://pt.wikipedia.org/a", "SUPPORTS", "REFERENCIA"), ev("https://medium.com/a", "CONTRADICTS", "BLOG_FORUM")]);
+  assert.equal(r.veredito, "CONFLITO");
+});
 console.log(`Resultado: ${n}/${n} casos de concordância passaram. Sem rede e sem banco.`);

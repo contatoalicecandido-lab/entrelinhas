@@ -35,11 +35,19 @@ async function main() {
     assert.equal(r.simulado, true);
     assert.equal(r.total_afirmacoes, 3);
     const vereditos = r.afirmacoes.map(a => a.agregacao.veredito);
-    assert.deepEqual(vereditos, ["ATUAL", "CONTRADITA_POR_FONTE_ATUAL", "SUPORTE_FRACO"]);
+    assert.deepEqual(vereditos, ["ATUAL", "CONTRADITA_POR_FONTE_ATUAL", "CORROBORADA"]);
     assert.equal(r.afirmacoes[0].agregacao.freshness.score, 72);
     assert.equal(r.afirmacoes[2].agregacao.freshness.score, null);
+    assert.equal(r.afirmacoes[2].agregacao.concordancia.coverage, "STRONG");
     assert.deepEqual(r.afirmacoes.map(a => a.origem_tipo_afirmacao), ["MODELO", "MODELO", "MODELO"]);
-    ok("exemplo: atual (72), desatualizada por fonte oficial recente, e apoiada sem data (null)");
+    ok("exemplo em inglês: atual (72), desatualizada por fonte oficial recente, corroborada por várias fontes");
+
+    const pt = status.exemplos.find(e => e.id === "pt");
+    const rpt = await (await postar({ texto: pt.texto, modo: "exemplo" })).json();
+    assert.deepEqual(rpt.afirmacoes.map(a => a.agregacao.veredito), ["ATUAL", "CONTRADICAO_FRACA"]);
+    assert.equal(rpt.afirmacoes[0].nuances.idioma, "pt");
+    assert.ok(rpt.afirmacoes[0].nuances.notas.some(t => /lower bound/.test(t)));
+    ok("exemplo em português: 'a partir de' compatível com preço maior; 'atualmente cerca de 5 mil' contradito");
 
     for (const [nome, corpo, tipo, esperado] of [
       ["texto vazio", { texto: "  " }, undefined, 400],

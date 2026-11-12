@@ -73,4 +73,15 @@ caso("notas explicam as nuances em inglês para a interface", () => {
   assert.ok(r.notas.some(t => /lower bound/.test(t)));
   assert.ok(r.notas.some(t => /BRL 1,299\.00 per month/.test(t)));
 });
+caso("'cerca de 5 mil funcionários' é aproximadamente 5.000", () => {
+  const v = p.extrairValores("A empresa tem cerca de 5 mil funcionários.").find(x => x.tipo === "QUANTIDADE");
+  assert.equal(v.valor, 5000); assert.equal(v.qualificador.tipo, "APROXIMADO");
+  assert.ok(p.analisarNuances("A empresa tem cerca de 5 mil funcionários.").notas.some(t => /5,000 \(approximately\)/.test(t)));
+});
+caso("'1,2 milhão de usuários' é 1.200.000 e não confunde com moeda", () => {
+  const vs = p.extrairValores("O app tem 1,2 milhão de usuários e custa R$ 2 mil.");
+  assert.equal(vs.find(x => x.tipo === "QUANTIDADE").valor, 1200000);
+  assert.equal(vs.filter(x => x.tipo === "QUANTIDADE").length, 1);
+  assert.equal(vs.find(x => x.tipo === "MONETARIO").valor, 2000);
+});
 console.log(`Resultado: ${n}/${n} casos de português passaram. Sem rede e sem banco.`);

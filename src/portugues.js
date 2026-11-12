@@ -43,7 +43,7 @@ const MOEDAS = [
 ];
 
 const ESCALAS = {
-  mil: 1e3, k: 1e3,
+  mil: 1e3, k: 1e3, thousand: 1e3,
   mi: 1e6, milhao: 1e6, milhoes: 1e6, million: 1e6, mn: 1e6,
   bi: 1e9, bilhao: 1e9, bilhoes: 1e9, billion: 1e9, bn: 1e9,
   tri: 1e12, trilhao: 1e12, trilhoes: 1e12, trillion: 1e12
@@ -127,6 +127,18 @@ function extrairValores(texto) {
       qualificador: qualificadorAntes(original, m.index)
     });
   }
+  // Quantidades com escala por extenso, sem moeda: "5 mil funcionários",
+  // "1,2 milhão de usuários", "3 bilhões de downloads".
+  const reQtd = /(?<![\d$€£])(\d[\d.,]*)\s?(mil|milh[aã]o|milh[oõ]es|bilh[aã]o|bilh[oõ]es|thousand|million|billion)\b/gi;
+  while ((m = reQtd.exec(original)) !== null) {
+    const antes = original.slice(Math.max(0, m.index - 4), m.index);
+    if (/(R\$|US\$|U\$|\$|€|£)\s?$/.test(antes)) continue;
+    const formato = inferirFormatoNumerico(m[1], idiomaTexto);
+    const numero = converterNumero(m[1].replace(/[.,]$/, ""), formato);
+    if (numero === null) continue;
+    const total = numero * (ESCALAS[semAcento(m[2])] ?? 1);
+    valores.push({ tipo: "QUANTIDADE", texto: m[0].trim(), valor: total, qualificador: qualificadorAntes(original, m.index) });
+  }
   return valores;
 }
 
@@ -198,8 +210,12 @@ function analisarNuances(texto) {
   const temporais = extrairExpressoesTemporais(texto);
   const notas = [];
   for (const v of valores) {
-    if (v.qualificador) {
+    if (v.qualificador && v.tipo !== "QUANTIDADE") {
       notas.push(`"${v.texto}" is qualified as ${v.qualificador.rotulo}: a source with a different exact value can still be compatible.`);
+    }
+    if (v.tipo === "QUANTIDADE") {
+      notas.push(`"${v.texto}" means ${v.valor.toLocaleString("en-US")}${v.qualificador ? ` (${v.qualificador.rotulo})` : ""}.`);
+      continue;
     }
     if (v.tipo === "MONETARIO" && v.moeda === "BRL") {
       notas.push(`"${v.texto}" uses Brazilian number format: BRL ${v.valor.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}${v.periodo ? (v.periodo === "MENSAL" ? " per month" : " per year") : ""}.`);

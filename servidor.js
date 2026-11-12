@@ -15,7 +15,8 @@ const { criarBanco } = require("./src/banco");
 const {
   TEXTO_EXEMPLO,
   DOMINIOS_OFICIAIS_EXEMPLO,
-  criarVerificadorExemplo
+  criarVerificadorExemplo,
+  listarExemplos
 } = require("./src/modo-exemplo");
 
 const SO_EXEMPLO = process.argv.includes("--exemplo");
@@ -24,12 +25,12 @@ const HOST = "127.0.0.1";
 const LIMITE_CORPO_BYTES = 32 * 1024;
 const LIMITE_TEXTO = 4000;
 const MAX_AFIRMACOES = 6;
-// O modo real lê 2 fontes por afirmação por padrão: cada fonte custa duas
-// chamadas ao modelo, e o limite de uso do provedor domina a latência.
-// Ajustável com ENTRELINHAS_MAX_FONTES (1 a 5).
+// O modo real lê até 5 fontes diversas por afirmação (oficial, notícia,
+// referência, outros sites, blogs) e as analisa numa única chamada ao modelo
+// por afirmação. Ajustável com ENTRELINHAS_MAX_FONTES (1 a 6).
 const MAX_EVIDENCIAS_REAL = (() => {
   const valor = Number(process.env.ENTRELINHAS_MAX_FONTES);
-  return Number.isInteger(valor) && valor >= 1 && valor <= 5 ? valor : 2;
+  return Number.isInteger(valor) && valor >= 1 && valor <= 6 ? valor : 5;
 })();
 const MAX_EVIDENCIAS_EXEMPLO = 3;
 const MAX_DOMINIOS = 5;
@@ -165,7 +166,11 @@ async function executarVerificacao(pedido) {
     const resultado = await verificarTexto(pedido.texto, {
       ...opcoesComuns,
       dominiosOficiais: pedido.dominiosOficiais,
-      tiposPorAfirmacao
+      tiposPorAfirmacao,
+      analiseEmLote: true,
+      incluirNoticias: true,
+      fontesDiversas: true,
+      paisAutomatico: true
     });
     return prepararParaNavegador(resultado, "real");
   } finally {
@@ -227,6 +232,7 @@ function criarServidor() {
         modo_real_disponivel: modoRealDisponivel,
         texto_exemplo: TEXTO_EXEMPLO,
         dominios_exemplo: DOMINIOS_OFICIAIS_EXEMPLO,
+        exemplos: listarExemplos(),
         limites: { caracteres: LIMITE_TEXTO, afirmacoes: MAX_AFIRMACOES, evidencias_por_afirmacao: MAX_EVIDENCIAS_REAL, dominios: MAX_DOMINIOS },
         tipos: TIPOS
       });
