@@ -87,6 +87,7 @@ const evidenciasSimuladas = [
     coletado_em: "2026-11-05T12:00:00.000Z",
     data_publicacao: "2026-11-04",
     data_atualizacao: null,
+    escopo_data: "ATTRIBUTE",
     relevancia: 0.95
   },
   {
@@ -97,6 +98,7 @@ const evidenciasSimuladas = [
     coletado_em: "2026-11-05T12:00:00.000Z",
     data_publicacao: "2026-11-04",
     data_atualizacao: null,
+    escopo_data: "ATTRIBUTE",
     relevancia: 0.92
   }
 ];

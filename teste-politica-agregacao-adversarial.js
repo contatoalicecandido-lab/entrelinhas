@@ -9,7 +9,8 @@ function evidencia({
   correspondencia = "MATCH",
   atualidade = "FRESH",
   titulo = "Fonte sintética",
-  justificativa = "Fixture controlada."
+  justificativa = "Fixture controlada.",
+  escopoData = "ATTRIBUTE"
 }) {
   return {
     fonte: {
@@ -17,7 +18,9 @@ function evidencia({
       url,
       tipo_fonte: "tavily_extract",
       data_publicacao: "2026-11-10",
-      data_atualizacao: null
+      data_atualizacao: null,
+      // Política 1.2.0: só uma data vinculada ao atributo torna a evidência "atual".
+      escopo_data: escopoData
     },
     correspondencia: { status: correspondencia },
     classificacao: { postura, justificativa },

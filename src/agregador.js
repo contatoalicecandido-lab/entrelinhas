@@ -1,5 +1,7 @@
 
-const { validarData } = require("./atualidade");
+const { validarData, VALIDADE_MAX_DIAS } = require("./atualidade");
+const { calculateClaimFreshnessScore } = require("./freshness-score");
+const { clusterizarDependencias } = require("./independencia-fontes");
 
 const VERSAO_REGRAS = "1.2.0";
 
@@ -176,28 +178,36 @@ function prepararEvidencias(afirmacao, dominiosOficiais) {
       );
 
       const possuiDataVerificavel = dataVerificavel(fonte);
+      const dataVinculadaAoAtributo = fonte.escopo_data === "ATTRIBUTE";
       const statusDatasDeclaradas = obterStatusDatasDeclaradas(fonte);
       const consultadoEm = fonte.coletado_em ?? evidencia?.coleta?.coletado_em ?? null;
 
       const atual =
         utilizavel &&
         atualidade.status === "FRESH" &&
-        possuiDataVerificavel;
+        possuiDataVerificavel &&
+        dataVinculadaAoAtributo;
 
       return {
         titulo: fonte.titulo ?? null,
         url: fonte.url ?? null,
+        conteudo: fonte.conteudo ?? "",
         dominio,
         tipo_fonte: fonte.tipo_fonte ?? null,
         postura: utilizavel ? postura : null,
         utilizavel,
         oficial,
         atual,
+        data_vinculada_ao_atributo: dataVinculadaAoAtributo,
         status_atualidade: atualidade.status ?? "UNVERIFIABLE",
         status_datas_declaradas: statusDatasDeclaradas,
         consultado_em: consultadoEm,
         data_publicacao: fonte.data_publicacao ?? null,
         data_atualizacao: fonte.data_atualizacao ?? null,
+        escopo_data: fonte.escopo_data ?? "PAGE",
+        sinais_data: fonte.metadados_provedor?.sinais_data ?? [],
+        canonical_url: fonte.canonical_url ?? null,
+        id_evidencia: evidencia.id_evidencia ?? null,
         justificativa: classificacao.justificativa ?? null
       };
     })
@@ -208,9 +218,11 @@ function agruparPorDominio(evidencias) {
   const grupos = new Map();
 
   for (const evidencia of evidencias) {
-    if (!grupos.has(evidencia.dominio)) {
-      grupos.set(evidencia.dominio, {
-        dominio: evidencia.dominio,
+    const chaveGrupo = evidencia.grupo_dependencia_id ?? evidencia.dominio;
+    if (!grupos.has(chaveGrupo)) {
+      grupos.set(chaveGrupo, {
+        grupo_dependencia_id: chaveGrupo,
+        dominios: new Set(),
         oficial: evidencia.oficial,
         atual: false,
         posturas: new Set(),
@@ -218,8 +230,9 @@ function agruparPorDominio(evidencias) {
       });
     }
 
-    const grupo = grupos.get(evidencia.dominio);
-
+    const grupo = grupos.get(chaveGrupo);
+    grupo.dominios.add(evidencia.dominio);
+    grupo.oficial = grupo.oficial || evidencia.oficial;
     grupo.atual = grupo.atual || evidencia.atual;
     grupo.posturas.add(evidencia.postura);
     grupo.evidencias.push(evidencia);
@@ -227,6 +240,8 @@ function agruparPorDominio(evidencias) {
 
   return [...grupos.values()].map(grupo => ({
     ...grupo,
+    dominios: [...grupo.dominios],
+    dominio: [...grupo.dominios][0] ?? null,
     posturas: [...grupo.posturas],
     postura: grupo.posturas.size > 1
       ? "CONFLITO"
@@ -260,7 +275,7 @@ function calcularScore(grupos) {
     ? 0
     : Math.round((fontesAtuais / totalFontes) * 30);
 
-  const independencia = Math.round(
+  const diversidade = Math.round(
     Math.min(totalFontes, 2) / 2 * 20
   );
 
@@ -271,7 +286,7 @@ function calcularScore(grupos) {
   const total =
     autoridade +
     atualidade +
-    independencia +
+    diversidade +
     concordancia;
 
   return {
@@ -282,7 +297,7 @@ function calcularScore(grupos) {
     componentes: {
       autoridade,
       atualidade,
-      independencia,
+      diversidade_fontes: diversidade,
       concordancia
     }
   };
@@ -358,6 +373,45 @@ function determinarVeredito(grupos) {
   return "NAO_VERIFICAVEL";
 }
 
+function determinarConclusaoFactual(grupos) {
+  if (grupos.length === 0) {
+    return {
+      status: "NAO_VERIFICAVEL",
+      resumo: "Não há evidências utilizáveis para avaliar se a afirmação é apoiada ou contradita."
+    };
+  }
+
+  const temConflitoInterno = grupos.some(grupo => grupo.postura === "CONFLITO");
+  const temApoio = grupos.some(grupo => grupo.posturas.includes("SUPPORTS"));
+  const temContradicao = grupos.some(grupo => grupo.posturas.includes("CONTRADICTS"));
+
+  if (temConflitoInterno || (temApoio && temContradicao)) {
+    return {
+      status: "CONFLITO",
+      resumo: "As evidências analisadas apoiam e contradizem a afirmação; o conflito permanece sem resolução."
+    };
+  }
+
+  if (temApoio) {
+    return {
+      status: "APOIA",
+      resumo: "As evidências utilizáveis apoiam a afirmação. Isso, por si só, não demonstra que ela continua válida agora."
+    };
+  }
+
+  if (temContradicao) {
+    return {
+      status: "CONTRADIZ",
+      resumo: "As evidências utilizáveis contradizem a afirmação."
+    };
+  }
+
+  return {
+    status: "INSUFICIENTE",
+    resumo: "As evidências não permitem determinar se a afirmação é apoiada ou contradita."
+  };
+}
+
 function criarResumo(veredito) {
   const resumos = {
     ATUAL:
@@ -386,6 +440,16 @@ function criarResumoComDatas(veredito, evidencias) {
     if (apoioOficialSemDataDeclarada) {
       return "Uma fonte oficial apoia a afirmação, mas não declara data de publicação ou atualização verificável. A data da consulta informa quando a página foi observada, não quando seu conteúdo foi atualizado; por isso, não é possível confirmar a atualidade.";
     }
+
+    const apoioOficialSemDataDeAtributo = evidencias.some(evidencia =>
+      evidencia.oficial &&
+      evidencia.postura === "SUPPORTS" &&
+      !evidencia.data_vinculada_ao_atributo
+    );
+
+    if (apoioOficialSemDataDeAtributo) {
+      return "Uma fonte oficial apoia a afirmação, mas a data disponível não está vinculada ao atributo verificado. Ela pode ser uma data da página ou do resultado de busca; por isso, a atualidade do atributo permanece inconclusiva.";
+    }
   }
 
   return criarResumo(veredito);
@@ -409,15 +473,38 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
 
   const configuracao = validarOpcoes(opcoes);
 
-  const evidencias = prepararEvidencias(
+  const evidenciasPreparadas = prepararEvidencias(
     afirmacao,
     configuracao.dominiosOficiais
   );
 
+  const evidencias = clusterizarDependencias(evidenciasPreparadas);
+
   const grupos = agruparPorDominio(evidencias);
 
+  const conclusaoFactual = determinarConclusaoFactual(grupos);
   const veredito = determinarVeredito(grupos);
   const score = calcularScore(grupos);
+  const validade = VALIDADE_MAX_DIAS[afirmacao.tipo_afirmacao];
+  const freshnessScore = calculateClaimFreshnessScore(
+    evidencias.map(evidencia => ({
+      match: true,
+      postura: evidencia.postura,
+      temporalStatus: evidencia.status_atualidade,
+      domain: evidencia.dominio,
+      dependencyGroup: evidencia.grupo_dependencia_id,
+      publicationDate: evidencia.data_publicacao,
+      updateDate: evidencia.data_atualizacao,
+      dateScope: evidencia.escopo_data,
+      evidenceId: evidencia.id_evidencia,
+      official: evidencia.oficial
+    })),
+    {
+      claimType: afirmacao.tipo_afirmacao ?? "unknown",
+      validityDays: validade ?? null,
+      asOf: opcoes.asOf ?? new Date()
+    }
+  );
 
   const limitacoes = [];
 
@@ -430,6 +517,12 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
   if (!evidencias.some(evidencia => evidencia.atual)) {
     limitacoes.push(
       "Nenhuma evidência possui data verificável e status de atualidade FRESH."
+    );
+  }
+
+  if (evidencias.some(evidencia => !evidencia.data_vinculada_ao_atributo)) {
+    limitacoes.push(
+      "Uma data da página ou do resultado de busca não comprova quando o atributo da afirmação foi publicado ou atualizado."
     );
   }
 
@@ -447,7 +540,13 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
 
   if (grupos.length < evidencias.length) {
     limitacoes.push(
-      "Evidências do mesmo domínio foram agrupadas e não contam como fontes independentes."
+      "Evidências do mesmo domínio, URL canônica ou conteúdo duplicado/quase duplicado foram agrupadas para não inflar diversidade."
+    );
+  }
+
+  if (evidencias.some(evidencia => !evidencia.dependencia_detectada)) {
+    limitacoes.push(
+      "Domínios sem sinal detectado de duplicação não têm independência editorial comprovada; republicação com edição extensa ainda pode passar despercebida."
     );
   }
 
@@ -472,16 +571,24 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
 
   return {
     status: "CLASSIFICADO",
+    conclusao_factual: conclusaoFactual,
     veredito,
     resumo: criarResumoComDatas(veredito, evidencias),
     afirmacao: afirmacao.texto,
     score_qualidade_evidencia: score,
+    freshness: freshnessScore,
     versao_regras: VERSAO_REGRAS,
     metodo: "AGREGACAO_DETERMINISTICA",
     fontes_independentes: grupos.length,
+    grupos_distintos_de_evidencia: grupos.length,
+    dependencia_detectada: evidencias.filter(evidencia => evidencia.dependencia_detectada).length,
+    dependencia_nao_verificada: evidencias.some(evidencia => !evidencia.dependencia_detectada),
+    nota_independencia: "Cópias exatas, quase duplicadas, URLs canônicas iguais e páginas do mesmo domínio são agrupadas; domínios sem sinal de cópia não têm independência editorial comprovada.",
     total_evidencias_utilizaveis: evidencias.length,
     fontes: grupos.map(grupo => ({
       dominio: grupo.dominio,
+      dominios: grupo.dominios,
+      grupo_dependencia_id: grupo.grupo_dependencia_id,
       oficial: grupo.oficial,
       atual: grupo.atual,
       postura: grupo.postura,
@@ -492,11 +599,17 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
         url: evidencia.url,
         postura: evidencia.postura,
         atual: evidencia.atual,
+        data_vinculada_ao_atributo: evidencia.data_vinculada_ao_atributo,
         status_atualidade: evidencia.status_atualidade,
         status_datas_declaradas: evidencia.status_datas_declaradas,
         consultado_em: evidencia.consultado_em,
         data_publicacao: evidencia.data_publicacao,
-        data_atualizacao: evidencia.data_atualizacao
+        data_atualizacao: evidencia.data_atualizacao,
+        escopo_data: evidencia.escopo_data,
+        sinais_data: evidencia.sinais_data,
+        grupo_dependencia_id: evidencia.grupo_dependencia_id,
+        dependencia_detectada: evidencia.dependencia_detectada,
+        motivo_dependencia: evidencia.motivo_dependencia
       }))
     })),
     limitacoes,
@@ -507,6 +620,7 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
 module.exports = {
   agregarEvidencias,
   determinarVeredito,
+  determinarConclusaoFactual,
   criarResumo,
   calcularScore,
   normalizarDominio,

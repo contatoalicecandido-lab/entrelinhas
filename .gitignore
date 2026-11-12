@@ -9,3 +9,14 @@ node_modules/
 *.db-wal
 
 .DS_Store
+
+# Backups locais de banco e de código (preservados no disco, fora do Git)
+*.backup*
+dados/*.db.*
+
+# Artefatos de build da apresentação
+.build-presentation/
+submission/.build/
+
+# Decks em revisão (versões B4_T1 refletem estratégia abandonada)
+submission/*.pptx

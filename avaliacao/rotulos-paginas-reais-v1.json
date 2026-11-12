@@ -1,0 +1,60 @@
+{
+  "versao": "1.0.0",
+  "anotado_em": "2026-11-11",
+  "metodo_anotacao": "Rótulos definidos a partir do texto visível nas páginas abertas no navegador antes de executar src/sinais-temporais.js. Os campos esperados são interpretações humanas do escopo declarado pela página, não verdade independente sobre quando o conteúdo realmente mudou.",
+  "casos": [
+    {
+      "id": "REAL-01-NASA-ARTICLE",
+      "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+      "afirmacao": "A NASA relatou a descoberta da causa das erupções repetidas da estrela AT 2016blu.",
+      "tipo_afirmacao": "empresa",
+      "datas_declaradas": [
+        { "data": "2026-11-09", "escopos_aceitaveis": ["PAGE", "DOCUMENT"], "rotulo": "data visível de publicação do artigo" },
+        { "data": "2026-11-10", "escopos_aceitaveis": ["PAGE", "DOCUMENT"], "rotulo": "data visível Last Updated do artigo" }
+      ],
+      "espera_data_attribute": false,
+      "trecho_visivel_para_teste": "Last Updated Nov 10, 2026",
+      "datas_esperadas_no_trecho": ["2026-11-10"],
+      "base_rotulo": "NASA mostra Nov 09, 2026 na publicação e Last Updated Nov 10, 2026 nos detalhes; nenhuma data é apresentada como revisão específica da alegação científica."
+    },
+    {
+      "id": "REAL-02-NIO-FAQ",
+      "url": "https://www.niointernet.com.br/ajuda/contratacao-e-troca-de-plano/",
+      "afirmacao": "Os preços dos planos Nio Fibra com internet móvel 5G inclusa variam de R$ 140 a R$ 200 por mês.",
+      "tipo_afirmacao": "preco",
+      "datas_declaradas": [
+        { "data": "2026-10-01", "escopos_aceitaveis": ["PAGE", "DOCUMENT"], "rotulo": "Atualizado em no topo da página de ajuda" }
+      ],
+      "espera_data_attribute": false,
+      "trecho_visivel_para_teste": "Atualizado em 01/10/2026 09:39",
+      "datas_esperadas_no_trecho": ["2026-10-01"],
+      "base_rotulo": "A FAQ contém o intervalo de preços, mas sua data diz que a página foi atualizada; não identifica qual oferta ou preço foi alterado nessa data."
+    },
+    {
+      "id": "REAL-03-CALCULADORIA-PRICE-SNAPSHOT",
+      "url": "https://calculadoria.com/financas/planos-de-streaming/",
+      "afirmacao": "O plano Netflix Padrão com anúncios custa R$ 25,90 por mês no Brasil.",
+      "tipo_afirmacao": "preco",
+      "datas_declaradas": [
+        { "data": "2026-11-06", "escopos_aceitaveis": ["OBSERVATION"], "rotulo": "página diz que os preços das páginas oficiais foram consultados nesta data" },
+        { "data": "2026-11-07", "escopos_aceitaveis": ["PAGE", "DOCUMENT"], "rotulo": "data geral Atualizado em do artigo/calculadora" }
+      ],
+      "espera_data_attribute": false,
+      "escopo_semantico_adicional": "PRICE_OBSERVATION",
+      "trecho_visivel_para_teste": "Preços das páginas oficiais, consultados em 06/11/2026. Atualizado em 7 de novembro de 2026",
+      "datas_esperadas_no_trecho": ["2026-11-06", "2026-11-07"],
+      "base_rotulo": "O site relaciona os valores a uma consulta das páginas oficiais em 06/11. Isso é uma observação datada do preço, não uma declaração de quando a Netflix alterou o preço; o escopo PRICE_OBSERVATION ainda não existe no modelo do produto."
+    },
+    {
+      "id": "REAL-04-OPENAI-PRICING",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "afirmacao": "A página oficial de preços da API lista preços por modelo e modalidade.",
+      "tipo_afirmacao": "preco",
+      "datas_declaradas": [],
+      "espera_data_attribute": false,
+      "trecho_visivel_para_teste": "A página lista preços da API por modelo e modalidade.",
+      "datas_esperadas_no_trecho": [],
+      "base_rotulo": "A página de preços aberta na anotação apresenta valores e condições promocionais, mas não exibe uma data geral de publicação/atualização ligada a cada preço."
+    }
+  ]
+}

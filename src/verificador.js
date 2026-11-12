@@ -7,6 +7,7 @@ const { prepararEvidencia } = require("./preparar-evidencia");
 const { criarBanco } = require("./banco");
 const { agregarEvidencias, normalizarDominio } = require("./agregador");
 const { randomUUID } = require("node:crypto");
+const { resolverTipoAfirmacao } = require("./tipo-afirmacao");
 
 const {
   avaliarAtualidade,
@@ -155,8 +156,23 @@ function validarOpcoes(opcoes) {
     "dominiosOficiaisPorAfirmacao"
   );
 
+  if (opcoes.inferirTipo !== undefined && typeof opcoes.inferirTipo !== "boolean") {
+    throw new Error("inferirTipo precisa ser verdadeiro ou falso.");
+  }
+
+  const maxAfirmacoes = opcoes.maxAfirmacoes ?? null;
+
+  if (
+    maxAfirmacoes !== null &&
+    (!Number.isInteger(maxAfirmacoes) || maxAfirmacoes < 1 || maxAfirmacoes > 50)
+  ) {
+    throw new Error("maxAfirmacoes precisa ser um inteiro entre 1 e 50.");
+  }
+
   return {
     maxEvidencias: limite,
+    maxAfirmacoes,
+    inferirTipo: opcoes.inferirTipo ?? true,
     dataReferencia,
     tiposPorAfirmacao,
     dominiosOficiais,
@@ -177,9 +193,10 @@ function agregarResultadoAfirmacao(resultado, opcoes) {
   resultado.agregacao = agregarEvidencias(
     {
       texto: resultado.texto,
+      tipo_afirmacao: resultado.tipo_afirmacao,
       evidencias: resultado.evidencias
     },
-    { dominiosOficiais }
+    { dominiosOficiais, asOf: opcoes.dataReferencia ?? new Date() }
   );
 
   return resultado;
@@ -246,36 +263,24 @@ function resumirVerificacao(afirmacoes) {
   };
 }
 
-function obterTipoAfirmacao(afirmacao, tiposPorAfirmacao) {
-  const tipo = tiposPorAfirmacao[afirmacao.id];
-
-  if (!tipo) {
-    return null;
-  }
-
-  if (!Object.hasOwn(VALIDADE_MAX_DIAS, tipo)) {
-    throw new Error(
-      `Tipo de afirmação inválido para ${afirmacao.id}: ${tipo}`
-    );
-  }
-
-  return tipo;
-}
-
 async function verificarAfirmacao(afirmacao, opcoes) {
   const resultado = {
     id: afirmacao.id,
     texto: afirmacao.texto,
     tipo_afirmacao: null,
+    origem_tipo_afirmacao: null,
     evidencias: [],
     erro_busca: null
   };
 
   try {
-    resultado.tipo_afirmacao = obterTipoAfirmacao(
+    const tipoResolvido = resolverTipoAfirmacao(
       afirmacao,
-      opcoes.tiposPorAfirmacao
+      opcoes.tiposPorAfirmacao,
+      { inferirTipo: opcoes.inferirTipo }
     );
+    resultado.tipo_afirmacao = tipoResolvido.tipo;
+    resultado.origem_tipo_afirmacao = tipoResolvido.origem;
   } catch (erro) {
     resultado.erro_busca = erro.message;
     return agregarResultadoAfirmacao(resultado, opcoes);
@@ -293,6 +298,7 @@ async function verificarAfirmacao(afirmacao, opcoes) {
         idVerificacao: opcoes.idVerificacao,
         idAfirmacao: afirmacao.id,
         dominiosOficiais,
+        tipoAfirmacao: resultado.tipo_afirmacao,
         onMetadata: opcoes.onMetadataPesquisa
       }
     );
@@ -517,11 +523,22 @@ async function verificarTexto(texto, opcoes = {}) {
     }
   );
 
+  // Limite opcional de custo: afirmações excedentes não são verificadas,
+  // mas ficam registradas como omitidas (nunca descartadas em silêncio).
+
+  const afirmacoesVerificadas = configuracao.maxAfirmacoes
+    ? afirmacoes.slice(0, configuracao.maxAfirmacoes)
+    : afirmacoes;
+
+  const afirmacoesOmitidas = afirmacoes
+    .slice(afirmacoesVerificadas.length)
+    .map(({ id, texto: textoAfirmacao }) => ({ id, texto: textoAfirmacao }));
+
   // 2. Verificação individual de cada afirmação.
 
   const resultados = [];
 
-  for (const afirmacao of afirmacoes) {
+  for (const afirmacao of afirmacoesVerificadas) {
     const resultado = await verificarAfirmacao(
       afirmacao,
       opcoesExecucao
@@ -540,6 +557,7 @@ async function verificarTexto(texto, opcoes = {}) {
     total_afirmacoes: resultados.length,
     sintese: resumirVerificacao(resultados),
     afirmacoes: resultados,
+    afirmacoes_omitidas: afirmacoesOmitidas,
     rastreabilidade_modelo: chamadasModelo,
     rastreabilidade_pesquisa: chamadasPesquisa
   };

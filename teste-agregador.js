@@ -36,7 +36,8 @@ function criarEvidencia({
       url,
       tipo_fonte: "tavily_extract",
       data_publicacao: publicacao,
-      data_atualizacao: atualizacao
+      data_atualizacao: atualizacao,
+      escopo_data: "ATTRIBUTE"
     },
     correspondencia: {
       status: correspondencia

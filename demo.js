@@ -23,6 +23,12 @@ Este comando usa Bifrost e Tavily reais, mas grava somente em SQLite :memory:.
 Domínios oficiais configurados geram uma busca Tavily adicional por afirmação.
 `;
 
+function resumirTrecho(texto, limite = 420) {
+  if (typeof texto !== "string" || !texto.trim()) return "não disponível";
+  const limpo = texto.replace(/\s+/g, " ").trim();
+  return limpo.length > limite ? `${limpo.slice(0, limite)}…` : limpo;
+}
+
 async function main() {
   const { values, positionals } = parseArgs({
     options: {
@@ -71,15 +77,32 @@ async function main() {
 
     for (const afirmacao of resultado.afirmacoes) {
       console.log(`\nAfirmação: ${afirmacao.texto}`);
-      console.log(`Resultado: ${afirmacao.agregacao.veredito}`);
-      console.log(afirmacao.agregacao.resumo);
+      console.log(`Conclusão factual: ${afirmacao.agregacao.conclusao_factual.status}`);
+      console.log(afirmacao.agregacao.conclusao_factual.resumo);
+
+      const freshness = afirmacao.agregacao.freshness;
+      console.log("\nAtualidade da afirmação:");
+      console.log(`  Estado: ${freshness.status}`);
+      console.log(`  Índice temporal: ${freshness.score === null ? "não determinável" : `${freshness.score}/100`}`);
+      console.log(`  Confiança: ${freshness.confidence}`);
+      console.log(`  Política: ${freshness.policy_id} (algoritmo ${freshness.algorithm_version})`);
+      for (const limitacao of freshness.limitations) {
+        console.log(`  Limitação: ${limitacao}`);
+      }
 
       for (const evidencia of afirmacao.evidencias) {
         console.log(`\n- ${evidencia.fonte.titulo ?? evidencia.fonte.url}`);
         console.log(`  URL: ${evidencia.fonte.url}`);
+        console.log(`  Trecho da fonte: ${resumirTrecho(evidencia.fonte.conteudo)}`);
         console.log(`  Correspondência: ${evidencia.correspondencia.status}`);
+        console.log(`  Motivo da correspondência: ${evidencia.correspondencia.justificativa ?? "não informado"}`);
         console.log(`  Postura: ${evidencia.classificacao.postura}`);
-        console.log(`  Atualidade: ${evidencia.atualidade.status}`);
+        console.log(`  Justificativa do modelo para a postura: ${evidencia.classificacao.justificativa ?? "não informada"}`);
+        const escopoData = evidencia.fonte.escopo_data ?? "UNKNOWN";
+        console.log(`  Estado da data declarada: ${evidencia.atualidade.status} (escopo ${escopoData})`);
+        if (escopoData !== "ATTRIBUTE") {
+          console.log("  Nota: este estado da data não confirma a atualidade do atributo da afirmação.");
+        }
         console.log(`  Publicada: ${evidencia.fonte.data_publicacao ?? "não informada"}`);
         console.log(`  Atualizada: ${evidencia.fonte.data_atualizacao ?? "não informada"}`);
         console.log(`  Consultada: ${evidencia.fonte.coletado_em ?? "não informada"}`);

@@ -1,12 +1,16 @@
-
 {
   "name": "entrelinhas",
   "version": "1.0.0",
   "description": "Freshness-aware evidence verification layer for AI applications",
   "main": "index.js",
   "scripts": {
-    "test": "node teste-atualidade.js && node teste-evidencia.js && node teste-preparar-evidencia.js && node teste-integracao-persistencia-comparador.js && node teste-rastreabilidade-fluxo-controlado.js",
-    "test:benchmark": "node teste-benchmark.js"
+    "test": "node rodar-testes.js",
+    "test:essencial": "node teste-atualidade.js && node teste-evidencia.js && node teste-preparar-evidencia.js && node teste-integracao-persistencia-comparador.js && node teste-rastreabilidade-fluxo-controlado.js && npm run test:freshness",
+    "test:freshness": "node teste-freshness-score.js && node teste-sinais-temporais.js && node teste-independencia-fontes.js && node avaliacao/teste-trechos-paginas-publicas.js && node teste-agregador.js && node teste-limites-independencia-atualidade.js && node teste-tavily-coletas-simulado.js && node avaliacao/teste-avaliacao-rotulada-v1.js",
+    "test:benchmark": "node teste-benchmark.js",
+    "web": "node servidor.js",
+    "web:exemplo": "node servidor.js --exemplo",
+    "demo": "node demo.js"
   },
   "keywords": [
     "ai",

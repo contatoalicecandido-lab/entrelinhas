@@ -4,12 +4,13 @@
 
 **Projeto:** Entrelinhas\
 **Nome/descritor usado no hackathon:** Freshness Guard\
-**Última atualização deste documento:** 5 de novembro de 2026\
+**Última atualização deste documento:** 11 de novembro de 2026\
 **Objetivo:** preservar contexto de produto, arquitetura, decisões,
 testes, limitações e próximos passos para continuidade entre conversas e
 sessões de desenvolvimento.
 
-> Este documento consolida as informações compartilhadas até 05/11/2026.
+> O histórico anterior a 11/11/2026 foi preservado. As decisões e
+> atualizações posteriores estão registradas nas seções datadas ao final.
 > Ele não substitui a leitura do código atual nem a execução dos testes.
 > Quando houver divergência entre um registro histórico e o estado mais
 > recente do código, deve prevalecer a inspeção do repositório e a
@@ -148,6 +149,11 @@ Nem todas as capacidades estão implementadas ou validadas.
 
 O projeto está sendo desenvolvido para o Geek Room Global AI Hackathon
 2026.
+
+> **Superado em 11/11/2026 (ver seção 31):** a submissão usa um único
+> Problem Statement, "Build a Stale-Answer Detector for AI Applications",
+> que exige Tavily e Bifrost. B4 não foi selecionado. O texto abaixo é
+> histórico.
 
 O hackathon exige participação nas duas trilhas: - uma problem statement
 da trilha Bifrost, prioritária; - uma problem statement da trilha
@@ -1610,3 +1616,303 @@ aceite:
 ------------------------------------------------------------------------
 
 **Fim do adendo.**
+
+------------------------------------------------------------------------
+
+# 30. Enquadramento oficial das trilhas Bifrost B4 + Tavily T1
+
+**Atualizado em 11/11/2026.** Esta seção registra a decisão vigente para
+a submissão e substitui qualquer enquadramento anterior que coloque T1
+como problem statement primária.
+
+## 30.1 Seleção decidida
+
+- **Bifrost Priority Track:** B4 — *Open-Source Bifrost Gateway*.
+- **Tavily Track Partner:** T1 — *Build a Stale-Answer Detector for AI
+  Applications*.
+- **Estratégia:** um só projeto integrado; B4 é a seleção principal e
+  T1 é a integração/desafio adicional.
+
+Na plataforma, selecionar B4 como problema principal e indicar Tavily
+como integração adicional no campo opcional correspondente. A regra
+geral do evento permite projetos que usem somente Bifrost, somente
+Tavily ou ambos; a seleção das duas frentes é a decisão estratégica
+deste projeto para concorrer nas duas trilhas, não uma obrigação geral
+imposta a todos os participantes.
+
+## 30.2 Enunciados e regras confirmados
+
+O B4 pede uma funcionalidade prática para o gateway open-source, por
+exemplo plugin, integração de provedor, cache/roteamento, interface ou
+ferramenta de desenvolvimento. A solução deve usar pontos de extensão
+suportados, funcionar com uma instalação padrão, ter configuração,
+documentação e testes claros, e ser apropriada para consideração como
+pull request upstream.
+
+O T1 pede um sistema que detecte afirmações possivelmente desatualizadas
+em respostas de LLM, com foco em preços, versões de API, regulações e
+informações sobre empresas; que revalide essas afirmações em fontes web
+atuais e forneça um freshness score por afirmação, ajudando a distinguir
+informação atual e confiável de conteúdo potencialmente obsoleto. O
+enunciado pede uso de Tavily e Bifrost.
+
+Para projetos combinados, a plataforma manda escolher o desafio
+Bifrost como principal e preencher a opção Tavily adicional, explicando
+como cada tecnologia contribui. Repositório GitHub público e detalhado,
+README e pitch deck são exigidos. Aplicação publicada e vídeo são
+opcionais, salvo solicitação específica do formulário. Os critérios
+publicados incluem inovação, execução técnica, problema/impacto, uso de
+IA, experiência do usuário, escalabilidade e potencial.
+
+Fontes oficiais consultadas:
+
+- Página do evento e textos de B4/T1: https://hackculture.io/hackathons/ai-global-hackathon
+- Regras e instruções de projeto combinado: seção Schedule/Rules na
+  página oficial acima.
+- Página Geek Room: https://www.geekroom.co.in/event/global-ai-hackathon
+- Guia de plugins Bifrost:
+  https://github.com/maximhq/bifrost/blob/dev/docs/plugins/getting-started.mdx
+- Configuração documentada do semantic cache:
+  https://github.com/maximhq/bifrost/blob/dev/docs/deployment-guides/helm/plugins.mdx
+- API do pacote semantic cache, incluindo TTL e no-store internos por
+  `BifrostContext`: https://pkg.go.dev/github.com/maximhq/bifrost/plugins/semanticcache
+
+## 30.3 Aderência real do estado atual
+
+### T1 — parcialmente implementado
+
+O fluxo atual de `src/verificador.js` decompõe o texto, pesquisa e extrai
+fontes com Tavily, solicita ao modelo via Bifrost análise de
+correspondência/postura, avalia datas e agrega um resultado cauteloso.
+Os resultados incluem estados temporais por evidência (`FRESH`, `STALE`
+ou `UNVERIFIABLE`) e síntese por afirmação.
+
+Não há um campo de **freshness score por afirmação** demonstrado. O
+`score_qualidade_evidencia` de `src/agregador.js` é um score de qualidade
+da evidência agregada; não deve ser renomeado nem apresentado como score
+de atualidade. Também faltam interface/serviço publicado e uma avaliação
+ao vivo com conjunto de casos amplo. Portanto, T1 tem implementação
+substancial, mas não está completo conforme o enunciado.
+
+### B4 — não implementado no repositório atual
+
+`src/bifrost.js` chama `/v1/chat/completions` e registra alguns
+metadados. Isso comprova uso do Bifrost como gateway, mas não cria uma
+funcionalidade dentro do gateway, não implementa plugin Bifrost, não
+modifica o semantic cache e não oferece uma contribuição upstream.
+Assim, o estado atual não atende B4.
+
+## 30.4 Lacuna e proposta candidata B4 (novidade ainda não confirmada)
+
+A ideia inicial de “adicionar TTL por requisição” foi retirada como
+proposta de novidade: o pacote oficial `github.com/maximhq/bifrost/plugins/semanticcache`
+já documenta `CacheTTLKey` como override de `Config.TTL` por requisição e
+`CacheNoStoreKey` para não gravar a resposta. Ambos são valores de
+`BifrostContext`, configurados antes da requisição entrar no pipeline.
+Portanto, esses controles internos já existem; não os apresentar como
+funcionalidade a ser criada.
+
+**Candidato concreto ainda a confirmar:** expor por meio da interface
+HTTP/API suportada do Bifrost uma política de cache baseada na atualidade
+da evidência, conectada aos controles internos existentes e sujeita a um
+limite rígido configurado pelo operador. A aplicação chamadora enviaria
+prazo/decisão de atualidade; o gateway validaria e limitaria esse valor,
+aplicaria o TTL interno ou bypass/no-store para conteúdo stale,
+unverifiable ou sem política confiável. Uma requisição nunca poderia
+ampliar o limite do operador.
+
+Ainda não foi confirmado se o transporte HTTP atual já oferece um meio
+suportado de mapear um campo/header para esses context values, nem se há
+um teto de TTL configurável pelo operador. Portanto, nem a lacuna nem a
+novidade desse candidato estão provadas. Antes de código, examinar o
+ingress HTTP e a versão exata do plugin; confirmar contrato, confiança no
+cliente, clamp, streaming, modo padrão e suporte a instalação normal com
+os mantenedores. Só então decidir se existe trabalho B4 real ou se o
+conceito pode ser feito hoje por integração sem qualquer mudança no
+Bifrost.
+
+## 30.5 Risco de duplicidade e diferenciação
+
+Foi encontrada a issue pública
+https://github.com/maximhq/bifrost/issues/9748, aberta em 08/11/2026,
+com uma proposta chamada FreshGuard: plugin que revalida afirmações com
+Tavily e adiciona metadados por resposta/stream. Essa proposta se
+sobrepõe diretamente à ideia genérica de “criar um plugin de freshness”.
+Não reivindicar essa ideia ampla como novidade exclusiva do Entrelinhas.
+
+A hipótese de contribuição diferenciada é tornar essa política temporal
+acessível aos clientes HTTP e impor um teto do operador, em vez de apenas
+anexar um relatório de checagem à resposta. A hipótese depende de auditoria
+do código Bifrost e de validação com os mantenedores; até lá, é apenas
+proposta, não implementação nem prova de lacuna.
+
+## 30.6 Condição de submissão honesta
+
+Não descrever o projeto como atendendo B4 até haver uma funcionalidade
+no próprio Bifrost ou plugin suportado, reproduzível em instalação
+padrão, com documentação/testes e artefato de integração claro. O próximo
+passo técnico é uma análise read-only da versão Bifrost em uso e do
+semantic cache upstream, seguida de uma especificação revisável. A
+alteração de produção requer autorização separada.
+
+Até isso estar concluído, os materiais podem apresentar a seleção B4 +
+T1 e a proposta B4 explicitamente rotulada como planejada; não podem
+afirmar que B4 já foi implementado.
+
+## 31. Correção oficial da seleção do Problem Statement — 11/11/2026
+
+A captura do formulário mostra um único campo obrigatório “Problem
+Statement” e uma pergunta separada para marcar um problema Tavily
+adicional (ou deixar em branco). A lista completa de seis enunciados
+fornecida nesta conversa confirma que **Build a Stale-Answer Detector
+for AI Applications** é uma opção principal disponível e exige Tavily e
+Bifrost juntos.
+
+**Seleção aprovada pelo usuário:** Build a Stale-Answer Detector for AI
+Applications. **Open-Source Bifrost Gateway (B4) não está selecionado.**
+Bifrost permanece como tecnologia exigida pelo desafio escolhido, não
+como uma segunda trilha nem como contribuição nova ao gateway.
+
+Esta decisão substitui as seções 30.1 e 30.6 e qualquer documento que
+oriente selecionar B4 como problema principal. Não implementar a proposta
+de extensão de cache B4 para esta submissão.
+
+Pré-requisitos de produto para aderir honestamente ao desafio escolhido:
+
+1. Implementar um freshness score por afirmação com definição explícita,
+   distinguindo-o de `score_qualidade_evidencia` e dos estados
+   `FRESH`/`STALE`/`UNVERIFIABLE`. **Protótipo implementado; falta
+   calibração e avaliação em evidências reais anotadas.**
+2. Demonstrar entrada de resposta gerada por LLM, rechecagem das
+   afirmações com Tavily e análise via Bifrost. **Fluxo existe no backend;
+   falta validar uma demonstração real controlada ponta a ponta.**
+3. Avaliar casos atuais, desatualizados, conflitantes e sem datas, com
+   conjunto rotulado e resultados reproduzíveis. **Benchmark sintético
+   implementado; rótulos humanos e páginas reais continuam pendentes.**
+4. Exibir score, fontes, datas, incerteza e limitações na demonstração;
+   não chamar o score de probabilidade de verdade sem calibração que
+   sustente essa interpretação. **CLI atualizada; revisão visual e demo
+   para submissão continuam pendentes.**
+
+## 32. Atualidade como dois eixos e abstenção auditável — 11/11/2026
+
+O usuário reafirmou que a ausência de data é um resultado informativo:
+sem data confiável, o sistema não conclui atualidade. O produto deve
+mostrar separadamente (a) se a evidência apoia/contradiz/não determina a
+afirmação e (b) se há base temporal para dizer que ela continua válida.
+Conteúdo pode apoiar uma afirmação e ainda deixar sua atualidade
+inconclusiva.
+
+Foi identificada e corrigida uma falha: uma data recente da página podia
+promover um preço a `ATUAL`, embora não houvesse vínculo da data com o
+campo de preço. Agora só `escopo_data: "ATTRIBUTE"` pode tornar a
+evidência atual para a afirmação ou entrar no freshness score. O agregador
+também expõe `conclusao_factual` separada de `freshness`; o campo legado
+`veredito` permanece por compatibilidade. O sinal
+Tavily `published_date` é preservado com origem `TAVILY_SEARCH_RESULT` e
+escopo `PAGE`; a coleta não o apresenta como data do atributo. O agregador
+mostra suporte como `SUPORTE_FRACO` e atualidade `UNVERIFIABLE` nesse
+cenário.
+
+O freshness score é índice temporal determinístico, não probabilidade de
+verdade nem métrica calibrada. Exemplo auditável para janela de preço de
+30 dias: uma evidência ligada ao atributo há 7 dias resulta em
+`round(100 × 2^(-7/15)) = 72/100`. A data, janela, fórmula, versão do
+algoritmo e limitações precisam acompanhar qualquer número apresentado.
+Na revisão desta rodada, a versão do algoritmo foi elevada para `1.1.0`:
+tipos sem janela configurada agora retornam `UNVERIFIABLE`/`null`, sem
+fallback arbitrário de 180 dias; o estado temporal também é recalculado
+da data e política, em vez de confiar num rótulo de entrada incoerente.
+
+Validação sintética adicionada em `avaliacao/teste-avaliacao-rotulada-v1.js`:
+13 casos fixos em eixos factual e temporal independentes, inclusive data
+ausente, data de página, inválida/futura, contradição, conflito e
+duplicação por domínio. São testes de regras, não prova de precisão em
+web real. Referências técnicas consultadas: documentação oficial de
+[Tavily Search](https://docs.tavily.com/documentation/api-reference/endpoint/search)
+e [Extract](https://docs.tavily.com/documentation/api-reference/endpoint/extract),
+[RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html#section-8.8.2) e
+[Schema.org CreativeWork](https://schema.org/CreativeWork). A coleta direta
+de metadados foi implementada com HTTPS, DNS público fixado à conexão,
+redirecionamentos revalidados, timeout e limite de corpo; os testes usam
+resolvedor e transporte simulados. O contrato dos sinais, os limites e a
+política de abstenção estão em `ESPECIFICACAO_FRESHNESS_SCORE.md`.
+
+## 33. Captura de datas de página e dependência entre fontes — 11/11/2026
+
+Implementação em `src/sinais-temporais.js`: tentativa best-effort de GET
+HTML para até três URLs extraídas, com `Last-Modified`, metadados Open
+Graph, Schema.org meta/JSON-LD, elemento `<time>`, URL canonical e datas
+visíveis próximas a pistas como “preço atualizado em”. Datas de página,
+documento e oferta mantêm seus escopos; uma data visível só é atribuída a
+`ATTRIBUTE` quando o contexto local contém a entidade/valor da afirmação.
+Rótulos “Last Updated/Atualizado em” ficam em `PAGE`; “preços consultados
+em” é registrado como `OBSERVATION`, nunca como data da alteração do
+preço. `priceValidUntil` fica como validade de oferta. Datas ausentes,
+inválidas, conflitantes ou não vinculadas continuam `UNVERIFIABLE`.
+
+Defesas de rede: HTTPS, sem credenciais/portas não padrão/hosts locais,
+resolução IPv4 pública, endereço fixado à conexão, redirecionamentos
+manuais com validação em cada salto, HTML/XHTML apenas, máximo de 1 MiB,
+timeout de 5 segundos e no máximo duas navegações de redirect. Testes
+injetam DNS e HTTP; nenhuma API Tavily/Bifrost nem rede real é chamada nos
+testes desta implementação. Limitação residual: a extração de datas
+visíveis usa regras conservadoras, não compreensão semântica geral; sites
+com HTML dinâmico, datas em formatos incomuns, páginas em outras línguas
+ou metadados falsos podem continuar sem data ou produzir sinal incorreto.
+
+Implementação em `src/independencia-fontes.js`: agrupa mesma origem de
+domínio, URL canonical comum, hash de conteúdo normalizado idêntico ou
+similaridade Jaccard de shingles de cinco tokens (mínimo 40 tokens e
+limiar 0,88). Isso reduz republicações textualmente próximas e mantém
+posturas conflitantes visíveis no grupo. Não comprova proveniência
+editorial: edição extensa pode escapar; textos coincidentemente parecidos
+podem ser unidos; ausência de detecção não prova independência. A nota de
+limitação aparece no resultado do agregador.
+
+Testes: `teste-sinais-temporais.js`, `teste-independencia-fontes.js`,
+`avaliacao/teste-trechos-paginas-publicas.js`, regressão do agregador e
+Tavily simulado. Quatro páginas foram rotuladas antes de executar o
+parser. Seus trechos visíveis produziram 4/4 datas esperadas e nenhum
+falso `ATTRIBUTE`; essa checagem não avalia a extração do HTML completo.
+Na execução ao vivo feita pelo usuário em 11/11, as fontes acessíveis
+capturaram 3/3 datas anotadas (Nio 1/1, Calculadoria 2/2) e geraram zero
+falsos `ATTRIBUTE` em três páginas. A data 06/11 da Calculadoria foi
+classificada corretamente como `OBSERVATION`, não alteração do preço. A
+OpenAI forneceu `Last-Modified` de 11/11 com escopo `PAGE`. NASA foi
+pulada (`NO_PUBLIC_IPV4`), então suas duas datas anotadas continuam sem
+avaliação. A inspeção `view-source:` foi bloqueada pela política de
+navegação; não tentamos contornar esse limite. O script ao vivo é opt-in:
+`node avaliacao/validar-paginas-reais.js --live`.
+Após examinar o resultado real, o parser foi ajustado para que um rótulo
+genérico “Atualizado em” junto a um título com a palavra “plano” não crie
+um candidato `EXPLICIT_ATTRIBUTE_UPDATE_DATE` com escopo `UNKNOWN`. Também
+colapsa entradas JSON-LD duplicadas idênticas de uma mesma página. A suíte
+`npm test` passou novamente depois dessas correções; falta repetir a coleta
+ao vivo para confirmar a forma final dos sinais retornados.
+Referências comparativas e decisões de desenho: `PESQUISA_REFERENCIAS.md`.
+
+
+## 34. Continuidade em 12/11/2026 — interface web, categorias automáticas e suíte única
+
+Sessão de continuidade com Claude (auditoria em `MATRIZ_AUDITORIA.md`,
+`RELATORIO_TESTES.md`, `STATUS_DO_PROJETO.md`, `PLANO_DE_CONCLUSAO.md`,
+`DECISOES_TECNICAS.md`, `CONTEXTO_CONTINUIDADE.md`). Mudanças:
+
+- **Categorias automáticas** (`src/tipo-afirmacao.js`): sem tipo informado,
+  a decomposição pede ao modelo uma categoria (validada contra a lista) e,
+  na falta, regras por palavras-chave. Origem gravada em
+  `origem_tipo_afirmacao`. Antes, sem tipo manual, nenhuma afirmação recebia
+  índice temporal (`UNKNOWN_CLAIM_TYPE`).
+- **`maxAfirmacoes`** em `verificarTexto()` limita custo; excedentes ficam em
+  `afirmacoes_omitidas`.
+- **Interface web** (`servidor.js`, `public/`): `npm run web` (real) e
+  `npm run web:exemplo` (motor real com fontes fictícias e provedores
+  simulados, sem custo). 127.0.0.1, uma verificação por vez, limites de
+  entrada, CSP estrita, SQLite `:memory:`.
+- **Mensagem do agregador**: fonte oficial sem nenhuma data agora recebe a
+  explicação de ausência de data (antes recebia a de data não vinculada).
+- **Testes**: três testes desatualizados após a política 1.2.0 foram
+  ajustados (fixtures com `escopo_data: "ATTRIBUTE"`); novos
+  `teste-tipo-afirmacao.js` e `teste-servidor.js`; `npm test` passou a rodar
+  `rodar-testes.js` com toda a suíte offline.

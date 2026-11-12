@@ -18,6 +18,8 @@ function criarFonte(url, titulo) {
     coletado_em: "2026-11-11T10:00:00.000Z",
     data_publicacao: "2026-11-10",
     data_atualizacao: null,
+    // Política 1.2.0: data explicitamente vinculada ao atributo verificado.
+    escopo_data: "ATTRIBUTE",
     relevancia: 0.99
   };
 }

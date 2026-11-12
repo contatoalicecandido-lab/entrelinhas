@@ -1,5 +1,6 @@
 
 const { perguntarAoModelo } = require("./bifrost");
+const { tipoValido } = require("./tipo-afirmacao");
 
 const INSTRUCOES_DECOMPOSICAO = `
 Você é o módulo de decomposição de afirmações do Entrelinhas.
@@ -60,6 +61,16 @@ Texto:
 Resultado correto:
 Duas afirmações independentes, preservando as informações originais.
 
+CATEGORIA DE CADA AFIRMAÇÃO:
+
+Para cada afirmação, informe "categoria" com exatamente um destes valores:
+- "preco": preços, tarifas, mensalidades, custos, planos pagos.
+- "versao_api": APIs, endpoints, SDKs, versões de software ou modelos, descontinuações.
+- "regulamento": leis, normas, regulamentos, obrigações legais, órgãos reguladores.
+- "empresa": informações de empresas (liderança, sede, aquisições, número de funcionários, fundação).
+- "outro": qualquer outra afirmação.
+A categoria é apenas uma etiqueta: não altere o texto da afirmação por causa dela.
+
 Antes de responder, verifique se alguma condição foi separada
 de uma afirmação que ela modifica. Se isso aconteceu, una novamente
 as partes.
@@ -70,7 +81,8 @@ Formato obrigatório:
 {
   "afirmacoes": [
     {
-      "texto": "Afirmação independente."
+      "texto": "Afirmação independente.",
+      "categoria": "preco"
     }
   ]
 }
@@ -124,9 +136,11 @@ function validarAfirmacoes(resultado) {
       throw new Error(`A afirmação ${indice + 1} é inválida.`);
     }
 
+    // A categoria sugerida é opcional; valores fora da lista são ignorados.
     return {
       id: `afirmacao_${indice + 1}`,
-      texto: item.texto.trim()
+      texto: item.texto.trim(),
+      categoria_sugerida: tipoValido(item.categoria) ? item.categoria : null
     };
   });
 }

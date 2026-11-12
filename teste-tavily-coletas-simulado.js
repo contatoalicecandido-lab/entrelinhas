@@ -1,6 +1,7 @@
 const assert = require("node:assert/strict");
 
 const { pesquisarComTavily } = require("./src/tavily");
+const sinaisTemporais = require("./src/sinais-temporais");
 
 const URLS = [
   "https://fonte-um.example/artigo",
@@ -24,8 +25,22 @@ const resultadosExtracao = URLS.map((url, indice) => ({
 
 async function executarTeste() {
   const fetchOriginal = global.fetch;
+  const obterMetadadosOriginal = sinaisTemporais.obterMetadadosPagina;
   const tavilyKeyOriginal = process.env.TAVILY_API_KEY;
   const chamadasSimuladas = [];
+  const chamadasMetadadosSimuladas = [];
+
+  sinaisTemporais.obterMetadadosPagina = async (url, opcoes) => {
+    chamadasMetadadosSimuladas.push({ url, opcoes });
+    return {
+      status: "SUCCESS",
+      final_url: url,
+      captured_at: "2026-11-11T12:00:00.000Z",
+      signals: [{ signal_type: "HTTP_LAST_MODIFIED", field: "Last-Modified",
+        value_original: "Mon, 09 Nov 2026 12:00:00 GMT", value_normalized: "2026-11-09",
+        scope: "PAGE", source: "HTTP_HEADER" }]
+    };
+  };
 
   global.fetch = async (input, init = {}) => {
     const url = typeof input === "string" ? input : input.url;
@@ -89,6 +104,7 @@ async function executarTeste() {
     );
 
     assert.equal(evidencias.length, 3);
+    assert.equal(chamadasMetadadosSimuladas.length, 3);
     assert.deepEqual(
       evidencias.map(evidencia => evidencia.url),
       URLS
@@ -96,6 +112,14 @@ async function executarTeste() {
     assert.ok(
       evidencias.every(evidencia => evidencia.tipo_fonte === "tavily_extract")
     );
+    assert.ok(evidencias.every(evidencia => evidencia.escopo_data === "PAGE"));
+    assert.ok(evidencias.every(evidencia =>
+      evidencia.metadados_provedor.sinais_data.length === 2 &&
+      evidencia.metadados_provedor.sinais_data.some(sinal => sinal.source === "TAVILY_SEARCH_RESULT" && sinal.scope === "PAGE")
+    ));
+    assert.ok(evidencias.every(evidencia =>
+      evidencia.metadados_provedor.sinais_data.some(sinal => sinal.signal_type === "HTTP_LAST_MODIFIED" && sinal.scope === "PAGE")
+    ));
 
     const idsColeta = evidencias.map(evidencia => evidencia.coleta?.id_coleta);
 
@@ -145,6 +169,7 @@ async function executarTeste() {
     } else {
       process.env.TAVILY_API_KEY = tavilyKeyOriginal;
     }
+    sinaisTemporais.obterMetadadosPagina = obterMetadadosOriginal;
   }
 }
 

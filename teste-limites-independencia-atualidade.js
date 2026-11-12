@@ -2,14 +2,18 @@ const assert = require("node:assert/strict");
 const { agregarEvidencias } = require("./src/agregador");
 const { avaliarAtualidade } = require("./src/atualidade");
 
-function evid({ dominio, postura, dataAtualizacao = "2026-11-10", justificativa }) {
+const TEXTO_REPUBLICADO = "A empresa publicou hoje o novo preço do plano premium por quarenta e nove reais mensais. A oferta inclui suporte técnico, armazenamento adicional, acesso para toda equipe e renovação automática do contrato.";
+
+function evid({ dominio, postura, dataAtualizacao = "2026-11-10", justificativa, conteudo = TEXTO_REPUBLICADO }) {
   return {
     fonte: {
       titulo: "Fixture sintética",
       url: `https://${dominio}/fonte`,
       tipo_fonte: "tavily_extract",
       data_publicacao: "2025-01-01",
-      data_atualizacao: dataAtualizacao
+      data_atualizacao: dataAtualizacao,
+      escopo_data: "PAGE",
+      conteudo
     },
     correspondencia: { status: "MATCH" },
     classificacao: {
@@ -21,8 +25,8 @@ function evid({ dominio, postura, dataAtualizacao = "2026-11-10", justificativa 
 }
 
 function main() {
-  // Reprodução de limitação: três domínios com a mesma origem textual
-  // são tratados como três fontes independentes pelo agrupamento atual.
+  // Três domínios publicam o mesmo texto; cópias conflitantes não devem
+  // ser apresentadas como evidência editorialmente independente.
   const republicacao = agregarEvidencias({
     texto: "A afirmação sintética é verdadeira.",
     evidencias: [
@@ -32,12 +36,15 @@ function main() {
     ]
   });
   assert.equal(republicacao.veredito, "CONFLITO");
-  assert.equal(republicacao.fontes_independentes, 3);
-  console.log("LACUNA REPRODUZIDA: três domínios são contados como independentes, mesmo com duas republicações textualmente idênticas.");
+  assert.equal(republicacao.fontes_independentes, 1);
+  assert.equal(republicacao.dependencia_detectada, 3);
+  assert.equal(republicacao.conclusao_factual.status, "CONFLITO");
+  assert.ok(republicacao.limitacoes.some(item => item.includes("duplicado/quase duplicado")));
+  console.log("REGRESSÃO PASSOU: republicações em domínios diferentes formam um único grupo de dependência.");
   console.log(`Observado: veredito=${republicacao.veredito}; fontes_independentes=${republicacao.fontes_independentes}.`);
 
-  // Reprodução de limitação: o campo de data da página é tratado como
-  // data atual da evidência, sem indicar qual atributo foi atualizado.
+  // Regressão adversarial: a data recente da página não deve ser promovida
+  // a data do preço nem produzir uma conclusão de atualidade.
   const atualidade = avaliarAtualidade({
     tipo_fonte: "tavily_extract",
     data_publicacao: "2025-01-01",
@@ -57,9 +64,11 @@ function main() {
     }]
   }, { dominiosOficiais: ["operadora.example"] });
 
-  assert.equal(preco.veredito, "ATUAL");
-  console.log("LACUNA REPRODUZIDA: atualização recente da página, sem escopo do campo atualizado, é tratada como atualidade do preço.");
-  console.log(`Observado: atualidade=${atualidade.status}; veredito=${preco.veredito}.`);
+  assert.equal(preco.veredito, "SUPORTE_FRACO");
+  assert.equal(preco.freshness.status, "UNVERIFIABLE");
+  assert.equal(preco.freshness.score, null);
+  console.log("REGRESSÃO PASSOU: atualização recente da página não prova atualização do preço.");
+  console.log(`Observado: data da página=${atualidade.status}; veredito=${preco.veredito}; freshness=${preco.freshness.status}.`);
   console.log("Fixtures sintéticas. Nenhuma rede, banco ou chamada de modelo foi utilizada.");
 }
 

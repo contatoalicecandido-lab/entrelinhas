@@ -2,6 +2,7 @@
 const { randomUUID, createHash } = require("node:crypto");
 const { validarEvidencia } = require("./evidencia");
 const { normalizarFonte } = require("./normalizar-fonte");
+const sinaisTemporais = require("./sinais-temporais");
 
 const MAX_RESULTADOS_BUSCA = 5;
 const MAX_FONTES_EXTRAIDAS = 3;
@@ -386,11 +387,22 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
   );
 
   // Executa a extração e preserva sua identidade operacional.
-  const dadosExtracao = await extrairConteudo(
-    urlsSelecionadas,
-    pergunta,
-    opcoes
-  );
+  const [dadosExtracao, metadadosPaginas] = await Promise.all([
+    extrairConteudo(urlsSelecionadas, pergunta, opcoes),
+    Promise.all(urlsSelecionadas.map(async url => {
+      try {
+        const resultado = await sinaisTemporais.obterMetadadosPagina(url, {
+          claim: pergunta,
+          claimType: opcoes.tipoAfirmacao
+        });
+        return [url, resultado];
+      } catch (erro) {
+        return [url, { status: "UNAVAILABLE", reason: "METADATA_FETCH_ERROR", detail: erro.message, signals: [] }];
+      }
+    }))
+  ]);
+
+  const metadadosPaginaPorUrl = new Map(metadadosPaginas);
 
   const extracoesPorUrl = new Map(
     dadosExtracao.resultados.map(resultado => [
@@ -436,6 +448,36 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
       dataPublicacaoOriginal
     );
 
+    const metadadosPagina = metadadosPaginaPorUrl.get(resultado.url) ?? {
+      status: "SKIPPED", reason: "URL_NOT_SELECTED_FOR_METADATA", signals: []
+    };
+    const sinaisExtraidosDoConteudo = sinaisTemporais.extrairSinaisTemporais({
+      html: conteudoOriginal,
+      claim: pergunta,
+      claimType: opcoes.tipoAfirmacao
+    });
+    const sinaisData = [
+      ...(dataPublicacaoOriginal ? [{
+        signal_type: "TAVILY_PUBLISHED_DATE_ESTIMATE",
+        field: "published_date",
+        value_original: dataPublicacaoOriginal,
+        value_normalized: dataPublicacao,
+        source: "TAVILY_SEARCH_RESULT",
+        scope: "PAGE"
+      }] : []),
+      ...(metadadosPagina.signals ?? []),
+      ...sinaisExtraidosDoConteudo
+    ];
+    const datasAtributo = [...new Set(sinaisData
+      .filter(sinal => sinal.scope === "ATTRIBUTE" && sinal.value_normalized)
+      .map(sinal => sinal.value_normalized))];
+    const dataAtributo = datasAtributo.length === 1 ? datasAtributo[0] : null;
+    if (datasAtributo.length > 1) {
+      sinaisData.push({ signal_type: "ATTRIBUTE_DATE_CONFLICT", scope: "UNKNOWN",
+        values: datasAtributo, source: "SIGNAL_RECONCILIATION" });
+    }
+    const sinalCanonical = sinaisData.find(sinal => sinal.signal_type === "HTML_CANONICAL_URL");
+
     return {
       tipo_fonte: tipoFonte,
       titulo: resultado.title,
@@ -443,8 +485,12 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
       conteudo: conteudoOriginal,
       normalizacao,
       coletado_em: coletadoEm,
-      data_publicacao: dataPublicacao,
-      data_atualizacao: null,
+      data_publicacao: dataAtributo ? null : dataPublicacao,
+      data_atualizacao: dataAtributo,
+      // Tavily Search fornece uma data associada ao resultado/página. Ela não
+      // demonstra quando um atributo específico (ex.: preço) foi atualizado.
+      escopo_data: dataAtributo ? "ATTRIBUTE" : dataPublicacao ? "PAGE" : "UNKNOWN",
+      canonical_url: sinalCanonical?.value_original ?? null,
       relevancia: resultado.score ?? null,
 
       metadados_provedor: {
@@ -459,6 +505,14 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
         buscas: resultado._origens_busca ?? [],
         raw_content_busca: resultado.raw_content ?? null,
         data_publicacao_original: dataPublicacaoOriginal,
+        sinais_data: sinaisData,
+        metadados_pagina: {
+          status: metadadosPagina.status,
+          motivo: metadadosPagina.reason ?? null,
+          detalhe: metadadosPagina.detail ?? null,
+          url_final: metadadosPagina.final_url ?? null,
+          capturado_em: metadadosPagina.captured_at ?? null
+        },
 
         extracao: {
           tentada: urlsSelecionadas.includes(resultado.url),
@@ -534,6 +588,8 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
         resultado_id:
           evidencia.metadados_provedor.resultado_id,
         relevancia: evidencia.relevancia,
+        sinais_data: evidencia.metadados_provedor.sinais_data,
+        metadados_pagina: evidencia.metadados_provedor.metadados_pagina,
         extracao: {
           tentada:
             evidencia.metadados_provedor.extracao.tentada,
