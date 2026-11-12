@@ -1943,3 +1943,38 @@ Sessão de continuidade com Claude (auditoria em `MATRIZ_AUDITORIA.md`,
   escondia a contradição. Segunda execução real (Node.js 20 LTS) → 58 s,
   CONTRADICAO_FRACA. `teste-agregador.js` atualizado.
 
+## 36. Veracidade multi-fonte, português e interface em inglês — 12/11/2026 (noite)
+
+**Mudança de foco pedida pela Alice:** o ponto central não é a data, e sim o
+quão verídica é a afirmação diante de várias fontes (oficiais, notícias,
+referências, blogs), com o contexto da pergunta. A data é uma dimensão. O
+desafio continua exigindo freshness score por afirmação, que foi mantido.
+O português (nuances, expressões, formatos) é um diferencial explícito.
+
+Implementado:
+- `src/tipo-fonte.js`: tipo da fonte (OFICIAL, NOTICIA, REFERENCIA, OUTRO,
+  BLOG_FORUM) por domínio, governo e origem da busca.
+- `src/tavily.js`: busca de notícias (`topic: news`), `country: brazil` para
+  afirmações em português (só no tópico geral), seleção diversa de até 6
+  fontes sem repetir domínio. Opcionais; sem elas, comportamento antigo.
+- `src/analise-lote.js`: uma chamada ao modelo por afirmação para todas as
+  fontes; validação estrita; citação-chave conferida no texto da fonte;
+  regras de segurança, data de referência e nuances do português.
+- `src/concordancia.js`: índice de concordância 0–100 entre grupos
+  independentes, pesos por tipo (oficial 3, notícia 2, referência 2, outro 1,
+  blog 0,5); cobertura STRONG/MODERATE/WEAK. Novo veredito CORROBORADA.
+  Contradição dominante (índice ≤ 20, ≥ 2 contradições) vira
+  CONTRADICAO_FRACA; o inverso continua CONFLITO (só alerta, nunca tranquiliza).
+- `src/portugues.js`: idioma, R$ e números pt-BR, escalas ("5 mil", "2,5 bi"),
+  qualificadores ("a partir de", "até", "cerca de", "mais de"...), datas por
+  extenso e dd/mm/aaaa, marcadores de presente ("atualmente"), comparação de
+  valores respeitando qualificadores.
+- Interface reescrita em inglês: hero, exemplos EN e PT, cartões com
+  veredito, concordância, atualidade, mistura de evidências, leitura do
+  português, citações e datas; notas do motor traduzidas.
+- Modo exemplo com dois exemplos (EN e PT) usando o motor real.
+- Critério 5: retentativa idempotente em `salvarVerificacao` (18/18 aprovados).
+- Testes: 47 arquivos offline passando.
+
+Pendente: execução real do novo pipeline (lote + notícias) com Tavily e
+Bifrost; atualizar o deck com concordância e português; vídeo opcional.

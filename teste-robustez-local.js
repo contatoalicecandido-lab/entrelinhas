@@ -226,15 +226,19 @@ function testarRetentativaSemDuplicacao() {
   try {
     banco.salvarVerificacao(payload);
     assert.equal(banco.listarHistoricoFonte(url).length, 1);
-    assert.throws(
-      () => banco.salvarVerificacao(payload),
-      /UNIQUE constraint failed/i
-    );
+    // Critério 5: a repetição idêntica é um sucesso idempotente.
+    assert.equal(banco.salvarVerificacao(payload), idVerificacao);
     assert.equal(
       banco.listarHistoricoFonte(url).length,
       1,
-      "A repetição deve falhar sem duplicar a evidência ou a aquisição."
+      "A repetição deve ter sucesso sem duplicar a evidência ou a aquisição."
     );
+    // Mesmo ID com conteúdo diferente é recusado, sem alterar o histórico.
+    assert.throws(
+      () => banco.salvarVerificacao({ ...payload, texto_original: "Conteúdo alterado" }),
+      /já foi gravada com outro conteúdo/
+    );
+    assert.equal(banco.listarHistoricoFonte(url).length, 1);
     assert.equal(
       banco.listarHistoricoFonte(url)[0].coleta.id_coleta,
       "coleta-retentativa"
@@ -252,7 +256,7 @@ async function main() {
   testarRollbackSQLiteEmMemoria();
   console.log("PASSOU: erro na persistência reverteu todos os registros no SQLite em memória.");
   testarRetentativaSemDuplicacao();
-  console.log("PASSOU: retentativa da mesma persistência falhou sem duplicar registros (idempotência de sucesso ainda não existe).");
+  console.log("PASSOU: retentativa idêntica é sucesso idempotente sem duplicar; mesmo ID com conteúdo diferente é recusado.");
   console.log("Nenhuma chamada de rede real ou banco de produção foi utilizada.");
 }
 

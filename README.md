@@ -1,48 +1,40 @@
-
 # Entrelinhas
 
-### Freshness-aware evidence verification for AI applications
+### Is this AI answer still true today? Multi-source, freshness-aware fact checking for AI applications
 
-Entrelinhas is an evidence verification layer designed to help AI applications assess not only whether information is supported by sources, but also whether that evidence is still current.
+Entrelinhas checks AI-generated answers claim by claim. For every claim it gathers live evidence from different kinds of sources (official sites, news, references, other websites, blogs and forums), lets a model read them through the Bifrost gateway, and reports:
 
-It combines web research, evidence preparation, source comparison, temporal validation, and traceability to make AI-generated information easier to inspect and evaluate.
+- **a verdict** (Current, Corroborated, Supported but unconfirmed, Conflicting, Contradicted by sources, Likely outdated, Not verifiable);
+- **source agreement (0–100)**: how much independent sources agree, weighted by source type;
+- **a freshness score (0–100) per claim**: how recent the date tied to that exact fact is;
+- **the evidence itself**: every source with its stance, a key quote checked against the source text, the model's reason and its published / updated / retrieved dates.
 
-**The central idea:** evidence should not be treated as permanently valid just because it was once accurate.
+It is **Portuguese-aware**: Brazilian number formats, currency, qualifiers such as “a partir de”, “até” and “cerca de”, dates written out in Portuguese and present-tense markers such as “atualmente” are read the way a Brazilian reader means them.
+
+**The central idea:** an answer is not true because one page says so, and it is not current because a page was published recently. Entrelinhas weighs many independent voices and treats time as one dimension of truth.
 
 ## The problem
 
-AI applications can retrieve relevant sources and still produce outdated answers.
-
-A source may support a claim while its information has already changed. A publication date does not necessarily indicate when the information was last updated, and the moment a source is collected does not prove that its content is current.
-
-Entrelinhas addresses this problem by introducing a temporal and traceable evidence layer into AI workflows.
+AI applications retrieve relevant sources and still give wrong or outdated answers. A cited page can be official and relevant while the fact it supports has already changed; a claim can be repeated by ten copies of one article; a price written “a partir de R$ 99,90” can be read as an exact price. Users need to see, claim by claim, what independent sources say today.
 
 ## What Entrelinhas does
 
-The project is designed around five principles:
-
-- **Evidence traceability:** preserve source information and the history of evidence used in verification.
-- **Temporal intelligence:** evaluate evidence using publication and update dates, rather than treating collection time as proof of freshness.
-- **Critical evaluation:** distinguish supported, outdated, conflicting, and unverifiable evidence.
-- **Evidence memory:** persist collected evidence and comparison history for later inspection.
-- **Explainability:** retain the information and reasoning behind verification outcomes.
+1. **Splits the answer** into atomic claims and assigns each a category with its own validity window (prices 30 days, API versions 90, companies 180, regulations 365), detected by the model with keyword rules as fallback.
+2. **Gathers diverse evidence with Tavily**: a general search (boosted to Brazil for Portuguese claims), a news search, and an optional official-domain search; up to five sources of different types are extracted, never two from the same site.
+3. **Reads all sources for a claim in one Bifrost call**: same object? supports, contradicts or inconclusive? The model receives today's date and the Portuguese reading notes; its output is validated and every key quote must exist in the source text.
+4. **Weighs and explains deterministically**: copies and same-site pages count once, source types are weighted (official 3, news 2, reference 2, other 1, blog/forum 0.5), agreement and freshness are computed, and a verdict is produced. Risky directions are conservative: a dominant contradiction raises a warning, but a contradiction is never hidden behind majority support.
+5. **Stores everything** in SQLite: claims, sources, collection IDs, model calls and search operations.
 
 ## How it works
 
-The current backend prototype contains components for the following workflow:
-
-1. **Claim preparation:** organize information for verification.
-2. **Web research:** retrieve relevant sources using Tavily Search.
-3. **Source extraction:** collect source content using Tavily Extract.
-4. **Evidence preparation:** select relevant passages while preserving important information.
-5. **Source correspondence:** evaluate the relationship between claims and collected evidence.
-6. **Temporal validation:** assess evidence freshness using available source dates and claim-specific validity periods.
-7. **Page metadata signals:** for up to three extracted URLs, make a bounded, read-only HTTPS GET to inspect HTTP `Last-Modified`, HTML/JSON-LD dates, canonical URLs, and explicit dates visibly tied to a claim value.
-8. **Evidence comparison:** identify textual changes between collected source snapshots.
-9. **Impact evaluation:** assess the relevance of detected changes.
-10. **Aggregation and persistence:** consolidate results and preserve evidence history in SQLite.
-
-These components are connected in `src/verificador.js` and exposed through two entry points: a **local web interface** (`npm run web`) and a **command-line demo** (`node demo.js`). `index.js` remains a minimal connectivity smoke test.
+```text
+AI answer
+  └─ claims + category + Portuguese reading        (Bifrost model + deterministic rules)
+       └─ general + news + official search, extract (Tavily)
+            └─ one batch analysis per claim         (Bifrost model, validated)
+                 └─ grouping, weights, dates        (deterministic)
+                      └─ verdict · agreement · freshness · evidence   (web UI, SQLite)
+```
 
 ## Freshness assessment
 
@@ -100,7 +92,17 @@ This is an HTTP API integration with Bifrost, not a native Bifrost plugin or ext
 
 The selected problem statement is **Build a Stale-Answer Detector for AI Applications**. The submission form presents one Problem Statement selector; this challenge explicitly requires using both Tavily and Bifrost. **Open-Source Bifrost Gateway (B4) is not selected.**
 
-**What the prototype covers today:** claim decomposition of an LLM answer; automatic claim categorization into the challenge's four categories (prices, API versions, regulations, company information); live re-verification with Tavily Search/Extract; Bifrost-routed model analysis of source correspondence and stance; date-scope-aware temporal states; a **freshness score per claim** (0–100, or explicitly “not determinable”); deterministic aggregation into a verdict such as *Current* or *Likely outdated*; SQLite traceability; and a local web interface. The freshness score is an uncalibrated, documented heuristic, not a probability of truth. A synthetic labeled evaluation is included; real-world accuracy still needs a human-labeled benchmark.
+**Challenge requirements and where they are met:**
+
+| Requirement | How Entrelinhas meets it |
+|---|---|
+| Identify potentially stale information in LLM answers | The answer is split into claims; each gets a verdict. *Likely outdated* and *Contradicted by sources* flag stale or wrong claims; present-tense claims are checked against deadlines written in the sources. |
+| Focus on prices, API versions, regulations, company information | Four claim categories, each with its own validity window, assigned automatically (`src/tipo-afirmacao.js`). |
+| Re-validate against current web sources | Tavily general, news and official-domain searches plus extraction of diverse sources (`src/tavily.js`, `src/tipo-fonte.js`). |
+| Freshness score per claim | `agregacao.freshness.score` (0–100, or explicitly not determinable), plus a separate low-confidence page-date recency (`src/freshness-score.js`). |
+| Use Tavily and Bifrost | Every search/extraction goes through Tavily; every model call goes through the Bifrost HTTP gateway (`src/bifrost.js`). |
+
+Beyond the requirements: source agreement across independent, typed sources (`src/concordancia.js`), Portuguese-aware reading (`src/portugues.js`), batch analysis with validated quotes (`src/analise-lote.js`), full traceability and 47 offline test files. The scores are documented heuristics, not calibrated probabilities; a human-labeled real-world benchmark is future work.
 
 The Bifrost HTTP integration is the model-provider path required by the selected stale-answer challenge; it is not represented as a new Bifrost gateway feature. See [challenge alignment and implementation prerequisites](submission/TRACK_ALIGNMENT.md).
 
@@ -113,17 +115,14 @@ npm run web            # live mode if TAVILY_API_KEY and BIFROST_KEY are set; ex
 npm run web:exemplo    # example mode only: no keys, no network, no cost
 ```
 
-Open <http://localhost:3000>, paste an AI-generated answer and click **Check claims**. Each claim gets a card with:
+Open <http://localhost:3000>, paste an AI-generated answer and click **Check answer**. The page is in English and accepts answers in English or Portuguese. Each claim gets a card with the verdict, source agreement, freshness, the evidence mix by source type, how the Portuguese was read (when relevant), every source with its key quote and dates, and the limitations.
 
-- a verdict (*Current*, *Likely outdated*, *Contradicted by sources*, *Supported, freshness unconfirmed*, *Conflicting* or *Not verifiable*);
-- the freshness score (0–100), or “no fact-level date” when no source ties a date to the specific fact; in that case a separate, clearly labeled **page-date recency** (low confidence) shows whether the dated sources found are recent or old, without replacing the official score;
-- the detected category and its validity window, and whether the category was set by the user, suggested by the model or matched by keyword rules;
-- every source with its stance, official badge, excerpt, model justification and the published / updated / retrieved dates, with an explicit note on whether the date is tied to the specific fact;
-- limitations and a traceability footer (verification ID, model calls, search operations).
+**Example mode** runs the real engine (categories, Portuguese reading, agreement, freshness, verdicts, SQLite) on two built-in answers with fictional `.example` sources and simulated search/model responses; the page labels it as simulated.
 
-**Example mode** runs the real verdict and freshness engine on a fixed demo answer with fictional sources and simulated search/model responses; the page labels it as simulated. It shows the three key outcomes: a current price (score 72), an API endpoint contradicted by a recent official changelog (likely outdated), and a regulation supported by an undated official page (no score).
+- English example: a current price (freshness 72), an API endpoint retired by a recent official changelog (likely outdated), and a regulation corroborated by official, news and reference sources.
+- Portuguese example: “custa **a partir de** R$ 99,90 por mês” is compatible with an official page listing R$ 99,90 to R$ 119,90 (current), and “**atualmente** tem **cerca de 5 mil** funcionários” is contradicted by news and a reference saying 3,200 today (contradicted by sources).
 
-Live mode reads 2 sources per claim by default (`ENTRELINHAS_MAX_FONTES`, 1–5): every source costs two model calls, and on free model tiers the provider's rate limit dominates latency (a first live run with 3 sources per claim took about 5 minutes for 2 claims because of automatic waits and retries).
+Live mode reads up to 5 diverse sources per claim (`ENTRELINHAS_MAX_FONTES`, 1–6) with a single model call per claim, so it stays usable on free model tiers.
 
 The server binds to `127.0.0.1` only, handles one verification at a time, caps input (4,000 characters, 6 claims), sends a strict Content-Security-Policy, renders all content as text, never returns credentials and stores every verification in SQLite `:memory:`.
 
@@ -222,7 +221,7 @@ The Groq provider API key belongs in the Bifrost configuration, not in the Entre
 npm test
 ```
 
-`npm test` runs `rodar-testes.js`, which executes all 41 offline test files and prints a summary. Every test uses simulated Tavily/Bifrost responses and SQLite `:memory:`; credentials are blanked for the run, so no paid call is possible. Coverage includes freshness scoring, date scopes, claim categorization, aggregation policy (including adversarial cases), source independence, Tavily collection IDs, the 18 temporal-comparison criteria, persistence, robustness against malformed model output, and the web server (input validation, size limits, CSP, no credential exposure).
+`npm test` runs `rodar-testes.js`, which executes all 47 offline test files and prints a summary. Every test uses simulated Tavily/Bifrost responses and SQLite `:memory:`; credentials are blanked for the run, so no paid call is possible. Coverage includes Portuguese reading (numbers, currency, qualifiers, dates), source types and diverse selection, batch analysis validation, source agreement and verdict rules, freshness scoring, date scopes, claim categorization, aggregation policy (including adversarial cases), source independence, Tavily collection IDs, the 18 temporal-comparison criteria, persistence, robustness against malformed model output, and the web server (input validation, size limits, CSP, no credential exposure).
 
 ### 6. Start the web interface
 

@@ -35,3 +35,10 @@ Documentos registram **15/11/2026 às 23h59 (fuso não confirmado)**. Não conse
 - **Documentação de submissão** (`FORM_COPY.md`, `TRACK_ALIGNMENT.md`, README, CONTEXTO §3.1) corrigida para o estado real.
 - **Git**: backups, builds e decks ficaram fora pelo `.gitignore` (continuam no disco).
 - **Pendente**: execução real com o código final; revisão dos pitch decks (remover B4); vídeo opcional.
+
+## Atualização — 12/11/2026 (noite)
+- Foco do produto: veracidade por concordância entre fontes diversas + atualidade (exigida pelo desafio) + português.
+- Novo pipeline (notícias, fontes diversas, análise em lote, concordância, nuances do português) implementado e testado offline: **47/47**.
+- Interface nova, toda em inglês, com exemplos em inglês e português.
+- 18/18 critérios temporais aprovados (critério 5 resolvido).
+- Pendente: execução real do novo pipeline; deck atualizado; push.

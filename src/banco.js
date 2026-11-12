@@ -362,6 +362,21 @@ function criarBanco(opcoes = {}) {
       id_verificacao: idVerificacao
     };
 
+    // Retentativa idempotente (critério 5): repetir a gravação do MESMO
+    // resultado devolve sucesso sem duplicar nada; reutilizar o mesmo ID com
+    // conteúdo diferente é recusado, para nunca sobrescrever um histórico.
+    const existente = banco
+      .prepare("SELECT resultado_json FROM verificacoes WHERE id = ?")
+      .get(idVerificacao);
+    if (existente) {
+      if (existente.resultado_json === JSON.stringify(resultadoCompleto)) {
+        return idVerificacao;
+      }
+      throw new Error(
+        `A verificação ${idVerificacao} já foi gravada com outro conteúdo; a gravação foi recusada para preservar o histórico.`
+      );
+    }
+
     banco.exec("BEGIN");
 
     try {

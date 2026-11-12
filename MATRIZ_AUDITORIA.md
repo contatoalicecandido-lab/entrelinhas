@@ -12,7 +12,7 @@
 | 2 | Três URLs extraídas em uma chamada recebem IDs distintos | APROVADO | `teste-tavily-coletas-simulado.js` (no `npm test`) — "cada aquisição possui três id_coleta distintos" |
 | 3 | Nova verificação ≠ nova versão de página | APROVADO (casos testados) | `teste-auditoria-temporal-criterios-7-10-12-13.js` — 13/13 |
 | 4 | Evidências da mesma verificação nunca comparadas como evolução | APROVADO (casos testados) | idem — 13/13 |
-| 5 | Retentativas da mesma aquisição não duplicam a coleta | **PARCIAL** | `teste-robustez-local.js` — não duplica, mas a 2ª tentativa **falha com erro** (chave única) em vez de responder sucesso idempotente. Falta decisão de produto. |
+| 5 | Retentativas da mesma aquisição não duplicam a coleta | APROVADO (12/11, tarde) | `src/banco.js` `salvarVerificacao`: repetição idêntica devolve o mesmo ID sem duplicar; mesmo ID com conteúdo diferente é recusado. `teste-robustez-local.js` exit 0. |
 | 6 | Nova aquisição efetiva gera novo `id_coleta` | APROVADO | `teste-tavily-coletas-simulado.js` — "a segunda aquisição gerou IDs diferentes" |
 | 7 | Extração × extração compatível pode ser comparada | APROVADO | auditoria temporal 13/13 |
 | 8 | Snippet × snippet exige consulta/parâmetros compatíveis | APROVADO | `teste-compatibilidade-snippets.js` — 3/3 |
@@ -27,4 +27,4 @@
 | 17 | Igual → `UNCHANGED` só se a comparação é válida | APROVADO (casos testados) | auditoria 13/13 |
 | 18 | Diferente → `CHANGED` só se a comparação é válida | APROVADO (casos testados) | auditoria 13/13 |
 
-**Resumo:** 17 aprovados (vários "nos casos testados"), 1 parcial (critério 5), 0 reprovados.
+**Resumo (atualizado 12/11 tarde):** 18 aprovados (vários "nos casos testados"), 0 parciais, 0 reprovados.

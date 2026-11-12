@@ -1,120 +1,78 @@
 # HackCulture submission copy — Stale-Answer Detector
 
-**Selected Problem Statement:** Build a Stale-Answer Detector for AI Applications.
+**Selected Problem Statement:** Build a Stale-Answer Detector for AI Applications (requires Tavily and Bifrost). Open-Source Bifrost Gateway (B4) is not selected and no B4 contribution is claimed.
 
-**Status (updated 12 Nov 2026):** working prototype for the stale-answer challenge: claim decomposition, automatic claim categories, live Tavily re-verification, Bifrost-routed analysis, a per-claim freshness score, verdicts such as *Likely outdated*, and a local web interface. The freshness score is an uncalibrated heuristic and real-world accuracy has not been benchmarked. B4 is not selected and no B4 contribution is claimed.
-
-## Form selections
-
-- **Problem Statement:** **Build a Stale-Answer Detector for AI Applications**.
-- The form uses one Problem Statement selection. This statement explicitly calls for both Tavily and Bifrost.
-
-The submission selects the stale-answer challenge directly. It does not select Open-Source Bifrost Gateway.
+**Status (12 Nov 2026):** working prototype with a local web interface, live Tavily + Bifrost verification, a no-key example mode and 47 offline test files.
 
 ## Project title
 
-Entrelinhas — Evidence Freshness for AI Answers
+Entrelinhas — Is this AI answer still true today?
 
 ## Short description
 
-Entrelinhas takes an AI-generated answer, splits it into claims, re-checks each one against live sources found with Tavily, analyses them with a model through Bifrost, and gives every claim a verdict (current, likely outdated, unconfirmed, conflicting) and a 0–100 freshness score, with sources and dates you can inspect.
+Entrelinhas checks AI-generated answers claim by claim against live, diverse sources found with Tavily (official sites, news, references, blogs) and read by a model through Bifrost. Each claim gets a verdict, a source-agreement score, a freshness score and the exact evidence behind it, in English or Portuguese.
 
 ## Project description
 
-AI answers can cite a relevant page and still repeat a fact that has changed. Entrelinhas is a backend prototype for checking individual claims against live sources and making evidence, dates, and uncertainty inspectable.
+AI answers can cite a relevant page and still be wrong or out of date. Entrelinhas splits an answer into atomic claims and tags each as a price, API version, regulation or company fact, each with its own validity window. For every claim it runs a general search, a news search and an optional official-domain search with Tavily, extracts up to five sources of different types (never two from the same site) and sends them to a model through the Bifrost gateway in a single call that decides, source by source, whether it is about the same object and whether it supports or contradicts the claim. The model receives today's date, so a source saying “Active LTS until October 2024” contradicts “is the current LTS” in 2026; its output is validated and each key quote must exist in the source text.
 
-The verifier decomposes an LLM answer into atomic claims and assigns each one a category (price, API version, regulation, company information) — set by the caller, suggested by the model, or matched by keyword rules as a fallback. It searches and extracts evidence with Tavily (with an optional extra search restricted to official domains) and uses a model through Bifrost to judge whether each source is about the same object and whether it supports or contradicts the claim. Deterministic rules then read publication/update dates, keep only dates tied to the specific fact, and compute a per-claim freshness score that halves every half validity window (prices 30 days, API versions 90, companies 180, regulations 365). A deterministic aggregator turns the evidence into a verdict, e.g. *Likely outdated* when a current official source contradicts the claim. SQLite records the verification, evidence, collection IDs and provider metadata. A local web interface shows a card per claim with verdict, score, sources, excerpts, dates and limitations.
+Deterministic rules then group copies and same-site pages, weigh source types, compute a source-agreement score (0–100) and a freshness score per claim (0–100, from a date tied to that exact fact; otherwise explicitly not determinable, with a separate low-confidence page-date recency), and produce a verdict: Current, Corroborated, Supported but unconfirmed, Conflicting, Contradicted by sources, Likely outdated or Not verifiable. Everything is stored in SQLite for traceability.
 
-The project uses Bifrost as its model gateway; it does not claim to extend the Bifrost gateway.
+Entrelinhas is Portuguese-aware: “R$ 1.234,56”, “a partir de” (starting price), “até” (upper bound), “cerca de 5 mil” (about 5,000), “atualmente” (must hold today), “12/11/2026” and “18 de setembro de 2020” are read the way a Brazilian reader means them, and Portuguese claims get search results boosted to Brazil.
 
-## User problem, solution, differentiator, and potential impact
+## User problem, solution, differentiator and potential impact
 
-**Problem:** a sourced AI answer may still rely on information that changed, while retrieval time alone does not establish when a source was updated. For sensitive answers, false certainty can mislead decisions.
+**Problem:** a sourced AI answer may rely on a fact that changed, on one page repeated by many copies, or on a misread qualifier. Users cannot see which part of an answer to trust.
 
-**Solution:** inspect individual claims against retrieved sources, separate evidence support from date-based freshness, and return a cautious outcome with traceable sources and explicit uncertainty.
+**Solution:** claim-level re-verification against diverse live sources, with verdict, agreement, freshness and evidence shown side by side.
 
-**Differentiator:** freshness is treated as a separate question from whether a source supports a claim. A page's publication date or the time we retrieved it is never passed off as proof that a specific price or API detail is current; only dates tied to the fact count. Missing or invalid dates stay visible as uncertainty instead of becoming a confident score, and evidence count is not presented as probability of truth.
+**Differentiators:** many independent voices instead of one link; freshness that refuses to guess (publish dates and retrieval time never become proof that a fact is current); Portuguese-aware reading; conservative rules that raise warnings but never hide a contradiction; full traceability and reproducible offline tests.
 
-**Potential impact:** if developed and evaluated, this approach could help AI application teams identify answers that need rechecking before reuse, particularly for prices, API behavior, policies, and other changing facts. This is a potential benefit, not a measured deployment result.
+**Potential impact:** AI products, support teams and content teams could flag answers to recheck before reuse, especially prices, API behaviour, regulations and company facts, including for Portuguese-speaking users. This is a potential benefit, not a measured deployment result.
 
 ## Challenge requirements and status
 
 | Requirement | Status |
 |---|---|
-| Identify potentially stale information in LLM answers | Done: answer → atomic claims → verdict per claim (*Likely outdated* when a current official source contradicts). |
-| Focus on prices, API versions, regulations, company info | Done: four categories with their own validity windows; assigned automatically. |
-| Re-verify claims against live web sources | Done: Tavily Search + Extract, optional official-domain search. Live end-to-end runs recorded on 11 Nov; re-run with the final code pending (see below). |
-| Freshness score per claim | Done: 0–100 deterministic score from dates tied to the specific fact, or explicit “not determinable”; when absent, a separate low-confidence page-date recency index is shown. Uncalibrated. |
-| Use Tavily and Bifrost | Done: Tavily for search/extraction; every model call goes through the Bifrost HTTP gateway. |
-| Clear demo | Done: local web interface with a no-key example mode; CLI demo for live runs. |
-
-## Track fit and honest status
-
-### Stale-answer challenge (Tavily + Bifrost)
-
-The prototype performs claim decomposition with automatic categories, live Tavily Search/Extract, Bifrost-routed correspondence/stance analysis, date-scope-aware states (`FRESH`, `STALE`, `UNVERIFIABLE`), a per-claim freshness score (`agregacao.freshness.score`), deterministic verdicts, SQLite traceability and a local web interface. `score_qualidade_evidencia` is a separate evidence-quality number and is not presented as the freshness score. The live end-to-end evaluation is limited and is not an accuracy benchmark.
-
-### Bifrost B4 — not yet satisfied
-
-The current Node.js code uses the Bifrost HTTP gateway as an LLM client. It does not extend Bifrost, implement a Bifrost plugin, or provide an upstream pull request. The HTTP-to-cache policy bridge is an unvalidated proposal, not a shipped feature. Before claiming novelty, verify whether the HTTP transport already exposes the semantic cache's internal per-request TTL/no-store controls.
-
-There is already a public Bifrost proposal for a general freshness-check plugin (issue #9748). Any HTTP-to-cache policy contribution must be checked against that work and the existing cache controls before coding or claiming novelty.
+| Identify potentially stale information in LLM answers | Done: per-claim verdicts; *Likely outdated* and *Contradicted by sources*; deadline-aware stance with today's date. |
+| Prices, API versions, regulations, company information | Done: four categories with validity windows, assigned automatically. |
+| Re-validate against current web sources | Done: Tavily general, news and official-domain search and extraction. Live runs recorded on 11–12 Nov; the final batch pipeline must be re-run live before recording the demo. |
+| Freshness score per claim | Done: 0–100 or explicitly not determinable, plus low-confidence page-date recency. Uncalibrated heuristic. |
+| Use Tavily and Bifrost | Done: all search via Tavily; all model calls via the Bifrost HTTP gateway (tested setup routes to Groq GPT-OSS 20B). |
 
 ## Architecture and technology
 
-### Implemented
-
-- Node.js and JavaScript verification backend.
-- Tavily Search and Extract for live evidence discovery and extraction.
-- Bifrost HTTP gateway; in the tested setup it routed to Groq GPT-OSS 20B.
-- Deterministic date validation, claim-type freshness windows, and evidence aggregation.
-- SQLite traceability and source-snapshot history.
-
-### Proposed for B4
-
-- A possible Bifrost HTTP/API bridge to existing semantic-cache per-request TTL/no-store controls.
-- If maintainers confirm the gap, enforce `effective TTL = min(operator maximum, verified response limit)`; a caller must never lengthen the operator's maximum.
-- Treat stale or unverifiable evidence conservatively and avoid extending cache lifetime.
-- Add upstream documentation, tests across supported response types/streams, and request-path performance measurements.
-
-The precise API/header contract and exact Bifrost integration point remain open until the upstream source is checked. Public Helm documentation describes a configured semantic-cache TTL; it is not yet enough evidence to assert that the current source lacks every per-request override.
+- Node.js 22.5+ (built-in `node:sqlite`), no framework; local web server on 127.0.0.1.
+- Tavily Search (general, news, official domains; country boost) and Tavily Extract.
+- Bifrost HTTP gateway for decomposition and batch evidence analysis.
+- Deterministic modules: claim categories, Portuguese reading, source types, dependency grouping, source agreement, freshness score, verdict rules.
+- SQLite traceability of verifications, evidence, collections and provider operations.
 
 ## What has been demonstrated
 
-- A claim-verification flow using live Tavily and Bifrost integrations, available from the web interface and the CLI.
-- A web interface whose example mode runs the real verdict/score engine on simulated sources and shows a current claim (score 72), an outdated claim contradicted by a recent official changelog, and a supported claim without a dated source (no score).
-- A controlled live example where official documentation supported the claim but the page's publication/update date was not verifiable; the outcome was weak support, not a claim of confirmed current truth.
-- Automated regression coverage for freshness, evidence, persistence, source comparison, and controlled integration behavior.
-
-This evidence is an integration demonstration, not a broad accuracy evaluation.
+- Live runs with Tavily and Bifrost: a Node.js 20 LTS claim was first marked supported by a page saying LTS ended in October 2024; after giving the model today's date it was flagged as contradicted (58 s, down from 307 s).
+- The web interface in example mode, in English and Portuguese, with the real engine.
+- 47 offline test files (simulated providers, in-memory database), including the 18 temporal-history audit criteria.
 
 ## Limitations
 
-- Local web interface only; no hosted demo.
-- The freshness score is a documented heuristic, not calibrated against labeled real-world data.
-- Most real pages do not tie a date to the specific fact, so many live claims will honestly show “no dated evidence”.
-- No Bifrost-side integration or upstream pull request; the proposed HTTP-facing gap has not yet been confirmed.
-- No broad evaluation across stale/current/timeless claims, categories, source types, and failures.
-- Attribute-level update-date detection and reused/syndicated-source detection remain open work.
-- Freshness, official status, or source agreement is not a guarantee of truth.
+- Local web interface; no hosted demo.
+- Agreement and freshness scores are documented heuristics, not calibrated probabilities; independent sources can share the same error.
+- Most real pages do not tie a date to a specific value, so the strict freshness score is often not determinable; page-date recency is shown with low confidence.
+- Source types come from domain lists and search origin, not from an editorial authority model.
+- Free model tiers add waiting time under rate limits.
 
 ## Repository and demo
 
 Public repository: https://github.com/contatoalicecandido-lab/entrelinhas
 
-The public repository history begins on 7 November 2026, within the published event window. This describes Git history and does not claim that a commit timestamp alone proves when every component was developed.
-
-No hosted demo URL is available. Run `npm run web:exemplo` for the no-key demo or `npm run web` with Tavily and Bifrost configured for live verification; `node demo.js` offers the same flow in the terminal. Live runs consume provider usage and store data only in SQLite `:memory:`. Do not claim a video is attached unless one is recorded and uploaded.
+Run `npm run web:exemplo` for the no-key demo, or `npm run web` with Tavily and Bifrost configured for live verification. Do not claim a video is attached unless one is recorded and uploaded.
 
 ## AI-use disclosure
 
-The project uses a model through Bifrost for claim decomposition, source correspondence, and evidence-stance analysis. Deterministic application code evaluates dates and aggregates results. AI assistance was used in development; complete any platform-specific AI disclosure truthfully.
+The product uses a model through Bifrost for claim decomposition and evidence analysis; dates, agreement, scores and verdicts are computed by deterministic code. AI assistants were used during development; complete any platform-specific disclosure truthfully.
 
 ## Official challenge and submission sources
 
-- Event, B4/T1 wording, submission rules and combined-project instructions: https://hackculture.io/hackathons/ai-global-hackathon
+- Event page and rules: https://hackculture.io/hackathons/ai-global-hackathon
 - Geek Room event overview: https://www.geekroom.co.in/event/global-ai-hackathon
-- Bifrost plugin extension guide: https://github.com/maximhq/bifrost/blob/dev/docs/plugins/getting-started.mdx
-- Bifrost semantic cache configuration: https://github.com/maximhq/bifrost/blob/dev/docs/deployment-guides/helm/plugins.mdx
-- Bifrost semantic-cache package API, including internal per-request TTL and no-store context keys: https://pkg.go.dev/github.com/maximhq/bifrost/plugins/semanticcache
-- Existing overlapping Bifrost issue: https://github.com/maximhq/bifrost/issues/9748
