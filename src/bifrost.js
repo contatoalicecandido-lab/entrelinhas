@@ -7,7 +7,24 @@ const { AsyncLocalStorage } = require("node:async_hooks");
 // próprio Bifrost tenta os reservas em ordem, sem lógica de retentativa aqui.
 // Configurável por BIFROST_MODEL e BIFROST_FALLBACKS ("none" desliga).
 const MODELO_PADRAO = "groq/openai/gpt-oss-20b";
-const RESERVAS_PADRAO = ["groq/openai/gpt-oss-120b", "groq/llama-3.3-70b-versatile"];
+// llama-3.3-70b-versatile foi desligado pelo Groq em 16/08/2026; o substituto
+// recomendado é qwen/qwen3.6-27b. Cada modelo tem seu próprio limite de
+// tokens por minuto no plano gratuito, então reservas ampliam a capacidade.
+const RESERVAS_PADRAO = ["groq/openai/gpt-oss-120b", "groq/qwen/qwen3.6-27b"];
+// Limite de uso (HTTP 429) em todos os modelos: espera o tempo indicado pelo
+// Bifrost (retry_after_ms) e tenta de novo, no máximo uma vez.
+const ESPERA_MAXIMA_LIMITE_MS = 25000;
+const esperar = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+function tempoDeEspera(resposta, dados) {
+  const doCorpo = Number(dados?.extra_fields?.retry_after_ms);
+  if (Number.isFinite(doCorpo) && doCorpo > 0) return doCorpo;
+  const cabecalho = Number(resposta.headers.get("retry-after"));
+  if (Number.isFinite(cabecalho) && cabecalho > 0) return cabecalho * 1000;
+  const texto = JSON.stringify(dados ?? "");
+  const m = /try again in ([\d.]+)s/i.exec(texto);
+  return m ? Math.ceil(Number(m[1]) * 1000) : 10000;
+}
 // Modelo propositalmente inexistente, usado só na demonstração de failover.
 const MODELO_QUEDA_SIMULADA = "groq/entrelinhas-simulated-outage";
 
@@ -95,6 +112,7 @@ async function perguntarAoModelo(
     servido_por: null,
     latencia_total_s: null,
     tokens: null,
+    espera_limite_ms: null,
     modelo_resolvido: null,
     modelo_original: null,
     id_bifrost: null,
@@ -175,22 +193,28 @@ async function perguntarAoModelo(
     headers["x-bf-dim-stage"] = rastreabilidade.etapa;
 
     let resposta;
+    const corpoPedido = JSON.stringify({
+      model: modeloPedido,
+      messages,
+      stream: false,
+      ...(reservasDoPedido.length ? { fallbacks: reservasDoPedido } : {})
+    });
+    const enviar = () => fetch(
+      "http://localhost:8080/v1/chat/completions",
+      { method: "POST", headers, body: corpoPedido, signal: controller.signal }
+    );
 
     try {
-      resposta = await fetch(
-        "http://localhost:8080/v1/chat/completions",
-        {
-          method: "POST",
-          headers,
-          body: JSON.stringify({
-            model: modeloPedido,
-            messages,
-            stream: false,
-            ...(reservasDoPedido.length ? { fallbacks: reservasDoPedido } : {})
-          }),
-          signal: controller.signal
+      resposta = await enviar();
+      if (resposta.status === 429) {
+        const dados429 = await resposta.clone().json().catch(() => null);
+        const espera = tempoDeEspera(resposta, dados429);
+        if (espera <= ESPERA_MAXIMA_LIMITE_MS) {
+          rastreabilidade.espera_limite_ms = espera + 500;
+          await esperar(espera + 500);
+          resposta = await enviar();
         }
-      );
+      }
     } catch (erro) {
       rastreabilidade.erro = erro.message;
       await registrar(
@@ -346,6 +370,7 @@ module.exports = {
   perguntarAoGemini,
   configuracaoModelos,
   determinarFallback,
+  tempoDeEspera,
   executarComContextoGateway,
   MODELO_QUEDA_SIMULADA
 };

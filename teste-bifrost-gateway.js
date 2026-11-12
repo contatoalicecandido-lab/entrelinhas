@@ -23,7 +23,7 @@ async function principal() {
   const fetchOriginal = global.fetch;
   try {
     // 1. Configuração padrão e por variável de ambiente.
-    assert.deepEqual(configuracaoModelos(), { principal: "groq/openai/gpt-oss-20b", reservas: ["groq/openai/gpt-oss-120b", "groq/llama-3.3-70b-versatile"] });
+    assert.deepEqual(configuracaoModelos(), { principal: "groq/openai/gpt-oss-20b", reservas: ["groq/openai/gpt-oss-120b", "groq/qwen/qwen3.6-27b"] });
     process.env.BIFROST_FALLBACKS = "none";
     assert.deepEqual(configuracaoModelos().reservas, []);
     process.env.BIFROST_MODEL = "groq/x"; process.env.BIFROST_FALLBACKS = "groq/y, groq/x ,groq/z";
@@ -36,7 +36,7 @@ async function principal() {
     global.fetch = async (url, cfg) => { corpo = JSON.parse(cfg.body); cabecalhos = cfg.headers; return respostaBifrost(); };
     await perguntarAoModelo("pergunta", "instruções", { etapa: "ANALISE_EM_LOTE", onMetadata: m => { meta = m; } });
     assert.equal(corpo.model, "groq/openai/gpt-oss-20b");
-    assert.deepEqual(corpo.fallbacks, ["groq/openai/gpt-oss-120b", "groq/llama-3.3-70b-versatile"]);
+    assert.deepEqual(corpo.fallbacks, ["groq/openai/gpt-oss-120b", "groq/qwen/qwen3.6-27b"]);
     assert.equal(cabecalhos["x-bf-dim-stage"], "ANALISE_EM_LOTE");
     assert.equal(meta.foi_fallback, false);
     assert.deepEqual(meta.servido_por, { provedor: "groq", modelo: "openai/gpt-oss-20b" });
@@ -51,8 +51,8 @@ async function principal() {
     assert.equal(corpo.model, MODELO_QUEDA_SIMULADA);
     assert.equal(meta.queda_simulada, true);
     assert.equal(meta.foi_fallback, true);
-    assert.deepEqual(meta.cadeia_modelos, [MODELO_QUEDA_SIMULADA, "groq/openai/gpt-oss-20b", "groq/openai/gpt-oss-120b", "groq/llama-3.3-70b-versatile"]);
-    assert.deepEqual(corpo.fallbacks, ["groq/openai/gpt-oss-20b", "groq/openai/gpt-oss-120b", "groq/llama-3.3-70b-versatile"]);
+    assert.deepEqual(meta.cadeia_modelos, [MODELO_QUEDA_SIMULADA, "groq/openai/gpt-oss-20b", "groq/openai/gpt-oss-120b", "groq/qwen/qwen3.6-27b"]);
+    assert.deepEqual(corpo.fallbacks, ["groq/openai/gpt-oss-20b", "groq/openai/gpt-oss-120b", "groq/qwen/qwen3.6-27b"]);
     // Fora do contexto, nada é simulado.
     await perguntarAoModelo("pergunta", null, { onMetadata: m => { meta = m; } });
     assert.equal(corpo.model, "groq/openai/gpt-oss-20b");
@@ -65,6 +65,24 @@ async function principal() {
     assert.equal(determinarFallback({ modeloPedido: "groq/openai/gpt-oss-20b", provedorFinal: "groq", modeloFinal: "llama-3.3-70b-versatile" }), true);
     assert.equal(determinarFallback({ modeloPedido: "groq/a" }), null);
     ok("fallback detectado por routing_info, cabeçalho ou modelo que respondeu");
+    // 5. Limite de uso (429) em toda a cadeia: espera o tempo indicado e tenta de novo uma vez.
+    {
+      const { tempoDeEspera } = require("./src/bifrost");
+      const r = new Response("{}", { status: 429 });
+      assert.equal(tempoDeEspera(r, { extra_fields: { retry_after_ms: 1100 } }), 1100);
+      assert.equal(tempoDeEspera(r, { error: { message: "Please try again in 7.7025s." } }), 7703);
+      let chamadas = 0;
+      global.fetch = async () => {
+        chamadas += 1;
+        if (chamadas === 1) return new Response(JSON.stringify({ extra_fields: { retry_after_ms: 10 } }), { status: 429 });
+        return respostaBifrost();
+      };
+      await perguntarAoModelo("pergunta", null, { onMetadata: m => { meta = m; } });
+      assert.equal(chamadas, 2);
+      assert.equal(meta.espera_limite_ms, 510);
+      assert.equal(meta.status, "SUCESSO");
+      ok("limite de uso em toda a cadeia: espera o tempo pedido e tenta de novo");
+    }
   } finally {
     global.fetch = fetchOriginal;
   }
