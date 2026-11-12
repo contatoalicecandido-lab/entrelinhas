@@ -78,20 +78,38 @@ function gerarHashConteudo(conteudo) {
     .digest("hex");
 }
 
-async function fazerRequisicaoTavily(endpoint, corpo) {
-  const resposta = await fetch(
-    `https://api.tavily.com/${endpoint}`,
-    {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${process.env.TAVILY_API_KEY}`,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(corpo)
-    }
-  );
+// Tempo máximo de uma chamada à Tavily. Sem isso, uma conexão travada
+// deixaria a verificação inteira esperando indefinidamente.
+const TEMPO_LIMITE_TAVILY_MS = 45000;
 
-  const dados = await resposta.json();
+async function fazerRequisicaoTavily(endpoint, corpo) {
+  let resposta;
+  try {
+    resposta = await fetch(
+      `https://api.tavily.com/${endpoint}`,
+      {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${process.env.TAVILY_API_KEY}`,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(corpo),
+        signal: AbortSignal.timeout(TEMPO_LIMITE_TAVILY_MS)
+      }
+    );
+  } catch (erro) {
+    if (erro?.name === "TimeoutError" || erro?.name === "AbortError") {
+      throw new Error(`Erro Tavily: sem resposta em ${TEMPO_LIMITE_TAVILY_MS / 1000} segundos (${endpoint}).`);
+    }
+    throw erro;
+  }
+
+  let dados;
+  try {
+    dados = await resposta.json();
+  } catch {
+    throw new Error(`Erro Tavily (${resposta.status}): resposta não é JSON válido.`);
+  }
 
   if (!resposta.ok) {
     throw new Error(

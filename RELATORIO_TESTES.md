@@ -50,3 +50,13 @@ Mesmo ambiente isolado (cópia sem `.db`/`.env`, chaves vazias).
 - Interface verificada em Chrome headless (1280 px e 390 px): sem erros de console; layout conferido por captura de tela.
 - Testes manuais do servidor: rotas, 400/413/415/404, CSP, travessia de caminho bloqueada.
 - Integração real: ainda **não executada** com o código final (depende do Bifrost rodando no Mac).
+
+## Rodada 3 — execução real (12/11/2026, ~14h30, autorizada)
+Pela interface web no Mac (`npm run web`, Bifrost local + Groq, Tavily real, SQLite `:memory:`), com domínios oficiais `nodejs.org, platform.openai.com`.
+Texto: "Node.js 20 is the current Active LTS release. The OpenAI API offers the Chat Completions endpoint."
+- Duração: **~307 s**. O log mostra ~14 esperas por limite de uso do provedor do modelo (Groq), com novas tentativas automáticas — todas concluídas.
+- Afirmação 1 → categoria `versao_api` (detectada pelo modelo); 3 páginas oficiais nodejs.org (2 apoiam, 1 contradiz; datas de página 2023-04, 2023-10, 2026-01, escopo PAGE) → **CONFLITO**, índice `null`.
+- Afirmação 2 → `versao_api` (modelo); 3 páginas platform.openai.com que apoiam, sem data → **SUPORTE_FRACO**, índice `null`.
+- Conclusões: fluxo real íntegro (decomposição, categoria, busca dupla, extração, correspondência, postura, agregação). Duas limitações de produto ficaram evidentes: (a) com fontes reais, quase nenhuma data é vinculada ao atributo, então o índice tende a ser `null`; (b) a latência é dominada pelo limite de taxa do Groq.
+- Falha encontrada e corrigida durante a espera: chamadas à Tavily sem tempo-limite (agora 45 s, com erro claro para resposta não-JSON). A tela de espera agora mostra o tempo decorrido e explica a demora.
+

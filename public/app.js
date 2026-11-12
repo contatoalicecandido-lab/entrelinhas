@@ -62,6 +62,8 @@ const TEXTOS = {
     rastreio: r => `verification ${r.id} · ${r.modelo} model calls · ${r.pesquisa} search operations · ${r.duracao} ms · ${r.modo === "exemplo" ? "simulated" : "live"} · stored in SQLite :memory:`,
     erroGenerico: "Something went wrong. Please try again.",
     textoVazio: "Paste an AI answer first.",
+    decorrido: s => `${s}s elapsed.`,
+    avisoLento: " Each source is read by the model; when the model provider's rate limit is hit, Entrelinhas waits and retries, so a live check can take a few minutes.",
     soExemplo: "Example mode only checks the demo answer. Click “Load example”, or run the server with Tavily and Bifrost keys to check your own text.",
     expl_ATUAL: f => `An official source supports this claim and its date is tied to this exact fact${f !== null ? ` (freshness ${f}/100)` : ""}. This is not an absolute guarantee of truth.`,
     expl_CONTRADITA_POR_FONTE_ATUAL: f => `A current official source contradicts this claim${f !== null ? ` (that evidence scores ${f}/100 on freshness)` : ""}. If an AI said this, the answer is probably outdated.`,
@@ -128,6 +130,8 @@ const TEXTOS = {
     rastreio: r => `verificação ${r.id} · ${r.modelo} chamadas ao modelo · ${r.pesquisa} operações de busca · ${r.duracao} ms · ${r.modo === "exemplo" ? "simulado" : "real"} · gravado em SQLite :memory:`,
     erroGenerico: "Algo deu errado. Tente de novo.",
     textoVazio: "Cole uma resposta de IA primeiro.",
+    decorrido: s => `${s}s decorridos.`,
+    avisoLento: " Cada fonte é lida pelo modelo; quando o provedor do modelo atinge o limite de uso, o Entrelinhas espera e tenta de novo, então uma verificação real pode levar alguns minutos.",
     soExemplo: "O modo exemplo só verifica a resposta de demonstração. Clique em “Carregar exemplo” ou rode o servidor com as chaves da Tavily e do Bifrost para verificar seu próprio texto.",
     expl_ATUAL: f => `Uma fonte oficial apoia esta afirmação e a data dela está ligada a esse fato específico${f !== null ? ` (atualidade ${f}/100)` : ""}. Isso não é garantia absoluta de verdade.`,
     expl_CONTRADITA_POR_FONTE_ATUAL: f => `Uma fonte oficial atual contradiz esta afirmação${f !== null ? ` (essa evidência tem atualidade ${f}/100)` : ""}. Se uma IA disse isso, a resposta provavelmente está desatualizada.`,
@@ -211,10 +215,21 @@ function iniciarProgresso() {
   const marcar = () => itens.forEach((li, i) => li.classList.toggle("ativa", i === indice));
   marcar();
   const intervalo = modoSelecionado() === "exemplo" ? 350 : 4000;
+  const inicio = Date.now();
+  const tempo = $("tempo-decorrido");
+  tempo.textContent = "";
+  let ultimoAvanco = Date.now();
   temporizadorEtapas = setInterval(() => {
-    indice = Math.min(indice + 1, itens.length - 1);
-    marcar();
-  }, intervalo);
+    if (Date.now() - ultimoAvanco >= intervalo) {
+      indice = Math.min(indice + 1, itens.length - 1);
+      ultimoAvanco = Date.now();
+      marcar();
+    }
+    const segundos = Math.round((Date.now() - inicio) / 1000);
+    if (modoSelecionado() === "real") {
+      tempo.textContent = t("decorrido")(segundos) + (segundos >= 20 ? t("avisoLento") : "");
+    }
+  }, 250);
 }
 function pararProgresso() {
   clearInterval(temporizadorEtapas);
