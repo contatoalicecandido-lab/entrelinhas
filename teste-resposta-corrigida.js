@@ -56,6 +56,29 @@ async function principal() {
   } finally {
     global.fetch = fetchOriginal;
   }
+  // 4. Sem citações na 1ª resposta: nova tentativa; se ainda faltar, anexa.
+  {
+    const fetchOriginal2 = global.fetch;
+    const respostas = [
+      "{\"answer\":\"O mínimo é R$ 1.621. Pix é gratuito.\",\"changes\":[]}",
+      "{\"answer\":\"O mínimo é R$ 1.621 [1]. Pix é gratuito.\",\"changes\":[]}"
+    ];
+    let chamadas = 0; let segunda = null;
+    global.fetch = async (_u, cfg) => {
+      if (chamadas === 1) segunda = JSON.parse(cfg.body).messages.at(-1).content;
+      return new Response(JSON.stringify({ choices: [{ message: { content: respostas[chamadas++] } }] }), { status: 200 });
+    };
+    try {
+      const r = await gerarRespostaCorrigida("t", resultados, {});
+      assert.equal(chamadas, 2);
+      assert.match(segunda, /missing source citations for: afirmacao_1 \(use \[1\]\[2\]\[3\]\); afirmacao_2 \(use \[4\]\)/);
+      assert.equal(r.tentativas, 2);
+      assert.equal(r.citacoes_anexadas, true);
+      assert.equal(r.texto, "O mínimo é R$ 1.621 [1]. Pix é gratuito. [4]");
+      assert.deepEqual(r.fontes_citadas, [1, 4]);
+      ok("faltou citação: pede de novo dizendo o que faltou; se ainda faltar, anexa");
+    } finally { global.fetch = fetchOriginal2; }
+  }
   console.log(`\n${n} testes passaram.`);
 }
 principal().catch(e => { console.error(e); process.exit(1); });

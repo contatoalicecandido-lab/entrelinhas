@@ -23,6 +23,21 @@ caso("três blogs do mesmo tipo não corroboram", () => {
   assert.equal(r.veredito, "SUPORTE_FRACO");
   assert.equal(r.concordancia.coverage, "MODERATE");
 });
+caso("fonte oficial + notícia independente, sem contradição: CORROBORADA", () => {
+  const r = agregar([ev("https://www.gov.br/saude/nota", "SUPPORTS", "OFICIAL"), ev("https://www.jb.com.br/noticia", "SUPPORTS", "NOTICIA")]);
+  assert.equal(r.concordancia.coverage, "STRONG");
+  assert.equal(r.concordancia.authoritative_supporting, 1);
+  assert.equal(r.veredito, "CORROBORADA");
+});
+caso("duas fontes sem autoridade (notícia + outro site) não bastam", () => {
+  const r = agregar([ev("https://g1.globo.com/a", "SUPPORTS", "NOTICIA"), ev("https://site.com.br/a", "SUPPORTS", "OUTRO")]);
+  assert.equal(r.concordancia.coverage, "MODERATE");
+  assert.equal(r.veredito, "SUPORTE_FRACO");
+});
+caso("oficial + notícia, mas uma terceira fonte contradiz: não corrobora", () => {
+  const r = agregar([ev("https://www.gov.br/a", "SUPPORTS", "OFICIAL"), ev("https://g1.globo.com/a", "SUPPORTS", "NOTICIA"), ev("https://uol.com.br/a", "CONTRADICTS", "NOTICIA")]);
+  assert.notEqual(r.veredito, "CORROBORADA");
+});
 caso("páginas do mesmo domínio contam como uma voz", () => {
   const r = agregar([ev("https://g1.globo.com/a", "SUPPORTS", "NOTICIA"), ev("https://g1.globo.com/b", "SUPPORTS", "NOTICIA"), ev("https://g1.globo.com/c", "SUPPORTS", "NOTICIA")]);
   assert.equal(r.concordancia.independent_sources, 1);

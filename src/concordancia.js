@@ -12,7 +12,7 @@
 // circula (e muitas vezes é exatamente o que precisa ser checado).
 const PESOS = { OFICIAL: 3, ACADEMICO: 3, NOTICIA: 2, REFERENCIA: 1.5, OUTRO: 1, BLOG_FORUM: 0.25 };
 const ALGORITMO = "SOURCE_AGREEMENT_INDEX";
-const VERSAO = "1.0.0";
+const VERSAO = "1.1.0";
 
 function pesoDoGrupo(grupo) {
   // O grupo vale pelo seu tipo de fonte mais forte.
@@ -46,8 +46,13 @@ function calcularConcordancia(grupos) {
 
   const tipos = [...new Set(votos.map(v => v.tipo))];
   const independentes = votos.length;
+  // Fonte com autoridade própria: oficial (governo, órgão, site da entidade)
+  // ou científica. Com uma confirmação independente de outro tipo, já é forte.
+  const autoridade = v => v.oficial || v.tipo === "OFICIAL" || v.tipo === "ACADEMICO";
+  const apoioComAutoridade = apoio.filter(autoridade).length;
   let cobertura;
   if (independentes >= 3 && tipos.length >= 2) cobertura = "STRONG";
+  else if (independentes >= 2 && tipos.length >= 2 && votos.some(autoridade)) cobertura = "STRONG";
   else if (independentes >= 2) cobertura = "MODERATE";
   else if (independentes === 1) cobertura = "WEAK";
   else cobertura = "NONE";
@@ -67,6 +72,7 @@ function calcularConcordancia(grupos) {
     independent_sources: independentes,
     source_types: tipos,
     supporting: apoio.length,
+    authoritative_supporting: apoioComAutoridade,
     contradicting: contra.length,
     split: divididos.length,
     by_type: porTipo,
@@ -77,13 +83,14 @@ function calcularConcordancia(grupos) {
   };
 }
 
-// Afirmação corroborada: várias vozes independentes, de tipos diferentes,
-// apoiam e nenhuma contradiz. Usado quando não há fonte oficial com data.
+// Afirmação corroborada: nenhuma voz contradiz, e apoiam (a) três ou mais
+// fontes independentes de tipos diferentes, ou (b) uma fonte oficial ou
+// científica mais uma confirmação independente de outro tipo.
+// Usado quando não há fonte oficial com data ligada ao fato.
 function estaCorroborada(concordancia) {
-  return concordancia.coverage === "STRONG" &&
-    concordancia.contradicting === 0 &&
-    concordancia.split === 0 &&
-    concordancia.supporting >= 3;
+  if (concordancia.coverage !== "STRONG" || concordancia.contradicting !== 0 || concordancia.split !== 0) return false;
+  if (concordancia.supporting >= 3) return true;
+  return concordancia.supporting >= 2 && (concordancia.authoritative_supporting ?? 0) >= 1 && concordancia.source_types.length >= 2;
 }
 
 module.exports = { calcularConcordancia, estaCorroborada, PESOS };
