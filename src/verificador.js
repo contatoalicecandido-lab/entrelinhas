@@ -9,6 +9,7 @@ const { agregarEvidencias, normalizarDominio } = require("./agregador");
 const { randomUUID } = require("node:crypto");
 const { resolverTipoAfirmacao } = require("./tipo-afirmacao");
 const { analisarFontesEmLote } = require("./analise-lote");
+const { avaliarRiscoDesatualizacao } = require("./risco-desatualizacao");
 const { analisarNuances } = require("./portugues");
 const { pedeEvidenciaCientifica } = require("./tipo-fonte");
 
@@ -415,6 +416,12 @@ async function verificarAfirmacao(afirmacao, opcoes) {
     );
     resultado.tipo_afirmacao = tipoResolvido.tipo;
     resultado.origem_tipo_afirmacao = tipoResolvido.origem;
+    resultado.risco_desatualizacao = avaliarRiscoDesatualizacao({
+      texto: afirmacao.texto,
+      tipo: resultado.tipo_afirmacao,
+      nuances: resultado.nuances,
+      dataReferencia: opcoes.dataReferencia instanceof Date ? opcoes.dataReferencia : new Date()
+    });
   } catch (erro) {
     resultado.erro_busca = erro.message;
     return agregarResultadoAfirmacao(resultado, opcoes);

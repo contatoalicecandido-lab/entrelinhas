@@ -249,8 +249,31 @@ function renderizarResultado(dados) {
   $("omitidas").hidden = omitidas.length === 0;
   $("omitidas").textContent = omitidas.length ? `${omitidas.length} more claim(s) were not checked to limit cost. Send them separately.` : "";
   $("cartoes").replaceChildren(...afirmacoes.map(a => criarCartao(a, dados.simulado)));
+  mostrarTriagem(afirmacoes);
   mostrarGateway(dados.gateway, dados.simulado);
   $("rastreio").textContent = `Verification ${dados.id_verificacao} · ${dados.rastreabilidade_modelo?.length ?? 0} model calls via ${dados.simulado ? "simulated provider" : "Bifrost"} · ${dados.rastreabilidade_pesquisa?.length ?? 0} search operations via ${dados.simulado ? "simulated provider" : "Tavily"} · ${dados.duracao_ms ?? "—"} ms · stored in SQLite (in memory)`;
+}
+
+const RISCOS = { HIGH: "High stale risk", MEDIUM: "Medium stale risk", LOW: "Low stale risk" };
+
+// Triagem: quais afirmações podem ter envelhecido, e por quê (antes da busca).
+function mostrarTriagem(afirmacoes) {
+  const lista = $("triagem-lista");
+  lista.replaceChildren();
+  const comRisco = afirmacoes.filter(a => a.risco_desatualizacao);
+  $("triagem").hidden = comRisco.length === 0;
+  for (const a of comRisco) {
+    const r = a.risco_desatualizacao;
+    const li = el("li", `risco-${r.nivel.toLowerCase()}`);
+    const topo = el("div", "triagem-topo");
+    topo.append(el("span", `pilula-risco risco-${r.nivel.toLowerCase()}`, RISCOS[r.nivel] ?? r.nivel));
+    topo.append(el("span", "triagem-texto", a.texto));
+    li.append(topo);
+    li.append(el("p", "dica", r.motivos.join(" · ")));
+    lista.append(li);
+  }
+  const sensiveis = comRisco.filter(a => a.risco_desatualizacao.sensivel_ao_tempo).length;
+  $("titulo-triagem").textContent = `Stale-risk triage · ${sensiveis} of ${comRisco.length} claim${comRisco.length === 1 ? "" : "s"} time-sensitive`;
 }
 
 // Painel do Bifrost: cadeia de modelos, quem respondeu, failover e tokens.
@@ -484,6 +507,7 @@ function criarCartao(afirmacao, simulado) {
   cab.append(el("span", "chip", cat
     ? `${cat[0]}${afirmacao.origem_tipo_afirmacao ? ` · ${ORIGEM[afirmacao.origem_tipo_afirmacao]}` : ""}`
     : "No category"));
+  if (afirmacao.risco_desatualizacao) cab.append(el("span", `chip pilula-risco risco-${afirmacao.risco_desatualizacao.nivel.toLowerCase()}`, RISCOS[afirmacao.risco_desatualizacao.nivel]));
   if (afirmacao.nuances?.idioma === "pt") cab.append(el("span", "chip", afirmacao.nuances.variante === "pt-PT" ? "European Portuguese" : "Brazilian Portuguese"));
   for (const d of afirmacao.dominios_oficiais_automaticos ?? []) cab.append(el("span", "chip chip-br", `Official BR source searched: ${d}`));
   cartao.append(cab);

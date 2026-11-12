@@ -226,3 +226,17 @@ a.fonte-titulo:hover { color: var(--azul); text-decoration: underline; }
 .gateway-numeros div { display: flex; flex-direction: column; padding: 10px 12px; border-radius: 10px; background: #f3f5f8; }
 .gateway-numeros strong { font-size: 22px; }
 .gateway-numeros span { font-size: 12.5px; color: var(--suave); }
+
+/* Triagem de risco de desatualização */
+.triagem h3 { margin: 0 0 4px; font-size: 18px; }
+.triagem-lista { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 10px; }
+.triagem-lista li { padding: 10px 12px; border-radius: 10px; background: #fafbfc; border-left: 4px solid #c9ced8; }
+.triagem-lista li.risco-high { border-left-color: #d94b4b; }
+.triagem-lista li.risco-medium { border-left-color: #d9a520; }
+.triagem-lista .dica { margin: 6px 0 0; }
+.triagem-topo { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.triagem-texto { font-weight: 600; }
+.pilula-risco { font-size: 12px; font-weight: 700; border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
+.pilula-risco.risco-high { color: #8a1c1c; background: #fbe1e1; }
+.pilula-risco.risco-medium { color: #6b4e00; background: #fbefcc; }
+.pilula-risco.risco-low { color: #4a505c; background: #e8ebf0; }

@@ -54,7 +54,8 @@ const TESTES = [
   "teste-analise-lote.js",
   "teste-correcoes-ao-vivo.js",
   "teste-atualidade-afirmacao.js",
-  "teste-bifrost-gateway.js"
+  "teste-bifrost-gateway.js",
+  "teste-risco-desatualizacao.js"
 ];
 
 const extras = process.argv.slice(2);
