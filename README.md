@@ -155,7 +155,7 @@ What the run taught us, already fixed:
 
 Every model call goes to `http://localhost:8080/v1/chat/completions` with the virtual key from `BIFROST_KEY`. The gateway does real work:
 
-- **Fallback chain.** Each request names a main model and backups: `groq/openai/gpt-oss-20b` → `groq/openai/gpt-oss-120b` → `groq/qwen/qwen3.6-27b`. You can change it with `BIFROST_MODEL` and `BIFROST_FALLBACKS`. When the main model fails or hits the free tier's per-minute token limit, Bifrost retries the backups on its own, so Entrelinhas has no retry code for that. This happened in our live tests: during a verification, one of four calls was served by `gpt-oss-120b` after the main model was rate-limited.
+- **Fallback chain.** Each request names a main model and backups: `groq/openai/gpt-oss-20b` → `groq/openai/gpt-oss-120b` → `groq/qwen/qwen3.6-27b`. You can change it with `BIFROST_MODEL` and `BIFROST_FALLBACKS`. When the main model fails or hits the free tier's per-minute token limit, Bifrost retries the backups on its own, so Entrelinhas has no retry code for that. In the 15-claim benchmark, backup models answered **23 of 50** model calls when the main model hit its limit, and every check finished.
 - **Routing info.** `extra_fields.routing_info` (provider, model, `is_fallback`), token usage and latency are recorded for every call and shown in the **AI gateway · Bifrost** panel.
 - **Rate limits.** If the whole chain is limited, Entrelinhas waits the `retry_after_ms` that Bifrost reports (at most 25 s) and tries once more.
 - **Labels for observability.** Requests carry `x-bf-dim-app` and `x-bf-dim-stage` (decomposition, batch analysis, updated answer), plus request and verification IDs.

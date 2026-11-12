@@ -39,7 +39,7 @@ Entrelinhas works in six steps.
 6. **Records.** Everything is stored in SQLite.
 
 **Bifrost does visible work.**
-- Every call carries a fallback chain of three Groq models, so rate limits and failures are absorbed by the gateway. One of four calls in a live check was served by a backup.
+- Every call carries a fallback chain of three Groq models, so rate limits and failures are absorbed by the gateway. In the 15-claim benchmark, backups answered 23 of 50 model calls.
 - The report shows which model answered each step, plus tokens and latency.
 - An outage drill sends a check to a non-existent model and shows Bifrost finishing it with a backup.
 
