@@ -111,6 +111,12 @@ function configurarModo() {
     ? "Live check: searches the web now"
     : "Live check: needs TAVILY_API_KEY and BIFROST_KEY on the server";
   (real ? radio : document.querySelector('input[name="modo"][value="exemplo"]')).checked = true;
+  const atualizarQueda = () => {
+    const temReserva = (estado.status?.bifrost?.reservas ?? []).length > 0;
+    $("opcao-queda").hidden = !(modo() === "real" && temReserva);
+  };
+  for (const r of document.querySelectorAll('input[name="modo"]')) r.addEventListener("change", atualizarQueda);
+  atualizarQueda();
 }
 
 function montarExemplos() {
@@ -202,7 +208,7 @@ async function verificar() {
     const resposta = await fetch("/api/verificar", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ texto, modo: modo(), dominiosOficiais })
+      body: JSON.stringify({ texto, modo: modo(), dominiosOficiais, simularQuedaModelo: modo() === "real" && $("simular-queda").checked })
     });
     const dados = await resposta.json().catch(() => ({}));
     if (!resposta.ok) throw new Error(dados.erro || "Something went wrong. Please try again.");
@@ -243,7 +249,45 @@ function renderizarResultado(dados) {
   $("omitidas").hidden = omitidas.length === 0;
   $("omitidas").textContent = omitidas.length ? `${omitidas.length} more claim(s) were not checked to limit cost. Send them separately.` : "";
   $("cartoes").replaceChildren(...afirmacoes.map(a => criarCartao(a, dados.simulado)));
+  mostrarGateway(dados.gateway, dados.simulado);
   $("rastreio").textContent = `Verification ${dados.id_verificacao} · ${dados.rastreabilidade_modelo?.length ?? 0} model calls via ${dados.simulado ? "simulated provider" : "Bifrost"} · ${dados.rastreabilidade_pesquisa?.length ?? 0} search operations via ${dados.simulado ? "simulated provider" : "Tavily"} · ${dados.duracao_ms ?? "—"} ms · stored in SQLite (in memory)`;
+}
+
+// Painel do Bifrost: cadeia de modelos, quem respondeu, failover e tokens.
+function mostrarGateway(g, simulado) {
+  const painel = $("gateway");
+  const caixa = $("gateway-conteudo");
+  caixa.replaceChildren();
+  if (!g || simulado || g.chamadas === 0) { painel.hidden = true; return; }
+  painel.hidden = false;
+
+  const cadeia = el("ol", "cadeia");
+  g.cadeia_modelos.forEach((m, i) => {
+    const usado = g.respostas_por_modelo.some(r => r.modelo === m || m.endsWith(`/${r.modelo}`) || r.modelo.endsWith(m.split("/").slice(1).join("/")));
+    const li = el("li", usado ? "usado" : (g.queda_simulada && i === 0 ? "caiu" : null));
+    li.append(el("span", "papel", i === 0 ? "Main" : `Backup ${i}`));
+    li.append(el("code", null, m));
+    if (g.queda_simulada && i === 0) li.append(el("span", "nota-cadeia", "simulated outage"));
+    else if (usado) li.append(el("span", "nota-cadeia", "answered"));
+    cadeia.append(li);
+  });
+  caixa.append(cadeia);
+
+  const numeros = el("div", "gateway-numeros");
+  const n = (valor, rotulo) => { const d = el("div"); d.append(el("strong", null, valor), el("span", null, rotulo)); numeros.append(d); };
+  n(String(g.chamadas), g.chamadas === 1 ? "model call" : "model calls");
+  n(String(g.respostas_de_reserva), "answered by a backup");
+  n(g.tokens_total !== null ? g.tokens_total.toLocaleString("en-US") : "—", "tokens");
+  n(g.latencia_media_ms !== null ? `${(g.latencia_media_ms / 1000).toFixed(1)} s` : "—", "avg. model latency");
+  caixa.append(numeros);
+
+  const quem = g.respostas_por_modelo.map(r => `${r.modelo} (${r.chamadas})`).join(", ");
+  caixa.append(el("p", "dica", `Answered by: ${quem || "—"}.${g.falhas ? ` ${g.falhas} call(s) failed.` : ""}`));
+  if (g.queda_simulada) {
+    caixa.append(el("p", "aviso", g.respostas_de_reserva > 0
+      ? `Outage drill: the main model was unavailable, and Bifrost served ${g.respostas_de_reserva} of ${g.chamadas} calls from a backup model. Entrelinhas sent the same request and changed nothing.`
+      : "Outage drill: the backup did not answer. Check that the backup models are enabled for this key in Bifrost."));
+  }
 }
 
 function metrica(rotulo) {

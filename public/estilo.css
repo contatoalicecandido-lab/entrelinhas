@@ -208,3 +208,21 @@ a.fonte-titulo:hover { color: var(--azul); text-decoration: underline; }
 .conf-high { color: #1d7a46; }
 .conf-medium { color: #9a6b00; }
 .conf-low { color: #8b919c; }
+
+/* Painel do gateway (Bifrost) */
+.gateway h3 { margin: 0 0 4px; font-size: 18px; }
+.opcao-queda { display: flex; gap: 8px; align-items: flex-start; margin-top: 14px; font-size: 14px; cursor: pointer; }
+.opcao-queda .opcional { display: block; font-weight: 400; }
+.cadeia { list-style: none; padding: 0; margin: 14px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.cadeia li { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; border: 1px solid #e1e4ea; border-radius: 10px; background: #fafbfc; min-width: 200px; }
+.cadeia li.usado { border-color: #8fd1aa; background: #eef9f2; }
+.cadeia li.caiu { border-color: #f0b4b4; background: #fdf1f1; }
+.cadeia li.caiu code { text-decoration: line-through; }
+.cadeia .papel { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--suave); }
+.cadeia code { font-size: 13px; overflow-wrap: anywhere; }
+.cadeia .nota-cadeia { font-size: 12px; font-weight: 700; color: #1d7a46; }
+.cadeia li.caiu .nota-cadeia { color: #a12a2a; }
+.gateway-numeros { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin: 14px 0 6px; }
+.gateway-numeros div { display: flex; flex-direction: column; padding: 10px 12px; border-radius: 10px; background: #f3f5f8; }
+.gateway-numeros strong { font-size: 22px; }
+.gateway-numeros span { font-size: 12.5px; color: var(--suave); }

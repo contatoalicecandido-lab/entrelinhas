@@ -1,5 +1,33 @@
 
 const { randomUUID } = require("node:crypto");
+const { AsyncLocalStorage } = require("node:async_hooks");
+
+// Cadeia de modelos servida pelo Bifrost. O principal responde normalmente;
+// se ele falhar (erro, limite de uso do provedor, modelo indisponível), o
+// próprio Bifrost tenta os reservas em ordem, sem lógica de retentativa aqui.
+// Configurável por BIFROST_MODEL e BIFROST_FALLBACKS ("none" desliga).
+const MODELO_PADRAO = "groq/openai/gpt-oss-20b";
+const RESERVAS_PADRAO = ["groq/openai/gpt-oss-120b", "groq/llama-3.3-70b-versatile"];
+// Modelo propositalmente inexistente, usado só na demonstração de failover.
+const MODELO_QUEDA_SIMULADA = "groq/entrelinhas-simulated-outage";
+
+function configuracaoModelos() {
+  const principal = (process.env.BIFROST_MODEL ?? "").trim() || MODELO_PADRAO;
+  const bruto = (process.env.BIFROST_FALLBACKS ?? "").trim();
+  const reservas = bruto.toLowerCase() === "none"
+    ? []
+    : bruto
+      ? bruto.split(",").map(m => m.trim()).filter(Boolean)
+      : RESERVAS_PADRAO;
+  return { principal, reservas: reservas.filter(m => m !== principal) };
+}
+
+// Contexto por verificação (ex.: demonstração de queda do modelo principal),
+// propagado para todas as chamadas ao modelo sem alterar cada assinatura.
+const contextoGateway = new AsyncLocalStorage();
+function executarComContextoGateway(contexto, funcao) {
+  return contextoGateway.run({ ...contexto }, funcao);
+}
 
 async function notificarRastreabilidade(callback, dados) {
   if (typeof callback !== "function") {
@@ -60,7 +88,13 @@ async function perguntarAoModelo(
     url_evidencia: opcoes.urlEvidencia ?? null,
     tentativa: opcoes.tentativa ?? 1,
     provedor: null,
-    modelo_solicitado: "groq/openai/gpt-oss-20b",
+    modelo_solicitado: null,
+    cadeia_modelos: [],
+    queda_simulada: false,
+    foi_fallback: null,
+    servido_por: null,
+    latencia_total_s: null,
+    tokens: null,
     modelo_resolvido: null,
     modelo_original: null,
     id_bifrost: null,
@@ -129,6 +163,15 @@ async function perguntarAoModelo(
     headers["x-bf-lh-tentativa"] =
       String(rastreabilidade.tentativa);
 
+    const { principal, reservas } = configuracaoModelos();
+    const quedaSimulada = contextoGateway.getStore()?.simularQuedaPrincipal === true && reservas.length > 0;
+    const modeloPedido = quedaSimulada ? MODELO_QUEDA_SIMULADA : principal;
+    rastreabilidade.modelo_solicitado = modeloPedido;
+    rastreabilidade.cadeia_modelos = [modeloPedido, ...reservas];
+    rastreabilidade.queda_simulada = quedaSimulada;
+    headers["x-bf-dim-app"] = "entrelinhas";
+    headers["x-bf-dim-stage"] = rastreabilidade.etapa;
+
     let resposta;
 
     try {
@@ -138,9 +181,10 @@ async function perguntarAoModelo(
           method: "POST",
           headers,
           body: JSON.stringify({
-            model: "groq/openai/gpt-oss-20b",
+            model: modeloPedido,
             messages,
-            stream: false
+            stream: false,
+            ...(reservas.length ? { fallbacks: reservas } : {})
           }),
           signal: controller.signal
         }
@@ -207,6 +251,30 @@ async function perguntarAoModelo(
       );
     }
 
+    // O Bifrost informa no corpo quem de fato respondeu e se foi um reserva.
+    const roteamento = dados?.extra_fields?.routing_info ?? null;
+    const provedorFinal = roteamento?.provider ?? dados?.extra_fields?.provider ?? rastreabilidade.provedor ?? null;
+    const modeloFinal = roteamento?.model ?? dados?.model ?? rastreabilidade.modelo_resolvido ?? null;
+    rastreabilidade.provedor = rastreabilidade.provedor ?? provedorFinal;
+    rastreabilidade.modelo_resolvido = rastreabilidade.modelo_resolvido ?? modeloFinal;
+    rastreabilidade.servido_por = provedorFinal || modeloFinal ? { provedor: provedorFinal, modelo: modeloFinal } : null;
+    rastreabilidade.foi_fallback = determinarFallback({
+      roteamento,
+      indice: rastreabilidade.indice_fallback,
+      modeloPedido,
+      provedorFinal,
+      modeloFinal
+    });
+    const latenciaTotal = Number(dados?.extra_fields?.latency);
+    rastreabilidade.latencia_total_s = Number.isFinite(latenciaTotal) ? latenciaTotal : null;
+    if (dados?.usage && typeof dados.usage === "object") {
+      rastreabilidade.tokens = {
+        entrada: dados.usage.prompt_tokens ?? null,
+        saida: dados.usage.completion_tokens ?? null,
+        total: dados.usage.total_tokens ?? null
+      };
+    }
+
     const conteudo = dados?.choices?.[0]?.message?.content;
 
     if (
@@ -251,9 +319,31 @@ async function perguntarAoModelo(
   }
 }
 
+// Foi um modelo reserva? Usa, nesta ordem: routing_info.is_fallback, o
+// índice de fallback no cabeçalho e, por último, a comparação do modelo
+// pedido com o que respondeu. Sem nenhum sinal, devolve null (desconhecido).
+function determinarFallback({ roteamento, indice, modeloPedido, provedorFinal, modeloFinal }) {
+  if (typeof roteamento?.is_fallback === "boolean") return roteamento.is_fallback;
+  if (indice !== null && indice !== undefined && indice !== "") {
+    const n = Number(indice);
+    if (Number.isFinite(n)) return n > 0;
+  }
+  if (modeloFinal) {
+    const pedido = String(modeloPedido);
+    const final = String(modeloFinal);
+    const completo = provedorFinal && !final.startsWith(`${provedorFinal}/`) ? `${provedorFinal}/${final}` : final;
+    return !(completo === pedido || pedido.endsWith(`/${final}`));
+  }
+  return null;
+}
+
 const perguntarAoGemini = perguntarAoModelo;
 
 module.exports = {
   perguntarAoModelo,
-  perguntarAoGemini
+  perguntarAoGemini,
+  configuracaoModelos,
+  determinarFallback,
+  executarComContextoGateway,
+  MODELO_QUEDA_SIMULADA
 };

@@ -48,6 +48,7 @@
           <label class="rotulo" for="dominios">Trusted sites <span class="opcional">optional</span></label>
           <input id="dominios" type="text" placeholder="e.g. gov.br, who.int, nodejs.org" autocomplete="off">
           <p class="dica">Sites you consider the authority on this topic. They are searched first and count as official. Brazilian authorities and the company's own site are detected automatically.</p>
+          <label id="opcao-queda" class="opcao-queda" hidden><input id="simular-queda" type="checkbox"> <span>Simulate an outage of the main model <span class="opcional">shows Bifrost switching to a backup model</span></span></label>
         </div>
       </div>
 
@@ -79,6 +80,11 @@
       </div>
       <div id="omitidas" class="aviso neutro" hidden></div>
       <div id="cartoes" class="cartoes"></div>
+      <section id="gateway" class="painel gateway" hidden aria-labelledby="titulo-gateway">
+        <h3 id="titulo-gateway">AI gateway · Bifrost</h3>
+        <p class="dica">Every model call goes through Bifrost. It routes to the main model and, if that model fails or hits a rate limit, retries a backup model on its own: no retry code in Entrelinhas.</p>
+        <div id="gateway-conteudo"></div>
+      </section>
       <p id="rastreio" class="rastreio"></p>
     </section>
 

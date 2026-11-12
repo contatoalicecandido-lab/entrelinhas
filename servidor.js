@@ -116,7 +116,9 @@ function validarPedido(dados) {
   }
   const dominiosOficiais = [...new Set(listaDominios.filter(d => String(d).trim()).map(validarDominio))];
   const tipo = dados.tipo && TIPOS.includes(dados.tipo) ? dados.tipo : null;
-  return { texto, modo, dominiosOficiais, tipo };
+  // Demonstração de failover do Bifrost: só faz sentido no modo real.
+  const simularQuedaModelo = modo === "real" && dados.simularQuedaModelo === true;
+  return { texto, modo, dominiosOficiais, tipo, simularQuedaModelo };
 }
 
 // Reduz o tamanho da resposta enviada ao navegador. A verificação completa,
@@ -139,7 +141,40 @@ function prepararParaNavegador(resultado, modo) {
   }
   copia.modo = modo;
   copia.simulado = modo === "exemplo";
+  copia.gateway = resumirGateway(copia.rastreabilidade_modelo ?? [], modo);
   return copia;
+}
+
+// Resumo do papel do Bifrost nesta verificação: quantas chamadas, quais
+// modelos responderam, quantas vezes um modelo reserva assumiu, tokens.
+function resumirGateway(chamadas, modo) {
+  const servidos = new Map();
+  let tokens = 0; let comTokens = false; let reservas = 0; let falhas = 0; let latencia = 0; let comLatencia = 0;
+  for (const c of chamadas) {
+    if (c.status !== "SUCESSO") {
+      if (/^(ERRO|TIMEOUT|RESPOSTA_INVALIDA)/.test(String(c.status))) falhas += 1;
+      continue;
+    }
+    const modelo = c.servido_por?.modelo
+      ? `${c.servido_por.provedor ? `${c.servido_por.provedor}/` : ""}${c.servido_por.modelo}`.replace(/^([^/]+)\/\1\//, "$1/")
+      : (c.modelo_resolvido ?? c.modelo_solicitado ?? "unknown");
+    servidos.set(modelo, (servidos.get(modelo) ?? 0) + 1);
+    if (c.foi_fallback === true) reservas += 1;
+    if (Number.isFinite(c.tokens?.total)) { tokens += c.tokens.total; comTokens = true; }
+    if (Number.isFinite(c.latencia_upstream_ms)) { latencia += c.latencia_upstream_ms; comLatencia += 1; }
+  }
+  const primeira = chamadas[0] ?? {};
+  return {
+    gateway: modo === "exemplo" ? "simulated" : "bifrost",
+    chamadas: chamadas.length,
+    falhas,
+    cadeia_modelos: primeira.cadeia_modelos ?? [],
+    queda_simulada: chamadas.some(c => c.queda_simulada === true),
+    respostas_por_modelo: [...servidos].map(([modelo, n]) => ({ modelo, chamadas: n })),
+    respostas_de_reserva: reservas,
+    tokens_total: comTokens ? tokens : null,
+    latencia_media_ms: comLatencia ? Math.round(latencia / comLatencia) : null
+  };
 }
 
 async function executarVerificacao(pedido) {
@@ -163,7 +198,8 @@ async function executarVerificacao(pedido) {
     // Carregado só no modo real, para não exigir credenciais no modo exemplo.
     const { verificarTexto } = require("./src/verificador");
     const tiposPorAfirmacao = pedido.tipo ? { afirmacao_1: pedido.tipo } : {};
-    const resultado = await verificarTexto(pedido.texto, {
+    const { executarComContextoGateway } = require("./src/bifrost");
+    const resultado = await executarComContextoGateway({ simularQuedaPrincipal: pedido.simularQuedaModelo }, () => verificarTexto(pedido.texto, {
       ...opcoesComuns,
       dominiosOficiais: pedido.dominiosOficiais,
       tiposPorAfirmacao,
@@ -172,7 +208,7 @@ async function executarVerificacao(pedido) {
       fontesDiversas: true,
       paisAutomatico: true,
       cienciaAutomatica: true
-    });
+    }));
     return prepararParaNavegador(resultado, "real");
   } finally {
     banco.fechar();
@@ -235,7 +271,9 @@ function criarServidor() {
         dominios_exemplo: DOMINIOS_OFICIAIS_EXEMPLO,
         exemplos: listarExemplos(),
         limites: { caracteres: LIMITE_TEXTO, afirmacoes: MAX_AFIRMACOES, evidencias_por_afirmacao: MAX_EVIDENCIAS_REAL, dominios: MAX_DOMINIOS },
-        tipos: TIPOS
+        tipos: TIPOS,
+        // Só nomes de modelos (nunca chaves): mostra a cadeia de failover.
+        bifrost: (() => { try { return require("./src/bifrost").configuracaoModelos(); } catch { return null; } })()
       });
     }
     if (req.method === "POST" && url.pathname === "/api/verificar") {
