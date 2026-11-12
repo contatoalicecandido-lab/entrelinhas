@@ -55,6 +55,8 @@ const CABECALHOS_SEGURANCA = {
 };
 
 let ocupado = false;
+const TEMPO_MAXIMO_VERIFICACAO_MS = Number(process.env.ENTRELINHAS_TEMPO_MAXIMO_MS) > 0
+  ? Number(process.env.ENTRELINHAS_TEMPO_MAXIMO_MS) : 240000;
 
 function responderJson(res, status, corpo) {
   res.writeHead(status, { ...CABECALHOS_SEGURANCA, "Content-Type": "application/json; charset=utf-8" });
@@ -250,7 +252,15 @@ async function tratarVerificacao(req, res) {
     let dados;
     try { dados = JSON.parse(corpo); } catch { throw erroDeEntrada("JSON inválido."); }
     const pedido = validarPedido(dados);
-    const resultado = await executarVerificacao(pedido);
+    // Tempo máximo de uma verificação inteira: se algo travar lá dentro
+    // (rede, provedor), o pedido falha com aviso e o servidor fica livre.
+    let temporizador;
+    const limite = new Promise((_, rejeitar) => {
+      temporizador = setTimeout(() => rejeitar(Object.assign(
+        new Error(`A verificação passou de ${Math.round(TEMPO_MAXIMO_VERIFICACAO_MS / 1000)} s e foi interrompida. Os provedores podem estar no limite de uso; tente de novo em alguns minutos.`),
+        { status: 504 })), TEMPO_MAXIMO_VERIFICACAO_MS);
+    });
+    const resultado = await Promise.race([executarVerificacao(pedido), limite]).finally(() => clearTimeout(temporizador));
     resultado.duracao_ms = Date.now() - inicio;
     if (pedido.modo === "real" && process.env.ENTRELINHAS_GRAVAR === "1") gravarVerificacao(resultado);
     console.log(`[${new Date().toISOString()}] verificação ${pedido.modo}: ${resultado.total_afirmacoes} afirmação(ões) em ${resultado.duracao_ms} ms`);
