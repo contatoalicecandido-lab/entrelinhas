@@ -8,6 +8,8 @@ const { criarBanco } = require("./banco");
 const { agregarEvidencias, normalizarDominio } = require("./agregador");
 const { randomUUID } = require("node:crypto");
 const { resolverTipoAfirmacao } = require("./tipo-afirmacao");
+const { analisarFontesEmLote } = require("./analise-lote");
+const { analisarNuances } = require("./portugues");
 
 const {
   avaliarAtualidade,
@@ -103,10 +105,10 @@ function validarOpcoes(opcoes) {
   if (
     !Number.isInteger(limite) ||
     limite < 1 ||
-    limite > 5
+    limite > 6
   ) {
     throw new Error(
-      "O limite de evidências precisa ser um inteiro entre 1 e 5."
+      "O limite de evidências precisa ser um inteiro entre 1 e 6."
     );
   }
 
@@ -169,8 +171,18 @@ function validarOpcoes(opcoes) {
     throw new Error("maxAfirmacoes precisa ser um inteiro entre 1 e 50.");
   }
 
+  for (const chave of ["analiseEmLote", "incluirNoticias", "fontesDiversas", "paisAutomatico"]) {
+    if (opcoes[chave] !== undefined && typeof opcoes[chave] !== "boolean") {
+      throw new Error(`${chave} precisa ser verdadeiro ou falso.`);
+    }
+  }
+
   return {
     maxEvidencias: limite,
+    analiseEmLote: opcoes.analiseEmLote ?? false,
+    incluirNoticias: opcoes.incluirNoticias ?? false,
+    fontesDiversas: opcoes.fontesDiversas ?? false,
+    paisAutomatico: opcoes.paisAutomatico ?? false,
     maxAfirmacoes,
     inferirTipo: opcoes.inferirTipo ?? true,
     dataReferencia,
@@ -263,12 +275,115 @@ function resumirVerificacao(afirmacoes) {
   };
 }
 
+// Converte o resultado do lote para o mesmo formato da análise por fonte.
+function converterResultadoLote(item) {
+  if (!item) {
+    return {
+      correspondencia: { status: "ERROR", justificativa: "The model did not return an analysis for this source." },
+      classificacao: { postura: "ERROR", justificativa: "The analysis was not completed." }
+    };
+  }
+  const correspondencia = { status: item.correspondencia, justificativa: item.motivo };
+  if (item.correspondencia === "MATCH") {
+    return { correspondencia, classificacao: { postura: item.postura, justificativa: item.motivo } };
+  }
+  if (item.correspondencia === "RELATED_INSUFFICIENT") {
+    return { correspondencia, classificacao: { postura: "INSUFFICIENT", justificativa: item.motivo } };
+  }
+  return { correspondencia, classificacao: { postura: "IRRELEVANT", justificativa: item.motivo } };
+}
+
+async function analisarEvidenciasEmLote(afirmacao, evidenciasSelecionadas, resultado, opcoes) {
+  const preparadas = [];
+  for (const [indice, evidencia] of evidenciasSelecionadas.entries()) {
+    const { coleta = null, ...fonte } = evidencia;
+    let preparacao = null;
+    let erroPreparacao = null;
+    try {
+      preparacao = prepararEvidencia(afirmacao.texto, fonte);
+    } catch (erro) {
+      erroPreparacao = erro.message;
+    }
+    preparadas.push({ id: `S${indice + 1}`, fonte, coleta, preparacao, erroPreparacao });
+  }
+
+  const analisaveis = preparadas.filter(p => p.preparacao);
+  let analise = new Map();
+  let erroLote = null;
+  if (analisaveis.length > 0) {
+    const chamar = (tentativa) => analisarFontesEmLote(
+      afirmacao.texto,
+      analisaveis.map(p => ({
+        id: p.id,
+        url: p.fonte.url ?? "",
+        titulo: p.fonte.titulo ?? "",
+        tipo: p.fonte.categoria_fonte ?? "OUTRO",
+        texto: p.preparacao.conteudo_para_analise
+      })),
+      {
+        dataReferencia: opcoes.dataReferencia,
+        nuances: resultado.nuances,
+        idVerificacao: opcoes.idVerificacao,
+        idAfirmacao: afirmacao.id,
+        tentativa,
+        onMetadata: opcoes.onMetadata
+      }
+    );
+    try {
+      analise = await executarComRetentativas(chamar);
+    } catch (erro) {
+      // Uma nova tentativa para respostas malformadas (o modelo não é determinístico).
+      try {
+        analise = await executarComRetentativas(chamar);
+      } catch (erroFinal) {
+        erroLote = erroFinal.message;
+      }
+    }
+  }
+
+  for (const p of preparadas) {
+    const atualidade = avaliarAtualidade(p.fonte, resultado.tipo_afirmacao, opcoes.dataReferencia);
+    if (!p.preparacao) {
+      resultado.evidencias.push({
+        fonte: p.fonte,
+        coleta: p.coleta,
+        preparacao: { motivo_preparacao: "PREPARATION_ERROR", erro: p.erroPreparacao },
+        correspondencia: { status: "ERROR", justificativa: "The source could not be prepared." },
+        classificacao: { postura: "ERROR", justificativa: "The analysis was not executed." },
+        atualidade
+      });
+      continue;
+    }
+    const item = analise.get(p.id);
+    const convertido = erroLote
+      ? {
+        correspondencia: { status: "ERROR", justificativa: erroLote },
+        classificacao: { postura: "ERROR", justificativa: "The batch analysis failed." }
+      }
+      : converterResultadoLote(item);
+    const { conteudo_original, conteudo_para_analise, ...metadadosPreparacao } = p.preparacao;
+    resultado.evidencias.push({
+      fonte: p.fonte,
+      coleta: p.coleta,
+      preparacao: {
+        ...metadadosPreparacao,
+        trecho_analisado: typeof conteudo_para_analise === "string" ? conteudo_para_analise.slice(0, 1200) : null,
+        citacao_chave: item?.citacao || null,
+        metodo_analise: "LOTE"
+      },
+      ...convertido,
+      atualidade
+    });
+  }
+}
+
 async function verificarAfirmacao(afirmacao, opcoes) {
   const resultado = {
     id: afirmacao.id,
     texto: afirmacao.texto,
     tipo_afirmacao: null,
     origem_tipo_afirmacao: null,
+    nuances: analisarNuances(afirmacao.texto),
     evidencias: [],
     erro_busca: null
   };
@@ -299,7 +414,12 @@ async function verificarAfirmacao(afirmacao, opcoes) {
         idAfirmacao: afirmacao.id,
         dominiosOficiais,
         tipoAfirmacao: resultado.tipo_afirmacao,
-        onMetadata: opcoes.onMetadataPesquisa
+        onMetadata: opcoes.onMetadataPesquisa,
+        incluirNoticias: opcoes.incluirNoticias,
+        selecaoDiversa: opcoes.fontesDiversas,
+        maxFontes: opcoes.fontesDiversas ? opcoes.maxEvidencias : undefined,
+        // Afirmação em português: prioriza resultados do Brasil na busca geral.
+        pais: opcoes.paisAutomatico && resultado.nuances?.idioma === "pt" ? "brazil" : undefined
       }
     );
   } catch (erro) {
@@ -316,6 +436,11 @@ async function verificarAfirmacao(afirmacao, opcoes) {
     0,
     opcoes.maxEvidencias
   );
+
+  if (opcoes.analiseEmLote) {
+    await analisarEvidenciasEmLote(afirmacao, evidenciasSelecionadas, resultado, opcoes);
+    return agregarResultadoAfirmacao(resultado, opcoes);
+  }
 
   for (const evidencia of evidenciasSelecionadas) {
     // Separa os dados de aquisição da fonte original.

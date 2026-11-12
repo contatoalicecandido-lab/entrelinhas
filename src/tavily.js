@@ -3,9 +3,12 @@ const { randomUUID, createHash } = require("node:crypto");
 const { validarEvidencia } = require("./evidencia");
 const { normalizarFonte } = require("./normalizar-fonte");
 const sinaisTemporais = require("./sinais-temporais");
+const { classificarFonte } = require("./tipo-fonte");
 
 const MAX_RESULTADOS_BUSCA = 5;
 const MAX_FONTES_EXTRAIDAS = 3;
+const LIMITE_FONTES_EXTRAIDAS = 6;
+const MAX_RESULTADOS_NOTICIAS = 4;
 const VERSAO_CANONICALIZACAO = "1.0.0";
 
 async function notificarRastreabilidade(callback, dados) {
@@ -251,12 +254,12 @@ function normalizarDominiosOficiais(dominios) {
   }))];
 }
 
-async function executarBusca(pergunta, opcoes, dominiosOficiais = []) {
+async function executarBusca(pergunta, opcoes, dominiosOficiais = [], extras = {}) {
   const registro = criarRegistroBase(opcoes, "BUSCA", pergunta);
   const parametros = {
     query: pergunta,
     search_depth: "basic",
-    max_results: MAX_RESULTADOS_BUSCA,
+    max_results: extras.maxResultados ?? MAX_RESULTADOS_BUSCA,
     include_answer: false,
     include_published_date: true
   };
@@ -264,9 +267,15 @@ async function executarBusca(pergunta, opcoes, dominiosOficiais = []) {
   if (dominiosOficiais.length > 0) {
     parametros.include_domains = dominiosOficiais;
     registro.modo_busca = "DOMINIOS_OFICIAIS";
+  } else if (extras.topic === "news") {
+    // Busca de notícias: amplia o contexto com cobertura jornalística.
+    parametros.topic = "news";
+    registro.modo_busca = "NOTICIAS";
   } else {
     registro.modo_busca = "GERAL";
   }
+  // "country" só é aceito pela Tavily no tópico geral.
+  if (extras.country && !parametros.topic) parametros.country = extras.country;
   registro.parametros = parametros;
 
   const inicio = Date.now();
@@ -301,6 +310,46 @@ async function executarBusca(pergunta, opcoes, dominiosOficiais = []) {
   }
 }
 
+const ORDEM_TIPOS_DIVERSOS = ["OFICIAL", "NOTICIA", "REFERENCIA", "OUTRO", "BLOG_FORUM"];
+
+function selecionarFontesDiversas(candidatos, maxFontes, dominiosOficiais) {
+  const hostDe = url => {
+    try { return new URL(url).hostname.toLowerCase().replace(/^www\./, ""); } catch { return url; }
+  };
+  const porTipo = new Map(ORDEM_TIPOS_DIVERSOS.map(tipo => [tipo, []]));
+  for (const resultado of candidatos) {
+    const tipo = classificarFonte(resultado.url, {
+      dominiosOficiais,
+      deBuscaDeNoticias: (resultado._origens_busca ?? []).some(origem => origem.modo_busca === "NOTICIAS")
+    }).tipo;
+    porTipo.get(tipo).push(resultado);
+  }
+  const escolhidos = [];
+  const dominiosUsados = new Set();
+  // Até duas fontes oficiais, depois rodízio entre tipos, um domínio por vez.
+  for (let rodada = 0; escolhidos.length < maxFontes && rodada < candidatos.length; rodada += 1) {
+    let adicionou = false;
+    for (const tipo of ORDEM_TIPOS_DIVERSOS) {
+      if (escolhidos.length >= maxFontes) break;
+      if (tipo === "OFICIAL" && rodada >= 2) continue;
+      const fila = porTipo.get(tipo);
+      const indice = fila.findIndex(r => !dominiosUsados.has(hostDe(r.url)));
+      if (indice === -1) continue;
+      const [r] = fila.splice(indice, 1);
+      escolhidos.push(r);
+      dominiosUsados.add(hostDe(r.url));
+      adicionou = true;
+    }
+    if (!adicionou) break;
+  }
+  // Se faltar, completa por relevância (mesmo repetindo domínio).
+  for (const r of candidatos) {
+    if (escolhidos.length >= maxFontes) break;
+    if (!escolhidos.includes(r)) escolhidos.push(r);
+  }
+  return escolhidos;
+}
+
 async function pesquisarComTavily(pergunta, opcoes = {}) {
   if (typeof pergunta !== "string" || pergunta.trim() === "") {
     throw new Error("A pergunta para a Tavily não pode estar vazia.");
@@ -313,10 +362,18 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
   const dominiosOficiais = normalizarDominiosOficiais(
     opcoes.dominiosOficiais
   );
-  const buscaGeral = await executarBusca(pergunta, opcoes);
+  const buscaGeral = await executarBusca(pergunta, opcoes, [], { country: opcoes.pais });
   if (buscaGeral.erro) throw buscaGeral.erro;
 
   const buscas = [buscaGeral];
+  if (opcoes.incluirNoticias) {
+    const buscaNoticias = await executarBusca(pergunta, opcoes, [], {
+      topic: "news",
+      maxResultados: MAX_RESULTADOS_NOTICIAS
+    });
+    // Falha na busca de notícias não impede a verificação.
+    if (!buscaNoticias.erro) buscas.push(buscaNoticias);
+  }
   if (dominiosOficiais.length > 0) {
     const buscaOficial = await executarBusca(
       pergunta,
@@ -388,8 +445,11 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
     );
   }
 
-  // Seleciona até três URLs; fontes oficiais têm prioridade se solicitadas.
-  const selecionadosParaExtracao = [...resultadosBusca]
+  const maxFontes = Math.min(
+    LIMITE_FONTES_EXTRAIDAS,
+    Math.max(1, Number.isInteger(opcoes.maxFontes) ? opcoes.maxFontes : MAX_FONTES_EXTRAIDAS)
+  );
+  const candidatos = [...resultadosBusca]
     .filter(resultado =>
       typeof resultado.url === "string" &&
       resultado.url.startsWith("http")
@@ -397,8 +457,15 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
     .sort((a, b) =>
       Number(dominioEhOficial(b)) - Number(dominioEhOficial(a)) ||
       (b.score ?? 0) - (a.score ?? 0)
-    )
-    .slice(0, MAX_FONTES_EXTRAIDAS);
+    );
+
+  // Sem seleção diversa: comportamento original (oficiais primeiro, por relevância).
+  // Com seleção diversa: alterna tipos de fonte e evita repetir domínio, para
+  // que a verificação junte contexto de fontes diferentes (oficial, notícia,
+  // referência, outros sites, blogs), e não várias páginas do mesmo lugar.
+  const selecionadosParaExtracao = opcoes.selecaoDiversa
+    ? selecionarFontesDiversas(candidatos, maxFontes, dominiosOficiais)
+    : candidatos.slice(0, maxFontes);
 
   const urlsSelecionadas = selecionadosParaExtracao.map(
     resultado => resultado.url
@@ -496,8 +563,14 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
     }
     const sinalCanonical = sinaisData.find(sinal => sinal.signal_type === "HTML_CANONICAL_URL");
 
+    const categoria = classificarFonte(resultado.url, {
+      dominiosOficiais,
+      deBuscaDeNoticias: (resultado._origens_busca ?? []).some(origem => origem.modo_busca === "NOTICIAS")
+    });
+
     return {
       tipo_fonte: tipoFonte,
+      categoria_fonte: categoria.tipo,
       titulo: resultado.title,
       url: resultado.url,
       conteudo: conteudoOriginal,
@@ -629,5 +702,6 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
 }
 
 module.exports = {
+  selecionarFontesDiversas,
   pesquisarComTavily
 };

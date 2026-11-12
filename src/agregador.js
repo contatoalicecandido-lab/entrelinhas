@@ -2,11 +2,14 @@
 const { validarData, VALIDADE_MAX_DIAS } = require("./atualidade");
 const { calculateClaimFreshnessScore, calculatePageDateRecency } = require("./freshness-score");
 const { clusterizarDependencias } = require("./independencia-fontes");
+const { calcularConcordancia, estaCorroborada } = require("./concordancia");
+const { classificarFonte } = require("./tipo-fonte");
 
 const VERSAO_REGRAS = "1.2.0";
 
 const VEREDITOS = [
   "ATUAL",
+  "CORROBORADA",
   "CONTRADITA_POR_FONTE_ATUAL",
   "CONFLITO",
   "SUPORTE_FRACO",
@@ -195,6 +198,8 @@ function prepararEvidencias(afirmacao, dominiosOficiais) {
         conteudo: fonte.conteudo ?? "",
         dominio,
         tipo_fonte: fonte.tipo_fonte ?? null,
+        categoria_fonte: fonte.categoria_fonte ??
+          classificarFonte(fonte.url, { dominiosOficiais }).tipo,
         postura: utilizavel ? postura : null,
         utilizavel,
         oficial,
@@ -304,7 +309,7 @@ function calcularScore(grupos) {
   };
 }
 
-function determinarVeredito(grupos) {
+function determinarVeredito(grupos, concordancia = null) {
   if (grupos.length === 0) {
     return "NAO_VERIFICAVEL";
   }
@@ -368,6 +373,11 @@ function determinarVeredito(grupos) {
   }
 
   if (haApoio) {
+    // Sem fonte oficial com data, mas várias fontes independentes de tipos
+    // diferentes concordam e nenhuma contradiz: corroborada.
+    if (concordancia && estaCorroborada(concordancia)) {
+      return "CORROBORADA";
+    }
     return "SUPORTE_FRACO";
   }
 
@@ -427,6 +437,8 @@ function criarResumo(veredito) {
       "Uma fonte oficial atual contradiz a afirmação. As evidências analisadas não sustentam a afirmação como foi apresentada.",
     CONFLITO:
       "As fontes utilizáveis apresentam posições divergentes. Não foi possível resolver o conflito com as evidências disponíveis.",
+    CORROBORADA:
+      "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
     SUPORTE_FRACO:
       "Há evidências que apoiam a afirmação, mas não foi identificada uma fonte oficial atual suficiente para uma conclusão mais forte.",
     CONTRADICAO_FRACA:
@@ -492,7 +504,8 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
   const grupos = agruparPorDominio(evidencias);
 
   const conclusaoFactual = determinarConclusaoFactual(grupos);
-  const veredito = determinarVeredito(grupos);
+  const concordancia = calcularConcordancia(grupos);
+  const veredito = determinarVeredito(grupos, concordancia);
   const score = calcularScore(grupos);
   const validade = VALIDADE_MAX_DIAS[afirmacao.tipo_afirmacao];
   const freshnessScore = calculateClaimFreshnessScore(
@@ -604,6 +617,7 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
     afirmacao: afirmacao.texto,
     score_qualidade_evidencia: score,
     freshness: freshnessScore,
+    concordancia,
     recencia_pagina: recenciaPagina,
     versao_regras: VERSAO_REGRAS,
     metodo: "AGREGACAO_DETERMINISTICA",
@@ -625,6 +639,7 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
       evidencias: grupo.evidencias.map(evidencia => ({
         titulo: evidencia.titulo,
         url: evidencia.url,
+        categoria_fonte: evidencia.categoria_fonte,
         postura: evidencia.postura,
         atual: evidencia.atual,
         data_vinculada_ao_atributo: evidencia.data_vinculada_ao_atributo,

@@ -47,7 +47,11 @@ const TESTES = [
   "teste-tipo-afirmacao.js",
   "teste-servidor.js",
   "teste-recencia-pagina.js",
-  "teste-classificador-data.js"
+  "teste-classificador-data.js",
+  "teste-portugues.js",
+  "teste-tavily-diversidade.js",
+  "teste-concordancia.js",
+  "teste-analise-lote.js"
 ];
 
 const extras = process.argv.slice(2);
