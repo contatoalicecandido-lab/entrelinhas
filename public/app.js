@@ -140,7 +140,7 @@ function montarLegenda() {
   const extras = [
     ["Source agreement (0–100)", "How much independent sources agree with the claim, weighted by type: official 3, news 2, reference 2, other sites 1, blogs and forums 0.5. Copies and pages of one site count once."],
     ["Freshness (0–100)", "How recent the date tied to this exact fact is, against the claim type's validity window: it halves every half window, so a price dated 7 days ago scores 72. Without such a date, the card says so and shows page-date recency with low confidence."],
-    ["Portuguese-aware reading", "R$ 1.234,56 is 1234.56; “a partir de” is a starting price; “até” is an upper bound; “cerca de” is approximate; “atualmente” means it must hold today; 12/11/2026 is 12 November."]
+    ["Portuguese-aware reading", "R$ 1.234,56 is 1234.56 and “5 mil” is 5,000; “a partir de” is a starting price, “até” an upper bound, “cerca de” approximate; “no Pix”, “12x sem juros” and “para novos clientes” are conditions; “deixou de” and “entrou em vigor” mark changes; “atualmente” must hold today; “ano que vem” and 03/04/2027 are resolved (3 April); Selic, LGPD, Anatel or salário mínimo send the search to the Brazilian authority."]
   ];
   for (const [titulo, texto] of extras) {
     const bloco = el("div");
@@ -400,7 +400,8 @@ function criarCartao(afirmacao, simulado) {
   cab.append(el("span", "chip", cat
     ? `${cat[0]}${afirmacao.origem_tipo_afirmacao ? ` · ${ORIGEM[afirmacao.origem_tipo_afirmacao]}` : ""}`
     : "No category"));
-  if (afirmacao.nuances?.idioma === "pt") cab.append(el("span", "chip", "Portuguese"));
+  if (afirmacao.nuances?.idioma === "pt") cab.append(el("span", "chip", afirmacao.nuances.variante === "pt-PT" ? "European Portuguese" : "Brazilian Portuguese"));
+  for (const d of afirmacao.dominios_oficiais_automaticos ?? []) cab.append(el("span", "chip chip-br", `Official BR source searched: ${d}`));
   cartao.append(cab);
 
   cartao.append(el("h3", "afirmacao", afirmacao.texto));

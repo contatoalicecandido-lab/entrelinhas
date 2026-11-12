@@ -245,7 +245,16 @@ function criarServidor() {
 }
 
 if (require.main === module) {
-  criarServidor().listen(PORTA, HOST, () => {
+  const servidor = criarServidor();
+  servidor.on("error", erro => {
+    if (erro.code === "EADDRINUSE") {
+      console.error(`A porta ${PORTA} já está em uso (provavelmente outro Entrelinhas aberto).`);
+      console.error(`Feche a outra janela ou use outra porta: PORT=${PORTA + 1} npm run web`);
+      process.exit(1);
+    }
+    throw erro;
+  });
+  servidor.listen(PORTA, HOST, () => {
     console.log(`Entrelinhas rodando em http://localhost:${PORTA}`);
     console.log(modoRealDisponivel
       ? "Modo real disponível (Tavily + Bifrost). O modo exemplo também pode ser usado."

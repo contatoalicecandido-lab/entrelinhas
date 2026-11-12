@@ -202,12 +202,112 @@ function extrairExpressoesTemporais(texto) {
   return encontrados;
 }
 
+// Condições de compra e de oferta típicas do comércio brasileiro. Mudam se
+// um preço "está certo": R$ 99 no Pix não é o mesmo que R$ 99 parcelado.
+const CONDICOES = [
+  [/\b(no|via|pelo) pix\b/i, "payment by Pix only"],
+  [/\b[àa] vista\b/i, "upfront / single payment"],
+  [/\bno boleto\b/i, "payment by boleto (bank slip)"],
+  [/\b(em at[eé] )?\d{1,2}\s?x\s?(sem juros|com juros)?\b/i, "instalment plan"],
+  [/\bsem juros\b/i, "interest-free instalments"],
+  [/\bno cart[aã]o\b/i, "card payment"],
+  [/\b(no|nos) (primeiro|primeiros|\d+ primeiros) (m[eê]s|meses)\b/i, "introductory period only"],
+  [/\b(para|p\/) novos clientes\b/i, "new customers only"],
+  [/\bpor tempo limitado\b|\bpromo[cç][aã]o\b|\bblack friday\b/i, "time-limited promotion"],
+  [/\bfrete gr[aá]tis\b/i, "free shipping condition"],
+  [/\b(na|para a) (regi[aã]o|cidade|capital)\b|\bem s[aã]o paulo\b|\bno rio\b/i, "regional condition"],
+  [/\bcom fidelidade\b|\bplano anual\b/i, "commitment / annual plan"]
+];
+
+// Expressões que descrevem MUDANÇA ao longo do tempo: o centro de uma
+// resposta desatualizada.
+const MUDANCAS = [
+  [/\bdeixou de\b|\bdeixaram de\b/i, "stopped: the fact used to be true and changed"],
+  [/\bn[aã]o [eé] mais\b|\bj[aá] n[aã]o\b|\bn[aã]o existe mais\b/i, "no longer true: a change of state"],
+  [/\bpassou a\b|\bpassaram a\b|\bpassa a valer\b/i, "became true from some point in time"],
+  [/\bvoltou a\b|\bvoltaram a\b/i, "became true again after a change"],
+  [/\bainda n[aã]o\b/i, "not yet: expected to change"],
+  [/\bentrou em vigor\b|\bentra em vigor\b|\bvigora\b|\bem vigor\b/i, "legal validity: check the date it takes effect"],
+  [/\bfoi (revogad[ao]|extint[ao]|descontinuad[ao]|encerrad[ao]|suspens[ao])\b/i, "ended: revoked, discontinued or closed"],
+  [/\bfoi (lan[cç]ad[ao]|aprovad[ao]|sancionad[ao]|anunciad[ao])\b/i, "event: launched, approved or announced at a specific time"],
+  [/\b(reajust|aument|reduz|caiu|cair|subiu|subir|sobe|baixou|baixar)/i, "price or value change"]
+];
+
+// Mapa de autoridades brasileiras: termos que apontam para a fonte oficial
+// que deve ser consultada. Usado para sugerir domínios oficiais automaticamente.
+const AUTORIDADES_BR = [
+  [/\bselic\b|\bcopom\b|\bregras do pix\b|\bbanco central\b|\bbacen\b|\bc[aâ]mbio oficial\b/i, "bcb.gov.br", "Banco Central do Brasil"],
+  [/\blgpd\b|\banpd\b|prote[cç][aã]o de dados/i, "gov.br", "ANPD / gov.br"],
+  [/\banatel\b|\btelefonia\b|\bbanda larga\b/i, "anatel.gov.br", "Anatel"],
+  [/\bclt\b|\bconsolida[cç][aã]o das leis do trabalho\b|\blei n[ºo°.]?\s?\d|\bdecreto\b|\bmedida provis[oó]ria\b|\bconstitui[cç][aã]o\b/i, "planalto.gov.br", "Presidency legislation portal (Planalto)"],
+  [/\bsal[aá]rio m[ií]nimo\b|\binss\b|\baposentadoria\b|\bbolsa fam[ií]lia\b/i, "gov.br", "Federal government (gov.br)"],
+  [/\breceita federal\b|\bimposto de renda\b|\birpf\b|\bcnpj\b|\bcpf\b|\bmei\b|\bsimples nacional\b/i, "gov.br", "Receita Federal (gov.br)"],
+  [/\bipca\b|\binfla[cç][aã]o oficial\b|\bibge\b|\bdesemprego\b|\bpib\b/i, "ibge.gov.br", "IBGE"],
+  [/\bcvm\b|\bb3\b|\ba[cç][oõ]es\b|\bbolsa de valores\b/i, "cvm.gov.br", "CVM"],
+  [/\banvisa\b|\bmedicamento\b|\bvacina\b/i, "gov.br", "Anvisa (gov.br)"],
+  [/\bstf\b|\bstj\b|\btse\b|\bsupremo\b/i, "jus.br", "Brazilian courts (jus.br)"],
+  [/\bprocon\b|\bc[oó]digo de defesa do consumidor\b|\bcdc\b/i, "planalto.gov.br", "Consumer Protection Code (Planalto)"]
+];
+
+// Português europeu: mesma língua, outras convenções (e às vezes outros fatos).
+const PT_PT = /\b(facto|telem[oó]vel|equipa|autocarro|ecr[aã]|utilizador|registo|est(ou|á|amos|ão) a [a-z]+r)\b/i;
+
+const MESES_LISTA = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+// Tempo coloquial resolvido a partir da data de referência.
+function resolverTempoColoquial(texto, referencia = new Date()) {
+  const t = semAcento(texto);
+  const ano = referencia.getUTCFullYear();
+  const mes = referencia.getUTCMonth() + 1;
+  const achados = [];
+  if (/\b(ano que vem|proximo ano)\b/.test(t)) achados.push({ texto: "ano que vem", resolvido: String(ano + 1), rotulo: `"next year" = ${ano + 1}` });
+  if (/\b(ano passado)\b/.test(t)) achados.push({ texto: "ano passado", resolvido: String(ano - 1), rotulo: `"last year" = ${ano - 1}` });
+  if (/\b(este ano|neste ano|esse ano)\b/.test(t)) achados.push({ texto: "este ano", resolvido: String(ano), rotulo: `"this year" = ${ano}` });
+  if (/\b(mes que vem|proximo mes)\b/.test(t)) {
+    const m2 = mes === 12 ? 1 : mes + 1; const a2 = mes === 12 ? ano + 1 : ano;
+    achados.push({ texto: "mês que vem", resolvido: iso(a2, m2), rotulo: `"next month" = ${MESES_LISTA[m2 - 1]} ${a2}` });
+  }
+  const mSemAno = /\b(a partir de|em|desde|ate) (janeiro|fevereiro|marco|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro)\b(?!\s+(de\s+)?\d{4})/.exec(t);
+  if (mSemAno) {
+    const alvo = MESES[mSemAno[2]];
+    const a2 = alvo >= mes ? ano : ano + 1;
+    const original = String(texto).slice(mSemAno.index, mSemAno.index + mSemAno[0].length);
+    achados.push({ texto: original, resolvido: iso(a2, alvo), rotulo: `month without a year: read as ${MESES_LISTA[alvo - 1]} ${a2} (nearest)` });
+  }
+  return achados;
+}
+
+function encontrar(lista, texto) {
+  const r = [];
+  for (const [re, rotulo, extra] of lista) {
+    const m = re.exec(String(texto ?? ""));
+    if (!m) continue;
+    // Evita repetir um trecho já coberto por outra expressão ("12x sem juros" e "sem juros").
+    if (r.some(x => x.texto.toLowerCase().includes(m[0].toLowerCase().trim()))) continue;
+    r.push({ texto: m[0].trim(), rotulo, extra });
+  }
+  return r;
+}
+
+function sugerirDominiosOficiaisBr(texto) {
+  const achados = encontrar(AUTORIDADES_BR.map(([re, dominio, nome]) => [re, dominio, nome]), texto);
+  const vistos = new Map();
+  for (const a of achados) if (!vistos.has(a.rotulo)) vistos.set(a.rotulo, { dominio: a.rotulo, autoridade: a.extra, termo: a.texto });
+  return [...vistos.values()];
+}
+
 // Resumo das nuances de uma afirmação, para a interface e para o modelo.
-function analisarNuances(texto) {
+function analisarNuances(texto, opcoes = {}) {
   const { idioma, confianca } = detectarIdioma(texto);
   const valores = extrairValores(texto);
   const datas = idioma === "pt" ? extrairDatasPt(texto) : [];
   const temporais = extrairExpressoesTemporais(texto);
+  const referencia = opcoes.dataReferencia instanceof Date ? opcoes.dataReferencia : new Date();
+  const condicoes = idioma === "pt" ? encontrar(CONDICOES, texto) : [];
+  const mudancas = idioma === "pt" ? encontrar(MUDANCAS, texto) : [];
+  const coloquiais = idioma === "pt" ? resolverTempoColoquial(texto, referencia) : [];
+  const autoridades = idioma === "pt" ? sugerirDominiosOficiaisBr(texto) : [];
+  const variante = idioma === "pt" ? (PT_PT.test(texto) ? "pt-PT" : "pt-BR") : null;
   const notas = [];
   for (const v of valores) {
     if (v.qualificador && v.tipo !== "QUANTIDADE") {
@@ -221,9 +321,27 @@ function analisarNuances(texto) {
       notas.push(`"${v.texto}" uses Brazilian number format: BRL ${v.valor.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}${v.periodo ? (v.periodo === "MENSAL" ? " per month" : " per year") : ""}.`);
     }
   }
-  for (const d of datas) notas.push(`"${d.texto}" is a Portuguese date: ${d.data}${d.precisao === "MES" ? " (month precision)" : ""}.`);
+  for (const d of datas) {
+    let extra = "";
+    if (d.formato === "DD/MM/AAAA") {
+      const [a, m, dia] = d.data.split("-").map(Number);
+      if (dia <= 12 && dia !== m) extra = ` (day/month: ${dia} ${MESES_LISTA[m - 1]}, not ${MESES_LISTA[dia - 1]} ${m})`;
+      else extra = ` (day/month: ${dia} ${MESES_LISTA[m - 1]} ${a})`;
+    }
+    notas.push(`"${d.texto}" is a Portuguese date: ${d.data}${d.precisao === "MES" ? " (month precision)" : ""}${extra}.`);
+  }
+  for (const c of condicoes) notas.push(`"${c.texto}" is a condition (${c.rotulo}): a source without it, or with another condition, may not confirm the claim.`);
+  for (const m of mudancas) notas.push(`"${m.texto}": ${m.rotulo}.`);
+  for (const c of coloquiais) notas.push(`"${c.texto}": ${c.rotulo}.`);
+  for (const a of autoridades) notas.push(`"${a.termo}" points to a Brazilian authority: ${a.autoridade} (${a.dominio}) is searched as an official source.`);
+  if (variante === "pt-PT") notas.push("European Portuguese detected: spelling and facts may refer to Portugal, not Brazil.");
   for (const e of temporais) notas.push(`"${e.texto}": ${e.rotulo}.`);
-  return { idioma, confianca_idioma: confianca, valores, datas, expressoes_temporais: temporais, notas };
+  return {
+    idioma, variante, confianca_idioma: confianca, valores, datas, expressoes_temporais: temporais,
+    condicoes, mudancas, tempo_coloquial: coloquiais,
+    dominios_oficiais_sugeridos: autoridades.map(a => a.dominio),
+    autoridades, notas
+  };
 }
 
 // Compara um valor da afirmação com os valores de uma evidência, respeitando
@@ -257,6 +375,8 @@ module.exports = {
   extrairDatasPt,
   extrairExpressoesTemporais,
   analisarNuances,
+  sugerirDominiosOficiaisBr,
+  resolverTempoColoquial,
   compararValores,
   converterNumero
 };

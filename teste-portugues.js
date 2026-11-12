@@ -84,4 +84,41 @@ caso("'1,2 milhão de usuários' é 1.200.000 e não confunde com moeda", () => 
   assert.equal(vs.filter(x => x.tipo === "QUANTIDADE").length, 1);
   assert.equal(vs.find(x => x.tipo === "MONETARIO").valor, 2000);
 });
+const REF = new Date("2026-11-12T12:00:00Z");
+caso("condições de pagamento brasileiras: Pix, 12x sem juros, novos clientes", () => {
+  const r = p.analisarNuances("Custa R$ 9.999 à vista no Pix ou em 12x sem juros para novos clientes.", { dataReferencia: REF });
+  const textos = r.condicoes.map(c => c.texto.toLowerCase());
+  assert.ok(textos.includes("no pix") && textos.includes("12x sem juros") && textos.includes("para novos clientes"));
+  assert.ok(!textos.includes("sem juros"), "sem duplicar 'sem juros'");
+});
+caso("mudança de estado: 'deixou de' e 'entrou em vigor'", () => {
+  assert.ok(p.analisarNuances("O banco deixou de cobrar a tarifa.").mudancas.some(m => /stopped/.test(m.rotulo)));
+  assert.ok(p.analisarNuances("A lei entrou em vigor ontem.").mudancas.some(m => /legal validity/.test(m.rotulo)));
+});
+caso("tempo coloquial resolvido pela data de hoje", () => {
+  const r = p.analisarNuances("O salário mínimo vai subir no ano que vem.", { dataReferencia: REF });
+  assert.equal(r.tempo_coloquial[0].resolvido, "2027");
+  const m = p.analisarNuances("A regra vale a partir de março.", { dataReferencia: REF });
+  assert.equal(m.tempo_coloquial[0].resolvido, "2027-03-01");
+});
+caso("mapa de autoridades: Selic → bcb.gov.br, LGPD → gov.br, Anatel", () => {
+  assert.deepEqual(p.analisarNuances("A Selic está em 15%.").dominios_oficiais_sugeridos, ["bcb.gov.br"]);
+  assert.deepEqual(p.analisarNuances("A LGPD exige um encarregado.").dominios_oficiais_sugeridos, ["gov.br"]);
+  assert.ok(p.analisarNuances("A Anatel aprovou a regra da banda larga.").dominios_oficiais_sugeridos.includes("anatel.gov.br"));
+});
+caso("Pix como forma de pagamento não aponta para o Banco Central", () => {
+  assert.deepEqual(p.analisarNuances("O tênis custa R$ 300 no Pix.").dominios_oficiais_sugeridos, []);
+});
+caso("03/04/2027 é 3 de abril, não 4 de março", () => {
+  assert.ok(p.analisarNuances("Vale até 03/04/2027.").notas.some(t => /3 April, not March 4/.test(t)));
+});
+caso("português europeu é sinalizado", () => {
+  assert.equal(p.analisarNuances("O facto é que o telemóvel custa 500 euros.").variante, "pt-PT");
+  assert.equal(p.analisarNuances("O fato é que o celular custa R$ 500.").variante, "pt-BR");
+});
+caso("salário mínimo e Selic são regulamento, mesmo com R$", () => {
+  const { inferirTipoPorRegras } = require("./src/tipo-afirmacao");
+  assert.equal(inferirTipoPorRegras("O salário mínimo é R$ 1.518."), "regulamento");
+  assert.equal(inferirTipoPorRegras("A taxa Selic está em 15%."), "regulamento");
+});
 console.log(`Resultado: ${n}/${n} casos de português passaram. Sem rede e sem banco.`);

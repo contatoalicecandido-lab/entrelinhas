@@ -23,7 +23,7 @@ const REGRAS = [
   },
   {
     tipo: "regulamento",
-    padrao: /(\blei\b|\bleis\b|\bdecreto\b|\bregulament|\bregula[çc][aã]o\b|\bregulation\b|\bnorma\b|\bresolu[çc][aã]o\b|\bportaria\b|\bLGPD\b|\bGDPR\b|\bAI Act\b|\bcompliance\b|\bobrigat[óo]ri|\bmandatory\b|\blegisla|\blaw\b|\bANPD\b|\bANATEL\b|\bBACEN\b|\bBanco Central\b)/i
+    padrao: /(\blei\b|\bleis\b|\bdecreto\b|\bregulament|\bregula[çc][aã]o\b|\bregulation\b|\bnorma\b|\bresolu[çc][aã]o\b|\bportaria\b|\bLGPD\b|\bGDPR\b|\bAI Act\b|\bcompliance\b|\bobrigat[óo]ri|\bmandatory\b|\blegisla|\blaw\b|\bANPD\b|\bANATEL\b|\bBACEN\b|\bBanco Central\b|\bsal[aá]rio m[ií]nimo\b|\bselic\b|\bipca\b|\bal[ií]quota\b|\bimposto\b|\binss\b|\birpf\b|\bsimples nacional\b|\bmei\b|\bclt\b|\bentra(ou)? em vigor\b|\brevogad[ao]\b)/i
   },
   {
     tipo: "empresa",
@@ -35,8 +35,13 @@ function tipoValido(tipo) {
   return typeof tipo === "string" && CATEGORIAS.includes(tipo);
 }
 
+// Valores definidos por regra oficial no Brasil (salário mínimo, Selic,
+// alíquotas): mesmo com "R$", são regulamento, não preço de mercado.
+const VALOR_REGULADO_BR = /\b(sal[aá]rio m[ií]nimo|selic|al[ií]quota|teto do inss|faixa de isen[cç][aã]o|imposto de renda)\b/i;
+
 function inferirTipoPorRegras(texto) {
   if (typeof texto !== "string" || !texto.trim()) return null;
+  if (VALOR_REGULADO_BR.test(texto)) return "regulamento";
   for (const regra of REGRAS) {
     if (regra.padrao.test(texto)) return regra.tipo;
   }

@@ -200,8 +200,14 @@ function obterDominiosOficiais(resultado, opcoes) {
 }
 
 function agregarResultadoAfirmacao(resultado, opcoes) {
-  const dominiosOficiais = obterDominiosOficiais(resultado, opcoes);
+  const dominiosConfigurados = obterDominiosOficiais(resultado, opcoes);
+  // Mapa de autoridades brasileiras: Selic → bcb.gov.br, LGPD → gov.br etc.
+  const dominiosAutomaticos = opcoes.paisAutomatico
+    ? (resultado.nuances?.dominios_oficiais_sugeridos ?? []).filter(d => !dominiosConfigurados.includes(d))
+    : [];
+  const dominiosOficiais = [...dominiosConfigurados, ...dominiosAutomaticos];
   resultado.dominios_oficiais_usados = [...dominiosOficiais];
+  resultado.dominios_oficiais_automaticos = dominiosAutomaticos;
   resultado.agregacao = agregarEvidencias(
     {
       texto: resultado.texto,
@@ -383,7 +389,7 @@ async function verificarAfirmacao(afirmacao, opcoes) {
     texto: afirmacao.texto,
     tipo_afirmacao: null,
     origem_tipo_afirmacao: null,
-    nuances: analisarNuances(afirmacao.texto),
+    nuances: analisarNuances(afirmacao.texto, { dataReferencia: opcoes.dataReferencia }),
     evidencias: [],
     erro_busca: null
   };
