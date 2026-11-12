@@ -217,8 +217,13 @@ async function perguntarAoModelo(
       const limitado = resposta.status === 429 ||
         (tentativasReserva.length > 0 && tentativasReserva.some(t => t?.status_code === 429));
       if (limitado) {
-        const dados429 = dadosErro ?? tentativasReserva.find(t => t?.status_code === 429);
-        const espera = tempoDeEspera(resposta, dados429);
+        // Menor espera entre o principal e os reservas limitados: com o
+        // principal sem cota diária (horas), o reserva libera em segundos.
+        const esperas = [tempoDeEspera(resposta, dadosErro)];
+        for (const t of tentativasReserva) {
+          if (t?.status_code === 429) esperas.push(tempoDeEspera({ headers: { get: () => null } }, { error: { message: t.message ?? "" }, extra_fields: { retry_after_ms: t.retry_after_ms } }));
+        }
+        const espera = Math.min(...esperas.filter(Number.isFinite));
         if (espera <= ESPERA_MAXIMA_LIMITE_MS) {
           rastreabilidade.espera_limite_ms = espera + 500;
           await esperar(espera + 500);

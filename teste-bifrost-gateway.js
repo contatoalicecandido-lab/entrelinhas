@@ -95,6 +95,19 @@ async function principal() {
       assert.equal(chamadas, 2);
       assert.equal(meta.status, "SUCESSO");
       ok("reservas todos limitados por trás de outro erro do principal: também espera");
+
+      // Principal sem cota diária (espera de horas) e reserva liberando em segundos.
+      chamadas = 0;
+      global.fetch = async () => {
+        chamadas += 1;
+        if (chamadas === 1) return new Response(JSON.stringify({ error: { message: "Rate limit reached on tokens per day. Please try again in 3h12m0s." }, extra_fields: { retry_after_ms: 11520000, fallback_attempts: [
+          { model: "openai/gpt-oss-120b", status_code: 429, message: "Please try again in 0.02s." }] } }), { status: 429 });
+        return respostaBifrost();
+      };
+      await perguntarAoModelo("pergunta", null, { onMetadata: m => { meta = m; } });
+      assert.equal(chamadas, 2);
+      assert.ok(meta.espera_limite_ms < 1000, `espera ${meta.espera_limite_ms}`);
+      ok("cota diária no principal: espera o reserva, não as horas do principal");
     }
   } finally {
     global.fetch = fetchOriginal;
