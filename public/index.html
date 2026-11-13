@@ -32,7 +32,7 @@
       <nav class="barra-links" aria-label="Sections">
         <a href="#como-funciona">Method</a>
         <a href="#prova">Evidence</a>
-        <a href="#favorito-secao">Anywhere</a>
+        <a href="#favorito-secao">Use cases</a>
         <a href="#como-ler">Verdicts</a>
       </nav>
       <span id="selo-modo" class="selo"></span>
@@ -41,7 +41,7 @@
     <section class="hero" aria-labelledby="titulo-hero">
       <p class="sobretitulo">A stale-answer detector for AI applications</p>
       <h1 id="titulo-hero">Every AI answer has <br class="quebra">an <em>expiry date.</em></h1>
-      <p class="hero-texto">Entrelinhas, Portuguese for “between the lines”, reads what an AI answer takes for granted. It finds the claims that go out of date, checks each one against live sources, scores how fresh it still is and rewrites the answer with citations.</p>
+      <p class="hero-texto">Entrelinhas, Portuguese for “between the lines”, finds the claims in an AI answer that have expired, checks each one live and rewrites the answer with sources.</p>
 
       <section class="console" aria-labelledby="titulo-entrada">
         <h2 id="titulo-entrada" class="sr">Check an answer</h2>
@@ -162,7 +162,7 @@
         <p class="rotulo">Method</p>
         <h2 id="titulo-metodo">From a confident answer <br class="quebra">to a <em>current</em> one.</h2>
         <p class="metodo-texto">Five moves, every one of them traceable. Each search, each model call and each quote is stored and matched against the source text.</p>
-        <p class="metodo-requisitos">Claim identification, freshness detection, live verification and a freshness score for every claim, in one pass.</p>
+        <p class="metodo-requisitos dica-escura">Claim identification, freshness detection, live verification and a freshness score for every claim, in one pass.</p>
       </div>
       <svg class="simbolo" viewBox="0 0 320 320" aria-hidden="true">
         <g fill="none" stroke="url(#g-laranja)" stroke-width="2" stroke-linecap="round">
@@ -181,12 +181,6 @@
     </ol>
   </section>
 
-  <div class="faixa" aria-label="Capabilities">
-    <div class="faixa-trilho">
-      <span>Claim splitting</span><span>Stale-risk triage</span><span>Live web search</span><span>Source agreement</span><span>Freshness score</span><span>Model fallback</span><span>Cited rewrite</span><span>Portuguese-native</span><span>Full traceability</span><span>Bookmarklet</span>
-      <span aria-hidden="true">Claim splitting</span><span aria-hidden="true">Stale-risk triage</span><span aria-hidden="true">Live web search</span><span aria-hidden="true">Source agreement</span><span aria-hidden="true">Freshness score</span><span aria-hidden="true">Model fallback</span><span aria-hidden="true">Cited rewrite</span><span aria-hidden="true">Portuguese-native</span><span aria-hidden="true">Full traceability</span><span aria-hidden="true">Bookmarklet</span>
-    </div>
-  </div>
 
   <section id="prova" class="folha secao prova" aria-labelledby="titulo-prova">
     <div class="secao-cabeca">
@@ -234,13 +228,24 @@
   </section>
 
   <section id="favorito-secao" class="noite favorito-secao" aria-labelledby="titulo-favorito">
+    <div class="usos">
+      <p class="rotulo">Use cases</p>
+      <h2>Built for teams that <br class="quebra">ship <em>AI answers.</em></h2>
+      <div class="usos-grade">
+        <div class="uso"><h3>Support chatbots</h3><p>Catch the outdated price or policy before your bot tells a customer.</p></div>
+        <div class="uso"><h3>AI product teams</h3><p>One API call after generation adds verdicts, freshness and citations to any answer.</p></div>
+        <div class="uso"><h3>Content and newsrooms</h3><p>Check drafts written with AI against today’s sources before they go out.</p></div>
+        <div class="uso"><h3>Health, legal and finance</h3><p>Where a stale rule is a liability, every claim comes with its evidence trail.</p></div>
+      </div>
+    </div>
+
     <div class="favorito-grade">
       <div>
         <p class="rotulo">Anywhere</p>
-        <h2 id="titulo-favorito">A verification layer <br class="quebra">for <em>any</em> AI app.</h2>
+        <h3 id="titulo-favorito" class="titulo-medio">A verification layer for any AI app.</h3>
         <p>Drag the button to your bookmarks bar. On ChatGPT, Gemini or any page, select an answer and click it. Entrelinhas opens with the text ready to check.</p>
         <p class="favorito-acao"><a id="favorito" class="botao-favorito" href="#">Check with Entrelinhas</a></p>
-        <p class="dica">Opens <span id="favorito-destino"></span>. Nothing is sent until you click Check answer.</p>
+        <p class="dica">Nothing is sent until you click Check answer. <span id="favorito-destino" hidden></span></p>
       </div>
       <div class="api">
         <p class="rotulo">For developers</p>
@@ -255,15 +260,6 @@
       </div>
     </div>
 
-    <div class="usos">
-      <p class="rotulo">Built for teams that ship AI answers</p>
-      <div class="usos-grade">
-        <div class="uso"><h3>Support chatbots</h3><p>Catch the outdated price or policy before your bot tells a customer.</p></div>
-        <div class="uso"><h3>AI product teams</h3><p>One API call after generation adds verdicts, freshness and citations to any answer.</p></div>
-        <div class="uso"><h3>Content and newsrooms</h3><p>Check drafts written with AI against today’s sources before they go out.</p></div>
-        <div class="uso"><h3>Health, legal and finance</h3><p>Where a stale rule is a liability, every claim comes with its evidence trail.</p></div>
-      </div>
-    </div>
   </section>
 
   <section id="como-ler" class="folha secao" aria-labelledby="titulo-ler">
@@ -271,7 +267,10 @@
       <p class="rotulo">Reading the report</p>
       <h2 id="titulo-ler">Seven verdicts. <span class="apagado">No black box.</span></h2>
     </div>
-    <div id="legenda" class="legenda"></div>
+    <details class="legenda-detalhe">
+      <summary><span class="abrir">See all seven verdicts</span><span class="fechar">Hide the verdicts</span></summary>
+      <div id="legenda" class="legenda"></div>
+    </details>
     <p class="dica nota-final">Source agreement and freshness are deterministic indexes, not probabilities of truth. Independent sources can share a mistake, and a recent page can still be wrong.</p>
   </section>
 

@@ -556,3 +556,104 @@ main.folha { overflow: hidden; }
 }
 @media (max-width: 1000px) { .previa-texto { order: -1; } }
 .previa-linha dd.bom, .previa-linha dd.ruim { white-space: normal; }
+
+/* =====================================================================
+   v7: disciplina de sistema
+   Três superfícies (claro liso, escuro liso, vidro só no The problem e
+   no menu), dois raios (16 e 28), laranja só para ação, estado e uma
+   palavra-chave por título. Texto de apoio com no mínimo 15 px.
+   ===================================================================== */
+:root { --raio-g: 28px; --raio-p: 16px; --escuro-2: #161615; }
+
+/* Laranja com moderação */
+.rotulo { color: var(--suave); font-weight: 600; font-size: 14px; letter-spacing: -.01em; }
+.noite .rotulo, .palco .rotulo { color: #9b9a96; }
+.legenda-grupo > .rotulo { color: var(--tinta); }
+.metodo-requisitos { color: #a9a7a1 !important; font-weight: 400; font-size: 15px; }
+.sobretitulo { color: #c8c6c0; text-shadow: none; font-weight: 500; font-size: 14px; }
+.exemplo .rotulo { color: var(--suave); }
+.exemplo.escuro .rotulo { color: #9b9a96; }
+
+/* Selo do modo: indicador discreto, não parece botão */
+.selo, .selo.real { background: none; box-shadow: none; padding: 0; color: #c8c6c0; font-weight: 500; font-size: 13px; border-radius: 0; cursor: default; }
+.selo.real::before { background: linear-gradient(var(--laranja), var(--laranja)) 0 100% / 3px 50% no-repeat, linear-gradient(var(--laranja), var(--laranja)) 5.5px 100% / 3px 100% no-repeat, linear-gradient(var(--laranja), var(--laranja)) 11px 100% / 3px 70% no-repeat; }
+
+/* Topo mais compacto: a ação principal cabe na primeira tela */
+.hero { padding-top: clamp(36px, 6vw, 72px); padding-bottom: 40px; }
+.hero h1 { font-size: clamp(44px, 7.2vw, 92px); }
+.hero-texto { max-width: 640px; margin-top: 22px; }
+.console { margin-top: 36px; }
+.ver-real { background: #fff; color: var(--tinta); box-shadow: none; }
+.ver-real:hover { background: #ecebe7; }
+
+/* Superfícies lisas: sem manchas, sem brilho no canto */
+.ladrilho::before, .legenda-grupo::before { display: none !important; }
+.ladrilho, .bloco-relatorio, .previa-texto, .legenda-grupo {
+  background: var(--papel); backdrop-filter: none; -webkit-backdrop-filter: none;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .8) inset, 0 1px 2px rgba(20, 12, 6, .05);
+  border-radius: var(--raio-g);
+}
+.problema .ladrilho:hover, .legenda-grupo:hover { transform: none; }
+.legenda-notas > div, .previa-linhas, .api { background: var(--escuro-2); box-shadow: none; border-radius: var(--raio-g); }
+.exemplo.escuro { border-radius: var(--raio-g); }
+.uso, .passos li { border-radius: var(--raio-g); }
+.cartao, .metrica, .fonte, .triagem-lista li, .comparacao > div, .cadeia li, .gateway-numeros div, .previa-linha, .previa-linha dl div, .progresso li, .aviso { border-radius: var(--raio-p); }
+
+/* Texto de apoio legível no vídeo e no projetor */
+.problema .ladrilho p:not(.validade):not(.validade-rotulo), .passos p, .uso p, .numero p, .legenda-item p, .legenda-notas p, .previa-texto p:not(.rotulo), .exemplo figcaption { font-size: 15px; line-height: 1.55; }
+.dica { font-size: 14px; }
+
+/* The problem: muro discreto, cartões pretos de verdade */
+.parede span, .parede span.laranja { color: rgba(10, 10, 11, .075); text-decoration-color: rgba(10, 10, 11, .16); text-decoration-thickness: 1.5px; }
+.parede { transform: rotate(-3deg); }
+.problema .ladrilho {
+  background: linear-gradient(160deg, rgba(20, 19, 19, .94), rgba(10, 10, 11, .9));
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08), 0 24px 48px -28px rgba(0, 0, 0, .55);
+}
+.problema .ladrilho:hover { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), inset -8px 1px 14px -6px rgba(255, 84, 27, .5), 0 24px 48px -28px rgba(0, 0, 0, .55); }
+.problema .ladrilho { min-height: 0; padding: 30px 28px; }
+.problema h3 { margin-top: 40px; }
+
+/* Método em linhas: ícone, título, descrição */
+.passos { grid-template-columns: 1fr; gap: 8px; }
+.passos li { display: grid; grid-template-columns: 64px minmax(0, 260px) minmax(0, 1fr); align-items: center; gap: 28px; padding: 22px 30px; }
+.passos h3 { margin: 0; font-size: 22px; white-space: normal; }
+.passos p { max-width: 620px; }
+.glifo { width: 56px; height: 56px; }
+
+/* Números sem carimbo */
+.numero { padding: 30px; }
+
+/* Uso e favoritos */
+.usos { margin-top: 0; }
+.usos h2 { margin-top: 16px; }
+.usos-grade { margin-top: 40px; }
+.uso { background: var(--escuro-2); box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; }
+.uso:hover { box-shadow: inset -8px 1px 14px -6px rgba(255, 84, 27, .5); }
+.favorito-grade { margin-top: clamp(64px, 8vw, 96px); align-items: start; }
+.titulo-medio { font-size: clamp(26px, 2.6vw, 34px); font-weight: 400; letter-spacing: -.04em; line-height: 1.15; color: #fff; margin: 14px 0 0; }
+.favorito-secao::before { opacity: .55; }
+
+/* Legenda recolhível */
+.legenda-detalhe > summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: var(--raio-p); background: var(--tinta); color: #fff; font-size: 15px; font-weight: 500; }
+.legenda-detalhe > summary::-webkit-details-marker { display: none; }
+.legenda-detalhe > summary::after { content: "+"; color: var(--laranja); font-size: 17px; }
+.legenda-detalhe[open] > summary::after { content: "×"; }
+.legenda-detalhe .fechar, .legenda-detalhe[open] .abrir { display: none; }
+.legenda-detalhe[open] .fechar { display: inline; }
+.legenda-detalhe .legenda { margin-top: 24px; }
+#como-ler .secao-cabeca { margin-bottom: 28px; }
+
+@media (max-width: 1000px) {
+  .passos li { grid-template-columns: 56px minmax(0, 1fr); gap: 8px 20px; }
+  .passos li p { grid-column: 2; }
+}
+@media (max-width: 760px) {
+  .problema h3 { margin-top: 20px; }
+  .problema .ladrilho { padding: 24px; }
+  .marcas { display: grid; grid-template-columns: repeat(3, auto); justify-content: center; justify-items: center; gap: 22px 26px; }
+  .marcas .rotulo { grid-column: 1 / -1; }
+  .passos li { padding: 20px; }
+}
+.parede { inset: 38% -4% 0 -4%; mask-image: linear-gradient(180deg, transparent 0%, #000 18%, #000 52%, transparent 80%); -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 18%, #000 52%, transparent 80%); }
