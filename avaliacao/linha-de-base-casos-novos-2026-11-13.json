@@ -1,0 +1,71 @@
+{
+  "executado_em": "2026-11-13T23:13:10.773Z",
+  "metodo": "modelo sozinho via Bifrost, sem busca",
+  "resumo": {
+    "total": 8,
+    "acertos": 7,
+    "sem_decisao": 0,
+    "erros": 1,
+    "erros_graves_confirmou_desatualizada": 0,
+    "acuracia_estrita": 0.875,
+    "falhas_execucao": 0
+  },
+  "linhas": [
+    {
+      "id": "en-nadella-ceo",
+      "esperado": "ATUAL",
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-pichai-ceo",
+      "esperado": "ATUAL",
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "pt-salario-diario",
+      "esperado": "ATUAL",
+      "resposta": "OUTDATED",
+      "resultado": "ERRO",
+      "erro": null
+    },
+    {
+      "id": "en-python312-security",
+      "esperado": "ATUAL",
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-node18-support",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-python38-security",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-ubuntu2004-standard",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "pt-salario-1412",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    }
+  ]
+}

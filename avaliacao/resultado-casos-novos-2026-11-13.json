@@ -1,0 +1,134 @@
+{
+  "executado_em": "2026-11-13T23:10:18.241Z",
+  "servidor": "http://127.0.0.1:3001",
+  "resumo": {
+    "total": 8,
+    "acertos": 6,
+    "parciais": 1,
+    "sem_decisao": 1,
+    "erros": 0,
+    "erros_graves_confirmou_desatualizada": 0,
+    "acuracia_estrita": 0.75,
+    "direcao_correta": 0.875,
+    "falhas_execucao": 0,
+    "gateway": {
+      "chamadas_ao_modelo": 30,
+      "respondidas_por_modelo_reserva": 7,
+      "respostas_invalidas_refeitas": 2
+    }
+  },
+  "linhas": [
+    {
+      "id": "en-nadella-ceo",
+      "esperado": "ATUAL",
+      "veredito": "CORROBORADA",
+      "nota_atualidade": 16,
+      "resultado": "ACERTO",
+      "segundos": 9,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-pichai-ceo",
+      "esperado": "ATUAL",
+      "veredito": "CORROBORADA",
+      "nota_atualidade": 91,
+      "resultado": "ACERTO",
+      "segundos": 16,
+      "gateway": {
+        "chamadas": 4,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "pt-salario-diario",
+      "esperado": "ATUAL",
+      "veredito": "CORROBORADA",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "segundos": 14,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 1
+      },
+      "erro": null
+    },
+    {
+      "id": "en-python312-security",
+      "esperado": "ATUAL",
+      "veredito": "SUPORTE_FRACO",
+      "nota_atualidade": 40,
+      "resultado": "PARCIAL",
+      "segundos": 18,
+      "gateway": {
+        "chamadas": 4,
+        "respondidas_por_reserva": 2,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-node18-support",
+      "esperado": "DESATUALIZADA",
+      "veredito": "CONTRADICAO_FRACA",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "segundos": 14,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-python38-security",
+      "esperado": "DESATUALIZADA",
+      "veredito": "CONTRADITA_POR_FONTE_ATUAL",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "segundos": 12,
+      "gateway": {
+        "chamadas": 4,
+        "respondidas_por_reserva": 1,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-ubuntu2004-standard",
+      "esperado": "DESATUALIZADA",
+      "veredito": "CONTRADICAO_FRACA",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "segundos": 17,
+      "gateway": {
+        "chamadas": 5,
+        "respondidas_por_reserva": 2,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "pt-salario-1412",
+      "esperado": "DESATUALIZADA",
+      "veredito": "NAO_VERIFICAVEL",
+      "nota_atualidade": null,
+      "resultado": "SEM_DECISAO",
+      "segundos": 19,
+      "gateway": {
+        "chamadas": 4,
+        "respondidas_por_reserva": 2,
+        "respostas_invalidas_refeitas": 1
+      },
+      "erro": null
+    }
+  ]
+}

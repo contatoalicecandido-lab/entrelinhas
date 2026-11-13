@@ -9,32 +9,42 @@ const { pontuar, resumir } = require("./rodar-casos-reais");
 const { VERSAO_REGRAS } = require("../src/agregador");
 
 const RAIZ = path.join(__dirname, "..");
-const { casos } = JSON.parse(fs.readFileSync(path.join(__dirname, "casos-reais-2026-11.json"), "utf8"));
-const original = JSON.parse(fs.readFileSync(path.join(__dirname, "resultado-casos-reais-2026-11-13.json"), "utf8")).linhas;
-const arquivos = fs.readdirSync(path.join(RAIZ, "gravacoes")).filter(f => f.startsWith("2026-11-13T13-") && f.endsWith(".json")).sort();
-if (arquivos.length !== casos.length) throw new Error(`Esperava ${casos.length} gravações, achei ${arquivos.length}.`);
+// Padrão: os 15 casos de 13 nov. Com CASOS e RESULTADO, reavalia outro conjunto.
+const arquivoCasos = process.env.CASOS ? path.resolve(process.env.CASOS) : path.join(__dirname, "casos-reais-2026-11.json");
+const arquivoResultado = process.env.RESULTADO ? path.resolve(process.env.RESULTADO) : path.join(__dirname, "resultado-casos-reais-2026-11-13.json");
+const { casos } = JSON.parse(fs.readFileSync(arquivoCasos, "utf8"));
+const original = new Map(JSON.parse(fs.readFileSync(arquivoResultado, "utf8")).linhas.map(l => [l.id, l]));
+// A gravação de cada caso é a mais recente com o mesmo texto e um veredito.
+const norm = t => String(t ?? "").replace(/\s+/g, " ").trim();
+const gravacoes = fs.readdirSync(path.join(RAIZ, "gravacoes")).filter(f => /^\d{4}-.*\.json$/.test(f)).sort();
+const porTexto = new Map();
+for (const f of gravacoes) {
+  const d = JSON.parse(fs.readFileSync(path.join(RAIZ, "gravacoes", f), "utf8"));
+  if (d.afirmacoes?.[0]?.agregacao) porTexto.set(norm(d.texto_original), f);
+}
 
-const linhas = casos.map((caso, i) => {
-  const dados = reavaliarGravacao(JSON.parse(fs.readFileSync(path.join(RAIZ, "gravacoes", arquivos[i]), "utf8")));
+const linhas = casos.map(caso => {
+  const arquivo = porTexto.get(norm(caso.texto));
+  if (!arquivo) throw new Error(`Sem gravação para ${caso.id}`);
+  const dados = reavaliarGravacao(JSON.parse(fs.readFileSync(path.join(RAIZ, "gravacoes", arquivo), "utf8")));
   const a = dados.afirmacoes[0];
-  if (original[i].id !== caso.id) throw new Error(`Ordem diferente: ${original[i].id} x ${caso.id}`);
   return {
     id: caso.id,
     esperado: caso.esperado,
-    veredito_na_rodada: original[i].veredito,
+    veredito_na_rodada: original.get(caso.id)?.veredito ?? null,
     veredito_regras_atuais: a.agregacao.veredito,
     nota_atualidade: a.agregacao.atualidade_afirmacao?.score ?? null,
     resultado: pontuar(caso.esperado, a.agregacao.veredito),
-    gravacao: `gravacoes/${arquivos[i]}`
+    gravacao: `gravacoes/${arquivo}`
   };
 });
 const saida = {
   gerado_em: new Date().toISOString(),
   regras: VERSAO_REGRAS,
-  metodo: "Same recorded evidence as the 13 Nov live run, re-scored with the current rules. No new searches or model calls.",
+  metodo: "Same recorded evidence as the live run, re-scored with the current rules. No new searches or model calls.",
   resumo: resumir(linhas),
   linhas
 };
-const destino = path.join(__dirname, "reavaliacao-casos-reais-2026-11-13.json");
+const destino = process.env.SAIDA ? path.resolve(process.env.SAIDA) : path.join(__dirname, "reavaliacao-casos-reais-2026-11-13.json");
 fs.writeFileSync(destino, JSON.stringify(saida, null, 2));
 console.log(saida.resumo, `\nSalvo em ${destino}`);

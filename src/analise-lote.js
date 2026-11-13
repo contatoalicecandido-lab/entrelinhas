@@ -117,8 +117,60 @@ function extrairJSON(resposta) {
   }
 }
 
+// Forma canônica para comparar uma citação com o texto da página: as
+// diferenças que não mudam o sentido (aspas curvas, travessões, espaços
+// especiais, marcação de markdown, endereço de links) não podem derrubar uma
+// citação verdadeira.
 function normalizarParaBusca(texto) {
-  return String(texto ?? "").replace(/\s+/g, " ").trim().toLowerCase();
+  return String(texto ?? "")
+    .normalize("NFKC")
+    .replace(/\]\([^)]*\)/g, " ")
+    .replace(/[\u2018\u2019\u201A\u2032`]/g, "'")
+    .replace(/[\u201C\u201D\u201E\u2033]/g, '"')
+    .replace(/[\u2010-\u2015\u2212]/g, "-")
+    .replace(/[*_#>\[\]|]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+}
+
+const tokensDe = t => normalizarParaBusca(t).split(/[^\p{L}\p{N}.,%$]+/u).map(x => x.replace(/^[.,]+|[.,]+$/g, "")).filter(Boolean);
+
+// A citação existe no texto? Aceita: (1) igual depois de normalizar; (2)
+// partes separadas por "..." todas presentes, na ordem; (3) uma sequência
+// contínua com pelo menos 85% das palavras da citação, desde que TODO número
+// da citação esteja no texto. Uma citação inventada, com outro valor ou outra
+// frase, continua recusada.
+function citacaoExisteNoTexto(citacao, texto) {
+  const c = normalizarParaBusca(citacao);
+  const t = normalizarParaBusca(texto);
+  if (!c) return false;
+  if (t.includes(c)) return true;
+  const partes = c.split(/\.{3}|\u2026/).map(x => x.trim()).filter(x => x.split(" ").length >= 3);
+  if (partes.length >= 2) {
+    let desde = 0;
+    let todas = true;
+    for (const p of partes) { const i = t.indexOf(p, desde); if (i === -1) { todas = false; break; } desde = i + p.length; }
+    if (todas) return true;
+  }
+  const tc = tokensDe(citacao);
+  const tt = tokensDe(texto);
+  if (tc.length < 4) return false;
+  const numeros = tc.filter(x => /\d/.test(x));
+  const conjunto = new Set(tt);
+  if (numeros.some(n => !conjunto.has(n))) return false;
+  // Maior trecho contínuo da citação que aparece igual no texto.
+  const posicoes = new Map();
+  tt.forEach((tok, i) => { if (!posicoes.has(tok)) posicoes.set(tok, []); posicoes.get(tok).push(i); });
+  let melhor = 0;
+  for (let i = 0; i < tc.length; i++) {
+    for (const inicio of posicoes.get(tc[i]) ?? []) {
+      let k = 0;
+      while (i + k < tc.length && inicio + k < tt.length && tc[i + k] === tt[inicio + k]) k++;
+      if (k > melhor) melhor = k;
+    }
+  }
+  return melhor / tc.length >= 0.85;
 }
 
 // Valida a resposta do modelo; nunca aceita ids desconhecidos, valores fora
@@ -139,7 +191,7 @@ function validarDataDoFato(dataFato, textoFonte, dataReferencia = new Date()) {
   const citacao = typeof dataFato.quote === "string" ? dataFato.quote.trim().slice(0, 240) : "";
   const m = /^(\d{4})-(\d{2})(?:-(\d{2}))?$/.exec(data);
   if (!m || !citacao) return null;
-  if (!normalizarParaBusca(textoFonte).includes(normalizarParaBusca(citacao))) return null;
+  if (!citacaoExisteNoTexto(citacao, textoFonte)) return null;
   const ano = Number(m[1]); const mes = Number(m[2]); const dia = m[3] ? Number(m[3]) : 1;
   const d = new Date(Date.UTC(ano, mes - 1, dia));
   if (d.getUTCFullYear() !== ano || d.getUTCMonth() !== mes - 1 || d.getUTCDate() !== dia) return null;
@@ -187,7 +239,9 @@ function validarResposta(dados, fontes, opcoesValidacao = {}) {
     let citacao = typeof item.key_quote === "string" ? item.key_quote.trim().slice(0, 240) : "";
     let motivoFinal = motivo;
     let citacaoVerificada = false;
-    if (citacao && !normalizarParaBusca(porId.get(item.id).texto).includes(normalizarParaBusca(citacao))) {
+    let citacaoRejeitada = null;
+    if (citacao && !citacaoExisteNoTexto(citacao, porId.get(item.id).texto)) {
+      citacaoRejeitada = citacao;
       // Citação que NÃO está no texto da fonte: sinal de invenção (ou de uma
       // instrução escondida na página que o modelo obedeceu). A fonte deixa de
       // contar como apoio ou contradição.
@@ -200,7 +254,7 @@ function validarResposta(dados, fontes, opcoesValidacao = {}) {
       citacaoVerificada = true;
     }
     const dataFato = validarDataDoFato(item.fact_date, porId.get(item.id).texto, opcoesValidacao.dataReferencia);
-    resultado.set(item.id, { correspondencia, postura, motivo: motivoFinal, citacao, citacaoVerificada, dataFato });
+    resultado.set(item.id, { correspondencia, postura, motivo: motivoFinal, citacao, citacaoVerificada, citacaoRejeitada, dataFato });
   }
   return resultado;
 }
@@ -245,4 +299,4 @@ async function analisarFontesEmLote(afirmacao, fontes, opcoes = {}) {
   return resultado;
 }
 
-module.exports = { analisarFontesEmLote, validarResposta, validarDataDoFato, INSTRUCOES_LOTE, MAX_FONTES };
+module.exports = { citacaoExisteNoTexto, analisarFontesEmLote, validarResposta, validarDataDoFato, INSTRUCOES_LOTE, MAX_FONTES };

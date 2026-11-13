@@ -423,6 +423,32 @@ function selecionarFontesDiversas(candidatos, maxFontes, dominiosOficiais, afirm
   return escolhidos;
 }
 
+// A afirmação traz um valor ("R$ 1.412", "10,5%", "$20")? Buscar só com o
+// valor encontra páginas que repetem esse mesmo valor, inclusive quando ele
+// já mudou (teste de 13 nov: só vinham notícias de 2024 sobre R$ 1.412). Uma
+// segunda busca, sem o valor e com o ano atual, procura o valor de HOJE.
+function consultaSemValor(pergunta, dataReferencia = new Date()) {
+  const texto = String(pergunta ?? "");
+  const temValor = /(R\$|US\$|\$|€|£)\s?\d|\d[\d.,]*\s?(%|reais|d[óo]lares|euros|dollars)|\b\d{1,3}([.,]\d{3})+([.,]\d+)?\b|\b\d+,\d+\b/i.test(texto);
+  if (!temValor) return null;
+  const ano = (dataReferencia instanceof Date ? dataReferencia : new Date()).getUTCFullYear();
+  let q = texto
+    .replace(/(R\$|US\$|\$|€|£)\s?\d[\d.,]*(\s?(mil|mi|milh[õo]es|bi|bilh[õo]es|k|million|billion))?/gi, " ")
+    .replace(/\d[\d.,]*\s?(%|por cento|percent|reais|d[óo]lares|euros|dollars)/gi, " ")
+    .replace(/\b(?!(19|20)\d{2}\b)\d[\d.,]*\b/g, " ")
+    .replace(/\s+([.,;:!?])/g, "$1")
+    .replace(/\s+/g, " ")
+    .trim();
+  // Tira palavras de ligação que sobraram no fim ("é de", "custa", "por").
+  for (let i = 0; i < 4; i++) {
+    q = q.replace(/[.,;:!?]+$/, "").replace(/(^|\s)(é|de|em|está|custa|custam|sai|saindo|por|costs?|is|are|of|at|per|a|o)$/iu, "").trim();
+  }
+  q = q.replace(/\b(por|em|de)\s+(por|em|de|ao)\b/gi, "$2").replace(/\s+/g, " ").trim();
+  if (q.split(" ").length < 2) return null;
+  if (!/\b(19|20)\d{2}\b/.test(q)) q = `${q} ${ano}`;
+  return q;
+}
+
 async function pesquisarComTavily(pergunta, opcoes = {}) {
   if (typeof pergunta !== "string" || pergunta.trim() === "") {
     throw new Error("A pergunta para a Tavily não pode estar vazia.");
@@ -439,6 +465,14 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
   if (buscaGeral.erro) throw buscaGeral.erro;
 
   const buscas = [buscaGeral];
+  const semValor = opcoes.buscaSemValor === false ? null : consultaSemValor(pergunta, opcoes.dataReferencia);
+  if (semValor) {
+    const buscaSemValor = await executarBusca(semValor, opcoes, [], { country: opcoes.pais });
+    if (!buscaSemValor.erro) {
+      buscaSemValor.registro.modo_busca = "GERAL_SEM_VALOR";
+      buscas.push(buscaSemValor);
+    }
+  }
   if (opcoes.incluirCiencia) {
     // Busca em bases científicas e universidades: artigos para corroborar ou
     // contradizer afirmações sobre saúde, ciência e pesquisa.
@@ -788,6 +822,7 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
 }
 
 module.exports = {
+  consultaSemValor,
   limparResultados,
   janelaNoticias,
   ehResultadoUtil,

@@ -1,0 +1,120 @@
+{
+  "executado_em": "2026-11-13T23:12:06.155Z",
+  "metodo": "modelo sozinho via Bifrost, sem busca",
+  "resumo": {
+    "total": 15,
+    "acertos": 10,
+    "sem_decisao": 1,
+    "erros": 3,
+    "erros_graves_confirmou_desatualizada": 1,
+    "acuracia_estrita": 0.667,
+    "falhas_execucao": 0
+  },
+  "linhas": [
+    {
+      "id": "pt-salario-1621",
+      "esperado": "ATUAL",
+      "resposta": "OUTDATED",
+      "resultado": "ERRO",
+      "erro": null
+    },
+    {
+      "id": "pt-salario-1518",
+      "esperado": "DESATUALIZADA",
+      "resposta": "TRUE",
+      "resultado": "ERRO_GRAVE",
+      "erro": null
+    },
+    {
+      "id": "pt-selic-1375",
+      "esperado": "ATUAL",
+      "resposta": "OUTDATED",
+      "resultado": "ERRO",
+      "erro": null
+    },
+    {
+      "id": "pt-selic-105",
+      "esperado": "DESATUALIZADA",
+      "resposta": "UNSURE",
+      "resultado": "SEM_DECISAO",
+      "erro": null
+    },
+    {
+      "id": "pt-netflix-4490",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "pt-qdenga-sus",
+      "esperado": "ATUAL",
+      "resposta": "OUTDATED",
+      "resultado": "ERRO",
+      "erro": null
+    },
+    {
+      "id": "pt-lgpd-vigor",
+      "esperado": "ATUAL",
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "pt-pix-gratis-pf",
+      "esperado": "ATUAL",
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-node20-lts",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-node22-security",
+      "esperado": "ATUAL",
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-chatgpt-plus-20",
+      "esperado": "ATUAL",
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-openai-ceo",
+      "esperado": "ATUAL",
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-python2-security",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-twitter-dorsey",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-gpt4-newest",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    }
+  ]
+}

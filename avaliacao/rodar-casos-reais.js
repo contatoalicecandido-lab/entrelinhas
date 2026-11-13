@@ -10,7 +10,10 @@ const BASE = process.argv[2] ?? "http://127.0.0.1:3001";
 const PAUSA_MS = Number(process.env.PAUSA_MS ?? 45000);
 // Outro arquivo de casos pode ser passado em CASOS=avaliacao/casos-novos.json
 const arquivo = process.env.CASOS ? path.resolve(process.env.CASOS) : path.join(__dirname, "casos-reais-2026-11.json");
-const { casos } = JSON.parse(fs.readFileSync(arquivo, "utf8"));
+const todosOsCasos = JSON.parse(fs.readFileSync(arquivo, "utf8")).casos;
+// IDS=a,b roda só alguns casos (por exemplo, para conferir uma correção).
+const ids = process.env.IDS ? new Set(process.env.IDS.split(",").map(x => x.trim())) : null;
+const casos = ids ? todosOsCasos.filter(c => ids.has(c.id)) : todosOsCasos;
 
 const APOIA = new Set(["ATUAL", "CORROBORADA"]);
 const CONTRA = new Set(["CONTRADITA_POR_FONTE_ATUAL", "CONTRADICAO_FRACA"]);

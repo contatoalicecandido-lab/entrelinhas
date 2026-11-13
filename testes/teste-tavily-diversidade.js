@@ -102,3 +102,14 @@ main().catch(e => { console.error("FALHOU:", e); process.exitCode = 1; });
   assert.equal(limpos[0].content, "");
   console.log("PASSOU: itens nulos ou malformados da Tavily são descartados ou consertados");
 }
+
+// Afirmação com valor: uma segunda busca sem o valor procura o valor de hoje.
+{
+  const assert = require("node:assert/strict");
+  const { consultaSemValor } = require("../src/tavily");
+  const d = new Date("2026-11-13T12:00:00Z");
+  assert.equal(consultaSemValor("O salário mínimo atual no Brasil é de R$ 1.412.", d), "O salário mínimo atual no Brasil 2026");
+  assert.equal(consultaSemValor("ChatGPT Plus costs $20 per month.", d), "ChatGPT Plus costs per month 2026");
+  assert.equal(consultaSemValor("Satya Nadella is the CEO of Microsoft.", d), null, "sem valor, sem busca extra");
+  console.log("PASSOU: afirmação com valor ganha uma busca sem o valor (o valor de hoje), sem gastar busca à toa");
+}

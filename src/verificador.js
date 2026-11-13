@@ -405,6 +405,8 @@ async function analisarEvidenciasEmLote(afirmacao, evidenciasSelecionadas, resul
         trecho_analisado: typeof conteudo_para_analise === "string" ? conteudo_para_analise.slice(0, 1200) : null,
         citacao_chave: item?.citacao || null,
         citacao_verificada: item ? Boolean(item.citacaoVerificada) : null,
+        // Guardada para auditoria: a citação que o modelo deu e não existe na página.
+        citacao_rejeitada: item?.citacaoRejeitada ? String(item.citacaoRejeitada).slice(0, 240) : null,
         metodo_analise: "LOTE"
       },
       ...convertido,
@@ -460,6 +462,7 @@ async function verificarAfirmacao(afirmacao, opcoes) {
         idAfirmacao: afirmacao.id,
         dominiosOficiais,
         tipoAfirmacao: resultado.tipo_afirmacao,
+        dataReferencia: opcoes.dataReferencia,
         onMetadata: opcoes.onMetadataPesquisa,
         incluirNoticias: opcoes.incluirNoticias,
         incluirCiencia: Boolean(opcoes.cienciaAutomatica && pedeEvidenciaCientifica(afirmacao.texto)),
