@@ -187,21 +187,33 @@ function configurarFavorito() {
 function montarLegenda() {
   const caixa = $("legenda");
   caixa.replaceChildren();
-  for (const codigo of ["ATUAL", "CORROBORADA", "SUPORTE_FRACO", "CONFLITO", "CONTRADICAO_FRACA", "CONTRADITA_POR_FONTE_ATUAL", "NAO_VERIFICAVEL"]) {
-    const v = VEREDITOS[codigo];
-    const bloco = el("div");
-    bloco.append(el("span", `pilula ${v.tom}`, v.nome), el("p", null, v.texto));
-    caixa.append(bloco);
+  const grupos = [
+    ["It holds", ["ATUAL", "CORROBORADA"]],
+    ["Look closer", ["SUPORTE_FRACO", "CONFLITO", "NAO_VERIFICAVEL"]],
+    ["It has expired", ["CONTRADICAO_FRACA", "CONTRADITA_POR_FONTE_ATUAL"]]
+  ];
+  for (const [nome, codigos] of grupos) {
+    const grupo = el("div", "legenda-grupo");
+    grupo.append(el("p", "serifa", nome));
+    for (const codigo of codigos) {
+      const v = VEREDITOS[codigo];
+      const item = el("div", "legenda-item");
+      item.append(el("span", `pilula ${v.tom}`, v.nome), el("p", null, v.texto));
+      grupo.append(item);
+    }
+    caixa.append(grupo);
   }
   const extras = [
-    ["Source agreement (0–100)", "How much independent sources agree with the claim. Official and scientific sources weigh 3, news 2, references 1.5, other websites 1, blogs and forums 0.25. Copies and pages of one site count once."],
-    ["Freshness (0–100)", "For prices, API versions, regulations and company facts: how recent the date tied to this exact fact is. A page's publish date never counts as proof."]
+    ["Source agreement, 0 to 100", "How much independent sources agree with the claim. Official and scientific sources weigh 3, news 2, references 1.5, other websites 1, blogs and forums 0.25. Copies and pages of one site count once."],
+    ["Freshness, 0 to 100", "For prices, API versions, regulations and company facts: how recent the date tied to this exact fact is. A page's publish date never counts as proof."]
   ];
+  const notas = el("div", "legenda-notas");
   for (const [titulo, texto] of extras) {
     const bloco = el("div");
-    bloco.append(el("strong", null, titulo), el("p", null, texto));
-    caixa.append(bloco);
+    bloco.append(el("h3", null, titulo), el("p", null, texto));
+    notas.append(bloco);
   }
+  caixa.append(notas);
 }
 
 /* ---------- progresso ---------- */
@@ -297,7 +309,7 @@ function renderizarResultado(dados) {
   mostrarCorrigida(dados);
   mostrarTriagem(afirmacoes);
   mostrarGateway(dados.gateway, dados.simulado);
-  $("rastreio").textContent = `Verification ${dados.id_verificacao} · ${dados.rastreabilidade_modelo?.length ?? 0} model calls via ${dados.simulado ? "simulated provider" : "Bifrost"} · ${dados.rastreabilidade_pesquisa?.length ?? 0} search operations via ${dados.simulado ? "simulated provider" : "Tavily"} · ${dados.duracao_ms ?? "—"} ms · stored in SQLite (in memory)`;
+  $("rastreio").textContent = `Verification ${dados.id_verificacao} · ${dados.rastreabilidade_modelo?.length ?? 0} model calls via ${dados.simulado ? "simulated provider" : "Bifrost"} · ${dados.rastreabilidade_pesquisa?.length ?? 0} search operations via ${dados.simulado ? "simulated provider" : "Tavily"} · ${dados.duracao_ms ?? "n/a"} ms · stored in SQLite (in memory)`;
 }
 
 // Resposta corrigida: texto com citações [n] viradas em links seguros.
@@ -346,10 +358,10 @@ function mostrarCorrigida(dados) {
 }
 
 const RITMOS = {
-  preco: "prices change ~monthly",
-  versao_api: "software versions ~quarterly",
-  empresa: "company facts ~every 6 months",
-  regulamento: "laws and rules ~yearly"
+  preco: "prices change about monthly",
+  versao_api: "versions about quarterly",
+  empresa: "company facts about every six months",
+  regulamento: "rules about yearly"
 };
 const RISCOS = { HIGH: "High stale risk", MEDIUM: "Medium stale risk", LOW: "Low stale risk" };
 
@@ -373,7 +385,7 @@ function mostrarTriagem(afirmacoes) {
   const ritmos = [...new Set(sensiveis.map(a => a.tipo_afirmacao).filter(t => RITMOS[t]))].map(t => RITMOS[t]);
   $("triagem-resumo").textContent =
     `${comRisco.length} claim${comRisco.length === 1 ? "" : "s"} found · ${sensiveis.length} time-sensitive` +
-    (ritmos.length ? ` — ${ritmos.join(", ")}.` : ".");
+    (ritmos.length ? `: ${ritmos.join(", ")}.` : ".");
 }
 
 // Painel do Bifrost: cadeia de modelos, quem respondeu, failover e tokens.
@@ -400,12 +412,12 @@ function mostrarGateway(g, simulado) {
   const n = (valor, rotulo) => { const d = el("div"); d.append(el("strong", null, valor), el("span", null, rotulo)); numeros.append(d); };
   n(String(g.chamadas), g.chamadas === 1 ? "model call" : "model calls");
   n(String(g.respostas_de_reserva), "answered by a backup");
-  n(g.tokens_total !== null ? g.tokens_total.toLocaleString("en-US") : "—", "tokens");
-  n(g.latencia_media_ms !== null ? `${(g.latencia_media_ms / 1000).toFixed(1)} s` : "—", "avg. model latency");
+  n(g.tokens_total !== null ? g.tokens_total.toLocaleString("en-US") : "n/a", "tokens");
+  n(g.latencia_media_ms !== null ? `${(g.latencia_media_ms / 1000).toFixed(1)} s` : "n/a", "avg. model latency");
   caixa.append(numeros);
 
   const quem = g.respostas_por_modelo.map(r => `${r.modelo} (${r.chamadas})`).join(", ");
-  caixa.append(el("p", "dica", `Answered by: ${quem || "—"}.${g.falhas ? ` ${g.falhas} call(s) failed.` : ""}`));
+  caixa.append(el("p", "dica", `Answered by: ${quem || "n/a"}.${g.falhas ? ` ${g.falhas} call(s) failed.` : ""}`));
   if (g.queda_simulada) {
     caixa.append(el("p", "aviso", g.respostas_de_reserva > 0
       ? `Outage drill: the main model was unavailable, and Bifrost served ${g.respostas_de_reserva} of ${g.chamadas} calls from a backup model. Entrelinhas sent the same request and changed nothing.`
@@ -567,7 +579,7 @@ function criarFonte(evidencia, simulado) {
     titulo = el("a", "fonte-titulo", limparTrecho(fonte.titulo) || dominioDe(url));
     titulo.href = url; titulo.target = "_blank"; titulo.rel = "noopener noreferrer";
   } else {
-    titulo = el("span", "fonte-titulo", limparTrecho(fonte.titulo) || fonte.url || "—");
+    titulo = el("span", "fonte-titulo", limparTrecho(fonte.titulo) || fonte.url || "Untitled source");
   }
   linhaTitulo.append(titulo, el("span", "fonte-dominio", dominioDe(fonte.url)));
   item.append(linhaTitulo);

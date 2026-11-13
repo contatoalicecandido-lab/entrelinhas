@@ -31,7 +31,7 @@ function exemplos(agora) {
       dominios: ["acme.example", "gov.example"],
       afirmacoes: [
         ["Acme Cloud's Pro plan costs $20 per month.", "preco", [
-          f("https://acme.example/pricing", "OFICIAL", "Acme Cloud — Pricing", `Pro plan: $20 per user / month, billed monthly. Prices updated on ${diasAtras(agora, 7)}.`, "SUPPORTS", "The official pricing table lists the Pro plan at $20 per month, next to a visible 'Prices updated on' date.", { upd: diasAtras(agora, 7), escopo: "ATTRIBUTE" }),
+          f("https://acme.example/pricing", "OFICIAL", "Acme Cloud · Pricing", `Pro plan: $20 per user / month, billed monthly. Prices updated on ${diasAtras(agora, 7)}.`, "SUPPORTS", "The official pricing table lists the Pro plan at $20 per month, next to a visible 'Prices updated on' date.", { upd: diasAtras(agora, 7), escopo: "ATTRIBUTE" }),
           f("https://technews.example/acme-pricing", "NOTICIA", "Acme keeps Pro plan at $20", "Acme Cloud confirmed this quarter that its Pro plan stays at $20 a month.", "SUPPORTS", "A news report confirms the same price for the same plan.", { pub: diasAtras(agora, 40) }),
           f("https://reviews.example/acme-cloud-pro", "BLOG_FORUM", "Is Acme Cloud Pro worth it?", "At $20 per month, Acme Cloud Pro sits in the middle of the market.", "SUPPORTS", "A review mentions the same price; its date refers to the article, not to the price.", { pub: diasAtras(agora, 210) })
         ]],
@@ -41,9 +41,9 @@ function exemplos(agora) {
           f("https://devblog.example/acme-completions-tutorial", "BLOG_FORUM", "Tutorial: calling /v1/completions", "Send a POST request to /v1/completions with your prompt.", "SUPPORTS", "An old tutorial shows /v1/completions working: exactly what an outdated AI answer would repeat.", { pub: diasAtras(agora, 480) })
         ], "The Acme API no longer supports the /v1/completions endpoint: it was retired and replaced by /v2/responses."],
         ["Under the Data Act of 2025, companies with more than 50 employees must appoint a data protection officer.", "regulamento", [
-          f("https://gov.example/data-act-2025", "OFICIAL", "Data Act of 2025 — full text", "Article 12. Organisations employing more than 50 persons shall designate a data protection officer.", "SUPPORTS", "The official text contains the 50-employee threshold; the page declares no publication or update date."),
+          f("https://gov.example/data-act-2025", "OFICIAL", "Data Act of 2025, full text", "Article 12. Organisations employing more than 50 persons shall designate a data protection officer.", "SUPPORTS", "The official text contains the 50-employee threshold; the page declares no publication or update date."),
           f("https://lawnews.example/data-act-explained", "NOTICIA", "What the Data Act means for mid-size firms", "Firms with more than 50 staff now need a data protection officer under the new act.", "SUPPORTS", "A legal news article describes the same obligation and threshold.", { pub: diasAtras(agora, 90) }),
-          f("https://encyclopedia.example/wiki/Data_Act_2025", "REFERENCIA", "Data Act of 2025 — encyclopedia entry", "The act requires a data protection officer in organisations with over 50 employees.", "SUPPORTS", "A reference entry states the same requirement.")
+          f("https://encyclopedia.example/wiki/Data_Act_2025", "REFERENCIA", "Data Act of 2025, encyclopedia entry", "The act requires a data protection officer in organisations with over 50 employees.", "SUPPORTS", "A reference entry states the same requirement.")
         ]]
       ]
     },
@@ -53,12 +53,12 @@ function exemplos(agora) {
       dominios: ["ficticiatelecom.example"],
       afirmacoes: [
         ["O plano Premium da Fictícia Telecom custa a partir de R$ 99,90 por mês.", "preco", [
-          f("https://ficticiatelecom.example/planos", "OFICIAL", "Fictícia Telecom — Planos", `Premium 500 Mega: R$ 119,90/mês. Premium 300 Mega: R$ 99,90/mês. Preços atualizados em ${diasAtras(agora, 5).split("-").reverse().join("/")}.`, "SUPPORTS", "The official page lists Premium plans from R$ 99,90 to R$ 119,90 per month; 'a partir de' means a starting price, so the claim holds.", { upd: diasAtras(agora, 5), escopo: "ATTRIBUTE" }),
+          f("https://ficticiatelecom.example/planos", "OFICIAL", "Fictícia Telecom · Planos", `Premium 500 Mega: R$ 119,90/mês. Premium 300 Mega: R$ 99,90/mês. Preços atualizados em ${diasAtras(agora, 5).split("-").reverse().join("/")}.`, "SUPPORTS", "The official page lists Premium plans from R$ 99,90 to R$ 119,90 per month; 'a partir de' means a starting price, so the claim holds.", { upd: diasAtras(agora, 5), escopo: "ATTRIBUTE" }),
           f("https://noticiasbr.example/telecom/precos", "NOTICIA", "Operadoras reajustam planos de internet", "A Fictícia Telecom manteve o Premium a partir de R$ 99,90 mensais, segundo a empresa.", "SUPPORTS", "A Brazilian news article reports the same starting price.", { pub: diasAtras(agora, 30) })
         ]],
         ["A Fictícia Telecom atualmente tem cerca de 5 mil funcionários.", "empresa", [
           f("https://noticiasbr.example/negocios/ficticia-demissoes", "NOTICIA", "Fictícia Telecom reduz quadro para 3.200 pessoas", "Após a reestruturação, a Fictícia Telecom passou a ter 3.200 funcionários.", "CONTRADICTS", "A recent news report says the company now has 3,200 employees, not about 5,000.", { pub: diasAtras(agora, 25) }),
-          f("https://enciclopedia.example/wiki/Ficticia_Telecom", "REFERENCIA", "Fictícia Telecom — verbete", "Funcionários: 3.200 (2026). A empresa chegou a ter 5 mil funcionários em 2022.", "CONTRADICTS", "The reference entry says 5,000 was the 2022 figure; 'atualmente' (currently) makes the claim about today, when it is 3,200.", { pub: diasAtras(agora, 60) }),
+          f("https://enciclopedia.example/wiki/Ficticia_Telecom", "REFERENCIA", "Fictícia Telecom, verbete", "Funcionários: 3.200 (2026). A empresa chegou a ter 5 mil funcionários em 2022.", "CONTRADICTS", "The reference entry says 5,000 was the 2022 figure; 'atualmente' (currently) makes the claim about today, when it is 3,200.", { pub: diasAtras(agora, 60) }),
           f("https://blogdeempregos.example/ficticia", "BLOG_FORUM", "Trabalhar na Fictícia Telecom", "Com cerca de 5 mil funcionários, a Fictícia Telecom é uma das maiores do setor.", "SUPPORTS", "An old blog post repeats the 5,000 figure.", { pub: diasAtras(agora, 900) })
         ], "A Fictícia Telecom tem hoje 3.200 funcionários, após uma reestruturação; os 5 mil eram o número de 2022."]
       ]

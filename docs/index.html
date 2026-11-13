@@ -4,10 +4,11 @@
   <meta charset="utf-8">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Entrelinhas — read between the lines of every AI answer</title>
+  <title>Entrelinhas · read between the lines of every AI answer</title>
   <meta name="description" content="Entrelinhas finds the claims in an AI answer that have gone stale, checks each one against live sources, scores its freshness and rewrites the answer with citations.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A0B'/%3E%3Cpath d='M14 20h36M14 44h36' stroke='%23ffffff' stroke-opacity='.4' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M14 32h22' stroke='%23FF5A1F' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='32' r='4' fill='%23FF5A1F'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A0B'/%3E%3Cpath d='M14 20h36M14 44h36' stroke='%23ffffff' stroke-opacity='.4' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M14 32h26l6-6' stroke='%23FF5A1F' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
   <link rel="preload" href="fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/instrument-serif-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="estilo.css">
   <script src="estatico.js" defer></script>
   <script src="app.js" defer></script>
@@ -16,38 +17,36 @@
   <svg width="0" height="0" class="sr" aria-hidden="true" focusable="false">
     <defs>
       <linearGradient id="g-laranja" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FF5A1F" stop-opacity="0"/><stop offset=".55" stop-color="#FF5A1F"/><stop offset="1" stop-color="#FFB089"/></linearGradient>
-      <linearGradient id="g-linha" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FF5A1F" stop-opacity="0"/><stop offset="1" stop-color="#FF5A1F"/></linearGradient>
     </defs>
   </svg>
 
-  <!-- ============ Topo escuro ============ -->
   <div class="palco">
     <header class="barra">
       <a class="marca" href="./" aria-label="Entrelinhas home">
-        <svg class="marca-icone" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 18h48M8 46h48" stroke="currentColor" stroke-opacity=".38" stroke-width="3" stroke-linecap="round"/><path d="M8 32h28" stroke="#FF5A1F" stroke-width="3" stroke-linecap="round"/><circle cx="46" cy="32" r="4.5" fill="#FF5A1F"/></svg>
+        <svg class="marca-icone" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 18h48M8 46h48" stroke="currentColor" stroke-opacity=".38" stroke-width="3" stroke-linecap="round"/><path d="M8 32h34l8-8" fill="none" stroke="#FF5A1F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span class="marca-nome">entrelinhas</span>
       </a>
       <nav class="barra-links" aria-label="Sections">
         <a href="#como-funciona">Method</a>
         <a href="#prova">Evidence</a>
         <a href="#favorito-secao">Anywhere</a>
-        <a href="#como-ler">Reading the report</a>
+        <a href="#como-ler">Verdicts</a>
       </nav>
       <span id="selo-modo" class="selo"></span>
     </header>
 
     <section class="hero" aria-labelledby="titulo-hero">
-      <p class="sobretitulo"><span class="ponto"></span>Stale-answer detector for AI applications</p>
+      <p class="sobretitulo">A stale-answer detector for AI applications</p>
       <h1 id="titulo-hero">Every AI answer has <br class="quebra">an <em>expiry date.</em></h1>
-      <p class="hero-texto">Entrelinhas reads between the lines: it finds the claims that go out of date, checks each one against live sources, scores how fresh it still is, and rewrites the answer with citations.</p>
+      <p class="hero-texto">Entrelinhas reads between the lines. It finds the claims that go out of date, checks each one against live sources, scores how fresh it still is and rewrites the answer with citations.</p>
 
       <section class="console" aria-labelledby="titulo-entrada">
         <h2 id="titulo-entrada" class="sr">Check an answer</h2>
         <div class="campo">
           <label class="sr" for="texto">AI-generated answer</label>
-          <textarea id="texto" rows="4" maxlength="4000" spellcheck="false" placeholder="Paste an AI answer…  e.g. “ChatGPT Plus costs $20 a month and Node.js 20 is the current LTS.”"></textarea>
+          <textarea id="texto" rows="4" maxlength="4000" spellcheck="false" placeholder="Paste an AI answer, for example: “ChatGPT Plus costs $20 a month and Node.js 20 is the current LTS.”"></textarea>
           <div class="campo-rodape">
-            <span class="campo-info"><span id="idioma-detectado"></span><span class="contador"><span id="contador">0</span>/4000</span></span>
+            <span class="campo-info"><span id="idioma-detectado"></span><span class="contador"><span id="contador">0</span> of 4,000</span></span>
             <button id="botao-verificar" class="botao-enviar" type="button">Check answer</button>
           </div>
         </div>
@@ -63,29 +62,28 @@
               <label class="sr" for="dominios">Trusted sites</label>
               <input id="dominios" type="text" placeholder="gov.br, who.int, nodejs.org" autocomplete="off">
               <p class="dica">Searched first and counted as official. Brazilian authorities and the company’s own site are detected automatically.</p>
-              <label id="opcao-queda" class="opcao-queda" hidden><input id="simular-queda" type="checkbox"> <span>Simulate an outage of the main model <span class="opcional">Bifrost switches to a backup model on its own</span></span></label>
+              <label id="opcao-queda" class="opcao-queda" hidden><input id="simular-queda" type="checkbox"> <span>Simulate an outage of the main model <span class="opcional">Bifrost switches to a backup model on its own.</span></span></label>
             </div>
           </details>
         </div>
         <div class="exemplos-linha">
-          <span class="mono-rotulo">Try</span>
+          <span class="serifa">Try</span>
           <div id="exemplos" class="exemplos" aria-label="Load an example"></div>
         </div>
         <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
       </section>
     </section>
 
-    <div class="marcas" aria-label="Built on">
-      <span class="mono-rotulo">Built on</span>
-      <span class="marca-parceira wm-tavily">tavily</span>
-      <span class="marca-parceira wm-bifrost">Bifrost<small>by Maxim</small></span>
-      <span class="marca-parceira wm-groq">groq</span>
-      <span class="marca-parceira wm-sqlite">SQLite</span>
-      <span class="marca-parceira wm-node">node.js</span>
+    <div class="marcas" aria-label="Built on Tavily, Bifrost, Groq, SQLite and Node.js">
+      <span class="serifa">Built on</span>
+      <span class="logo lg-tavily"><svg class="lg-icone" aria-hidden="true" fill="currentColor" fill-rule="evenodd" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.033 14.273a1.612 1.612 0 011.139.47l.04.042.044.043a1.61 1.61 0 010 2.277l-3.073 3.073.816.816c.6.6.303 1.627-.525 1.814l-5.159 1.165a1.07 1.07 0 01-.897-.2l-.102-.09a1.07 1.07 0 01-.289-1l1.164-5.158A1.079 1.079 0 013.006 17l.816.817 3.074-3.074a1.612 1.612 0 011.137-.47zM17.042 13.246c0-.85.935-1.366 1.653-.912l4.47 2.824c.336.212.503.562.503.911 0 .35-.167.7-.501.913l-4.472 2.824a1.079 1.079 0 01-1.654-.912v-1.155h-7.027c.37-.4.605-.902.677-1.438l.022-.232a2.65 2.65 0 00-.492-1.669h6.821v-1.154zM8.188 0c.35 0 .7.168.913.503l2.823 4.47a1.079 1.079 0 01-.911 1.655H9.857v6.692h-1.67a2.633 2.633 0 00-1.668.48V6.629H5.365c-.849 0-1.366-.936-.912-1.654L7.276.503A1.072 1.072 0 018.188 0z"></path></svg><svg class="lg-texto" aria-hidden="true" fill="currentColor" fill-rule="evenodd" viewBox="0 0 62 24" xmlns="http://www.w3.org/2000/svg"><path d="M59.717 6.84L52.504 24H49.37l2.524-5.804-4.668-11.355h3.301l3.007 8.138 3.05-8.138h3.133zM45.873 3.963v14.529H42.93V3.963l2.944-.001zM38.78 5.448c-.519 0-.954-.16-1.304-.483a1.687 1.687 0 01-.505-1.241c0-.49.169-.897.505-1.22.35-.336.785-.504 1.304-.504.518 0 .946.168 1.282.504.35.322.526.674.526 1.164 0 .491-.175.96-.526 1.296-.336.323-.764.484-1.282.484zm1.45 1.388v11.655h-2.943V6.836h2.944zm-10.464 8.942l2.944-8.937h3.133l-4.31 11.65h-3.575l-4.29-11.65h3.154l2.944 8.937zm-19.654-3.154c0-1.178.23-2.222.693-3.134.477-.911 1.114-1.612 1.914-2.103.813-.49 1.717-.736 2.712-.736.869 0 1.626.176 2.271.526.66.35 1.184.792 1.577 1.325V6.84h2.965v11.65H19.28v-1.703c-.38.546-.905 1.002-1.578 1.367-.66.35-1.423.526-2.292.526a5.003 5.003 0 01-2.691-.757c-.8-.506-1.437-1.214-1.914-2.125-.463-.925-.693-1.983-.693-3.174zm9.167.041c0-.715-.14-1.325-.42-1.829-.28-.519-.659-.912-1.136-1.178a2.976 2.976 0 00-1.535-.42 2.982 2.982 0 00-1.513.4c-.463.265-.842.659-1.137 1.177-.28.504-.42 1.107-.42 1.808 0 .701.14 1.318.42 1.85.295.52.674.919 1.136 1.199.476.28.981.42 1.514.42.547 0 1.059-.132 1.536-.398.478-.283.87-.69 1.135-1.178.28-.52.42-1.136.42-1.85zM6.353 9.258v5.636c0 .393.092.68.274.862.196.168.518.253.967.253H8.96v2.481h-1.85c-2.482 0-3.723-1.206-3.723-3.617V9.258H2V6.84h1.388V3.96h2.965v2.88H8.96v2.418H6.353z"></path></svg></span>
+      <img class="logo lg-bifrost" src="logos/bifrost.png" alt="" width="315" height="72">
+      <span class="logo lg-groq"><svg class="lg-texto" aria-hidden="true" fill="currentColor" fill-rule="evenodd" viewBox="0 0 64 24" xmlns="http://www.w3.org/2000/svg"><path d="M37.925 2.039c4.142 0 7.509 3.368 7.509 7.528l-.004.244c-.128 4.047-3.437 7.284-7.505 7.284-4.15 0-7.509-3.368-7.509-7.528s3.36-7.528 7.509-7.528zm-11.144-.023c.26 0 .522.015.775.046l.015-.008a7.464 7.464 0 012.922.969L29.09 5.468a4.619 4.619 0 00-2.309-.6h-.253l-.253.016c-.338.03-.66.092-.982.177-.621.169-1.196.469-1.703.869a4.062 4.062 0 00-1.418 2.322l-.04.234-.03.235c-.007.077-.023.161-.023.238l-.014 2.713v2.593l-.016 2.522h-2.815l-.03-4.973V8.852c0-.139.015-.262.022-.392.023-.262.062-.523.115-.777.1-.523.269-1.03.491-1.515a6.998 6.998 0 011.948-2.484 7.465 7.465 0 012.754-1.391c.49-.131.99-.216 1.495-.254.123-.008.253-.023.376-.023h.376zM37.925 4.86a4.7 4.7 0 00-4.694 4.706 4.7 4.7 0 004.694 4.706 4.7 4.7 0 004.694-4.706l-.005-.216a4.7 4.7 0 00-4.689-4.49zM9.578 2C5.428 1.96 2.038 5.298 2 9.458c-.038 4.16 3.29 7.559 7.44 7.597h2.608v-2.822h-2.47c-2.592.031-4.717-2.053-4.748-4.652a4.7 4.7 0 014.64-4.76h.108c2.52 0 4.577 1.992 4.696 4.49l.005.216v6.936c0 2.576-2.093 4.676-4.655 4.706a4.663 4.663 0 01-3.267-1.376l-1.994 2A7.46 7.46 0 009.57 24h.1c4.096-.062 7.386-3.391 7.409-7.497V9.35c-.1-4.09-3.428-7.35-7.501-7.35zm44.929.038c-4.15 0-7.509 3.368-7.509 7.528s3.36 7.528 7.509 7.528h2.57v-2.822h-2.57a4.7 4.7 0 01-4.694-4.706 4.7 4.7 0 014.694-4.706A4.707 4.707 0 0159.16 8.94l.024.22v14.456H62V9.566c-.008-4.152-3.352-7.527-7.493-7.527z"></path></svg></span>
+      <span class="logo lg-sqlite"><svg class="lg-icone" aria-hidden="true" fill="currentColor" fill-rule="evenodd" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.678.521c-1.032-.92-2.28-.55-3.513.544a8.71 8.71 0 0 0-.547.535c-2.109 2.237-4.066 6.38-4.674 9.544.237.48.422 1.093.544 1.561a13.044 13.044 0 0 1 .164.703s-.019-.071-.096-.296l-.05-.146a1.689 1.689 0 0 0-.033-.08c-.138-.32-.518-.995-.686-1.289-.143.423-.27.818-.376 1.176.484.884.778 2.4.778 2.4s-.025-.099-.147-.442c-.107-.303-.644-1.244-.772-1.464-.217.804-.304 1.346-.226 1.478.152.256.296.698.422 1.186.286 1.1.485 2.44.485 2.44l.017.224a22.41 22.41 0 0 0 .056 2.748c.095 1.146.273 2.13.5 2.657l.155-.084c-.334-1.038-.47-2.399-.41-3.967.09-2.398.642-5.29 1.661-8.304 1.723-4.55 4.113-8.201 6.3-9.945-1.993 1.8-4.692 7.63-5.5 9.788-.904 2.416-1.545 4.684-1.931 6.857.666-2.037 2.821-2.912 2.821-2.912s1.057-1.304 2.292-3.166c-.74.169-1.955.458-2.362.629-.6.251-.762.337-.762.337s1.945-1.184 3.613-1.72C21.695 7.9 24.195 2.767 21.678.521m-18.573.543A1.842 1.842 0 0 0 1.27 2.9v16.608a1.84 1.84 0 0 0 1.835 1.834h9.418a22.953 22.953 0 0 1-.052-2.707c-.006-.062-.011-.141-.016-.2a27.01 27.01 0 0 0-.473-2.378c-.121-.47-.275-.898-.369-1.057-.116-.197-.098-.31-.097-.432 0-.12.015-.245.037-.386a9.98 9.98 0 0 1 .234-1.045l.217-.028c-.017-.035-.014-.065-.031-.097l-.041-.381a32.8 32.8 0 0 1 .382-1.194l.2-.019c-.008-.016-.01-.038-.018-.053l-.043-.316c.63-3.28 2.587-7.443 4.8-9.791.066-.069.133-.128.198-.194Z"/></svg><span>SQLite</span></span>
+      <span class="logo lg-node"><svg class="lg-icone" aria-hidden="true" fill="currentColor" fill-rule="evenodd" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383 c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076 c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0 L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392 c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021 c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921 c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082c0.57,0.329,0.924,0.944,0.924,1.603 v10.15c0,0.659-0.354,1.273-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24z M19.099,13.993 c0-1.9-1.284-2.406-3.987-2.763c-2.731-0.361-3.009-0.548-3.009-1.187c0-0.528,0.235-1.233,2.258-1.233 c1.807,0,2.473,0.389,2.747,1.607c0.024,0.115,0.129,0.199,0.247,0.199h1.141c0.071,0,0.138-0.031,0.186-0.081 c0.048-0.054,0.074-0.123,0.067-0.196c-0.177-2.098-1.571-3.076-4.388-3.076c-2.508,0-4.004,1.058-4.004,2.833 c0,1.925,1.488,2.457,3.895,2.695c2.88,0.282,3.103,0.703,3.103,1.269c0,0.983-0.789,1.402-2.642,1.402 c-2.327,0-2.839-0.584-3.011-1.742c-0.02-0.124-0.126-0.215-0.253-0.215h-1.137c-0.141,0-0.254,0.112-0.254,0.253 c0,1.482,0.806,3.248,4.655,3.248C17.501,17.007,19.099,15.91,19.099,13.993z"/></svg><span>node.js</span></span>
     </div>
   </div>
 
-  <!-- ============ Relatório (claro) ============ -->
   <main class="folha">
     <section id="progresso" class="progresso" hidden aria-live="polite">
       <div class="barra-progresso"><span></span></div>
@@ -103,74 +101,62 @@
       <div id="aviso-simulado" class="aviso" hidden>Example mode: sources are fictional (<code>.example</code> domains) and search and model responses are simulated. Categories, Portuguese handling, agreement, freshness and verdicts come from the real engine.</div>
 
       <header class="resumo">
-        <p class="mono-rotulo">Report</p>
+        <p class="serifa">Your report</p>
         <h2 id="titulo-resultado">What still holds</h2>
         <p id="resumo-frase" class="resumo-frase"></p>
         <div id="contagens" class="contagens"></div>
       </header>
 
       <section id="triagem" class="bloco-relatorio triagem" hidden aria-labelledby="titulo-triagem">
-        <div class="bloco-cabeca"><span class="mono-rotulo">01 — Flag</span><h3 id="titulo-triagem">Stale-risk triage</h3><p class="dica">Before any search, each claim is flagged by how fast it can expire, and why.</p><p id="triagem-resumo" class="triagem-resumo"></p></div>
+        <div class="bloco-cabeca"><p class="serifa">Flag</p><h3 id="titulo-triagem">Stale-risk triage</h3><p class="dica">Before any search, each claim is flagged by how fast it can expire, and why.</p><p id="triagem-resumo" class="triagem-resumo"></p></div>
         <ol id="triagem-lista" class="triagem-lista"></ol>
       </section>
 
       <section id="corrigida" class="bloco-relatorio corrigida" hidden aria-labelledby="titulo-corrigida">
-        <div class="bloco-cabeca"><span class="mono-rotulo">02 — Correct</span><h3 id="titulo-corrigida">Updated answer</h3><p class="dica">Rewritten using only verified sources. Numbers link to them.</p></div>
-        <div class="comparacao">
-          <div><p class="rotulo-comparacao">What the AI said</p><blockquote id="corrigida-original"></blockquote></div>
-          <div><p class="rotulo-comparacao novo">What current sources support</p><blockquote id="corrigida-texto" class="novo"></blockquote></div>
+        <div class="bloco-cabeca"><p class="serifa">Correct</p><h3 id="titulo-corrigida">Updated answer</h3><p class="dica">Rewritten using only verified sources. Numbers link to them.</p></div>
+        <div class="corrigida-corpo">
+          <div class="comparacao">
+            <div class="lado-antigo"><p class="rotulo-comparacao">What the AI said</p><blockquote id="corrigida-original"></blockquote></div>
+            <div class="lado-novo"><p class="rotulo-comparacao novo">What current sources support</p><blockquote id="corrigida-texto" class="novo"></blockquote></div>
+          </div>
+          <ol id="corrigida-fontes" class="corrigida-fontes"></ol>
         </div>
-        <ol id="corrigida-fontes" class="corrigida-fontes"></ol>
       </section>
 
       <div id="omitidas" class="aviso neutro" hidden></div>
 
       <section class="bloco-relatorio">
-        <div class="bloco-cabeca"><span class="mono-rotulo">03 — Verify</span><h3>Claim by claim</h3><p class="dica">Verdict, source agreement and a freshness score for every claim, with the evidence behind it.</p></div>
+        <div class="bloco-cabeca"><p class="serifa">Verify</p><h3>Claim by claim</h3><p class="dica">Verdict, source agreement and a freshness score for every claim, with the evidence behind it.</p></div>
         <div id="cartoes" class="cartoes"></div>
       </section>
 
       <section id="gateway" class="bloco-relatorio gateway" hidden aria-labelledby="titulo-gateway">
-        <div class="bloco-cabeca"><span class="mono-rotulo">04 — Route</span><h3 id="titulo-gateway">AI gateway · Bifrost</h3><p class="dica">Every model call goes through Bifrost. If the main model fails or hits a rate limit, Bifrost answers from a backup — no retry code in Entrelinhas.</p></div>
+        <div class="bloco-cabeca"><p class="serifa">Route</p><h3 id="titulo-gateway">AI gateway, Bifrost</h3><p class="dica">Every model call goes through Bifrost. If the main model fails or hits a rate limit, Bifrost answers from a backup, with no retry code in Entrelinhas.</p></div>
         <div id="gateway-conteudo"></div>
       </section>
       <p id="rastreio" class="rastreio"></p>
     </section>
 
-    <!-- O problema -->
     <section class="secao problema" aria-labelledby="titulo-problema">
       <div class="secao-cabeca">
-        <p class="mono-rotulo">The problem</p>
+        <p class="serifa">The problem</p>
         <h2 id="titulo-problema">Models freeze the world on the day they were trained. <span class="apagado">The world keeps moving.</span></h2>
       </div>
-      <div class="colunas quatro">
-        <div class="coluna">
-          <svg class="curva" viewBox="0 0 200 90" aria-hidden="true"><path class="eixo" d="M0 89H200"/><path class="fio" d="M0 12 C 22 12, 30 84, 60 86 S 200 88, 200 88"/><circle class="no" cx="0" cy="12" r="3"/></svg>
-          <h3>Prices</h3><p>Plans and fees change monthly. A month-old price is already a guess.</p>
-        </div>
-        <div class="coluna">
-          <svg class="curva" viewBox="0 0 200 90" aria-hidden="true"><path class="eixo" d="M0 89H200"/><path class="fio" d="M0 12 C 50 12, 70 80, 120 85 S 200 88, 200 88"/><circle class="no" cx="0" cy="12" r="3"/></svg>
-          <h3>Software versions</h3><p>Releases and LTS lines turn over every quarter.</p>
-        </div>
-        <div class="coluna">
-          <svg class="curva" viewBox="0 0 200 90" aria-hidden="true"><path class="eixo" d="M0 89H200"/><path class="fio" d="M0 12 C 90 12, 120 70, 170 80 S 200 84, 200 84"/><circle class="no" cx="0" cy="12" r="3"/></svg>
-          <h3>Company facts</h3><p>Leaders, products and policies drift over months.</p>
-        </div>
-        <div class="coluna">
-          <svg class="curva" viewBox="0 0 200 90" aria-hidden="true"><path class="eixo" d="M0 89H200"/><path class="fio" d="M0 12 C 140 12, 170 40, 200 62"/><circle class="no" cx="0" cy="12" r="3"/></svg>
-          <h3>Laws &amp; rules</h3><p>Slow to change — and costly when an answer misses it.</p>
-        </div>
+      <div class="ladrilhos quatro">
+        <div class="ladrilho"><p class="validade">about a month</p><h3>Prices</h3><p>Plans and fees change monthly. A month-old price is already a guess.</p></div>
+        <div class="ladrilho"><p class="validade">about a quarter</p><h3>Software versions</h3><p>Releases and LTS lines turn over every few months.</p></div>
+        <div class="ladrilho"><p class="validade">about six months</p><h3>Company facts</h3><p>Leaders, products and policies drift quietly.</p></div>
+        <div class="ladrilho"><p class="validade">about a year</p><h3>Laws and rules</h3><p>Slow to change, and costly when an answer misses it.</p></div>
       </div>
     </section>
   </main>
 
-  <!-- ============ Método (escuro) ============ -->
   <section id="como-funciona" class="noite metodo" aria-labelledby="titulo-metodo">
     <div class="metodo-topo">
       <div>
-        <p class="mono-rotulo claro">Method</p>
+        <p class="serifa claro">Method</p>
         <h2 id="titulo-metodo">From a confident answer <br class="quebra">to a <em>current</em> one.</h2>
-        <p class="metodo-texto">Five steps, every one of them traceable: each search, each model call and each quote is stored and checked against the source text.</p>
+        <p class="metodo-texto">Five moves, every one of them traceable. Each search, each model call and each quote is stored and matched against the source text.</p>
       </div>
       <svg class="simbolo" viewBox="0 0 320 320" aria-hidden="true">
         <g fill="none" stroke="url(#g-laranja)" stroke-width="2" stroke-linecap="round">
@@ -181,11 +167,11 @@
       </svg>
     </div>
     <ol class="passos">
-      <li><span class="num">01</span><h3>Split &amp; flag</h3><p>The answer becomes atomic claims, each flagged by how fast it expires — prices in about a month, versions in a quarter, company facts in six months, rules in a year.</p></li>
-      <li><span class="num">02</span><h3>Search live</h3><p>Tavily searches official sites, the news (Brazilian outlets for Portuguese claims) and scientific articles. Diverse types, never two from one site, blogs last.</p></li>
-      <li><span class="num">03</span><h3>Read together</h3><p>One model call through Bifrost reads every source for a claim, knowing today’s date. Every quote it returns is matched against the page.</p></li>
-      <li><span class="num">04</span><h3>Weigh &amp; score</h3><p>Copies count once; official and scientific sources weigh most. Freshness = how recent the confirming sources are × how many agree.</p></li>
-      <li><span class="num">05</span><h3>Rewrite</h3><p>A last call writes the answer again from verified quotes only, with numbered citations, next to what the AI said.</p></li>
+      <li><svg class="glifo" viewBox="0 0 48 48" aria-hidden="true"><path d="M4 24h14M18 24c8 0 8-14 16-14h10M18 24h26M18 24c8 0 8 14 16 14h10"/></svg><h3>Split and flag</h3><p>The answer becomes atomic claims, each flagged by how fast it expires.</p></li>
+      <li><svg class="glifo" viewBox="0 0 48 48" aria-hidden="true"><circle cx="20" cy="20" r="12"/><path d="M29 29l13 13M14 20h12"/></svg><h3>Search live</h3><p>Tavily searches official sites, the news and science. Diverse types, never two from one site, blogs last.</p></li>
+      <li><svg class="glifo" viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="8" width="22" height="30" rx="4"/><rect x="21" y="12" width="22" height="30" rx="4"/><path d="M27 21h10M27 27h10M27 33h6"/></svg><h3>Read together</h3><p>One model call through Bifrost reads every source for a claim, knowing today’s date.</p></li>
+      <li><svg class="glifo" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6v36M10 42h28M8 14h32M8 14l-5 12h10zM40 14l-5 12h10z"/></svg><h3>Weigh and score</h3><p>Copies count once, official and scientific sources weigh most. Freshness is recency times agreement.</p></li>
+      <li><svg class="glifo" viewBox="0 0 48 48" aria-hidden="true"><path d="M30 6l12 12-22 22H8V28zM24 12l12 12M4 44h40"/></svg><h3>Rewrite</h3><p>The answer is written again from verified quotes only, with numbered citations.</p></li>
     </ol>
   </section>
 
@@ -196,92 +182,90 @@
     </div>
   </div>
 
-  <!-- ============ Prova (claro) ============ -->
   <section id="prova" class="folha secao prova" aria-labelledby="titulo-prova">
     <div class="secao-cabeca">
-      <p class="mono-rotulo">Evidence</p>
+      <p class="serifa">Evidence</p>
       <h2 id="titulo-prova">Find the <em>shortest path</em> from stale to true.</h2>
     </div>
     <div class="antes-depois">
-      <figure>
-        <svg viewBox="0 0 400 200" aria-hidden="true">
-          <path class="grade" d="M0 50H400M0 100H400M0 150H400"/>
-          <path class="fio-cinza" d="M0 60 H400"/>
-          <path class="fio-verdade" d="M0 60 H90 V110 H210 V140 H300 V170 H400"/>
-          <path class="vazio" d="M400 60 V170"/>
+      <figure class="ladrilho ilustracao">
+        <svg viewBox="0 0 360 230" aria-hidden="true">
+          <rect class="balao" x="20" y="20" width="320" height="170" rx="22"/>
+          <path class="balao" d="M52 190l-8 26 30-26"/>
+          <rect class="txt" x="48" y="50" width="220" height="10" rx="5"/>
+          <rect class="txt velho" x="48" y="76" width="150" height="10" rx="5"/>
+          <rect class="txt" x="206" y="76" width="96" height="10" rx="5"/>
+          <rect class="txt" x="48" y="102" width="250" height="10" rx="5"/>
+          <rect class="txt" x="48" y="128" width="80" height="10" rx="5"/>
+          <rect class="txt velho" x="136" y="128" width="140" height="10" rx="5"/>
+          <rect class="txt" x="48" y="154" width="180" height="10" rx="5"/>
+          <path class="onda" d="M48 94q5-5 10 0t10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0"/>
+          <path class="onda" d="M136 146q5-5 10 0t10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0"/>
         </svg>
-        <figcaption><span class="mono-rotulo">Without</span>The answer stays fixed while the facts move. The gap grows silently.</figcaption>
+        <figcaption><span class="serifa">Without</span>A fluent answer, two claims already expired. Nothing on the screen tells you which.</figcaption>
       </figure>
-      <figure>
-        <svg viewBox="0 0 400 200" aria-hidden="true">
-          <path class="grade" d="M0 50H400M0 100H400M0 150H400"/>
-          <path class="fio-verdade" d="M0 60 H90 V110 H210 V140 H300 V170 H400"/>
-          <path class="fio-laranja" d="M0 60 H90 Q 100 60 104 108 L 110 110 H210 Q 220 110 224 138 L 230 140 H300 Q 310 140 314 168 L 320 170 H400"/>
-          <circle class="no-laranja" cx="400" cy="170" r="5"/>
+      <figure class="ladrilho ilustracao escuro">
+        <svg viewBox="0 0 360 230" aria-hidden="true">
+          <rect class="balao" x="20" y="20" width="320" height="170" rx="22"/>
+          <path class="balao" d="M52 190l-8 26 30-26"/>
+          <rect class="txt" x="48" y="50" width="220" height="10" rx="5"/>
+          <rect class="txt novo" x="48" y="76" width="150" height="10" rx="5"/>
+          <rect class="ref" x="204" y="73" width="22" height="16" rx="5"/><rect class="ref" x="230" y="73" width="22" height="16" rx="5"/>
+          <rect class="txt" x="48" y="102" width="250" height="10" rx="5"/>
+          <rect class="txt" x="48" y="128" width="80" height="10" rx="5"/>
+          <rect class="txt novo" x="136" y="128" width="140" height="10" rx="5"/>
+          <rect class="ref" x="282" y="125" width="22" height="16" rx="5"/>
+          <rect class="txt" x="48" y="154" width="180" height="10" rx="5"/>
+          <path class="check" d="M296 44l8 8 16-16"/>
         </svg>
-        <figcaption><span class="mono-rotulo laranja">With Entrelinhas</span>Each claim is re-anchored to current sources the moment it is asked.</figcaption>
+        <figcaption><span class="serifa">With Entrelinhas</span>The same answer, re-anchored to current sources, each fix with its citation.</figcaption>
       </figure>
     </div>
 
-    <div class="numeros">
-      <div class="numero">
-        <svg class="medidor" viewBox="0 0 200 110" aria-hidden="true"><path class="trilho-arco" d="M15 100 A85 85 0 0 1 185 100"/><path class="arco" d="M15 100 A85 85 0 0 1 185 100"/></svg>
-        <p class="numero-grande">15<span>/15</span></p>
-        <p>real claims judged in the right direction</p>
-      </div>
-      <div class="numero">
-        <svg class="medidor" viewBox="0 0 200 110" aria-hidden="true"><path class="trilho-arco" d="M15 100 A85 85 0 0 1 185 100"/><path class="arco zero" d="M15 100 A85 85 0 0 1 185 100"/></svg>
-        <p class="numero-grande">0</p>
-        <p>stale claims ever confirmed as true</p>
-      </div>
-      <div class="numero">
-        <svg class="barras" viewBox="0 0 200 110" aria-hidden="true"><path d="M20 100V60M45 100V40M70 100V75M95 100V30M120 100V55M145 100V20M170 100V45"/><path class="barra-laranja" d="M45 100V40M95 100V30M145 100V20"/></svg>
-        <p class="numero-grande">23<span>/50</span></p>
-        <p>model calls rescued by Bifrost backups during the benchmark</p>
-      </div>
+    <div class="ladrilhos tres numeros">
+      <div class="ladrilho numero"><p class="numero-grande">15<span> of 15</span></p><p>real claims judged in the right direction</p></div>
+      <div class="ladrilho numero"><p class="numero-grande">0</p><p>stale claims ever confirmed as true</p></div>
+      <div class="ladrilho numero"><p class="numero-grande">23<span> of 50</span></p><p>model calls rescued by Bifrost backups during the benchmark</p></div>
     </div>
   </section>
 
-  <!-- ============ Em qualquer lugar (escuro) ============ -->
   <section id="favorito-secao" class="noite favorito-secao" aria-labelledby="titulo-favorito">
     <div class="favorito-grade">
       <div>
-        <p class="mono-rotulo claro">Anywhere</p>
+        <p class="serifa claro">Anywhere</p>
         <h2 id="titulo-favorito">A verification layer <br class="quebra">for <em>any</em> AI app.</h2>
-        <p>Drag the button to your bookmarks bar. On ChatGPT, Gemini or any page, select an answer and click it — Entrelinhas opens with the text ready to check.</p>
+        <p>Drag the button to your bookmarks bar. On ChatGPT, Gemini or any page, select an answer and click it. Entrelinhas opens with the text ready to check.</p>
         <p class="favorito-acao"><a id="favorito" class="botao-favorito" href="#">Check with Entrelinhas</a></p>
         <p class="dica">Opens <span id="favorito-destino"></span>. Nothing is sent until you click Check answer.</p>
       </div>
       <div class="api">
-        <p class="mono-rotulo claro">For developers</p>
+        <p class="serifa claro">For developers</p>
         <pre><code><span class="c">POST</span> /api/verificar
 {
-  "texto": "…the AI answer…",
+  "texto": "the AI answer",
   "modo": "real"
 }
-<span class="c">→</span> claims · verdicts · freshness
-  updated answer · gateway trace</code></pre>
+<span class="c">→</span> claims, verdicts, freshness,
+  updated answer, gateway trace</code></pre>
       </div>
     </div>
   </section>
 
-  <!-- ============ Leitura (claro) ============ -->
   <section id="como-ler" class="folha secao" aria-labelledby="titulo-ler">
     <div class="secao-cabeca">
-      <p class="mono-rotulo">Reading the report</p>
+      <p class="serifa">Reading the report</p>
       <h2 id="titulo-ler">Seven verdicts. <span class="apagado">No black box.</span></h2>
     </div>
     <div id="legenda" class="legenda"></div>
     <p class="dica nota-final">Source agreement and freshness are deterministic indexes, not probabilities of truth. Independent sources can share a mistake, and a recent page can still be wrong.</p>
   </section>
 
-  <!-- ============ Rodapé ============ -->
   <footer class="rodape noite">
     <a class="rodape-chamada" href="#titulo-hero"><span>Check an answer</span><span class="seta" aria-hidden="true">↗</span></a>
     <div class="rodape-linha">
       <span class="marca-nome">entrelinhas</span>
       <span>Geek Room Global AI Hackathon 2026</span>
-      <span>Tavily · Bifrost · SQLite</span>
+      <span>Tavily, Bifrost and SQLite</span>
     </div>
   </footer>
 </body>

@@ -45,7 +45,10 @@ const ARQUIVOS_PUBLICOS = {
   "/app.js": ["app.js", "text/javascript; charset=utf-8"],
   "/estilo.css": ["estilo.css", "text/css; charset=utf-8"],
   "/fonts/Geist-Variable.woff2": ["fonts/Geist-Variable.woff2", "font/woff2"],
-  "/fonts/GeistMono-Variable.woff2": ["fonts/GeistMono-Variable.woff2", "font/woff2"]
+  "/fonts/GeistMono-Variable.woff2": ["fonts/GeistMono-Variable.woff2", "font/woff2"],
+  "/fonts/instrument-serif-latin-400-italic.woff2": ["fonts/instrument-serif-latin-400-italic.woff2", "font/woff2"],
+  "/fonts/instrument-serif-latin-400-normal.woff2": ["fonts/instrument-serif-latin-400-normal.woff2", "font/woff2"],
+  "/logos/bifrost.png": ["logos/bifrost.png", "image/png"]
 };
 
 const CABECALHOS_SEGURANCA = {
