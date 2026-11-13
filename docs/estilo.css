@@ -782,3 +782,6 @@ main.folha { overflow: hidden; }
 
 /* hero: keep the highlighted phrase together */
 #titulo-hero em{white-space:nowrap}
+
+/* problem cards: black glass, not gray */
+.problema .ladrilho { background: linear-gradient(160deg, rgba(12, 11, 11, .95), rgba(4, 4, 5, .9)); backdrop-filter: blur(5px) saturate(140%); -webkit-backdrop-filter: blur(5px) saturate(140%); }
