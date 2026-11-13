@@ -1,0 +1,98 @@
+{
+ "nome": "Entrelinhas · casos novos, escritos depois das correções (nunca usados para ajustar regras)",
+ "data_referencia": "2026-11-13",
+ "como_pontuar": {
+  "ATUAL_ESPERADO": "acerto se ATUAL ou CORROBORADA; parcial se SUPORTE_FRACO; erro se contradita; sem decisão se NAO_VERIFICAVEL ou CONFLITO",
+  "DESATUALIZADA_ESPERADO": "acerto se CONTRADITA_POR_FONTE_ATUAL ou CONTRADICAO_FRACA; parcial se CONFLITO; erro grave se ATUAL, CORROBORADA ou SUPORTE_FRACO (confirmou algo velho); sem decisão se NAO_VERIFICAVEL"
+ },
+ "casos": [
+  {
+   "id": "en-nadella-ceo",
+   "texto": "Satya Nadella is the CEO of Microsoft.",
+   "esperado": "ATUAL",
+   "verdade": "CEO since February 2014, still CEO and chairman in 2026",
+   "fontes_gabarito": [
+    "https://news.microsoft.com/leadership/speeches/",
+    "https://www.amacad.org/person/satya-nadella",
+    "https://www.semafor.com/article/10/21/2026/microsofts-nadella-is-back-in-business"
+   ]
+  },
+  {
+   "id": "en-pichai-ceo",
+   "texto": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+   "esperado": "ATUAL",
+   "verdade": "CEO of Alphabet since December 2019, still CEO in 2026",
+   "fontes_gabarito": [
+    "https://www.amacad.org/person/sundarajan-pichai",
+    "https://worldfinance.com/featured/the-ai-first-ceo",
+    "https://simplywall.st/stocks/cl/media/snse-googl/alphabet-shares/management"
+   ]
+  },
+  {
+   "id": "pt-salario-diario",
+   "texto": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+   "esperado": "ATUAL",
+   "verdade": "R$ 54,04 por dia desde 1º/1/2026 (Decreto 12.797/2025)",
+   "fontes_gabarito": [
+    "https://timesbrasil.com.br/brasil/agora-e-oficial-salario-minimo-para-2026-e-publicado-no-dou-veja-o-valor/",
+    "https://www.band.com.br/band-vale/noticias/salario-minimo-sobe-para-r-1621-a-partir-de-janeiro-de-2026-202512250915",
+    "https://www.infinitepay.io/blog/salario-minimo"
+   ]
+  },
+  {
+   "id": "en-python312-security",
+   "texto": "Python 3.12 still receives official security fixes.",
+   "esperado": "ATUAL",
+   "verdade": "Security support until October 2028 (PEP 693)",
+   "fontes_gabarito": [
+    "https://peps.python.org/pep-0693/",
+    "https://devguide.python.org/versions/",
+    "https://endoflife.date/python"
+   ]
+  },
+  {
+   "id": "en-node18-support",
+   "texto": "Node.js 18 is still officially supported with security updates.",
+   "esperado": "DESATUALIZADA",
+   "verdade": "End of life on 30 April 2025",
+   "fontes_gabarito": [
+    "https://nodejs.org/en/about/previous-releases",
+    "https://github.com/nodejs/release#release-schedule",
+    "https://endoflife.date/nodejs"
+   ]
+  },
+  {
+   "id": "en-python38-security",
+   "texto": "Python 3.8 still receives official security updates.",
+   "esperado": "DESATUALIZADA",
+   "verdade": "End of life in October 2024",
+   "fontes_gabarito": [
+    "https://peps.python.org/pep-0569/",
+    "https://devguide.python.org/versions/",
+    "https://endoflife.date/python"
+   ]
+  },
+  {
+   "id": "en-ubuntu2004-standard",
+   "texto": "Ubuntu 20.04 LTS is still in standard support.",
+   "esperado": "DESATUALIZADA",
+   "verdade": "Standard support ended on 31 May 2025; only paid extended support (ESM) remains",
+   "fontes_gabarito": [
+    "https://ubuntu.com/about/release-cycle",
+    "https://wiki.ubuntu.com/Releases",
+    "https://endoflife.date/ubuntu"
+   ]
+  },
+  {
+   "id": "pt-salario-1412",
+   "texto": "O salário mínimo atual no Brasil é de R$ 1.412.",
+   "esperado": "DESATUALIZADA",
+   "verdade": "R$ 1.412 valeu em 2024; desde 1º/1/2026 é R$ 1.621",
+   "fontes_gabarito": [
+    "https://timesbrasil.com.br/brasil/agora-e-oficial-salario-minimo-para-2026-e-publicado-no-dou-veja-o-valor/",
+    "https://www.infinitepay.io/blog/salario-minimo",
+    "https://www.congressoemfoco.com.br/noticia/115146/governo-oficializa-reajuste-do-salario-minimo-para-r-1-621-em-2026"
+   ]
+  }
+ ]
+}

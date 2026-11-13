@@ -12,7 +12,7 @@ Record the screen at 1920×1080 and the voice separately. Cut on actions, not on
 - Texts to paste:
   - **A (English):** `Node.js 20 is the current Active LTS release and the recommended version for production. ChatGPT Plus costs $20 per month.`
   - **B (Portuguese, informal):** `O salário mínimo em 2026 é de R$ 1.518 e a taxa Selic está atualmente em 10,5% ao ano.`
-- Plan B if a live check fails or the free model tier is slow: use the public demo and click **See an example check**. It replays a real recorded check with the same panels.
+- Plan B if a live check fails or the free model tier is slow: use the public demo and click **See a real check**. It replays a real recorded check with the same panels.
 
 ## Scenes
 
@@ -27,7 +27,7 @@ Record the screen at 1920×1080 and the voice separately. Cut on actions, not on
 | 1:35-1:55 | Paste text **B** and check it (or click **Live · Brazil minimum wage + Selic rate (PT)** on the public demo). Show the corrected answer and the official Brazilian source searched. | "And it is built for Portuguese, not translated into it. It reads Brazilian numbers and words like *atualmente*, and it goes to the Brazilian authorities on its own." |
 | 1:55-2:12 | Open **Advanced options +**, tick **For judges: simulate a model outage**, run a short claim. Show the **AI gateway, Bifrost** panel: main model crossed out, answered by a backup. | "Every model call goes through Bifrost. When the main model fails or hits a rate limit, Bifrost answers from a backup on its own. Here I simulate an outage, and the check still finishes." |
 | 2:12-2:22 | On ChatGPT, select an answer and click the **Check with Entrelinhas** bookmark. Entrelinhas opens with the text filled in. | "It works wherever you already use AI. Select an answer, one click, and it is ready to check." |
-| 2:22-2:40 | Scroll to the example section: the two claim cards and the numbers row (23 Bifrost switches, 14 of 15). Then **What the results mean** (green, yellow, red) and **For anyone who relies on AI answers**. | "On fifteen real claims with known answers, it got fourteen exactly right, put all fifteen on the right side and never confirmed an outdated claim as true. Green means it holds, yellow means look closer, red means don't rely on it. It is for anyone who relies on AI answers, from everyday questions to support bots and newsrooms." |
+| 2:22-2:40 | Scroll to the example section: the two claim cards and the numbers row (22 of 60 calls answered by a backup through Bifrost, 14 of 15). Then **What the results mean** (green, yellow, red) and **For anyone who relies on AI answers**. | "On fifteen real claims with known answers, it got fourteen exactly right, put all fifteen on the right side and never confirmed an outdated claim as true. Green means it holds, yellow means look closer, red means don't rely on it. It is for anyone who relies on AI answers, from everyday questions to support bots and newsrooms." |
 | 2:40-2:50 | Footer "Check an answer" (the arrow takes you back to the top), then the public link on screen. | "Try a recorded check now, no install. Entrelinhas. Read between the lines of any AI answer." |
 
 ## Editing tips

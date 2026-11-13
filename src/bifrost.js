@@ -30,6 +30,12 @@ function tempoDeEspera(resposta, dados) {
 // Modelo propositalmente inexistente, usado só na demonstração de failover.
 const MODELO_QUEDA_SIMULADA = "groq/entrelinhas-simulated-outage";
 
+// Endereço do gateway. Padrão: Bifrost local na porta 8080 (npx @maximhq/bifrost).
+// Para um Bifrost em outro lugar: BIFROST_URL=https://meu-gateway.exemplo
+function enderecoBifrost() {
+  return String(process.env.BIFROST_URL || "http://localhost:8080").replace(/\/+$/, "");
+}
+
 function configuracaoModelos() {
   const principal = (process.env.BIFROST_MODEL ?? "").trim() || MODELO_PADRAO;
   const bruto = (process.env.BIFROST_FALLBACKS ?? "").trim();
@@ -202,7 +208,7 @@ async function perguntarAoModelo(
       ...(reservasDoPedido.length ? { fallbacks: reservasDoPedido } : {})
     });
     const enviar = () => fetch(
-      "http://localhost:8080/v1/chat/completions",
+      `${enderecoBifrost()}/v1/chat/completions`,
       { method: "POST", headers, body: corpoPedido, signal: controller.signal }
     );
 
@@ -381,6 +387,7 @@ function determinarFallback({ roteamento, indice, modeloPedido, provedorFinal, m
 const perguntarAoGemini = perguntarAoModelo;
 
 module.exports = {
+  enderecoBifrost,
   perguntarAoModelo,
   perguntarAoGemini,
   configuracaoModelos,

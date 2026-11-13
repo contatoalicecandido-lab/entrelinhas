@@ -1,0 +1,255 @@
+{
+  "resumo": {
+    "rodada": "2026-11-13T13",
+    "checagens": 15,
+    "chamadas_ao_modelo": 60,
+    "respondidas_por_modelo_reserva": 22,
+    "respostas_invalidas_refeitas": 4,
+    "quedas_simuladas": 0
+  },
+  "linhas": [
+    {
+      "arquivo": "2026-11-13T13-22-43-680Z-o-salario-minimo-em-2026-e-de-r-1-621.json",
+      "chamadas": 3,
+      "respostas_de_reserva": 0,
+      "respostas_invalidas_refeitas": 0,
+      "queda_simulada": false,
+      "respostas_por_modelo": [
+        {
+          "modelo": "groq/openai/gpt-oss-20b",
+          "chamadas": 3
+        }
+      ]
+    },
+    {
+      "arquivo": "2026-11-13T13-23-46-585Z-o-salario-minimo-em-2026-e-de-r-1-518.json",
+      "chamadas": 4,
+      "respostas_de_reserva": 2,
+      "respostas_invalidas_refeitas": 1,
+      "queda_simulada": false,
+      "respostas_por_modelo": [
+        {
+          "modelo": "groq/openai/gpt-oss-20b",
+          "chamadas": 1
+        },
+        {
+          "modelo": "groq/openai/gpt-oss-120b",
+          "chamadas": 2
+        }
+      ]
+    },
+    {
+      "arquivo": "2026-11-13T13-24-46-361Z-a-taxa-selic-esta-atualmente-em-13-75-ao-ano.json",
+      "chamadas": 4,
+      "respostas_de_reserva": 1,
+      "respostas_invalidas_refeitas": 0,
+      "queda_simulada": false,
+      "respostas_por_modelo": [
+        {
+          "modelo": "groq/openai/gpt-oss-20b",
+          "chamadas": 3
+        },
+        {
+          "modelo": "groq/openai/gpt-oss-120b",
+          "chamadas": 1
+        }
+      ]
+    },
+    {
+      "arquivo": "2026-11-13T13-25-47-199Z-a-taxa-selic-esta-atualmente-em-10-5-ao-ano.json",
+      "chamadas": 4,
+      "respostas_de_reserva": 0,
+      "respostas_invalidas_refeitas": 0,
+      "queda_simulada": false,
+      "respostas_por_modelo": [
+        {
+          "modelo": "groq/openai/gpt-oss-20b",
+          "chamadas": 4
+        }
+      ]
+    },
+    {
+      "arquivo": "2026-11-13T13-26-51-184Z-o-plano-padrao-da-netflix-no-brasil-custa-r-44-9.json",
+      "chamadas": 4,
+      "respostas_de_reserva": 2,
+      "respostas_invalidas_refeitas": 1,
+      "queda_simulada": false,
+      "respostas_por_modelo": [
+        {
+          "modelo": "groq/openai/gpt-oss-20b",
+          "chamadas": 1
+        },
+        {
+          "modelo": "groq/openai/gpt-oss-120b",
+          "chamadas": 2
+        }
+      ]
+    },
+    {
+      "arquivo": "2026-11-13T13-27-57-896Z-a-vacina-da-dengue-qdenga-e-aplicada-pelo-sus-em.json",
+      "chamadas": 4,
+      "respostas_de_reserva": 1,
+      "respostas_invalidas_refeitas": 0,
+      "queda_simulada": false,
+      "respostas_por_modelo": [
+        {
+          "modelo": "groq/openai/gpt-oss-20b",
+          "chamadas": 3
+        },
+        {
+          "modelo": "groq/openai/gpt-oss-120b",
+          "chamadas": 1
+        }
+      ]
+    },
+    {
+      "arquivo": "2026-11-13T13-28-58-488Z-a-lgpd-esta-em-vigor-no-brasil-desde-2020.json",
+      "chamadas": 3,
+      "respostas_de_reserva": 1,
+      "respostas_invalidas_refeitas": 0,
+      "queda_simulada": false,
+      "respostas_por_modelo": [
+        {
+          "modelo": "groq/openai/gpt-oss-20b",
+          "chamadas": 2
+        },
+        {
+          "modelo": "groq/openai/gpt-oss-120b",
+          "chamadas": 1
+        }
+      ]
+    },
+    {
+      "arquivo": "2026-11-13T13-30-02-863Z-o-pix-e-gratuito-para-pessoas-fisicas-que-fazem-.json",
+      "chamadas": 4,
+      "respostas_de_reserva": 2,
+      "respostas_invalidas_refeitas": 0,
+      "queda_simulada": false,
+      "respostas_por_modelo": [
+        {
+          "modelo": "groq/openai/gpt-oss-20b",
+          "chamadas": 2
+        },
+        {
+          "modelo": "groq/openai/gpt-oss-120b",
+          "chamadas": 2
+        }
+      ]
+    },
+    {
+      "arquivo": "2026-11-13T13-31-58-830Z-node-js-20-is-in-active-lts-and-is-the-recommend.json",
+      "chamadas": 7,
+      "respostas_de_reserva": 3,
+      "respostas_invalidas_refeitas": 1,
+      "queda_simulada": false,
+      "respostas_por_modelo": [
+        {
+          "modelo": "groq/openai/gpt-oss-20b",
+          "chamadas": 3
+        },
+        {
+          "modelo": "groq/openai/gpt-oss-120b",
+          "chamadas": 3
+        }
+      ]
+    },
+    {
+      "arquivo": "2026-11-13T13-33-02-700Z-node-js-22-still-receives-official-security-upda.json",
+      "chamadas": 4,
+      "respostas_de_reserva": 1,
+      "respostas_invalidas_refeitas": 1,
+      "queda_simulada": false,
+      "respostas_por_modelo": [
+        {
+          "modelo": "groq/openai/gpt-oss-20b",
+          "chamadas": 2
+        },
+        {
+          "modelo": "groq/openai/gpt-oss-120b",
+          "chamadas": 1
+        }
+      ]
+    },
+    {
+      "arquivo": "2026-11-13T13-33-59-367Z-chatgpt-plus-costs-20-per-month.json",
+      "chamadas": 3,
+      "respostas_de_reserva": 1,
+      "respostas_invalidas_refeitas": 0,
+      "queda_simulada": false,
+      "respostas_por_modelo": [
+        {
+          "modelo": "groq/openai/gpt-oss-20b",
+          "chamadas": 2
+        },
+        {
+          "modelo": "groq/openai/gpt-oss-120b",
+          "chamadas": 1
+        }
+      ]
+    },
+    {
+      "arquivo": "2026-11-13T13-34-56-866Z-sam-altman-is-the-ceo-of-openai.json",
+      "chamadas": 4,
+      "respostas_de_reserva": 2,
+      "respostas_invalidas_refeitas": 0,
+      "queda_simulada": false,
+      "respostas_por_modelo": [
+        {
+          "modelo": "groq/openai/gpt-oss-20b",
+          "chamadas": 2
+        },
+        {
+          "modelo": "groq/openai/gpt-oss-120b",
+          "chamadas": 2
+        }
+      ]
+    },
+    {
+      "arquivo": "2026-11-13T13-35-57-877Z-python-2-7-still-receives-official-security-upda.json",
+      "chamadas": 4,
+      "respostas_de_reserva": 1,
+      "respostas_invalidas_refeitas": 0,
+      "queda_simulada": false,
+      "respostas_por_modelo": [
+        {
+          "modelo": "groq/openai/gpt-oss-20b",
+          "chamadas": 3
+        },
+        {
+          "modelo": "groq/openai/gpt-oss-120b",
+          "chamadas": 1
+        }
+      ]
+    },
+    {
+      "arquivo": "2026-11-13T13-36-58-246Z-jack-dorsey-is-the-current-ceo-of-twitter.json",
+      "chamadas": 4,
+      "respostas_de_reserva": 1,
+      "respostas_invalidas_refeitas": 0,
+      "queda_simulada": false,
+      "respostas_por_modelo": [
+        {
+          "modelo": "groq/openai/gpt-oss-20b",
+          "chamadas": 3
+        },
+        {
+          "modelo": "groq/openai/gpt-oss-120b",
+          "chamadas": 1
+        }
+      ]
+    },
+    {
+      "arquivo": "2026-11-13T13-38-09-696Z-gpt-4-is-openai-s-newest-and-most-advanced-model.json",
+      "chamadas": 4,
+      "respostas_de_reserva": 4,
+      "respostas_invalidas_refeitas": 0,
+      "queda_simulada": false,
+      "respostas_por_modelo": [
+        {
+          "modelo": "groq/openai/gpt-oss-120b",
+          "chamadas": 4
+        }
+      ]
+    }
+  ]
+}

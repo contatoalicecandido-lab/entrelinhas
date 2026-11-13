@@ -1,0 +1,2875 @@
+{
+ "sistema": "Entrelinhas",
+ "id_verificacao": "22c2ce5a-bc7e-4561-b99d-5d12fefe6c9e",
+ "texto_original": "A taxa Selic está atualmente em 13,75% ao ano.",
+ "verificado_em": "2026-11-13T13:24:46.317Z",
+ "total_afirmacoes": 1,
+ "sintese": {
+  "veredito": "CORROBORADA",
+  "resumo": "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
+  "total_afirmacoes": 1,
+  "contagem_vereditos": {
+   "CORROBORADA": 1
+  }
+ },
+ "afirmacoes": [
+  {
+   "id": "afirmacao_1",
+   "texto": "A taxa Selic está atualmente em 13,75% ao ano.",
+   "tipo_afirmacao": "regulamento",
+   "origem_tipo_afirmacao": "HEURISTICA",
+   "nuances": {
+    "idioma": "pt",
+    "variante": "pt-BR",
+    "confianca_idioma": 0.85,
+    "valores": [
+     {
+      "tipo": "PERCENTUAL",
+      "texto": "13,75%",
+      "valor": 13.75,
+      "unidade": "%",
+      "qualificador": null
+     }
+    ],
+    "datas": [],
+    "expressoes_temporais": [
+     {
+      "texto": "atualmente",
+      "tipo": "PRESENTE",
+      "rotulo": "present tense: must hold today"
+     }
+    ],
+    "condicoes": [],
+    "mudancas": [],
+    "tempo_coloquial": [],
+    "girias": {
+     "aliases": [],
+     "expressoes": []
+    },
+    "consulta_busca": "A taxa Selic está atualmente em 13,75% ao ano.",
+    "dominios_oficiais_sugeridos": [
+     "bcb.gov.br"
+    ],
+    "autoridades": [
+     {
+      "dominio": "bcb.gov.br",
+      "autoridade": "Banco Central do Brasil",
+      "termo": "Selic"
+     }
+    ],
+    "notas": [
+     "\"Selic\" points to a Brazilian authority: Banco Central do Brasil (bcb.gov.br) is searched as an official source.",
+     "\"atualmente\": present tense: must hold today."
+    ]
+   },
+   "evidencias": [
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "Banco Central mantém os juros em 13,75% ao ano - Blog da Rosana Hessel",
+      "url": "https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano",
+      "conteudo": "[![Logo](http://newblogs.correiobraziliense.com.br/blogdarosanahessel/wp-content/uploads/sites/5/2024/06/cropped-Selo_Nome-do-Blog-3.png)\n\n![Avatar](http://newblogs.correiobraziliense.com.br/blogdarosanahessel/wp-content/uploads/sites/5/2024/06/FOTO_V4.png)](https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel)\n\n[Início](https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/) Banco Central mantém os juros em 13,75% ao ano\n\n# Banco Central mantém os juros em 13,75% ao ano\n\n## Em decisão unnime, Copom mantém taxa de juros em 13,75% e interrompe ciclo de queda dos juros iniciado em março deste ano\n\n ![Fachada, Banco Central](https://newblogs.correiobraziliense.com.br/blog…",
+      "coletado_em": "2026-11-13T13:24:37.613Z",
+      "data_publicacao": "2026-11-04",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano/",
+      "relevancia": 0.83169055,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "ec3fd67e-9e98-419b-8540-ca36de9cb6fb",
+       "resultado_id": "9b7dd8-00",
+       "response_time_busca": 2.88,
+       "response_time_extracao": 0.02,
+       "consulta": "A taxa Selic está atualmente em 13,75% ao ano.",
+       "origem_principal": {
+        "id_operacao": "0cff6158-66ef-4b85-8eec-dedc253d11aa",
+        "request_id": "ec3fd67e-9e98-419b-8540-ca36de9cb6fb",
+        "modo_busca": "NOTICIAS_BR",
+        "resultado_id": "9b7dd8-00",
+        "parametros": {
+         "query": "A taxa Selic está atualmente em 13,75% ao ano.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news",
+         "include_domains": [
+          "g1.globo.com",
+          "oglobo.globo.com",
+          "valor.globo.com",
+          "folha.uol.com.br",
+          "uol.com.br",
+          "estadao.com.br",
+          "agenciabrasil.ebc.com.br",
+          "cnnbrasil.com.br",
+          "infomoney.com.br",
+          "exame.com",
+          "poder360.com.br",
+          "correiobraziliense.com.br",
+          "metropoles.com",
+          "veja.abril.com.br",
+          "terra.com.br",
+          "band.com.br",
+          "r7.com",
+          "bbc.com",
+          "jota.info",
+          "canaltech.com.br"
+         ]
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "0cff6158-66ef-4b85-8eec-dedc253d11aa",
+         "request_id": "ec3fd67e-9e98-419b-8540-ca36de9cb6fb",
+         "modo_busca": "NOTICIAS_BR",
+         "resultado_id": "9b7dd8-00",
+         "parametros": {
+          "query": "A taxa Selic está atualmente em 13,75% ao ano.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "include_domains": [
+           "g1.globo.com",
+           "oglobo.globo.com",
+           "valor.globo.com",
+           "folha.uol.com.br",
+           "uol.com.br",
+           "estadao.com.br",
+           "agenciabrasil.ebc.com.br",
+           "cnnbrasil.com.br",
+           "infomoney.com.br",
+           "exame.com",
+           "poder360.com.br",
+           "correiobraziliense.com.br",
+           "metropoles.com",
+           "veja.abril.com.br",
+           "terra.com.br",
+           "band.com.br",
+           "r7.com",
+           "bbc.com",
+           "jota.info",
+           "canaltech.com.br"
+          ]
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Wed, 04 Nov 2026 21:39:19 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 04 Nov 2026 21:39:19 GMT",
+         "value_normalized": "2026-11-04",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-11-04T21:39:19+00:00",
+         "value_normalized": "2026-11-04",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-11-05T01:57:26+00:00",
+         "value_normalized": "2026-11-05",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "04/11/2026 18:39",
+         "value_normalized": "2026-04-11",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "04/11/2026",
+         "value_normalized": "2026-11-04",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano/",
+        "capturado_em": "2026-11-13T13:24:38.164Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "dddd8158-6749-4274-954f-3900a6c368b8",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "6bdc035e-7fb4-48a5-b03c-27699677cacf",
+      "id_verificacao": "22c2ce5a-bc7e-4561-b99d-5d12fefe6c9e",
+      "url_original": "https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano",
+      "url_canonica": "https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "e480f15cb598e14e1499691a971a23f930ba65f4ecd9ecf918d8976f69e795e7",
+      "coletado_em": "2026-11-13T13:24:37.613Z",
+      "id_operacao_busca": "0cff6158-66ef-4b85-8eec-dedc253d11aa",
+      "id_operacao_extracao": "40be4a7b-242d-42a5-84e0-c77b087eb72b",
+      "consulta": "A taxa Selic está atualmente em 13,75% ao ano.",
+      "parametros_busca": {
+       "query": "A taxa Selic está atualmente em 13,75% ao ano.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news",
+       "include_domains": [
+        "g1.globo.com",
+        "oglobo.globo.com",
+        "valor.globo.com",
+        "folha.uol.com.br",
+        "uol.com.br",
+        "estadao.com.br",
+        "agenciabrasil.ebc.com.br",
+        "cnnbrasil.com.br",
+        "infomoney.com.br",
+        "exame.com",
+        "poder360.com.br",
+        "correiobraziliense.com.br",
+        "metropoles.com",
+        "veja.abril.com.br",
+        "terra.com.br",
+        "band.com.br",
+        "r7.com",
+        "bbc.com",
+        "jota.info",
+        "canaltech.com.br"
+       ]
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano",
+        "https://riconnect.rico.com.vc/analises/selic-a-1375-copom-interrompe-cortes",
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano",
+        "https://monitormercantil.com.br/copom-taxa-selic-cai-para-1375-ao-ano",
+        "https://investalk.bb.com.br/noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "ec3fd67e-9e98-419b-8540-ca36de9cb6fb",
+       "operacoes_busca": [
+        {
+         "id_operacao": "0cff6158-66ef-4b85-8eec-dedc253d11aa",
+         "request_id": "ec3fd67e-9e98-419b-8540-ca36de9cb6fb",
+         "modo_busca": "NOTICIAS_BR",
+         "resultado_id": "9b7dd8-00",
+         "parametros": {
+          "query": "A taxa Selic está atualmente em 13,75% ao ano.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "include_domains": [
+           "g1.globo.com",
+           "oglobo.globo.com",
+           "valor.globo.com",
+           "folha.uol.com.br",
+           "uol.com.br",
+           "estadao.com.br",
+           "agenciabrasil.ebc.com.br",
+           "cnnbrasil.com.br",
+           "infomoney.com.br",
+           "exame.com",
+           "poder360.com.br",
+           "correiobraziliense.com.br",
+           "metropoles.com",
+           "veja.abril.com.br",
+           "terra.com.br",
+           "band.com.br",
+           "r7.com",
+           "bbc.com",
+           "jota.info",
+           "canaltech.com.br"
+          ]
+         }
+        }
+       ],
+       "request_id_extracao": "dddd8158-6749-4274-954f-3900a6c368b8",
+       "resultado_id": "9b7dd8-00",
+       "relevancia": 0.83169055,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 04 Nov 2026 21:39:19 GMT",
+         "value_normalized": "2026-11-04",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-11-04T21:39:19+00:00",
+         "value_normalized": "2026-11-04",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-11-05T01:57:26+00:00",
+         "value_normalized": "2026-11-05",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "04/11/2026 18:39",
+         "value_normalized": "2026-04-11",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "04/11/2026",
+         "value_normalized": "2026-11-04",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano/",
+        "capturado_em": "2026-11-13T13:24:38.164Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Banco Central mantém os juros em 13,75% ao ano - Blog da Rosana Hessel",
+      "url": "https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 9907,
+      "caracteres_preparados": 6630,
+      "trecho_analisado": "TÍTULO DA FONTE: Banco Central mantém os juros em 13,75% ao ano - Blog da Rosana Hessel\nURL DA FONTE: https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n![Avatar](http://newblogs.correiobraziliense.com.br/blogdarosanahessel/wp-content/uploads/sites/5/2024/06/FOTO_V4.png)](https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel)\n\n[Início](https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/) Banco Central mantém os juros em 13,75% ao ano\n\n# Banco Central mantém os juros em 13,75% ao ano\n\n## Em decisão unnime, Copom mantém taxa de juros em 13,75% e interrompe ciclo de queda dos juros iniciado em março deste ano\n\n![Fachada, Banco Central](https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/wp-content/uploads/sites/5/2024/06/bc-breno.cbpressjpg.jpg)\n\n[Rosana Hessel](https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/author/rosanahessel/)\n\n* [![Compartilhamento no Whatsapp](https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/wp-content/themes/blogs/assets/svg/share-whatsapp.svg \"Whatsapp\")](https://wa.me/?text=Banco Central mantém o",
+      "citacao_chave": "Nesta quarta-feira (4/11), manter os juros básicos em 13,75% ao ano",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The article states that on 4/11 the Copom decided to keep the Selic rate at 13.75% per year."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The article states that on 4/11 the Copom decided to keep the Selic rate at 13.75% per year."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 9,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2026-11-04"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Selic em 13,75%: Copom interrompe cortes",
+      "url": "https://riconnect.rico.com.vc/analises/selic-a-1375-copom-interrompe-cortes",
+      "conteudo": "Onde investir em outubro de 2026? Confira as indicações dos especialistas da Rico\n\n[Baixar Relatório](https://riconnect.rico.com.vc/produto/relatorio-onde-investir/)\n\n[![Logo](https://riconnect.rico.com.vc/wp-content/themes/riconnect/images/cropped-riconnect_laranja.svg)](https://riconnect.rico.com.vc/ \"Riconnect - Conheça a Riconnect cursos feitos pelos melhores analistas do mercado financeiro\")\n\n* [Abra sua conta](https://cadastro.rico.com.vc/)\n\n[Abra sua conta](https://cadastro.rico.com.vc/)\n\n* [Carteiras Recomendadas](https://riconnect.rico.com.vc/recomendacoes/)\n\n\n  Conheça as vantagens de ser Rico\n\n  Taxa zero de corretagem para investir em ações, cartão de crédito sem anuidade e +\n\n  …",
+      "coletado_em": "2026-11-13T13:24:37.613Z",
+      "data_publicacao": "2026-11-05",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": null,
+      "relevancia": 0.83801806,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "ceda2f35-03a7-4031-972a-6fa1664cbbce",
+       "resultado_id": "6a376e-00",
+       "response_time_busca": 0.88,
+       "response_time_extracao": 0.02,
+       "consulta": "A taxa Selic está atualmente em 13,75% ao ano.",
+       "origem_principal": {
+        "id_operacao": "39ab8035-f007-425e-9bfa-e63f39c26f80",
+        "request_id": "ceda2f35-03a7-4031-972a-6fa1664cbbce",
+        "modo_busca": "GERAL",
+        "resultado_id": "6a376e-00",
+        "parametros": {
+         "query": "A taxa Selic está atualmente em 13,75% ao ano.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "39ab8035-f007-425e-9bfa-e63f39c26f80",
+         "request_id": "ceda2f35-03a7-4031-972a-6fa1664cbbce",
+         "modo_busca": "GERAL",
+         "resultado_id": "6a376e-00",
+         "parametros": {
+          "query": "A taxa Selic está atualmente em 13,75% ao ano.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Thu, 05 Nov 2026 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 05 Nov 2026 00:00:00 GMT",
+         "value_normalized": "2026-11-05",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Atualizado em",
+         "value_original": "05/11/2026",
+         "value_normalized": "2026-11-05",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "HTTP_403",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "dddd8158-6749-4274-954f-3900a6c368b8",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "5d54662d-4dff-413c-826e-90b9dafbcd54",
+      "id_verificacao": "22c2ce5a-bc7e-4561-b99d-5d12fefe6c9e",
+      "url_original": "https://riconnect.rico.com.vc/analises/selic-a-1375-copom-interrompe-cortes",
+      "url_canonica": "https://riconnect.rico.com.vc/analises/selic-a-1375-copom-interrompe-cortes",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "cc4c753875d97b9d841cb9ace4e07c3ed7f3410bc9895cc32fd89619b8807f7a",
+      "coletado_em": "2026-11-13T13:24:37.613Z",
+      "id_operacao_busca": "39ab8035-f007-425e-9bfa-e63f39c26f80",
+      "id_operacao_extracao": "40be4a7b-242d-42a5-84e0-c77b087eb72b",
+      "consulta": "A taxa Selic está atualmente em 13,75% ao ano.",
+      "parametros_busca": {
+       "query": "A taxa Selic está atualmente em 13,75% ao ano.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano",
+        "https://riconnect.rico.com.vc/analises/selic-a-1375-copom-interrompe-cortes",
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano",
+        "https://monitormercantil.com.br/copom-taxa-selic-cai-para-1375-ao-ano",
+        "https://investalk.bb.com.br/noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "ceda2f35-03a7-4031-972a-6fa1664cbbce",
+       "operacoes_busca": [
+        {
+         "id_operacao": "39ab8035-f007-425e-9bfa-e63f39c26f80",
+         "request_id": "ceda2f35-03a7-4031-972a-6fa1664cbbce",
+         "modo_busca": "GERAL",
+         "resultado_id": "6a376e-00",
+         "parametros": {
+          "query": "A taxa Selic está atualmente em 13,75% ao ano.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "dddd8158-6749-4274-954f-3900a6c368b8",
+       "resultado_id": "6a376e-00",
+       "relevancia": 0.83801806,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 05 Nov 2026 00:00:00 GMT",
+         "value_normalized": "2026-11-05",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Atualizado em",
+         "value_original": "05/11/2026",
+         "value_normalized": "2026-11-05",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "HTTP_403",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Selic em 13,75%: Copom interrompe cortes",
+      "url": "https://riconnect.rico.com.vc/analises/selic-a-1375-copom-interrompe-cortes",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 32461,
+      "caracteres_preparados": 7987,
+      "trecho_analisado": "TÍTULO DA FONTE: Selic em 13,75%: Copom interrompe cortes\nURL DA FONTE: https://riconnect.rico.com.vc/analises/selic-a-1375-copom-interrompe-cortes\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\nConheça as vantagens de ser Rico\n\nTaxa zero de corretagem para investir em ações, cartão de crédito sem anuidade e +\n\n[Saiba mais](https://www.rico.com.vc/)\n\nConheça as vantagens de ser Rico\n\nTaxa zero de corretagem para investir em ações, cartão de crédito sem anuidade e +\n\n[Saiba mais](https://www.rico.com.vc/)\n\nConheça as vantagens de ser Rico\n\nTaxa zero de corretagem para investir em ações, cartão de crédito sem anuidade e +\n\n[Saiba mais](https://www.rico.com.vc/)\n\nConheça as vantagens de ser Rico\n\nTaxa zero de corretagem para investir em ações, cartão de crédito sem anuidade e +\n\n[Saiba mais](https://www.rico.com.vc/)\n\nConheça as vantagens de ser Rico\n\nTaxa zero de corretagem para investir em ações, cartão de crédito sem anuidade e +\n\n[Saiba mais](https://www.rico.com.vc/)\n\n- [Bolsa vs.\n\ncorte da Selicnovo](https://riconnect.rico.com.vc/produto/comportamento-ibovespa-ciclos-queda-selic/)\n\n- [Guia de Dividendos](https://riconnect.rico.com.vc/produto/e-book-guia-completo-dividendos/)\n\nConheça as va",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The analysis notes that on 04/11/2026 the Copom kept the Selic at 13.75% per year."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The analysis notes that on 04/11/2026 the Copom kept the Selic at 13.75% per year."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 8,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2026-11-05"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "Banco Central surpreende e mantém juros básicos em 13,75% ao ano | Agência Brasil",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano",
+      "conteudo": "[Pular para o conteúdo principal](#main-content)\n\n[![logo ebc](https://agenciabrasil.ebc.com.br/sites/default/themes/agenciabrasil_v3/images/logo-ebc-dark.webp?tnhjsg)](https://ebc.com.br \"Ir para o portal EBC\")\n\n[![logo Agência Brasil](https://agenciabrasil.ebc.com.br/sites/default/themes/agenciabrasil_v3/images/agbrasil-color-logo.svg?tnhjsg)](/)\n\n\n\n[Economia](/economia)\n\n# Banco Central surpreende e mantém juros básicos em 13,75% ao ano\n\nCom El Niño e alta do dólar, Copom parou de cortar Taxa Selic\n\nWellton Máximo - Repórter da Agência Brasil\n\nPublicado em 04/11/2026 - 18:33\n\nBrasília\n\n![Brasília (DF), 11/07/2025 - Edifício do Banco Central. Foto: Antonio Cruz/Agência Brasil](/sites/defau…",
+      "coletado_em": "2026-11-13T13:24:37.613Z",
+      "data_publicacao": null,
+      "data_atualizacao": "2026-11-04",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano",
+      "relevancia": 0.8311431,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "ec3fd67e-9e98-419b-8540-ca36de9cb6fb",
+       "resultado_id": "f7f026-01",
+       "response_time_busca": 2.88,
+       "response_time_extracao": 0.02,
+       "consulta": "A taxa Selic está atualmente em 13,75% ao ano.",
+       "origem_principal": {
+        "id_operacao": "0cff6158-66ef-4b85-8eec-dedc253d11aa",
+        "request_id": "ec3fd67e-9e98-419b-8540-ca36de9cb6fb",
+        "modo_busca": "NOTICIAS_BR",
+        "resultado_id": "f7f026-01",
+        "parametros": {
+         "query": "A taxa Selic está atualmente em 13,75% ao ano.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news",
+         "include_domains": [
+          "g1.globo.com",
+          "oglobo.globo.com",
+          "valor.globo.com",
+          "folha.uol.com.br",
+          "uol.com.br",
+          "estadao.com.br",
+          "agenciabrasil.ebc.com.br",
+          "cnnbrasil.com.br",
+          "infomoney.com.br",
+          "exame.com",
+          "poder360.com.br",
+          "correiobraziliense.com.br",
+          "metropoles.com",
+          "veja.abril.com.br",
+          "terra.com.br",
+          "band.com.br",
+          "r7.com",
+          "bbc.com",
+          "jota.info",
+          "canaltech.com.br"
+         ]
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "0cff6158-66ef-4b85-8eec-dedc253d11aa",
+         "request_id": "ec3fd67e-9e98-419b-8540-ca36de9cb6fb",
+         "modo_busca": "NOTICIAS_BR",
+         "resultado_id": "f7f026-01",
+         "parametros": {
+          "query": "A taxa Selic está atualmente em 13,75% ao ano.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "include_domains": [
+           "g1.globo.com",
+           "oglobo.globo.com",
+           "valor.globo.com",
+           "folha.uol.com.br",
+           "uol.com.br",
+           "estadao.com.br",
+           "agenciabrasil.ebc.com.br",
+           "cnnbrasil.com.br",
+           "infomoney.com.br",
+           "exame.com",
+           "poder360.com.br",
+           "correiobraziliense.com.br",
+           "metropoles.com",
+           "veja.abril.com.br",
+           "terra.com.br",
+           "band.com.br",
+           "r7.com",
+           "bbc.com",
+           "jota.info",
+           "canaltech.com.br"
+          ]
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Thu, 05 Nov 2026 00:33:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 05 Nov 2026 00:33:00 GMT",
+         "value_normalized": "2026-11-05",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 13:13:45 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-11-04T21:33:00-03:00",
+         "value_normalized": "2026-11-05",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "04/11/2026",
+         "value_normalized": "2026-11-04",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "EXPLICIT_ATTRIBUTE_UPDATE_DATE",
+         "field": "visible_text_date",
+         "value_original": "04/11/2026",
+         "value_normalized": "2026-11-04",
+         "scope": "ATTRIBUTE",
+         "source": "VISIBLE_TEXT",
+         "match_basis": "claim_value_or_entity_in_local_context",
+         "context": "13,75% ao ano Com El Niño e alta do dólar, Copom parou de cortar Taxa Selic Wellton Máximo - Repórter da Agência Brasil Publicado em 04/11/2026 - 18:33 | 00:00 --> Brasília © Antonio Cruz/Agência Brasil Versão em áudio As tensões em torno do câmbio e do fenômeno climático El Niño fizeram o Banco Cen",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "04/11/2026",
+         "value_normalized": "2026-11-04",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano",
+        "capturado_em": "2026-11-13T13:24:37.128Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "dddd8158-6749-4274-954f-3900a6c368b8",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "9f1783c3-dae3-4edf-bf54-0b8a68ee1e05",
+      "id_verificacao": "22c2ce5a-bc7e-4561-b99d-5d12fefe6c9e",
+      "url_original": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano",
+      "url_canonica": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "de0039d7be9fd7bef986d79379a04cced2aab17934cc5387c620ab449038942c",
+      "coletado_em": "2026-11-13T13:24:37.613Z",
+      "id_operacao_busca": "0cff6158-66ef-4b85-8eec-dedc253d11aa",
+      "id_operacao_extracao": "40be4a7b-242d-42a5-84e0-c77b087eb72b",
+      "consulta": "A taxa Selic está atualmente em 13,75% ao ano.",
+      "parametros_busca": {
+       "query": "A taxa Selic está atualmente em 13,75% ao ano.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news",
+       "include_domains": [
+        "g1.globo.com",
+        "oglobo.globo.com",
+        "valor.globo.com",
+        "folha.uol.com.br",
+        "uol.com.br",
+        "estadao.com.br",
+        "agenciabrasil.ebc.com.br",
+        "cnnbrasil.com.br",
+        "infomoney.com.br",
+        "exame.com",
+        "poder360.com.br",
+        "correiobraziliense.com.br",
+        "metropoles.com",
+        "veja.abril.com.br",
+        "terra.com.br",
+        "band.com.br",
+        "r7.com",
+        "bbc.com",
+        "jota.info",
+        "canaltech.com.br"
+       ]
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano",
+        "https://riconnect.rico.com.vc/analises/selic-a-1375-copom-interrompe-cortes",
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano",
+        "https://monitormercantil.com.br/copom-taxa-selic-cai-para-1375-ao-ano",
+        "https://investalk.bb.com.br/noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "ec3fd67e-9e98-419b-8540-ca36de9cb6fb",
+       "operacoes_busca": [
+        {
+         "id_operacao": "0cff6158-66ef-4b85-8eec-dedc253d11aa",
+         "request_id": "ec3fd67e-9e98-419b-8540-ca36de9cb6fb",
+         "modo_busca": "NOTICIAS_BR",
+         "resultado_id": "f7f026-01",
+         "parametros": {
+          "query": "A taxa Selic está atualmente em 13,75% ao ano.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "include_domains": [
+           "g1.globo.com",
+           "oglobo.globo.com",
+           "valor.globo.com",
+           "folha.uol.com.br",
+           "uol.com.br",
+           "estadao.com.br",
+           "agenciabrasil.ebc.com.br",
+           "cnnbrasil.com.br",
+           "infomoney.com.br",
+           "exame.com",
+           "poder360.com.br",
+           "correiobraziliense.com.br",
+           "metropoles.com",
+           "veja.abril.com.br",
+           "terra.com.br",
+           "band.com.br",
+           "r7.com",
+           "bbc.com",
+           "jota.info",
+           "canaltech.com.br"
+          ]
+         }
+        }
+       ],
+       "request_id_extracao": "dddd8158-6749-4274-954f-3900a6c368b8",
+       "resultado_id": "f7f026-01",
+       "relevancia": 0.8311431,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 05 Nov 2026 00:33:00 GMT",
+         "value_normalized": "2026-11-05",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 13:13:45 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-11-04T21:33:00-03:00",
+         "value_normalized": "2026-11-05",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "04/11/2026",
+         "value_normalized": "2026-11-04",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "EXPLICIT_ATTRIBUTE_UPDATE_DATE",
+         "field": "visible_text_date",
+         "value_original": "04/11/2026",
+         "value_normalized": "2026-11-04",
+         "scope": "ATTRIBUTE",
+         "source": "VISIBLE_TEXT",
+         "match_basis": "claim_value_or_entity_in_local_context",
+         "context": "13,75% ao ano Com El Niño e alta do dólar, Copom parou de cortar Taxa Selic Wellton Máximo - Repórter da Agência Brasil Publicado em 04/11/2026 - 18:33 | 00:00 --> Brasília © Antonio Cruz/Agência Brasil Versão em áudio As tensões em torno do câmbio e do fenômeno climático El Niño fizeram o Banco Cen",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "04/11/2026",
+         "value_normalized": "2026-11-04",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano",
+        "capturado_em": "2026-11-13T13:24:37.128Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Banco Central surpreende e mantém juros básicos em 13,75% ao ano | Agência Brasil",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 12454,
+      "caracteres_preparados": 4898,
+      "trecho_analisado": "TÍTULO DA FONTE: Banco Central surpreende e mantém juros básicos em 13,75% ao ano | Agência Brasil\nURL DA FONTE: https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n[Economia](/economia)\n\n# Banco Central surpreende e mantém juros básicos em 13,75% ao ano\n\nCom El Niño e alta do dólar, Copom parou de cortar Taxa Selic\n\nWellton Máximo - Repórter da Agência Brasil\n\nAs tensões em torno do cmbio e do fenômeno climático El Niño fizeram o Banco Central (BC) botar o pé no freio.\n\n**Por unanimidade, o Comitê de Política Monetária (Copom) manteve a Taxa Selic, juros básicos da economia, em 13,75% ao ano.**![](https://agenciabrasil.ebc.com.br/ebc.png?id=1707747&o=node)![](https://agenciabrasil.ebc.com.br/ebc.gif?id=1707747&o=node)\n\n**Em comunicado, o Copom informou que as incertezas se ampliaram nas últimas semanas e que as expectativas de inflação continuam acima da meta.\n\nO órgão não deu pistas sobre a trajetória dos juros nas próximas reuniões.**\n\n> \"O contexto atual, caracterizado por taxa Selic substancialmente contracionista, aumento significativo das incertezas em torno do cenário base, expecta",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The news report says the Copom unanimously kept the Selic rate at 13.75% per year."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The news report says the Copom unanimously kept the Selic rate at 13.75% per year."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 9,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2026-11-04"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Copom: Taxa Selic cai para 13,75% ao ano | Monitor Mercantil",
+      "url": "https://monitormercantil.com.br/copom-taxa-selic-cai-para-1375-ao-ano",
+      "conteudo": "![](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)\n![](https://monitormercantil.com.br/wp-content/uploads/2020/10/logotipo-topo.png)\n![](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)\n![](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)\n![](https://monitormercantil.com.br/wp-content/uploads/2020/10/logotipo-topo.png)\n![](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)\n![](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)\n![](https://monitormercantil.com.br/wp-content/uploads/2020/10/logotipo-topo.png)\n![Retrospectiva](data:image/gif;base64,R0lGODlhAQABAAA…",
+      "coletado_em": "2026-11-13T13:24:37.613Z",
+      "data_publicacao": "2026-09-16",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://monitormercantil.com.br/copom-taxa-selic-cai-para-1375-ao-ano/",
+      "relevancia": 0.82261705,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "ceda2f35-03a7-4031-972a-6fa1664cbbce",
+       "resultado_id": "82f0e6-01",
+       "response_time_busca": 0.88,
+       "response_time_extracao": 0.02,
+       "consulta": "A taxa Selic está atualmente em 13,75% ao ano.",
+       "origem_principal": {
+        "id_operacao": "39ab8035-f007-425e-9bfa-e63f39c26f80",
+        "request_id": "ceda2f35-03a7-4031-972a-6fa1664cbbce",
+        "modo_busca": "GERAL",
+        "resultado_id": "82f0e6-01",
+        "parametros": {
+         "query": "A taxa Selic está atualmente em 13,75% ao ano.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "39ab8035-f007-425e-9bfa-e63f39c26f80",
+         "request_id": "ceda2f35-03a7-4031-972a-6fa1664cbbce",
+         "modo_busca": "GERAL",
+         "resultado_id": "82f0e6-01",
+         "parametros": {
+          "query": "A taxa Selic está atualmente em 13,75% ao ano.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Wed, 16 Sep 2026 22:42:56 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 16 Sep 2026 22:42:56 GMT",
+         "value_normalized": "2026-09-16",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://monitormercantil.com.br/copom-taxa-selic-cai-para-1375-ao-ano/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-09-16T22:42:56+00:00",
+         "value_normalized": "2026-09-16",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-09-18T11:52:00+00:00",
+         "value_normalized": "2026-09-18",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datepublished",
+         "value_original": "2026-09-16T19:42:56-03:00",
+         "value_normalized": "2026-09-16",
+         "scope": "DOCUMENT",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "datemodified",
+         "value_original": "2026-09-18T08:52:00-03:00",
+         "value_normalized": "2026-09-18",
+         "scope": "DOCUMENT",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-09-16T22:42:56+00:00",
+         "value_normalized": "2026-09-16",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-09-18T11:52:00+00:00",
+         "value_normalized": "2026-09-18",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-09-16T19:42:56-03:00",
+         "value_normalized": "2026-09-16",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-13T09:00:00-03:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T23:53:00-03:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T23:20:39-03:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T22:00:33-03:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T21:43:50-03:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T21:39:16-03:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T21:35:44-03:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T21:33:33-03:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T21:29:45-03:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T21:27:32-03:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://monitormercantil.com.br/copom-taxa-selic-cai-para-1375-ao-ano/",
+        "capturado_em": "2026-11-13T13:24:37.612Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "dddd8158-6749-4274-954f-3900a6c368b8",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "5d6cef98-121d-45d9-b581-ea434abfbe56",
+      "id_verificacao": "22c2ce5a-bc7e-4561-b99d-5d12fefe6c9e",
+      "url_original": "https://monitormercantil.com.br/copom-taxa-selic-cai-para-1375-ao-ano",
+      "url_canonica": "https://monitormercantil.com.br/copom-taxa-selic-cai-para-1375-ao-ano",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "b9a7d935aa127b6d1339b585ad5c0b0b36f0a04d65387a881ff97fbe1cda189a",
+      "coletado_em": "2026-11-13T13:24:37.613Z",
+      "id_operacao_busca": "39ab8035-f007-425e-9bfa-e63f39c26f80",
+      "id_operacao_extracao": "40be4a7b-242d-42a5-84e0-c77b087eb72b",
+      "consulta": "A taxa Selic está atualmente em 13,75% ao ano.",
+      "parametros_busca": {
+       "query": "A taxa Selic está atualmente em 13,75% ao ano.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano",
+        "https://riconnect.rico.com.vc/analises/selic-a-1375-copom-interrompe-cortes",
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano",
+        "https://monitormercantil.com.br/copom-taxa-selic-cai-para-1375-ao-ano",
+        "https://investalk.bb.com.br/noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "ceda2f35-03a7-4031-972a-6fa1664cbbce",
+       "operacoes_busca": [
+        {
+         "id_operacao": "39ab8035-f007-425e-9bfa-e63f39c26f80",
+         "request_id": "ceda2f35-03a7-4031-972a-6fa1664cbbce",
+         "modo_busca": "GERAL",
+         "resultado_id": "82f0e6-01",
+         "parametros": {
+          "query": "A taxa Selic está atualmente em 13,75% ao ano.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "dddd8158-6749-4274-954f-3900a6c368b8",
+       "resultado_id": "82f0e6-01",
+       "relevancia": 0.82261705,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 16 Sep 2026 22:42:56 GMT",
+         "value_normalized": "2026-09-16",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://monitormercantil.com.br/copom-taxa-selic-cai-para-1375-ao-ano/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-09-16T22:42:56+00:00",
+         "value_normalized": "2026-09-16",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-09-18T11:52:00+00:00",
+         "value_normalized": "2026-09-18",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datepublished",
+         "value_original": "2026-09-16T19:42:56-03:00",
+         "value_normalized": "2026-09-16",
+         "scope": "DOCUMENT",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "datemodified",
+         "value_original": "2026-09-18T08:52:00-03:00",
+         "value_normalized": "2026-09-18",
+         "scope": "DOCUMENT",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-09-16T22:42:56+00:00",
+         "value_normalized": "2026-09-16",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-09-18T11:52:00+00:00",
+         "value_normalized": "2026-09-18",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-09-16T19:42:56-03:00",
+         "value_normalized": "2026-09-16",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-13T09:00:00-03:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T23:53:00-03:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T23:20:39-03:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T22:00:33-03:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T21:43:50-03:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T21:39:16-03:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T21:35:44-03:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T21:33:33-03:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T21:29:45-03:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T21:27:32-03:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://monitormercantil.com.br/copom-taxa-selic-cai-para-1375-ao-ano/",
+        "capturado_em": "2026-11-13T13:24:37.612Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Copom: Taxa Selic cai para 13,75% ao ano | Monitor Mercantil",
+      "url": "https://monitormercantil.com.br/copom-taxa-selic-cai-para-1375-ao-ano",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 21188,
+      "caracteres_preparados": 7808,
+      "trecho_analisado": "TÍTULO DA FONTE: Copom: Taxa Selic cai para 13,75% ao ano | Monitor Mercantil\nURL DA FONTE: https://monitormercantil.com.br/copom-taxa-selic-cai-para-1375-ao-ano\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n![Retrospectiva](https://monitormercantil.com.br/wp-content/uploads/2026/07/banner-sinaval-borda.jpg \"Retrospectiva\")\n\n# Copom: Taxa Selic cai para 13,75% ao ano\n\nAplicações pós-fixadas, como Tesouro Selic, CDBs atrelados ao CDI e fundos DI, passam a oferecer retornos menores\n\n![Sede do Banco Central do Brasil - BCB](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== \"Sede do BC\")\n\nO Banco Central (BC) cortou os juros pela quinta vez seguida, nesta quarta-feira.\n\nPor unanimidade, o Comitê de Política Monetária (Copom) reduziu a Taxa Selic, juros básicos da economia, em 0,25 ponto percentual, para 13,75% ao ano.\n\nA decisão era esperada pelo mercado financeiro.\n\nDe junho de 2025 a março desde ano, a Selic ficou em 15% ao ano, o maior nível em quase 20 anos.\n\nO Copom voltou a cortar os juros em abril, num cenário de queda da inflação.\n\n![cnseg](https://monitormercantil.com.br/wp-content/uploads/2023/02/cnseg-ads-banner-fullbanner-1000x100-v2.png)\n\nDe acordo com Rodri",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The article reports that the Copom reduced the Selic rate to 13.75% per year, indicating the current level."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The article reports that the Copom reduced the Selic rate to 13.75% per year, indicating the current level."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 58,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2026-09-16"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "InvesTalk | Taxa Selic cai a 13,75% ao ano. É hora de mexer nos investimentos?",
+      "url": "https://investalk.bb.com.br/noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos",
+      "conteudo": "## Aviso de cookies\n\nUtilizamos cookies para oferecer uma melhor experiência e personalizar os conteúdos de acordo com a nossa [Política de Privacidade.](https://www.bb.com.br/site/politicas-de-uso-e-privacidade/)\n\n[Falar com o assistente virtual do BB no WhatsApp](https://wa.me/556140040001?text=Oi%21+Quero+falar+com+o+Assistente+Virtual+do+BB+especialista+em+investimentos+%F0%9F%A4%96%F0%9F%92%B0 \"Falar com o assistente virtual do BB no WhatsApp\")\n\n* [ONDE INVESTIR](/carteiras-sugeridas)\n* [APRENDA A INVESTIR](/trilhas-conhecimento)\n* [MERCADO AGORA](/mercado-agora)\n* [ARTIGOS E GUIAS](/artigos-e-guias)\n* [AÇÕES](/acoes)\n* [CRÉDITO PRIVADO](/credito-privado)\n* [FUNDOS IMOBILIÁRIOS](/fiis)\n…",
+      "coletado_em": "2026-11-13T13:24:37.613Z",
+      "data_publicacao": "2026-09-17",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://investalk.bb.com.br/noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos",
+      "relevancia": 0.8095773,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "ceda2f35-03a7-4031-972a-6fa1664cbbce",
+       "resultado_id": "00144a-02",
+       "response_time_busca": 0.88,
+       "response_time_extracao": 0.02,
+       "consulta": "A taxa Selic está atualmente em 13,75% ao ano.",
+       "origem_principal": {
+        "id_operacao": "39ab8035-f007-425e-9bfa-e63f39c26f80",
+        "request_id": "ceda2f35-03a7-4031-972a-6fa1664cbbce",
+        "modo_busca": "GERAL",
+        "resultado_id": "00144a-02",
+        "parametros": {
+         "query": "A taxa Selic está atualmente em 13,75% ao ano.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "39ab8035-f007-425e-9bfa-e63f39c26f80",
+         "request_id": "ceda2f35-03a7-4031-972a-6fa1664cbbce",
+         "modo_busca": "GERAL",
+         "resultado_id": "00144a-02",
+         "parametros": {
+          "query": "A taxa Selic está atualmente em 13,75% ao ano.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Thu, 17 Sep 2026 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 17 Sep 2026 00:00:00 GMT",
+         "value_normalized": "2026-09-17",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://investalk.bb.com.br/noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-09-17T14:57:50.033Z",
+         "value_normalized": "2026-09-17",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-09-17T15:03:54.837Z",
+         "value_normalized": "2026-09-17",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Atualizado em",
+         "value_original": "17/09/2026",
+         "value_normalized": "2026-09-17",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Atualizado em",
+         "value_original": "17/09/2026",
+         "value_normalized": "2026-09-17",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://investalk.bb.com.br/noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos",
+        "capturado_em": "2026-11-13T13:24:38.000Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "dddd8158-6749-4274-954f-3900a6c368b8",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "d240947d-c01b-4787-ab17-e0e87af62769",
+      "id_verificacao": "22c2ce5a-bc7e-4561-b99d-5d12fefe6c9e",
+      "url_original": "https://investalk.bb.com.br/noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos",
+      "url_canonica": "https://investalk.bb.com.br/noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "912605498821339a1e84962d7d8d9f8d54468ca267799eaa9fd9ef812bb77026",
+      "coletado_em": "2026-11-13T13:24:37.613Z",
+      "id_operacao_busca": "39ab8035-f007-425e-9bfa-e63f39c26f80",
+      "id_operacao_extracao": "40be4a7b-242d-42a5-84e0-c77b087eb72b",
+      "consulta": "A taxa Selic está atualmente em 13,75% ao ano.",
+      "parametros_busca": {
+       "query": "A taxa Selic está atualmente em 13,75% ao ano.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano",
+        "https://riconnect.rico.com.vc/analises/selic-a-1375-copom-interrompe-cortes",
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano",
+        "https://monitormercantil.com.br/copom-taxa-selic-cai-para-1375-ao-ano",
+        "https://investalk.bb.com.br/noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "ceda2f35-03a7-4031-972a-6fa1664cbbce",
+       "operacoes_busca": [
+        {
+         "id_operacao": "39ab8035-f007-425e-9bfa-e63f39c26f80",
+         "request_id": "ceda2f35-03a7-4031-972a-6fa1664cbbce",
+         "modo_busca": "GERAL",
+         "resultado_id": "00144a-02",
+         "parametros": {
+          "query": "A taxa Selic está atualmente em 13,75% ao ano.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "dddd8158-6749-4274-954f-3900a6c368b8",
+       "resultado_id": "00144a-02",
+       "relevancia": 0.8095773,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 17 Sep 2026 00:00:00 GMT",
+         "value_normalized": "2026-09-17",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://investalk.bb.com.br/noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-09-17T14:57:50.033Z",
+         "value_normalized": "2026-09-17",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-09-17T15:03:54.837Z",
+         "value_normalized": "2026-09-17",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Atualizado em",
+         "value_original": "17/09/2026",
+         "value_normalized": "2026-09-17",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Atualizado em",
+         "value_original": "17/09/2026",
+         "value_normalized": "2026-09-17",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://investalk.bb.com.br/noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos",
+        "capturado_em": "2026-11-13T13:24:38.000Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "InvesTalk | Taxa Selic cai a 13,75% ao ano. É hora de mexer nos investimentos?",
+      "url": "https://investalk.bb.com.br/noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 9122,
+      "caracteres_preparados": 4653,
+      "trecho_analisado": "TÍTULO DA FONTE: InvesTalk | Taxa Selic cai a 13,75% ao ano. É hora de mexer nos investimentos?\nURL DA FONTE: https://investalk.bb.com.br/noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n* [SOBRE NÓS](/sobre-nos)\n\nInvesTalk | Taxa Selic cai a 13,75% ao ano.\n\nÉ hora de mexer nos investimentos?\n\n---\n\n# Taxa Selic cai a 13,75% ao ano.\n\nÉ hora de mexer nos investimentos?\n\n17/09/2026 às 12:03\n\n[![e-mail](/icons/Email-logo.svg)](/cdn-cgi/l/email-protection#6d521e180f07080e1950390c150c4d3e0801040e4d0e0c044d0c4d5c5e415a58484d0c024d0c0302434daee44d05021f0c4d09084d000815081f4d03021e4d04031b081e190400080319021e524b0c001d560f02091450031801014d404d0519191d1e57424204031b081e190c0106430f0f430e0200430f1f4242030219040e040c1e42080e02030200040c42190c150c401e0801040e400e0c04400c405c5e5a58400c02400c030240084005021f0c40090840000815081f4003021e4004031b081e190400080319021e \"Compartilhar no e-mail\")[![Facebook](/icons/Facebook-logo.svg)](https://www.facebook.com/sharer/sharer.php?u=https://investalk.bb.com.br//noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos \"Compartilhar no Facebook\")[![LinkedIn](/icons/Lin",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The piece dated 17/09/2026 states that the Selic rate fell to 13.75% per year."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The piece dated 17/09/2026 states that the Selic rate fell to 13.75% per year."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 57,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2026-09-17"
+     }
+    }
+   ],
+   "erro_busca": null,
+   "risco_desatualizacao": {
+    "nivel": "HIGH",
+    "sensivel_ao_tempo": true,
+    "motivos": [
+     "Laws and official rules change, usually yearly (checked against a 365-day window)",
+     "Claims to be true right now (\"currently\", \"still\", \"latest\"…)"
+    ]
+   },
+   "dominios_oficiais_usados": [
+    "bcb.gov.br"
+   ],
+   "dominios_oficiais_automaticos": [
+    "bcb.gov.br"
+   ],
+   "agregacao": {
+    "status": "CLASSIFICADO",
+    "conclusao_factual": {
+     "status": "APOIA",
+     "resumo": "As evidências utilizáveis apoiam a afirmação. Isso, por si só, não demonstra que ela continua válida agora."
+    },
+    "veredito": "CORROBORADA",
+    "resumo": "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
+    "afirmacao": "A taxa Selic está atualmente em 13,75% ao ano.",
+    "score_qualidade_evidencia": {
+     "valor": 36,
+     "escala": "0-100",
+     "natureza": "HEURISTICA",
+     "interpretacao": "Qualidade estrutural das evidências, não probabilidade de verdade.",
+     "componentes": {
+      "autoridade": 0,
+      "atualidade": 6,
+      "diversidade_fontes": 20,
+      "concordancia": 10
+     }
+    },
+    "freshness": {
+     "score": 97,
+     "status": "FRESH",
+     "confidence": "LIMITED",
+     "algorithm_id": "CLAIM_FRESHNESS_SCORE",
+     "algorithm_version": "1.1.0",
+     "policy_id": "regulamento:365d:v1",
+     "as_of": "2026-11-13T13:24:31.637Z",
+     "evidence_summary": {
+      "received": 5,
+      "eligible": 1,
+      "independent_domains": 1,
+      "fresh": 1,
+      "stale": 0,
+      "excluded": 4
+     },
+     "drivers": [
+      {
+       "code": "ATTRIBUTE_DATED_FRESH_EVIDENCE",
+       "evidence_id": null,
+       "date": "2026-11-04",
+       "age_days": 9,
+       "posture": "SUPPORTS",
+       "domain": "agenciabrasil.ebc.com.br",
+       "dependency_group": "source_cluster_003"
+      },
+      {
+       "code": "EVIDENCE_EXCLUDED_FROM_TEMPORAL_SCORE",
+       "count": 4
+      }
+     ],
+     "limitations": [
+      "Índice temporal determinístico; não é probabilidade de verdade.",
+      "Datas de página sem vínculo explícito ao atributo foram excluídas."
+     ]
+    },
+    "concordancia": {
+     "algorithm_id": "SOURCE_AGREEMENT_INDEX",
+     "algorithm_version": "1.1.0",
+     "weights": {
+      "OFICIAL": 3,
+      "ACADEMICO": 3,
+      "NOTICIA": 2,
+      "REFERENCIA": 1.5,
+      "OUTRO": 1,
+      "BLOG_FORUM": 0.25
+     },
+     "score": 100,
+     "coverage": "STRONG",
+     "independent_sources": 5,
+     "source_types": [
+      "NOTICIA",
+      "OUTRO"
+     ],
+     "supporting": 5,
+     "authoritative_supporting": 0,
+     "contradicting": 0,
+     "split": 0,
+     "by_type": {
+      "NOTICIA": {
+       "supports": 2,
+       "contradicts": 0,
+       "split": 0
+      },
+      "OUTRO": {
+       "supports": 3,
+       "contradicts": 0,
+       "split": 0
+      }
+     },
+     "limitations": [
+      "Agreement between sources is not a probability of truth: sources can share the same mistake.",
+      "Copies and pages from the same site count once; independence is approximated by domain and text similarity."
+     ]
+    },
+    "recencia_pagina": {
+     "algorithm_id": "PAGE_DATE_RECENCY_INDEX",
+     "algorithm_version": "1.0.0",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "as_of": "2026-11-13T13:24:31.637Z",
+     "score": 90,
+     "status": "FRESH",
+     "policy_id": "regulamento:365d:page:v1",
+     "newest_date": "2026-11-05",
+     "sources": [
+      {
+       "date": "2026-11-04",
+       "age_days": 9,
+       "status": "FRESH",
+       "posture": "SUPPORTS",
+       "domain": "newblogs.correiobraziliense.com.br",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-11-05",
+       "age_days": 8,
+       "status": "FRESH",
+       "posture": "SUPPORTS",
+       "domain": "riconnect.rico.com.vc",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-11-04",
+       "age_days": 9,
+       "status": "FRESH",
+       "posture": "SUPPORTS",
+       "domain": "agenciabrasil.ebc.com.br",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-09-16",
+       "age_days": 58,
+       "status": "FRESH",
+       "posture": "SUPPORTS",
+       "domain": "monitormercantil.com.br",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-09-17",
+       "age_days": 57,
+       "status": "FRESH",
+       "posture": "SUPPORTS",
+       "domain": "investalk.bb.com.br",
+       "evidence_id": null
+      }
+     ],
+     "limitations": [
+      "Baseado na data da página, não na data em que o dado específico mudou: confiança baixa.",
+      "Não substitui o índice de atualidade principal e não é probabilidade de verdade."
+     ]
+    },
+    "atualidade_afirmacao": {
+     "algorithm_id": "CLAIM_CURRENCY_SCORE",
+     "algorithm_version": "1.0.0",
+     "formula": "evidence_recency × support_share",
+     "window_days": 365,
+     "score": 97,
+     "status": "CURRENT",
+     "basis": "FACT_DATE",
+     "confidence": "MEDIUM",
+     "evidence_recency": 97,
+     "support_share": 1,
+     "newest_date": "2026-11-04",
+     "newest_age_days": 9,
+     "within_window": true
+    },
+    "versao_regras": "1.2.0",
+    "metodo": "AGREGACAO_DETERMINISTICA",
+    "fontes_independentes": 5,
+    "grupos_distintos_de_evidencia": 5,
+    "dependencia_detectada": 0,
+    "dependencia_nao_verificada": true,
+    "nota_independencia": "Cópias exatas, quase duplicadas, URLs canônicas iguais e páginas do mesmo domínio são agrupadas; domínios sem sinal de cópia não têm independência editorial comprovada.",
+    "total_evidencias_utilizaveis": 5,
+    "fontes": [
+     {
+      "dominio": "newblogs.correiobraziliense.com.br",
+      "dominios": [
+       "newblogs.correiobraziliense.com.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_001",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Banco Central mantém os juros em 13,75% ao ano - Blog da Rosana Hessel",
+        "url": "https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano",
+        "categoria_fonte": "NOTICIA",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:24:37.613Z",
+        "data_publicacao": "2026-11-04",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Wed, 04 Nov 2026 21:39:19 GMT",
+          "value_normalized": "2026-11-04",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2026-11-04T21:39:19+00:00",
+          "value_normalized": "2026-11-04",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "ARTICLE_MODIFIED_TIME",
+          "field": "article:modified_time",
+          "value_original": "2026-11-05T01:57:26+00:00",
+          "value_normalized": "2026-11-05",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "04/11/2026 18:39",
+          "value_normalized": "2026-04-11",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Publicado em",
+          "value_original": "04/11/2026",
+          "value_normalized": "2026-11-04",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_001",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "riconnect.rico.com.vc",
+      "dominios": [
+       "riconnect.rico.com.vc"
+      ],
+      "grupo_dependencia_id": "source_cluster_002",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://riconnect.rico.com.vc/analises/selic-a-1375-copom-interrompe-cortes"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Selic em 13,75%: Copom interrompe cortes",
+        "url": "https://riconnect.rico.com.vc/analises/selic-a-1375-copom-interrompe-cortes",
+        "categoria_fonte": "OUTRO",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:24:37.613Z",
+        "data_publicacao": "2026-11-05",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Thu, 05 Nov 2026 00:00:00 GMT",
+          "value_normalized": "2026-11-05",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Atualizado em",
+          "value_original": "05/11/2026",
+          "value_normalized": "2026-11-05",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_002",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "agenciabrasil.ebc.com.br",
+      "dominios": [
+       "agenciabrasil.ebc.com.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_003",
+      "oficial": false,
+      "atual": true,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Banco Central surpreende e mantém juros básicos em 13,75% ao ano | Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano",
+        "categoria_fonte": "NOTICIA",
+        "postura": "SUPPORTS",
+        "atual": true,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:24:37.613Z",
+        "data_publicacao": null,
+        "data_atualizacao": "2026-11-04",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Thu, 05 Nov 2026 00:33:00 GMT",
+          "value_normalized": "2026-11-05",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Fri, 13 Nov 2026 13:13:45 GMT",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2026-11-04T21:33:00-03:00",
+          "value_normalized": "2026-11-05",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Publicado em",
+          "value_original": "04/11/2026",
+          "value_normalized": "2026-11-04",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         },
+         {
+          "signal_type": "EXPLICIT_ATTRIBUTE_UPDATE_DATE",
+          "field": "visible_text_date",
+          "value_original": "04/11/2026",
+          "value_normalized": "2026-11-04",
+          "scope": "ATTRIBUTE",
+          "source": "VISIBLE_TEXT",
+          "match_basis": "claim_value_or_entity_in_local_context",
+          "context": "13,75% ao ano Com El Niño e alta do dólar, Copom parou de cortar Taxa Selic Wellton Máximo - Repórter da Agência Brasil Publicado em 04/11/2026 - 18:33 | 00:00 --> Brasília © Antonio Cruz/Agência Brasil Versão em áudio As tensões em torno do câmbio e do fenômeno climático El Niño fizeram o Banco Cen",
+          "parse_status": "PARSED"
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Publicado em",
+          "value_original": "04/11/2026",
+          "value_normalized": "2026-11-04",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_003",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "monitormercantil.com.br",
+      "dominios": [
+       "monitormercantil.com.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_004",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://monitormercantil.com.br/copom-taxa-selic-cai-para-1375-ao-ano"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Copom: Taxa Selic cai para 13,75% ao ano | Monitor Mercantil",
+        "url": "https://monitormercantil.com.br/copom-taxa-selic-cai-para-1375-ao-ano",
+        "categoria_fonte": "OUTRO",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:24:37.613Z",
+        "data_publicacao": "2026-09-16",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Wed, 16 Sep 2026 22:42:56 GMT",
+          "value_normalized": "2026-09-16",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://monitormercantil.com.br/copom-taxa-selic-cai-para-1375-ao-ano/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2026-09-16T22:42:56+00:00",
+          "value_normalized": "2026-09-16",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "ARTICLE_MODIFIED_TIME",
+          "field": "article:modified_time",
+          "value_original": "2026-09-18T11:52:00+00:00",
+          "value_normalized": "2026-09-18",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datepublished",
+          "value_original": "2026-09-16T19:42:56-03:00",
+          "value_normalized": "2026-09-16",
+          "scope": "DOCUMENT",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "datemodified",
+          "value_original": "2026-09-18T08:52:00-03:00",
+          "value_normalized": "2026-09-18",
+          "scope": "DOCUMENT",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-09-16T22:42:56+00:00",
+          "value_normalized": "2026-09-16",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "newsarticle"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-09-18T11:52:00+00:00",
+          "value_normalized": "2026-09-18",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "newsarticle"
+          ]
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-09-16T19:42:56-03:00",
+          "value_normalized": "2026-09-16",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-11-13T09:00:00-03:00",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-11-12T23:53:00-03:00",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-11-12T23:20:39-03:00",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-11-12T22:00:33-03:00",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-11-12T21:43:50-03:00",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-11-12T21:39:16-03:00",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-11-12T21:35:44-03:00",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-11-12T21:33:33-03:00",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-11-12T21:29:45-03:00",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-11-12T21:27:32-03:00",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_004",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "investalk.bb.com.br",
+      "dominios": [
+       "investalk.bb.com.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_005",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://investalk.bb.com.br/noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos"
+      ],
+      "evidencias": [
+       {
+        "titulo": "InvesTalk | Taxa Selic cai a 13,75% ao ano. É hora de mexer nos investimentos?",
+        "url": "https://investalk.bb.com.br/noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos",
+        "categoria_fonte": "OUTRO",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:24:37.613Z",
+        "data_publicacao": "2026-09-17",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Thu, 17 Sep 2026 00:00:00 GMT",
+          "value_normalized": "2026-09-17",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://investalk.bb.com.br/noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-09-17T14:57:50.033Z",
+          "value_normalized": "2026-09-17",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "newsarticle"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-09-17T15:03:54.837Z",
+          "value_normalized": "2026-09-17",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "newsarticle"
+          ]
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Atualizado em",
+          "value_original": "17/09/2026",
+          "value_normalized": "2026-09-17",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Atualizado em",
+          "value_original": "17/09/2026",
+          "value_normalized": "2026-09-17",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_005",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     }
+    ],
+    "limitacoes": [
+     "Uma data da página ou do resultado de busca não comprova quando o atributo da afirmação foi publicado ou atualizado.",
+     "Nenhuma fonte pertence ao cadastro de domínios oficiais informado.",
+     "Domínios sem sinal detectado de duplicação não têm independência editorial comprovada; republicação com edição extensa ainda pode passar despercebida."
+    ],
+    "avaliado_em": "2026-11-13T13:24:45.558Z"
+   }
+  }
+ ],
+ "afirmacoes_omitidas": [],
+ "resposta_corrigida": {
+  "texto": "A taxa Selic está atualmente em 13,75% ao ano [1][2][3].",
+  "mudancas": [
+   {
+    "claim_id": "afirmacao_1",
+    "what": "kept"
+   }
+  ],
+  "fontes_citadas": [
+   1,
+   2,
+   3
+  ],
+  "tentativas": 1,
+  "citacoes_anexadas": false,
+  "fontes": [
+   {
+    "n": 1,
+    "url": "https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano",
+    "titulo": "Banco Central mantém os juros em 13,75% ao ano - Blog da Rosana Hessel",
+    "tipo": "NOTICIA",
+    "postura": "SUPPORTS",
+    "data": "2026-11-04"
+   },
+   {
+    "n": 2,
+    "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano",
+    "titulo": "Banco Central surpreende e mantém juros básicos em 13,75% ao ano | Agência Brasil",
+    "tipo": "NOTICIA",
+    "postura": "SUPPORTS",
+    "data": "2026-11-04"
+   },
+   {
+    "n": 3,
+    "url": "https://riconnect.rico.com.vc/analises/selic-a-1375-copom-interrompe-cortes",
+    "titulo": "Selic em 13,75%: Copom interrompe cortes",
+    "tipo": "OUTRO",
+    "postura": "SUPPORTS",
+    "data": "2026-11-05"
+   }
+  ],
+  "metodo": "MODEL_REWRITE_FROM_VERIFIED_EVIDENCE"
+ },
+ "rastreabilidade_modelo": [
+  {
+   "id_chamada": "3c358983-1b19-4bc8-9fd0-d643fc82e139",
+   "id_requisicao_enviada": "5f450d46-36e8-4879-90fb-3825b89dc1a9",
+   "id_verificacao": "22c2ce5a-bc7e-4561-b99d-5d12fefe6c9e",
+   "etapa": "DECOMPOSICAO",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 887,
+   "tokens": {
+    "entrada": 842,
+    "saida": 148,
+    "total": 990
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "5f450d46-36e8-4879-90fb-3825b89dc1a9",
+   "id_trace": "04f7b316a4c64a7db448acd446b41fb4",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 887.3,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:24:31.639Z"
+  },
+  {
+   "id_chamada": "66f18e97-a679-4c1b-94c9-160eb0259331",
+   "id_requisicao_enviada": "0d5695e6-47b9-40aa-9f00-e5d0ec27cd48",
+   "id_verificacao": "22c2ce5a-bc7e-4561-b99d-5d12fefe6c9e",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 2715,
+   "tokens": {
+    "entrada": 4191,
+    "saida": 2048,
+    "total": 6239
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "0d5695e6-47b9-40aa-9f00-e5d0ec27cd48",
+   "id_trace": "320e39014e134381813e04a97753745a",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 2715.754,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:24:38.214Z"
+  },
+  {
+   "id_chamada": "d23d6f70-66db-47d9-9c51-87fe7cd43ccf",
+   "id_requisicao_enviada": "0869eb64-d468-4aa0-914d-18274eb478c8",
+   "id_verificacao": "22c2ce5a-bc7e-4561-b99d-5d12fefe6c9e",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 4461,
+   "tokens": {
+    "entrada": 4191,
+    "saida": 1851,
+    "total": 6042
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "0869eb64-d468-4aa0-914d-18274eb478c8",
+   "id_trace": "6c260778c9f94d5d92ca1f7bbd1c301c",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 4498.091,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:24:40.966Z"
+  },
+  {
+   "id_chamada": "c114edd8-e94e-4771-ada7-6a836e5b631d",
+   "id_requisicao_enviada": "476974ca-250d-430a-9313-f1abde34fd6f",
+   "id_verificacao": "22c2ce5a-bc7e-4561-b99d-5d12fefe6c9e",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 742,
+   "tokens": {
+    "entrada": 1032,
+    "saida": 397,
+    "total": 1429
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "476974ca-250d-430a-9313-f1abde34fd6f",
+   "id_trace": "3a4faff9b7e5454481580337f56732a2",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 742.126,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:24:45.558Z"
+  }
+ ],
+ "rastreabilidade_pesquisa": [
+  {
+   "id_operacao": "39ab8035-f007-425e-9bfa-e63f39c26f80",
+   "id_verificacao": "22c2ce5a-bc7e-4561-b99d-5d12fefe6c9e",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "A taxa Selic está atualmente em 13,75% ao ano.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:24:32.616Z",
+   "finalizada_em": "2026-11-13T13:24:33.726Z",
+   "duracao_ms": 1110,
+   "request_id": "ceda2f35-03a7-4031-972a-6fa1664cbbce",
+   "response_time": 0.88,
+   "erro": null,
+   "modo_busca": "GERAL",
+   "parametros": {
+    "query": "A taxa Selic está atualmente em 13,75% ao ano.",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true,
+    "country": "brazil"
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "6a376e-00",
+     "titulo": "Selic em 13,75%: Copom interrompe cortes",
+     "url": "https://riconnect.rico.com.vc/analises/selic-a-1375-copom-interrompe-cortes",
+     "relevancia": 0.83801806,
+     "data_publicacao": "2026-11-05"
+    },
+    {
+     "resultado_id": "82f0e6-01",
+     "titulo": "Copom: Taxa Selic cai para 13,75% ao ano | Monitor Mercantil",
+     "url": "https://monitormercantil.com.br/copom-taxa-selic-cai-para-1375-ao-ano",
+     "relevancia": 0.82261705,
+     "data_publicacao": "2026-09-16"
+    },
+    {
+     "resultado_id": "00144a-02",
+     "titulo": "InvesTalk | Taxa Selic cai a 13,75% ao ano. É hora de mexer nos investimentos?",
+     "url": "https://investalk.bb.com.br/noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos",
+     "relevancia": 0.8095773,
+     "data_publicacao": "2026-09-17"
+    },
+    {
+     "resultado_id": "b946ec-03",
+     "titulo": "Taxa Selic cai para 13,75% ao ano: como isso afeta o seu bolso?",
+     "url": "https://blog.nubank.com.br/taxa-selic-copom",
+     "relevancia": 0.7992857,
+     "data_publicacao": "2021-12-08"
+    },
+    {
+     "resultado_id": "209d26-04",
+     "titulo": "Taxa Selic Hoje: Atual e Projeções para 2026 - Investidor10",
+     "url": "https://investidor10.com.br/indices/selic",
+     "relevancia": 0.7631309,
+     "data_publicacao": "2023-03-22"
+    }
+   ]
+  },
+  {
+   "id_operacao": "0cff6158-66ef-4b85-8eec-dedc253d11aa",
+   "id_verificacao": "22c2ce5a-bc7e-4561-b99d-5d12fefe6c9e",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "A taxa Selic está atualmente em 13,75% ao ano.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:24:33.726Z",
+   "finalizada_em": "2026-11-13T13:24:36.801Z",
+   "duracao_ms": 3075,
+   "request_id": "ec3fd67e-9e98-419b-8540-ca36de9cb6fb",
+   "response_time": 2.88,
+   "erro": null,
+   "modo_busca": "NOTICIAS_BR",
+   "parametros": {
+    "query": "A taxa Selic está atualmente em 13,75% ao ano.",
+    "search_depth": "basic",
+    "max_results": 4,
+    "include_answer": false,
+    "include_published_date": true,
+    "topic": "news",
+    "include_domains": [
+     "g1.globo.com",
+     "oglobo.globo.com",
+     "valor.globo.com",
+     "folha.uol.com.br",
+     "uol.com.br",
+     "estadao.com.br",
+     "agenciabrasil.ebc.com.br",
+     "cnnbrasil.com.br",
+     "infomoney.com.br",
+     "exame.com",
+     "poder360.com.br",
+     "correiobraziliense.com.br",
+     "metropoles.com",
+     "veja.abril.com.br",
+     "terra.com.br",
+     "band.com.br",
+     "r7.com",
+     "bbc.com",
+     "jota.info",
+     "canaltech.com.br"
+    ]
+   },
+   "quantidade_resultados": 4,
+   "resultados": [
+    {
+     "resultado_id": "9b7dd8-00",
+     "titulo": "Banco Central mantém os juros em 13,75% ao ano - Blog da Rosana Hessel",
+     "url": "https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano",
+     "relevancia": 0.83169055,
+     "data_publicacao": "2026-11-04"
+    },
+    {
+     "resultado_id": "f7f026-01",
+     "titulo": "Banco Central surpreende e mantém juros básicos em 13,75% ao ano | Agência Brasil",
+     "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano",
+     "relevancia": 0.8311431,
+     "data_publicacao": "2026-11-05"
+    },
+    {
+     "resultado_id": "f43370-02",
+     "titulo": "Copom decide nesta quarta-feira se corta ou mantém a Taxa Selic | Agência Brasil",
+     "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/copom-decide-nesta-quarta-feira-se-corta-ou-mantem-taxa-selic",
+     "relevancia": 0.8230441,
+     "data_publicacao": "2026-11-04"
+    },
+    {
+     "resultado_id": "0300e9-03",
+     "titulo": "Copom surpreende mercado e mantém Selic em 13,75% ao ano | Radioagência Nacional",
+     "url": "https://agenciabrasil.ebc.com.br/radioagencia-nacional/economia/audio/2026-11/copom-surpreende-mercado-e-mantem-selic-em-1375-ao-ano",
+     "relevancia": 0.81582016,
+     "data_publicacao": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "id_operacao": "40be4a7b-242d-42a5-84e0-c77b087eb72b",
+   "id_verificacao": "22c2ce5a-bc7e-4561-b99d-5d12fefe6c9e",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "EXTRACAO",
+   "consulta": "A taxa Selic está atualmente em 13,75% ao ano.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:24:36.809Z",
+   "finalizada_em": "2026-11-13T13:24:37.613Z",
+   "duracao_ms": 804,
+   "request_id": "dddd8158-6749-4274-954f-3900a6c368b8",
+   "response_time": 0.02,
+   "erro": null,
+   "urls_solicitadas": [
+    "https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano",
+    "https://riconnect.rico.com.vc/analises/selic-a-1375-copom-interrompe-cortes",
+    "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano",
+    "https://monitormercantil.com.br/copom-taxa-selic-cai-para-1375-ao-ano",
+    "https://investalk.bb.com.br/noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos"
+   ],
+   "parametros": {
+    "urls": [
+     "https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano",
+     "https://riconnect.rico.com.vc/analises/selic-a-1375-copom-interrompe-cortes",
+     "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano",
+     "https://monitormercantil.com.br/copom-taxa-selic-cai-para-1375-ao-ano",
+     "https://investalk.bb.com.br/noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos"
+    ],
+    "extract_depth": "basic",
+    "format": "markdown",
+    "include_images": false
+   },
+   "quantidade_resultados": 5,
+   "urls_extraidas": [
+    "https://newblogs.correiobraziliense.com.br/blog-da-rosana-hessel/banco-central-mantem-os-juros-em-1375-ao-ano",
+    "https://riconnect.rico.com.vc/analises/selic-a-1375-copom-interrompe-cortes",
+    "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano",
+    "https://monitormercantil.com.br/copom-taxa-selic-cai-para-1375-ao-ano",
+    "https://investalk.bb.com.br/noticias/economia/taxa-selic-cai-a-1375-ao-ano-e-hora-de-mexer-nos-investimentos"
+   ]
+  }
+ ],
+ "modo": "real",
+ "simulado": false,
+ "gateway": {
+  "gateway": "bifrost",
+  "chamadas": 4,
+  "falhas": 0,
+  "cadeia_modelos": [
+   "groq/openai/gpt-oss-20b",
+   "groq/openai/gpt-oss-120b"
+  ],
+  "queda_simulada": false,
+  "respostas_por_modelo": [
+   {
+    "modelo": "groq/openai/gpt-oss-20b",
+    "chamadas": 3
+   },
+   {
+    "modelo": "groq/openai/gpt-oss-120b",
+    "chamadas": 1
+   }
+  ],
+  "respostas_de_reserva": 1,
+  "tokens_total": 14700,
+  "latencia_media_ms": 2211
+ },
+ "duracao_ms": 14731,
+ "gravado_em": "2026-11-13T13:24:46.361Z"
+}

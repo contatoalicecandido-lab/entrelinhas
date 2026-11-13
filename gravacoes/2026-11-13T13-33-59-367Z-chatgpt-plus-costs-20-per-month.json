@@ -1,0 +1,1969 @@
+{
+ "sistema": "Entrelinhas",
+ "id_verificacao": "8bbd11b0-cfb4-418b-bab7-9663879a9106",
+ "texto_original": "ChatGPT Plus costs $20 per month.",
+ "verificado_em": "2026-11-13T13:33:59.351Z",
+ "total_afirmacoes": 1,
+ "sintese": {
+  "veredito": "CORROBORADA",
+  "resumo": "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
+  "total_afirmacoes": 1,
+  "contagem_vereditos": {
+   "CORROBORADA": 1
+  }
+ },
+ "afirmacoes": [
+  {
+   "id": "afirmacao_1",
+   "texto": "ChatGPT Plus costs $20 per month.",
+   "tipo_afirmacao": "preco",
+   "origem_tipo_afirmacao": "MODELO",
+   "nuances": {
+    "idioma": "en",
+    "variante": null,
+    "confianca_idioma": 1,
+    "valores": [
+     {
+      "tipo": "MONETARIO",
+      "texto": "$20 per month",
+      "valor": 20,
+      "moeda": "USD",
+      "periodo": "MENSAL",
+      "qualificador": null
+     }
+    ],
+    "datas": [],
+    "expressoes_temporais": [],
+    "condicoes": [],
+    "mudancas": [],
+    "tempo_coloquial": [],
+    "girias": {
+     "aliases": [],
+     "expressoes": []
+    },
+    "consulta_busca": "ChatGPT Plus costs $20 per month.",
+    "dominios_oficiais_sugeridos": [],
+    "autoridades": [],
+    "notas": []
+   },
+   "evidencias": [
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OFICIAL",
+      "titulo": "What is ChatGPT Plus? | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+      "conteudo": "[![OpenAI](/logo.png)](/en)\n\n# What is ChatGPT Plus?\n\nInformation about our paid subscription plan, Plus.\n\nUpdated: 18 hours ago\n\n*ChatGPT Plus includes broader model and tool access than Free. Because model availability and limits change over time, check the model picker for the options on your account.*  \n  \n*For more information, please refer to our article:* [*Retiring GPT-4o and other ChatGPT models*](https://help.openai.com/articles/20001051)\n\nChatGPT Plus is a subscription plan that provides enhanced access to the ChatGPT web app for $20/month.\n\n# Benefits of ChatGPT Plus\n\n* **Priority access during high-traffic periods:** Fewer interruptions even when demand is high.\n* **Higher model…",
+      "coletado_em": "2026-11-13T13:33:55.037Z",
+      "data_publicacao": "2023-02-01",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": null,
+      "relevancia": 0.8596637,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "fcdb0520-7a13-497c-b3f3-8e7813940dc3",
+       "resultado_id": "2c9d51-04",
+       "response_time_busca": 1.74,
+       "response_time_extracao": 0.03,
+       "consulta": "ChatGPT Plus costs $20 per month.",
+       "origem_principal": {
+        "id_operacao": "1630d1df-d230-4d12-b36d-ac151e442fa0",
+        "request_id": "fcdb0520-7a13-497c-b3f3-8e7813940dc3",
+        "modo_busca": "GERAL",
+        "resultado_id": "2c9d51-04",
+        "parametros": {
+         "query": "ChatGPT Plus costs $20 per month.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "1630d1df-d230-4d12-b36d-ac151e442fa0",
+         "request_id": "fcdb0520-7a13-497c-b3f3-8e7813940dc3",
+         "modo_busca": "GERAL",
+         "resultado_id": "2c9d51-04",
+         "parametros": {
+          "query": "ChatGPT Plus costs $20 per month.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Wed, 01 Feb 2023 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 01 Feb 2023 00:00:00 GMT",
+         "value_normalized": "2023-02-01",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "HTTP_403",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "0260e032-d61d-47fc-adec-09acbfc3e8b7",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "f3b3e5ce-eb86-4178-9409-adb50d9de63a",
+      "id_verificacao": "8bbd11b0-cfb4-418b-bab7-9663879a9106",
+      "url_original": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+      "url_canonica": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "f6640466c477c53e64d0bbcd2f42b9a1122a1861be6aac4faf03e0e698b75fb3",
+      "coletado_em": "2026-11-13T13:33:55.037Z",
+      "id_operacao_busca": "1630d1df-d230-4d12-b36d-ac151e442fa0",
+      "id_operacao_extracao": "b86e2140-d49f-4346-a4dc-035ed113cd35",
+      "consulta": "ChatGPT Plus costs $20 per month.",
+      "parametros_busca": {
+       "query": "ChatGPT Plus costs $20 per month.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+        "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost",
+        "https://html.duckduckgo.com/html?q=%22ChatGPT+Plus%22+price+%2420+per+month+official+pricing",
+        "https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html",
+        "https://oneaipass.com/pricing-costs/how-much-does-chatgpt-plus-cost-per-month"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "fcdb0520-7a13-497c-b3f3-8e7813940dc3",
+       "operacoes_busca": [
+        {
+         "id_operacao": "1630d1df-d230-4d12-b36d-ac151e442fa0",
+         "request_id": "fcdb0520-7a13-497c-b3f3-8e7813940dc3",
+         "modo_busca": "GERAL",
+         "resultado_id": "2c9d51-04",
+         "parametros": {
+          "query": "ChatGPT Plus costs $20 per month.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "0260e032-d61d-47fc-adec-09acbfc3e8b7",
+       "resultado_id": "2c9d51-04",
+       "relevancia": 0.8596637,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 01 Feb 2023 00:00:00 GMT",
+         "value_normalized": "2023-02-01",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "HTTP_403",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "What is ChatGPT Plus? | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 6733,
+      "caracteres_preparados": 6733,
+      "trecho_analisado": "TÍTULO DA FONTE: What is ChatGPT Plus? | OpenAI Help Center\nURL DA FONTE: https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus\n\nCONTEÚDO DA FONTE:\n[![OpenAI](/logo.png)](/en)\n\n# What is ChatGPT Plus?\n\nInformation about our paid subscription plan, Plus.\n\nUpdated: 18 hours ago\n\n*ChatGPT Plus includes broader model and tool access than Free. Because model availability and limits change over time, check the model picker for the options on your account.*  \n  \n*For more information, please refer to our article:* [*Retiring GPT-4o and other ChatGPT models*](https://help.openai.com/articles/20001051)\n\nChatGPT Plus is a subscription plan that provides enhanced access to the ChatGPT web app for $20/month.\n\n# Benefits of ChatGPT Plus\n\n* **Priority access during high-traffic periods:** Fewer interruptions even when demand is high.\n* **Higher model limits: Use more messages and broader model options than on the Free plan. Model availability changes during rollouts; use the model picker for current access.**\n* **Advanced reasoning access: Use the reasoning options currently available to your account for coding, planning, and multi-step analysis.**\n* **Faster response speeds:** Enjoy ",
+      "citacao_chave": "ChatGPT Plus is a subscription plan that provides enhanced access to the ChatGPT web app for $20/month.",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source explicitly states ChatGPT Plus costs $20/month."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The source explicitly states ChatGPT Plus costs $20/month."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 1381,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2023-02-01"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "How Much Does ChatGPT Cost? All Plan & Pricing Tiers Explained",
+      "url": "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost",
+      "conteudo": "Our AI bill tripled. Interested in how we proved it was worth it? [Join us live on August 27](https://www.cloudzero.com/webinar/customer-success-ai-bill/?utm_campaign=webinar&utm_source=website&utm_medium=banner)\n\n[Log In](https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/click?encryptedPayload=AVxigLIlZOVUpprFpzHB65rYjNgQS9vFy0PpA%2Fm7siVoe06InN5%2FrZ51M2jqZOFfgVYKa2NbOfi1g0JVZxFAKTGnQ0QuJ8S%2BDF7MPxrSl9nBZvcTLLlStVmIKiSCmxhzdVHu7cFawT1OHe7l6N4bjX0VU0SnBWk6ly2INTIzamdB&portalId=2983524)\n\n[Schedule Demo](https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/click?encryptedPayload=AVxigLJ9EvkCvFj9VjtPDqM9DujY%2BvawS4Xr3mbCf3clKsCQYiKmJnHWBeEGKQZSHUsbcJbwONY…",
+      "coletado_em": "2026-11-13T13:33:55.037Z",
+      "data_publicacao": "2026-04-30",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost/",
+      "relevancia": 0.87212974,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "fcdb0520-7a13-497c-b3f3-8e7813940dc3",
+       "resultado_id": "f86b4b-00",
+       "response_time_busca": 1.74,
+       "response_time_extracao": 0.03,
+       "consulta": "ChatGPT Plus costs $20 per month.",
+       "origem_principal": {
+        "id_operacao": "1630d1df-d230-4d12-b36d-ac151e442fa0",
+        "request_id": "fcdb0520-7a13-497c-b3f3-8e7813940dc3",
+        "modo_busca": "GERAL",
+        "resultado_id": "f86b4b-00",
+        "parametros": {
+         "query": "ChatGPT Plus costs $20 per month.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "1630d1df-d230-4d12-b36d-ac151e442fa0",
+         "request_id": "fcdb0520-7a13-497c-b3f3-8e7813940dc3",
+         "modo_busca": "GERAL",
+         "resultado_id": "f86b4b-00",
+         "parametros": {
+          "query": "ChatGPT Plus costs $20 per month.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        },
+        {
+         "id_operacao": "1704e0ca-00ce-4c9a-98ce-129a82944f5d",
+         "request_id": "6569a8a3-9b57-472c-8a4c-7e9f0fdb7e38",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "656770-00",
+         "parametros": {
+          "query": "ChatGPT Plus costs $20 per month.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Thu, 30 Apr 2026 14:19:32 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 30 Apr 2026 14:19:32 GMT",
+         "value_normalized": "2026-04-30",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-04-30T14:19:32+00:00",
+         "value_normalized": "2026-04-30",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-10-21T12:43:41+00:00",
+         "value_normalized": "2026-10-21",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-04-30T14:19:32+00:00",
+         "value_normalized": "2026-04-30",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-21T12:43:41+00:00",
+         "value_normalized": "2026-10-21",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Last updated",
+         "value_original": "October 21, 2026",
+         "value_normalized": "2026-10-21",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Last updated",
+         "value_original": "August 20, 2026",
+         "value_normalized": "2026-08-20",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost/",
+        "capturado_em": "2026-11-13T13:33:55.839Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "0260e032-d61d-47fc-adec-09acbfc3e8b7",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "474074eb-38fb-4a71-9aed-65dc41a7d0b3",
+      "id_verificacao": "8bbd11b0-cfb4-418b-bab7-9663879a9106",
+      "url_original": "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost",
+      "url_canonica": "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "d0d78e10157f35a8ddb9ca362fb323fcdf13c316d77e5a99c630f503e2446ae2",
+      "coletado_em": "2026-11-13T13:33:55.037Z",
+      "id_operacao_busca": "1630d1df-d230-4d12-b36d-ac151e442fa0",
+      "id_operacao_extracao": "b86e2140-d49f-4346-a4dc-035ed113cd35",
+      "consulta": "ChatGPT Plus costs $20 per month.",
+      "parametros_busca": {
+       "query": "ChatGPT Plus costs $20 per month.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+        "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost",
+        "https://html.duckduckgo.com/html?q=%22ChatGPT+Plus%22+price+%2420+per+month+official+pricing",
+        "https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html",
+        "https://oneaipass.com/pricing-costs/how-much-does-chatgpt-plus-cost-per-month"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "fcdb0520-7a13-497c-b3f3-8e7813940dc3",
+       "operacoes_busca": [
+        {
+         "id_operacao": "1630d1df-d230-4d12-b36d-ac151e442fa0",
+         "request_id": "fcdb0520-7a13-497c-b3f3-8e7813940dc3",
+         "modo_busca": "GERAL",
+         "resultado_id": "f86b4b-00",
+         "parametros": {
+          "query": "ChatGPT Plus costs $20 per month.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        },
+        {
+         "id_operacao": "1704e0ca-00ce-4c9a-98ce-129a82944f5d",
+         "request_id": "6569a8a3-9b57-472c-8a4c-7e9f0fdb7e38",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "656770-00",
+         "parametros": {
+          "query": "ChatGPT Plus costs $20 per month.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "request_id_extracao": "0260e032-d61d-47fc-adec-09acbfc3e8b7",
+       "resultado_id": "f86b4b-00",
+       "relevancia": 0.87212974,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 30 Apr 2026 14:19:32 GMT",
+         "value_normalized": "2026-04-30",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-04-30T14:19:32+00:00",
+         "value_normalized": "2026-04-30",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-10-21T12:43:41+00:00",
+         "value_normalized": "2026-10-21",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-04-30T14:19:32+00:00",
+         "value_normalized": "2026-04-30",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-21T12:43:41+00:00",
+         "value_normalized": "2026-10-21",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Last updated",
+         "value_original": "October 21, 2026",
+         "value_normalized": "2026-10-21",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Last updated",
+         "value_original": "August 20, 2026",
+         "value_normalized": "2026-08-20",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost/",
+        "capturado_em": "2026-11-13T13:33:55.839Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "How Much Does ChatGPT Cost? All Plan & Pricing Tiers Explained",
+      "url": "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 30082,
+      "caracteres_preparados": 7986,
+      "trecho_analisado": "TÍTULO DA FONTE: How Much Does ChatGPT Cost? All Plan & Pricing Tiers Explained\nURL DA FONTE: https://www.cloudzero.com/blog/how-much-does-chatgpt-cost\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\nApril 30, 2026 12 min read\n\nLast updated: August 20, 2026\n\n[FinOps For AI](https://www.cloudzero.com/blog/tag/finops-for-ai/)\n\nQuick Answer\n\nHow much does ChatGPT cost?\n\nChatGPT pricing spans six plans: Free at $0, Go at $8/month, Plus at $20/month, Pro at $100 or $200/month depending on usage tier, Business at $20/seat/month billed annually ($25 monthly, two-seat minimum), and Enterprise at custom pricing.\n\nPaid tiers add the newest GPT-5.6 models, higher limits, and tools like Deep Research and Agent mode.\n\nOpenAI now sells ChatGPT six different ways, and three of the tiers cost within a few dollars of each other per person.\n\nPicking wrong is easy, and it happens in both directions: individuals paying $200 for usage they’d never hit, and teams handling client data on $20 Plus accounts that lack the one guarantee they legally need.\n\nThe plan cards don’t make the differences obvious.\n\nA ChatGPT subscription is the visible tip of an organization’s AI spend: seats are predictable, but the same compa",
+      "citacao_chave": "Plus ($20/month).",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source lists ChatGPT Plus at $20 per month."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The source lists ChatGPT Plus at $20 per month."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 197,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2026-04-30"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "\"ChatGPT Plus\" price $20 per month official pricing at DuckDuckGo",
+      "url": "https://html.duckduckgo.com/html?q=%22ChatGPT+Plus%22+price+%2420+per+month+official+pricing",
+      "conteudo": "## [ChatGPT Plus Pricing ($20/mo)](//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.aipricing.guru%2Fsubscriptions%2Fchatgpt%2Dplus%2F&rut=f9dc87dafdc280ed442748ee5b536e376c303eabd7bd4c2f84614bcf9e539e35)\n\n[![](//external-content.duckduckgo.com/ip3/www.aipricing.guru.ico)](//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.aipricing.guru%2Fsubscriptions%2Fchatgpt%2Dplus%2F&rut=f9dc87dafdc280ed442748ee5b536e376c303eabd7bd4c2f84614bcf9e539e35)    [www.aipricing.guru/subscriptions/chatgpt-plus/](//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.aipricing.guru%2Fsubscriptions%2Fchatgpt%2Dplus%2F&rut=f9dc87dafdc280ed442748ee5b536e376c303eabd7bd4c2f84614bcf9e539e35)\n\n[**ChatGPT Plus**: **$20**/mo. Compare included mod…",
+      "coletado_em": "2026-11-13T13:33:55.037Z",
+      "data_publicacao": null,
+      "data_atualizacao": "2023-02-01",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": null,
+      "relevancia": 0.87037706,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "fcdb0520-7a13-497c-b3f3-8e7813940dc3",
+       "resultado_id": "a3af87-01",
+       "response_time_busca": 1.74,
+       "response_time_extracao": 0.03,
+       "consulta": "ChatGPT Plus costs $20 per month.",
+       "origem_principal": {
+        "id_operacao": "1630d1df-d230-4d12-b36d-ac151e442fa0",
+        "request_id": "fcdb0520-7a13-497c-b3f3-8e7813940dc3",
+        "modo_busca": "GERAL",
+        "resultado_id": "a3af87-01",
+        "parametros": {
+         "query": "ChatGPT Plus costs $20 per month.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "1630d1df-d230-4d12-b36d-ac151e442fa0",
+         "request_id": "fcdb0520-7a13-497c-b3f3-8e7813940dc3",
+         "modo_busca": "GERAL",
+         "resultado_id": "a3af87-01",
+         "parametros": {
+          "query": "ChatGPT Plus costs $20 per month.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": null,
+       "sinais_data": [],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "HTTP_202",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "0260e032-d61d-47fc-adec-09acbfc3e8b7",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2023-02-01",
+       "precisao": "MES",
+       "citacao": "OpenAI has held steady since the plan launched in February 2023.",
+       "origem": "QUOTED_IN_SOURCE_TEXT"
+      }
+     },
+     "coleta": {
+      "id_coleta": "af235cb4-cc82-4d80-863c-52a642abbc08",
+      "id_verificacao": "8bbd11b0-cfb4-418b-bab7-9663879a9106",
+      "url_original": "https://html.duckduckgo.com/html?q=%22ChatGPT+Plus%22+price+%2420+per+month+official+pricing",
+      "url_canonica": "https://html.duckduckgo.com/html?q=%22ChatGPT+Plus%22+price+%2420+per+month+official+pricing",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "be0009fafb72378e17e5e71c20ddf9c6ef86cde83ef5c32cb77b001050e20525",
+      "coletado_em": "2026-11-13T13:33:55.037Z",
+      "id_operacao_busca": "1630d1df-d230-4d12-b36d-ac151e442fa0",
+      "id_operacao_extracao": "b86e2140-d49f-4346-a4dc-035ed113cd35",
+      "consulta": "ChatGPT Plus costs $20 per month.",
+      "parametros_busca": {
+       "query": "ChatGPT Plus costs $20 per month.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+        "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost",
+        "https://html.duckduckgo.com/html?q=%22ChatGPT+Plus%22+price+%2420+per+month+official+pricing",
+        "https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html",
+        "https://oneaipass.com/pricing-costs/how-much-does-chatgpt-plus-cost-per-month"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "fcdb0520-7a13-497c-b3f3-8e7813940dc3",
+       "operacoes_busca": [
+        {
+         "id_operacao": "1630d1df-d230-4d12-b36d-ac151e442fa0",
+         "request_id": "fcdb0520-7a13-497c-b3f3-8e7813940dc3",
+         "modo_busca": "GERAL",
+         "resultado_id": "a3af87-01",
+         "parametros": {
+          "query": "ChatGPT Plus costs $20 per month.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "0260e032-d61d-47fc-adec-09acbfc3e8b7",
+       "resultado_id": "a3af87-01",
+       "relevancia": 0.87037706,
+       "sinais_data": [],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "HTTP_202",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "\"ChatGPT Plus\" price $20 per month official pricing at DuckDuckGo",
+      "url": "https://html.duckduckgo.com/html?q=%22ChatGPT+Plus%22+price+%2420+per+month+official+pricing",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 8897,
+      "caracteres_preparados": 7944,
+      "trecho_analisado": "TÍTULO DA FONTE: \"ChatGPT Plus\" price $20 per month official pricing at DuckDuckGo\nURL DA FONTE: https://html.duckduckgo.com/html?q=%22ChatGPT+Plus%22+price+%2420+per+month+official+pricing\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n## [ChatGPT Plus Pricing ($20/mo)](//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.aipricing.guru%2Fsubscriptions%2Fchatgpt%2Dplus%2F&rut=f9dc87dafdc280ed442748ee5b536e376c303eabd7bd4c2f84614bcf9e539e35)\n\n[![](//external-content.duckduckgo.com/ip3/www.aipricing.guru.ico)](//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.aipricing.guru%2Fsubscriptions%2Fchatgpt%2Dplus%2F&rut=f9dc87dafdc280ed442748ee5b536e376c303eabd7bd4c2f84614bcf9e539e35)    [www.aipricing.guru/subscriptions/chatgpt-plus/](//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.aipricing.guru%2Fsubscriptions%2Fchatgpt%2Dplus%2F&rut=f9dc87dafdc280ed442748ee5b536e376c303eabd7bd4c2f84614bcf9e539e35)\n\n[**ChatGPT Plus**: **$20**/mo.\n\nCompare included models, usage limits, features, and **official** sources.\n\nData checked 2026-11-13.](//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.aipricing.guru%2Fsubscriptions%2Fchatgpt%2Dplus%2F&rut=f9dc87dafdc280ed442748ee5b536e376c303eabd7bd4c2f84614bcf9e539e35)\n\n## [How Much Is ChatGPT Pl",
+      "citacao_chave": "ChatGPT Plus Pricing ($20/mo) …",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source confirms the $20/month price and notes it has been steady since launch."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The source confirms the $20/month price and notes it has been steady since launch."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 1381,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2023-02-01"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "What is ChatGPT Plus? Worth the $20 or Stick to Free?",
+      "url": "https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html",
+      "conteudo": "[![logo](https://www.essaydone.ai/images/logo.svg)](/)\n\n[Log in](/login/)\n\n![](https://www.essaydone.ai/images/icon/avg.png)\n\n* [Humanizer](/humanizer)\n* [AI Humanizer Free](/ai-humanizer-free)\n* [AI Paraphraser](/ai-paraphraser)\n* [AI Remover From Text](/ai-remover-from-text)\n* [AI Reworder](/ai-reworder)\n* [AI Rewriter](/ai-rewriter)\n* [Avoid AI Detection](/avoid-ai-detection)\n* [Bypass GPT](/bypassgpt)\n* [Bypasser](/bypasser)\n* [Essay Rewriter](/essay-rewriter)\n* [Get Rid of AI](/get-rid-of-ai)\n* [Humanize AI Free](/humanize-ai-free)\n* [Humanize Essay](/humanize-essay)\n* [Pass Originality.ai](/pass-originality-ai)\n* [Rewrite Text](/rewrite-text)\n* [Sentence Rewriter](/sentence-rewriter)\n*…",
+      "coletado_em": "2026-11-13T13:33:55.037Z",
+      "data_publicacao": "2026-06-24",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html",
+      "relevancia": 0.8715842,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "6569a8a3-9b57-472c-8a4c-7e9f0fdb7e38",
+       "resultado_id": "e846a9-01",
+       "response_time_busca": 3.45,
+       "response_time_extracao": 0.03,
+       "consulta": "ChatGPT Plus costs $20 per month.",
+       "origem_principal": {
+        "id_operacao": "1704e0ca-00ce-4c9a-98ce-129a82944f5d",
+        "request_id": "6569a8a3-9b57-472c-8a4c-7e9f0fdb7e38",
+        "modo_busca": "NOTICIAS",
+        "resultado_id": "e846a9-01",
+        "parametros": {
+         "query": "ChatGPT Plus costs $20 per month.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "1704e0ca-00ce-4c9a-98ce-129a82944f5d",
+         "request_id": "6569a8a3-9b57-472c-8a4c-7e9f0fdb7e38",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "e846a9-01",
+         "parametros": {
+          "query": "ChatGPT Plus costs $20 per month.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Wed, 24 Jun 2026 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 24 Jun 2026 00:00:00 GMT",
+         "value_normalized": "2026-06-24",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Wed, 11 Nov 2026 13:50:56 GMT",
+         "value_normalized": "2026-11-11",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html",
+        "capturado_em": "2026-11-13T13:33:55.388Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "0260e032-d61d-47fc-adec-09acbfc3e8b7",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "fd5e12f2-af66-4cb2-9f8c-02d627efbd4e",
+      "id_verificacao": "8bbd11b0-cfb4-418b-bab7-9663879a9106",
+      "url_original": "https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html",
+      "url_canonica": "https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "6bb38cda8feb677bfb7841766b1645b7bf4be74b1f61e11d97107479d9deb769",
+      "coletado_em": "2026-11-13T13:33:55.037Z",
+      "id_operacao_busca": "1704e0ca-00ce-4c9a-98ce-129a82944f5d",
+      "id_operacao_extracao": "b86e2140-d49f-4346-a4dc-035ed113cd35",
+      "consulta": "ChatGPT Plus costs $20 per month.",
+      "parametros_busca": {
+       "query": "ChatGPT Plus costs $20 per month.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+        "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost",
+        "https://html.duckduckgo.com/html?q=%22ChatGPT+Plus%22+price+%2420+per+month+official+pricing",
+        "https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html",
+        "https://oneaipass.com/pricing-costs/how-much-does-chatgpt-plus-cost-per-month"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "6569a8a3-9b57-472c-8a4c-7e9f0fdb7e38",
+       "operacoes_busca": [
+        {
+         "id_operacao": "1704e0ca-00ce-4c9a-98ce-129a82944f5d",
+         "request_id": "6569a8a3-9b57-472c-8a4c-7e9f0fdb7e38",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "e846a9-01",
+         "parametros": {
+          "query": "ChatGPT Plus costs $20 per month.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "request_id_extracao": "0260e032-d61d-47fc-adec-09acbfc3e8b7",
+       "resultado_id": "e846a9-01",
+       "relevancia": 0.8715842,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 24 Jun 2026 00:00:00 GMT",
+         "value_normalized": "2026-06-24",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Wed, 11 Nov 2026 13:50:56 GMT",
+         "value_normalized": "2026-11-11",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html",
+        "capturado_em": "2026-11-13T13:33:55.388Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "What is ChatGPT Plus? Worth the $20 or Stick to Free?",
+      "url": "https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 13059,
+      "caracteres_preparados": 7967,
+      "trecho_analisado": "TÍTULO DA FONTE: What is ChatGPT Plus? Worth the $20 or Stick to Free?\nURL DA FONTE: https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n* [![turnitin detector](https://www.essaydone.ai/images/home/icon-turnitin-detector.png) Turnitin Detector](/dashboard/turnitin-detector)\n\n* [![turnitin detector](https://www.essaydone.ai/images/home/icon-essaydone-ai-chat.png) AI Chat](/chatgpt/gpt-5-1)\n\n* ![](https://www.essaydone.ai/images/icon/icon-giftbox.png)\n\n* Log out\n\n# What is ChatGPT Plus?\n\nWorth the $20 or Stick to Free?\n\n![Author image](https://www.essaydone.ai/images/author/sophia-martinez.png)\n\n2026-06-24 17:25:58 **•** 5 min read\n\nIf you’ve been using ChatGPT, you’ve probably heard of ChatGPT Plus and wondered what it actually offers—and whether it’s worth paying for.\n\nAfter spending a lot of time exploring its features, I can break down how it works, what benefits it brings, and how it stacks up against the free version.\n\nBy the end, you’ll have a clear picture to decide if upgrading makes sense for you.\n\n## What Is ChatGPT Plus？\n\nChatGPT Plus is OpenAI’s paid personal subscription for the ChatGPT app.\n\nIt provides enhanced access for",
+      "citacao_chave": "In the U.S., ChatGPT Plus is listed by OpenAI at $20 per month.",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The article states ChatGPT Plus is $20 per month in the US."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The article states ChatGPT Plus is $20 per month in the US."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 142,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2026-06-24"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "How much does ChatGPT Plus cost per month? | OneAIPass",
+      "url": "https://oneaipass.com/pricing-costs/how-much-does-chatgpt-plus-cost-per-month",
+      "conteudo": "[*O*OneAIPass](/)\n\n\n\n[OneAIPass](/) › [Pricing & Costs](/guides/pricing-costs/)\n\n# How much does ChatGPT Plus cost per month?\n\nUpdated October 2026 · [How we answer](/guides/methodology/)\n\n**Short answer**ChatGPT Plus costs $20 per month in the US. Prices vary by country and may include local taxes.\n\n## Standard Pricing\n\nAs of 2025, ChatGPT Plus is priced at $20 per month in the United States. This is the most common plan for individual users who want faster responses, priority access to new features, and higher usage limits compared to the free tier.\n\nIn other countries, the price is often adjusted for local markets. For example, in the UK it's around £16, in Europe about €20, and in India …",
+      "coletado_em": "2026-11-13T13:33:55.037Z",
+      "data_publicacao": null,
+      "data_atualizacao": null,
+      "escopo_data": "UNKNOWN",
+      "canonical_url": "https://mrenterprises.fyi/",
+      "relevancia": 0.8697146,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "fcdb0520-7a13-497c-b3f3-8e7813940dc3",
+       "resultado_id": "ea293d-02",
+       "response_time_busca": 1.74,
+       "response_time_extracao": 0.03,
+       "consulta": "ChatGPT Plus costs $20 per month.",
+       "origem_principal": {
+        "id_operacao": "1630d1df-d230-4d12-b36d-ac151e442fa0",
+        "request_id": "fcdb0520-7a13-497c-b3f3-8e7813940dc3",
+        "modo_busca": "GERAL",
+        "resultado_id": "ea293d-02",
+        "parametros": {
+         "query": "ChatGPT Plus costs $20 per month.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "1630d1df-d230-4d12-b36d-ac151e442fa0",
+         "request_id": "fcdb0520-7a13-497c-b3f3-8e7813940dc3",
+         "modo_busca": "GERAL",
+         "resultado_id": "ea293d-02",
+         "parametros": {
+          "query": "ChatGPT Plus costs $20 per month.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": null,
+       "sinais_data": [
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 01:50:16 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://mrenterprises.fyi/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://mrenterprises.fyi/?ref=oneaipass",
+        "capturado_em": "2026-11-13T13:33:55.974Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "0260e032-d61d-47fc-adec-09acbfc3e8b7",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "791b7d40-c0e4-463b-b67d-52b3506000c9",
+      "id_verificacao": "8bbd11b0-cfb4-418b-bab7-9663879a9106",
+      "url_original": "https://oneaipass.com/pricing-costs/how-much-does-chatgpt-plus-cost-per-month",
+      "url_canonica": "https://oneaipass.com/pricing-costs/how-much-does-chatgpt-plus-cost-per-month",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "7e54890f6cd1b5fa3462e85eabaada4f059625a5e94c1638dfe0c3584f5839a4",
+      "coletado_em": "2026-11-13T13:33:55.037Z",
+      "id_operacao_busca": "1630d1df-d230-4d12-b36d-ac151e442fa0",
+      "id_operacao_extracao": "b86e2140-d49f-4346-a4dc-035ed113cd35",
+      "consulta": "ChatGPT Plus costs $20 per month.",
+      "parametros_busca": {
+       "query": "ChatGPT Plus costs $20 per month.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+        "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost",
+        "https://html.duckduckgo.com/html?q=%22ChatGPT+Plus%22+price+%2420+per+month+official+pricing",
+        "https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html",
+        "https://oneaipass.com/pricing-costs/how-much-does-chatgpt-plus-cost-per-month"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "fcdb0520-7a13-497c-b3f3-8e7813940dc3",
+       "operacoes_busca": [
+        {
+         "id_operacao": "1630d1df-d230-4d12-b36d-ac151e442fa0",
+         "request_id": "fcdb0520-7a13-497c-b3f3-8e7813940dc3",
+         "modo_busca": "GERAL",
+         "resultado_id": "ea293d-02",
+         "parametros": {
+          "query": "ChatGPT Plus costs $20 per month.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "0260e032-d61d-47fc-adec-09acbfc3e8b7",
+       "resultado_id": "ea293d-02",
+       "relevancia": 0.8697146,
+       "sinais_data": [
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 01:50:16 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://mrenterprises.fyi/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://mrenterprises.fyi/?ref=oneaipass",
+        "capturado_em": "2026-11-13T13:33:55.974Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "How much does ChatGPT Plus cost per month? | OneAIPass",
+      "url": "https://oneaipass.com/pricing-costs/how-much-does-chatgpt-plus-cost-per-month",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 2703,
+      "caracteres_preparados": 2703,
+      "trecho_analisado": "TÍTULO DA FONTE: How much does ChatGPT Plus cost per month? | OneAIPass\nURL DA FONTE: https://oneaipass.com/pricing-costs/how-much-does-chatgpt-plus-cost-per-month\n\nCONTEÚDO DA FONTE:\n[*O*OneAIPass](/)\n\n\n\n[OneAIPass](/) › [Pricing & Costs](/guides/pricing-costs/)\n\n# How much does ChatGPT Plus cost per month?\n\nUpdated October 2026 · [How we answer](/guides/methodology/)\n\n**Short answer**ChatGPT Plus costs $20 per month in the US. Prices vary by country and may include local taxes.\n\n## Standard Pricing\n\nAs of 2025, ChatGPT Plus is priced at $20 per month in the United States. This is the most common plan for individual users who want faster responses, priority access to new features, and higher usage limits compared to the free tier.\n\nIn other countries, the price is often adjusted for local markets. For example, in the UK it's around £16, in Europe about €20, and in India roughly ₹1,999. These prices may include VAT or other taxes, so the final amount can be slightly higher.\n\n* $20/month in the US\n* Prices vary by country (e.g., £16 in UK, €20 in EU)\n* Taxes may apply depending on your location\n* No annual discount for ChatGPT Plus\n\n## What You Get\n\nFor that monthly fee, you get acc",
+      "citacao_chave": "ChatGPT Plus costs $20 per month in the US.",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source confirms the $20/month price for ChatGPT Plus in the US."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The source confirms the $20/month price for ChatGPT Plus in the US."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "MISSING_SOURCE_DATE"
+     }
+    }
+   ],
+   "erro_busca": null,
+   "risco_desatualizacao": {
+    "nivel": "HIGH",
+    "sensivel_ao_tempo": true,
+    "motivos": [
+     "Prices change often (checked against a 30-day window)"
+    ]
+   },
+   "dominios_oficiais_usados": [],
+   "dominios_oficiais_automaticos": [],
+   "agregacao": {
+    "status": "CLASSIFICADO",
+    "conclusao_factual": {
+     "status": "APOIA",
+     "resumo": "As evidências utilizáveis apoiam a afirmação. Isso, por si só, não demonstra que ela continua válida agora."
+    },
+    "veredito": "CORROBORADA",
+    "resumo": "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
+    "afirmacao": "ChatGPT Plus costs $20 per month.",
+    "score_qualidade_evidencia": {
+     "valor": 38,
+     "escala": "0-100",
+     "natureza": "HEURISTICA",
+     "interpretacao": "Qualidade estrutural das evidências, não probabilidade de verdade.",
+     "componentes": {
+      "autoridade": 8,
+      "atualidade": 0,
+      "diversidade_fontes": 20,
+      "concordancia": 10
+     }
+    },
+    "freshness": {
+     "score": 0,
+     "status": "STALE",
+     "confidence": "LIMITED",
+     "algorithm_id": "CLAIM_FRESHNESS_SCORE",
+     "algorithm_version": "1.1.0",
+     "policy_id": "preco:30d:v1",
+     "as_of": "2026-11-13T13:33:47.798Z",
+     "evidence_summary": {
+      "received": 5,
+      "eligible": 1,
+      "independent_domains": 1,
+      "fresh": 0,
+      "stale": 1,
+      "excluded": 4
+     },
+     "drivers": [
+      {
+       "code": "ATTRIBUTE_DATED_STALE_EVIDENCE",
+       "evidence_id": null,
+       "date": "2023-02-01",
+       "age_days": 1381,
+       "posture": "SUPPORTS",
+       "domain": "html.duckduckgo.com",
+       "dependency_group": "source_cluster_003"
+      },
+      {
+       "code": "EVIDENCE_EXCLUDED_FROM_TEMPORAL_SCORE",
+       "count": 4
+      }
+     ],
+     "limitations": [
+      "Índice temporal determinístico; não é probabilidade de verdade.",
+      "Datas de página sem vínculo explícito ao atributo foram excluídas."
+     ]
+    },
+    "concordancia": {
+     "algorithm_id": "SOURCE_AGREEMENT_INDEX",
+     "algorithm_version": "1.1.0",
+     "weights": {
+      "OFICIAL": 3,
+      "ACADEMICO": 3,
+      "NOTICIA": 2,
+      "REFERENCIA": 1.5,
+      "OUTRO": 1,
+      "BLOG_FORUM": 0.25
+     },
+     "score": 100,
+     "coverage": "STRONG",
+     "independent_sources": 5,
+     "source_types": [
+      "OFICIAL",
+      "NOTICIA",
+      "OUTRO"
+     ],
+     "supporting": 5,
+     "authoritative_supporting": 1,
+     "contradicting": 0,
+     "split": 0,
+     "by_type": {
+      "OFICIAL": {
+       "supports": 1,
+       "contradicts": 0,
+       "split": 0
+      },
+      "NOTICIA": {
+       "supports": 2,
+       "contradicts": 0,
+       "split": 0
+      },
+      "OUTRO": {
+       "supports": 2,
+       "contradicts": 0,
+       "split": 0
+      }
+     },
+     "limitations": [
+      "Agreement between sources is not a probability of truth: sources can share the same mistake.",
+      "Copies and pages from the same site count once; independence is approximated by domain and text similarity."
+     ]
+    },
+    "recencia_pagina": {
+     "algorithm_id": "PAGE_DATE_RECENCY_INDEX",
+     "algorithm_version": "1.0.0",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "as_of": "2026-11-13T13:33:47.798Z",
+     "score": 0,
+     "status": "STALE",
+     "policy_id": "preco:30d:page:v1",
+     "newest_date": "2026-06-24",
+     "sources": [
+      {
+       "date": "2023-02-01",
+       "age_days": 1381,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "domain": "help.openai.com",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-04-30",
+       "age_days": 197,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "domain": "cloudzero.com",
+       "evidence_id": null
+      },
+      {
+       "date": "2023-02-01",
+       "age_days": 1381,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "domain": "html.duckduckgo.com",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-06-24",
+       "age_days": 142,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "domain": "essaydone.ai",
+       "evidence_id": null
+      }
+     ],
+     "limitations": [
+      "Baseado na data da página, não na data em que o dado específico mudou: confiança baixa.",
+      "Não substitui o índice de atualidade principal e não é probabilidade de verdade."
+     ]
+    },
+    "atualidade_afirmacao": {
+     "algorithm_id": "CLAIM_CURRENCY_SCORE",
+     "algorithm_version": "1.0.0",
+     "formula": "evidence_recency × support_share",
+     "window_days": 30,
+     "score": 0,
+     "status": "AGING",
+     "basis": "FACT_DATE",
+     "confidence": "MEDIUM",
+     "evidence_recency": 0,
+     "support_share": 1,
+     "newest_date": "2023-02-01",
+     "newest_age_days": 1381,
+     "within_window": false
+    },
+    "versao_regras": "1.2.0",
+    "metodo": "AGREGACAO_DETERMINISTICA",
+    "fontes_independentes": 5,
+    "grupos_distintos_de_evidencia": 5,
+    "dependencia_detectada": 0,
+    "dependencia_nao_verificada": true,
+    "nota_independencia": "Cópias exatas, quase duplicadas, URLs canônicas iguais e páginas do mesmo domínio são agrupadas; domínios sem sinal de cópia não têm independência editorial comprovada.",
+    "total_evidencias_utilizaveis": 5,
+    "fontes": [
+     {
+      "dominio": "help.openai.com",
+      "dominios": [
+       "help.openai.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_001",
+      "oficial": true,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus"
+      ],
+      "evidencias": [
+       {
+        "titulo": "What is ChatGPT Plus? | OpenAI Help Center",
+        "url": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+        "categoria_fonte": "OFICIAL",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:33:55.037Z",
+        "data_publicacao": "2023-02-01",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Wed, 01 Feb 2023 00:00:00 GMT",
+          "value_normalized": "2023-02-01",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_001",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "cloudzero.com",
+      "dominios": [
+       "cloudzero.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_002",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost"
+      ],
+      "evidencias": [
+       {
+        "titulo": "How Much Does ChatGPT Cost? All Plan & Pricing Tiers Explained",
+        "url": "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost",
+        "categoria_fonte": "NOTICIA",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:33:55.037Z",
+        "data_publicacao": "2026-04-30",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Thu, 30 Apr 2026 14:19:32 GMT",
+          "value_normalized": "2026-04-30",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2026-04-30T14:19:32+00:00",
+          "value_normalized": "2026-04-30",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "ARTICLE_MODIFIED_TIME",
+          "field": "article:modified_time",
+          "value_original": "2026-10-21T12:43:41+00:00",
+          "value_normalized": "2026-10-21",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-04-30T14:19:32+00:00",
+          "value_normalized": "2026-04-30",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-10-21T12:43:41+00:00",
+          "value_normalized": "2026-10-21",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Last updated",
+          "value_original": "October 21, 2026",
+          "value_normalized": "2026-10-21",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Last updated",
+          "value_original": "August 20, 2026",
+          "value_normalized": "2026-08-20",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_002",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "html.duckduckgo.com",
+      "dominios": [
+       "html.duckduckgo.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_003",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://html.duckduckgo.com/html?q=%22ChatGPT+Plus%22+price+%2420+per+month+official+pricing"
+      ],
+      "evidencias": [
+       {
+        "titulo": "\"ChatGPT Plus\" price $20 per month official pricing at DuckDuckGo",
+        "url": "https://html.duckduckgo.com/html?q=%22ChatGPT+Plus%22+price+%2420+per+month+official+pricing",
+        "categoria_fonte": "OUTRO",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:33:55.037Z",
+        "data_publicacao": null,
+        "data_atualizacao": "2023-02-01",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [],
+        "grupo_dependencia_id": "source_cluster_003",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "essaydone.ai",
+      "dominios": [
+       "essaydone.ai"
+      ],
+      "grupo_dependencia_id": "source_cluster_004",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html"
+      ],
+      "evidencias": [
+       {
+        "titulo": "What is ChatGPT Plus? Worth the $20 or Stick to Free?",
+        "url": "https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html",
+        "categoria_fonte": "NOTICIA",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:33:55.037Z",
+        "data_publicacao": "2026-06-24",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Wed, 24 Jun 2026 00:00:00 GMT",
+          "value_normalized": "2026-06-24",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Wed, 11 Nov 2026 13:50:56 GMT",
+          "value_normalized": "2026-11-11",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_004",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "oneaipass.com",
+      "dominios": [
+       "oneaipass.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_005",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://oneaipass.com/pricing-costs/how-much-does-chatgpt-plus-cost-per-month"
+      ],
+      "evidencias": [
+       {
+        "titulo": "How much does ChatGPT Plus cost per month? | OneAIPass",
+        "url": "https://oneaipass.com/pricing-costs/how-much-does-chatgpt-plus-cost-per-month",
+        "categoria_fonte": "OUTRO",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "UNVERIFIABLE",
+        "status_datas_declaradas": "AUSENTE",
+        "consultado_em": "2026-11-13T13:33:55.037Z",
+        "data_publicacao": null,
+        "data_atualizacao": null,
+        "escopo_data": "UNKNOWN",
+        "sinais_data": [
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Fri, 13 Nov 2026 01:50:16 GMT",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://mrenterprises.fyi/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_005",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     }
+    ],
+    "limitacoes": [
+     "Nenhuma evidência possui data verificável e status de atualidade FRESH.",
+     "Uma data da página ou do resultado de busca não comprova quando o atributo da afirmação foi publicado ou atualizado.",
+     "A data da consulta registra quando a página foi observada; não substitui uma data declarada de publicação ou atualização.",
+     "Domínios sem sinal detectado de duplicação não têm independência editorial comprovada; republicação com edição extensa ainda pode passar despercebida."
+    ],
+    "avaliado_em": "2026-11-13T13:33:58.474Z"
+   }
+  }
+ ],
+ "afirmacoes_omitidas": [],
+ "resposta_corrigida": {
+  "texto": "ChatGPT Plus costs $20 per month [1][2][3].",
+  "mudancas": [
+   {
+    "claim_id": "afirmacao_1",
+    "what": "kept"
+   }
+  ],
+  "fontes_citadas": [
+   1,
+   2,
+   3
+  ],
+  "tentativas": 1,
+  "citacoes_anexadas": false,
+  "fontes": [
+   {
+    "n": 1,
+    "url": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+    "titulo": "What is ChatGPT Plus? | OpenAI Help Center",
+    "tipo": "OFICIAL",
+    "postura": "SUPPORTS",
+    "data": "2023-02-01"
+   },
+   {
+    "n": 2,
+    "url": "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost",
+    "titulo": "How Much Does ChatGPT Cost? All Plan & Pricing Tiers Explained",
+    "tipo": "NOTICIA",
+    "postura": "SUPPORTS",
+    "data": "2026-04-30"
+   },
+   {
+    "n": 3,
+    "url": "https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html",
+    "titulo": "What is ChatGPT Plus? Worth the $20 or Stick to Free?",
+    "tipo": "NOTICIA",
+    "postura": "SUPPORTS",
+    "data": "2026-06-24"
+   }
+  ],
+  "metodo": "MODEL_REWRITE_FROM_VERIFIED_EVIDENCE"
+ },
+ "rastreabilidade_modelo": [
+  {
+   "id_chamada": "410fb33d-b282-4a71-926d-44d6088da461",
+   "id_requisicao_enviada": "f2ff15b0-9d9b-48e5-8905-85e4154d0931",
+   "id_verificacao": "8bbd11b0-cfb4-418b-bab7-9663879a9106",
+   "etapa": "DECOMPOSICAO",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 416,
+   "tokens": {
+    "entrada": 839,
+    "saida": 100,
+    "total": 939
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "f2ff15b0-9d9b-48e5-8905-85e4154d0931",
+   "id_trace": "c58f3969a300478993bf2f11ad2ef2e3",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 416.506,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:33:47.803Z"
+  },
+  {
+   "id_chamada": "5bc09b8a-679b-4284-b387-9c7bf43aa02e",
+   "id_requisicao_enviada": "d4177141-14f4-4254-b12b-f7a5524e583c",
+   "id_verificacao": "8bbd11b0-cfb4-418b-bab7-9663879a9106",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 2411,
+   "tokens": {
+    "entrada": 3893,
+    "saida": 1583,
+    "total": 5476
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "d4177141-14f4-4254-b12b-f7a5524e583c",
+   "id_trace": "cc2ec81bfd5a407f8b0e6ac1abd1b4c5",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 2411.955,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:33:56.001Z"
+  },
+  {
+   "id_chamada": "76953f6c-7933-4c25-b266-9ca42b392306",
+   "id_requisicao_enviada": "ceeb5f82-d39c-4d78-bcd0-e7d7749a493e",
+   "id_verificacao": "8bbd11b0-cfb4-418b-bab7-9663879a9106",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 810,
+   "tokens": {
+    "entrada": 849,
+    "saida": 234,
+    "total": 1083
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "ceeb5f82-d39c-4d78-bcd0-e7d7749a493e",
+   "id_trace": "74ddd35b05874e4ba611367527647588",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 845.432,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:33:58.474Z"
+  }
+ ],
+ "rastreabilidade_pesquisa": [
+  {
+   "id_operacao": "1630d1df-d230-4d12-b36d-ac151e442fa0",
+   "id_verificacao": "8bbd11b0-cfb4-418b-bab7-9663879a9106",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "ChatGPT Plus costs $20 per month.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:33:48.340Z",
+   "finalizada_em": "2026-11-13T13:33:50.540Z",
+   "duracao_ms": 2200,
+   "request_id": "fcdb0520-7a13-497c-b3f3-8e7813940dc3",
+   "response_time": 1.74,
+   "erro": null,
+   "modo_busca": "GERAL",
+   "parametros": {
+    "query": "ChatGPT Plus costs $20 per month.",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "f86b4b-00",
+     "titulo": "How Much Does ChatGPT Cost? All Plan & Pricing Tiers Explained",
+     "url": "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost",
+     "relevancia": 0.87212974,
+     "data_publicacao": "2026-04-30"
+    },
+    {
+     "resultado_id": "a3af87-01",
+     "titulo": "\"ChatGPT Plus\" price $20 per month official pricing at DuckDuckGo",
+     "url": "https://html.duckduckgo.com/html?q=%22ChatGPT+Plus%22+price+%2420+per+month+official+pricing",
+     "relevancia": 0.87037706,
+     "data_publicacao": null
+    },
+    {
+     "resultado_id": "ea293d-02",
+     "titulo": "How much does ChatGPT Plus cost per month? | OneAIPass",
+     "url": "https://oneaipass.com/pricing-costs/how-much-does-chatgpt-plus-cost-per-month",
+     "relevancia": 0.8697146,
+     "data_publicacao": null
+    },
+    {
+     "resultado_id": "894082-03",
+     "titulo": "ChatGPT Plus Cost: Is It Worth $20?",
+     "url": "https://insights.terabox.com/hub/how-much-does-chatgpt-plus-cost-and-is-the-20-monthly-fee-still-worth-it",
+     "relevancia": 0.8665848,
+     "data_publicacao": null
+    },
+    {
+     "resultado_id": "2c9d51-04",
+     "titulo": "What is ChatGPT Plus? | OpenAI Help Center",
+     "url": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+     "relevancia": 0.8596637,
+     "data_publicacao": "2023-02-01"
+    }
+   ]
+  },
+  {
+   "id_operacao": "1704e0ca-00ce-4c9a-98ce-129a82944f5d",
+   "id_verificacao": "8bbd11b0-cfb4-418b-bab7-9663879a9106",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "ChatGPT Plus costs $20 per month.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:33:50.540Z",
+   "finalizada_em": "2026-11-13T13:33:54.434Z",
+   "duracao_ms": 3894,
+   "request_id": "6569a8a3-9b57-472c-8a4c-7e9f0fdb7e38",
+   "response_time": 3.45,
+   "erro": null,
+   "modo_busca": "NOTICIAS",
+   "parametros": {
+    "query": "ChatGPT Plus costs $20 per month.",
+    "search_depth": "basic",
+    "max_results": 4,
+    "include_answer": false,
+    "include_published_date": true,
+    "topic": "news"
+   },
+   "quantidade_resultados": 4,
+   "resultados": [
+    {
+     "resultado_id": "656770-00",
+     "titulo": "How Much Does ChatGPT Cost? All Plan & Pricing Tiers Explained",
+     "url": "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost",
+     "relevancia": 0.87212974,
+     "data_publicacao": "2026-04-30"
+    },
+    {
+     "resultado_id": "e846a9-01",
+     "titulo": "What is ChatGPT Plus? Worth the $20 or Stick to Free?",
+     "url": "https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html",
+     "relevancia": 0.8715842,
+     "data_publicacao": "2026-06-24"
+    },
+    {
+     "resultado_id": "699e04-02",
+     "titulo": "ChatGPT Plus price and limits: what you get · SSD Nodes",
+     "url": "https://www.ssdnodes.com/learn/chatgpt-plus-price-and-limits",
+     "relevancia": 0.8711464,
+     "data_publicacao": "2026-11-04"
+    },
+    {
+     "resultado_id": "e30d89-03",
+     "titulo": "ChatGPT Pricing 2026: Plus Price and Every Plan · Magai",
+     "url": "https://magai.co/chatgpt-pricing",
+     "relevancia": 0.86916035,
+     "data_publicacao": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "id_operacao": "b86e2140-d49f-4346-a4dc-035ed113cd35",
+   "id_verificacao": "8bbd11b0-cfb4-418b-bab7-9663879a9106",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "EXTRACAO",
+   "consulta": "ChatGPT Plus costs $20 per month.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:33:54.441Z",
+   "finalizada_em": "2026-11-13T13:33:55.037Z",
+   "duracao_ms": 596,
+   "request_id": "0260e032-d61d-47fc-adec-09acbfc3e8b7",
+   "response_time": 0.03,
+   "erro": null,
+   "urls_solicitadas": [
+    "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+    "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost",
+    "https://html.duckduckgo.com/html?q=%22ChatGPT+Plus%22+price+%2420+per+month+official+pricing",
+    "https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html",
+    "https://oneaipass.com/pricing-costs/how-much-does-chatgpt-plus-cost-per-month"
+   ],
+   "parametros": {
+    "urls": [
+     "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+     "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost",
+     "https://html.duckduckgo.com/html?q=%22ChatGPT+Plus%22+price+%2420+per+month+official+pricing",
+     "https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html",
+     "https://oneaipass.com/pricing-costs/how-much-does-chatgpt-plus-cost-per-month"
+    ],
+    "extract_depth": "basic",
+    "format": "markdown",
+    "include_images": false
+   },
+   "quantidade_resultados": 5,
+   "urls_extraidas": [
+    "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+    "https://www.cloudzero.com/blog/how-much-does-chatgpt-cost",
+    "https://html.duckduckgo.com/html?q=%22ChatGPT+Plus%22+price+%2420+per+month+official+pricing",
+    "https://www.essaydone.ai/chatgpt-hub/what-is-chatgpt-plus.html",
+    "https://oneaipass.com/pricing-costs/how-much-does-chatgpt-plus-cost-per-month"
+   ]
+  }
+ ],
+ "modo": "real",
+ "simulado": false,
+ "gateway": {
+  "gateway": "bifrost",
+  "chamadas": 3,
+  "falhas": 0,
+  "cadeia_modelos": [
+   "groq/openai/gpt-oss-20b",
+   "groq/openai/gpt-oss-120b"
+  ],
+  "queda_simulada": false,
+  "respostas_por_modelo": [
+   {
+    "modelo": "groq/openai/gpt-oss-20b",
+    "chamadas": 2
+   },
+   {
+    "modelo": "groq/openai/gpt-oss-120b",
+    "chamadas": 1
+   }
+  ],
+  "respostas_de_reserva": 1,
+  "tokens_total": 7498,
+  "latencia_media_ms": 1225
+ },
+ "duracao_ms": 11586,
+ "gravado_em": "2026-11-13T13:33:59.367Z"
+}

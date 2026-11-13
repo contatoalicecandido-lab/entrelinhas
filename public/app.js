@@ -203,6 +203,7 @@ function configurarFavorito() {
   link.setAttribute("href", `javascript:${codigo}`);
   link.addEventListener("click", e => { e.preventDefault(); mostrarMensagem("Drag this button to your bookmarks bar, then use it on any page with an AI answer."); });
   $("favorito-destino").textContent = destino;
+  if ($("favorito-aviso")) $("favorito-aviso").hidden = !API.estatico;
 }
 
 function montarLegenda() {

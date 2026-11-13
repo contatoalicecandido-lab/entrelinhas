@@ -1,0 +1,2245 @@
+{
+ "sistema": "Entrelinhas",
+ "id_verificacao": "44ef9373-4de1-405f-a770-d40ce670fc7b",
+ "texto_original": "O salário mínimo em 2026 é de R$ 1.621.",
+ "verificado_em": "2026-11-13T13:22:43.666Z",
+ "total_afirmacoes": 1,
+ "sintese": {
+  "veredito": "CORROBORADA",
+  "resumo": "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
+  "total_afirmacoes": 1,
+  "contagem_vereditos": {
+   "CORROBORADA": 1
+  }
+ },
+ "afirmacoes": [
+  {
+   "id": "afirmacao_1",
+   "texto": "O salário mínimo em 2026 é de R$ 1.621.",
+   "tipo_afirmacao": "regulamento",
+   "origem_tipo_afirmacao": "MODELO",
+   "nuances": {
+    "idioma": "pt",
+    "variante": "pt-BR",
+    "confianca_idioma": 1,
+    "valores": [
+     {
+      "tipo": "MONETARIO",
+      "texto": "R$ 1.621",
+      "valor": 1621,
+      "moeda": "BRL",
+      "periodo": null,
+      "qualificador": null
+     }
+    ],
+    "datas": [],
+    "expressoes_temporais": [],
+    "condicoes": [],
+    "mudancas": [],
+    "tempo_coloquial": [],
+    "girias": {
+     "aliases": [],
+     "expressoes": []
+    },
+    "consulta_busca": "O salário mínimo em 2026 é de R$ 1.621.",
+    "dominios_oficiais_sugeridos": [
+     "gov.br"
+    ],
+    "autoridades": [
+     {
+      "dominio": "gov.br",
+      "autoridade": "Federal government (gov.br)",
+      "termo": "salário mínimo"
+     }
+    ],
+    "notas": [
+     "\"R$ 1.621\" uses Brazilian number format: BRL 1,621.00.",
+     "\"salário mínimo\" points to a Brazilian authority: Federal government (gov.br) (gov.br) is searched as an official source."
+    ]
+   },
+   "evidencias": [
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "Salário mínimo de R$ 1.621 começa a ser pago nesta segunda-feira - Estadão",
+      "url": "https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr",
+      "conteudo": "[Jornal do Carro](/jornal-do-carro)[TecMundo](/tecmundo)[E-Investidor](/einvestidor)[Pulsa](/pulsa)[Paladar](/paladar)[Descubra](/descubra)[Assine](https://www.estadao.com.br/assine/?sub-canal=botao&componente=menu-swipe)\n\n[Hoje](https://www.estadao.com.br/ \"Hoje\")[JC](https://www.estadao.com.br/jornal-do-carro/ \"JC\")[TecMundo](https://www.estadao.com.br/tecmundo/ \"TecMundo\")[E-Investidor](https://www.estadao.com.br/einvestidor \"E-Investidor\")[Pulsa](https://www.estadao.com.br/pulsa/ \"Pulsa\")[Paladar](https://www.estadao.com.br/paladar/ \"Paladar\")[Descubra](https://www.estadao.com.br/descubra/ \"Descubra\")[Assine](https://www.estadao.com.br/assine/?sub-canal=botao&componente=menu-swipe \"Assin…",
+      "coletado_em": "2026-11-13T13:22:37.440Z",
+      "data_publicacao": "2026-02-02",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr/",
+      "relevancia": 0.85195273,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "4350c8c5-560b-42e9-b9c1-1cceada9e36c",
+       "resultado_id": "801c9e-00",
+       "response_time_busca": 1.43,
+       "response_time_extracao": 0.03,
+       "consulta": "O salário mínimo em 2026 é de R$ 1.621.",
+       "origem_principal": {
+        "id_operacao": "240f4b31-18b6-40e2-9ba8-860ee9e8f27a",
+        "request_id": "4350c8c5-560b-42e9-b9c1-1cceada9e36c",
+        "modo_busca": "GERAL",
+        "resultado_id": "801c9e-00",
+        "parametros": {
+         "query": "O salário mínimo em 2026 é de R$ 1.621.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "240f4b31-18b6-40e2-9ba8-860ee9e8f27a",
+         "request_id": "4350c8c5-560b-42e9-b9c1-1cceada9e36c",
+         "modo_busca": "GERAL",
+         "resultado_id": "801c9e-00",
+         "parametros": {
+          "query": "O salário mínimo em 2026 é de R$ 1.621.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Mon, 02 Feb 2026 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 02 Feb 2026 00:00:00 GMT",
+         "value_normalized": "2026-02-02",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 13:22:38 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-02-02T17:34:45-03:00",
+         "value_normalized": "2026-02-02",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-02-02T17:34:45-03:00",
+         "value_normalized": "2026-02-02",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr/",
+        "capturado_em": "2026-11-13T13:22:38.676Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "bb887f30-4147-470a-ad5c-5616b8af6e0c",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "414b9f2c-ef22-4902-8e2f-3ad9e04a2746",
+      "id_verificacao": "44ef9373-4de1-405f-a770-d40ce670fc7b",
+      "url_original": "https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr",
+      "url_canonica": "https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "03f053780438579c7761801a03ed429f387b7b7f5c2e5371652774e0e7efe207",
+      "coletado_em": "2026-11-13T13:22:37.440Z",
+      "id_operacao_busca": "240f4b31-18b6-40e2-9ba8-860ee9e8f27a",
+      "id_operacao_extracao": "9695e87a-d9f6-4632-ba54-460c9e9ee294",
+      "consulta": "O salário mínimo em 2026 é de R$ 1.621.",
+      "parametros_busca": {
+       "query": "O salário mínimo em 2026 é de R$ 1.621.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr",
+        "https://www.ieprev.com.br/noticias/novo-salario-minimo-de-2026-sera-de-r-1621-veja-o-que-muda-no-inss",
+        "https://g1.globo.com/economia/noticia/2026/01/01/salario-minimo-de-r-1621-comeca-a-valer-nesta-quinta-1o-veja-o-que-muda-e-como-o-valor-foi-calculado.ghtml",
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda",
+        "https://exame.com/invest/minhas-financas/aposentadoria-e-salario-minimo-o-brasileiro-consegue-comprar-mais-do-que-ha-20-anos"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "4350c8c5-560b-42e9-b9c1-1cceada9e36c",
+       "operacoes_busca": [
+        {
+         "id_operacao": "240f4b31-18b6-40e2-9ba8-860ee9e8f27a",
+         "request_id": "4350c8c5-560b-42e9-b9c1-1cceada9e36c",
+         "modo_busca": "GERAL",
+         "resultado_id": "801c9e-00",
+         "parametros": {
+          "query": "O salário mínimo em 2026 é de R$ 1.621.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "bb887f30-4147-470a-ad5c-5616b8af6e0c",
+       "resultado_id": "801c9e-00",
+       "relevancia": 0.85195273,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 02 Feb 2026 00:00:00 GMT",
+         "value_normalized": "2026-02-02",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 13:22:38 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-02-02T17:34:45-03:00",
+         "value_normalized": "2026-02-02",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-02-02T17:34:45-03:00",
+         "value_normalized": "2026-02-02",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr/",
+        "capturado_em": "2026-11-13T13:22:38.676Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Salário mínimo de R$ 1.621 começa a ser pago nesta segunda-feira - Estadão",
+      "url": "https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 7717,
+      "caracteres_preparados": 7717,
+      "trecho_analisado": "TÍTULO DA FONTE: Salário mínimo de R$ 1.621 começa a ser pago nesta segunda-feira - Estadão\nURL DA FONTE: https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr\n\nCONTEÚDO DA FONTE:\n[Jornal do Carro](/jornal-do-carro)[TecMundo](/tecmundo)[E-Investidor](/einvestidor)[Pulsa](/pulsa)[Paladar](/paladar)[Descubra](/descubra)[Assine](https://www.estadao.com.br/assine/?sub-canal=botao&componente=menu-swipe)\n\n[Hoje](https://www.estadao.com.br/ \"Hoje\")[JC](https://www.estadao.com.br/jornal-do-carro/ \"JC\")[TecMundo](https://www.estadao.com.br/tecmundo/ \"TecMundo\")[E-Investidor](https://www.estadao.com.br/einvestidor \"E-Investidor\")[Pulsa](https://www.estadao.com.br/pulsa/ \"Pulsa\")[Paladar](https://www.estadao.com.br/paladar/ \"Paladar\")[Descubra](https://www.estadao.com.br/descubra/ \"Descubra\")[Assine](https://www.estadao.com.br/assine/?sub-canal=botao&componente=menu-swipe \"Assine\")\n\n[Economia](https://www.estadao.com.br/economia/ \"Economia\")\n\n# Salário mínimo de R$ 1.621 começa a ser pago nesta segunda-feira\n\n## Novo salário mínimo impacta 61,9 milhões de brasileiros e deve injetar R$ 81,7 bilhões na economia em 2026\n\nPUBLICIDADE\n\n![Foto do autor Reda",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The article states that the 2026 minimum wage is fixed at R$ 1.621."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The article states that the 2026 minimum wage is fixed at R$ 1.621."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 284,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2026-02-02"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Novo salário mínimo de 2026 será de R$ 1.621: veja o que muda no INSS | IEPREV",
+      "url": "https://www.ieprev.com.br/noticias/novo-salario-minimo-de-2026-sera-de-r-1621-veja-o-que-muda-no-inss",
+      "conteudo": "[Pular para o conteúdo](#conteudo)\n\n\n[![IEPREV — Instituto de Estudos Previdenciários](/assets/logo-ieprev-color.svg)](/)\n\n[Entrar no PRO](https://app.ieprev.com.br/auth)[Assinar PRO ↗](https://app.ieprev.com.br/auth/onboarding)\n\n\n\nNotícias · DIREITO PREVIDENCIÁRIO\n\n# Novo salário mínimo de 2026 será de R$ 1.621: veja o que muda no INSS\n\nSalário mínimo de 2026 sobe para R$ 1.621: veja o impacto imediato no INSS e benefícios\n\n![](/assets/media/245325279d3716b109.webp)\n\n**Equipe IEPREV** · 1 min de leitura\n\nNeste conteúdo[Impactos no INSS e benefícios](#secao-1)[Conclusão](#secao-2)\n\nO governo federal confirmou que **o salário mínimo em 2026 será de R$ 1.621**, um aumento de cerca de **R$ 103 …",
+      "coletado_em": "2026-11-13T13:22:37.440Z",
+      "data_publicacao": "2025-12-11",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www.ieprev.com.br/noticias/novo-salario-minimo-de-2026-sera-de-r-1621-veja-o-que-muda-no-inss",
+      "relevancia": 0.8498466,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "4350c8c5-560b-42e9-b9c1-1cceada9e36c",
+       "resultado_id": "a63605-01",
+       "response_time_busca": 1.43,
+       "response_time_extracao": 0.03,
+       "consulta": "O salário mínimo em 2026 é de R$ 1.621.",
+       "origem_principal": {
+        "id_operacao": "240f4b31-18b6-40e2-9ba8-860ee9e8f27a",
+        "request_id": "4350c8c5-560b-42e9-b9c1-1cceada9e36c",
+        "modo_busca": "GERAL",
+        "resultado_id": "a63605-01",
+        "parametros": {
+         "query": "O salário mínimo em 2026 é de R$ 1.621.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "240f4b31-18b6-40e2-9ba8-860ee9e8f27a",
+         "request_id": "4350c8c5-560b-42e9-b9c1-1cceada9e36c",
+         "modo_busca": "GERAL",
+         "resultado_id": "a63605-01",
+         "parametros": {
+          "query": "O salário mínimo em 2026 é de R$ 1.621.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Thu, 11 Dec 2025 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 11 Dec 2025 00:00:00 GMT",
+         "value_normalized": "2025-12-11",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Thu, 12 Nov 2026 13:39:08 GMT",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.ieprev.com.br/noticias/novo-salario-minimo-de-2026-sera-de-r-1621-veja-o-que-muda-no-inss",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2025-12-11",
+         "value_normalized": "2025-12-11",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2025-12-11",
+         "value_normalized": "2025-12-11",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.ieprev.com.br/noticias/novo-salario-minimo-de-2026-sera-de-r-1621-veja-o-que-muda-no-inss",
+        "capturado_em": "2026-11-13T13:22:36.218Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "bb887f30-4147-470a-ad5c-5616b8af6e0c",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "bab3efe1-328d-46c3-859a-e96d3240bfd2",
+      "id_verificacao": "44ef9373-4de1-405f-a770-d40ce670fc7b",
+      "url_original": "https://www.ieprev.com.br/noticias/novo-salario-minimo-de-2026-sera-de-r-1621-veja-o-que-muda-no-inss",
+      "url_canonica": "https://www.ieprev.com.br/noticias/novo-salario-minimo-de-2026-sera-de-r-1621-veja-o-que-muda-no-inss",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "9da81553368d0025044ea03b0bb576cfd08767bece988ae55a4993abf388e750",
+      "coletado_em": "2026-11-13T13:22:37.440Z",
+      "id_operacao_busca": "240f4b31-18b6-40e2-9ba8-860ee9e8f27a",
+      "id_operacao_extracao": "9695e87a-d9f6-4632-ba54-460c9e9ee294",
+      "consulta": "O salário mínimo em 2026 é de R$ 1.621.",
+      "parametros_busca": {
+       "query": "O salário mínimo em 2026 é de R$ 1.621.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr",
+        "https://www.ieprev.com.br/noticias/novo-salario-minimo-de-2026-sera-de-r-1621-veja-o-que-muda-no-inss",
+        "https://g1.globo.com/economia/noticia/2026/01/01/salario-minimo-de-r-1621-comeca-a-valer-nesta-quinta-1o-veja-o-que-muda-e-como-o-valor-foi-calculado.ghtml",
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda",
+        "https://exame.com/invest/minhas-financas/aposentadoria-e-salario-minimo-o-brasileiro-consegue-comprar-mais-do-que-ha-20-anos"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "4350c8c5-560b-42e9-b9c1-1cceada9e36c",
+       "operacoes_busca": [
+        {
+         "id_operacao": "240f4b31-18b6-40e2-9ba8-860ee9e8f27a",
+         "request_id": "4350c8c5-560b-42e9-b9c1-1cceada9e36c",
+         "modo_busca": "GERAL",
+         "resultado_id": "a63605-01",
+         "parametros": {
+          "query": "O salário mínimo em 2026 é de R$ 1.621.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "bb887f30-4147-470a-ad5c-5616b8af6e0c",
+       "resultado_id": "a63605-01",
+       "relevancia": 0.8498466,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 11 Dec 2025 00:00:00 GMT",
+         "value_normalized": "2025-12-11",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Thu, 12 Nov 2026 13:39:08 GMT",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.ieprev.com.br/noticias/novo-salario-minimo-de-2026-sera-de-r-1621-veja-o-que-muda-no-inss",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2025-12-11",
+         "value_normalized": "2025-12-11",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2025-12-11",
+         "value_normalized": "2025-12-11",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.ieprev.com.br/noticias/novo-salario-minimo-de-2026-sera-de-r-1621-veja-o-que-muda-no-inss",
+        "capturado_em": "2026-11-13T13:22:36.218Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Novo salário mínimo de 2026 será de R$ 1.621: veja o que muda no INSS | IEPREV",
+      "url": "https://www.ieprev.com.br/noticias/novo-salario-minimo-de-2026-sera-de-r-1621-veja-o-que-muda-no-inss",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 5012,
+      "caracteres_preparados": 5012,
+      "trecho_analisado": "TÍTULO DA FONTE: Novo salário mínimo de 2026 será de R$ 1.621: veja o que muda no INSS | IEPREV\nURL DA FONTE: https://www.ieprev.com.br/noticias/novo-salario-minimo-de-2026-sera-de-r-1621-veja-o-que-muda-no-inss\n\nCONTEÚDO DA FONTE:\n[Pular para o conteúdo](#conteudo)\n\n\n[![IEPREV — Instituto de Estudos Previdenciários](/assets/logo-ieprev-color.svg)](/)\n\n[Entrar no PRO](https://app.ieprev.com.br/auth)[Assinar PRO ↗](https://app.ieprev.com.br/auth/onboarding)\n\n\n\nNotícias · DIREITO PREVIDENCIÁRIO\n\n# Novo salário mínimo de 2026 será de R$ 1.621: veja o que muda no INSS\n\nSalário mínimo de 2026 sobe para R$ 1.621: veja o impacto imediato no INSS e benefícios\n\n![](/assets/media/245325279d3716b109.webp)\n\n**Equipe IEPREV** · 1 min de leitura\n\nNeste conteúdo[Impactos no INSS e benefícios](#secao-1)[Conclusão](#secao-2)\n\nO governo federal confirmou que **o salário mínimo em 2026 será de R$ 1.621**, um aumento de cerca de **R$ 103 em relação ao piso atual de R$ 1.518**, com reajuste de aproximadamente **6,7%**. O novo valor entra **em vigor em 1º de janeiro de 2026**, com pagamentos a partir do calendário do próximo ano.\n\nEsse reajuste considera a inflação acumulada pelo INPC e a regra de ganho",
+      "citacao_chave": "o salário mínimo em 2026 será de R$ 1.621",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "It explicitly confirms the 2026 minimum wage will be R$ 1.621."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "It explicitly confirms the 2026 minimum wage will be R$ 1.621."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 337,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2025-12-11"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "Salário mínimo de R$ 1.621 começa a valer nesta quinta; veja o que muda e como o valor foi calculado | G1",
+      "url": "https://g1.globo.com/economia/noticia/2026/01/01/salario-minimo-de-r-1621-comeca-a-valer-nesta-quinta-1o-veja-o-que-muda-e-como-o-valor-foi-calculado.ghtml",
+      "conteudo": "[Pular para o conteúdo](#)\n\n  \n\nMoedas\n\n**Dólar Comercial**\n\nR$ 5,073\n\n**Dólar Turismo**\n\nR$ 5,273\n\n**Euro Comercial**\n\nR$ 5,702\n\n**Euro Turismo**\n\nR$ 5,935\n\n0,05%\n\nB3\n\n**Ibovespa**\n\n205.430 pts\n\n0,54%\n\nMoedas\n\n**Dólar Comercial**\n\nR$ 5,073\n\n-0,28%\n\n**Dólar Turismo**\n\nR$ 5,273\n\n-0,14%\n\n**Euro Comercial**\n\nR$ 5,702\n\n-0,06%\n\n**Euro Turismo**\n\nR$ 5,935\n\n0,05%\n\nB3\n\n**Ibovespa**\n\n205.430 pts\n\n0,54%\n\nMoedas\n\n**Dólar Comercial**\n\nR$ 5,073\n\n-0,28%\n\n**Dólar Turismo**\n\nR$ 5,273\n\n-0,14%\n\n**Euro Comercial**\n\nR$ 5,702\n\n-0,06%\n\n**Euro Turismo**\n\nR$ 5,935\n\n0,05%\n\nB3\n\n**Ibovespa**\n\n205.430 pts\n\n0,54%\n\nOferecido por\n\n# Salário mínimo de R$ 1.621 começa a valer nesta quinta; veja o que muda e como o valor foi…",
+      "coletado_em": "2026-11-13T13:22:37.440Z",
+      "data_publicacao": "2026-01-01",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": null,
+      "relevancia": 0.83999664,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "4350c8c5-560b-42e9-b9c1-1cceada9e36c",
+       "resultado_id": "80f108-03",
+       "response_time_busca": 1.43,
+       "response_time_extracao": 0.03,
+       "consulta": "O salário mínimo em 2026 é de R$ 1.621.",
+       "origem_principal": {
+        "id_operacao": "240f4b31-18b6-40e2-9ba8-860ee9e8f27a",
+        "request_id": "4350c8c5-560b-42e9-b9c1-1cceada9e36c",
+        "modo_busca": "GERAL",
+        "resultado_id": "80f108-03",
+        "parametros": {
+         "query": "O salário mínimo em 2026 é de R$ 1.621.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "240f4b31-18b6-40e2-9ba8-860ee9e8f27a",
+         "request_id": "4350c8c5-560b-42e9-b9c1-1cceada9e36c",
+         "modo_busca": "GERAL",
+         "resultado_id": "80f108-03",
+         "parametros": {
+          "query": "O salário mínimo em 2026 é de R$ 1.621.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Thu, 01 Jan 2026 12:14:34 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 01 Jan 2026 12:14:34 GMT",
+         "value_normalized": "2026-01-01",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "BODY_TOO_LARGE",
+        "detalhe": "SOURCE_BODY_TOO_LARGE",
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "bb887f30-4147-470a-ad5c-5616b8af6e0c",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "15754533-f21f-47df-9976-18a0c8e29110",
+      "id_verificacao": "44ef9373-4de1-405f-a770-d40ce670fc7b",
+      "url_original": "https://g1.globo.com/economia/noticia/2026/01/01/salario-minimo-de-r-1621-comeca-a-valer-nesta-quinta-1o-veja-o-que-muda-e-como-o-valor-foi-calculado.ghtml",
+      "url_canonica": "https://g1.globo.com/economia/noticia/2026/01/01/salario-minimo-de-r-1621-comeca-a-valer-nesta-quinta-1o-veja-o-que-muda-e-como-o-valor-foi-calculado.ghtml",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "b505ed94328740d5cad334914e04ea3dcad59135471e6ac6b0123d75eb9eca32",
+      "coletado_em": "2026-11-13T13:22:37.440Z",
+      "id_operacao_busca": "240f4b31-18b6-40e2-9ba8-860ee9e8f27a",
+      "id_operacao_extracao": "9695e87a-d9f6-4632-ba54-460c9e9ee294",
+      "consulta": "O salário mínimo em 2026 é de R$ 1.621.",
+      "parametros_busca": {
+       "query": "O salário mínimo em 2026 é de R$ 1.621.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr",
+        "https://www.ieprev.com.br/noticias/novo-salario-minimo-de-2026-sera-de-r-1621-veja-o-que-muda-no-inss",
+        "https://g1.globo.com/economia/noticia/2026/01/01/salario-minimo-de-r-1621-comeca-a-valer-nesta-quinta-1o-veja-o-que-muda-e-como-o-valor-foi-calculado.ghtml",
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda",
+        "https://exame.com/invest/minhas-financas/aposentadoria-e-salario-minimo-o-brasileiro-consegue-comprar-mais-do-que-ha-20-anos"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "4350c8c5-560b-42e9-b9c1-1cceada9e36c",
+       "operacoes_busca": [
+        {
+         "id_operacao": "240f4b31-18b6-40e2-9ba8-860ee9e8f27a",
+         "request_id": "4350c8c5-560b-42e9-b9c1-1cceada9e36c",
+         "modo_busca": "GERAL",
+         "resultado_id": "80f108-03",
+         "parametros": {
+          "query": "O salário mínimo em 2026 é de R$ 1.621.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "bb887f30-4147-470a-ad5c-5616b8af6e0c",
+       "resultado_id": "80f108-03",
+       "relevancia": 0.83999664,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 01 Jan 2026 12:14:34 GMT",
+         "value_normalized": "2026-01-01",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "BODY_TOO_LARGE",
+        "detalhe": "SOURCE_BODY_TOO_LARGE",
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Salário mínimo de R$ 1.621 começa a valer nesta quinta; veja o que muda e como o valor foi calculado | G1",
+      "url": "https://g1.globo.com/economia/noticia/2026/01/01/salario-minimo-de-r-1621-comeca-a-valer-nesta-quinta-1o-veja-o-que-muda-e-como-o-valor-foi-calculado.ghtml",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 8167,
+      "caracteres_preparados": 7601,
+      "trecho_analisado": "TÍTULO DA FONTE: Salário mínimo de R$ 1.621 começa a valer nesta quinta; veja o que muda e como o valor foi calculado | G1\nURL DA FONTE: https://g1.globo.com/economia/noticia/2026/01/01/salario-minimo-de-r-1621-comeca-a-valer-nesta-quinta-1o-veja-o-que-muda-e-como-o-valor-foi-calculado.ghtml\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\nOferecido por\n\n# Salário mínimo de R$ 1.621 começa a valer nesta quinta;\n\nveja o que muda e como o valor foi calculado\n\n## Reajuste de quase 7% já vale para salário e benefícios de janeiro, que serão pagos no início de fevereiro.\n\nPor [Alexandro Martello](https://g1.globo.com/autores/alexandro-martello/), g1 — Brasília\n\n---\n\n1 de 1 Salário mínimo sobe para R$ 1.621 em 2026 — Foto: Adriano Toffetti/Ato Press/Estadão Conteúdo\n\nSalário mínimo sobe para R$ 1.621 em 2026 — Foto: Adriano Toffetti/Ato Press/Estadão Conteúdo\n\nO novo valor do salário mínimo nacional, de R$ 1.621, começa a valer a partir desta quinta-feira (1º).\n\nO reajuste é de 6,79% em relação ao piso anterior, de R$ 1.518, e reflete a inflação medida pelo INPC (Índice Nacional de Preços ao Consumidor) em 12 meses até novembro, somada a um ganho real limitado pela regra do arcabouço fiscal.\n\nCom o[cá",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "It announces that the 2026 minimum wage starts being applied on 1 Jan 2026 at R$ 1.621."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "It announces that the 2026 minimum wage starts being applied on 1 Jan 2026 at R$ 1.621."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 316,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2026-01-01"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "Salário mínimo de R$ 1.621 começa a ser pago nesta segunda | Agência Brasil",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda",
+      "conteudo": "[Pular para o conteúdo principal](#main-content)\n\n[![logo ebc](https://agenciabrasil.ebc.com.br/sites/default/themes/agenciabrasil_v3/images/logo-ebc-dark.webp?tnhjsg)](https://ebc.com.br \"Ir para o portal EBC\")\n\n[![logo Agência Brasil](https://agenciabrasil.ebc.com.br/sites/default/themes/agenciabrasil_v3/images/agbrasil-color-logo.svg?tnhjsg)](/)\n\n\n\n[Economia](/economia)\n\n# Salário mínimo de R$ 1.621 começa a ser pago nesta segunda\n\nINSS, seguro-desemprego e contribuições têm novos valores\n\nWellton Máximo - Repórter da Agência Brasil\n\nPublicado em 02/02/2026 - 07:02\n\nBrasília\n\n![Brasília (DF) 15/03/2024 – A partir de hoje (15) de março, parte da liquidação interbancária da cobrança do docu…",
+      "coletado_em": "2026-11-13T13:22:37.440Z",
+      "data_publicacao": null,
+      "data_atualizacao": "2026-02-02",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda",
+      "relevancia": 0.8388118,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "4350c8c5-560b-42e9-b9c1-1cceada9e36c",
+       "resultado_id": "1f3ed6-04",
+       "response_time_busca": 1.43,
+       "response_time_extracao": 0.03,
+       "consulta": "O salário mínimo em 2026 é de R$ 1.621.",
+       "origem_principal": {
+        "id_operacao": "240f4b31-18b6-40e2-9ba8-860ee9e8f27a",
+        "request_id": "4350c8c5-560b-42e9-b9c1-1cceada9e36c",
+        "modo_busca": "GERAL",
+        "resultado_id": "1f3ed6-04",
+        "parametros": {
+         "query": "O salário mínimo em 2026 é de R$ 1.621.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "240f4b31-18b6-40e2-9ba8-860ee9e8f27a",
+         "request_id": "4350c8c5-560b-42e9-b9c1-1cceada9e36c",
+         "modo_busca": "GERAL",
+         "resultado_id": "1f3ed6-04",
+         "parametros": {
+          "query": "O salário mínimo em 2026 é de R$ 1.621.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Mon, 02 Feb 2026 13:02:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 02 Feb 2026 13:02:00 GMT",
+         "value_normalized": "2026-02-02",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 13:22:36 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-02-02T10:02:00-03:00",
+         "value_normalized": "2026-02-02",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "02/02/2026",
+         "value_normalized": "2026-02-02",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "EXPLICIT_ATTRIBUTE_UPDATE_DATE",
+         "field": "visible_text_date",
+         "value_original": "02/02/2026",
+         "value_normalized": "2026-02-02",
+         "scope": "ATTRIBUTE",
+         "source": "VISIBLE_TEXT",
+         "match_basis": "claim_value_or_entity_in_local_context",
+         "context": "ago nesta segunda INSS, seguro-desemprego e contribuições têm novos valores Wellton Máximo - Repórter da Agência Brasil Publicado em 02/02/2026 - 07:02 | 00:00 --> Brasília © Marcelo Camargo/Agência Brasil Versão em áudio O novo salário mínimo de R$ 1.621 começa a ser pago nesta segunda-feira (2) ao",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "02/02/2026",
+         "value_normalized": "2026-02-02",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda",
+        "capturado_em": "2026-11-13T13:22:39.984Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "bb887f30-4147-470a-ad5c-5616b8af6e0c",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "d7695348-1f9c-477e-850c-c8ddd282e9f8",
+      "id_verificacao": "44ef9373-4de1-405f-a770-d40ce670fc7b",
+      "url_original": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda",
+      "url_canonica": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "a4fed8fa3af83aa81ae795f80842a68e00edfec5c400b5bcc93bd1016d75fc4d",
+      "coletado_em": "2026-11-13T13:22:37.440Z",
+      "id_operacao_busca": "240f4b31-18b6-40e2-9ba8-860ee9e8f27a",
+      "id_operacao_extracao": "9695e87a-d9f6-4632-ba54-460c9e9ee294",
+      "consulta": "O salário mínimo em 2026 é de R$ 1.621.",
+      "parametros_busca": {
+       "query": "O salário mínimo em 2026 é de R$ 1.621.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr",
+        "https://www.ieprev.com.br/noticias/novo-salario-minimo-de-2026-sera-de-r-1621-veja-o-que-muda-no-inss",
+        "https://g1.globo.com/economia/noticia/2026/01/01/salario-minimo-de-r-1621-comeca-a-valer-nesta-quinta-1o-veja-o-que-muda-e-como-o-valor-foi-calculado.ghtml",
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda",
+        "https://exame.com/invest/minhas-financas/aposentadoria-e-salario-minimo-o-brasileiro-consegue-comprar-mais-do-que-ha-20-anos"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "4350c8c5-560b-42e9-b9c1-1cceada9e36c",
+       "operacoes_busca": [
+        {
+         "id_operacao": "240f4b31-18b6-40e2-9ba8-860ee9e8f27a",
+         "request_id": "4350c8c5-560b-42e9-b9c1-1cceada9e36c",
+         "modo_busca": "GERAL",
+         "resultado_id": "1f3ed6-04",
+         "parametros": {
+          "query": "O salário mínimo em 2026 é de R$ 1.621.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "bb887f30-4147-470a-ad5c-5616b8af6e0c",
+       "resultado_id": "1f3ed6-04",
+       "relevancia": 0.8388118,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 02 Feb 2026 13:02:00 GMT",
+         "value_normalized": "2026-02-02",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 13:22:36 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-02-02T10:02:00-03:00",
+         "value_normalized": "2026-02-02",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "02/02/2026",
+         "value_normalized": "2026-02-02",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "EXPLICIT_ATTRIBUTE_UPDATE_DATE",
+         "field": "visible_text_date",
+         "value_original": "02/02/2026",
+         "value_normalized": "2026-02-02",
+         "scope": "ATTRIBUTE",
+         "source": "VISIBLE_TEXT",
+         "match_basis": "claim_value_or_entity_in_local_context",
+         "context": "ago nesta segunda INSS, seguro-desemprego e contribuições têm novos valores Wellton Máximo - Repórter da Agência Brasil Publicado em 02/02/2026 - 07:02 | 00:00 --> Brasília © Marcelo Camargo/Agência Brasil Versão em áudio O novo salário mínimo de R$ 1.621 começa a ser pago nesta segunda-feira (2) ao",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "02/02/2026",
+         "value_normalized": "2026-02-02",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda",
+        "capturado_em": "2026-11-13T13:22:39.984Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Salário mínimo de R$ 1.621 começa a ser pago nesta segunda | Agência Brasil",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 11191,
+      "caracteres_preparados": 7970,
+      "trecho_analisado": "TÍTULO DA FONTE: Salário mínimo de R$ 1.621 começa a ser pago nesta segunda | Agência Brasil\nURL DA FONTE: https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n[Economia](/economia)\n\n# Salário mínimo de R$ 1.621 começa a ser pago nesta segunda\n\nINSS, seguro-desemprego e contribuições têm novos valores\n\nWellton Máximo - Repórter da Agência Brasil\n\nPublicado em 02/02/2026 - 07:02\n\nBrasília\n\nVersão em áudio\n\nO novo salário mínimo de R$ 1.621 começa a ser pago nesta segunda-feira (2) aos trabalhadores.\n\nO valor pode ser conferido no contracheque referente a janeiro.![](https://agenciabrasil.ebc.com.br/ebc.png?id=1676696&o=node)![](https://agenciabrasil.ebc.com.br/ebc.gif?id=1676696&o=node)\n\n**O reajuste de 6,79%, equivalente a R$ 103, foi oficializado pelo [Decreto 12.797/2025](https://agenciabrasil.ebc.com.br/economia/noticia/2025-12/novo-salario-minimo-sera-de-r-1621-em-2026).** O aumento segue a política de valorização do salário mínimo, que combina inflação (INPC) e crescimento do Produto In terno Bruto (PIB), respeitando os limites do arcabouço fiscal, que restringe o reajuste a 2,5% ac",
+      "citacao_chave": "Salário mínimo de R$ 1.621 começa a ser pago nesta segunda-feira (2)",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "It reports that the 2026 minimum wage is R$ 1.621 and starts being paid on 2 Feb 2026."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "It reports that the 2026 minimum wage is R$ 1.621 and starts being paid on 2 Feb 2026."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 284,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2026-02-02"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "Aposentadoria e salário mínimo: o brasileiro consegue comprar mais do que há 20 anos? | Exame",
+      "url": "https://exame.com/invest/minhas-financas/aposentadoria-e-salario-minimo-o-brasileiro-consegue-comprar-mais-do-que-ha-20-anos",
+      "conteudo": "Mais pesquisados:\n\n[EXAME - Negócios, Economia, Tecnologia e Carreira](https://exame.com/)\n\n[Entrar](https://id.exame.com/login?origin=exame&redirectUrl=https%3A%2F%2Fexame.com%2Finvest%2Fminhas-financas%2Faposentadoria-e-salario-minimo-o-brasileiro-consegue-comprar-mais-do-que-ha-20-anos%2F)\n\n[Invest](https://exame.com/invest/)\n\n[BTG Insights](https://exame.com/invest/btg-insights/)[Guia de Investimentos](https://exame.com/invest/guia/)[Invest Opina](https://exame.com/invest/opina/)[Mercados](https://exame.com/invest/mercados/)[Minhas Finanças](https://exame.com/invest/minhas-financas/)[Onde Investir](https://exame.com/invest/onde-investir/)[Simuladores](https://exame.com/invest/calculadora…",
+      "coletado_em": "2026-11-13T13:22:37.440Z",
+      "data_publicacao": "2026-11-09",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": null,
+      "relevancia": 0.8153795,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "c32383df-4a9c-43e6-93e2-f411db4d5e8d",
+       "resultado_id": "35dc71-00",
+       "response_time_busca": 3.92,
+       "response_time_extracao": 0.03,
+       "consulta": "O salário mínimo em 2026 é de R$ 1.621.",
+       "origem_principal": {
+        "id_operacao": "3590b129-52ca-4078-89cc-c42d48d2f3b5",
+        "request_id": "c32383df-4a9c-43e6-93e2-f411db4d5e8d",
+        "modo_busca": "NOTICIAS_BR",
+        "resultado_id": "35dc71-00",
+        "parametros": {
+         "query": "O salário mínimo em 2026 é de R$ 1.621.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news",
+         "include_domains": [
+          "g1.globo.com",
+          "oglobo.globo.com",
+          "valor.globo.com",
+          "folha.uol.com.br",
+          "uol.com.br",
+          "estadao.com.br",
+          "agenciabrasil.ebc.com.br",
+          "cnnbrasil.com.br",
+          "infomoney.com.br",
+          "exame.com",
+          "poder360.com.br",
+          "correiobraziliense.com.br",
+          "metropoles.com",
+          "veja.abril.com.br",
+          "terra.com.br",
+          "band.com.br",
+          "r7.com",
+          "bbc.com",
+          "jota.info",
+          "canaltech.com.br"
+         ]
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "3590b129-52ca-4078-89cc-c42d48d2f3b5",
+         "request_id": "c32383df-4a9c-43e6-93e2-f411db4d5e8d",
+         "modo_busca": "NOTICIAS_BR",
+         "resultado_id": "35dc71-00",
+         "parametros": {
+          "query": "O salário mínimo em 2026 é de R$ 1.621.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "include_domains": [
+           "g1.globo.com",
+           "oglobo.globo.com",
+           "valor.globo.com",
+           "folha.uol.com.br",
+           "uol.com.br",
+           "estadao.com.br",
+           "agenciabrasil.ebc.com.br",
+           "cnnbrasil.com.br",
+           "infomoney.com.br",
+           "exame.com",
+           "poder360.com.br",
+           "correiobraziliense.com.br",
+           "metropoles.com",
+           "veja.abril.com.br",
+           "terra.com.br",
+           "band.com.br",
+           "r7.com",
+           "bbc.com",
+           "jota.info",
+           "canaltech.com.br"
+          ]
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Mon, 09 Nov 2026 13:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 09 Nov 2026 13:00:00 GMT",
+         "value_normalized": "2026-11-09",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "9 de novembro de 2026",
+         "value_normalized": "2026-11-09",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://exame.com/invest/minhas-financas/aposentadoria-e-salario-minimo-o-brasileiro-consegue-comprar-mais-do-que-ha-20-anos/",
+        "capturado_em": "2026-11-13T13:22:38.663Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "bb887f30-4147-470a-ad5c-5616b8af6e0c",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "b0e38c91-4455-4fc8-a904-bb7d85e70a2e",
+      "id_verificacao": "44ef9373-4de1-405f-a770-d40ce670fc7b",
+      "url_original": "https://exame.com/invest/minhas-financas/aposentadoria-e-salario-minimo-o-brasileiro-consegue-comprar-mais-do-que-ha-20-anos",
+      "url_canonica": "https://exame.com/invest/minhas-financas/aposentadoria-e-salario-minimo-o-brasileiro-consegue-comprar-mais-do-que-ha-20-anos",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "e5a79fe39ff0865aa0b1b0d16855b0417d63211ef25efa6a7dffa647d66ed79f",
+      "coletado_em": "2026-11-13T13:22:37.440Z",
+      "id_operacao_busca": "3590b129-52ca-4078-89cc-c42d48d2f3b5",
+      "id_operacao_extracao": "9695e87a-d9f6-4632-ba54-460c9e9ee294",
+      "consulta": "O salário mínimo em 2026 é de R$ 1.621.",
+      "parametros_busca": {
+       "query": "O salário mínimo em 2026 é de R$ 1.621.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news",
+       "include_domains": [
+        "g1.globo.com",
+        "oglobo.globo.com",
+        "valor.globo.com",
+        "folha.uol.com.br",
+        "uol.com.br",
+        "estadao.com.br",
+        "agenciabrasil.ebc.com.br",
+        "cnnbrasil.com.br",
+        "infomoney.com.br",
+        "exame.com",
+        "poder360.com.br",
+        "correiobraziliense.com.br",
+        "metropoles.com",
+        "veja.abril.com.br",
+        "terra.com.br",
+        "band.com.br",
+        "r7.com",
+        "bbc.com",
+        "jota.info",
+        "canaltech.com.br"
+       ]
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr",
+        "https://www.ieprev.com.br/noticias/novo-salario-minimo-de-2026-sera-de-r-1621-veja-o-que-muda-no-inss",
+        "https://g1.globo.com/economia/noticia/2026/01/01/salario-minimo-de-r-1621-comeca-a-valer-nesta-quinta-1o-veja-o-que-muda-e-como-o-valor-foi-calculado.ghtml",
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda",
+        "https://exame.com/invest/minhas-financas/aposentadoria-e-salario-minimo-o-brasileiro-consegue-comprar-mais-do-que-ha-20-anos"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "c32383df-4a9c-43e6-93e2-f411db4d5e8d",
+       "operacoes_busca": [
+        {
+         "id_operacao": "3590b129-52ca-4078-89cc-c42d48d2f3b5",
+         "request_id": "c32383df-4a9c-43e6-93e2-f411db4d5e8d",
+         "modo_busca": "NOTICIAS_BR",
+         "resultado_id": "35dc71-00",
+         "parametros": {
+          "query": "O salário mínimo em 2026 é de R$ 1.621.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "include_domains": [
+           "g1.globo.com",
+           "oglobo.globo.com",
+           "valor.globo.com",
+           "folha.uol.com.br",
+           "uol.com.br",
+           "estadao.com.br",
+           "agenciabrasil.ebc.com.br",
+           "cnnbrasil.com.br",
+           "infomoney.com.br",
+           "exame.com",
+           "poder360.com.br",
+           "correiobraziliense.com.br",
+           "metropoles.com",
+           "veja.abril.com.br",
+           "terra.com.br",
+           "band.com.br",
+           "r7.com",
+           "bbc.com",
+           "jota.info",
+           "canaltech.com.br"
+          ]
+         }
+        }
+       ],
+       "request_id_extracao": "bb887f30-4147-470a-ad5c-5616b8af6e0c",
+       "resultado_id": "35dc71-00",
+       "relevancia": 0.8153795,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 09 Nov 2026 13:00:00 GMT",
+         "value_normalized": "2026-11-09",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "9 de novembro de 2026",
+         "value_normalized": "2026-11-09",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://exame.com/invest/minhas-financas/aposentadoria-e-salario-minimo-o-brasileiro-consegue-comprar-mais-do-que-ha-20-anos/",
+        "capturado_em": "2026-11-13T13:22:38.663Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Aposentadoria e salário mínimo: o brasileiro consegue comprar mais do que há 20 anos? | Exame",
+      "url": "https://exame.com/invest/minhas-financas/aposentadoria-e-salario-minimo-o-brasileiro-consegue-comprar-mais-do-que-ha-20-anos",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 14814,
+      "caracteres_preparados": 7979,
+      "trecho_analisado": "TÍTULO DA FONTE: Aposentadoria e salário mínimo: o brasileiro consegue comprar mais do que há 20 anos? | Exame\nURL DA FONTE: https://exame.com/invest/minhas-financas/aposentadoria-e-salario-minimo-o-brasileiro-consegue-comprar-mais-do-que-ha-20-anos\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n[EXAME - Negócios, Economia, Tecnologia e Carreira](https://exame.com/)\n\n[Entrar](https://id.exame.com/login?origin=exame&redirectUrl=https%3A%2F%2Fexame.com%2Finvest%2Fminhas-financas%2Faposentadoria-e-salario-minimo-o-brasileiro-consegue-comprar-mais-do-que-ha-20-anos%2F)\n\n[Invest](https://exame.com/invest/)\n\n[BTG Insights](https://exame.com/invest/btg-insights/)[Guia de Investimentos](https://exame.com/invest/guia/)[Invest Opina](https://exame.com/invest/opina/)[Mercados](https://exame.com/invest/mercados/)[Minhas Finanças](https://exame.com/invest/minhas-financas/)[Onde Investir](https://exame.com/invest/onde-investir/)[Simuladores](https://exame.com/invest/calculadoras/)\n\n# Aposentadoria e salário mínimo: o brasileiro consegue comprar mais do que há 20 anos?\n\n## Reajustes acima da inflação elevaram o poder de compra, mas custo de vida e sustentabilidade da Previdência seguem como desafios\n\nAposen",
+      "citacao_chave": "o salário mínimo é de R$ 1.621 em 2026",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The article notes that the 2026 minimum wage is R$ 1.621."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The article notes that the 2026 minimum wage is R$ 1.621."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 4,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2026-11-09"
+     }
+    }
+   ],
+   "erro_busca": null,
+   "risco_desatualizacao": {
+    "nivel": "MEDIUM",
+    "sensivel_ao_tempo": true,
+    "motivos": [
+     "Laws and official rules change, usually yearly (checked against a 365-day window)"
+    ]
+   },
+   "dominios_oficiais_usados": [
+    "gov.br"
+   ],
+   "dominios_oficiais_automaticos": [
+    "gov.br"
+   ],
+   "agregacao": {
+    "status": "CLASSIFICADO",
+    "conclusao_factual": {
+     "status": "APOIA",
+     "resumo": "As evidências utilizáveis apoiam a afirmação. Isso, por si só, não demonstra que ela continua válida agora."
+    },
+    "veredito": "CORROBORADA",
+    "resumo": "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
+    "afirmacao": "O salário mínimo em 2026 é de R$ 1.621.",
+    "score_qualidade_evidencia": {
+     "valor": 36,
+     "escala": "0-100",
+     "natureza": "HEURISTICA",
+     "interpretacao": "Qualidade estrutural das evidências, não probabilidade de verdade.",
+     "componentes": {
+      "autoridade": 0,
+      "atualidade": 6,
+      "diversidade_fontes": 20,
+      "concordancia": 10
+     }
+    },
+    "freshness": {
+     "score": 34,
+     "status": "FRESH",
+     "confidence": "LIMITED",
+     "algorithm_id": "CLAIM_FRESHNESS_SCORE",
+     "algorithm_version": "1.1.0",
+     "policy_id": "regulamento:365d:v1",
+     "as_of": "2026-11-13T13:22:28.460Z",
+     "evidence_summary": {
+      "received": 5,
+      "eligible": 1,
+      "independent_domains": 1,
+      "fresh": 1,
+      "stale": 0,
+      "excluded": 4
+     },
+     "drivers": [
+      {
+       "code": "ATTRIBUTE_DATED_FRESH_EVIDENCE",
+       "evidence_id": null,
+       "date": "2026-02-02",
+       "age_days": 284,
+       "posture": "SUPPORTS",
+       "domain": "agenciabrasil.ebc.com.br",
+       "dependency_group": "source_cluster_004"
+      },
+      {
+       "code": "EVIDENCE_EXCLUDED_FROM_TEMPORAL_SCORE",
+       "count": 4
+      }
+     ],
+     "limitations": [
+      "Índice temporal determinístico; não é probabilidade de verdade.",
+      "Datas de página sem vínculo explícito ao atributo foram excluídas."
+     ]
+    },
+    "concordancia": {
+     "algorithm_id": "SOURCE_AGREEMENT_INDEX",
+     "algorithm_version": "1.1.0",
+     "weights": {
+      "OFICIAL": 3,
+      "ACADEMICO": 3,
+      "NOTICIA": 2,
+      "REFERENCIA": 1.5,
+      "OUTRO": 1,
+      "BLOG_FORUM": 0.25
+     },
+     "score": 100,
+     "coverage": "STRONG",
+     "independent_sources": 5,
+     "source_types": [
+      "NOTICIA",
+      "OUTRO"
+     ],
+     "supporting": 5,
+     "authoritative_supporting": 0,
+     "contradicting": 0,
+     "split": 0,
+     "by_type": {
+      "NOTICIA": {
+       "supports": 4,
+       "contradicts": 0,
+       "split": 0
+      },
+      "OUTRO": {
+       "supports": 1,
+       "contradicts": 0,
+       "split": 0
+      }
+     },
+     "limitations": [
+      "Agreement between sources is not a probability of truth: sources can share the same mistake.",
+      "Copies and pages from the same site count once; independence is approximated by domain and text similarity."
+     ]
+    },
+    "recencia_pagina": {
+     "algorithm_id": "PAGE_DATE_RECENCY_INDEX",
+     "algorithm_version": "1.0.0",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "as_of": "2026-11-13T13:22:28.460Z",
+     "score": 45,
+     "status": "FRESH",
+     "policy_id": "regulamento:365d:page:v1",
+     "newest_date": "2026-11-09",
+     "sources": [
+      {
+       "date": "2026-02-02",
+       "age_days": 284,
+       "status": "FRESH",
+       "posture": "SUPPORTS",
+       "domain": "estadao.com.br",
+       "evidence_id": null
+      },
+      {
+       "date": "2025-12-11",
+       "age_days": 337,
+       "status": "FRESH",
+       "posture": "SUPPORTS",
+       "domain": "ieprev.com.br",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-01-01",
+       "age_days": 316,
+       "status": "FRESH",
+       "posture": "SUPPORTS",
+       "domain": "g1.globo.com",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-02-02",
+       "age_days": 284,
+       "status": "FRESH",
+       "posture": "SUPPORTS",
+       "domain": "agenciabrasil.ebc.com.br",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-11-09",
+       "age_days": 4,
+       "status": "FRESH",
+       "posture": "SUPPORTS",
+       "domain": "exame.com",
+       "evidence_id": null
+      }
+     ],
+     "limitations": [
+      "Baseado na data da página, não na data em que o dado específico mudou: confiança baixa.",
+      "Não substitui o índice de atualidade principal e não é probabilidade de verdade."
+     ]
+    },
+    "atualidade_afirmacao": {
+     "algorithm_id": "CLAIM_CURRENCY_SCORE",
+     "algorithm_version": "1.0.0",
+     "formula": "evidence_recency × support_share",
+     "window_days": 365,
+     "score": 45,
+     "status": "CURRENT",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "evidence_recency": 45,
+     "support_share": 1,
+     "newest_date": "2026-11-09",
+     "newest_age_days": 4,
+     "within_window": true
+    },
+    "versao_regras": "1.2.0",
+    "metodo": "AGREGACAO_DETERMINISTICA",
+    "fontes_independentes": 5,
+    "grupos_distintos_de_evidencia": 5,
+    "dependencia_detectada": 0,
+    "dependencia_nao_verificada": true,
+    "nota_independencia": "Cópias exatas, quase duplicadas, URLs canônicas iguais e páginas do mesmo domínio são agrupadas; domínios sem sinal de cópia não têm independência editorial comprovada.",
+    "total_evidencias_utilizaveis": 5,
+    "fontes": [
+     {
+      "dominio": "estadao.com.br",
+      "dominios": [
+       "estadao.com.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_001",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Salário mínimo de R$ 1.621 começa a ser pago nesta segunda-feira - Estadão",
+        "url": "https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr",
+        "categoria_fonte": "NOTICIA",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:22:37.440Z",
+        "data_publicacao": "2026-02-02",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Mon, 02 Feb 2026 00:00:00 GMT",
+          "value_normalized": "2026-02-02",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Fri, 13 Nov 2026 13:22:38 GMT",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-02-02T17:34:45-03:00",
+          "value_normalized": "2026-02-02",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "newsarticle"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-02-02T17:34:45-03:00",
+          "value_normalized": "2026-02-02",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "newsarticle"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_001",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "ieprev.com.br",
+      "dominios": [
+       "ieprev.com.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_002",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.ieprev.com.br/noticias/novo-salario-minimo-de-2026-sera-de-r-1621-veja-o-que-muda-no-inss"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Novo salário mínimo de 2026 será de R$ 1.621: veja o que muda no INSS | IEPREV",
+        "url": "https://www.ieprev.com.br/noticias/novo-salario-minimo-de-2026-sera-de-r-1621-veja-o-que-muda-no-inss",
+        "categoria_fonte": "OUTRO",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:22:37.440Z",
+        "data_publicacao": "2025-12-11",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Thu, 11 Dec 2025 00:00:00 GMT",
+          "value_normalized": "2025-12-11",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Thu, 12 Nov 2026 13:39:08 GMT",
+          "value_normalized": "2026-11-12",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.ieprev.com.br/noticias/novo-salario-minimo-de-2026-sera-de-r-1621-veja-o-que-muda-no-inss",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2025-12-11",
+          "value_normalized": "2025-12-11",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "newsarticle"
+          ]
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2025-12-11",
+          "value_normalized": "2025-12-11",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_002",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "g1.globo.com",
+      "dominios": [
+       "g1.globo.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_003",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://g1.globo.com/economia/noticia/2026/01/01/salario-minimo-de-r-1621-comeca-a-valer-nesta-quinta-1o-veja-o-que-muda-e-como-o-valor-foi-calculado.ghtml"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Salário mínimo de R$ 1.621 começa a valer nesta quinta; veja o que muda e como o valor foi calculado | G1",
+        "url": "https://g1.globo.com/economia/noticia/2026/01/01/salario-minimo-de-r-1621-comeca-a-valer-nesta-quinta-1o-veja-o-que-muda-e-como-o-valor-foi-calculado.ghtml",
+        "categoria_fonte": "NOTICIA",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:22:37.440Z",
+        "data_publicacao": "2026-01-01",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Thu, 01 Jan 2026 12:14:34 GMT",
+          "value_normalized": "2026-01-01",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_003",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "agenciabrasil.ebc.com.br",
+      "dominios": [
+       "agenciabrasil.ebc.com.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_004",
+      "oficial": false,
+      "atual": true,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Salário mínimo de R$ 1.621 começa a ser pago nesta segunda | Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda",
+        "categoria_fonte": "NOTICIA",
+        "postura": "SUPPORTS",
+        "atual": true,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:22:37.440Z",
+        "data_publicacao": null,
+        "data_atualizacao": "2026-02-02",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Mon, 02 Feb 2026 13:02:00 GMT",
+          "value_normalized": "2026-02-02",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Fri, 13 Nov 2026 13:22:36 GMT",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2026-02-02T10:02:00-03:00",
+          "value_normalized": "2026-02-02",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Publicado em",
+          "value_original": "02/02/2026",
+          "value_normalized": "2026-02-02",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         },
+         {
+          "signal_type": "EXPLICIT_ATTRIBUTE_UPDATE_DATE",
+          "field": "visible_text_date",
+          "value_original": "02/02/2026",
+          "value_normalized": "2026-02-02",
+          "scope": "ATTRIBUTE",
+          "source": "VISIBLE_TEXT",
+          "match_basis": "claim_value_or_entity_in_local_context",
+          "context": "ago nesta segunda INSS, seguro-desemprego e contribuições têm novos valores Wellton Máximo - Repórter da Agência Brasil Publicado em 02/02/2026 - 07:02 | 00:00 --> Brasília © Marcelo Camargo/Agência Brasil Versão em áudio O novo salário mínimo de R$ 1.621 começa a ser pago nesta segunda-feira (2) ao",
+          "parse_status": "PARSED"
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Publicado em",
+          "value_original": "02/02/2026",
+          "value_normalized": "2026-02-02",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_004",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "exame.com",
+      "dominios": [
+       "exame.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_005",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://exame.com/invest/minhas-financas/aposentadoria-e-salario-minimo-o-brasileiro-consegue-comprar-mais-do-que-ha-20-anos"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Aposentadoria e salário mínimo: o brasileiro consegue comprar mais do que há 20 anos? | Exame",
+        "url": "https://exame.com/invest/minhas-financas/aposentadoria-e-salario-minimo-o-brasileiro-consegue-comprar-mais-do-que-ha-20-anos",
+        "categoria_fonte": "NOTICIA",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:22:37.440Z",
+        "data_publicacao": "2026-11-09",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Mon, 09 Nov 2026 13:00:00 GMT",
+          "value_normalized": "2026-11-09",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Publicado em",
+          "value_original": "9 de novembro de 2026",
+          "value_normalized": "2026-11-09",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_005",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     }
+    ],
+    "limitacoes": [
+     "Uma data da página ou do resultado de busca não comprova quando o atributo da afirmação foi publicado ou atualizado.",
+     "Nenhuma fonte pertence ao cadastro de domínios oficiais informado.",
+     "Domínios sem sinal detectado de duplicação não têm independência editorial comprovada; republicação com edição extensa ainda pode passar despercebida."
+    ],
+    "avaliado_em": "2026-11-13T13:22:42.952Z"
+   }
+  }
+ ],
+ "afirmacoes_omitidas": [],
+ "resposta_corrigida": {
+  "texto": "O salário mínimo em 2026 é de R$ 1.621.[1][2][3]",
+  "mudancas": [
+   {
+    "claim_id": "afirmacao_1",
+    "what": "kept"
+   }
+  ],
+  "fontes_citadas": [
+   1,
+   2,
+   3
+  ],
+  "tentativas": 1,
+  "citacoes_anexadas": false,
+  "fontes": [
+   {
+    "n": 1,
+    "url": "https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr",
+    "titulo": "Salário mínimo de R$ 1.621 começa a ser pago nesta segunda-feira - Estadão",
+    "tipo": "NOTICIA",
+    "postura": "SUPPORTS",
+    "data": "2026-02-02"
+   },
+   {
+    "n": 2,
+    "url": "https://g1.globo.com/economia/noticia/2026/01/01/salario-minimo-de-r-1621-comeca-a-valer-nesta-quinta-1o-veja-o-que-muda-e-como-o-valor-foi-calculado.ghtml",
+    "titulo": "Salário mínimo de R$ 1.621 começa a valer nesta quinta; veja o que muda e como o valor foi calculado | G1",
+    "tipo": "NOTICIA",
+    "postura": "SUPPORTS",
+    "data": "2026-01-01"
+   },
+   {
+    "n": 3,
+    "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda",
+    "titulo": "Salário mínimo de R$ 1.621 começa a ser pago nesta segunda | Agência Brasil",
+    "tipo": "NOTICIA",
+    "postura": "SUPPORTS",
+    "data": "2026-02-02"
+   }
+  ],
+  "metodo": "MODEL_REWRITE_FROM_VERIFIED_EVIDENCE"
+ },
+ "rastreabilidade_modelo": [
+  {
+   "id_chamada": "8a693992-9e3e-4b6b-8962-f2495b1dffd4",
+   "id_requisicao_enviada": "a5452690-e652-460d-b4b2-52ad8efd92c7",
+   "id_verificacao": "44ef9373-4de1-405f-a770-d40ce670fc7b",
+   "etapa": "DECOMPOSICAO",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 1031,
+   "tokens": {
+    "entrada": 843,
+    "saida": 348,
+    "total": 1191
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "a5452690-e652-460d-b4b2-52ad8efd92c7",
+   "id_trace": "3d747fff00cd449a87ec246e8cf27483",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 1031.903,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:22:28.462Z"
+  },
+  {
+   "id_chamada": "2bd53f2f-92b8-4371-be4d-16ce3f0b4649",
+   "id_requisicao_enviada": "8d74f4bd-4d48-4c0c-b2e5-898996185c33",
+   "id_verificacao": "44ef9373-4de1-405f-a770-d40ce670fc7b",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 2891,
+   "tokens": {
+    "entrada": 4650,
+    "saida": 1945,
+    "total": 6595
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "8d74f4bd-4d48-4c0c-b2e5-898996185c33",
+   "id_trace": "16941cd42de74f04b391a869787245e7",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 2891.108,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:22:40.013Z"
+  },
+  {
+   "id_chamada": "9bf385bb-0386-4f7c-95b1-dfc65307d2a7",
+   "id_requisicao_enviada": "b82f4ec1-f62c-4bef-9309-6c694ff6c3bb",
+   "id_verificacao": "44ef9373-4de1-405f-a770-d40ce670fc7b",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 704,
+   "tokens": {
+    "entrada": 1150,
+    "saida": 259,
+    "total": 1409
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "b82f4ec1-f62c-4bef-9309-6c694ff6c3bb",
+   "id_trace": "c1050639a9674597979c94d82fe5479e",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 704.504,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:22:42.953Z"
+  }
+ ],
+ "rastreabilidade_pesquisa": [
+  {
+   "id_operacao": "240f4b31-18b6-40e2-9ba8-860ee9e8f27a",
+   "id_verificacao": "44ef9373-4de1-405f-a770-d40ce670fc7b",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "O salário mínimo em 2026 é de R$ 1.621.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:22:29.704Z",
+   "finalizada_em": "2026-11-13T13:22:31.625Z",
+   "duracao_ms": 1921,
+   "request_id": "4350c8c5-560b-42e9-b9c1-1cceada9e36c",
+   "response_time": 1.43,
+   "erro": null,
+   "modo_busca": "GERAL",
+   "parametros": {
+    "query": "O salário mínimo em 2026 é de R$ 1.621.",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true,
+    "country": "brazil"
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "801c9e-00",
+     "titulo": "Salário mínimo de R$ 1.621 começa a ser pago nesta segunda-feira - Estadão",
+     "url": "https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr",
+     "relevancia": 0.85195273,
+     "data_publicacao": "2026-02-02"
+    },
+    {
+     "resultado_id": "a63605-01",
+     "titulo": "Novo salário mínimo de 2026 será de R$ 1.621: veja o que muda no INSS | IEPREV",
+     "url": "https://www.ieprev.com.br/noticias/novo-salario-minimo-de-2026-sera-de-r-1621-veja-o-que-muda-no-inss",
+     "relevancia": 0.8498466,
+     "data_publicacao": "2025-12-11"
+    },
+    {
+     "resultado_id": "6e95b6-02",
+     "titulo": "3.1K views · 75 reactions | TRABALHADORES | O novo salário mínimo de R$ 1.621 começa a ser pago nesta segunda-feira (2). O reajuste foi de 6,79%, equivalente a R$ 103.\n\nSegundo o Departamento Intersindical de Estatística e Estudos Socioeconômicos (Dieese), o novo salário mínimo impacta 61,9 milhões de brasileiros. O aumento deve injetar R$ 81,7 bilhões na economia em 2026.\n\nQuanto vale o mínimo em 2026?\nMensal: R$ 1.621;\nDiário: R$ 54,04;\nHora: R$ 7,37.\n\n#salário #brasil #economia #governolula #trabalho #tvtnews #notícias | Rede TVT",
+     "url": "https://www.facebook.com/redetvt/videos/trabalhadores-o-novo-sal%C3%A1rio-m%C3%ADnimo-de-r-1621-come%C3%A7a-a-ser-pago-nesta-segunda-fe/2872395909624979",
+     "relevancia": 0.8409133,
+     "data_publicacao": "2026-02-15"
+    },
+    {
+     "resultado_id": "80f108-03",
+     "titulo": "Salário mínimo de R$ 1.621 começa a valer nesta quinta; veja o que muda e como o valor foi calculado | G1",
+     "url": "https://g1.globo.com/economia/noticia/2026/01/01/salario-minimo-de-r-1621-comeca-a-valer-nesta-quinta-1o-veja-o-que-muda-e-como-o-valor-foi-calculado.ghtml",
+     "relevancia": 0.83999664,
+     "data_publicacao": "2026-01-01"
+    },
+    {
+     "resultado_id": "1f3ed6-04",
+     "titulo": "Salário mínimo de R$ 1.621 começa a ser pago nesta segunda | Agência Brasil",
+     "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda",
+     "relevancia": 0.8388118,
+     "data_publicacao": "2026-02-02"
+    }
+   ]
+  },
+  {
+   "id_operacao": "3590b129-52ca-4078-89cc-c42d48d2f3b5",
+   "id_verificacao": "44ef9373-4de1-405f-a770-d40ce670fc7b",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "O salário mínimo em 2026 é de R$ 1.621.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:22:31.625Z",
+   "finalizada_em": "2026-11-13T13:22:35.988Z",
+   "duracao_ms": 4363,
+   "request_id": "c32383df-4a9c-43e6-93e2-f411db4d5e8d",
+   "response_time": 3.92,
+   "erro": null,
+   "modo_busca": "NOTICIAS_BR",
+   "parametros": {
+    "query": "O salário mínimo em 2026 é de R$ 1.621.",
+    "search_depth": "basic",
+    "max_results": 4,
+    "include_answer": false,
+    "include_published_date": true,
+    "topic": "news",
+    "include_domains": [
+     "g1.globo.com",
+     "oglobo.globo.com",
+     "valor.globo.com",
+     "folha.uol.com.br",
+     "uol.com.br",
+     "estadao.com.br",
+     "agenciabrasil.ebc.com.br",
+     "cnnbrasil.com.br",
+     "infomoney.com.br",
+     "exame.com",
+     "poder360.com.br",
+     "correiobraziliense.com.br",
+     "metropoles.com",
+     "veja.abril.com.br",
+     "terra.com.br",
+     "band.com.br",
+     "r7.com",
+     "bbc.com",
+     "jota.info",
+     "canaltech.com.br"
+    ]
+   },
+   "quantidade_resultados": 4,
+   "resultados": [
+    {
+     "resultado_id": "35dc71-00",
+     "titulo": "Aposentadoria e salário mínimo: o brasileiro consegue comprar mais do que há 20 anos? | Exame",
+     "url": "https://exame.com/invest/minhas-financas/aposentadoria-e-salario-minimo-o-brasileiro-consegue-comprar-mais-do-que-ha-20-anos",
+     "relevancia": 0.8153795,
+     "data_publicacao": "2026-11-09"
+    },
+    {
+     "resultado_id": "c62b21-01",
+     "titulo": "Bolsa Família não teve reajuste maior que acumulado do salário mínimo | G1",
+     "url": "https://g1.globo.com/fato-ou-fake/noticia/2026/10/15/naoebemassim-bolsa-familia-teve-reajuste-maior-que-do-salario-minimo-em-2026-mas-nao-supera-aumento-dos-ultimos-tres-anos.ghtml",
+     "relevancia": 0.80115914,
+     "data_publicacao": "2026-10-02"
+    },
+    {
+     "resultado_id": "4942b5-02",
+     "titulo": "Lula promete ganho real para o mínimo; Flávio dá sinais divergentes sobre a regra | VEJA",
+     "url": "https://veja.abril.com.br/economia/lula-promete-ganho-real-para-o-minimo-flavio-da-sinais-divergentes-sobre-a-regra",
+     "relevancia": 0.79438496,
+     "data_publicacao": "2026-10-16"
+    },
+    {
+     "resultado_id": "e366e0-03",
+     "titulo": "TODAS AS CAPITAIS",
+     "url": "https://static.poder360.com.br/uploads/2026/11/202610cestabasica.pdf",
+     "relevancia": 0.75292206,
+     "data_publicacao": "2026-11-10"
+    }
+   ]
+  },
+  {
+   "id_operacao": "9695e87a-d9f6-4632-ba54-460c9e9ee294",
+   "id_verificacao": "44ef9373-4de1-405f-a770-d40ce670fc7b",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "EXTRACAO",
+   "consulta": "O salário mínimo em 2026 é de R$ 1.621.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:22:35.993Z",
+   "finalizada_em": "2026-11-13T13:22:37.440Z",
+   "duracao_ms": 1447,
+   "request_id": "bb887f30-4147-470a-ad5c-5616b8af6e0c",
+   "response_time": 0.03,
+   "erro": null,
+   "urls_solicitadas": [
+    "https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr",
+    "https://www.ieprev.com.br/noticias/novo-salario-minimo-de-2026-sera-de-r-1621-veja-o-que-muda-no-inss",
+    "https://g1.globo.com/economia/noticia/2026/01/01/salario-minimo-de-r-1621-comeca-a-valer-nesta-quinta-1o-veja-o-que-muda-e-como-o-valor-foi-calculado.ghtml",
+    "https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda",
+    "https://exame.com/invest/minhas-financas/aposentadoria-e-salario-minimo-o-brasileiro-consegue-comprar-mais-do-que-ha-20-anos"
+   ],
+   "parametros": {
+    "urls": [
+     "https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr",
+     "https://www.ieprev.com.br/noticias/novo-salario-minimo-de-2026-sera-de-r-1621-veja-o-que-muda-no-inss",
+     "https://g1.globo.com/economia/noticia/2026/01/01/salario-minimo-de-r-1621-comeca-a-valer-nesta-quinta-1o-veja-o-que-muda-e-como-o-valor-foi-calculado.ghtml",
+     "https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda",
+     "https://exame.com/invest/minhas-financas/aposentadoria-e-salario-minimo-o-brasileiro-consegue-comprar-mais-do-que-ha-20-anos"
+    ],
+    "extract_depth": "basic",
+    "format": "markdown",
+    "include_images": false
+   },
+   "quantidade_resultados": 5,
+   "urls_extraidas": [
+    "https://www.estadao.com.br/economia/salario-minimo-1621-comeca-ser-pago-nesta-segunda-feira-npr",
+    "https://www.ieprev.com.br/noticias/novo-salario-minimo-de-2026-sera-de-r-1621-veja-o-que-muda-no-inss",
+    "https://g1.globo.com/economia/noticia/2026/01/01/salario-minimo-de-r-1621-comeca-a-valer-nesta-quinta-1o-veja-o-que-muda-e-como-o-valor-foi-calculado.ghtml",
+    "https://agenciabrasil.ebc.com.br/economia/noticia/2026-02/salario-minimo-de-r-1621-comeca-ser-pago-nesta-segunda",
+    "https://exame.com/invest/minhas-financas/aposentadoria-e-salario-minimo-o-brasileiro-consegue-comprar-mais-do-que-ha-20-anos"
+   ]
+  }
+ ],
+ "modo": "real",
+ "simulado": false,
+ "gateway": {
+  "gateway": "bifrost",
+  "chamadas": 3,
+  "falhas": 0,
+  "cadeia_modelos": [
+   "groq/openai/gpt-oss-20b",
+   "groq/openai/gpt-oss-120b"
+  ],
+  "queda_simulada": false,
+  "respostas_por_modelo": [
+   {
+    "modelo": "groq/openai/gpt-oss-20b",
+    "chamadas": 3
+   }
+  ],
+  "respostas_de_reserva": 0,
+  "tokens_total": 9195,
+  "latencia_media_ms": 1543
+ },
+ "duracao_ms": 15260,
+ "gravado_em": "2026-11-13T13:22:43.680Z"
+}

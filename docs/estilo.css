@@ -785,3 +785,6 @@ main.folha { overflow: hidden; }
 
 /* problem cards: black glass, not gray */
 .problema .ladrilho { background: linear-gradient(160deg, rgba(12, 11, 11, .95), rgba(4, 4, 5, .9)); backdrop-filter: blur(5px) saturate(140%); -webkit-backdrop-filter: blur(5px) saturate(140%); }
+
+/* public demo: bookmarklet needs the local install */
+.favorito-aviso { margin: 14px 0 0; max-width: 46ch; color: #a9a7a1; font-size: 14px; line-height: 1.5; }

@@ -1,0 +1,2414 @@
+{
+ "sistema": "Entrelinhas",
+ "id_verificacao": "0e969307-2b8e-4e55-af17-48cfcadd562c",
+ "texto_original": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+ "verificado_em": "2026-11-13T13:26:51.158Z",
+ "total_afirmacoes": 1,
+ "sintese": {
+  "veredito": "CONFLITO",
+  "resumo": "As fontes utilizáveis apresentam posições divergentes. Não foi possível resolver o conflito com as evidências disponíveis.",
+  "total_afirmacoes": 1,
+  "contagem_vereditos": {
+   "CONFLITO": 1
+  }
+ },
+ "afirmacoes": [
+  {
+   "id": "afirmacao_1",
+   "texto": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+   "tipo_afirmacao": "preco",
+   "origem_tipo_afirmacao": "MODELO",
+   "nuances": {
+    "idioma": "pt",
+    "variante": "pt-BR",
+    "confianca_idioma": 1,
+    "valores": [
+     {
+      "tipo": "MONETARIO",
+      "texto": "R$ 44,90 por mês",
+      "valor": 44.9,
+      "moeda": "BRL",
+      "periodo": "MENSAL",
+      "qualificador": null
+     }
+    ],
+    "datas": [],
+    "expressoes_temporais": [],
+    "condicoes": [],
+    "mudancas": [],
+    "tempo_coloquial": [],
+    "girias": {
+     "aliases": [],
+     "expressoes": []
+    },
+    "consulta_busca": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+    "dominios_oficiais_sugeridos": [],
+    "autoridades": [],
+    "notas": [
+     "\"R$ 44,90 por mês\" uses Brazilian number format: BRL 44.90 per month."
+    ]
+   },
+   "evidencias": [
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "Planos Netflix: conheça os preços e benefícios de cada assinatura • Tecnoblog",
+      "url": "https://tecnoblog.net/guias/planos-da-netflix-precos-beneficios",
+      "conteudo": "Tecnoblog Homepage\n\n# Planos Netflix: conheça os preços e benefícios de cada assinatura\n\nConheça as diferentes opções de planos que a Netflix oferece a quem pretende aderir ou mudar a assinatura, além das vantagens e desvantagens de cada modalidade\n\n![Ricardo Syozi](https://files.tecnoblog.net/wp-content/uploads/2021/07/ricardo_syozi-1.jpg)\n\nPor [Ricardo Syozi](https://tecnoblog.net/author/ricardo-syozi/ \"Posts por Ricardo Syozi\")\n\n• Atualizado há 1 ano e 7 meses\n\n![Netflix](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='1920'%20height='1080'%20viewBox='0%200%201920%201080'%3E%3C/svg%3E)\n\nNetflix oferece três planos com preços distintos (Imagem: Vitor Pádua/Tecnoblog…",
+      "coletado_em": "2026-11-13T13:26:42.443Z",
+      "data_publicacao": null,
+      "data_atualizacao": null,
+      "escopo_data": "UNKNOWN",
+      "canonical_url": "https://tecnoblog.net/guias/planos-da-netflix-precos-beneficios/",
+      "relevancia": 0.8039445,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+       "resultado_id": "676f01-02",
+       "response_time_busca": 1.07,
+       "response_time_extracao": 0.02,
+       "consulta": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+       "origem_principal": {
+        "id_operacao": "9a7b29bc-572d-438b-bc10-9c3b40a3e31c",
+        "request_id": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+        "modo_busca": "GERAL",
+        "resultado_id": "676f01-02",
+        "parametros": {
+         "query": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "9a7b29bc-572d-438b-bc10-9c3b40a3e31c",
+         "request_id": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+         "modo_busca": "GERAL",
+         "resultado_id": "676f01-02",
+         "parametros": {
+          "query": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": null,
+       "sinais_data": [
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 21 Mar 2025 13:27:53 GMT",
+         "value_normalized": "2025-03-21",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://tecnoblog.net/guias/planos-da-netflix-precos-beneficios/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2025-03-21T13:27:53+00:00",
+         "value_normalized": "2025-03-21",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2023-04-28T16:02:16+00:00",
+         "value_normalized": "2023-04-28",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2025-03-21T13:27:53+00:00",
+         "value_normalized": "2025-03-21",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://tecnoblog.net/guias/planos-da-netflix-precos-beneficios/",
+        "capturado_em": "2026-11-13T13:26:41.629Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "9a02aa8e-6105-4d61-8577-2d896f7a8b81",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "fe0e493e-9eba-4b1b-ab6e-052aa42efe4c",
+      "id_verificacao": "0e969307-2b8e-4e55-af17-48cfcadd562c",
+      "url_original": "https://tecnoblog.net/guias/planos-da-netflix-precos-beneficios",
+      "url_canonica": "https://tecnoblog.net/guias/planos-da-netflix-precos-beneficios",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "080d7727dfec0b55b477748989c8dfa36b8762e67a111895f83f6dfb87637e66",
+      "coletado_em": "2026-11-13T13:26:42.443Z",
+      "id_operacao_busca": "9a7b29bc-572d-438b-bc10-9c3b40a3e31c",
+      "id_operacao_extracao": "104e35b4-6c91-4951-ba5c-5b5305b9e260",
+      "consulta": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+      "parametros_busca": {
+       "query": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://tecnoblog.net/guias/planos-da-netflix-precos-beneficios",
+        "https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil",
+        "https://www.minhaconexao.com.br/planos/streaming/netflix",
+        "https://melhorplano.net/streaming/netflix-planos",
+        "https://www.instagram.com/p/De-dfW8tvsV"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+       "operacoes_busca": [
+        {
+         "id_operacao": "9a7b29bc-572d-438b-bc10-9c3b40a3e31c",
+         "request_id": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+         "modo_busca": "GERAL",
+         "resultado_id": "676f01-02",
+         "parametros": {
+          "query": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "9a02aa8e-6105-4d61-8577-2d896f7a8b81",
+       "resultado_id": "676f01-02",
+       "relevancia": 0.8039445,
+       "sinais_data": [
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 21 Mar 2025 13:27:53 GMT",
+         "value_normalized": "2025-03-21",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://tecnoblog.net/guias/planos-da-netflix-precos-beneficios/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2025-03-21T13:27:53+00:00",
+         "value_normalized": "2025-03-21",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2023-04-28T16:02:16+00:00",
+         "value_normalized": "2023-04-28",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2025-03-21T13:27:53+00:00",
+         "value_normalized": "2025-03-21",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://tecnoblog.net/guias/planos-da-netflix-precos-beneficios/",
+        "capturado_em": "2026-11-13T13:26:41.629Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Planos Netflix: conheça os preços e benefícios de cada assinatura • Tecnoblog",
+      "url": "https://tecnoblog.net/guias/planos-da-netflix-precos-beneficios",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 18946,
+      "caracteres_preparados": 7996,
+      "trecho_analisado": "TÍTULO DA FONTE: Planos Netflix: conheça os preços e benefícios de cada assinatura • Tecnoblog\nURL DA FONTE: https://tecnoblog.net/guias/planos-da-netflix-precos-beneficios\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\nNetflix oferece três planos com preços distintos (Imagem: Vitor Pádua/Tecnoblog)\n\nA Netflix dispõe de três planos de assinatura que vão de R$ 20,90 a R$ 59,90 por mês e que também variam em relação ao conteúdo disponível, resolução do vídeo, quantidade de aparelhos simultneos e o máximo de assinantes extras para o compartilhamento de conta.\n\nVeja os detalhes abaixo.\n\n## Índice\n\n* [Quais são os planos e preços da Netflix?](#h-quais-sao-os-planos-e-precos-da-netflix)\n\n+ [Plano padrão com anúncios](#h-plano-padrao-com-anuncios)\n\n+ [Padrão](#h-padrao)\n\n+ [Premium](#h-premium)\n\n* [Existe algum desconto universitário para a Netflix?](#h-existe-algum-desconto-universitario-para-a-netflix)\n\n* [Existe algum plano empresarial da Netflix?](#h-existe-algum-plano-empresarial-da-netflix)\n\n* [Posso assinar a Netflix no plano anual com desconto?](#h-posso-assinar-a-netflix-no-plano-anual-com-desconto)\n\n* [O plano Premium da Netflix tem mais filmes e séries?](#h-o-plano-premium-da-netflix-tem-",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source lists the Netflix Standard plan price as R$ 44,90 per month, matching the claim."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The source lists the Netflix Standard plan price as R$ 44,90 per month, matching the claim."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "MISSING_SOURCE_DATE"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Netflix reajusta preços dos planos de assinatura no Brasil",
+      "url": "https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil",
+      "conteudo": "![Lupa para acionar busca](https://www.meioemensagem.com.br/wp-content/themes/theme_meioemensagem/imagens/icones/lupa-azul.svg)\n\n[Newsletter ![Assinar Newsletter Meio & Mensagem](https://www.meioemensagem.com.br/wp-content/themes/theme_meioemensagem/imagens/icones/ico_newsletter.svg)](https://integrador.meioemensagem.com.br/integrador/login?client=33a239bba97bc5dd64bdeaefeb98fd02&redirectUri=https://integrador.meioemensagem.com.br/integrador/admin/area-usuario/usuario/newsletter) [Contato ![Entre em contato conosco](https://www.meioemensagem.com.br/wp-content/themes/theme_meioemensagem/imagens/icones/ico_contato.svg)](https://www.meioemensagem.com.br/fale-conosco) [Login ![Faça Login ou Cada…",
+      "coletado_em": "2026-11-13T13:26:42.443Z",
+      "data_publicacao": "2026-10-15",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil",
+      "relevancia": 0.8299059,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+       "resultado_id": "373568-00",
+       "response_time_busca": 1.07,
+       "response_time_extracao": 0.02,
+       "consulta": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+       "origem_principal": {
+        "id_operacao": "9a7b29bc-572d-438b-bc10-9c3b40a3e31c",
+        "request_id": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+        "modo_busca": "GERAL",
+        "resultado_id": "373568-00",
+        "parametros": {
+         "query": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "9a7b29bc-572d-438b-bc10-9c3b40a3e31c",
+         "request_id": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+         "modo_busca": "GERAL",
+         "resultado_id": "373568-00",
+         "parametros": {
+          "query": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Thu, 15 Oct 2026 21:48:58 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 15 Oct 2026 21:48:58 GMT",
+         "value_normalized": "2026-10-15",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-10-15T21:48:58+00:00",
+         "value_normalized": "2026-10-15",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-10-15T21:54:55+00:00",
+         "value_normalized": "2026-10-15",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-10-15T21:48:58+00:00",
+         "value_normalized": "2026-10-15",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-15T21:54:55+00:00",
+         "value_normalized": "2026-10-15",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil",
+        "capturado_em": "2026-11-13T13:26:41.417Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "9a02aa8e-6105-4d61-8577-2d896f7a8b81",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "d5b8431e-5d0e-4993-bf86-775f7f6539f2",
+      "id_verificacao": "0e969307-2b8e-4e55-af17-48cfcadd562c",
+      "url_original": "https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil",
+      "url_canonica": "https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "fdc02021fde5a43b945da79bb190e873c59210844a715a57e8a38ac59fe14478",
+      "coletado_em": "2026-11-13T13:26:42.443Z",
+      "id_operacao_busca": "9a7b29bc-572d-438b-bc10-9c3b40a3e31c",
+      "id_operacao_extracao": "104e35b4-6c91-4951-ba5c-5b5305b9e260",
+      "consulta": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+      "parametros_busca": {
+       "query": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://tecnoblog.net/guias/planos-da-netflix-precos-beneficios",
+        "https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil",
+        "https://www.minhaconexao.com.br/planos/streaming/netflix",
+        "https://melhorplano.net/streaming/netflix-planos",
+        "https://www.instagram.com/p/De-dfW8tvsV"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+       "operacoes_busca": [
+        {
+         "id_operacao": "9a7b29bc-572d-438b-bc10-9c3b40a3e31c",
+         "request_id": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+         "modo_busca": "GERAL",
+         "resultado_id": "373568-00",
+         "parametros": {
+          "query": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "9a02aa8e-6105-4d61-8577-2d896f7a8b81",
+       "resultado_id": "373568-00",
+       "relevancia": 0.8299059,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 15 Oct 2026 21:48:58 GMT",
+         "value_normalized": "2026-10-15",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-10-15T21:48:58+00:00",
+         "value_normalized": "2026-10-15",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-10-15T21:54:55+00:00",
+         "value_normalized": "2026-10-15",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-10-15T21:48:58+00:00",
+         "value_normalized": "2026-10-15",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-15T21:54:55+00:00",
+         "value_normalized": "2026-10-15",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil",
+        "capturado_em": "2026-11-13T13:26:41.417Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Netflix reajusta preços dos planos de assinatura no Brasil",
+      "url": "https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 10871,
+      "caracteres_preparados": 6542,
+      "trecho_analisado": "TÍTULO DA FONTE: Netflix reajusta preços dos planos de assinatura no Brasil\nURL DA FONTE: https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n[Fechar](#)\n\n[Início](https://www.meioemensagem.com.br/) ▸ [Mídia](https://www.meioemensagem.com.br/midia) ▸ **Netflix reajusta preços dos planos de assinatura no Brasil**\n\nStreaming\n\n# Netflix reajusta preços dos planos de assinatura no Brasil\n\nPlano Premium passa a custar R$ 71,90 por mês em meio a notícias sobre cortes de vagas na empresa\n\n[Larissa Santiago](https://www.meioemensagem.com.br/author/lsantiago)  15 de outubro de 2026 - 18h48\n\n[- A](javascript:void(0);)   [+ A](javascript:void(0);)\n\n![Netflix reajusta valor de assinaturas que podem custar até R$ 71,90 (Créditos: Koray - stock.adobe.com)](https://www.meioemensagem.com.br/wp-content/uploads/2026/10/Netflix_cred_Koray-stockadobecom_SITE-1280X852-616x410.jpg)\n\nNetflix reajusta valor de assinaturas que podem custar até R$ 71,90 (Créditos: Koray – stock.adobe.com)\n\nA partir desta quinta-feira, 15, os assinantes da [Netflix no Brasil](https://www.meioemensagem.com.br/midia/quais-sao-os-planos-da-netflix",
+      "citacao_chave": "Já o plano Padrão passa de R$ 44,90 para R$ 51,90 por mês.",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source states that, as of October 15 2026, the Standard plan price increased to R$ 51,90, which conflicts with the claimed R$ 44,90."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "The source states that, as of October 15 2026, the Standard plan price increased to R$ 51,90, which conflicts with the claimed R$ 44,90."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 29,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2026-10-15"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Planos Netflix 2026: novos preços, telas e diferenças",
+      "url": "https://www.minhaconexao.com.br/planos/streaming/netflix",
+      "conteudo": "![Logo Minha Conexão](https://cdn-comparador.minhaconexao.com.br/cms/2023/01/16/63c55d02f3feflogo_minhaconexao_desktop.svg)\n\n# Planos Netflix com novos valores! Veja o que mudou e como pagar mais barato\n\n**Está pensando em assinar a Netflix? Em outubro de 2026, os planos da plataforma tiveram reajuste no Brasil e agora custam a partir de R$ 25,90 por mês.**\n\nAtualmente, há três opções de assinatura: Padrão com anúncios, por R$ 25,90; Padrão, por R$ 51,90; e Premium, por R$ 71,90. A seguir, confira os novos preços, entenda o que mudou e veja dicas para economizar na assinatura da Netflix!\n\nPromovido\n\n![Logo Disney+]()\n\nDisney+ Padrão\n\n2 telas simultâneas\n\nDownloads habilitados\n\nSem anúncios\n\n…",
+      "coletado_em": "2026-11-13T13:26:42.443Z",
+      "data_publicacao": "2026-10-31",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www.minhaconexao.com.br/planos/streaming/netflix",
+      "relevancia": 0.7699463,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+       "resultado_id": "03b57f-03",
+       "response_time_busca": 1.07,
+       "response_time_extracao": 0.02,
+       "consulta": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+       "origem_principal": {
+        "id_operacao": "9a7b29bc-572d-438b-bc10-9c3b40a3e31c",
+        "request_id": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+        "modo_busca": "GERAL",
+        "resultado_id": "03b57f-03",
+        "parametros": {
+         "query": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "9a7b29bc-572d-438b-bc10-9c3b40a3e31c",
+         "request_id": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+         "modo_busca": "GERAL",
+         "resultado_id": "03b57f-03",
+         "parametros": {
+          "query": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Sat, 31 Oct 2026 01:42:22 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Sat, 31 Oct 2026 01:42:22 GMT",
+         "value_normalized": "2026-10-31",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Thu, 12 Nov 2026 22:21:10 GMT",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.minhaconexao.com.br/planos/streaming/netflix",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-10-30T22:42:22.700Z",
+         "value_normalized": "2026-10-30",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-10-30T22:42:22.245Z",
+         "value_normalized": "2026-10-30",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-10-30T22:42:22-3:00",
+         "value_normalized": null,
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-30T22:42:22-3:00",
+         "value_normalized": null,
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "atualizado em",
+         "value_original": "30/10/2026",
+         "value_normalized": "2026-10-30",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.minhaconexao.com.br/planos/streaming/netflix",
+        "capturado_em": "2026-11-13T13:26:41.364Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "9a02aa8e-6105-4d61-8577-2d896f7a8b81",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "2b16ef27-33cc-4bb8-8062-63b90db59ba5",
+      "id_verificacao": "0e969307-2b8e-4e55-af17-48cfcadd562c",
+      "url_original": "https://www.minhaconexao.com.br/planos/streaming/netflix",
+      "url_canonica": "https://www.minhaconexao.com.br/planos/streaming/netflix",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "3f0287b94f9aacb74611bae38515ad22a4ab837b765e234e90c67c135c4b04f2",
+      "coletado_em": "2026-11-13T13:26:42.443Z",
+      "id_operacao_busca": "9a7b29bc-572d-438b-bc10-9c3b40a3e31c",
+      "id_operacao_extracao": "104e35b4-6c91-4951-ba5c-5b5305b9e260",
+      "consulta": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+      "parametros_busca": {
+       "query": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://tecnoblog.net/guias/planos-da-netflix-precos-beneficios",
+        "https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil",
+        "https://www.minhaconexao.com.br/planos/streaming/netflix",
+        "https://melhorplano.net/streaming/netflix-planos",
+        "https://www.instagram.com/p/De-dfW8tvsV"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+       "operacoes_busca": [
+        {
+         "id_operacao": "9a7b29bc-572d-438b-bc10-9c3b40a3e31c",
+         "request_id": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+         "modo_busca": "GERAL",
+         "resultado_id": "03b57f-03",
+         "parametros": {
+          "query": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "9a02aa8e-6105-4d61-8577-2d896f7a8b81",
+       "resultado_id": "03b57f-03",
+       "relevancia": 0.7699463,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Sat, 31 Oct 2026 01:42:22 GMT",
+         "value_normalized": "2026-10-31",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Thu, 12 Nov 2026 22:21:10 GMT",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.minhaconexao.com.br/planos/streaming/netflix",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-10-30T22:42:22.700Z",
+         "value_normalized": "2026-10-30",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-10-30T22:42:22.245Z",
+         "value_normalized": "2026-10-30",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-10-30T22:42:22-3:00",
+         "value_normalized": null,
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-30T22:42:22-3:00",
+         "value_normalized": null,
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "atualizado em",
+         "value_original": "30/10/2026",
+         "value_normalized": "2026-10-30",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.minhaconexao.com.br/planos/streaming/netflix",
+        "capturado_em": "2026-11-13T13:26:41.364Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Planos Netflix 2026: novos preços, telas e diferenças",
+      "url": "https://www.minhaconexao.com.br/planos/streaming/netflix",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 50030,
+      "caracteres_preparados": 7996,
+      "trecho_analisado": "TÍTULO DA FONTE: Planos Netflix 2026: novos preços, telas e diferenças\nURL DA FONTE: https://www.minhaconexao.com.br/planos/streaming/netflix\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n**Está pensando em assinar a Netflix?\n\nEm outubro de 2026, os planos da plataforma tiveram reajuste no Brasil e agora custam a partir de R$ 25,90 por mês.**\n\nAtualmente, há três opções de assinatura: Padrão com anúncios, por R$ 25,90;\n\nPadrão, por R$ 51,90;\n\ne Premium, por R$ 71,90.\n\nValores\n\n**Custo Mensal: R$ 44,90**\n\nValor total em 12 meses: R$ 538,80\n\nOs preços dos planos da Netflix mudaram em outubro de 2026.\n\nAtualmente, a plataforma oferece três opções de assinatura: **Padrão com Anúncios (R$ 25,90/mês), Padrão (R$ 51,90/mês) e Premium (R$ 71,90/mês).**\n\nO valor varia conforme os recursos incluídos em cada plano.\n\n**Confira mais detalhes e as diferenças entre os planos Netflix a seguir:**\n\n| Planos Netflix | Novos valores Netflix | Telas por plano | Membros extras |\n\n| --- | --- | --- | --- |\n\n| Padrão com anúncios - 1080p | R$ 25,90/mês | Até 2 telas | Não inclui |\n\n| Padrão - 1080p | R$ 51,90/mês | Até 2 telas | 1 assinante extra  (a partir de R$ 11,90/mês) |\n\n| Premium - 4K + HDR | R$ 71,90/mês | ",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source reports that in October 2026 the Standard plan price rose from R$ 44,90 to R$ 51,90, contradicting the claim."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "The source reports that in October 2026 the Standard plan price rose from R$ 44,90 to R$ 51,90, contradicting the claim."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 13,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2026-10-31"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Planos Netflix: guia com valores, telas e benefícios!",
+      "url": "https://melhorplano.net/streaming/netflix-planos",
+      "conteudo": "# Guia completo dos planos Netflix: novos valores, telas simultneas, benefícios e catálogo!\n\nOs preços da Netflix mudaram! Conheça as opções e saiba se vale a pena contratar\n\nusechatgpt init success\n\nDecidir se vale a pena [assinar um streaming](https://melhorplano.net/streaming) não é uma tarefa fácil com tantas opções disponíveis no mercado, concorda?\n\nPensando nisso, neste conteúdo vamos te mostrar todos os detalhes sobre os planos Netflix, incluindo preços, benefícios e catálogo, além de comparar com outros streamings para você entender se realmente vale a pena assinar!\n\n[Planos Netflix, valores e telas](#planos)[Compartilhamento de conta](#share)[Vale a pena assinar?](#vale)[Formas de p…",
+      "coletado_em": "2026-11-13T13:26:42.443Z",
+      "data_publicacao": "2026-10-30",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://melhorplano.net/streaming/netflix-planos",
+      "relevancia": 0.63883525,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+       "resultado_id": "2e26c0-04",
+       "response_time_busca": 1.07,
+       "response_time_extracao": 0.02,
+       "consulta": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+       "origem_principal": {
+        "id_operacao": "9a7b29bc-572d-438b-bc10-9c3b40a3e31c",
+        "request_id": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+        "modo_busca": "GERAL",
+        "resultado_id": "2e26c0-04",
+        "parametros": {
+         "query": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "9a7b29bc-572d-438b-bc10-9c3b40a3e31c",
+         "request_id": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+         "modo_busca": "GERAL",
+         "resultado_id": "2e26c0-04",
+         "parametros": {
+          "query": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Fri, 30 Oct 2026 22:51:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 30 Oct 2026 22:51:00 GMT",
+         "value_normalized": "2026-10-30",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 09:38:15 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://melhorplano.net/streaming/netflix-planos",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-10-30T22:51:00.588Z",
+         "value_normalized": "2026-10-30",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-10-30T22:50:59.849Z",
+         "value_normalized": "2026-10-30",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-10-30T22:51:00-3:00",
+         "value_normalized": null,
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-30T22:50:59-3:00",
+         "value_normalized": null,
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "atualizado em",
+         "value_original": "30/10/2026",
+         "value_normalized": "2026-10-30",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://melhorplano.net/streaming/netflix-planos",
+        "capturado_em": "2026-11-13T13:26:41.349Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "9a02aa8e-6105-4d61-8577-2d896f7a8b81",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "44e631bc-2038-4a20-a5bb-db1e05338be9",
+      "id_verificacao": "0e969307-2b8e-4e55-af17-48cfcadd562c",
+      "url_original": "https://melhorplano.net/streaming/netflix-planos",
+      "url_canonica": "https://melhorplano.net/streaming/netflix-planos",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "2b3b9c5fd2734686a71e847576057519877cc9103a69d2980b3df77e17b3a3ee",
+      "coletado_em": "2026-11-13T13:26:42.443Z",
+      "id_operacao_busca": "9a7b29bc-572d-438b-bc10-9c3b40a3e31c",
+      "id_operacao_extracao": "104e35b4-6c91-4951-ba5c-5b5305b9e260",
+      "consulta": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+      "parametros_busca": {
+       "query": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://tecnoblog.net/guias/planos-da-netflix-precos-beneficios",
+        "https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil",
+        "https://www.minhaconexao.com.br/planos/streaming/netflix",
+        "https://melhorplano.net/streaming/netflix-planos",
+        "https://www.instagram.com/p/De-dfW8tvsV"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+       "operacoes_busca": [
+        {
+         "id_operacao": "9a7b29bc-572d-438b-bc10-9c3b40a3e31c",
+         "request_id": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+         "modo_busca": "GERAL",
+         "resultado_id": "2e26c0-04",
+         "parametros": {
+          "query": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "9a02aa8e-6105-4d61-8577-2d896f7a8b81",
+       "resultado_id": "2e26c0-04",
+       "relevancia": 0.63883525,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 30 Oct 2026 22:51:00 GMT",
+         "value_normalized": "2026-10-30",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 09:38:15 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://melhorplano.net/streaming/netflix-planos",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-10-30T22:51:00.588Z",
+         "value_normalized": "2026-10-30",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-10-30T22:50:59.849Z",
+         "value_normalized": "2026-10-30",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-10-30T22:51:00-3:00",
+         "value_normalized": null,
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-30T22:50:59-3:00",
+         "value_normalized": null,
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "atualizado em",
+         "value_original": "30/10/2026",
+         "value_normalized": "2026-10-30",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://melhorplano.net/streaming/netflix-planos",
+        "capturado_em": "2026-11-13T13:26:41.349Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Planos Netflix: guia com valores, telas e benefícios!",
+      "url": "https://melhorplano.net/streaming/netflix-planos",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 57833,
+      "caracteres_preparados": 7988,
+      "trecho_analisado": "TÍTULO DA FONTE: Planos Netflix: guia com valores, telas e benefícios!\nURL DA FONTE: https://melhorplano.net/streaming/netflix-planos\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n![Logo Disney+]()\n\nDisney+ Padrão\n\nPlano mensal\n\nR$49,90/mês\n\n2 telas simultneas\n\nMais detalhes\n\n* Plano anual: R$ 33,99/mês durante 12 meses\n\n* Estreias de filmes, séries originais e clássicos da Disney, Pixar, Marvel, Star Wars, National Geographic e Hulu\n\nPlano mensal\n\nR$29,90/mês\n\n2 telas simultneas\n\nPlano mensal\n\nR$69,90/mês\n\n4 telas simultneas\n\nMais detalhes\n\n* Plano anual: R$ 48,99 / mês durante 12 meses\n\n* Todos os canais da ESPN, torneios exclusivos e mais de 500 eventos esportivos por mês\n\nMais detalhes\n\n* Plano anual: R$ 48,99 / mês durante 12 meses\n\n* Todos os canais da ESPN, torneios exclusivos e mais de 500 eventos esportivos por mês\n\nPlano mensal\n\nR$44,90/mês\n\nBenefícios Max Standard\n\nValores\n\n**Custo Mensal: R$ 44,90**\n\nValor total em 12 meses: R$ 538,80\n\n## Planos Netflix: valores, telas simultneas e diferenças\n\nA Netflix oferece **três planos de assinatura, com preços a partir de R$ 25,90 por mês**.\n\nAs opções se diferenciam pela presença de anúncios, pela qualidade de imagem e som e pela quantida",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source indicates the monthly cost of the Standard plan is R$ 44,90, which aligns with the claim."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The source indicates the monthly cost of the Standard plan is R$ 44,90, which aligns with the claim."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 14,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2026-10-30"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "BLOG_FORUM",
+      "titulo": "Instagram",
+      "url": "https://www.instagram.com/p/De-dfW8tvsV",
+      "conteudo": "[Log In](/accounts/login/?next=%2Fp%2FDe-dfW8tvsV&source=desktop_nav)\n\n[Sign Up](/accounts/emailsignup/)\n\n![legiaodosherois's profile picture](https://scontent.cdninstagram.com/v/t51.2885-19/448551068_1599009717562572_4979833283510471644_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=108&ig_cache_key=GJxYvBrMLDV2Sq4FANwLT7D86xtFbkULAAAB1501500j-ccb7-5&ccb=7-5&_nc_sid=669407&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=NFZmD6OaYo0Q7kNvwH2VWAa&_nc_oc=AdrU6OOUkT34kYdqvqwstC3dmX9ehkFPrrxFqO7HtJr9Ixtzlyvx09ACgDCye6zX-7YJyQsNPlyWfAh-DqROJrSd&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_ss=73689&oh=00_AQQ3cKOLx-xEhwb4fv9KDhLm40a2McBymPh8etSWQP-nlg&oe=6AFBFB49)\n\nNever miss a post…",
+      "coletado_em": "2026-11-13T13:26:42.443Z",
+      "data_publicacao": "2026-10-29",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www.instagram.com/p/De-dfW8tvsV/",
+      "relevancia": 0.8100285,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+       "resultado_id": "74d3c2-01",
+       "response_time_busca": 1.07,
+       "response_time_extracao": 0.02,
+       "consulta": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+       "origem_principal": {
+        "id_operacao": "9a7b29bc-572d-438b-bc10-9c3b40a3e31c",
+        "request_id": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+        "modo_busca": "GERAL",
+        "resultado_id": "74d3c2-01",
+        "parametros": {
+         "query": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "9a7b29bc-572d-438b-bc10-9c3b40a3e31c",
+         "request_id": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+         "modo_busca": "GERAL",
+         "resultado_id": "74d3c2-01",
+         "parametros": {
+          "query": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Thu, 29 Oct 2026 22:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 29 Oct 2026 22:00:00 GMT",
+         "value_normalized": "2026-10-29",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.instagram.com/p/De-dfW8tvsV/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.instagram.com/p/De-dfW8tvsV",
+        "capturado_em": "2026-11-13T13:26:41.781Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "9a02aa8e-6105-4d61-8577-2d896f7a8b81",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "58136f24-a184-4966-b9f7-9b9c2fbbc09d",
+      "id_verificacao": "0e969307-2b8e-4e55-af17-48cfcadd562c",
+      "url_original": "https://www.instagram.com/p/De-dfW8tvsV",
+      "url_canonica": "https://www.instagram.com/p/De-dfW8tvsV",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "392101de8b8dfc7c883bed3b13c694e1dc7b2df6a0dd0ddca2ee62bd92fb9b9b",
+      "coletado_em": "2026-11-13T13:26:42.443Z",
+      "id_operacao_busca": "9a7b29bc-572d-438b-bc10-9c3b40a3e31c",
+      "id_operacao_extracao": "104e35b4-6c91-4951-ba5c-5b5305b9e260",
+      "consulta": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+      "parametros_busca": {
+       "query": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://tecnoblog.net/guias/planos-da-netflix-precos-beneficios",
+        "https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil",
+        "https://www.minhaconexao.com.br/planos/streaming/netflix",
+        "https://melhorplano.net/streaming/netflix-planos",
+        "https://www.instagram.com/p/De-dfW8tvsV"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+       "operacoes_busca": [
+        {
+         "id_operacao": "9a7b29bc-572d-438b-bc10-9c3b40a3e31c",
+         "request_id": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+         "modo_busca": "GERAL",
+         "resultado_id": "74d3c2-01",
+         "parametros": {
+          "query": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "9a02aa8e-6105-4d61-8577-2d896f7a8b81",
+       "resultado_id": "74d3c2-01",
+       "relevancia": 0.8100285,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 29 Oct 2026 22:00:00 GMT",
+         "value_normalized": "2026-10-29",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.instagram.com/p/De-dfW8tvsV/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.instagram.com/p/De-dfW8tvsV",
+        "capturado_em": "2026-11-13T13:26:41.781Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Instagram",
+      "url": "https://www.instagram.com/p/De-dfW8tvsV",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 18431,
+      "caracteres_preparados": 1866,
+      "trecho_analisado": "TÍTULO DA FONTE: Instagram\nURL DA FONTE: https://www.instagram.com/p/De-dfW8tvsV\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n[legiaodosherois](/legiaodosherois/)\n\nA Netflix reajustou o preço dos três planos de assinatura do streaming no Brasil.\n\nConfira os novos valores:\n\nPlano Padrão com anúncios foi de R$ 20,90 para R$ 25,90 por mês\n\nPlano Padrão sem anúncios foi de R$ 44,90 para R$ 51,90 por mês\n\nPlano Premium foi de R$ 59,90 para R$ 71,90 por mês\n\nO último reajuste de preços da Netflix no Brasil aconteceu em maio de 2024.\n\n[#netflix](/explore/tags/netflix/) [#streaming](/explore/tags/streaming/)\n\n[![star.play58's profile picture](https://scontent.cdninstagram.com/v/t51.82787-19/898800589_18109422179009575_9064390866669342225_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=102&ig_cache_key=GM2bkjUnRBFsbFZAABEOH9F3L8t9bmNDAQAB1501500j-ccb7-5&ccb=7-5&_nc_sid=669407&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=mw8d3amqhCcQ7kNvwGyvKRF&_nc_oc=Adp9hkC_XO1X0XpNatlEs31yJrPttaR6KC2khJAU0mMswspGZvGWPOKelTAm1TvFBkswYWJKv8SXaTuSkfI2dSvC&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=JcPM3hR2hOWbxlQItHnnSA&_nc_ss=73689&oh=00_AQQglHnxYE4nw1_FAiAGnHUayTMjSFYf_cOk-DOvBvq4lQ&oe=6AFC",
+      "citacao_chave": "Plano Padrão sem anúncios foi de R$ 44,90 para R$ 51,90 por mês",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The post says the Standard (no‑ads) plan changed from R$ 44,90 to R$ 51,90, contradicting the claimed current price."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "The post says the Standard (no‑ads) plan changed from R$ 44,90 to R$ 51,90, contradicting the claimed current price."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 15,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2026-10-29"
+     }
+    }
+   ],
+   "erro_busca": null,
+   "risco_desatualizacao": {
+    "nivel": "HIGH",
+    "sensivel_ao_tempo": true,
+    "motivos": [
+     "Prices change often (checked against a 30-day window)"
+    ]
+   },
+   "dominios_oficiais_usados": [],
+   "dominios_oficiais_automaticos": [],
+   "agregacao": {
+    "status": "CLASSIFICADO",
+    "conclusao_factual": {
+     "status": "CONFLITO",
+     "resumo": "As evidências analisadas apoiam e contradizem a afirmação; o conflito permanece sem resolução."
+    },
+    "veredito": "CONFLITO",
+    "resumo": "As fontes utilizáveis apresentam posições divergentes. Não foi possível resolver o conflito com as evidências disponíveis.",
+    "afirmacao": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+    "score_qualidade_evidencia": {
+     "valor": 20,
+     "escala": "0-100",
+     "natureza": "HEURISTICA",
+     "interpretacao": "Qualidade estrutural das evidências, não probabilidade de verdade.",
+     "componentes": {
+      "autoridade": 0,
+      "atualidade": 0,
+      "diversidade_fontes": 20,
+      "concordancia": 0
+     }
+    },
+    "freshness": {
+     "score": null,
+     "status": "UNVERIFIABLE",
+     "confidence": "INSUFFICIENT",
+     "algorithm_id": "CLAIM_FRESHNESS_SCORE",
+     "algorithm_version": "1.1.0",
+     "policy_id": "preco:30d:v1",
+     "as_of": "2026-11-13T13:26:32.604Z",
+     "evidence_summary": {
+      "received": 5,
+      "eligible": 0,
+      "independent_domains": 0,
+      "excluded": 5
+     },
+     "drivers": [
+      {
+       "code": "NO_ATTRIBUTE_DATED_EVIDENCE"
+      }
+     ],
+     "limitations": [
+      "Não há evidência com data verificável ligada ao atributo desta afirmação."
+     ]
+    },
+    "concordancia": {
+     "algorithm_id": "SOURCE_AGREEMENT_INDEX",
+     "algorithm_version": "1.1.0",
+     "weights": {
+      "OFICIAL": 3,
+      "ACADEMICO": 3,
+      "NOTICIA": 2,
+      "REFERENCIA": 1.5,
+      "OUTRO": 1,
+      "BLOG_FORUM": 0.25
+     },
+     "score": 57,
+     "coverage": "STRONG",
+     "independent_sources": 5,
+     "source_types": [
+      "NOTICIA",
+      "OUTRO",
+      "BLOG_FORUM"
+     ],
+     "supporting": 2,
+     "authoritative_supporting": 0,
+     "contradicting": 3,
+     "split": 0,
+     "by_type": {
+      "NOTICIA": {
+       "supports": 1,
+       "contradicts": 0,
+       "split": 0
+      },
+      "OUTRO": {
+       "supports": 1,
+       "contradicts": 2,
+       "split": 0
+      },
+      "BLOG_FORUM": {
+       "supports": 0,
+       "contradicts": 1,
+       "split": 0
+      }
+     },
+     "limitations": [
+      "Agreement between sources is not a probability of truth: sources can share the same mistake.",
+      "Copies and pages from the same site count once; independence is approximated by domain and text similarity."
+     ]
+    },
+    "recencia_pagina": {
+     "algorithm_id": "PAGE_DATE_RECENCY_INDEX",
+     "algorithm_version": "1.0.0",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "as_of": "2026-11-13T13:26:32.604Z",
+     "score": 46,
+     "status": "FRESH",
+     "policy_id": "preco:30d:page:v1",
+     "newest_date": "2026-10-31",
+     "sources": [
+      {
+       "date": "2026-10-15",
+       "age_days": 29,
+       "status": "FRESH",
+       "posture": "CONTRADICTS",
+       "domain": "meioemensagem.com.br",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-10-31",
+       "age_days": 13,
+       "status": "FRESH",
+       "posture": "CONTRADICTS",
+       "domain": "minhaconexao.com.br",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-10-30",
+       "age_days": 14,
+       "status": "FRESH",
+       "posture": "SUPPORTS",
+       "domain": "melhorplano.net",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-10-29",
+       "age_days": 15,
+       "status": "FRESH",
+       "posture": "CONTRADICTS",
+       "domain": "instagram.com",
+       "evidence_id": null
+      }
+     ],
+     "limitations": [
+      "Baseado na data da página, não na data em que o dado específico mudou: confiança baixa.",
+      "Não substitui o índice de atualidade principal e não é probabilidade de verdade."
+     ]
+    },
+    "atualidade_afirmacao": {
+     "algorithm_id": "CLAIM_CURRENCY_SCORE",
+     "algorithm_version": "1.0.0",
+     "formula": "evidence_recency × support_share",
+     "window_days": 30,
+     "score": 26,
+     "status": "UNCERTAIN",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "evidence_recency": 46,
+     "support_share": 0.57,
+     "newest_date": "2026-10-31",
+     "newest_age_days": 13,
+     "within_window": true
+    },
+    "versao_regras": "1.2.0",
+    "metodo": "AGREGACAO_DETERMINISTICA",
+    "fontes_independentes": 5,
+    "grupos_distintos_de_evidencia": 5,
+    "dependencia_detectada": 0,
+    "dependencia_nao_verificada": true,
+    "nota_independencia": "Cópias exatas, quase duplicadas, URLs canônicas iguais e páginas do mesmo domínio são agrupadas; domínios sem sinal de cópia não têm independência editorial comprovada.",
+    "total_evidencias_utilizaveis": 5,
+    "fontes": [
+     {
+      "dominio": "tecnoblog.net",
+      "dominios": [
+       "tecnoblog.net"
+      ],
+      "grupo_dependencia_id": "source_cluster_001",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://tecnoblog.net/guias/planos-da-netflix-precos-beneficios"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Planos Netflix: conheça os preços e benefícios de cada assinatura • Tecnoblog",
+        "url": "https://tecnoblog.net/guias/planos-da-netflix-precos-beneficios",
+        "categoria_fonte": "NOTICIA",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "UNVERIFIABLE",
+        "status_datas_declaradas": "AUSENTE",
+        "consultado_em": "2026-11-13T13:26:42.443Z",
+        "data_publicacao": null,
+        "data_atualizacao": null,
+        "escopo_data": "UNKNOWN",
+        "sinais_data": [
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Fri, 21 Mar 2025 13:27:53 GMT",
+          "value_normalized": "2025-03-21",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://tecnoblog.net/guias/planos-da-netflix-precos-beneficios/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_MODIFIED_TIME",
+          "field": "article:modified_time",
+          "value_original": "2025-03-21T13:27:53+00:00",
+          "value_normalized": "2025-03-21",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2023-04-28T16:02:16+00:00",
+          "value_normalized": "2023-04-28",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2025-03-21T13:27:53+00:00",
+          "value_normalized": "2025-03-21",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_001",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "meioemensagem.com.br",
+      "dominios": [
+       "meioemensagem.com.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_002",
+      "oficial": false,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Netflix reajusta preços dos planos de assinatura no Brasil",
+        "url": "https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil",
+        "categoria_fonte": "OUTRO",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:26:42.443Z",
+        "data_publicacao": "2026-10-15",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Thu, 15 Oct 2026 21:48:58 GMT",
+          "value_normalized": "2026-10-15",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2026-10-15T21:48:58+00:00",
+          "value_normalized": "2026-10-15",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "ARTICLE_MODIFIED_TIME",
+          "field": "article:modified_time",
+          "value_original": "2026-10-15T21:54:55+00:00",
+          "value_normalized": "2026-10-15",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-10-15T21:48:58+00:00",
+          "value_normalized": "2026-10-15",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "newsarticle"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-10-15T21:54:55+00:00",
+          "value_normalized": "2026-10-15",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "newsarticle"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_002",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "minhaconexao.com.br",
+      "dominios": [
+       "minhaconexao.com.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_003",
+      "oficial": false,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.minhaconexao.com.br/planos/streaming/netflix"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Planos Netflix 2026: novos preços, telas e diferenças",
+        "url": "https://www.minhaconexao.com.br/planos/streaming/netflix",
+        "categoria_fonte": "OUTRO",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:26:42.443Z",
+        "data_publicacao": "2026-10-31",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Sat, 31 Oct 2026 01:42:22 GMT",
+          "value_normalized": "2026-10-31",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Thu, 12 Nov 2026 22:21:10 GMT",
+          "value_normalized": "2026-11-12",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.minhaconexao.com.br/planos/streaming/netflix",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2026-10-30T22:42:22.700Z",
+          "value_normalized": "2026-10-30",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "ARTICLE_MODIFIED_TIME",
+          "field": "article:modified_time",
+          "value_original": "2026-10-30T22:42:22.245Z",
+          "value_normalized": "2026-10-30",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-10-30T22:42:22-3:00",
+          "value_normalized": null,
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-10-30T22:42:22-3:00",
+          "value_normalized": null,
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "atualizado em",
+          "value_original": "30/10/2026",
+          "value_normalized": "2026-10-30",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_003",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "melhorplano.net",
+      "dominios": [
+       "melhorplano.net"
+      ],
+      "grupo_dependencia_id": "source_cluster_004",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://melhorplano.net/streaming/netflix-planos"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Planos Netflix: guia com valores, telas e benefícios!",
+        "url": "https://melhorplano.net/streaming/netflix-planos",
+        "categoria_fonte": "OUTRO",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:26:42.443Z",
+        "data_publicacao": "2026-10-30",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Fri, 30 Oct 2026 22:51:00 GMT",
+          "value_normalized": "2026-10-30",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Fri, 13 Nov 2026 09:38:15 GMT",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://melhorplano.net/streaming/netflix-planos",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2026-10-30T22:51:00.588Z",
+          "value_normalized": "2026-10-30",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "ARTICLE_MODIFIED_TIME",
+          "field": "article:modified_time",
+          "value_original": "2026-10-30T22:50:59.849Z",
+          "value_normalized": "2026-10-30",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-10-30T22:51:00-3:00",
+          "value_normalized": null,
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-10-30T22:50:59-3:00",
+          "value_normalized": null,
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "atualizado em",
+          "value_original": "30/10/2026",
+          "value_normalized": "2026-10-30",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_004",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "instagram.com",
+      "dominios": [
+       "instagram.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_005",
+      "oficial": false,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.instagram.com/p/De-dfW8tvsV"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Instagram",
+        "url": "https://www.instagram.com/p/De-dfW8tvsV",
+        "categoria_fonte": "BLOG_FORUM",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:26:42.443Z",
+        "data_publicacao": "2026-10-29",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Thu, 29 Oct 2026 22:00:00 GMT",
+          "value_normalized": "2026-10-29",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.instagram.com/p/De-dfW8tvsV/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_005",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     }
+    ],
+    "limitacoes": [
+     "Nenhuma evidência possui data verificável e status de atualidade FRESH.",
+     "Uma data da página ou do resultado de busca não comprova quando o atributo da afirmação foi publicado ou atualizado.",
+     "A data da consulta registra quando a página foi observada; não substitui uma data declarada de publicação ou atualização.",
+     "Nenhuma fonte pertence ao cadastro de domínios oficiais informado.",
+     "Domínios sem sinal detectado de duplicação não têm independência editorial comprovada; republicação com edição extensa ainda pode passar despercebida.",
+     "Foram encontradas posturas divergentes entre fontes ou evidências do mesmo domínio. O conflito não foi resolvido."
+    ],
+    "avaliado_em": "2026-11-13T13:26:50.257Z"
+   }
+  }
+ ],
+ "afirmacoes_omitidas": [],
+ "resposta_corrigida": {
+  "texto": "O plano Padrão da Netflix no Brasil custa R$ 51,90 por mês [1][2][3].",
+  "mudancas": [
+   {
+    "claim_id": "afirmacao_1",
+    "what": "replaced price with R$ 51,90 per month"
+   }
+  ],
+  "fontes_citadas": [
+   1,
+   2,
+   3
+  ],
+  "tentativas": 1,
+  "citacoes_anexadas": false,
+  "fontes": [
+   {
+    "n": 1,
+    "url": "https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil",
+    "titulo": "Netflix reajusta preços dos planos de assinatura no Brasil",
+    "tipo": "OUTRO",
+    "postura": "CONTRADICTS",
+    "data": "2026-10-15"
+   },
+   {
+    "n": 2,
+    "url": "https://www.minhaconexao.com.br/planos/streaming/netflix",
+    "titulo": "Planos Netflix 2026: novos preços, telas e diferenças",
+    "tipo": "OUTRO",
+    "postura": "CONTRADICTS",
+    "data": "2026-10-31"
+   },
+   {
+    "n": 3,
+    "url": "https://www.instagram.com/p/De-dfW8tvsV",
+    "titulo": "Instagram",
+    "tipo": "BLOG_FORUM",
+    "postura": "CONTRADICTS",
+    "data": "2026-10-29"
+   }
+  ],
+  "metodo": "MODEL_REWRITE_FROM_VERIFIED_EVIDENCE"
+ },
+ "rastreabilidade_modelo": [
+  {
+   "id_chamada": "439d3f35-c1a4-44f8-a5a3-289030b9afed",
+   "id_requisicao_enviada": "eb7c242a-547e-4498-bd97-bef924c078dc",
+   "id_verificacao": "0e969307-2b8e-4e55-af17-48cfcadd562c",
+   "etapa": "DECOMPOSICAO",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 480,
+   "tokens": {
+    "entrada": 846,
+    "saida": 101,
+    "total": 947
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "eb7c242a-547e-4498-bd97-bef924c078dc",
+   "id_trace": "845d14c4f76040ab90800b86efa81431",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 480.317,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:26:32.773Z"
+  },
+  {
+   "id_chamada": "68900258-27dd-40cd-8e7f-be55eabf9288",
+   "id_requisicao_enviada": "e94095cc-3d7d-4771-aa83-fdbc416637d5",
+   "id_verificacao": "0e969307-2b8e-4e55-af17-48cfcadd562c",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 2870,
+   "tokens": {
+    "entrada": 4188,
+    "saida": 2048,
+    "total": 6236
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "e94095cc-3d7d-4771-aa83-fdbc416637d5",
+   "id_trace": "70df41b8b70b4affb9343ed02794fd37",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 2870.86,
+   "status_http": 200,
+   "status": "RESPOSTA_INVALIDA",
+   "registrada_em": "2026-11-13T13:26:42.496Z",
+   "erro": "Resposta vazia ou em formato inesperado."
+  },
+  {
+   "id_chamada": "1cbd7849-8564-4bf1-9264-5e727e1da87a",
+   "id_requisicao_enviada": "02e09d83-28bc-4a07-84f0-a0e7b416ed24",
+   "id_verificacao": "0e969307-2b8e-4e55-af17-48cfcadd562c",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 4744,
+   "tokens": {
+    "entrada": 4188,
+    "saida": 2040,
+    "total": 6228
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "02e09d83-28bc-4a07-84f0-a0e7b416ed24",
+   "id_trace": "1fad57fd18da45f18f54671e21a37b52",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 4778.475,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:26:45.407Z"
+  },
+  {
+   "id_chamada": "bd496154-5294-4271-886e-bb929d2a0992",
+   "id_requisicao_enviada": "e3045c94-ec9d-4c55-b6d5-14576410d4a4",
+   "id_verificacao": "0e969307-2b8e-4e55-af17-48cfcadd562c",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 858,
+   "tokens": {
+    "entrada": 958,
+    "saida": 252,
+    "total": 1210
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "e3045c94-ec9d-4c55-b6d5-14576410d4a4",
+   "id_trace": "6e57a8df466f4fd082f6280525566c91",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 892.402,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:26:50.257Z"
+  }
+ ],
+ "rastreabilidade_pesquisa": [
+  {
+   "id_operacao": "9a7b29bc-572d-438b-bc10-9c3b40a3e31c",
+   "id_verificacao": "0e969307-2b8e-4e55-af17-48cfcadd562c",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:26:33.855Z",
+   "finalizada_em": "2026-11-13T13:26:35.398Z",
+   "duracao_ms": 1543,
+   "request_id": "01e726f0-a8d0-4c8a-95b6-0d11c38174ef",
+   "response_time": 1.07,
+   "erro": null,
+   "modo_busca": "GERAL",
+   "parametros": {
+    "query": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true,
+    "country": "brazil"
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "373568-00",
+     "titulo": "Netflix reajusta preços dos planos de assinatura no Brasil",
+     "url": "https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil",
+     "relevancia": 0.8299059,
+     "data_publicacao": "2026-10-15"
+    },
+    {
+     "resultado_id": "74d3c2-01",
+     "titulo": "Instagram",
+     "url": "https://www.instagram.com/p/De-dfW8tvsV",
+     "relevancia": 0.8100285,
+     "data_publicacao": "2026-10-29"
+    },
+    {
+     "resultado_id": "676f01-02",
+     "titulo": "Planos Netflix: conheça os preços e benefícios de cada assinatura • Tecnoblog",
+     "url": "https://tecnoblog.net/guias/planos-da-netflix-precos-beneficios",
+     "relevancia": 0.8039445,
+     "data_publicacao": null
+    },
+    {
+     "resultado_id": "03b57f-03",
+     "titulo": "Planos Netflix 2026: novos preços, telas e diferenças",
+     "url": "https://www.minhaconexao.com.br/planos/streaming/netflix",
+     "relevancia": 0.7699463,
+     "data_publicacao": "2026-10-31"
+    },
+    {
+     "resultado_id": "2e26c0-04",
+     "titulo": "Planos Netflix: guia com valores, telas e benefícios!",
+     "url": "https://melhorplano.net/streaming/netflix-planos",
+     "relevancia": 0.63883525,
+     "data_publicacao": "2026-10-30"
+    }
+   ]
+  },
+  {
+   "id_operacao": "fcc8882a-fa51-44ef-945a-1a054111538d",
+   "id_verificacao": "0e969307-2b8e-4e55-af17-48cfcadd562c",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:26:35.398Z",
+   "finalizada_em": "2026-11-13T13:26:40.954Z",
+   "duracao_ms": 5556,
+   "request_id": "3f1f6a91-f243-4c42-9909-07e926d3694b",
+   "response_time": 5.12,
+   "erro": null,
+   "modo_busca": "NOTICIAS_BR",
+   "parametros": {
+    "query": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+    "search_depth": "basic",
+    "max_results": 4,
+    "include_answer": false,
+    "include_published_date": true,
+    "topic": "news",
+    "include_domains": [
+     "g1.globo.com",
+     "oglobo.globo.com",
+     "valor.globo.com",
+     "folha.uol.com.br",
+     "uol.com.br",
+     "estadao.com.br",
+     "agenciabrasil.ebc.com.br",
+     "cnnbrasil.com.br",
+     "infomoney.com.br",
+     "exame.com",
+     "poder360.com.br",
+     "correiobraziliense.com.br",
+     "metropoles.com",
+     "veja.abril.com.br",
+     "terra.com.br",
+     "band.com.br",
+     "r7.com",
+     "bbc.com",
+     "jota.info",
+     "canaltech.com.br"
+    ]
+   },
+   "quantidade_resultados": 4,
+   "resultados": [
+    {
+     "resultado_id": "ec144d-00",
+     "titulo": "Netflix to cut 1,000 jobs worldwide - BBC",
+     "url": "https://www.bbc.com/news/articles/c6zxj0gzk4x4o",
+     "relevancia": 0.009196552,
+     "data_publicacao": "2026-10-14"
+    },
+    {
+     "resultado_id": "f8c327-01",
+     "titulo": "Netflix updates Warner Bros bid to all-cash offer - BBC",
+     "url": "https://www.bbc.com/news/articles/cq5yqzy5d8yo",
+     "relevancia": 0.0075772414,
+     "data_publicacao": "2026-01-20"
+    },
+    {
+     "resultado_id": "ca56ea-02",
+     "titulo": "World Cup 2030: Netflix wins rights to show matches in Spain - BBC",
+     "url": "https://www.bbc.com/sport/football/articles/c3zxj4k7kz9eo",
+     "relevancia": 0.00698465,
+     "data_publicacao": "2026-10-13"
+    },
+    {
+     "resultado_id": "71c1b0-03",
+     "titulo": "Netflix reportedly closes in on Warner Bros deal - BBC",
+     "url": "https://www.bbc.com/news/articles/ce91x2jm5pjo",
+     "relevancia": 0.0067188703,
+     "data_publicacao": "2025-12-05"
+    }
+   ]
+  },
+  {
+   "id_operacao": "104e35b4-6c91-4951-ba5c-5b5305b9e260",
+   "id_verificacao": "0e969307-2b8e-4e55-af17-48cfcadd562c",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "EXTRACAO",
+   "consulta": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:26:40.957Z",
+   "finalizada_em": "2026-11-13T13:26:42.443Z",
+   "duracao_ms": 1486,
+   "request_id": "9a02aa8e-6105-4d61-8577-2d896f7a8b81",
+   "response_time": 0.02,
+   "erro": null,
+   "urls_solicitadas": [
+    "https://tecnoblog.net/guias/planos-da-netflix-precos-beneficios",
+    "https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil",
+    "https://www.minhaconexao.com.br/planos/streaming/netflix",
+    "https://melhorplano.net/streaming/netflix-planos",
+    "https://www.instagram.com/p/De-dfW8tvsV"
+   ],
+   "parametros": {
+    "urls": [
+     "https://tecnoblog.net/guias/planos-da-netflix-precos-beneficios",
+     "https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil",
+     "https://www.minhaconexao.com.br/planos/streaming/netflix",
+     "https://melhorplano.net/streaming/netflix-planos",
+     "https://www.instagram.com/p/De-dfW8tvsV"
+    ],
+    "extract_depth": "basic",
+    "format": "markdown",
+    "include_images": false
+   },
+   "quantidade_resultados": 5,
+   "urls_extraidas": [
+    "https://tecnoblog.net/guias/planos-da-netflix-precos-beneficios",
+    "https://www.meioemensagem.com.br/midia/netflix-reajusta-precos-dos-planos-de-assinatura-no-brasil",
+    "https://www.minhaconexao.com.br/planos/streaming/netflix",
+    "https://melhorplano.net/streaming/netflix-planos",
+    "https://www.instagram.com/p/De-dfW8tvsV"
+   ]
+  }
+ ],
+ "modo": "real",
+ "simulado": false,
+ "gateway": {
+  "gateway": "bifrost",
+  "chamadas": 4,
+  "falhas": 1,
+  "cadeia_modelos": [
+   "groq/openai/gpt-oss-20b",
+   "groq/openai/gpt-oss-120b"
+  ],
+  "queda_simulada": false,
+  "respostas_por_modelo": [
+   {
+    "modelo": "groq/openai/gpt-oss-20b",
+    "chamadas": 1
+   },
+   {
+    "modelo": "groq/openai/gpt-oss-120b",
+    "chamadas": 2
+   }
+  ],
+  "respostas_de_reserva": 2,
+  "tokens_total": 8385,
+  "latencia_media_ms": 2050
+ },
+ "duracao_ms": 18730,
+ "gravado_em": "2026-11-13T13:26:51.184Z"
+}

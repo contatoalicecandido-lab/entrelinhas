@@ -1,0 +1,2138 @@
+{
+ "sistema": "Entrelinhas",
+ "id_verificacao": "575b8e5f-f0e0-4404-8107-b90cc40c149a",
+ "texto_original": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+ "verificado_em": "2026-11-13T13:35:57.863Z",
+ "total_afirmacoes": 1,
+ "sintese": {
+  "veredito": "CONTRADICAO_FRACA",
+  "resumo": "As evidências utilizáveis contradizem a afirmação, mas nenhuma fonte oficial com data ligada ao fato confirma a contradição. Trate a afirmação como possivelmente desatualizada ou incorreta e revise as fontes.",
+  "total_afirmacoes": 1,
+  "contagem_vereditos": {
+   "CONTRADICAO_FRACA": 1
+  }
+ },
+ "afirmacoes": [
+  {
+   "id": "afirmacao_1",
+   "texto": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+   "tipo_afirmacao": null,
+   "origem_tipo_afirmacao": null,
+   "nuances": {
+    "idioma": "en",
+    "variante": null,
+    "confianca_idioma": 1,
+    "valores": [],
+    "datas": [],
+    "expressoes_temporais": [
+     {
+      "texto": "still",
+      "tipo": "PRESENTE",
+      "rotulo": "present tense: must hold today"
+     }
+    ],
+    "condicoes": [],
+    "mudancas": [],
+    "tempo_coloquial": [],
+    "girias": {
+     "aliases": [],
+     "expressoes": []
+    },
+    "consulta_busca": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+    "dominios_oficiais_sugeridos": [],
+    "autoridades": [],
+    "notas": [
+     "\"still\": present tense: must hold today."
+    ]
+   },
+   "evidencias": [
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OFICIAL",
+      "titulo": "Python | endoflife.date",
+      "url": "https://endoflife.date/python",
+      "conteudo": "# Python\n\n [lang](/tags/lang)\n\n![Python logo](https://cdn.jsdelivr.net/npm/simple-icons/icons/python.svg)\n\n[Python](https://www.python.org/) is an interpreted, high-level, general-purpose programming language.\n\n![Release Schedule Image Gantt Chart for Python](/python.svg)\n\n| Release | Released | Active Support | Security Support | Latest |\n| --- | --- | --- | --- | --- |\n| 3.15 | 1 month ago (09 Oct 2026) | Ends in 1 year and 11 months (09 Oct 2028) | Ends in 5 years (31 Oct 2031) | [3.15.2](https://www.python.org/downloads/release/python-3152/ \"Release Notes / Changelog\") (25 Oct 2026) |\n| 3.14 | 1 year ago (07 Oct 2025) | Ends in 10 months (01 Oct 2027) | Ends in 4 years (31 Oct 2030) | [3…",
+      "coletado_em": "2026-11-13T13:35:48.517Z",
+      "data_publicacao": "2026-10-27",
+      "data_atualizacao": "2020-01-01",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": "https://endoflife.date/python",
+      "relevancia": 0.155591,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "beaddd96-355f-4dde-89e5-0a268dd9690f",
+       "resultado_id": "d29a76-02",
+       "response_time_busca": 2.86,
+       "response_time_extracao": 0.02,
+       "consulta": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+       "origem_principal": {
+        "id_operacao": "400269da-814c-423f-b2eb-7799b6ce9a3d",
+        "request_id": "beaddd96-355f-4dde-89e5-0a268dd9690f",
+        "modo_busca": "NOTICIAS",
+        "resultado_id": "d29a76-02",
+        "parametros": {
+         "query": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "400269da-814c-423f-b2eb-7799b6ce9a3d",
+         "request_id": "beaddd96-355f-4dde-89e5-0a268dd9690f",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "d29a76-02",
+         "parametros": {
+          "query": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Tue, 27 Oct 2026 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 27 Oct 2026 00:00:00 GMT",
+         "value_normalized": "2026-10-27",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://endoflife.date/python",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-27T00:08:12+00:00",
+         "value_normalized": "2026-10-27",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-10-27T00:08:12+00:00",
+         "value_normalized": "2026-10-27",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://endoflife.date/python",
+        "capturado_em": "2026-11-13T13:35:48.475Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "d07ad743-7d0e-41e0-9fa8-04387e6d7b7f",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2020-01-01",
+       "precisao": "DIA",
+       "citacao": "Ended 6 years and 10 months ago (01 Jan 2020)",
+       "origem": "QUOTED_IN_SOURCE_TEXT"
+      }
+     },
+     "coleta": {
+      "id_coleta": "3a6b0414-e948-4220-bc32-01a577e27312",
+      "id_verificacao": "575b8e5f-f0e0-4404-8107-b90cc40c149a",
+      "url_original": "https://endoflife.date/python",
+      "url_canonica": "https://endoflife.date/python",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "874569e01f18c621ce1e2063f95e9f64c68f783fb3e43072d346e3163bc90b91",
+      "coletado_em": "2026-11-13T13:35:48.517Z",
+      "id_operacao_busca": "400269da-814c-423f-b2eb-7799b6ce9a3d",
+      "id_operacao_extracao": "3c68126f-5763-4353-be5d-8cd35c393f07",
+      "consulta": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+      "parametros_busca": {
+       "query": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://endoflife.date/python",
+        "https://changeset.nyc/clients/psf-sunset-27",
+        "https://tuxcare.com/blog/python-2-7-eol",
+        "https://eolrisk.com/python",
+        "https://www.bleepingcomputer.com/news/software/python-27-reaches-end-of-life-after-20-years-of-development"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "beaddd96-355f-4dde-89e5-0a268dd9690f",
+       "operacoes_busca": [
+        {
+         "id_operacao": "400269da-814c-423f-b2eb-7799b6ce9a3d",
+         "request_id": "beaddd96-355f-4dde-89e5-0a268dd9690f",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "d29a76-02",
+         "parametros": {
+          "query": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "request_id_extracao": "d07ad743-7d0e-41e0-9fa8-04387e6d7b7f",
+       "resultado_id": "d29a76-02",
+       "relevancia": 0.155591,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 27 Oct 2026 00:00:00 GMT",
+         "value_normalized": "2026-10-27",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://endoflife.date/python",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-27T00:08:12+00:00",
+         "value_normalized": "2026-10-27",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-10-27T00:08:12+00:00",
+         "value_normalized": "2026-10-27",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://endoflife.date/python",
+        "capturado_em": "2026-11-13T13:35:48.475Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Python | endoflife.date",
+      "url": "https://endoflife.date/python",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 11245,
+      "caracteres_preparados": 7161,
+      "trecho_analisado": "TÍTULO DA FONTE: Python | endoflife.date\nURL DA FONTE: https://endoflife.date/python\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n# Python\n\n[lang](/tags/lang)\n\n![Python logo](https://cdn.jsdelivr.net/npm/simple-icons/icons/python.svg)\n\n[Python](https://www.python.org/) is an interpreted, high-level, general-purpose programming language.\n\n![Release Schedule Image Gantt Chart for Python](/python.svg)\n\n| Release | Released | Active Support | Security Support | Latest |\n\n| --- | --- | --- | --- | --- |\n\n| 3.15 | 1 month ago (09 Oct 2026) | Ends in 1 year and 11 months (09 Oct 2028) | Ends in 5 years (31 Oct 2031) | [3.15.2](https://www.python.org/downloads/release/python-3152/ \"Release Notes / Changelog\") (25 Oct 2026) |\n\n| 3.14 | 1 year ago (07 Oct 2025) | Ends in 10 months (01 Oct 2027) | Ends in 4 years (31 Oct 2030) | [3.14.10](https://www.python.org/downloads/release/python-31410/ \"Release Notes / Changelog\") (25 Oct 2026) |\n\n| 3.13 | 2 years ago (07 Oct 2024) | Ended 1 month and 1 week ago (01 Oct 2026) | Ends in 3 years (31 Oct 2029) | [3.13.18](https://www.python.org/downloads/release/python-31318/ \"Release Notes / Changelog\") (25 Oct 2026) |\n\n| 3.12 | 3 years ago (02 Oct 2023) | Ended ",
+      "citacao_chave": "2.7 | 16 years ago (03 Jul 2010) | No | Ended 6 years and 10 months ago (01 Jan 2020) | 2.7.18 (19 Apr 2020)",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source lists Python 2.7 as having no security support and ended on 01 Jan 2020."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "The source lists Python 2.7 as having no security support and ended on 01 Jan 2020."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "UNKNOWN_CLAIM_TYPE"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "Python Software Foundation - Sunset of Python 2.7 - Changeset Consulting",
+      "url": "https://changeset.nyc/clients/psf-sunset-27",
+      "conteudo": "* [Home](/)\n* [Services for companies](http://changeset.nyc/services-for-companies/)\n* [Services for maintainers](http://changeset.nyc/services-for-maintainers/)\n* [Resources](http://changeset.nyc/resources/)\n* [Stuckness](http://changeset.nyc/stuckness/)\n* [Clients](http://changeset.nyc/clients/)\n* [About Us](http://changeset.nyc/about-us/)\n* [Hire Us](http://changeset.nyc/hire-us/)\n\n[![changeset logo](/static/img/changeset-logo.svg)](/)\n\n[Clients](http://changeset.nyc/clients/)\n\n# Python Software Foundation\n\n## Technical writer and community coordinator (2019-2020)\n\nTags\n\n* [maintainers](/clients/tags/maintainers)\n* [interface](/clients/tags/interface)\n* [workflow](/clients/tags/workflow)\n…",
+      "coletado_em": "2026-11-13T13:35:48.517Z",
+      "data_publicacao": "2026-11-06",
+      "data_atualizacao": "2020-01-01",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": null,
+      "relevancia": 0.6311397,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "beaddd96-355f-4dde-89e5-0a268dd9690f",
+       "resultado_id": "ad75fb-00",
+       "response_time_busca": 2.86,
+       "response_time_extracao": 0.02,
+       "consulta": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+       "origem_principal": {
+        "id_operacao": "400269da-814c-423f-b2eb-7799b6ce9a3d",
+        "request_id": "beaddd96-355f-4dde-89e5-0a268dd9690f",
+        "modo_busca": "NOTICIAS",
+        "resultado_id": "ad75fb-00",
+        "parametros": {
+         "query": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "400269da-814c-423f-b2eb-7799b6ce9a3d",
+         "request_id": "beaddd96-355f-4dde-89e5-0a268dd9690f",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "ad75fb-00",
+         "parametros": {
+          "query": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Fri, 06 Nov 2026 11:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 06 Nov 2026 11:00:00 GMT",
+         "value_normalized": "2026-11-06",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://changeset.nyc/clients/psf-sunset-27/",
+        "capturado_em": "2026-11-13T13:35:49.441Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "d07ad743-7d0e-41e0-9fa8-04387e6d7b7f",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2020-01-01",
+       "precisao": "DIA",
+       "citacao": "reached End of Life on January 1, 2020",
+       "origem": "QUOTED_IN_SOURCE_TEXT"
+      }
+     },
+     "coleta": {
+      "id_coleta": "3171a5d1-ef45-4213-ac22-147e4ae9564a",
+      "id_verificacao": "575b8e5f-f0e0-4404-8107-b90cc40c149a",
+      "url_original": "https://changeset.nyc/clients/psf-sunset-27",
+      "url_canonica": "https://changeset.nyc/clients/psf-sunset-27",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "8b76d5525fdd34120e1b5e42b105934c1bcfd895d3bd834f1ee6df60fc4278f8",
+      "coletado_em": "2026-11-13T13:35:48.517Z",
+      "id_operacao_busca": "400269da-814c-423f-b2eb-7799b6ce9a3d",
+      "id_operacao_extracao": "3c68126f-5763-4353-be5d-8cd35c393f07",
+      "consulta": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+      "parametros_busca": {
+       "query": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://endoflife.date/python",
+        "https://changeset.nyc/clients/psf-sunset-27",
+        "https://tuxcare.com/blog/python-2-7-eol",
+        "https://eolrisk.com/python",
+        "https://www.bleepingcomputer.com/news/software/python-27-reaches-end-of-life-after-20-years-of-development"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "beaddd96-355f-4dde-89e5-0a268dd9690f",
+       "operacoes_busca": [
+        {
+         "id_operacao": "400269da-814c-423f-b2eb-7799b6ce9a3d",
+         "request_id": "beaddd96-355f-4dde-89e5-0a268dd9690f",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "ad75fb-00",
+         "parametros": {
+          "query": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "request_id_extracao": "d07ad743-7d0e-41e0-9fa8-04387e6d7b7f",
+       "resultado_id": "ad75fb-00",
+       "relevancia": 0.6311397,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 06 Nov 2026 11:00:00 GMT",
+         "value_normalized": "2026-11-06",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://changeset.nyc/clients/psf-sunset-27/",
+        "capturado_em": "2026-11-13T13:35:49.441Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Python Software Foundation - Sunset of Python 2.7 - Changeset Consulting",
+      "url": "https://changeset.nyc/clients/psf-sunset-27",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 4031,
+      "caracteres_preparados": 4031,
+      "trecho_analisado": "TÍTULO DA FONTE: Python Software Foundation - Sunset of Python 2.7 - Changeset Consulting\nURL DA FONTE: https://changeset.nyc/clients/psf-sunset-27\n\nCONTEÚDO DA FONTE:\n* [Home](/)\n* [Services for companies](http://changeset.nyc/services-for-companies/)\n* [Services for maintainers](http://changeset.nyc/services-for-maintainers/)\n* [Resources](http://changeset.nyc/resources/)\n* [Stuckness](http://changeset.nyc/stuckness/)\n* [Clients](http://changeset.nyc/clients/)\n* [About Us](http://changeset.nyc/about-us/)\n* [Hire Us](http://changeset.nyc/hire-us/)\n\n[![changeset logo](/static/img/changeset-logo.svg)](/)\n\n[Clients](http://changeset.nyc/clients/)\n\n# Python Software Foundation\n\n## Technical writer and community coordinator (2019-2020)\n\nTags\n\n* [maintainers](/clients/tags/maintainers)\n* [interface](/clients/tags/interface)\n* [workflow](/clients/tags/workflow)\n* [project liaison](/clients/tags/project-liaison)\n\n**The [Python Software Foundation](https://wiki.python.org/psf/PackagingWG) engaged Changeset to develop, publish, and coordinate communication surrounding the sunsetting of Python 2.**\n\nPython’s 2.x line reached End of Life on January 1, 2020, meaning that the maintainers of Pyt",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "It states Python 2.x reached End of Life on 1 Jan 2020 and support, including security patches, stopped."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "It states Python 2.x reached End of Life on 1 Jan 2020 and support, including security patches, stopped."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "UNKNOWN_CLAIM_TYPE"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "What Python 2.7 EOL Means for Developers and Organizations",
+      "url": "https://tuxcare.com/blog/python-2-7-eol",
+      "conteudo": "![](https://tuxcare.com/wp-content/themes/tuxcare-2022/img/home/cve-ico.svg)\n\nCheck the status of CVEs.  [Learn More](https://cve.tuxcare.com).\n\n [CVE Status (opens in new tab)](https://cve.tuxcare.com/)\n\n* [![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAA2ElEQVR42m1Q3Q2DIBB2hI7gCCQt4KMvBR5NBNPHjtANdIN2A93AERyhK5UPiwfESwxy3Pd3VSx+d0+hh1Vqu3FlF66HNzNdXZ0V1272g6+0dzO29f2NQAlzHBaq76Ag1DDi3phHDdUMgEYK3oH2m76ztrsUACqwC2MnutsJvcMa9xYy70UWqdx69VaRB0qBAQETxjH+M59BajfTEvpPYARDuQ32D9zsfXIDSTx45gUnGHEWw5S3PTZAIaFIncJeWQiGgAClw1h5yECVg/DIg0234oOy1G7+AdoGYNfMZ6ecAAAAAElFTkSuQmCC) Tech Support](https://tuxcare.com/support-portal/)\n* [![](data:image/png;base64,iVBORw0KGgoAAAANSUhE…",
+      "coletado_em": "2026-11-13T13:35:48.517Z",
+      "data_publicacao": "2024-03-26",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://tuxcare.com/blog/python-2-7-eol/",
+      "relevancia": 0.828523,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "2d23679c-324a-4d5d-a5a3-bd0de99a2b01",
+       "resultado_id": "5e31cc-00",
+       "response_time_busca": 1.6,
+       "response_time_extracao": 0.02,
+       "consulta": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+       "origem_principal": {
+        "id_operacao": "2fd1b8e3-7561-4cba-b02d-7ed08b31766d",
+        "request_id": "2d23679c-324a-4d5d-a5a3-bd0de99a2b01",
+        "modo_busca": "GERAL",
+        "resultado_id": "5e31cc-00",
+        "parametros": {
+         "query": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "2fd1b8e3-7561-4cba-b02d-7ed08b31766d",
+         "request_id": "2d23679c-324a-4d5d-a5a3-bd0de99a2b01",
+         "modo_busca": "GERAL",
+         "resultado_id": "5e31cc-00",
+         "parametros": {
+          "query": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Tue, 26 Mar 2024 08:00:18 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 26 Mar 2024 08:00:18 GMT",
+         "value_normalized": "2024-03-26",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 13:35:50 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://tuxcare.com/blog/python-2-7-eol/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2024-03-26T08:00:18+00:00",
+         "value_normalized": "2024-03-26",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-09-02T18:44:47+00:00",
+         "value_normalized": "2026-09-02",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datepublished",
+         "value_original": "2024-03-26T08:00:18+00:00",
+         "value_normalized": "2024-03-26",
+         "scope": "DOCUMENT",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "datemodified",
+         "value_original": "2026-09-02T18:44:47+00:00",
+         "value_normalized": "2026-09-02",
+         "scope": "DOCUMENT",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2024-03-26T08:00:18+00:00",
+         "value_normalized": "2024-03-26",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article",
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-09-02T18:44:47+00:00",
+         "value_normalized": "2026-09-02",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article",
+          "blogposting"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://tuxcare.com/blog/python-2-7-eol/",
+        "capturado_em": "2026-11-13T13:35:50.903Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "d07ad743-7d0e-41e0-9fa8-04387e6d7b7f",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "7b0513f9-0b9c-4459-ac0e-3c32182fc068",
+      "id_verificacao": "575b8e5f-f0e0-4404-8107-b90cc40c149a",
+      "url_original": "https://tuxcare.com/blog/python-2-7-eol",
+      "url_canonica": "https://tuxcare.com/blog/python-2-7-eol",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "750f15fbdbd88120ec085efacff28ed64afb17636671e7b9204aaf72029498ca",
+      "coletado_em": "2026-11-13T13:35:48.517Z",
+      "id_operacao_busca": "2fd1b8e3-7561-4cba-b02d-7ed08b31766d",
+      "id_operacao_extracao": "3c68126f-5763-4353-be5d-8cd35c393f07",
+      "consulta": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+      "parametros_busca": {
+       "query": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://endoflife.date/python",
+        "https://changeset.nyc/clients/psf-sunset-27",
+        "https://tuxcare.com/blog/python-2-7-eol",
+        "https://eolrisk.com/python",
+        "https://www.bleepingcomputer.com/news/software/python-27-reaches-end-of-life-after-20-years-of-development"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "2d23679c-324a-4d5d-a5a3-bd0de99a2b01",
+       "operacoes_busca": [
+        {
+         "id_operacao": "2fd1b8e3-7561-4cba-b02d-7ed08b31766d",
+         "request_id": "2d23679c-324a-4d5d-a5a3-bd0de99a2b01",
+         "modo_busca": "GERAL",
+         "resultado_id": "5e31cc-00",
+         "parametros": {
+          "query": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "d07ad743-7d0e-41e0-9fa8-04387e6d7b7f",
+       "resultado_id": "5e31cc-00",
+       "relevancia": 0.828523,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 26 Mar 2024 08:00:18 GMT",
+         "value_normalized": "2024-03-26",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 13:35:50 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://tuxcare.com/blog/python-2-7-eol/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2024-03-26T08:00:18+00:00",
+         "value_normalized": "2024-03-26",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-09-02T18:44:47+00:00",
+         "value_normalized": "2026-09-02",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datepublished",
+         "value_original": "2024-03-26T08:00:18+00:00",
+         "value_normalized": "2024-03-26",
+         "scope": "DOCUMENT",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "datemodified",
+         "value_original": "2026-09-02T18:44:47+00:00",
+         "value_normalized": "2026-09-02",
+         "scope": "DOCUMENT",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2024-03-26T08:00:18+00:00",
+         "value_normalized": "2024-03-26",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article",
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-09-02T18:44:47+00:00",
+         "value_normalized": "2026-09-02",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article",
+          "blogposting"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://tuxcare.com/blog/python-2-7-eol/",
+        "capturado_em": "2026-11-13T13:35:50.903Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "What Python 2.7 EOL Means for Developers and Organizations",
+      "url": "https://tuxcare.com/blog/python-2-7-eol",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 12703,
+      "caracteres_preparados": 7972,
+      "trecho_analisado": "TÍTULO DA FONTE: What Python 2.7 EOL Means for Developers and Organizations\nURL DA FONTE: https://tuxcare.com/blog/python-2-7-eol\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n* [English](#weglot_switcher)\n\n+ [Español](https://tuxcare.com/es/blog/python-2-7-eol/)\n\n+ [Français](https://tuxcare.com/fr/blog/python-2-7-eol/)\n\n+ [Deutsch](https://tuxcare.com/de/blog/python-2-7-eol/)\n\n+ [Endless Lifecycle Support](https://tuxcare.com/blog/category/endless-lifecycle-support/)\n\n# What Python 2.7 EOL Means for Developers and Organizations\n\nMarch 26, 2024 -  📖 6 min\n\nGo straight to an AI summary of this blog post instead ![](https://tuxcare.com/wp-content/themes/tuxcare-2022/img/arrow-r.svg)\n\n* Python 2.7 no longer receives official support from the Python Software Foundation (PSF), including bug fixes, security patches, or any other updates.\n\n* Migrating from Python 2.7 to Python 3.x versions can be costly and time-consuming due to codebase complexity, third-party libraries, legacy systems, and extensive testing.\n\n* TuxCare offers extended security support for Python 2.7 applications on AlmaLinux 9 by providing security patches for high and critical vulnerabilities.\n\nThe initial release date of Pyth",
+      "citacao_chave": "Python 2.7 no longer receives official support from the Python Software Foundation (PSF), including bug fixes, security patches, or any other updates.",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The article says Python 2.7 no longer receives official support, including security patches."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "The article says Python 2.7 no longer receives official support, including security patches."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "UNKNOWN_CLAIM_TYPE"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "Python End of Life Dates & Support Schedule (2026)",
+      "url": "https://eolrisk.com/python",
+      "conteudo": "![Python](/static/img/logos/python.svg)\n\n# Python End of Life - Dates and Lifecycle\n\nPython is a widely-used general-purpose programming language known for its readability, extensive standard library, and dominance in data science, machine learning, automation, and web backends.\n\nLast updated 26 October 2026\n\nVersions tracked\n\nAt EOL\n\n5\n\nSupported\n\n![Python version lifecycle and end-of-life dates](/python-lifecycle.svg)\n\n## All versions\n\n| Version | Released | Active Support | Security Support | Latest |\n| --- | --- | --- | --- | --- |\n| 3.15 | 09 Oct 2026 | 09 Oct 2028   Ends in 1 year, 11 months | 31 Oct 2031   Ends in 5 years | [3.15.2](https://www.python.org/downloads/release/python-3152…",
+      "coletado_em": "2026-11-13T13:35:48.517Z",
+      "data_publicacao": "2026-10-10",
+      "data_atualizacao": "2020-01-01",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": "https://eolrisk.com/python/",
+      "relevancia": 0.28358296,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "beaddd96-355f-4dde-89e5-0a268dd9690f",
+       "resultado_id": "3e37db-01",
+       "response_time_busca": 2.86,
+       "response_time_extracao": 0.02,
+       "consulta": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+       "origem_principal": {
+        "id_operacao": "400269da-814c-423f-b2eb-7799b6ce9a3d",
+        "request_id": "beaddd96-355f-4dde-89e5-0a268dd9690f",
+        "modo_busca": "NOTICIAS",
+        "resultado_id": "3e37db-01",
+        "parametros": {
+         "query": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "400269da-814c-423f-b2eb-7799b6ce9a3d",
+         "request_id": "beaddd96-355f-4dde-89e5-0a268dd9690f",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "3e37db-01",
+         "parametros": {
+          "query": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Sat, 10 Oct 2026 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Sat, 10 Oct 2026 00:00:00 GMT",
+         "value_normalized": "2026-10-10",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://eolrisk.com/python/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://eolrisk.com/python/",
+        "capturado_em": "2026-11-13T13:35:48.979Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "d07ad743-7d0e-41e0-9fa8-04387e6d7b7f",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2020-01-01",
+       "precisao": "DIA",
+       "citacao": "reaching end of life on January 1, 2020",
+       "origem": "QUOTED_IN_SOURCE_TEXT"
+      }
+     },
+     "coleta": {
+      "id_coleta": "f21f682f-6fea-4c2f-b043-b26e3d044ae4",
+      "id_verificacao": "575b8e5f-f0e0-4404-8107-b90cc40c149a",
+      "url_original": "https://eolrisk.com/python",
+      "url_canonica": "https://eolrisk.com/python",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "b04d20bbbe174d03c4dc308664a8e8dcc6ac29d996f1a8e994cbe6b54f0ac82b",
+      "coletado_em": "2026-11-13T13:35:48.517Z",
+      "id_operacao_busca": "400269da-814c-423f-b2eb-7799b6ce9a3d",
+      "id_operacao_extracao": "3c68126f-5763-4353-be5d-8cd35c393f07",
+      "consulta": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+      "parametros_busca": {
+       "query": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://endoflife.date/python",
+        "https://changeset.nyc/clients/psf-sunset-27",
+        "https://tuxcare.com/blog/python-2-7-eol",
+        "https://eolrisk.com/python",
+        "https://www.bleepingcomputer.com/news/software/python-27-reaches-end-of-life-after-20-years-of-development"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "beaddd96-355f-4dde-89e5-0a268dd9690f",
+       "operacoes_busca": [
+        {
+         "id_operacao": "400269da-814c-423f-b2eb-7799b6ce9a3d",
+         "request_id": "beaddd96-355f-4dde-89e5-0a268dd9690f",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "3e37db-01",
+         "parametros": {
+          "query": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "request_id_extracao": "d07ad743-7d0e-41e0-9fa8-04387e6d7b7f",
+       "resultado_id": "3e37db-01",
+       "relevancia": 0.28358296,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Sat, 10 Oct 2026 00:00:00 GMT",
+         "value_normalized": "2026-10-10",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://eolrisk.com/python/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://eolrisk.com/python/",
+        "capturado_em": "2026-11-13T13:35:48.979Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Python End of Life Dates & Support Schedule (2026)",
+      "url": "https://eolrisk.com/python",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 6741,
+      "caracteres_preparados": 6741,
+      "trecho_analisado": "TÍTULO DA FONTE: Python End of Life Dates & Support Schedule (2026)\nURL DA FONTE: https://eolrisk.com/python\n\nCONTEÚDO DA FONTE:\n![Python](/static/img/logos/python.svg)\n\n# Python End of Life - Dates and Lifecycle\n\nPython is a widely-used general-purpose programming language known for its readability, extensive standard library, and dominance in data science, machine learning, automation, and web backends.\n\nLast updated 26 October 2026\n\nVersions tracked\n\nAt EOL\n\n5\n\nSupported\n\n![Python version lifecycle and end-of-life dates](/python-lifecycle.svg)\n\n## All versions\n\n| Version | Released | Active Support | Security Support | Latest |\n| --- | --- | --- | --- | --- |\n| 3.15 | 09 Oct 2026 | 09 Oct 2028   Ends in 1 year, 11 months | 31 Oct 2031   Ends in 5 years | [3.15.2](https://www.python.org/downloads/release/python-3152/)   25 Oct 2026 |\n| 3.14 | 07 Oct 2025 | 01 Oct 2027   Ends in 11 months | 31 Oct 2030   Ends in 4 years | [3.14.10](https://www.python.org/downloads/release/python-31410/)   25 Oct 2026 |\n| 3.13 | 07 Oct 2024 | 01 Oct 2026   Ended 1 month ago | 31 Oct 2029   Ends in 3 years | [3.13.18](https://www.python.org/downloads/release/python-31318/)   25 Oct 2026 |\n| 3.12 | 0",
+      "citacao_chave": "Python 2.7 is the clearest historical example: it stayed supported for over a decade before finally reaching end of life on January 1, 2020",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "It notes Python 2.7 reached end of life on 1 Jan 2020, after which no updates are released."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "It notes Python 2.7 reached end of life on 1 Jan 2020, after which no updates are released."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "UNKNOWN_CLAIM_TYPE"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Python 2.7 Reaches End of Life After 20 Years of Development",
+      "url": "https://www.bleepingcomputer.com/news/software/python-27-reaches-end-of-life-after-20-years-of-development",
+      "conteudo": "# Python 2.7 Reaches End of Life After 20 Years of Development\n\n* January 2, 2020\n* 02:03 PM\n* 2\n\nAs of January 1st, 2020, Python 2.7 has officially reached the end of life and will no longer receive security updates, bug fixes, or other improvements going forward.\n\nReleased in 2000, Python 2.7 has been used by developers, administrators, and security professionals for 20 years. While Python 3 was released in 2006, due to the number of users continuing to use 2.7, the Python team decided to support both development branches.\n\nOriginally slated to be retired in 2015, the development team pushed the sunset of Python 2.7 to 2020.\n\nTo focus on Python 3 and increase the speed of its development a…",
+      "coletado_em": "2026-11-13T13:35:48.517Z",
+      "data_publicacao": "2020-01-02",
+      "data_atualizacao": "2020-01-01",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": "https://www.bleepingcomputer.com/news/software/python-27-reaches-end-of-life-after-20-years-of-development/",
+      "relevancia": 0.6854233,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "2d23679c-324a-4d5d-a5a3-bd0de99a2b01",
+       "resultado_id": "d476d1-01",
+       "response_time_busca": 1.6,
+       "response_time_extracao": 0.02,
+       "consulta": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+       "origem_principal": {
+        "id_operacao": "2fd1b8e3-7561-4cba-b02d-7ed08b31766d",
+        "request_id": "2d23679c-324a-4d5d-a5a3-bd0de99a2b01",
+        "modo_busca": "GERAL",
+        "resultado_id": "d476d1-01",
+        "parametros": {
+         "query": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "2fd1b8e3-7561-4cba-b02d-7ed08b31766d",
+         "request_id": "2d23679c-324a-4d5d-a5a3-bd0de99a2b01",
+         "modo_busca": "GERAL",
+         "resultado_id": "d476d1-01",
+         "parametros": {
+          "query": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Thu, 02 Jan 2020 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 02 Jan 2020 00:00:00 GMT",
+         "value_normalized": "2020-01-02",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Thu, 02 Jan 2020 19:03:08 GMT",
+         "value_normalized": "2020-01-02",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.bleepingcomputer.com/news/software/python-27-reaches-end-of-life-after-20-years-of-development/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2020-01-02T14:03:08-05:00",
+         "value_normalized": "2020-01-02",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2020-01-02T14:03:08-05:00",
+         "value_normalized": "2020-01-02",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.bleepingcomputer.com/news/software/python-27-reaches-end-of-life-after-20-years-of-development/",
+        "capturado_em": "2026-11-13T13:35:49.364Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "d07ad743-7d0e-41e0-9fa8-04387e6d7b7f",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2020-01-01",
+       "precisao": "DIA",
+       "citacao": "As of January 1st, 2020, Python 2.7 has officially reached the end of life",
+       "origem": "QUOTED_IN_SOURCE_TEXT"
+      }
+     },
+     "coleta": {
+      "id_coleta": "4b70d854-eebe-4020-8a3f-d7304ec2c9b7",
+      "id_verificacao": "575b8e5f-f0e0-4404-8107-b90cc40c149a",
+      "url_original": "https://www.bleepingcomputer.com/news/software/python-27-reaches-end-of-life-after-20-years-of-development",
+      "url_canonica": "https://www.bleepingcomputer.com/news/software/python-27-reaches-end-of-life-after-20-years-of-development",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "b54e173307e04fccfe9534a500966d2b2e089077dbeea8363c4eedd39059ed58",
+      "coletado_em": "2026-11-13T13:35:48.517Z",
+      "id_operacao_busca": "2fd1b8e3-7561-4cba-b02d-7ed08b31766d",
+      "id_operacao_extracao": "3c68126f-5763-4353-be5d-8cd35c393f07",
+      "consulta": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+      "parametros_busca": {
+       "query": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://endoflife.date/python",
+        "https://changeset.nyc/clients/psf-sunset-27",
+        "https://tuxcare.com/blog/python-2-7-eol",
+        "https://eolrisk.com/python",
+        "https://www.bleepingcomputer.com/news/software/python-27-reaches-end-of-life-after-20-years-of-development"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "2d23679c-324a-4d5d-a5a3-bd0de99a2b01",
+       "operacoes_busca": [
+        {
+         "id_operacao": "2fd1b8e3-7561-4cba-b02d-7ed08b31766d",
+         "request_id": "2d23679c-324a-4d5d-a5a3-bd0de99a2b01",
+         "modo_busca": "GERAL",
+         "resultado_id": "d476d1-01",
+         "parametros": {
+          "query": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "d07ad743-7d0e-41e0-9fa8-04387e6d7b7f",
+       "resultado_id": "d476d1-01",
+       "relevancia": 0.6854233,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 02 Jan 2020 00:00:00 GMT",
+         "value_normalized": "2020-01-02",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Thu, 02 Jan 2020 19:03:08 GMT",
+         "value_normalized": "2020-01-02",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.bleepingcomputer.com/news/software/python-27-reaches-end-of-life-after-20-years-of-development/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2020-01-02T14:03:08-05:00",
+         "value_normalized": "2020-01-02",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2020-01-02T14:03:08-05:00",
+         "value_normalized": "2020-01-02",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.bleepingcomputer.com/news/software/python-27-reaches-end-of-life-after-20-years-of-development/",
+        "capturado_em": "2026-11-13T13:35:49.364Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Python 2.7 Reaches End of Life After 20 Years of Development",
+      "url": "https://www.bleepingcomputer.com/news/software/python-27-reaches-end-of-life-after-20-years-of-development",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 4716,
+      "caracteres_preparados": 4716,
+      "trecho_analisado": "TÍTULO DA FONTE: Python 2.7 Reaches End of Life After 20 Years of Development\nURL DA FONTE: https://www.bleepingcomputer.com/news/software/python-27-reaches-end-of-life-after-20-years-of-development\n\nCONTEÚDO DA FONTE:\n# Python 2.7 Reaches End of Life After 20 Years of Development\n\n* January 2, 2020\n* 02:03 PM\n* 2\n\nAs of January 1st, 2020, Python 2.7 has officially reached the end of life and will no longer receive security updates, bug fixes, or other improvements going forward.\n\nReleased in 2000, Python 2.7 has been used by developers, administrators, and security professionals for 20 years. While Python 3 was released in 2006, due to the number of users continuing to use 2.7, the Python team decided to support both development branches.\n\nOriginally slated to be retired in 2015, the development team pushed the sunset of Python 2.7 to 2020.\n\nTo focus on Python 3 and increase the speed of its development and bug fixes, the development team has now sunset Python 2.7 and the team recommends that all users upgrade to Python 3 to continue receiving important updates.\n\n\"We are volunteers who make and take care of the Python programming language. We have decided that January 1, 2020, wil",
+      "citacao_chave": "As of January 1st, 2020, Python 2.7 has officially reached the end of life and will no longer receive security updates, bug fixes, or other improvements going forward.",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "It reports that as of 1 Jan 2020 Python 2.7 reached end‑of‑life and will no longer receive security updates."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "It reports that as of 1 Jan 2020 Python 2.7 reached end‑of‑life and will no longer receive security updates."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "UNKNOWN_CLAIM_TYPE"
+     }
+    }
+   ],
+   "erro_busca": null,
+   "risco_desatualizacao": {
+    "nivel": "MEDIUM",
+    "sensivel_ao_tempo": true,
+    "motivos": [
+     "Not a price, version, company or regulation fact",
+     "Claims to be true right now (\"currently\", \"still\", \"latest\"…)"
+    ]
+   },
+   "dominios_oficiais_usados": [],
+   "dominios_oficiais_automaticos": [],
+   "agregacao": {
+    "status": "CLASSIFICADO",
+    "conclusao_factual": {
+     "status": "CONTRADIZ",
+     "resumo": "As evidências utilizáveis contradizem a afirmação."
+    },
+    "veredito": "CONTRADICAO_FRACA",
+    "resumo": "As evidências utilizáveis contradizem a afirmação, mas nenhuma fonte oficial com data ligada ao fato confirma a contradição. Trate a afirmação como possivelmente desatualizada ou incorreta e revise as fontes.",
+    "afirmacao": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+    "score_qualidade_evidencia": {
+     "valor": 38,
+     "escala": "0-100",
+     "natureza": "HEURISTICA",
+     "interpretacao": "Qualidade estrutural das evidências, não probabilidade de verdade.",
+     "componentes": {
+      "autoridade": 8,
+      "atualidade": 0,
+      "diversidade_fontes": 20,
+      "concordancia": 10
+     }
+    },
+    "freshness": {
+     "score": null,
+     "status": "UNVERIFIABLE",
+     "confidence": "INSUFFICIENT",
+     "algorithm_id": "CLAIM_FRESHNESS_SCORE",
+     "algorithm_version": "1.1.0",
+     "policy_id": "unknown:NO_VALIDITY_POLICY",
+     "as_of": "2026-11-13T13:35:41.941Z",
+     "evidence_summary": {
+      "received": 5,
+      "eligible": 0,
+      "independent_domains": 0,
+      "excluded": 5
+     },
+     "drivers": [
+      {
+       "code": "UNKNOWN_CLAIM_TYPE"
+      }
+     ],
+     "limitations": [
+      "Não existe uma janela temporal definida para esta categoria de afirmação."
+     ]
+    },
+    "concordancia": {
+     "algorithm_id": "SOURCE_AGREEMENT_INDEX",
+     "algorithm_version": "1.1.0",
+     "weights": {
+      "OFICIAL": 3,
+      "ACADEMICO": 3,
+      "NOTICIA": 2,
+      "REFERENCIA": 1.5,
+      "OUTRO": 1,
+      "BLOG_FORUM": 0.25
+     },
+     "score": 0,
+     "coverage": "STRONG",
+     "independent_sources": 5,
+     "source_types": [
+      "OFICIAL",
+      "NOTICIA",
+      "OUTRO"
+     ],
+     "supporting": 0,
+     "authoritative_supporting": 0,
+     "contradicting": 5,
+     "split": 0,
+     "by_type": {
+      "OFICIAL": {
+       "supports": 0,
+       "contradicts": 1,
+       "split": 0
+      },
+      "NOTICIA": {
+       "supports": 0,
+       "contradicts": 2,
+       "split": 0
+      },
+      "OUTRO": {
+       "supports": 0,
+       "contradicts": 2,
+       "split": 0
+      }
+     },
+     "limitations": [
+      "Agreement between sources is not a probability of truth: sources can share the same mistake.",
+      "Copies and pages from the same site count once; independence is approximated by domain and text similarity."
+     ]
+    },
+    "recencia_pagina": {
+     "algorithm_id": "PAGE_DATE_RECENCY_INDEX",
+     "algorithm_version": "1.0.0",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "as_of": "2026-11-13T13:35:41.941Z",
+     "score": null,
+     "status": "UNVERIFIABLE",
+     "newest_date": null,
+     "sources": [],
+     "limitations": [
+      "Sem categoria temporal, não há janela de validade para comparar as datas."
+     ]
+    },
+    "atualidade_afirmacao": {
+     "algorithm_id": "CLAIM_CURRENCY_SCORE",
+     "algorithm_version": "1.0.0",
+     "formula": "evidence_recency × support_share",
+     "window_days": 180,
+     "score": 0,
+     "status": "CONTRADICTED",
+     "basis": "PAGE_DATE_GENERAL_WINDOW",
+     "confidence": "LOW",
+     "evidence_recency": 0,
+     "support_share": 0,
+     "newest_date": "2024-03-26",
+     "newest_age_days": 962,
+     "within_window": false
+    },
+    "versao_regras": "1.2.0",
+    "metodo": "AGREGACAO_DETERMINISTICA",
+    "fontes_independentes": 5,
+    "grupos_distintos_de_evidencia": 5,
+    "dependencia_detectada": 0,
+    "dependencia_nao_verificada": true,
+    "nota_independencia": "Cópias exatas, quase duplicadas, URLs canônicas iguais e páginas do mesmo domínio são agrupadas; domínios sem sinal de cópia não têm independência editorial comprovada.",
+    "total_evidencias_utilizaveis": 5,
+    "fontes": [
+     {
+      "dominio": "endoflife.date",
+      "dominios": [
+       "endoflife.date"
+      ],
+      "grupo_dependencia_id": "source_cluster_001",
+      "oficial": true,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://endoflife.date/python"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Python | endoflife.date",
+        "url": "https://endoflife.date/python",
+        "categoria_fonte": "OFICIAL",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "UNVERIFIABLE",
+        "status_datas_declaradas": "INVALIDA_OU_INCOERENTE",
+        "consultado_em": "2026-11-13T13:35:48.517Z",
+        "data_publicacao": "2026-10-27",
+        "data_atualizacao": "2020-01-01",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Tue, 27 Oct 2026 00:00:00 GMT",
+          "value_normalized": "2026-10-27",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://endoflife.date/python",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-10-27T00:08:12+00:00",
+          "value_normalized": "2026-10-27",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "webpage"
+          ]
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-10-27T00:08:12+00:00",
+          "value_normalized": "2026-10-27",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_001",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "changeset.nyc",
+      "dominios": [
+       "changeset.nyc"
+      ],
+      "grupo_dependencia_id": "source_cluster_002",
+      "oficial": false,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://changeset.nyc/clients/psf-sunset-27"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Python Software Foundation - Sunset of Python 2.7 - Changeset Consulting",
+        "url": "https://changeset.nyc/clients/psf-sunset-27",
+        "categoria_fonte": "NOTICIA",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "UNVERIFIABLE",
+        "status_datas_declaradas": "INVALIDA_OU_INCOERENTE",
+        "consultado_em": "2026-11-13T13:35:48.517Z",
+        "data_publicacao": "2026-11-06",
+        "data_atualizacao": "2020-01-01",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Fri, 06 Nov 2026 11:00:00 GMT",
+          "value_normalized": "2026-11-06",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_002",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "tuxcare.com",
+      "dominios": [
+       "tuxcare.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_003",
+      "oficial": false,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://tuxcare.com/blog/python-2-7-eol"
+      ],
+      "evidencias": [
+       {
+        "titulo": "What Python 2.7 EOL Means for Developers and Organizations",
+        "url": "https://tuxcare.com/blog/python-2-7-eol",
+        "categoria_fonte": "OUTRO",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "UNVERIFIABLE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:35:48.517Z",
+        "data_publicacao": "2024-03-26",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Tue, 26 Mar 2024 08:00:18 GMT",
+          "value_normalized": "2024-03-26",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Fri, 13 Nov 2026 13:35:50 GMT",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://tuxcare.com/blog/python-2-7-eol/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2024-03-26T08:00:18+00:00",
+          "value_normalized": "2024-03-26",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "ARTICLE_MODIFIED_TIME",
+          "field": "article:modified_time",
+          "value_original": "2026-09-02T18:44:47+00:00",
+          "value_normalized": "2026-09-02",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datepublished",
+          "value_original": "2024-03-26T08:00:18+00:00",
+          "value_normalized": "2024-03-26",
+          "scope": "DOCUMENT",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "datemodified",
+          "value_original": "2026-09-02T18:44:47+00:00",
+          "value_normalized": "2026-09-02",
+          "scope": "DOCUMENT",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2024-03-26T08:00:18+00:00",
+          "value_normalized": "2024-03-26",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article",
+           "blogposting"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-09-02T18:44:47+00:00",
+          "value_normalized": "2026-09-02",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article",
+           "blogposting"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_003",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "eolrisk.com",
+      "dominios": [
+       "eolrisk.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_004",
+      "oficial": false,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://eolrisk.com/python"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Python End of Life Dates & Support Schedule (2026)",
+        "url": "https://eolrisk.com/python",
+        "categoria_fonte": "NOTICIA",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "UNVERIFIABLE",
+        "status_datas_declaradas": "INVALIDA_OU_INCOERENTE",
+        "consultado_em": "2026-11-13T13:35:48.517Z",
+        "data_publicacao": "2026-10-10",
+        "data_atualizacao": "2020-01-01",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Sat, 10 Oct 2026 00:00:00 GMT",
+          "value_normalized": "2026-10-10",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://eolrisk.com/python/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_004",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "bleepingcomputer.com",
+      "dominios": [
+       "bleepingcomputer.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_005",
+      "oficial": false,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.bleepingcomputer.com/news/software/python-27-reaches-end-of-life-after-20-years-of-development"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Python 2.7 Reaches End of Life After 20 Years of Development",
+        "url": "https://www.bleepingcomputer.com/news/software/python-27-reaches-end-of-life-after-20-years-of-development",
+        "categoria_fonte": "OUTRO",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "UNVERIFIABLE",
+        "status_datas_declaradas": "INVALIDA_OU_INCOERENTE",
+        "consultado_em": "2026-11-13T13:35:48.517Z",
+        "data_publicacao": "2020-01-02",
+        "data_atualizacao": "2020-01-01",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Thu, 02 Jan 2020 00:00:00 GMT",
+          "value_normalized": "2020-01-02",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Thu, 02 Jan 2020 19:03:08 GMT",
+          "value_normalized": "2020-01-02",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.bleepingcomputer.com/news/software/python-27-reaches-end-of-life-after-20-years-of-development/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2020-01-02T14:03:08-05:00",
+          "value_normalized": "2020-01-02",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "newsarticle"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2020-01-02T14:03:08-05:00",
+          "value_normalized": "2020-01-02",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "newsarticle"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_005",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     }
+    ],
+    "limitacoes": [
+     "Nenhuma evidência possui data verificável e status de atualidade FRESH.",
+     "Uma data da página ou do resultado de busca não comprova quando o atributo da afirmação foi publicado ou atualizado.",
+     "Domínios sem sinal detectado de duplicação não têm independência editorial comprovada; republicação com edição extensa ainda pode passar despercebida."
+    ],
+    "avaliado_em": "2026-11-13T13:35:56.998Z"
+   }
+  }
+ ],
+ "afirmacoes_omitidas": [],
+ "resposta_corrigida": {
+  "texto": "Python 2.7 ended official support on January 1 2020 and no longer receives security updates from the Python Software Foundation [1][2][3].",
+  "mudancas": [
+   {
+    "claim_id": "afirmacao_1",
+    "what": "replaced with end-of-life statement"
+   }
+  ],
+  "fontes_citadas": [
+   1,
+   2,
+   3
+  ],
+  "tentativas": 1,
+  "citacoes_anexadas": false,
+  "fontes": [
+   {
+    "n": 1,
+    "url": "https://endoflife.date/python",
+    "titulo": "Python | endoflife.date",
+    "tipo": "OFICIAL",
+    "postura": "CONTRADICTS",
+    "data": "2020-01-01"
+   },
+   {
+    "n": 2,
+    "url": "https://changeset.nyc/clients/psf-sunset-27",
+    "titulo": "Python Software Foundation - Sunset of Python 2.7 - Changeset Consulting",
+    "tipo": "NOTICIA",
+    "postura": "CONTRADICTS",
+    "data": "2020-01-01"
+   },
+   {
+    "n": 3,
+    "url": "https://eolrisk.com/python",
+    "titulo": "Python End of Life Dates & Support Schedule (2026)",
+    "tipo": "NOTICIA",
+    "postura": "CONTRADICTS",
+    "data": "2020-01-01"
+   }
+  ],
+  "metodo": "MODEL_REWRITE_FROM_VERIFIED_EVIDENCE"
+ },
+ "rastreabilidade_modelo": [
+  {
+   "id_chamada": "c90c5401-779d-43bc-8683-4902de4a1369",
+   "id_requisicao_enviada": "324ba538-cc77-494f-9994-f790278ea05a",
+   "id_verificacao": "575b8e5f-f0e0-4404-8107-b90cc40c149a",
+   "etapa": "DECOMPOSICAO",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 513,
+   "tokens": {
+    "entrada": 846,
+    "saida": 139,
+    "total": 985
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "324ba538-cc77-494f-9994-f790278ea05a",
+   "id_trace": "fa8f6198ca09443c90ec352fc572f571",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 513.191,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:35:41.944Z"
+  },
+  {
+   "id_chamada": "79edda43-a712-482b-ac13-74f86be67590",
+   "id_requisicao_enviada": "736aa42e-dc90-42fa-902b-6d09f90080c4",
+   "id_verificacao": "575b8e5f-f0e0-4404-8107-b90cc40c149a",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 1929,
+   "tokens": {
+    "entrada": 3950,
+    "saida": 1304,
+    "total": 5254
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "736aa42e-dc90-42fa-902b-6d09f90080c4",
+   "id_trace": "be81530cf45c45178eadbd26941df704",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 1929.514,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:35:50.919Z"
+  },
+  {
+   "id_chamada": "9a8b321f-acf0-408e-a5db-bc9018c1be51",
+   "id_requisicao_enviada": "06d90f96-55a4-41f4-b5af-1b5268a74133",
+   "id_verificacao": "575b8e5f-f0e0-4404-8107-b90cc40c149a",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 4032,
+   "tokens": {
+    "entrada": 3950,
+    "saida": 1669,
+    "total": 5619
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "06d90f96-55a4-41f4-b5af-1b5268a74133",
+   "id_trace": "fa96408cde7e4551abe18f315b5e7b9b",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 4066.993,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:35:52.877Z"
+  },
+  {
+   "id_chamada": "fffbaf9b-b23b-43f5-bcd6-f2ce1c091dc6",
+   "id_requisicao_enviada": "59735628-9c15-4c07-bea6-5d26429e9eb5",
+   "id_verificacao": "575b8e5f-f0e0-4404-8107-b90cc40c149a",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 855,
+   "tokens": {
+    "entrada": 996,
+    "saida": 230,
+    "total": 1226
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "59735628-9c15-4c07-bea6-5d26429e9eb5",
+   "id_trace": "c5b7def78623443ba0f55ce0999b7970",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 855.326,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:35:56.998Z"
+  }
+ ],
+ "rastreabilidade_pesquisa": [
+  {
+   "id_operacao": "2fd1b8e3-7561-4cba-b02d-7ed08b31766d",
+   "id_verificacao": "575b8e5f-f0e0-4404-8107-b90cc40c149a",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:35:42.542Z",
+   "finalizada_em": "2026-11-13T13:35:44.726Z",
+   "duracao_ms": 2184,
+   "request_id": "2d23679c-324a-4d5d-a5a3-bd0de99a2b01",
+   "response_time": 1.6,
+   "erro": null,
+   "modo_busca": "GERAL",
+   "parametros": {
+    "query": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "5e31cc-00",
+     "titulo": "What Python 2.7 EOL Means for Developers and Organizations",
+     "url": "https://tuxcare.com/blog/python-2-7-eol",
+     "relevancia": 0.828523,
+     "data_publicacao": "2024-03-26"
+    },
+    {
+     "resultado_id": "d476d1-01",
+     "titulo": "Python 2.7 Reaches End of Life After 20 Years of Development",
+     "url": "https://www.bleepingcomputer.com/news/software/python-27-reaches-end-of-life-after-20-years-of-development",
+     "relevancia": 0.6854233,
+     "data_publicacao": "2020-01-02"
+    },
+    {
+     "resultado_id": "6f6e67-02",
+     "titulo": "End of support for python 2.7?",
+     "url": "https://stackoverflow.com/questions/4836375/end-of-support-for-python-2-7",
+     "relevancia": 0.39957732,
+     "data_publicacao": "2011-11-06"
+    },
+    {
+     "resultado_id": "fb9110-03",
+     "titulo": "It’s 2025, is anyone still using Python 2?",
+     "url": "https://medium.com/@Fredtaylor1/its-2025-is-anyone-still-using-python-2-9dcc293e2cd4",
+     "relevancia": 0.34268153,
+     "data_publicacao": "2025-09-02"
+    },
+    {
+     "resultado_id": "6c7514-04",
+     "titulo": "Python End-of-Life Dates: Every Version's Support Timeline",
+     "url": "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+     "relevancia": 0.27454585,
+     "data_publicacao": "2026-09-15"
+    }
+   ]
+  },
+  {
+   "id_operacao": "400269da-814c-423f-b2eb-7799b6ce9a3d",
+   "id_verificacao": "575b8e5f-f0e0-4404-8107-b90cc40c149a",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:35:44.726Z",
+   "finalizada_em": "2026-11-13T13:35:48.051Z",
+   "duracao_ms": 3325,
+   "request_id": "beaddd96-355f-4dde-89e5-0a268dd9690f",
+   "response_time": 2.86,
+   "erro": null,
+   "modo_busca": "NOTICIAS",
+   "parametros": {
+    "query": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+    "search_depth": "basic",
+    "max_results": 4,
+    "include_answer": false,
+    "include_published_date": true,
+    "topic": "news"
+   },
+   "quantidade_resultados": 4,
+   "resultados": [
+    {
+     "resultado_id": "ad75fb-00",
+     "titulo": "Python Software Foundation - Sunset of Python 2.7 - Changeset Consulting",
+     "url": "https://changeset.nyc/clients/psf-sunset-27",
+     "relevancia": 0.6311397,
+     "data_publicacao": "2026-11-06"
+    },
+    {
+     "resultado_id": "3e37db-01",
+     "titulo": "Python End of Life Dates & Support Schedule (2026)",
+     "url": "https://eolrisk.com/python",
+     "relevancia": 0.28358296,
+     "data_publicacao": "2026-10-10"
+    },
+    {
+     "resultado_id": "d29a76-02",
+     "titulo": "Python | endoflife.date",
+     "url": "https://endoflife.date/python",
+     "relevancia": 0.155591,
+     "data_publicacao": "2026-10-27"
+    },
+    {
+     "resultado_id": "556bc5-03",
+     "titulo": "pydantic-settings — PyPI package · v2.15.0 | FOSSA",
+     "url": "https://fossa.com/packages/pypi/pydantic-settings",
+     "relevancia": 0.10613344,
+     "data_publicacao": "2026-10-22"
+    }
+   ]
+  },
+  {
+   "id_operacao": "3c68126f-5763-4353-be5d-8cd35c393f07",
+   "id_verificacao": "575b8e5f-f0e0-4404-8107-b90cc40c149a",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "EXTRACAO",
+   "consulta": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:35:48.055Z",
+   "finalizada_em": "2026-11-13T13:35:48.517Z",
+   "duracao_ms": 462,
+   "request_id": "d07ad743-7d0e-41e0-9fa8-04387e6d7b7f",
+   "response_time": 0.02,
+   "erro": null,
+   "urls_solicitadas": [
+    "https://endoflife.date/python",
+    "https://changeset.nyc/clients/psf-sunset-27",
+    "https://tuxcare.com/blog/python-2-7-eol",
+    "https://eolrisk.com/python",
+    "https://www.bleepingcomputer.com/news/software/python-27-reaches-end-of-life-after-20-years-of-development"
+   ],
+   "parametros": {
+    "urls": [
+     "https://endoflife.date/python",
+     "https://changeset.nyc/clients/psf-sunset-27",
+     "https://tuxcare.com/blog/python-2-7-eol",
+     "https://eolrisk.com/python",
+     "https://www.bleepingcomputer.com/news/software/python-27-reaches-end-of-life-after-20-years-of-development"
+    ],
+    "extract_depth": "basic",
+    "format": "markdown",
+    "include_images": false
+   },
+   "quantidade_resultados": 5,
+   "urls_extraidas": [
+    "https://endoflife.date/python",
+    "https://changeset.nyc/clients/psf-sunset-27",
+    "https://tuxcare.com/blog/python-2-7-eol",
+    "https://eolrisk.com/python",
+    "https://www.bleepingcomputer.com/news/software/python-27-reaches-end-of-life-after-20-years-of-development"
+   ]
+  }
+ ],
+ "modo": "real",
+ "simulado": false,
+ "gateway": {
+  "gateway": "bifrost",
+  "chamadas": 4,
+  "falhas": 0,
+  "cadeia_modelos": [
+   "groq/openai/gpt-oss-20b",
+   "groq/openai/gpt-oss-120b"
+  ],
+  "queda_simulada": false,
+  "respostas_por_modelo": [
+   {
+    "modelo": "groq/openai/gpt-oss-20b",
+    "chamadas": 3
+   },
+   {
+    "modelo": "groq/openai/gpt-oss-120b",
+    "chamadas": 1
+   }
+  ],
+  "respostas_de_reserva": 1,
+  "tokens_total": 13084,
+  "latencia_media_ms": 1841
+ },
+ "duracao_ms": 15962,
+ "gravado_em": "2026-11-13T13:35:57.877Z"
+}

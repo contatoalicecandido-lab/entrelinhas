@@ -1,6 +1,6 @@
 # HackCulture submission copy · Stale-Answer Detector
 
-**Selected Problem Statement:** Build a Stale-Answer Detector for AI Applications (requires Tavily and Bifrost). Open-Source Bifrost Gateway (B4) is not selected and no B4 contribution is claimed.
+**Selected Problem Statement:** Build a Stale-Answer Detector for AI Applications (requires Tavily and Bifrost).
 
 **Status (13 Nov 2026):** working prototype with a web interface, live Tavily + Bifrost verification, a public demo that replays recorded live checks without keys, a real-claims accuracy benchmark and 52 offline test files.
 
@@ -39,7 +39,7 @@ Entrelinhas works in six steps.
 6. **Records.** Everything is stored in SQLite.
 
 **Bifrost does visible work.**
-- Every call carries a fallback chain of Groq models, so rate limits and failures are absorbed by the gateway. In the 15-claim benchmark, backups answered 23 of 50 model calls.
+- Every call carries a fallback chain of Groq models, so rate limits and failures are absorbed by the gateway. In the 13 Nov benchmark, the backup model answered 22 of 60 model calls and all 15 checks finished (`avaliacao/gateway-casos-reais-2026-11-13.json`).
 - The report shows which model answered each step, plus tokens and latency.
 - An outage drill sends a check to a non-existent model and shows Bifrost finishing it with a backup.
 
@@ -79,12 +79,17 @@ Entrelinhas works in six steps.
 
 ## Accuracy on real claims
 
-On 15 real claims with answers known on 13 Nov 2026 (8 true, 7 outdated, in Portuguese and English):
-- **14 of 15** got the exact verdict (the other one, Netflix, came back Conflicting, still a warning);
+On 15 real claims with known answers (8 true, 7 outdated, in Portuguese and English), run live on 13 Nov 2026:
+- **14 of 15** got the exact verdict. The other one, Netflix, came back Conflicting, which still warns the reader;
 - **15 of 15** went in the right direction;
 - **0** outdated claims were confirmed as true, and **0** true claims were marked as contradicted.
 
-The cases, their sources and the results are in `avaliacao/`. A first run on 12 Nov scored 11 of 15 exact; the fixes it pointed to are in the README. It is a small sample, not a statistical accuracy estimate.
+How to read it honestly:
+- of the 6 outdated claims caught, 1 was contradicted by a dated official source and 5 by most independent sources without an official date. The interface says so;
+- the rules were improved after a first run on the same 15 claims (11 of 15 exact on 12 Nov), so `avaliacao/casos-novos-2026-11-13.json` adds 8 new claims written after the fixes, to be run as an independent check;
+- 15 claims show behavior; they are not a statistical accuracy estimate.
+
+Every check of the run is recorded in `gravacoes/`, and the results are in `avaliacao/`.
 
 ## Architecture and technology
 
@@ -107,11 +112,11 @@ Public repository: https://github.com/contatoalicecandido-lab/entrelinhas
 
 Public demo, no install: https://contatoalicecandido-lab.github.io/entrelinhas/ (click **See a real check**). Pitch deck: `submission/Entrelinhas_Pitch_Deck.pptx`.
 
-Run `npm run web:exemplo` for the no-key demo, or `npm run web` with Tavily and Bifrost configured for live verification. Video script: `submission/VIDEO_SCRIPT.md`. Do not claim a video is attached unless one is recorded and uploaded.
+Run `npm run web:exemplo` for the no-key demo, or `npm run web` with Tavily and Bifrost configured for live verification. Video script: `submission/VIDEO_SCRIPT.md`.
 
 ## AI-use disclosure
 
-The product uses a model through Bifrost for claim decomposition and evidence analysis; dates, agreement, scores and verdicts are computed by deterministic code. AI assistants were used during development; complete any platform-specific disclosure truthfully.
+The product uses a model through Bifrost for claim decomposition and evidence analysis; dates, agreement, scores and verdicts are computed by deterministic code. AI coding assistants were used during development.
 
 ## Official challenge and submission sources
 

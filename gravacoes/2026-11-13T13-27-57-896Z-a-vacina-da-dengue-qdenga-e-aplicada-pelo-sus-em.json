@@ -1,0 +1,2395 @@
+{
+ "sistema": "Entrelinhas",
+ "id_verificacao": "bfe00437-7058-4afe-976d-9345198c2a45",
+ "texto_original": "A vacina da dengue Qdenga é aplicada pelo SUS em crianças e adolescentes de 10 a 14 anos.",
+ "verificado_em": "2026-11-13T13:27:57.873Z",
+ "total_afirmacoes": 1,
+ "sintese": {
+  "veredito": "CORROBORADA",
+  "resumo": "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
+  "total_afirmacoes": 1,
+  "contagem_vereditos": {
+   "CORROBORADA": 1
+  }
+ },
+ "afirmacoes": [
+  {
+   "id": "afirmacao_1",
+   "texto": "A vacina da dengue Qdenga é aplicada pelo SUS em crianças e adolescentes de 10 a 14 anos.",
+   "tipo_afirmacao": "regulamento",
+   "origem_tipo_afirmacao": "HEURISTICA",
+   "nuances": {
+    "idioma": "pt",
+    "variante": "pt-BR",
+    "confianca_idioma": 0.85,
+    "valores": [],
+    "datas": [],
+    "expressoes_temporais": [],
+    "condicoes": [],
+    "mudancas": [],
+    "tempo_coloquial": [],
+    "girias": {
+     "aliases": [
+      {
+       "texto": "SUS",
+       "canonico": "SUS (Sistema Único de Saúde)"
+      }
+     ],
+     "expressoes": []
+    },
+    "consulta_busca": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+    "dominios_oficiais_sugeridos": [
+     "gov.br"
+    ],
+    "autoridades": [
+     {
+      "dominio": "gov.br",
+      "autoridade": "Anvisa (gov.br)",
+      "termo": "vacina"
+     }
+    ],
+    "notas": [
+     "\"vacina\" points to a Brazilian authority: Anvisa (gov.br) (gov.br) is searched as an official source.",
+     "\"SUS\" is an informal name for SUS (Sistema Único de Saúde); the search uses the official name."
+    ]
+   },
+   "evidencias": [
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OFICIAL",
+      "titulo": "Vacinação contra a dengue de crianças e adolescentes entre dez e 14 anos é estendida a todos os municípios do RS - Secretaria da Saúde",
+      "url": "https://saude.rs.gov.br/vacinacao-contra-a-dengue-e-ampliada-para-todos-os-municipios-do-rs-em-criancas-e-adolescentes-de-10-a-14-anos",
+      "conteudo": "![Secretaria da Saúde](/themes/modelo-institucional2/images/logos/logo.png)\n\n![Governo do Estado do Rio Grande do Sul](/themes/modelo-institucional2/images/logos/brasao_RS.png)\n\n* [Conteúdo [1]](#conteudoInicio \"Ir para o conteúdo\")\n* [Menu [2]](#menuInicio \"Ir para o menu\")\n* [Busca [3]](#buscageralTextBox \"Ir para a busca\")\n* [Acessibilidade](/acessibilidade)\n\n* [Contraste](javascript:void(0); \"Alto contraste\")  [Contraste](javascript:void(0); \"Contraste normal\")\n* [Ouvidoria SUS](/ouvidoria)\n* [Mapa do site](/mapa-do-site)\n\n[Secretaria da\n\n# Saúde](/ \"Ir para a página inicial\")\n\n## Redes sociais\n\n* [![Curta nossa página no Facebook](/upload/arquivos/201602/22092550_redesocial-facebook.png…",
+      "coletado_em": "2026-11-13T13:27:45.696Z",
+      "data_publicacao": "2026-02-03",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": null,
+      "relevancia": 0.7379143,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "c4f34d67-a2d4-4f58-9413-26718b8ed8ad",
+       "resultado_id": "4e99a2-01",
+       "response_time_busca": 1.6,
+       "response_time_extracao": 0.02,
+       "consulta": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+       "origem_principal": {
+        "id_operacao": "fa414fa6-dc6b-412c-87f8-3d42f93dad20",
+        "request_id": "c4f34d67-a2d4-4f58-9413-26718b8ed8ad",
+        "modo_busca": "GERAL",
+        "resultado_id": "4e99a2-01",
+        "parametros": {
+         "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "fa414fa6-dc6b-412c-87f8-3d42f93dad20",
+         "request_id": "c4f34d67-a2d4-4f58-9413-26718b8ed8ad",
+         "modo_busca": "GERAL",
+         "resultado_id": "4e99a2-01",
+         "parametros": {
+          "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Tue, 03 Feb 2026 11:19:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 03 Feb 2026 11:19:00 GMT",
+         "value_normalized": "2026-02-03",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-02-03T08:19:00-0300",
+         "value_normalized": "2026-02-03",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-02-03T09:37:40-0300",
+         "value_normalized": "2026-02-03",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-02-03T08:19:00-0300",
+         "value_normalized": "2026-02-03",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-13T09:57:05-0300",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T20:54:27-0300",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T16:15:00-0300",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://saude.rs.gov.br/vacinacao-contra-a-dengue-e-ampliada-para-todos-os-municipios-do-rs-em-criancas-e-adolescentes-de-10-a-14-anos",
+        "capturado_em": "2026-11-13T13:27:49.328Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "20d0b72c-83fa-460d-b92d-5d2d261115de",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "bcbd4845-46b8-4484-a63a-677fa57b27f9",
+      "id_verificacao": "bfe00437-7058-4afe-976d-9345198c2a45",
+      "url_original": "https://saude.rs.gov.br/vacinacao-contra-a-dengue-e-ampliada-para-todos-os-municipios-do-rs-em-criancas-e-adolescentes-de-10-a-14-anos",
+      "url_canonica": "https://saude.rs.gov.br/vacinacao-contra-a-dengue-e-ampliada-para-todos-os-municipios-do-rs-em-criancas-e-adolescentes-de-10-a-14-anos",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "d4bc16f60b85f8bf511b43fadf2c1da7f008cce0ad1c11722b6680e50c29ec54",
+      "coletado_em": "2026-11-13T13:27:45.696Z",
+      "id_operacao_busca": "fa414fa6-dc6b-412c-87f8-3d42f93dad20",
+      "id_operacao_extracao": "eb16e2f1-d699-4121-ad65-7b9f3f17a3c0",
+      "consulta": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+      "parametros_busca": {
+       "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://saude.rs.gov.br/vacinacao-contra-a-dengue-e-ampliada-para-todos-os-municipios-do-rs-em-criancas-e-adolescentes-de-10-a-14-anos",
+        "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez",
+        "https://www.sciencedirect.com/science/article/pii/S1413867024000709",
+        "https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude",
+        "https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "c4f34d67-a2d4-4f58-9413-26718b8ed8ad",
+       "operacoes_busca": [
+        {
+         "id_operacao": "fa414fa6-dc6b-412c-87f8-3d42f93dad20",
+         "request_id": "c4f34d67-a2d4-4f58-9413-26718b8ed8ad",
+         "modo_busca": "GERAL",
+         "resultado_id": "4e99a2-01",
+         "parametros": {
+          "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "20d0b72c-83fa-460d-b92d-5d2d261115de",
+       "resultado_id": "4e99a2-01",
+       "relevancia": 0.7379143,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 03 Feb 2026 11:19:00 GMT",
+         "value_normalized": "2026-02-03",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-02-03T08:19:00-0300",
+         "value_normalized": "2026-02-03",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-02-03T09:37:40-0300",
+         "value_normalized": "2026-02-03",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-02-03T08:19:00-0300",
+         "value_normalized": "2026-02-03",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-13T09:57:05-0300",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T20:54:27-0300",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T16:15:00-0300",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://saude.rs.gov.br/vacinacao-contra-a-dengue-e-ampliada-para-todos-os-municipios-do-rs-em-criancas-e-adolescentes-de-10-a-14-anos",
+        "capturado_em": "2026-11-13T13:27:49.328Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Vacinação contra a dengue de crianças e adolescentes entre dez e 14 anos é estendida a todos os municípios do RS - Secretaria da Saúde",
+      "url": "https://saude.rs.gov.br/vacinacao-contra-a-dengue-e-ampliada-para-todos-os-municipios-do-rs-em-criancas-e-adolescentes-de-10-a-14-anos",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 9002,
+      "caracteres_preparados": 6640,
+      "trecho_analisado": "TÍTULO DA FONTE: Vacinação contra a dengue de crianças e adolescentes entre dez e 14 anos é estendida a todos os municípios do RS - Secretaria da Saúde\nURL DA FONTE: https://saude.rs.gov.br/vacinacao-contra-a-dengue-e-ampliada-para-todos-os-municipios-do-rs-em-criancas-e-adolescentes-de-10-a-14-anos\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n\"Contraste normal\")\n\n* [Ouvidoria SUS](/ouvidoria)\n\n* [Mapa do site](/mapa-do-site)\n\n4.\n\nVacinação contra a dengue é\n\n[Voltar](javascript: window.history.back();\n\n\"Clique para imprimir esta página\")\n\n* [Dengue](/noticias?classificacao=26087 \"Dengue\")\n\n# Vacinação contra a dengue de crianças e adolescentes entre dez e 14 anos é estendida a todos os municípios do RS\n\nO público elegível deve realizar o esquema de duas doses com intervalo de três meses\n\n**Publicação:**\n\n[![Doses da vacina contra a dengue.](/upload/recortes/202404/30142517_290488_GD.jpg)](/upload/recortes/202404/30142517_290488_GDO.jpg)\n\nDoses da vacina contra a dengue.\n\n- Foto: Marcelo Bernardes/SES\n\nA vacinação contra a dengue passa a ser ofertada, a partir deste mês, em todos os municípios do Rio Grande do Sul.\n\nA ampliação dos locais de abrangência segue decisão do Ministério da Saúde,",
+      "citacao_chave": "Vacinação contra a dengue de crianças e adolescentes entre dez e 14 anos é estendida a todos os municípios do RS …",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "RELATED_INSUFFICIENT",
+      "justificativa": "The source describes dengue vaccination for children and adolescents aged 10-14 in Rio Grande do Sul, but it does not name the Qdenga vaccine nor explicitly state that the vaccine is provided by the SUS."
+     },
+     "classificacao": {
+      "postura": "INSUFFICIENT",
+      "justificativa": "The source describes dengue vaccination for children and adolescents aged 10-14 in Rio Grande do Sul, but it does not name the Qdenga vaccine nor explicitly state that the vaccine is provided by the SUS."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 283,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2026-02-03"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "Especialistas alertam para risco de reinfecção da dengue | Agência Brasil",
+      "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez",
+      "conteudo": "[Pular para o conteúdo principal](#main-content)\n\n[![logo ebc](https://agenciabrasil.ebc.com.br/sites/default/themes/agenciabrasil_v3/images/logo-ebc-dark.webp?tnhjsg)](https://ebc.com.br \"Ir para o portal EBC\")\n\n[![logo Agência Brasil](https://agenciabrasil.ebc.com.br/sites/default/themes/agenciabrasil_v3/images/agbrasil-color-logo.svg?tnhjsg)](/)\n\n\n\n[Saúde](/saude)\n\n# Especialistas alertam para risco de reinfecção da dengue\n\nAnticorpos do 1º episódio nem sempre neutralizam novos agentes\n\nFlávia Albuquerque - Repórter da Agência Brasil\n\nPublicado em 10/11/2026 - 14:00\n\nSão Paulo\n\n![Dengue hemorrhagic fever DHF mosquito sucking human skin. Foto: Warawan/Adobestock](/sites/default/files/thumb…",
+      "coletado_em": "2026-11-13T13:27:45.696Z",
+      "data_publicacao": null,
+      "data_atualizacao": "2026-11-10",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez",
+      "relevancia": 0.8130158,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "bab31d61-4c71-43f9-9d7c-4d02670f513f",
+       "resultado_id": "f8dd85-00",
+       "response_time_busca": 3.03,
+       "response_time_extracao": 0.02,
+       "consulta": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+       "origem_principal": {
+        "id_operacao": "02f2fced-4ffe-422a-a846-2b6155c588fb",
+        "request_id": "bab31d61-4c71-43f9-9d7c-4d02670f513f",
+        "modo_busca": "NOTICIAS_BR",
+        "resultado_id": "f8dd85-00",
+        "parametros": {
+         "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news",
+         "include_domains": [
+          "g1.globo.com",
+          "oglobo.globo.com",
+          "valor.globo.com",
+          "folha.uol.com.br",
+          "uol.com.br",
+          "estadao.com.br",
+          "agenciabrasil.ebc.com.br",
+          "cnnbrasil.com.br",
+          "infomoney.com.br",
+          "exame.com",
+          "poder360.com.br",
+          "correiobraziliense.com.br",
+          "metropoles.com",
+          "veja.abril.com.br",
+          "terra.com.br",
+          "band.com.br",
+          "r7.com",
+          "bbc.com",
+          "jota.info",
+          "canaltech.com.br"
+         ]
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "02f2fced-4ffe-422a-a846-2b6155c588fb",
+         "request_id": "bab31d61-4c71-43f9-9d7c-4d02670f513f",
+         "modo_busca": "NOTICIAS_BR",
+         "resultado_id": "f8dd85-00",
+         "parametros": {
+          "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "include_domains": [
+           "g1.globo.com",
+           "oglobo.globo.com",
+           "valor.globo.com",
+           "folha.uol.com.br",
+           "uol.com.br",
+           "estadao.com.br",
+           "agenciabrasil.ebc.com.br",
+           "cnnbrasil.com.br",
+           "infomoney.com.br",
+           "exame.com",
+           "poder360.com.br",
+           "correiobraziliense.com.br",
+           "metropoles.com",
+           "veja.abril.com.br",
+           "terra.com.br",
+           "band.com.br",
+           "r7.com",
+           "bbc.com",
+           "jota.info",
+           "canaltech.com.br"
+          ]
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Tue, 10 Nov 2026 20:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 10 Nov 2026 20:00:00 GMT",
+         "value_normalized": "2026-11-10",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 13:05:40 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-11-10T17:00:00-03:00",
+         "value_normalized": "2026-11-10",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "10/11/2026",
+         "value_normalized": "2026-11-10",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "EXPLICIT_ATTRIBUTE_UPDATE_DATE",
+         "field": "visible_text_date",
+         "value_original": "10/11/2026",
+         "value_normalized": "2026-11-10",
+         "scope": "ATTRIBUTE",
+         "source": "VISIBLE_TEXT",
+         "match_basis": "claim_value_or_entity_in_local_context",
+         "context": "a dengue Anticorpos do 1º episódio nem sempre neutralizam novos agentes Flávia Albuquerque - Repórter da Agência Brasil Publicado em 10/11/2026 - 14:00 | 00:00 --> São Paulo © Warawan/Adobestock Versão em áudio O dia 21 de novembro marca o Dia Nacional de Combate à Dengue e com a proximidade da data",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "10/11/2026",
+         "value_normalized": "2026-11-10",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez",
+        "capturado_em": "2026-11-13T13:27:44.998Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "20d0b72c-83fa-460d-b92d-5d2d261115de",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "020efec2-a577-4c5e-b565-734e56f60a54",
+      "id_verificacao": "bfe00437-7058-4afe-976d-9345198c2a45",
+      "url_original": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez",
+      "url_canonica": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "b2c285e406883ca278f3da8f416229ce0c4d383f6582e974229c3822230d1412",
+      "coletado_em": "2026-11-13T13:27:45.696Z",
+      "id_operacao_busca": "02f2fced-4ffe-422a-a846-2b6155c588fb",
+      "id_operacao_extracao": "eb16e2f1-d699-4121-ad65-7b9f3f17a3c0",
+      "consulta": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+      "parametros_busca": {
+       "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news",
+       "include_domains": [
+        "g1.globo.com",
+        "oglobo.globo.com",
+        "valor.globo.com",
+        "folha.uol.com.br",
+        "uol.com.br",
+        "estadao.com.br",
+        "agenciabrasil.ebc.com.br",
+        "cnnbrasil.com.br",
+        "infomoney.com.br",
+        "exame.com",
+        "poder360.com.br",
+        "correiobraziliense.com.br",
+        "metropoles.com",
+        "veja.abril.com.br",
+        "terra.com.br",
+        "band.com.br",
+        "r7.com",
+        "bbc.com",
+        "jota.info",
+        "canaltech.com.br"
+       ]
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://saude.rs.gov.br/vacinacao-contra-a-dengue-e-ampliada-para-todos-os-municipios-do-rs-em-criancas-e-adolescentes-de-10-a-14-anos",
+        "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez",
+        "https://www.sciencedirect.com/science/article/pii/S1413867024000709",
+        "https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude",
+        "https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "bab31d61-4c71-43f9-9d7c-4d02670f513f",
+       "operacoes_busca": [
+        {
+         "id_operacao": "02f2fced-4ffe-422a-a846-2b6155c588fb",
+         "request_id": "bab31d61-4c71-43f9-9d7c-4d02670f513f",
+         "modo_busca": "NOTICIAS_BR",
+         "resultado_id": "f8dd85-00",
+         "parametros": {
+          "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "include_domains": [
+           "g1.globo.com",
+           "oglobo.globo.com",
+           "valor.globo.com",
+           "folha.uol.com.br",
+           "uol.com.br",
+           "estadao.com.br",
+           "agenciabrasil.ebc.com.br",
+           "cnnbrasil.com.br",
+           "infomoney.com.br",
+           "exame.com",
+           "poder360.com.br",
+           "correiobraziliense.com.br",
+           "metropoles.com",
+           "veja.abril.com.br",
+           "terra.com.br",
+           "band.com.br",
+           "r7.com",
+           "bbc.com",
+           "jota.info",
+           "canaltech.com.br"
+          ]
+         }
+        }
+       ],
+       "request_id_extracao": "20d0b72c-83fa-460d-b92d-5d2d261115de",
+       "resultado_id": "f8dd85-00",
+       "relevancia": 0.8130158,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 10 Nov 2026 20:00:00 GMT",
+         "value_normalized": "2026-11-10",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 13:05:40 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-11-10T17:00:00-03:00",
+         "value_normalized": "2026-11-10",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "10/11/2026",
+         "value_normalized": "2026-11-10",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "EXPLICIT_ATTRIBUTE_UPDATE_DATE",
+         "field": "visible_text_date",
+         "value_original": "10/11/2026",
+         "value_normalized": "2026-11-10",
+         "scope": "ATTRIBUTE",
+         "source": "VISIBLE_TEXT",
+         "match_basis": "claim_value_or_entity_in_local_context",
+         "context": "a dengue Anticorpos do 1º episódio nem sempre neutralizam novos agentes Flávia Albuquerque - Repórter da Agência Brasil Publicado em 10/11/2026 - 14:00 | 00:00 --> São Paulo © Warawan/Adobestock Versão em áudio O dia 21 de novembro marca o Dia Nacional de Combate à Dengue e com a proximidade da data",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "10/11/2026",
+         "value_normalized": "2026-11-10",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez",
+        "capturado_em": "2026-11-13T13:27:44.998Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Especialistas alertam para risco de reinfecção da dengue | Agência Brasil",
+      "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 11656,
+      "caracteres_preparados": 7987,
+      "trecho_analisado": "TÍTULO DA FONTE: Especialistas alertam para risco de reinfecção da dengue | Agência Brasil\nURL DA FONTE: https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n[Saúde](/saude)\n\n# Especialistas alertam para risco de reinfecção da dengue\n\nAnticorpos do 1º episódio nem sempre neutralizam novos agentes\n\nFlávia Albuquerque - Repórter da Agência Brasil\n\nPublicado em 10/11/2026 - 14:00\n\nSão Paulo\n\n![Dengue hemorrhagic fever DHF mosquito sucking human skin.\n\nFoto: Warawan/Adobestock](/sites/default/files/thumbnails/image/loading_v2.gif \"Warawan/Adobestock\")\n\nVersão em áudio\n\nO dia 21 de novembro marca o Dia Nacional de Combate à Dengue e com a proximidade da data e do início do verão, período de maior proliferação do mosquito transmissor da doença, o *Aedes aegypti*, e de aumento dos casos, **especialistas reforçam que quem já teve a doença corre risco de desenvolver as formas graves em uma nova infecção com um sorotipo diferente, mesmo que tenham anticorpos da primeira vez.**![](https://agenciabrasil.ebc.com.br/ebc.png?id=1708265&o=node)![](https://agenciabrasil.ebc.com.br/ebc.gif?id=170826",
+      "citacao_chave": "Está disponível na rede privada e no Sistema Único de Saúde (SUS), onde é aplicada prioritariamente em crianças e adolescentes entre 10 e 14 anos.",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The article clearly states that Qdenga is available in the SUS and is applied prioritariamente (as a priority) to children and adolescents aged 10 to 14 years, which matches the claim."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The article clearly states that Qdenga is available in the SUS and is applied prioritariamente (as a priority) to children and adolescents aged 10 to 14 years, which matches the claim."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 3,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2026-11-10"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "ACADEMICO",
+      "titulo": "NOVA VACINA DA DENGUE, O QUE JÁ SABEMOS SOBRE ELA: UMA REVISÃO SISTEMÁTICA DA LITERATURA",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1413867024000709",
+      "conteudo": "[Skip to main content](https://www.sciencedirect.com/science/article/pii/S1413867024000709#main)[Skip to article](https://www.sciencedirect.com/science/article/pii/S1413867024000709#article)\n\n[![Image 2: Elsevier logo](https://www.sciencedirect.com/shared-assets/24/images/elsevier-non-solus-new-grey.svg)](https://www.sciencedirect.com/)\n\n*   [Journals & Books](https://www.sciencedirect.com/browse/journals-and-books)\n\n*   Help   \n*   [Search](https://www.sciencedirect.com/search) \n\n[My account](https://www.sciencedirect.com/user/login?targetURL=%2Fscience%2Farticle%2Fpii%2FS1413867024000709&from=globalheader)\n\n[Sign in](https://www.sciencedirect.com/user/institution/login?targetURL=%2Fscience…",
+      "coletado_em": "2026-11-13T13:27:45.696Z",
+      "data_publicacao": "2024-07-01",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": null,
+      "relevancia": 0.41555095,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "8846f9a1-3bfa-4d02-999d-6cce79c14aad",
+       "resultado_id": "5d32e6-00",
+       "response_time_busca": 1.81,
+       "response_time_extracao": 0.02,
+       "consulta": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+       "origem_principal": {
+        "id_operacao": "5a9fb753-cace-408d-9767-14c66fba0aec",
+        "request_id": "8846f9a1-3bfa-4d02-999d-6cce79c14aad",
+        "modo_busca": "CIENCIA",
+        "resultado_id": "5d32e6-00",
+        "parametros": {
+         "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+         "search_depth": "basic",
+         "max_results": 3,
+         "include_answer": false,
+         "include_published_date": true,
+         "include_domains": [
+          "scholar.google.com",
+          "arxiv.org",
+          "nature.com",
+          "science.org",
+          "sciencedirect.com",
+          "springer.com",
+          "link.springer.com",
+          "wiley.com",
+          "onlinelibrary.wiley.com",
+          "pubmed.ncbi.nlm.nih.gov",
+          "ncbi.nlm.nih.gov",
+          "nih.gov",
+          "thelancet.com",
+          "nejm.org",
+          "bmj.com",
+          "jamanetwork.com",
+          "cell.com",
+          "plos.org",
+          "frontiersin.org",
+          "mdpi.com",
+          "acm.org",
+          "dl.acm.org",
+          "ieee.org",
+          "ieeexplore.ieee.org",
+          "semanticscholar.org",
+          "researchgate.net",
+          "ssrn.com",
+          "jstor.org",
+          "cochranelibrary.com",
+          "scielo.org"
+         ]
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "5a9fb753-cace-408d-9767-14c66fba0aec",
+         "request_id": "8846f9a1-3bfa-4d02-999d-6cce79c14aad",
+         "modo_busca": "CIENCIA",
+         "resultado_id": "5d32e6-00",
+         "parametros": {
+          "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+          "search_depth": "basic",
+          "max_results": 3,
+          "include_answer": false,
+          "include_published_date": true,
+          "include_domains": [
+           "scholar.google.com",
+           "arxiv.org",
+           "nature.com",
+           "science.org",
+           "sciencedirect.com",
+           "springer.com",
+           "link.springer.com",
+           "wiley.com",
+           "onlinelibrary.wiley.com",
+           "pubmed.ncbi.nlm.nih.gov",
+           "ncbi.nlm.nih.gov",
+           "nih.gov",
+           "thelancet.com",
+           "nejm.org",
+           "bmj.com",
+           "jamanetwork.com",
+           "cell.com",
+           "plos.org",
+           "frontiersin.org",
+           "mdpi.com",
+           "acm.org",
+           "dl.acm.org",
+           "ieee.org",
+           "ieeexplore.ieee.org",
+           "semanticscholar.org",
+           "researchgate.net",
+           "ssrn.com",
+           "jstor.org",
+           "cochranelibrary.com",
+           "scielo.org"
+          ]
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Mon, 01 Jul 2024 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 01 Jul 2024 00:00:00 GMT",
+         "value_normalized": "2024-07-01",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "HTTP_403",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "20d0b72c-83fa-460d-b92d-5d2d261115de",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "44e6c270-01d4-4895-bd10-5cd8b9d0a450",
+      "id_verificacao": "bfe00437-7058-4afe-976d-9345198c2a45",
+      "url_original": "https://www.sciencedirect.com/science/article/pii/S1413867024000709",
+      "url_canonica": "https://www.sciencedirect.com/science/article/pii/S1413867024000709",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "4732bffc3f148dfce5ce02c252ef5e50f3027ba25a4b2e2587b0290a83c2785e",
+      "coletado_em": "2026-11-13T13:27:45.696Z",
+      "id_operacao_busca": "5a9fb753-cace-408d-9767-14c66fba0aec",
+      "id_operacao_extracao": "eb16e2f1-d699-4121-ad65-7b9f3f17a3c0",
+      "consulta": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+      "parametros_busca": {
+       "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+       "search_depth": "basic",
+       "max_results": 3,
+       "include_answer": false,
+       "include_published_date": true,
+       "include_domains": [
+        "scholar.google.com",
+        "arxiv.org",
+        "nature.com",
+        "science.org",
+        "sciencedirect.com",
+        "springer.com",
+        "link.springer.com",
+        "wiley.com",
+        "onlinelibrary.wiley.com",
+        "pubmed.ncbi.nlm.nih.gov",
+        "ncbi.nlm.nih.gov",
+        "nih.gov",
+        "thelancet.com",
+        "nejm.org",
+        "bmj.com",
+        "jamanetwork.com",
+        "cell.com",
+        "plos.org",
+        "frontiersin.org",
+        "mdpi.com",
+        "acm.org",
+        "dl.acm.org",
+        "ieee.org",
+        "ieeexplore.ieee.org",
+        "semanticscholar.org",
+        "researchgate.net",
+        "ssrn.com",
+        "jstor.org",
+        "cochranelibrary.com",
+        "scielo.org"
+       ]
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://saude.rs.gov.br/vacinacao-contra-a-dengue-e-ampliada-para-todos-os-municipios-do-rs-em-criancas-e-adolescentes-de-10-a-14-anos",
+        "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez",
+        "https://www.sciencedirect.com/science/article/pii/S1413867024000709",
+        "https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude",
+        "https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "8846f9a1-3bfa-4d02-999d-6cce79c14aad",
+       "operacoes_busca": [
+        {
+         "id_operacao": "5a9fb753-cace-408d-9767-14c66fba0aec",
+         "request_id": "8846f9a1-3bfa-4d02-999d-6cce79c14aad",
+         "modo_busca": "CIENCIA",
+         "resultado_id": "5d32e6-00",
+         "parametros": {
+          "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+          "search_depth": "basic",
+          "max_results": 3,
+          "include_answer": false,
+          "include_published_date": true,
+          "include_domains": [
+           "scholar.google.com",
+           "arxiv.org",
+           "nature.com",
+           "science.org",
+           "sciencedirect.com",
+           "springer.com",
+           "link.springer.com",
+           "wiley.com",
+           "onlinelibrary.wiley.com",
+           "pubmed.ncbi.nlm.nih.gov",
+           "ncbi.nlm.nih.gov",
+           "nih.gov",
+           "thelancet.com",
+           "nejm.org",
+           "bmj.com",
+           "jamanetwork.com",
+           "cell.com",
+           "plos.org",
+           "frontiersin.org",
+           "mdpi.com",
+           "acm.org",
+           "dl.acm.org",
+           "ieee.org",
+           "ieeexplore.ieee.org",
+           "semanticscholar.org",
+           "researchgate.net",
+           "ssrn.com",
+           "jstor.org",
+           "cochranelibrary.com",
+           "scielo.org"
+          ]
+         }
+        }
+       ],
+       "request_id_extracao": "20d0b72c-83fa-460d-b92d-5d2d261115de",
+       "resultado_id": "5d32e6-00",
+       "relevancia": 0.41555095,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 01 Jul 2024 00:00:00 GMT",
+         "value_normalized": "2024-07-01",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "HTTP_403",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "NOVA VACINA DA DENGUE, O QUE JÁ SABEMOS SOBRE ELA: UMA REVISÃO SISTEMÁTICA DA LITERATURA",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1413867024000709",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 10837,
+      "caracteres_preparados": 3203,
+      "trecho_analisado": "TÍTULO DA FONTE: NOVA VACINA DA DENGUE, O QUE JÁ SABEMOS SOBRE ELA: UMA REVISÃO SISTEMÁTICA DA LITERATURA\nURL DA FONTE: https://www.sciencedirect.com/science/article/pii/S1413867024000709\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n[Get rights and content](https://s100.copyright.com/AppDispatchServlet?publisherName=ELS&contentID=S1413867024000709&orderBeanReset=true)\n\n# NOVA VACINA DA DENGUE, O QUE JÁ SABEMOS SOBRE ELA: UMA REVISÃO SISTEMÁTICA DA LITERATURA\n\nAuthor links open overlay panel Thaís Salles Pereira a, Maria Paula Nunes Sampaio a, Isabella Alves de Freitas a, Pedro Arthur Vieira Morais Arruda a, Raissa de Alencar Almeida a, Jessyka Karoline Marques Cerqueira a, Camila Alvarenga da Silva b, Marcos Vinícius Milki c\n\n### Introdução\n\nA dengue é causada por um flavivírus transmitido por mosquitos.\n\nA doença é agora endêmica em muitas regiões tropicais e subtropicais, manifestando-se em aproximadamente 96 milhões de casos sintomáticos de dengue a cada ano.\n\nEnsaios clínicos demonstraram que a TAK-003 (Qdenga®), uma vacina tetravalente viva atenuada contra a dengue, é bem tolerada, imunogênica e eficaz em adultos sem exposição prévia à infecção pelo vírus da dengue que vivem em regiões",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "RELATED_INSUFFICIENT",
+      "justificativa": "The academic review discusses the Qdenga (TAK‑003) vaccine’s efficacy and safety but does not mention the SUS or the specific 10‑14 age‑group rollout, so it cannot confirm the claim."
+     },
+     "classificacao": {
+      "postura": "INSUFFICIENT",
+      "justificativa": "The academic review discusses the Qdenga (TAK‑003) vaccine’s efficacy and safety but does not mention the SUS or the specific 10‑14 age‑group rollout, so it cannot confirm the claim."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 865,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2024-07-01"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OFICIAL",
+      "titulo": "Vacina contra dengue aplicada em adolescentes de 10 a 14 anos não é a mesma que teve uso suspenso pelo Ministério da Saúde",
+      "url": "https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude",
+      "conteudo": "[Ir para o conteúdo](#content)\n\n\n[![](https://agencia.ac.gov.br/wp-content/uploads/2024/04/logo-1.png)](https://agencia.ac.gov.br)\n\n[Facebook](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjKj4rqzt2FAxW6r5UCHbvYATAQFnoECBIQAQ&url=https%3A%2F%2Fwww.facebook.com%2Fgovernodoacre%2F%3Flocale%3Dpt_BR&usg=AOvVaw1QBUCvqsVYOMDSeHe92qN5&opi=89978449)     [Youtube](https://www.youtube.com/user/noticiasdoacre)     [Instagram](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiqxvOqzt2FAxXdppUCHepjBEwQFnoECBIQAw&url=https%3A%2F%2Fwww.instagram.com%2Fgoverno.acre%2F%23%3A~%3Atext%3DGoverno%2520do%2520Acre%2520(%2540governo.…",
+      "coletado_em": "2026-11-13T13:27:45.696Z",
+      "data_publicacao": "2026-06-08",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude/",
+      "relevancia": 0.716417,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "c4f34d67-a2d4-4f58-9413-26718b8ed8ad",
+       "resultado_id": "c88cfb-03",
+       "response_time_busca": 1.6,
+       "response_time_extracao": 0.02,
+       "consulta": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+       "origem_principal": {
+        "id_operacao": "fa414fa6-dc6b-412c-87f8-3d42f93dad20",
+        "request_id": "c4f34d67-a2d4-4f58-9413-26718b8ed8ad",
+        "modo_busca": "GERAL",
+        "resultado_id": "c88cfb-03",
+        "parametros": {
+         "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "fa414fa6-dc6b-412c-87f8-3d42f93dad20",
+         "request_id": "c4f34d67-a2d4-4f58-9413-26718b8ed8ad",
+         "modo_busca": "GERAL",
+         "resultado_id": "c88cfb-03",
+         "parametros": {
+          "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Mon, 08 Jun 2026 22:10:15 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 08 Jun 2026 22:10:15 GMT",
+         "value_normalized": "2026-06-08",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-06-08T17:10:15-05:00",
+         "value_normalized": "2026-06-08",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-06-08T17:10:15-05:00",
+         "value_normalized": "2026-06-08",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-06-08T17:10:15-05:00",
+         "value_normalized": "2026-06-08",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude/",
+        "capturado_em": "2026-11-13T13:27:46.103Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "20d0b72c-83fa-460d-b92d-5d2d261115de",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "f9111a16-f9fb-4eef-95f1-f88172a54d95",
+      "id_verificacao": "bfe00437-7058-4afe-976d-9345198c2a45",
+      "url_original": "https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude",
+      "url_canonica": "https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "c0d651ec41b4b813345746005fead11ab8e19b3cfd521d89395dd19cbff218fe",
+      "coletado_em": "2026-11-13T13:27:45.696Z",
+      "id_operacao_busca": "fa414fa6-dc6b-412c-87f8-3d42f93dad20",
+      "id_operacao_extracao": "eb16e2f1-d699-4121-ad65-7b9f3f17a3c0",
+      "consulta": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+      "parametros_busca": {
+       "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://saude.rs.gov.br/vacinacao-contra-a-dengue-e-ampliada-para-todos-os-municipios-do-rs-em-criancas-e-adolescentes-de-10-a-14-anos",
+        "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez",
+        "https://www.sciencedirect.com/science/article/pii/S1413867024000709",
+        "https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude",
+        "https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "c4f34d67-a2d4-4f58-9413-26718b8ed8ad",
+       "operacoes_busca": [
+        {
+         "id_operacao": "fa414fa6-dc6b-412c-87f8-3d42f93dad20",
+         "request_id": "c4f34d67-a2d4-4f58-9413-26718b8ed8ad",
+         "modo_busca": "GERAL",
+         "resultado_id": "c88cfb-03",
+         "parametros": {
+          "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "20d0b72c-83fa-460d-b92d-5d2d261115de",
+       "resultado_id": "c88cfb-03",
+       "relevancia": 0.716417,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 08 Jun 2026 22:10:15 GMT",
+         "value_normalized": "2026-06-08",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-06-08T17:10:15-05:00",
+         "value_normalized": "2026-06-08",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-06-08T17:10:15-05:00",
+         "value_normalized": "2026-06-08",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-06-08T17:10:15-05:00",
+         "value_normalized": "2026-06-08",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude/",
+        "capturado_em": "2026-11-13T13:27:46.103Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Vacina contra dengue aplicada em adolescentes de 10 a 14 anos não é a mesma que teve uso suspenso pelo Ministério da Saúde",
+      "url": "https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 8505,
+      "caracteres_preparados": 5677,
+      "trecho_analisado": "TÍTULO DA FONTE: Vacina contra dengue aplicada em adolescentes de 10 a 14 anos não é a mesma que teve uso suspenso pelo Ministério da Saúde\nURL DA FONTE: https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n[Facebook](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjKj4rqzt2FAxW6r5UCHbvYATAQFnoECBIQAQ&url=https%3A%2F%2Fwww.facebook.com%2Fgovernodoacre%2F%3Flocale%3Dpt_BR&usg=AOvVaw1QBUCvqsVYOMDSeHe92qN5&opi=89978449)     [Youtube](https://www.youtube.com/user/noticiasdoacre)     [Instagram](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiqxvOqzt2FAxXdppUCHepjBEwQFnoECBIQAw&url=https%3A%2F%2Fwww.instagram.com%2Fgoverno.acre%2F%23%3A~%3Atext%3DGoverno%2520do%2520Acre%2520(%2540governo.%2C%25E2%2580%25A2%2520Instagram%2520photos%2520and%2520videos&usg=AOvVaw2JB6pXpePLkF2rBflUiK35&opi=89978449)     [X-twitter](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjN2Zmizt2FAxVXq5UCHRNJAVAQ6F56BAgPEAE&url=https%3A%2F%2Ftwitter.com%2Fgoverno_",
+      "citacao_chave": "A vacina disponibilizada nas unidades de saúde para adolescentes de 10 a 14 anos é a Qdenga, produzida pelo laboratório Takeda, que segue recomendada pelo Ministério da Saúde e continua sendo ofertada normalmente.",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source states that the Qdenga vaccine continues to be offered by the SUS to adolescents aged 10 to 14 in the state, confirming the claim."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The source states that the Qdenga vaccine continues to be offered by the SUS to adolescents aged 10 to 14 in the state, confirming the claim."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 158,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2026-06-08"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "Vacina da dengue: origem, quem pode tomar - Brasil Escola",
+      "url": "https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm",
+      "conteudo": "[![Brasil Escola](https://brasilescola.uol.com.br/assets/images/logos/logo-be.webp \"Brasil Escola\")](https://brasilescola.uol.com.br)\n\n1. [Home](https://brasilescola.uol.com.br)\n2. [Biologia](https://brasilescola.uol.com.br/biologia)\n3. [Curiosidades de Biologia](https://brasilescola.uol.com.br/biologia/curiosidades-biologia.htm)\n4. Vacina da dengue\n\n# Vacina da dengue\n\nVacina da dengue é a vacina que protege contra o vírus da dengue. No Brasil, já foram aprovadas duas vacinas da dengue, a Dengvaxia® e a Qdenga®.\n\n[![Imprimir](https://brasilescola.uol.com.br/assets/images/icons-svg/print.svg)](https://brasilescola.uol.com.br/imprimir/123172 \"Imprimir\") \n\n![Escutar texto](https://brasilescola…",
+      "coletado_em": "2026-11-13T13:27:45.696Z",
+      "data_publicacao": null,
+      "data_atualizacao": null,
+      "escopo_data": "UNKNOWN",
+      "canonical_url": "https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm",
+      "relevancia": 0.7303861,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "c4f34d67-a2d4-4f58-9413-26718b8ed8ad",
+       "resultado_id": "087839-02",
+       "response_time_busca": 1.6,
+       "response_time_extracao": 0.02,
+       "consulta": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+       "origem_principal": {
+        "id_operacao": "fa414fa6-dc6b-412c-87f8-3d42f93dad20",
+        "request_id": "c4f34d67-a2d4-4f58-9413-26718b8ed8ad",
+        "modo_busca": "GERAL",
+        "resultado_id": "087839-02",
+        "parametros": {
+         "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "fa414fa6-dc6b-412c-87f8-3d42f93dad20",
+         "request_id": "c4f34d67-a2d4-4f58-9413-26718b8ed8ad",
+         "modo_busca": "GERAL",
+         "resultado_id": "087839-02",
+         "parametros": {
+          "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": null,
+       "sinais_data": [
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2016-11-12-0311:36:43",
+         "value_normalized": null,
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2025-05-19-0316:05:26",
+         "value_normalized": null,
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm",
+        "capturado_em": "2026-11-13T13:27:45.372Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "20d0b72c-83fa-460d-b92d-5d2d261115de",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "9783c6f4-fcd7-45cc-9c1d-3833b88d97b6",
+      "id_verificacao": "bfe00437-7058-4afe-976d-9345198c2a45",
+      "url_original": "https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm",
+      "url_canonica": "https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "76fca14e2b9cbb5415cbfb1fc1b9ac7187f0a7c68294dc4bc48973b2aa99adc1",
+      "coletado_em": "2026-11-13T13:27:45.696Z",
+      "id_operacao_busca": "fa414fa6-dc6b-412c-87f8-3d42f93dad20",
+      "id_operacao_extracao": "eb16e2f1-d699-4121-ad65-7b9f3f17a3c0",
+      "consulta": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+      "parametros_busca": {
+       "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://saude.rs.gov.br/vacinacao-contra-a-dengue-e-ampliada-para-todos-os-municipios-do-rs-em-criancas-e-adolescentes-de-10-a-14-anos",
+        "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez",
+        "https://www.sciencedirect.com/science/article/pii/S1413867024000709",
+        "https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude",
+        "https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "c4f34d67-a2d4-4f58-9413-26718b8ed8ad",
+       "operacoes_busca": [
+        {
+         "id_operacao": "fa414fa6-dc6b-412c-87f8-3d42f93dad20",
+         "request_id": "c4f34d67-a2d4-4f58-9413-26718b8ed8ad",
+         "modo_busca": "GERAL",
+         "resultado_id": "087839-02",
+         "parametros": {
+          "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "20d0b72c-83fa-460d-b92d-5d2d261115de",
+       "resultado_id": "087839-02",
+       "relevancia": 0.7303861,
+       "sinais_data": [
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2016-11-12-0311:36:43",
+         "value_normalized": null,
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2025-05-19-0316:05:26",
+         "value_normalized": null,
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm",
+        "capturado_em": "2026-11-13T13:27:45.372Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Vacina da dengue: origem, quem pode tomar - Brasil Escola",
+      "url": "https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 17613,
+      "caracteres_preparados": 7973,
+      "trecho_analisado": "TÍTULO DA FONTE: Vacina da dengue: origem, quem pode tomar - Brasil Escola\nURL DA FONTE: https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n4.\n\nVacina da dengue\n\n# Vacina da dengue\n\nVacina da dengue é a vacina que protege contra o vírus da dengue.\n\nEm 2015, foi aprovada no Brasil a primeira vacina contra a dengue, a Dengvaxia®, disponibilizada apenas em clínicas particulares.\n\nEm 2023, foi aprovada no Brasil a segunda vacina contra a dengue, a Qdenga®, incorporada ao SUS em 2024.\n\nA aplicação gratuita da vacina pelo sistema público de saúde do Brasil começou em fevereiro de 2024 e foi direcionada, a princípio, aos grupos mais suscetíveis da população.\n\n* [9 - Quais são as reações da vacina da dengue?](#Quais+s%C3%A3o+as+rea%C3%A7%C3%B5es+da+vacina+da+dengue%3F)\n\n* [10 - Eficácia da vacina da dengue](#Efic%C3%A1cia+da+vacina+da+dengue)\n\n* [11 - Vacina da dengue em 2024 no Brasil](#Vacina+da+dengue+em+2024+no+Brasil)\n\n## **Resumo sobre a vacina da dengue**\n\n* A primeira vacina contra a dengue no Brasil, a Dengvaxia®, foi aprovada pela Anvisa em 2015 e está disponível apenas em clínicas particulares.\n\n* A segunda vacina contra a dengu",
+      "citacao_chave": "O primeiro grupo a receber a vacina serão as crianças e os adolescentes entre 10 e 14 anos.",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The article explains that the Qdenga vaccine, provided free by the SUS, targets children and adolescents between 10 and 14 years as the first group to be vaccinated."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The article explains that the Qdenga vaccine, provided free by the SUS, targets children and adolescents between 10 and 14 years as the first group to be vaccinated."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "MISSING_SOURCE_DATE"
+     }
+    }
+   ],
+   "erro_busca": null,
+   "risco_desatualizacao": {
+    "nivel": "MEDIUM",
+    "sensivel_ao_tempo": true,
+    "motivos": [
+     "Laws and official rules change, usually yearly (checked against a 365-day window)"
+    ]
+   },
+   "dominios_oficiais_usados": [
+    "gov.br"
+   ],
+   "dominios_oficiais_automaticos": [
+    "gov.br"
+   ],
+   "agregacao": {
+    "status": "CLASSIFICADO",
+    "conclusao_factual": {
+     "status": "APOIA",
+     "resumo": "As evidências utilizáveis apoiam a afirmação. Isso, por si só, não demonstra que ela continua válida agora."
+    },
+    "veredito": "CORROBORADA",
+    "resumo": "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
+    "afirmacao": "A vacina da dengue Qdenga é aplicada pelo SUS em crianças e adolescentes de 10 a 14 anos.",
+    "score_qualidade_evidencia": {
+     "valor": 53,
+     "escala": "0-100",
+     "natureza": "HEURISTICA",
+     "interpretacao": "Qualidade estrutural das evidências, não probabilidade de verdade.",
+     "componentes": {
+      "autoridade": 13,
+      "atualidade": 10,
+      "diversidade_fontes": 20,
+      "concordancia": 10
+     }
+    },
+    "freshness": {
+     "score": 99,
+     "status": "FRESH",
+     "confidence": "LIMITED",
+     "algorithm_id": "CLAIM_FRESHNESS_SCORE",
+     "algorithm_version": "1.1.0",
+     "policy_id": "regulamento:365d:v1",
+     "as_of": "2026-11-13T13:27:36.211Z",
+     "evidence_summary": {
+      "received": 3,
+      "eligible": 1,
+      "independent_domains": 1,
+      "fresh": 1,
+      "stale": 0,
+      "excluded": 2
+     },
+     "drivers": [
+      {
+       "code": "ATTRIBUTE_DATED_FRESH_EVIDENCE",
+       "evidence_id": null,
+       "date": "2026-11-10",
+       "age_days": 3,
+       "posture": "SUPPORTS",
+       "domain": "agenciabrasil.ebc.com.br",
+       "dependency_group": "source_cluster_001"
+      },
+      {
+       "code": "EVIDENCE_EXCLUDED_FROM_TEMPORAL_SCORE",
+       "count": 2
+      }
+     ],
+     "limitations": [
+      "Índice temporal determinístico; não é probabilidade de verdade.",
+      "Datas de página sem vínculo explícito ao atributo foram excluídas."
+     ]
+    },
+    "concordancia": {
+     "algorithm_id": "SOURCE_AGREEMENT_INDEX",
+     "algorithm_version": "1.1.0",
+     "weights": {
+      "OFICIAL": 3,
+      "ACADEMICO": 3,
+      "NOTICIA": 2,
+      "REFERENCIA": 1.5,
+      "OUTRO": 1,
+      "BLOG_FORUM": 0.25
+     },
+     "score": 100,
+     "coverage": "STRONG",
+     "independent_sources": 3,
+     "source_types": [
+      "NOTICIA",
+      "OFICIAL"
+     ],
+     "supporting": 3,
+     "authoritative_supporting": 1,
+     "contradicting": 0,
+     "split": 0,
+     "by_type": {
+      "NOTICIA": {
+       "supports": 2,
+       "contradicts": 0,
+       "split": 0
+      },
+      "OFICIAL": {
+       "supports": 1,
+       "contradicts": 0,
+       "split": 0
+      }
+     },
+     "limitations": [
+      "Agreement between sources is not a probability of truth: sources can share the same mistake.",
+      "Copies and pages from the same site count once; independence is approximated by domain and text similarity."
+     ]
+    },
+    "recencia_pagina": {
+     "algorithm_id": "PAGE_DATE_RECENCY_INDEX",
+     "algorithm_version": "1.0.0",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "as_of": "2026-11-13T13:27:36.211Z",
+     "score": 77,
+     "status": "FRESH",
+     "policy_id": "regulamento:365d:page:v1",
+     "newest_date": "2026-11-10",
+     "sources": [
+      {
+       "date": "2026-11-10",
+       "age_days": 3,
+       "status": "FRESH",
+       "posture": "SUPPORTS",
+       "domain": "agenciabrasil.ebc.com.br",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-06-08",
+       "age_days": 158,
+       "status": "FRESH",
+       "posture": "SUPPORTS",
+       "domain": "agencia.ac.gov.br",
+       "evidence_id": null
+      }
+     ],
+     "limitations": [
+      "Baseado na data da página, não na data em que o dado específico mudou: confiança baixa.",
+      "Não substitui o índice de atualidade principal e não é probabilidade de verdade."
+     ]
+    },
+    "atualidade_afirmacao": {
+     "algorithm_id": "CLAIM_CURRENCY_SCORE",
+     "algorithm_version": "1.0.0",
+     "formula": "evidence_recency × support_share",
+     "window_days": 365,
+     "score": 99,
+     "status": "CURRENT",
+     "basis": "FACT_DATE",
+     "confidence": "MEDIUM",
+     "evidence_recency": 99,
+     "support_share": 1,
+     "newest_date": "2026-11-10",
+     "newest_age_days": 3,
+     "within_window": true
+    },
+    "versao_regras": "1.2.0",
+    "metodo": "AGREGACAO_DETERMINISTICA",
+    "fontes_independentes": 3,
+    "grupos_distintos_de_evidencia": 3,
+    "dependencia_detectada": 0,
+    "dependencia_nao_verificada": true,
+    "nota_independencia": "Cópias exatas, quase duplicadas, URLs canônicas iguais e páginas do mesmo domínio são agrupadas; domínios sem sinal de cópia não têm independência editorial comprovada.",
+    "total_evidencias_utilizaveis": 3,
+    "fontes": [
+     {
+      "dominio": "agenciabrasil.ebc.com.br",
+      "dominios": [
+       "agenciabrasil.ebc.com.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_001",
+      "oficial": false,
+      "atual": true,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Especialistas alertam para risco de reinfecção da dengue | Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez",
+        "categoria_fonte": "NOTICIA",
+        "postura": "SUPPORTS",
+        "atual": true,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:27:45.696Z",
+        "data_publicacao": null,
+        "data_atualizacao": "2026-11-10",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Tue, 10 Nov 2026 20:00:00 GMT",
+          "value_normalized": "2026-11-10",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Fri, 13 Nov 2026 13:05:40 GMT",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2026-11-10T17:00:00-03:00",
+          "value_normalized": "2026-11-10",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Publicado em",
+          "value_original": "10/11/2026",
+          "value_normalized": "2026-11-10",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         },
+         {
+          "signal_type": "EXPLICIT_ATTRIBUTE_UPDATE_DATE",
+          "field": "visible_text_date",
+          "value_original": "10/11/2026",
+          "value_normalized": "2026-11-10",
+          "scope": "ATTRIBUTE",
+          "source": "VISIBLE_TEXT",
+          "match_basis": "claim_value_or_entity_in_local_context",
+          "context": "a dengue Anticorpos do 1º episódio nem sempre neutralizam novos agentes Flávia Albuquerque - Repórter da Agência Brasil Publicado em 10/11/2026 - 14:00 | 00:00 --> São Paulo © Warawan/Adobestock Versão em áudio O dia 21 de novembro marca o Dia Nacional de Combate à Dengue e com a proximidade da data",
+          "parse_status": "PARSED"
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Publicado em",
+          "value_original": "10/11/2026",
+          "value_normalized": "2026-11-10",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_001",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "agencia.ac.gov.br",
+      "dominios": [
+       "agencia.ac.gov.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_002",
+      "oficial": true,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Vacina contra dengue aplicada em adolescentes de 10 a 14 anos não é a mesma que teve uso suspenso pelo Ministério da Saúde",
+        "url": "https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude",
+        "categoria_fonte": "OFICIAL",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:27:45.696Z",
+        "data_publicacao": "2026-06-08",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Mon, 08 Jun 2026 22:10:15 GMT",
+          "value_normalized": "2026-06-08",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2026-06-08T17:10:15-05:00",
+          "value_normalized": "2026-06-08",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-06-08T17:10:15-05:00",
+          "value_normalized": "2026-06-08",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "webpage"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-06-08T17:10:15-05:00",
+          "value_normalized": "2026-06-08",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "webpage"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_002",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "brasilescola.uol.com.br",
+      "dominios": [
+       "brasilescola.uol.com.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_003",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Vacina da dengue: origem, quem pode tomar - Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm",
+        "categoria_fonte": "NOTICIA",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "UNVERIFIABLE",
+        "status_datas_declaradas": "AUSENTE",
+        "consultado_em": "2026-11-13T13:27:45.696Z",
+        "data_publicacao": null,
+        "data_atualizacao": null,
+        "escopo_data": "UNKNOWN",
+        "sinais_data": [
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2016-11-12-0311:36:43",
+          "value_normalized": null,
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2025-05-19-0316:05:26",
+          "value_normalized": null,
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_003",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     }
+    ],
+    "limitacoes": [
+     "Uma data da página ou do resultado de busca não comprova quando o atributo da afirmação foi publicado ou atualizado.",
+     "A data da consulta registra quando a página foi observada; não substitui uma data declarada de publicação ou atualização.",
+     "Domínios sem sinal detectado de duplicação não têm independência editorial comprovada; republicação com edição extensa ainda pode passar despercebida."
+    ],
+    "avaliado_em": "2026-11-13T13:27:57.159Z"
+   }
+  }
+ ],
+ "afirmacoes_omitidas": [],
+ "resposta_corrigida": {
+  "texto": "A vacina da dengue Qdenga é aplicada pelo SUS em crianças e adolescentes de 10 a 14 anos [1][2][3].",
+  "mudancas": [
+   {
+    "claim_id": "afirmacao_1",
+    "what": "kept"
+   }
+  ],
+  "fontes_citadas": [
+   1,
+   2,
+   3
+  ],
+  "tentativas": 1,
+  "citacoes_anexadas": false,
+  "fontes": [
+   {
+    "n": 1,
+    "url": "https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude",
+    "titulo": "Vacina contra dengue aplicada em adolescentes de 10 a 14 anos não é a mesma que teve uso suspenso pelo Ministério da Saúde",
+    "tipo": "OFICIAL",
+    "postura": "SUPPORTS",
+    "data": "2026-06-08"
+   },
+   {
+    "n": 2,
+    "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez",
+    "titulo": "Especialistas alertam para risco de reinfecção da dengue | Agência Brasil",
+    "tipo": "NOTICIA",
+    "postura": "SUPPORTS",
+    "data": "2026-11-10"
+   },
+   {
+    "n": 3,
+    "url": "https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm",
+    "titulo": "Vacina da dengue: origem, quem pode tomar - Brasil Escola",
+    "tipo": "NOTICIA",
+    "postura": "SUPPORTS",
+    "data": null
+   }
+  ],
+  "metodo": "MODEL_REWRITE_FROM_VERIFIED_EVIDENCE"
+ },
+ "rastreabilidade_modelo": [
+  {
+   "id_chamada": "18640ee5-3eb8-4703-b634-4a1ac48e721b",
+   "id_requisicao_enviada": "cf4f8cc4-d7d3-471a-baba-e49fb5826776",
+   "id_verificacao": "bfe00437-7058-4afe-976d-9345198c2a45",
+   "etapa": "DECOMPOSICAO",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 744,
+   "tokens": {
+    "entrada": 850,
+    "saida": 264,
+    "total": 1114
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "cf4f8cc4-d7d3-471a-baba-e49fb5826776",
+   "id_trace": "bc1090a08898411983d682df418c1f6a",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 744.337,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:27:36.212Z"
+  },
+  {
+   "id_chamada": "19e96848-de89-4b70-9ca7-f307f577d982",
+   "id_requisicao_enviada": "8cfeee75-1fda-49dc-86ec-40b523b7d3d4",
+   "id_verificacao": "bfe00437-7058-4afe-976d-9345198c2a45",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 2740,
+   "tokens": {
+    "entrada": 4264,
+    "saida": 2048,
+    "total": 6312
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "8cfeee75-1fda-49dc-86ec-40b523b7d3d4",
+   "id_trace": "666318826ba04821b3fd1e8f3334bdb4",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 2740.672,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:27:49.369Z"
+  },
+  {
+   "id_chamada": "dd5636a0-b849-487f-9b47-30f2bc246f08",
+   "id_requisicao_enviada": "58db5eec-c7c3-4962-87a5-d21ef77dab46",
+   "id_verificacao": "bfe00437-7058-4afe-976d-9345198c2a45",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 4939,
+   "tokens": {
+    "entrada": 4264,
+    "saida": 2105,
+    "total": 6369
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "58db5eec-c7c3-4962-87a5-d21ef77dab46",
+   "id_trace": "56426d9e7ae440858938be353cb7241d",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 4975.414,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:27:52.139Z"
+  },
+  {
+   "id_chamada": "24cbdd72-3d41-4ae4-9f2b-c09f40bc7f54",
+   "id_requisicao_enviada": "16a59b9a-ab0a-450a-ad0e-7d5b3f32e818",
+   "id_verificacao": "bfe00437-7058-4afe-976d-9345198c2a45",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 707,
+   "tokens": {
+    "entrada": 941,
+    "saida": 287,
+    "total": 1228
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "16a59b9a-ab0a-450a-ad0e-7d5b3f32e818",
+   "id_trace": "a30d2d84f9144846b52d14a1414b622c",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 707.178,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:27:57.159Z"
+  }
+ ],
+ "rastreabilidade_pesquisa": [
+  {
+   "id_operacao": "fa414fa6-dc6b-412c-87f8-3d42f93dad20",
+   "id_verificacao": "bfe00437-7058-4afe-976d-9345198c2a45",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:27:36.975Z",
+   "finalizada_em": "2026-11-13T13:27:39.068Z",
+   "duracao_ms": 2093,
+   "request_id": "c4f34d67-a2d4-4f58-9413-26718b8ed8ad",
+   "response_time": 1.6,
+   "erro": null,
+   "modo_busca": "GERAL",
+   "parametros": {
+    "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true,
+    "country": "brazil"
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "ad3b93-00",
+     "titulo": "Tire as principais dúvidas sobre a vacinação contra dengue | Agência Brasil",
+     "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2024-02/tire-as-principais-duvidas-sobre-a-vacinacao-contra-dengue",
+     "relevancia": 0.79101497,
+     "data_publicacao": "2024-02-04"
+    },
+    {
+     "resultado_id": "4e99a2-01",
+     "titulo": "Vacinação contra a dengue de crianças e adolescentes entre dez e 14 anos é estendida a todos os municípios do RS - Secretaria da Saúde",
+     "url": "https://saude.rs.gov.br/vacinacao-contra-a-dengue-e-ampliada-para-todos-os-municipios-do-rs-em-criancas-e-adolescentes-de-10-a-14-anos",
+     "relevancia": 0.7379143,
+     "data_publicacao": "2026-02-03"
+    },
+    {
+     "resultado_id": "087839-02",
+     "titulo": "Vacina da dengue: origem, quem pode tomar - Brasil Escola",
+     "url": "https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm",
+     "relevancia": 0.7303861,
+     "data_publicacao": null
+    },
+    {
+     "resultado_id": "c88cfb-03",
+     "titulo": "Vacina contra dengue aplicada em adolescentes de 10 a 14 anos não é a mesma que teve uso suspenso pelo Ministério da Saúde",
+     "url": "https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude",
+     "relevancia": 0.716417,
+     "data_publicacao": "2026-06-08"
+    },
+    {
+     "resultado_id": "9e53e1-04",
+     "titulo": "NOTA TÉCNICA Nº 4/2026-CGICI/DPNI/SVSA/MS - GOV",
+     "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/d/dengue/notas-tecnicas/nota-tecnica-no-4-2026-cgici-dpni-svsa-ms",
+     "relevancia": 0.6692046,
+     "data_publicacao": "2026-01-15"
+    }
+   ]
+  },
+  {
+   "id_operacao": "5a9fb753-cace-408d-9767-14c66fba0aec",
+   "id_verificacao": "bfe00437-7058-4afe-976d-9345198c2a45",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:27:39.068Z",
+   "finalizada_em": "2026-11-13T13:27:41.407Z",
+   "duracao_ms": 2339,
+   "request_id": "8846f9a1-3bfa-4d02-999d-6cce79c14aad",
+   "response_time": 1.81,
+   "erro": null,
+   "modo_busca": "CIENCIA",
+   "parametros": {
+    "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+    "search_depth": "basic",
+    "max_results": 3,
+    "include_answer": false,
+    "include_published_date": true,
+    "include_domains": [
+     "scholar.google.com",
+     "arxiv.org",
+     "nature.com",
+     "science.org",
+     "sciencedirect.com",
+     "springer.com",
+     "link.springer.com",
+     "wiley.com",
+     "onlinelibrary.wiley.com",
+     "pubmed.ncbi.nlm.nih.gov",
+     "ncbi.nlm.nih.gov",
+     "nih.gov",
+     "thelancet.com",
+     "nejm.org",
+     "bmj.com",
+     "jamanetwork.com",
+     "cell.com",
+     "plos.org",
+     "frontiersin.org",
+     "mdpi.com",
+     "acm.org",
+     "dl.acm.org",
+     "ieee.org",
+     "ieeexplore.ieee.org",
+     "semanticscholar.org",
+     "researchgate.net",
+     "ssrn.com",
+     "jstor.org",
+     "cochranelibrary.com",
+     "scielo.org"
+    ]
+   },
+   "quantidade_resultados": 3,
+   "resultados": [
+    {
+     "resultado_id": "5d32e6-00",
+     "titulo": "NOVA VACINA DA DENGUE, O QUE JÁ SABEMOS SOBRE ELA: UMA REVISÃO SISTEMÁTICA DA LITERATURA",
+     "url": "https://www.sciencedirect.com/science/article/pii/S1413867024000709",
+     "relevancia": 0.41555095,
+     "data_publicacao": "2024-07-01"
+    },
+    {
+     "resultado_id": "0dfb29-01",
+     "titulo": "AVALIAÇÃO DA INCIDÊNCIA DA DOENÇA MENINGOCÓCICA NO MUNICÍPIO DE CAMPINAS-SP, APÓS A INTRODUÇÃO DA VACINA MENINGOCÓCICA C CONJUGADA PELO PROGRAMA NACIONAL DE IMUNIZAÇÕES, DO SISTEMA ÚNICO DE SAÚDE",
+     "url": "https://www.sciencedirect.com/science/article/pii/S1413867021006292",
+     "relevancia": 0.12074952,
+     "data_publicacao": "2022-01-01"
+    },
+    {
+     "resultado_id": "74d143-02",
+     "titulo": "PERFIL EPIDEMIOLÓGICO DA DENGUE GRAVE EM PACIENTES PEDIÁTRICOS BRASILEIROS NOS ÚLTIMOS 5 ANOS",
+     "url": "https://www.sciencedirect.com/science/article/pii/S1413867024000655",
+     "relevancia": 0.11716747,
+     "data_publicacao": "2024-07-01"
+    }
+   ]
+  },
+  {
+   "id_operacao": "02f2fced-4ffe-422a-a846-2b6155c588fb",
+   "id_verificacao": "bfe00437-7058-4afe-976d-9345198c2a45",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:27:41.407Z",
+   "finalizada_em": "2026-11-13T13:27:44.685Z",
+   "duracao_ms": 3278,
+   "request_id": "bab31d61-4c71-43f9-9d7c-4d02670f513f",
+   "response_time": 3.03,
+   "erro": null,
+   "modo_busca": "NOTICIAS_BR",
+   "parametros": {
+    "query": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+    "search_depth": "basic",
+    "max_results": 4,
+    "include_answer": false,
+    "include_published_date": true,
+    "topic": "news",
+    "include_domains": [
+     "g1.globo.com",
+     "oglobo.globo.com",
+     "valor.globo.com",
+     "folha.uol.com.br",
+     "uol.com.br",
+     "estadao.com.br",
+     "agenciabrasil.ebc.com.br",
+     "cnnbrasil.com.br",
+     "infomoney.com.br",
+     "exame.com",
+     "poder360.com.br",
+     "correiobraziliense.com.br",
+     "metropoles.com",
+     "veja.abril.com.br",
+     "terra.com.br",
+     "band.com.br",
+     "r7.com",
+     "bbc.com",
+     "jota.info",
+     "canaltech.com.br"
+    ]
+   },
+   "quantidade_resultados": 3,
+   "resultados": [
+    {
+     "resultado_id": "f8dd85-00",
+     "titulo": "Especialistas alertam para risco de reinfecção da dengue | Agência Brasil",
+     "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez",
+     "relevancia": 0.8130158,
+     "data_publicacao": "2026-11-10"
+    },
+    {
+     "resultado_id": "d86f07-01",
+     "titulo": "Dengue: 3 milhões de adolescentes estão com vacinação incompleta | Agência Brasil",
+     "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/dengue-3-milhoes-de-adolescentes-estao-com-vacinacao-incompleta",
+     "relevancia": 0.65555656,
+     "data_publicacao": "2026-10-27"
+    },
+    {
+     "resultado_id": "c64ff9-02",
+     "titulo": "OPAS amplia recomendação de vacina da dengue para faixa ...",
+     "url": "https://veja.abril.com.br/saude/opas-amplia-recomendacao-de-vacina-da-dengue-para-faixa-de-6-a-59-anos",
+     "relevancia": 0.65301627,
+     "data_publicacao": "2026-11-10"
+    }
+   ]
+  },
+  {
+   "id_operacao": "eb16e2f1-d699-4121-ad65-7b9f3f17a3c0",
+   "id_verificacao": "bfe00437-7058-4afe-976d-9345198c2a45",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "EXTRACAO",
+   "consulta": "A vacina da dengue Qdenga é aplicada pelo SUS (Sistema Único de Saúde) em crianças e adolescentes de 10 a 14 anos.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:27:44.687Z",
+   "finalizada_em": "2026-11-13T13:27:45.696Z",
+   "duracao_ms": 1009,
+   "request_id": "20d0b72c-83fa-460d-b92d-5d2d261115de",
+   "response_time": 0.02,
+   "erro": null,
+   "urls_solicitadas": [
+    "https://saude.rs.gov.br/vacinacao-contra-a-dengue-e-ampliada-para-todos-os-municipios-do-rs-em-criancas-e-adolescentes-de-10-a-14-anos",
+    "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez",
+    "https://www.sciencedirect.com/science/article/pii/S1413867024000709",
+    "https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude",
+    "https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm"
+   ],
+   "parametros": {
+    "urls": [
+     "https://saude.rs.gov.br/vacinacao-contra-a-dengue-e-ampliada-para-todos-os-municipios-do-rs-em-criancas-e-adolescentes-de-10-a-14-anos",
+     "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez",
+     "https://www.sciencedirect.com/science/article/pii/S1413867024000709",
+     "https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude",
+     "https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm"
+    ],
+    "extract_depth": "basic",
+    "format": "markdown",
+    "include_images": false
+   },
+   "quantidade_resultados": 5,
+   "urls_extraidas": [
+    "https://saude.rs.gov.br/vacinacao-contra-a-dengue-e-ampliada-para-todos-os-municipios-do-rs-em-criancas-e-adolescentes-de-10-a-14-anos",
+    "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez",
+    "https://www.sciencedirect.com/science/article/pii/S1413867024000709",
+    "https://agencia.ac.gov.br/vacina-contra-dengue-aplicada-em-adolescentes-de-10-a-14-anos-nao-e-a-mesma-que-teve-uso-suspenso-pelo-ministerio-da-saude",
+    "https://brasilescola.uol.com.br/biologia/vacina-contra-dengue.htm"
+   ]
+  }
+ ],
+ "modo": "real",
+ "simulado": false,
+ "gateway": {
+  "gateway": "bifrost",
+  "chamadas": 4,
+  "falhas": 0,
+  "cadeia_modelos": [
+   "groq/openai/gpt-oss-20b",
+   "groq/openai/gpt-oss-120b"
+  ],
+  "queda_simulada": false,
+  "respostas_por_modelo": [
+   {
+    "modelo": "groq/openai/gpt-oss-20b",
+    "chamadas": 3
+   },
+   {
+    "modelo": "groq/openai/gpt-oss-120b",
+    "chamadas": 1
+   }
+  ],
+  "respostas_de_reserva": 1,
+  "tokens_total": 15023,
+  "latencia_media_ms": 2292
+ },
+ "duracao_ms": 21680,
+ "gravado_em": "2026-11-13T13:27:57.896Z"
+}

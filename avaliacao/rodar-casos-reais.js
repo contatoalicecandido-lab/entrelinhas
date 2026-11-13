@@ -8,7 +8,8 @@ const path = require("node:path");
 const BASE = process.argv[2] ?? "http://127.0.0.1:3001";
 // Pausa entre casos: o plano gratuito do Groq limita tokens por minuto.
 const PAUSA_MS = Number(process.env.PAUSA_MS ?? 45000);
-const arquivo = path.join(__dirname, "casos-reais-2026-11.json");
+// Outro arquivo de casos pode ser passado em CASOS=avaliacao/casos-novos.json
+const arquivo = process.env.CASOS ? path.resolve(process.env.CASOS) : path.join(__dirname, "casos-reais-2026-11.json");
 const { casos } = JSON.parse(fs.readFileSync(arquivo, "utf8"));
 
 const APOIA = new Set(["ATUAL", "CORROBORADA"]);
@@ -46,7 +47,7 @@ async function principal() {
   const linhas = [];
   for (const caso of casos) {
     const inicio = Date.now();
-    let veredito = null; let erro = null; let nota = null;
+    let veredito = null; let erro = null; let nota = null; let gateway = null;
     try {
       const r = await fetch(`${BASE}/api/verificar`, {
         method: "POST",
@@ -58,17 +59,25 @@ async function principal() {
       const a = d.afirmacoes?.[0];
       veredito = a?.agregacao?.veredito ?? "NAO_VERIFICAVEL";
       nota = a?.agregacao?.atualidade_afirmacao?.score ?? null;
+      gateway = d.gateway ? { chamadas: d.gateway.chamadas, respondidas_por_reserva: d.gateway.respostas_de_reserva, respostas_invalidas_refeitas: d.gateway.falhas } : null;
     } catch (e) {
       erro = e.message;
     }
-    const linha = { id: caso.id, esperado: caso.esperado, veredito, nota_atualidade: nota, resultado: erro ? "FALHA_EXECUCAO" : pontuar(caso.esperado, veredito), segundos: Math.round((Date.now() - inicio) / 1000), erro };
+    const linha = { id: caso.id, esperado: caso.esperado, veredito, nota_atualidade: nota, resultado: erro ? "FALHA_EXECUCAO" : pontuar(caso.esperado, veredito), segundos: Math.round((Date.now() - inicio) / 1000), gateway, erro };
     linhas.push(linha);
     if (caso !== casos.at(-1)) await new Promise(r => setTimeout(r, PAUSA_MS));
     console.log(`${linha.resultado.padEnd(14)} ${caso.id.padEnd(22)} esperado ${caso.esperado.padEnd(13)} veredito ${veredito} (${linha.segundos}s)`);
   }
   const resumo = resumir(linhas.filter(l => l.resultado !== "FALHA_EXECUCAO"));
+  const comGateway = linhas.filter(l => l.gateway);
+  resumo.gateway = comGateway.length ? {
+    chamadas_ao_modelo: comGateway.reduce((t, l) => t + l.gateway.chamadas, 0),
+    respondidas_por_modelo_reserva: comGateway.reduce((t, l) => t + l.gateway.respondidas_por_reserva, 0),
+    respostas_invalidas_refeitas: comGateway.reduce((t, l) => t + l.gateway.respostas_invalidas_refeitas, 0)
+  } : null;
   const saida = { executado_em: new Date().toISOString(), servidor: BASE, resumo, linhas };
-  const destino = path.join(__dirname, `resultado-casos-reais-${new Date().toISOString().slice(0, 10)}.json`);
+  const nomeBase = process.env.CASOS ? path.basename(process.env.CASOS, ".json") : "casos-reais";
+  const destino = path.join(__dirname, `resultado-${nomeBase}-${new Date().toISOString().slice(0, 10)}.json`);
   fs.writeFileSync(destino, JSON.stringify(saida, null, 2));
   console.log("\n", resumo, `\nResultado salvo em ${destino}`);
 }

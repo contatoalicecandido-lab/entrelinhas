@@ -20,5 +20,8 @@ submission/.build/
 
 # Decks em revisão (versões B4_T1 refletem estratégia abandonada)
 submission/*.pptx
+!submission/Entrelinhas_Pitch_Deck.pptx
 gravacoes/*
 !gravacoes/selecao.json
+# Gravações da rodada de casos reais de 13 nov 2026 (prova do benchmark)
+!gravacoes/2026-11-13T13-*.json

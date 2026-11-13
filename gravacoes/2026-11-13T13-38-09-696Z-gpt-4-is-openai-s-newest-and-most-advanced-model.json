@@ -1,0 +1,1906 @@
+{
+ "sistema": "Entrelinhas",
+ "id_verificacao": "e48da9de-4564-4a80-a52f-0647f8c434e0",
+ "texto_original": "GPT-4 is OpenAI's newest and most advanced model.",
+ "verificado_em": "2026-11-13T13:38:09.525Z",
+ "total_afirmacoes": 1,
+ "sintese": {
+  "veredito": "CONTRADICAO_FRACA",
+  "resumo": "As evidências utilizáveis contradizem a afirmação, mas nenhuma fonte oficial com data ligada ao fato confirma a contradição. Trate a afirmação como possivelmente desatualizada ou incorreta e revise as fontes.",
+  "total_afirmacoes": 1,
+  "contagem_vereditos": {
+   "CONTRADICAO_FRACA": 1
+  }
+ },
+ "afirmacoes": [
+  {
+   "id": "afirmacao_1",
+   "texto": "GPT-4 is OpenAI's newest and most advanced model.",
+   "tipo_afirmacao": null,
+   "origem_tipo_afirmacao": null,
+   "nuances": {
+    "idioma": "en",
+    "variante": null,
+    "confianca_idioma": 1,
+    "valores": [],
+    "datas": [],
+    "expressoes_temporais": [],
+    "condicoes": [],
+    "mudancas": [],
+    "tempo_coloquial": [],
+    "girias": {
+     "aliases": [],
+     "expressoes": []
+    },
+    "consulta_busca": "GPT-4 is OpenAI's newest and most advanced model.",
+    "dominios_oficiais_sugeridos": [],
+    "autoridades": [],
+    "notas": []
+   },
+   "evidencias": [
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OFICIAL",
+      "titulo": "GPT-4",
+      "url": "https://openai.com/index/gpt-4-research",
+      "conteudo": "[Skip to main content](https://openai.com/index/gpt-4-research#main)\n\n[](https://openai.com/)\n\n*   [Research](https://openai.com/research/index/)\n*   Products\n*   [Business](https://openai.com/business/)\n*   [Developers](https://openai.com/api/)\n*   [Company](https://openai.com/about/)\n*   [Foundation(opens in a new window)](https://openaifoundation.org/)\n\nLog in[Try ChatGPT(opens in a new window)](https://chatgpt.com/)\n\n*   Research\n*   Products\n*   Business\n*   Developers\n*   Company\n*   [Foundation(opens in a new window)](https://openaifoundation.org/)\n\n[Try ChatGPT(opens in a new window)](https://chatgpt.com/)Login\n\nOpenAI\n\nMarch 14, 2023\n\n[Milestone](https://openai.com/research/index/mi…",
+      "coletado_em": "2026-11-13T13:37:50.392Z",
+      "data_publicacao": "2023-03-14",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": null,
+      "relevancia": 0.81815636,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "6dd7d432-59a5-4b63-910c-900ff460dd45",
+       "resultado_id": "083fa7-01",
+       "response_time_busca": 1.15,
+       "response_time_extracao": 0.03,
+       "consulta": "GPT-4 is OpenAI's newest and most advanced model.",
+       "origem_principal": {
+        "id_operacao": "6e9ad2cf-5213-4c27-9f20-6e0b20b9da23",
+        "request_id": "6dd7d432-59a5-4b63-910c-900ff460dd45",
+        "modo_busca": "GERAL",
+        "resultado_id": "083fa7-01",
+        "parametros": {
+         "query": "GPT-4 is OpenAI's newest and most advanced model.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "6e9ad2cf-5213-4c27-9f20-6e0b20b9da23",
+         "request_id": "6dd7d432-59a5-4b63-910c-900ff460dd45",
+         "modo_busca": "GERAL",
+         "resultado_id": "083fa7-01",
+         "parametros": {
+          "query": "GPT-4 is OpenAI's newest and most advanced model.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Tue, 14 Mar 2023 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 14 Mar 2023 00:00:00 GMT",
+         "value_normalized": "2023-03-14",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "HTTP_403",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "1b35f90e-3fe9-4134-914f-f58e282d251e",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "1b0d1dc3-93ec-4e89-9a06-4b0fe62bfab5",
+      "id_verificacao": "e48da9de-4564-4a80-a52f-0647f8c434e0",
+      "url_original": "https://openai.com/index/gpt-4-research",
+      "url_canonica": "https://openai.com/index/gpt-4-research",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "37f77e59ce5d48d94a765ea8d73c0785a9837a16f7accf669c9db350d7c9acde",
+      "coletado_em": "2026-11-13T13:37:50.392Z",
+      "id_operacao_busca": "6e9ad2cf-5213-4c27-9f20-6e0b20b9da23",
+      "id_operacao_extracao": "175d6ea4-2932-47ae-9a26-921d7d3a6e09",
+      "consulta": "GPT-4 is OpenAI's newest and most advanced model.",
+      "parametros_busca": {
+       "query": "GPT-4 is OpenAI's newest and most advanced model.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://openai.com/index/gpt-4-research",
+        "https://www.gradually.ai/en/chatgpt-versions",
+        "https://en.wikipedia.org/wiki/GPT-4",
+        "https://www.coursera.org/articles/what-is-gpt",
+        "https://toloka.ai/blog/gpt-models-explained"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "6dd7d432-59a5-4b63-910c-900ff460dd45",
+       "operacoes_busca": [
+        {
+         "id_operacao": "6e9ad2cf-5213-4c27-9f20-6e0b20b9da23",
+         "request_id": "6dd7d432-59a5-4b63-910c-900ff460dd45",
+         "modo_busca": "GERAL",
+         "resultado_id": "083fa7-01",
+         "parametros": {
+          "query": "GPT-4 is OpenAI's newest and most advanced model.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "1b35f90e-3fe9-4134-914f-f58e282d251e",
+       "resultado_id": "083fa7-01",
+       "relevancia": 0.81815636,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 14 Mar 2023 00:00:00 GMT",
+         "value_normalized": "2023-03-14",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "HTTP_403",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "GPT-4",
+      "url": "https://openai.com/index/gpt-4-research",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 29669,
+      "caracteres_preparados": 7993,
+      "trecho_analisado": "TÍTULO DA FONTE: GPT-4\nURL DA FONTE: https://openai.com/index/gpt-4-research\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n*   [Limitations](https://openai.com/index/gpt-4-research#limitations)\n\n*   [Risks & mitigations](https://openai.com/index/gpt-4-research#risks-and-mitigations)\n\n*   [Training process](https://openai.com/index/gpt-4-research#training-process)\n\n*   [Limitations](https://openai.com/index/gpt-4-research#limitations)\n\n*   [Risks & mitigations](https://openai.com/index/gpt-4-research#risks-and-mitigations)\n\n*   [Training process](https://openai.com/index/gpt-4-research#training-process)\n\nWe’ve created GPT‑4, the latest milestone in OpenAI’s effort in scaling up deep learning.\n\nGPT‑4 is a large multimodal model (accepting image and text inputs, emitting text outputs) that, while less capable than humans in many real-world scenarios, exhibits human-level performance on various professional and academic benchmarks.\n\nFor example, it passes a simulated bar exam with a score around the top 10% of test takers;\n\nin contrast, GPT‑3.5’s score was around the bottom 10%.\n\nWe’ve spent 6 months iteratively[aligning⁠](https://openai.com/index/instruction-following/)GPT‑4 using lessons from ",
+      "citacao_chave": "We’ve created GPT‑4, the latest milestone in OpenAI’s effort in scaling up deep learning.",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source describes GPT‑4 as a latest milestone but provides no date confirming it is still the newest model as of the reference date."
+     },
+     "classificacao": {
+      "postura": "INSUFFICIENT",
+      "justificativa": "The source describes GPT‑4 as a latest milestone but provides no date confirming it is still the newest model as of the reference date."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "UNKNOWN_CLAIM_TYPE"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "ChatGPT Models: All 43 GPT Versions Up to GPT-6.1 Terra",
+      "url": "https://www.gradually.ai/en/chatgpt-versions",
+      "conteudo": "1. [Home](/en/)\n2. [AI Blog](/en/blog/)\n\n\n# ChatGPT Models: All 43 GPT Versions Up to GPT-6.1 Terra\n\nSee which ChatGPT model is current, from flagship GPT-6 Astra to GPT-6.1 Terra. All 43 GPT versions since 2018, with release dates, pricing and which to pick.\n\nFHFinn Hillebrandt\n\n[Auf Deutsch lesen](/chatgpt-versionen/)\n\nAI Technology\n\n![ChatGPT Models: All 43 GPT Versions Up to GPT-6.1 Terra](/images/blog/chatgpt-versionen/chatgpt-versionen.webp)\n\n[𝕏XShare on X](https://x.com/intent/tweet?url=https%3A%2F%2Fwww.gradually.ai%2Fen%2Fchatgpt-versions%2F&text=ChatGPT%20Models%3A%20All%2043%20GPT%20Versions%20Up%20to%20GPT-6.1%20Terra)[FacebookShare on Facebook](https://www.facebook.com/sharer/s…",
+      "coletado_em": "2026-11-13T13:37:50.392Z",
+      "data_publicacao": "2025-09-12",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www.gradually.ai/en/chatgpt-versions/",
+      "relevancia": 0.6220002,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "bfa74cb1-1af7-4c4a-be22-51a880eb7938",
+       "resultado_id": "878bb0-00",
+       "response_time_busca": 3.49,
+       "response_time_extracao": 0.03,
+       "consulta": "GPT-4 is OpenAI's newest and most advanced model.",
+       "origem_principal": {
+        "id_operacao": "c24d2fd2-4fc7-426e-b7b9-b37418c72a03",
+        "request_id": "bfa74cb1-1af7-4c4a-be22-51a880eb7938",
+        "modo_busca": "NOTICIAS",
+        "resultado_id": "878bb0-00",
+        "parametros": {
+         "query": "GPT-4 is OpenAI's newest and most advanced model.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "c24d2fd2-4fc7-426e-b7b9-b37418c72a03",
+         "request_id": "bfa74cb1-1af7-4c4a-be22-51a880eb7938",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "878bb0-00",
+         "parametros": {
+          "query": "GPT-4 is OpenAI's newest and most advanced model.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Fri, 12 Sep 2025 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 12 Sep 2025 00:00:00 GMT",
+         "value_normalized": "2025-09-12",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.gradually.ai/en/chatgpt-versions/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2025-09-12",
+         "value_normalized": "2025-09-12",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-11-05",
+         "value_normalized": "2026-11-05",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2025-09-12",
+         "value_normalized": "2025-09-12",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-05",
+         "value_normalized": "2026-11-05",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-05",
+         "value_normalized": "2026-11-05",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.gradually.ai/en/chatgpt-versions/",
+        "capturado_em": "2026-11-13T13:37:50.583Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "1b35f90e-3fe9-4134-914f-f58e282d251e",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "c00c422f-3f9f-4431-ae83-2cae686702ac",
+      "id_verificacao": "e48da9de-4564-4a80-a52f-0647f8c434e0",
+      "url_original": "https://www.gradually.ai/en/chatgpt-versions",
+      "url_canonica": "https://www.gradually.ai/en/chatgpt-versions",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "f2ca5e7aec1fd5e0415de2d6b9eb8a29f9c3ce50db4742bb2ddbcda4d8a6f9a9",
+      "coletado_em": "2026-11-13T13:37:50.392Z",
+      "id_operacao_busca": "c24d2fd2-4fc7-426e-b7b9-b37418c72a03",
+      "id_operacao_extracao": "175d6ea4-2932-47ae-9a26-921d7d3a6e09",
+      "consulta": "GPT-4 is OpenAI's newest and most advanced model.",
+      "parametros_busca": {
+       "query": "GPT-4 is OpenAI's newest and most advanced model.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://openai.com/index/gpt-4-research",
+        "https://www.gradually.ai/en/chatgpt-versions",
+        "https://en.wikipedia.org/wiki/GPT-4",
+        "https://www.coursera.org/articles/what-is-gpt",
+        "https://toloka.ai/blog/gpt-models-explained"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "bfa74cb1-1af7-4c4a-be22-51a880eb7938",
+       "operacoes_busca": [
+        {
+         "id_operacao": "c24d2fd2-4fc7-426e-b7b9-b37418c72a03",
+         "request_id": "bfa74cb1-1af7-4c4a-be22-51a880eb7938",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "878bb0-00",
+         "parametros": {
+          "query": "GPT-4 is OpenAI's newest and most advanced model.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "request_id_extracao": "1b35f90e-3fe9-4134-914f-f58e282d251e",
+       "resultado_id": "878bb0-00",
+       "relevancia": 0.6220002,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 12 Sep 2025 00:00:00 GMT",
+         "value_normalized": "2025-09-12",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.gradually.ai/en/chatgpt-versions/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2025-09-12",
+         "value_normalized": "2025-09-12",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-11-05",
+         "value_normalized": "2026-11-05",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2025-09-12",
+         "value_normalized": "2025-09-12",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-05",
+         "value_normalized": "2026-11-05",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-05",
+         "value_normalized": "2026-11-05",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.gradually.ai/en/chatgpt-versions/",
+        "capturado_em": "2026-11-13T13:37:50.583Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "ChatGPT Models: All 43 GPT Versions Up to GPT-6.1 Terra",
+      "url": "https://www.gradually.ai/en/chatgpt-versions",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 67988,
+      "caracteres_preparados": 7992,
+      "trecho_analisado": "TÍTULO DA FONTE: ChatGPT Models: All 43 GPT Versions Up to GPT-6.1 Terra\nURL DA FONTE: https://www.gradually.ai/en/chatgpt-versions\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\nReleased: September 3, 2026\n\n[GPT-6 Astra](/en/ai-models/gpt-6-astra/) is OpenAI's new flagship model.\n\nIt is available through the API and in ChatGPT Work and Codex for eligible plans.\n\nPrompts above 272,000 input tokens use higher rates for the entire request.\n\n* **API pricing up to 272,000 input tokens**: $10 per million input tokens, $12.50 per million cache-write tokens, $1 per million cache-read tokens, and $50 per million output tokens, according to [OpenAI's model page](https://developers.openai.com/api/docs/models/gpt-6-astra)\n\n* **API pricing above 272,000 input tokens**: $20 per million input tokens, $25 per million cache-write tokens, $2 per million cache-read tokens, and $75 per million output tokens\n\n[GPT-6.1 Terra](/en/ai-models/gpt-6.1-terra/) fills the gap between Luna and Sol.\n\nOn its [model page](https://developers.openai.com/api/docs/models/gpt-6.1-terra), OpenAI describes it as a fast, efficient model for visual reasoning, precise computer use, and clear, natural writing.\n\nThe API model ID is gpt",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "RELATED_INSUFFICIENT",
+      "justificativa": "The source discusses newer models (GPT‑5, GPT‑6, etc.) but does not specifically address GPT‑4."
+     },
+     "classificacao": {
+      "postura": "INSUFFICIENT",
+      "justificativa": "The source discusses newer models (GPT‑5, GPT‑6, etc.) but does not specifically address GPT‑4."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "UNKNOWN_CLAIM_TYPE"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "REFERENCIA",
+      "titulo": "GPT-4 - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/GPT-4",
+      "conteudo": "[Jump to content](#bodyContent)\n\n[![](/static/images/icons/enwiki-25.svg)  ![Wikipedia](/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](/wiki/Main_Page)\n\n[Search](/wiki/Special:Search \"Search Wikipedia [f]\")\n\n## Contents\n\n* [1 Background](#Background)\n* [2 Capabilities](#Capabilities)\n  + [2.1 Aptitude on standardized tests](#Aptitude_on_standardized_tests)\n  + [2.2 Medical applications](#Medical_applications)\n  + [2.3 GPT-4o](#GPT-4o)\n* [3 Limitations](#Limitations)\n  + [3.1 Bias](#Bias)\n* [4 Training](#Training)\n* [5 Use](#Use)\n  + [5.1 ChatGPT](#ChatGPT)\n  + [5.2 Microsoft Copilot](#Micros…",
+      "coletado_em": "2026-11-13T13:37:50.392Z",
+      "data_publicacao": "2026-07-18",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://en.wikipedia.org/wiki/GPT-4",
+      "relevancia": 0.75851065,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "6dd7d432-59a5-4b63-910c-900ff460dd45",
+       "resultado_id": "5acf47-02",
+       "response_time_busca": 1.15,
+       "response_time_extracao": 0.03,
+       "consulta": "GPT-4 is OpenAI's newest and most advanced model.",
+       "origem_principal": {
+        "id_operacao": "6e9ad2cf-5213-4c27-9f20-6e0b20b9da23",
+        "request_id": "6dd7d432-59a5-4b63-910c-900ff460dd45",
+        "modo_busca": "GERAL",
+        "resultado_id": "5acf47-02",
+        "parametros": {
+         "query": "GPT-4 is OpenAI's newest and most advanced model.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "6e9ad2cf-5213-4c27-9f20-6e0b20b9da23",
+         "request_id": "6dd7d432-59a5-4b63-910c-900ff460dd45",
+         "modo_busca": "GERAL",
+         "resultado_id": "5acf47-02",
+         "parametros": {
+          "query": "GPT-4 is OpenAI's newest and most advanced model.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Sat, 18 Jul 2026 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Sat, 18 Jul 2026 00:00:00 GMT",
+         "value_normalized": "2026-07-18",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 07:38:29 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://en.wikipedia.org/wiki/GPT-4",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2023-01-27T07:57:23Z",
+         "value_normalized": "2023-01-27",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-06T14:04:31Z",
+         "value_normalized": "2026-11-06",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://en.wikipedia.org/wiki/GPT-4",
+        "capturado_em": "2026-11-13T13:37:49.877Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "1b35f90e-3fe9-4134-914f-f58e282d251e",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "f85e6fc5-d4be-4a7f-b46e-c970accb3f21",
+      "id_verificacao": "e48da9de-4564-4a80-a52f-0647f8c434e0",
+      "url_original": "https://en.wikipedia.org/wiki/GPT-4",
+      "url_canonica": "https://en.wikipedia.org/wiki/GPT-4",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "5ce6c67b6a355475ae058acf8e20d07976b1655c14cea7e8e0b30cb12377b8cc",
+      "coletado_em": "2026-11-13T13:37:50.392Z",
+      "id_operacao_busca": "6e9ad2cf-5213-4c27-9f20-6e0b20b9da23",
+      "id_operacao_extracao": "175d6ea4-2932-47ae-9a26-921d7d3a6e09",
+      "consulta": "GPT-4 is OpenAI's newest and most advanced model.",
+      "parametros_busca": {
+       "query": "GPT-4 is OpenAI's newest and most advanced model.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://openai.com/index/gpt-4-research",
+        "https://www.gradually.ai/en/chatgpt-versions",
+        "https://en.wikipedia.org/wiki/GPT-4",
+        "https://www.coursera.org/articles/what-is-gpt",
+        "https://toloka.ai/blog/gpt-models-explained"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "6dd7d432-59a5-4b63-910c-900ff460dd45",
+       "operacoes_busca": [
+        {
+         "id_operacao": "6e9ad2cf-5213-4c27-9f20-6e0b20b9da23",
+         "request_id": "6dd7d432-59a5-4b63-910c-900ff460dd45",
+         "modo_busca": "GERAL",
+         "resultado_id": "5acf47-02",
+         "parametros": {
+          "query": "GPT-4 is OpenAI's newest and most advanced model.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "1b35f90e-3fe9-4134-914f-f58e282d251e",
+       "resultado_id": "5acf47-02",
+       "relevancia": 0.75851065,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Sat, 18 Jul 2026 00:00:00 GMT",
+         "value_normalized": "2026-07-18",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 07:38:29 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://en.wikipedia.org/wiki/GPT-4",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2023-01-27T07:57:23Z",
+         "value_normalized": "2023-01-27",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-06T14:04:31Z",
+         "value_normalized": "2026-11-06",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://en.wikipedia.org/wiki/GPT-4",
+        "capturado_em": "2026-11-13T13:37:49.877Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "GPT-4 - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/GPT-4",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 97576,
+      "caracteres_preparados": 7999,
+      "trecho_analisado": "TÍTULO DA FONTE: GPT-4 - Wikipedia\nURL DA FONTE: https://en.wikipedia.org/wiki/GPT-4\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n| * [v](https://en.wikipedia.org/wiki/Template:OpenAI_series \"Template:OpenAI series\") * [t](https://en.wikipedia.org/wiki/Template_talk:OpenAI_series \"Template talk:OpenAI series\") * [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:OpenAI_series \"Special:EditPage/Template:OpenAI series\") |\n\n**Generative Pre-trained Transformer 4** (**GPT-4**) is a [large language model](https://en.wikipedia.org/wiki/Large_language_model \"Large language model\") developed by [OpenAI](https://en.wikipedia.org/wiki/OpenAI \"OpenAI\") and the fourth in its series of [GPT foundation models](https://en.wikipedia.org/wiki/GPT_(OpenAI_model) \"GPT (OpenAI model)\").[[2]](#cite_note-ars-technica-2)\n\nGPT-4 is preceded by [GPT-3.5](https://en.wikipedia.org/wiki/GPT-3.5 \"GPT-3.5\") and followed by its successor [GPT-5](https://en.wikipedia.org/wiki/GPT-5 \"GPT-5\").\n\nGPT-4V is a version of GPT-4 that can process images in addition to text.[[3]](#cite_note-3) OpenAI has not revealed technical details and statistics about GPT-4, such as the precise size of the model.[[4]](#cite_note-verge_",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source states that GPT‑4 was removed from the OpenAI API on 2026‑10‑23, indicating it is no longer the newest or most advanced model."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "The source states that GPT‑4 was removed from the OpenAI API on 2026‑10‑23, indicating it is no longer the newest or most advanced model."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "UNKNOWN_CLAIM_TYPE"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "What Is GPT? GPT-4, GPT-5, and More Explained | Coursera",
+      "url": "https://www.coursera.org/articles/what-is-gpt",
+      "conteudo": "Grow on your schedule with big savings on Coursera Plus. **[Save 40% for 3 months](https://www.coursera.org/courseraplus/special/cplus-monthly-august-2026-global?utm_medium=coursera&utm_source=bluebanner&utm_campaign=2026AugustQ3CplusTentpole)**.\n\n# What Is GPT? GPT-4, GPT-5, and More Explained\n\nWritten by Jessica Schulze • Updated on\n\nAn overview and comparison of GPT models 1-5, Amazon’s GPT-55X, and more.\n\n![[Featured Image] A smiling person sits in a brightly lit cafe surrounded by hanging plants and works at their laptop with GPT-4.](https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/6r2pJp5AoKADLSRJPAlkNr/6e91beb62cdd1f9eb7b90569…",
+      "coletado_em": "2026-11-13T13:37:50.392Z",
+      "data_publicacao": "2025-10-15",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www.coursera.org/articles/what-is-gpt",
+      "relevancia": 0.831006,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "6dd7d432-59a5-4b63-910c-900ff460dd45",
+       "resultado_id": "e8b1e1-00",
+       "response_time_busca": 1.15,
+       "response_time_extracao": 0.03,
+       "consulta": "GPT-4 is OpenAI's newest and most advanced model.",
+       "origem_principal": {
+        "id_operacao": "6e9ad2cf-5213-4c27-9f20-6e0b20b9da23",
+        "request_id": "6dd7d432-59a5-4b63-910c-900ff460dd45",
+        "modo_busca": "GERAL",
+        "resultado_id": "e8b1e1-00",
+        "parametros": {
+         "query": "GPT-4 is OpenAI's newest and most advanced model.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "6e9ad2cf-5213-4c27-9f20-6e0b20b9da23",
+         "request_id": "6dd7d432-59a5-4b63-910c-900ff460dd45",
+         "modo_busca": "GERAL",
+         "resultado_id": "e8b1e1-00",
+         "parametros": {
+          "query": "GPT-4 is OpenAI's newest and most advanced model.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Wed, 15 Oct 2025 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 15 Oct 2025 00:00:00 GMT",
+         "value_normalized": "2025-10-15",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.coursera.org/articles/what-is-gpt",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2023-12-14T19:00:47.853Z",
+         "value_normalized": "2023-12-14",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2025-10-15T19:19:28.738Z",
+         "value_normalized": "2025-10-15",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "10/15/2025 4:19 PM -03",
+         "value_normalized": "2025-10-15",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.coursera.org/articles/what-is-gpt",
+        "capturado_em": "2026-11-13T13:37:50.211Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "1b35f90e-3fe9-4134-914f-f58e282d251e",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "de803305-109b-42f1-8eec-0f11b6c04e9f",
+      "id_verificacao": "e48da9de-4564-4a80-a52f-0647f8c434e0",
+      "url_original": "https://www.coursera.org/articles/what-is-gpt",
+      "url_canonica": "https://www.coursera.org/articles/what-is-gpt",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "8c8ad18dddaebc705e8a5f7ec49ccf5f9919446bb118d45a99387f63d4d1eec9",
+      "coletado_em": "2026-11-13T13:37:50.392Z",
+      "id_operacao_busca": "6e9ad2cf-5213-4c27-9f20-6e0b20b9da23",
+      "id_operacao_extracao": "175d6ea4-2932-47ae-9a26-921d7d3a6e09",
+      "consulta": "GPT-4 is OpenAI's newest and most advanced model.",
+      "parametros_busca": {
+       "query": "GPT-4 is OpenAI's newest and most advanced model.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://openai.com/index/gpt-4-research",
+        "https://www.gradually.ai/en/chatgpt-versions",
+        "https://en.wikipedia.org/wiki/GPT-4",
+        "https://www.coursera.org/articles/what-is-gpt",
+        "https://toloka.ai/blog/gpt-models-explained"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "6dd7d432-59a5-4b63-910c-900ff460dd45",
+       "operacoes_busca": [
+        {
+         "id_operacao": "6e9ad2cf-5213-4c27-9f20-6e0b20b9da23",
+         "request_id": "6dd7d432-59a5-4b63-910c-900ff460dd45",
+         "modo_busca": "GERAL",
+         "resultado_id": "e8b1e1-00",
+         "parametros": {
+          "query": "GPT-4 is OpenAI's newest and most advanced model.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "1b35f90e-3fe9-4134-914f-f58e282d251e",
+       "resultado_id": "e8b1e1-00",
+       "relevancia": 0.831006,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 15 Oct 2025 00:00:00 GMT",
+         "value_normalized": "2025-10-15",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.coursera.org/articles/what-is-gpt",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2023-12-14T19:00:47.853Z",
+         "value_normalized": "2023-12-14",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2025-10-15T19:19:28.738Z",
+         "value_normalized": "2025-10-15",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "10/15/2025 4:19 PM -03",
+         "value_normalized": "2025-10-15",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.coursera.org/articles/what-is-gpt",
+        "capturado_em": "2026-11-13T13:37:50.211Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "What Is GPT? GPT-4, GPT-5, and More Explained | Coursera",
+      "url": "https://www.coursera.org/articles/what-is-gpt",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 14818,
+      "caracteres_preparados": 7995,
+      "trecho_analisado": "TÍTULO DA FONTE: What Is GPT? GPT-4, GPT-5, and More Explained | Coursera\nURL DA FONTE: https://www.coursera.org/articles/what-is-gpt\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n**[Save 40% for 3 months](https://www.coursera.org/courseraplus/special/cplus-monthly-august-2026-global?utm_medium=coursera&utm_source=bluebanner&utm_campaign=2026AugustQ3CplusTentpole)**.\n\n# What Is GPT?\n\nGPT-4, GPT-5, and More Explained\n\nWritten by Jessica Schulze • Updated on\n\nAn overview and comparison of GPT models 1-5, Amazon’s GPT-55X, and more.\n\n![[Featured Image] A smiling person sits in a brightly lit cafe surrounded by hanging plants and works at their laptop with GPT-4.](https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/6r2pJp5AoKADLSRJPAlkNr/6e91beb62cdd1f9eb7b905693a671e25/GettyImages-2163495191.jpg?w=1500&h=680&q=60&fit=fill&f=faces&fm=jpg&fl=progressive&auto=format%2Ccompress&dpr=1&w=1000)\n\nIn recent years, [artificial intelligence (AI)](https://www.coursera.org/articles/what-is-artificial-intelligence) has generated more than just content.\n\nIt’s sparked debate, excitement, criticism, and innovation across a wide range of industries.\n\nOne of",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source notes that GPT‑5, released in August 2025, is currently OpenAI's flagship model, so GPT‑4 is not the newest or most advanced."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "The source notes that GPT‑5, released in August 2025, is currently OpenAI's flagship model, so GPT‑4 is not the newest or most advanced."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "UNKNOWN_CLAIM_TYPE"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "GPT models explained: ChatGPT models from GPT-1 to GPT-6.1",
+      "url": "https://toloka.ai/blog/gpt-models-explained",
+      "conteudo": "[← Blog\n\nArena](../)\n\n![GPT models explained: From GPT-1 to GPT-5.6](https://framerusercontent.com/images/P8BVmo9qNtjS63pj9dZfJa2IRmQ.svg?width=1080&height=1080)\n\n# GPT models explained: ChatGPT models from GPT-1 to GPT-6.1\n\nToloka Team\n\nToloka Arena is live. See how your model ranks.\n\n[Learn more](https://toloka.ai/arena?utm_source=blogbanner&utm_medium=blogbanner&utm_campaign=arena)\n\n## See how frontier models perform on tasks they’ve never trained on\n\nSee how frontier models perform on tasks they’ve never trained on\n\nToloka Arena ranks GPT, Claude, and Gemini models by pass^5 reliability and cost per task on private, non-contaminated agentic benchmarks.\n\n[Explore the leaderboard →](../../…",
+      "coletado_em": "2026-11-13T13:37:50.392Z",
+      "data_publicacao": "2026-10-26",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://toloka.ai/blog/gpt-models-explained/",
+      "relevancia": 0.44185364,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "bfa74cb1-1af7-4c4a-be22-51a880eb7938",
+       "resultado_id": "8014d1-01",
+       "response_time_busca": 3.49,
+       "response_time_extracao": 0.03,
+       "consulta": "GPT-4 is OpenAI's newest and most advanced model.",
+       "origem_principal": {
+        "id_operacao": "c24d2fd2-4fc7-426e-b7b9-b37418c72a03",
+        "request_id": "bfa74cb1-1af7-4c4a-be22-51a880eb7938",
+        "modo_busca": "NOTICIAS",
+        "resultado_id": "8014d1-01",
+        "parametros": {
+         "query": "GPT-4 is OpenAI's newest and most advanced model.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "c24d2fd2-4fc7-426e-b7b9-b37418c72a03",
+         "request_id": "bfa74cb1-1af7-4c4a-be22-51a880eb7938",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "8014d1-01",
+         "parametros": {
+          "query": "GPT-4 is OpenAI's newest and most advanced model.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Mon, 26 Oct 2026 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 26 Oct 2026 00:00:00 GMT",
+         "value_normalized": "2026-10-26",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 12:57:30 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://toloka.ai/blog/gpt-models-explained/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-10-26T00:00:00.000Z",
+         "value_normalized": "2026-10-26",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://toloka.ai/blog/gpt-models-explained/",
+        "capturado_em": "2026-11-13T13:37:51.814Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "1b35f90e-3fe9-4134-914f-f58e282d251e",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "0000a5bb-639e-474f-b600-43b88c7e5bf8",
+      "id_verificacao": "e48da9de-4564-4a80-a52f-0647f8c434e0",
+      "url_original": "https://toloka.ai/blog/gpt-models-explained",
+      "url_canonica": "https://toloka.ai/blog/gpt-models-explained",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "acf3470cb70b2580d4f3f65cda9a86f8fcf5cc191c110ce19ba5e541e837f3c0",
+      "coletado_em": "2026-11-13T13:37:50.392Z",
+      "id_operacao_busca": "c24d2fd2-4fc7-426e-b7b9-b37418c72a03",
+      "id_operacao_extracao": "175d6ea4-2932-47ae-9a26-921d7d3a6e09",
+      "consulta": "GPT-4 is OpenAI's newest and most advanced model.",
+      "parametros_busca": {
+       "query": "GPT-4 is OpenAI's newest and most advanced model.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://openai.com/index/gpt-4-research",
+        "https://www.gradually.ai/en/chatgpt-versions",
+        "https://en.wikipedia.org/wiki/GPT-4",
+        "https://www.coursera.org/articles/what-is-gpt",
+        "https://toloka.ai/blog/gpt-models-explained"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "bfa74cb1-1af7-4c4a-be22-51a880eb7938",
+       "operacoes_busca": [
+        {
+         "id_operacao": "c24d2fd2-4fc7-426e-b7b9-b37418c72a03",
+         "request_id": "bfa74cb1-1af7-4c4a-be22-51a880eb7938",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "8014d1-01",
+         "parametros": {
+          "query": "GPT-4 is OpenAI's newest and most advanced model.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "request_id_extracao": "1b35f90e-3fe9-4134-914f-f58e282d251e",
+       "resultado_id": "8014d1-01",
+       "relevancia": 0.44185364,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 26 Oct 2026 00:00:00 GMT",
+         "value_normalized": "2026-10-26",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 12:57:30 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://toloka.ai/blog/gpt-models-explained/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-10-26T00:00:00.000Z",
+         "value_normalized": "2026-10-26",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://toloka.ai/blog/gpt-models-explained/",
+        "capturado_em": "2026-11-13T13:37:51.814Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "GPT models explained: ChatGPT models from GPT-1 to GPT-6.1",
+      "url": "https://toloka.ai/blog/gpt-models-explained",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 34604,
+      "caracteres_preparados": 7994,
+      "trecho_analisado": "TÍTULO DA FONTE: GPT models explained: ChatGPT models from GPT-1 to GPT-6.1\nURL DA FONTE: https://toloka.ai/blog/gpt-models-explained\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n*Updated October 2026*\n\nGPT is one of the most searched model families in AI, and also one of the most confusingly named.\n\nOpenAI has shipped dozens of versions, tiers and product surfaces since 2018: GPT-1 through GPT-6.1, Instant through Pro, and now Astra, Sol, Terra and Luna.\n\nWith so many names stacked on top of each other, how do you actually tell them apart?\n\nThis guide maps the whole lifecycle: the history, the current ChatGPT models, how the GPT-6 tiers compare on independent benchmarks, and how GPT compares to the alternatives.\n\nThe simplest way through it: GPT is the model family.\n\nChatGPT is the product.\n\n| --- |\n\n| **Quick answer: The latest GPT models (October 2026)**  The latest GPT models are GPT-6 Astra, OpenAI’s flagship released in September 2026, and two GPT-6.1 point releases: GPT-6.1 Sol (September 29) and GPT-6.1 Terra (October 26).\n\nGPT-6 Luna is the low-cost tier.\n\nIn ChatGPT, paid plans chat with GPT-6 Sol, the Pro option uses Astra, and Free and Go users get GPT-6 Luna.\n\n* **GPT-6 Astra:*",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "RELATED_INSUFFICIENT",
+      "justificativa": "The source describes models newer than GPT‑4 but does not mention GPT‑4 itself."
+     },
+     "classificacao": {
+      "postura": "INSUFFICIENT",
+      "justificativa": "The source describes models newer than GPT‑4 but does not mention GPT‑4 itself."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "UNKNOWN_CLAIM_TYPE"
+     }
+    }
+   ],
+   "erro_busca": null,
+   "risco_desatualizacao": {
+    "nivel": "MEDIUM",
+    "sensivel_ao_tempo": true,
+    "motivos": [
+     "Not a price, version, company or regulation fact",
+     "Claims to be true right now (\"currently\", \"still\", \"latest\"…)"
+    ]
+   },
+   "dominios_oficiais_usados": [],
+   "dominios_oficiais_automaticos": [],
+   "agregacao": {
+    "status": "CLASSIFICADO",
+    "conclusao_factual": {
+     "status": "CONTRADIZ",
+     "resumo": "As evidências utilizáveis contradizem a afirmação."
+    },
+    "veredito": "CONTRADICAO_FRACA",
+    "resumo": "As evidências utilizáveis contradizem a afirmação, mas nenhuma fonte oficial com data ligada ao fato confirma a contradição. Trate a afirmação como possivelmente desatualizada ou incorreta e revise as fontes.",
+    "afirmacao": "GPT-4 is OpenAI's newest and most advanced model.",
+    "score_qualidade_evidencia": {
+     "valor": 30,
+     "escala": "0-100",
+     "natureza": "HEURISTICA",
+     "interpretacao": "Qualidade estrutural das evidências, não probabilidade de verdade.",
+     "componentes": {
+      "autoridade": 0,
+      "atualidade": 0,
+      "diversidade_fontes": 20,
+      "concordancia": 10
+     }
+    },
+    "freshness": {
+     "score": null,
+     "status": "UNVERIFIABLE",
+     "confidence": "INSUFFICIENT",
+     "algorithm_id": "CLAIM_FRESHNESS_SCORE",
+     "algorithm_version": "1.1.0",
+     "policy_id": "unknown:NO_VALIDITY_POLICY",
+     "as_of": "2026-11-13T13:37:43.290Z",
+     "evidence_summary": {
+      "received": 2,
+      "eligible": 0,
+      "independent_domains": 0,
+      "excluded": 2
+     },
+     "drivers": [
+      {
+       "code": "UNKNOWN_CLAIM_TYPE"
+      }
+     ],
+     "limitations": [
+      "Não existe uma janela temporal definida para esta categoria de afirmação."
+     ]
+    },
+    "concordancia": {
+     "algorithm_id": "SOURCE_AGREEMENT_INDEX",
+     "algorithm_version": "1.1.0",
+     "weights": {
+      "OFICIAL": 3,
+      "ACADEMICO": 3,
+      "NOTICIA": 2,
+      "REFERENCIA": 1.5,
+      "OUTRO": 1,
+      "BLOG_FORUM": 0.25
+     },
+     "score": 0,
+     "coverage": "MODERATE",
+     "independent_sources": 2,
+     "source_types": [
+      "REFERENCIA",
+      "OUTRO"
+     ],
+     "supporting": 0,
+     "authoritative_supporting": 0,
+     "contradicting": 2,
+     "split": 0,
+     "by_type": {
+      "REFERENCIA": {
+       "supports": 0,
+       "contradicts": 1,
+       "split": 0
+      },
+      "OUTRO": {
+       "supports": 0,
+       "contradicts": 1,
+       "split": 0
+      }
+     },
+     "limitations": [
+      "Agreement between sources is not a probability of truth: sources can share the same mistake.",
+      "Copies and pages from the same site count once; independence is approximated by domain and text similarity."
+     ]
+    },
+    "recencia_pagina": {
+     "algorithm_id": "PAGE_DATE_RECENCY_INDEX",
+     "algorithm_version": "1.0.0",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "as_of": "2026-11-13T13:37:43.290Z",
+     "score": null,
+     "status": "UNVERIFIABLE",
+     "newest_date": null,
+     "sources": [],
+     "limitations": [
+      "Sem categoria temporal, não há janela de validade para comparar as datas."
+     ]
+    },
+    "atualidade_afirmacao": {
+     "algorithm_id": "CLAIM_CURRENCY_SCORE",
+     "algorithm_version": "1.0.0",
+     "formula": "evidence_recency × support_share",
+     "window_days": 180,
+     "score": 0,
+     "status": "CONTRADICTED",
+     "basis": "PAGE_DATE_GENERAL_WINDOW",
+     "confidence": "LOW",
+     "evidence_recency": 23,
+     "support_share": 0,
+     "newest_date": "2026-07-18",
+     "newest_age_days": 118,
+     "within_window": true
+    },
+    "versao_regras": "1.2.0",
+    "metodo": "AGREGACAO_DETERMINISTICA",
+    "fontes_independentes": 2,
+    "grupos_distintos_de_evidencia": 2,
+    "dependencia_detectada": 0,
+    "dependencia_nao_verificada": true,
+    "nota_independencia": "Cópias exatas, quase duplicadas, URLs canônicas iguais e páginas do mesmo domínio são agrupadas; domínios sem sinal de cópia não têm independência editorial comprovada.",
+    "total_evidencias_utilizaveis": 2,
+    "fontes": [
+     {
+      "dominio": "en.wikipedia.org",
+      "dominios": [
+       "en.wikipedia.org"
+      ],
+      "grupo_dependencia_id": "source_cluster_001",
+      "oficial": false,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://en.wikipedia.org/wiki/GPT-4"
+      ],
+      "evidencias": [
+       {
+        "titulo": "GPT-4 - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/GPT-4",
+        "categoria_fonte": "REFERENCIA",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "UNVERIFIABLE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:37:50.392Z",
+        "data_publicacao": "2026-07-18",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Sat, 18 Jul 2026 00:00:00 GMT",
+          "value_normalized": "2026-07-18",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Fri, 13 Nov 2026 07:38:29 GMT",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://en.wikipedia.org/wiki/GPT-4",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2023-01-27T07:57:23Z",
+          "value_normalized": "2023-01-27",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-11-06T14:04:31Z",
+          "value_normalized": "2026-11-06",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_001",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "coursera.org",
+      "dominios": [
+       "coursera.org"
+      ],
+      "grupo_dependencia_id": "source_cluster_002",
+      "oficial": false,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.coursera.org/articles/what-is-gpt"
+      ],
+      "evidencias": [
+       {
+        "titulo": "What Is GPT? GPT-4, GPT-5, and More Explained | Coursera",
+        "url": "https://www.coursera.org/articles/what-is-gpt",
+        "categoria_fonte": "OUTRO",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "UNVERIFIABLE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:37:50.392Z",
+        "data_publicacao": "2025-10-15",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Wed, 15 Oct 2025 00:00:00 GMT",
+          "value_normalized": "2025-10-15",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.coursera.org/articles/what-is-gpt",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2023-12-14T19:00:47.853Z",
+          "value_normalized": "2023-12-14",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2025-10-15T19:19:28.738Z",
+          "value_normalized": "2025-10-15",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "10/15/2025 4:19 PM -03",
+          "value_normalized": "2025-10-15",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_002",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     }
+    ],
+    "limitacoes": [
+     "Nenhuma evidência possui data verificável e status de atualidade FRESH.",
+     "Uma data da página ou do resultado de busca não comprova quando o atributo da afirmação foi publicado ou atualizado.",
+     "Nenhuma fonte pertence ao cadastro de domínios oficiais informado.",
+     "Domínios sem sinal detectado de duplicação não têm independência editorial comprovada; republicação com edição extensa ainda pode passar despercebida."
+    ],
+    "avaliado_em": "2026-11-13T13:37:56.316Z"
+   }
+  }
+ ],
+ "afirmacoes_omitidas": [],
+ "resposta_corrigida": {
+  "texto": "GPT-4 is not OpenAI's newest model [1][2].",
+  "mudancas": [
+   {
+    "claim_id": "afirmacao_1",
+    "what": "replaced"
+   }
+  ],
+  "fontes_citadas": [
+   1,
+   2
+  ],
+  "tentativas": 2,
+  "citacoes_anexadas": false,
+  "fontes": [
+   {
+    "n": 1,
+    "url": "https://en.wikipedia.org/wiki/GPT-4",
+    "titulo": "GPT-4 - Wikipedia",
+    "tipo": "REFERENCIA",
+    "postura": "CONTRADICTS",
+    "data": "2026-07-18"
+   },
+   {
+    "n": 2,
+    "url": "https://www.coursera.org/articles/what-is-gpt",
+    "titulo": "What Is GPT? GPT-4, GPT-5, and More Explained | Coursera",
+    "tipo": "OUTRO",
+    "postura": "CONTRADICTS",
+    "data": "2025-10-15"
+   }
+  ],
+  "metodo": "MODEL_REWRITE_FROM_VERIFIED_EVIDENCE"
+ },
+ "rastreabilidade_modelo": [
+  {
+   "id_chamada": "134bce20-b0f6-4d92-9170-5fdf3f6458ad",
+   "id_requisicao_enviada": "3c193e38-c6a5-4fe3-891c-11550d565051",
+   "id_verificacao": "e48da9de-4564-4a80-a52f-0647f8c434e0",
+   "etapa": "DECOMPOSICAO",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 653,
+   "tokens": {
+    "entrada": 843,
+    "saida": 127,
+    "total": 970
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "3c193e38-c6a5-4fe3-891c-11550d565051",
+   "id_trace": "28f747a21c6a4c109fde8e9ad0e6ccca",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 755.919,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:37:43.290Z"
+  },
+  {
+   "id_chamada": "67d87566-a697-48fb-b3f1-3104101b7559",
+   "id_requisicao_enviada": "99f9246c-e741-45bb-ba12-67b549f6cfbe",
+   "id_verificacao": "e48da9de-4564-4a80-a52f-0647f8c434e0",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 4290,
+   "tokens": {
+    "entrada": 4078,
+    "saida": 1702,
+    "total": 5780
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "99f9246c-e741-45bb-ba12-67b549f6cfbe",
+   "id_trace": "84525b4f24304bb898080d99f3b3c2bf",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 4327.429,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:37:51.916Z"
+  },
+  {
+   "id_chamada": "8e7cbfef-2690-46a5-b278-0c8fd77969f2",
+   "id_requisicao_enviada": "1ad72996-0677-4efe-b307-f3baeb2966d9",
+   "id_verificacao": "e48da9de-4564-4a80-a52f-0647f8c434e0",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 1467,
+   "tokens": {
+    "entrada": 914,
+    "saida": 372,
+    "total": 1286
+   },
+   "espera_limite_ms": 2113,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "1ad72996-0677-4efe-b307-f3baeb2966d9",
+   "id_trace": "08e3dd78d58646e7bc70c1741ca8c4d8",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 1502.306,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:37:56.316Z"
+  },
+  {
+   "id_chamada": "001fed88-57c5-4070-b787-6280aa55facf",
+   "id_requisicao_enviada": "166193e9-be59-424b-a814-8ad0fe36150c",
+   "id_verificacao": "e48da9de-4564-4a80-a52f-0647f8c434e0",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 2,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 1429,
+   "tokens": {
+    "entrada": 959,
+    "saida": 467,
+    "total": 1426
+   },
+   "espera_limite_ms": 7903,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "166193e9-be59-424b-a814-8ad0fe36150c",
+   "id_trace": "cacd9238ddaf4b4da713fc01680a3f70",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 1467.519,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:38:00.029Z"
+  }
+ ],
+ "rastreabilidade_pesquisa": [
+  {
+   "id_operacao": "6e9ad2cf-5213-4c27-9f20-6e0b20b9da23",
+   "id_verificacao": "e48da9de-4564-4a80-a52f-0647f8c434e0",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "GPT-4 is OpenAI's newest and most advanced model.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:37:44.081Z",
+   "finalizada_em": "2026-11-13T13:37:45.689Z",
+   "duracao_ms": 1608,
+   "request_id": "6dd7d432-59a5-4b63-910c-900ff460dd45",
+   "response_time": 1.15,
+   "erro": null,
+   "modo_busca": "GERAL",
+   "parametros": {
+    "query": "GPT-4 is OpenAI's newest and most advanced model.",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "e8b1e1-00",
+     "titulo": "What Is GPT? GPT-4, GPT-5, and More Explained | Coursera",
+     "url": "https://www.coursera.org/articles/what-is-gpt",
+     "relevancia": 0.831006,
+     "data_publicacao": "2025-10-15"
+    },
+    {
+     "resultado_id": "083fa7-01",
+     "titulo": "GPT-4",
+     "url": "https://openai.com/index/gpt-4-research",
+     "relevancia": 0.81815636,
+     "data_publicacao": "2023-03-14"
+    },
+    {
+     "resultado_id": "5acf47-02",
+     "titulo": "GPT-4 - Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/GPT-4",
+     "relevancia": 0.75851065,
+     "data_publicacao": "2026-07-18"
+    },
+    {
+     "resultado_id": "884145-03",
+     "titulo": "What should be considered with GPT-4? The OpenAI model explained",
+     "url": "https://www.moin.ai/en/chatbot-wiki/gpt-4",
+     "relevancia": 0.75833166,
+     "data_publicacao": "2026-08-04"
+    },
+    {
+     "resultado_id": "2f4c72-04",
+     "titulo": "OpenAi’s models: GPT-4, GPT-4o, GPT-4.5, GPT-4.1 and more. What are the Key Differences?",
+     "url": "https://www.scrumlaunch.com/blog/openai-gpt-models-differences",
+     "relevancia": 0.7350715,
+     "data_publicacao": "2025-07-09"
+    }
+   ]
+  },
+  {
+   "id_operacao": "c24d2fd2-4fc7-426e-b7b9-b37418c72a03",
+   "id_verificacao": "e48da9de-4564-4a80-a52f-0647f8c434e0",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "GPT-4 is OpenAI's newest and most advanced model.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:37:45.689Z",
+   "finalizada_em": "2026-11-13T13:37:49.622Z",
+   "duracao_ms": 3933,
+   "request_id": "bfa74cb1-1af7-4c4a-be22-51a880eb7938",
+   "response_time": 3.49,
+   "erro": null,
+   "modo_busca": "NOTICIAS",
+   "parametros": {
+    "query": "GPT-4 is OpenAI's newest and most advanced model.",
+    "search_depth": "basic",
+    "max_results": 4,
+    "include_answer": false,
+    "include_published_date": true,
+    "topic": "news"
+   },
+   "quantidade_resultados": 4,
+   "resultados": [
+    {
+     "resultado_id": "878bb0-00",
+     "titulo": "ChatGPT Models: All 43 GPT Versions Up to GPT-6.1 Terra",
+     "url": "https://www.gradually.ai/en/chatgpt-versions",
+     "relevancia": 0.6220002,
+     "data_publicacao": "2025-09-12"
+    },
+    {
+     "resultado_id": "8014d1-01",
+     "titulo": "GPT models explained: ChatGPT models from GPT-1 to GPT-6.1",
+     "url": "https://toloka.ai/blog/gpt-models-explained",
+     "relevancia": 0.44185364,
+     "data_publicacao": "2026-10-26"
+    },
+    {
+     "resultado_id": "e92f0b-02",
+     "titulo": "Foundry Models sold by Azure - Microsoft Foundry | Microsoft Learn",
+     "url": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure",
+     "relevancia": 0.33600417,
+     "data_publicacao": "2026-10-29"
+    },
+    {
+     "resultado_id": "505eb3-03",
+     "titulo": "OpenAI models: All the models and what they're best for",
+     "url": "https://zapier.com/blog/openai-models",
+     "relevancia": 0.25608712,
+     "data_publicacao": "2026-10-27"
+    }
+   ]
+  },
+  {
+   "id_operacao": "175d6ea4-2932-47ae-9a26-921d7d3a6e09",
+   "id_verificacao": "e48da9de-4564-4a80-a52f-0647f8c434e0",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "EXTRACAO",
+   "consulta": "GPT-4 is OpenAI's newest and most advanced model.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:37:49.625Z",
+   "finalizada_em": "2026-11-13T13:37:50.392Z",
+   "duracao_ms": 767,
+   "request_id": "1b35f90e-3fe9-4134-914f-f58e282d251e",
+   "response_time": 0.03,
+   "erro": null,
+   "urls_solicitadas": [
+    "https://openai.com/index/gpt-4-research",
+    "https://www.gradually.ai/en/chatgpt-versions",
+    "https://en.wikipedia.org/wiki/GPT-4",
+    "https://www.coursera.org/articles/what-is-gpt",
+    "https://toloka.ai/blog/gpt-models-explained"
+   ],
+   "parametros": {
+    "urls": [
+     "https://openai.com/index/gpt-4-research",
+     "https://www.gradually.ai/en/chatgpt-versions",
+     "https://en.wikipedia.org/wiki/GPT-4",
+     "https://www.coursera.org/articles/what-is-gpt",
+     "https://toloka.ai/blog/gpt-models-explained"
+    ],
+    "extract_depth": "basic",
+    "format": "markdown",
+    "include_images": false
+   },
+   "quantidade_resultados": 5,
+   "urls_extraidas": [
+    "https://openai.com/index/gpt-4-research",
+    "https://www.gradually.ai/en/chatgpt-versions",
+    "https://en.wikipedia.org/wiki/GPT-4",
+    "https://www.coursera.org/articles/what-is-gpt",
+    "https://toloka.ai/blog/gpt-models-explained"
+   ]
+  }
+ ],
+ "modo": "real",
+ "simulado": false,
+ "gateway": {
+  "gateway": "bifrost",
+  "chamadas": 4,
+  "falhas": 0,
+  "cadeia_modelos": [
+   "groq/openai/gpt-oss-20b",
+   "groq/openai/gpt-oss-120b"
+  ],
+  "queda_simulada": false,
+  "respostas_por_modelo": [
+   {
+    "modelo": "groq/openai/gpt-oss-120b",
+    "chamadas": 4
+   }
+  ],
+  "respostas_de_reserva": 4,
+  "tokens_total": 9462,
+  "latencia_media_ms": 2013
+ },
+ "duracao_ms": 26401,
+ "gravado_em": "2026-11-13T13:38:09.696Z"
+}

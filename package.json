@@ -1,13 +1,13 @@
 {
   "name": "entrelinhas",
   "version": "1.0.0",
-  "description": "Freshness-aware evidence verification layer for AI applications",
+  "description": "Entrelinhas: checks each claim in an AI answer against today's sources and shows what still holds, what is outdated and what is wrong",
   "main": "index.js",
   "scripts": {
     "test": "node rodar-testes.js",
-    "test:essencial": "node teste-atualidade.js && node teste-evidencia.js && node teste-preparar-evidencia.js && node teste-integracao-persistencia-comparador.js && node teste-rastreabilidade-fluxo-controlado.js && npm run test:freshness",
-    "test:freshness": "node teste-freshness-score.js && node teste-sinais-temporais.js && node teste-independencia-fontes.js && node avaliacao/teste-trechos-paginas-publicas.js && node teste-agregador.js && node teste-limites-independencia-atualidade.js && node teste-tavily-coletas-simulado.js && node avaliacao/teste-avaliacao-rotulada-v1.js",
-    "test:benchmark": "node teste-benchmark.js",
+    "test:essencial": "node testes/teste-atualidade.js && node testes/teste-evidencia.js && node testes/teste-preparar-evidencia.js && node testes/teste-integracao-persistencia-comparador.js && node testes/teste-rastreabilidade-fluxo-controlado.js && npm run test:freshness",
+    "test:freshness": "node testes/teste-freshness-score.js && node testes/teste-sinais-temporais.js && node testes/teste-independencia-fontes.js && node avaliacao/teste-trechos-paginas-publicas.js && node testes/teste-agregador.js && node testes/teste-limites-independencia-atualidade.js && node testes/teste-tavily-coletas-simulado.js && node avaliacao/teste-avaliacao-rotulada-v1.js",
+    "test:benchmark": "node testes/teste-benchmark.js",
     "web": "node servidor.js",
     "web:exemplo": "node servidor.js --exemplo",
     "demo": "node demo.js"
@@ -19,8 +19,8 @@
     "bifrost",
     "tavily"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Alice Cândido",
+  "license": "MIT",
   "type": "commonjs",
   "dependencies": {
     "dotenv": "^18.0.9"

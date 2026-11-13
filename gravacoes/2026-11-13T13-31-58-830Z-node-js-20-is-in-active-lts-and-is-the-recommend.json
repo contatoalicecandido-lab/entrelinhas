@@ -1,0 +1,4142 @@
+{
+ "sistema": "Entrelinhas",
+ "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+ "texto_original": "Node.js 20 is in Active LTS and is the recommended version for production.",
+ "verificado_em": "2026-11-13T13:31:58.785Z",
+ "total_afirmacoes": 2,
+ "sintese": {
+  "veredito": "MULTIPLAS_AFIRMACOES",
+  "resumo": "O texto foi dividido em 2 afirmações. Resultados por afirmação: 2 CONTRADICAO_FRACA. Consulte cada afirmação e suas fontes antes de formar uma conclusão geral.",
+  "total_afirmacoes": 2,
+  "contagem_vereditos": {
+   "CONTRADICAO_FRACA": 2
+  }
+ },
+ "afirmacoes": [
+  {
+   "id": "afirmacao_1",
+   "texto": "Node.js 20 is in Active LTS",
+   "tipo_afirmacao": "versao_api",
+   "origem_tipo_afirmacao": "MODELO",
+   "nuances": {
+    "idioma": "en",
+    "variante": null,
+    "confianca_idioma": 1,
+    "valores": [],
+    "datas": [],
+    "expressoes_temporais": [],
+    "condicoes": [],
+    "mudancas": [],
+    "tempo_coloquial": [],
+    "girias": {
+     "aliases": [],
+     "expressoes": []
+    },
+    "consulta_busca": "Node.js 20 is in Active LTS",
+    "dominios_oficiais_sugeridos": [],
+    "autoridades": [],
+    "notas": []
+   },
+   "evidencias": [
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OFICIAL",
+      "titulo": "Node.js — Node.js 20.9.0 (LTS)",
+      "url": "https://nodejs.org/en/blog/release/v20.9.0",
+      "conteudo": "[Skip to content](#main)\n\n# Node.js 20.9.0 (LTS)\n\n[RL](https://github.com/richardlau)\n\nRichard Lau\n\nNode.js 20.9.0 (LTS)\n\n## [2023-10-24, Version 20.9.0 'Iron' (LTS), @richardlau](#2023-10-24-version-2090-iron-lts-richardlau)\n\n### [Notable Changes](#notable-changes)\n\nThis release marks the transition of Node.js 20.x into Long Term Support (LTS) with the codename 'Iron'. The 20.x release line now moves into \"Active LTS\" and will remain so until October 2024. After that time, it will move into \"Maintenance\" until end of life in April 2026.\n\n### [Known issue](#known-issue)\n\nCollecting code coverage via the `NODE_V8_COVERAGE` environment variable may lead to a hang. This is not thought to be a r…",
+      "coletado_em": "2026-11-13T13:30:52.918Z",
+      "data_publicacao": "2023-10-24",
+      "data_atualizacao": "2024-10-01",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": "https://nodejs.org/en/blog/release/v20.9.0",
+      "relevancia": 0.746139,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "c9e40167-78cb-4211-8028-50bbba373d11",
+       "resultado_id": "af9db8-01",
+       "response_time_busca": 1.04,
+       "response_time_extracao": 0.02,
+       "consulta": "Node.js 20 is in Active LTS",
+       "origem_principal": {
+        "id_operacao": "5e166240-abcc-4404-b8e1-044db4d9f599",
+        "request_id": "c9e40167-78cb-4211-8028-50bbba373d11",
+        "modo_busca": "GERAL",
+        "resultado_id": "af9db8-01",
+        "parametros": {
+         "query": "Node.js 20 is in Active LTS",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "5e166240-abcc-4404-b8e1-044db4d9f599",
+         "request_id": "c9e40167-78cb-4211-8028-50bbba373d11",
+         "modo_busca": "GERAL",
+         "resultado_id": "af9db8-01",
+         "parametros": {
+          "query": "Node.js 20 is in Active LTS",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Tue, 24 Oct 2023 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 24 Oct 2023 00:00:00 GMT",
+         "value_normalized": "2023-10-24",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://nodejs.org/en/blog/release/v20.9.0",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Last Updated",
+         "value_original": "Oct 24, 2023",
+         "value_normalized": "2023-10-24",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://nodejs.org/en/blog/release/v20.9.0",
+        "capturado_em": "2026-11-13T13:30:52.849Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "4ff728cc-4b72-48db-b5c2-634331b70b4f",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2024-10-01",
+       "precisao": "MES",
+       "citacao": "will remain so until October 2024",
+       "origem": "QUOTED_IN_SOURCE_TEXT"
+      }
+     },
+     "coleta": {
+      "id_coleta": "b7dfced0-24e4-4e3d-8a63-d932b4819487",
+      "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+      "url_original": "https://nodejs.org/en/blog/release/v20.9.0",
+      "url_canonica": "https://nodejs.org/en/blog/release/v20.9.0",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "9a90feacb1869c60dd4140255ad7b80f6f8b1fba360c3dd7daa7dbc392c5f3b4",
+      "coletado_em": "2026-11-13T13:30:52.918Z",
+      "id_operacao_busca": "5e166240-abcc-4404-b8e1-044db4d9f599",
+      "id_operacao_extracao": "f8111c3e-1533-49dd-a795-041708868953",
+      "consulta": "Node.js 20 is in Active LTS",
+      "parametros_busca": {
+       "query": "Node.js 20 is in Active LTS",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://nodejs.org/en/blog/release/v20.9.0",
+        "https://versionlog.com/nodejs/20",
+        "https://endoflife.date/nodejs",
+        "https://tuxcare.com/blog/node-eol",
+        "https://safeguard.sh/resources/blog/node-docker-tag-production-lts-major-exact"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "c9e40167-78cb-4211-8028-50bbba373d11",
+       "operacoes_busca": [
+        {
+         "id_operacao": "5e166240-abcc-4404-b8e1-044db4d9f599",
+         "request_id": "c9e40167-78cb-4211-8028-50bbba373d11",
+         "modo_busca": "GERAL",
+         "resultado_id": "af9db8-01",
+         "parametros": {
+          "query": "Node.js 20 is in Active LTS",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "4ff728cc-4b72-48db-b5c2-634331b70b4f",
+       "resultado_id": "af9db8-01",
+       "relevancia": 0.746139,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 24 Oct 2023 00:00:00 GMT",
+         "value_normalized": "2023-10-24",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://nodejs.org/en/blog/release/v20.9.0",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Last Updated",
+         "value_original": "Oct 24, 2023",
+         "value_normalized": "2023-10-24",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://nodejs.org/en/blog/release/v20.9.0",
+        "capturado_em": "2026-11-13T13:30:52.849Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Node.js — Node.js 20.9.0 (LTS)",
+      "url": "https://nodejs.org/en/blog/release/v20.9.0",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 11967,
+      "caracteres_preparados": 2568,
+      "trecho_analisado": "TÍTULO DA FONTE: Node.js — Node.js 20.9.0 (LTS)\nURL DA FONTE: https://nodejs.org/en/blog/release/v20.9.0\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n[Skip to content](#main)\n\n# Node.js 20.9.0 (LTS)\n\n[RL](https://github.com/richardlau)\n\nRichard Lau\n\nNode.js 20.9.0 (LTS)\n\n## [2023-10-24, Version 20.9.0 'Iron' (LTS), @richardlau](#2023-10-24-version-2090-iron-lts-richardlau)\n\n### [Notable Changes](#notable-changes)\n\nThis release marks the transition of Node.js 20.x into Long Term Support (LTS) with the codename 'Iron'.\n\nThe 20.x release line now moves into \"Active LTS\" and will remain so until October 2024.\n\nAfter that time, it will move into \"Maintenance\" until end of life in April 2026.\n\n### [Known issue](#known-issue)\n\nCollecting code coverage via the `NODE_V8_COVERAGE` environment variable may lead to a hang.\n\nThis is not thought to be a regression in Node.js 20 (some reports are on Node.js 18).\n\nFor more information, including some potential workarounds, see issue [#49344](https://github.com/nodejs/node/issues/49344).\n\nWindows 32-bit Installer: <https://nodejs.org/dist/v20.9.0/node-v20.9.0-x86.msi>\n\nWindows 64-bit Installer: <https://nodejs.org/dist/v20.9.0/node-v20.9.0-x64.msi>\n\nWindows",
+      "citacao_chave": "The 20.x release line now moves into \"Active LTS\" and will remain so until October 2024.",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source states Node.js 20.x was in Active LTS only until October 2024, which is before the reference date."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "The source states Node.js 20.x was in Active LTS only until October 2024, which is before the reference date."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 773,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2024-10-01"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "Node.js 20 (LTS) - What's New, Support Lifecycle & EOL",
+      "url": "https://versionlog.com/nodejs/20",
+      "conteudo": "* Containers & Orchestration\n* [Docker Engine](/docker-engine/ \"version info of Docker Engine\")\n* [Kubernetes](/kubernetes/ \"version info of Kubernetes\")\n* [Podman](/podman/ \"version info of Podman\")\n* Content Management Systems\n* [WordPress](/wordpress/ \"version info of WordPress\")\n* Databases\n* [ClickHouse](/clickhouse/ \"version info of ClickHouse\")\n* [Elasticsearch](/elasticsearch/ \"version info of Elasticsearch\")\n* [HyperSQL DB](/hsqldb/ \"version info of HyperSQL DB\")\n* [MariaDB](/mariadb/ \"version info of MariaDB\")\n* [MongoDB Server](/mongodb/ \"version info of MongoDB Server\")\n* [MySQL](/mysql/ \"version info of MySQL\")\n* [Oracle Database](/oracle-database/ \"version info of Oracle Databa…",
+      "coletado_em": "2026-11-13T13:30:52.918Z",
+      "data_publicacao": "2023-04-17",
+      "data_atualizacao": "2026-04-01",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": "https://versionlog.com/nodejs/20/",
+      "relevancia": 0.8031738,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "f55559f9-2160-4a85-81f8-4dd03a41d6fb",
+       "resultado_id": "c44bbd-00",
+       "response_time_busca": 2,
+       "response_time_extracao": 0.02,
+       "consulta": "Node.js 20 is in Active LTS",
+       "origem_principal": {
+        "id_operacao": "0b39bcb9-e66f-4f7f-b268-dec9843373e1",
+        "request_id": "f55559f9-2160-4a85-81f8-4dd03a41d6fb",
+        "modo_busca": "NOTICIAS",
+        "resultado_id": "c44bbd-00",
+        "parametros": {
+         "query": "Node.js 20 is in Active LTS",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "0b39bcb9-e66f-4f7f-b268-dec9843373e1",
+         "request_id": "f55559f9-2160-4a85-81f8-4dd03a41d6fb",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "c44bbd-00",
+         "parametros": {
+          "query": "Node.js 20 is in Active LTS",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Mon, 17 Apr 2023 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 17 Apr 2023 00:00:00 GMT",
+         "value_normalized": "2023-04-17",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://versionlog.com/nodejs/20/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-03-24T00:00:00+00:00",
+         "value_normalized": "2026-03-24",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "softwareapplication"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-19T09:05:09+00:00",
+         "value_normalized": "2026-10-19",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://versionlog.com/nodejs/20",
+        "capturado_em": "2026-11-13T13:30:53.271Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "4ff728cc-4b72-48db-b5c2-634331b70b4f",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2026-04-01",
+       "precisao": "MES",
+       "citacao": "active maintenance until April 2026",
+       "origem": "QUOTED_IN_SOURCE_TEXT"
+      }
+     },
+     "coleta": {
+      "id_coleta": "2bbbaafd-6ed1-4550-a221-5195ad1611ba",
+      "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+      "url_original": "https://versionlog.com/nodejs/20",
+      "url_canonica": "https://versionlog.com/nodejs/20",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "18478fce1c00f46c3b60e66876b99070a04ed6d0ce442966be8c3225bc3f0607",
+      "coletado_em": "2026-11-13T13:30:52.918Z",
+      "id_operacao_busca": "0b39bcb9-e66f-4f7f-b268-dec9843373e1",
+      "id_operacao_extracao": "f8111c3e-1533-49dd-a795-041708868953",
+      "consulta": "Node.js 20 is in Active LTS",
+      "parametros_busca": {
+       "query": "Node.js 20 is in Active LTS",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://nodejs.org/en/blog/release/v20.9.0",
+        "https://versionlog.com/nodejs/20",
+        "https://endoflife.date/nodejs",
+        "https://tuxcare.com/blog/node-eol",
+        "https://safeguard.sh/resources/blog/node-docker-tag-production-lts-major-exact"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "f55559f9-2160-4a85-81f8-4dd03a41d6fb",
+       "operacoes_busca": [
+        {
+         "id_operacao": "0b39bcb9-e66f-4f7f-b268-dec9843373e1",
+         "request_id": "f55559f9-2160-4a85-81f8-4dd03a41d6fb",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "c44bbd-00",
+         "parametros": {
+          "query": "Node.js 20 is in Active LTS",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "request_id_extracao": "4ff728cc-4b72-48db-b5c2-634331b70b4f",
+       "resultado_id": "c44bbd-00",
+       "relevancia": 0.8031738,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 17 Apr 2023 00:00:00 GMT",
+         "value_normalized": "2023-04-17",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://versionlog.com/nodejs/20/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-03-24T00:00:00+00:00",
+         "value_normalized": "2026-03-24",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "softwareapplication"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-19T09:05:09+00:00",
+         "value_normalized": "2026-10-19",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://versionlog.com/nodejs/20",
+        "capturado_em": "2026-11-13T13:30:53.271Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Node.js 20 (LTS) - What's New, Support Lifecycle & EOL",
+      "url": "https://versionlog.com/nodejs/20",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 13824,
+      "caracteres_preparados": 6569,
+      "trecho_analisado": "TÍTULO DA FONTE: Node.js 20 (LTS) - What's New, Support Lifecycle & EOL\nURL DA FONTE: https://versionlog.com/nodejs/20\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n* [Laravel](/laravel/ \"version info of Laravel\")\n\n* [Next.js](/nextjs/ \"version info of Next.js\")\n\n* [Nuxt](/nuxt/ \"version info of Nuxt\")\n\n* [Tailwind CSS](/tailwind-css/ \"version info of Tailwind CSS\")\n\n* [Vue.js](/vuejs/ \"version info of Vue.js\")\n\n* [Yii](/yii-framework/ \"version info of Yii\")\n\n* [Kotlin](/kotlin/ \"version info of Kotlin\")\n\n* [Node.js](/nodejs/ \"version info of Node.js\")\n\n* [PHP](/php/ \"version info of PHP\")\n\nLast checked and updated on 07 Nov 2026\n\n# [Node.js](https://versionlog.com/nodejs/ \"Node.js Release History\") 20.x (LTS): What's New, Release History & Support Lifecycle\n\nStable Release in branch 20.x (LTS)\n\nReleased 24 Mar 2026\n\n| --- | --- |\n\n| Software | [Node.js](/nodejs/) |\n\n| Version | 20.x (LTS) (LTS) |\n\n| Codename | Iron |\n\n| End of security fixes | 30 Apr 2026 (Ended 6 months ago) |\n\n| Release notes | <https://github.com/nodejs/node/releases/tag/v20.20.2> |\n\n| Source code | <https://github.com/nodejs/node/tree/v20.20.2> |\n\n| Documentation | <https://nodejs.org/dist/latest-v20.x/docs/api/> |\n\n| D",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "It says Node.js 20 has active maintenance only until April 2026, meaning the Active LTS phase ended before the reference date."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "It says Node.js 20 has active maintenance only until April 2026, meaning the Active LTS phase ended before the reference date."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 226,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2026-04-01"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "REFERENCIA",
+      "titulo": "Node.js | endoflife.date",
+      "url": "https://endoflife.date/nodejs",
+      "conteudo": "# Node.js\n\n [framework](/tags/framework) [herodevs](/tags/herodevs) [javascript-runtime](/tags/javascript-runtime) [linux-foundation](/tags/linux-foundation)\n\n[Node.js](https://nodejs.org/) is an open-source, cross-platform JavaScript run-time environment built on Chrome’s V8 JavaScript engine that executes JavaScript code outside a browser.\n\n| Release | Released | Active Support | Security Support | Commercial Support | Latest |\n| --- | --- | --- | --- | --- | --- |\n| 26 (Upcoming LTS) | 5 months ago (05 May 2026) | Ends in 1 year (27 Oct 2027) | Ends in 2 years and 6 months (30 Apr 2029) | Unavailable | [26.12.0](https://github.com/nodejs/node/blob/main/doc/changelogs/CHANGELOG_V26.md#26.1…",
+      "coletado_em": "2026-11-13T13:30:52.918Z",
+      "data_publicacao": "2026-10-09",
+      "data_atualizacao": "2026-04-30",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": "https://endoflife.date/nodejs",
+      "relevancia": 0.7003827,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "c9e40167-78cb-4211-8028-50bbba373d11",
+       "resultado_id": "616ebc-03",
+       "response_time_busca": 1.04,
+       "response_time_extracao": 0.02,
+       "consulta": "Node.js 20 is in Active LTS",
+       "origem_principal": {
+        "id_operacao": "5e166240-abcc-4404-b8e1-044db4d9f599",
+        "request_id": "c9e40167-78cb-4211-8028-50bbba373d11",
+        "modo_busca": "GERAL",
+        "resultado_id": "616ebc-03",
+        "parametros": {
+         "query": "Node.js 20 is in Active LTS",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "5e166240-abcc-4404-b8e1-044db4d9f599",
+         "request_id": "c9e40167-78cb-4211-8028-50bbba373d11",
+         "modo_busca": "GERAL",
+         "resultado_id": "616ebc-03",
+         "parametros": {
+          "query": "Node.js 20 is in Active LTS",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Fri, 09 Oct 2026 04:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 09 Oct 2026 04:00:00 GMT",
+         "value_normalized": "2026-10-09",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://endoflife.date/nodejs",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-12T00:08:23+00:00",
+         "value_normalized": "2026-11-12",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T00:08:23+00:00",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://endoflife.date/nodejs",
+        "capturado_em": "2026-11-13T13:30:53.023Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "4ff728cc-4b72-48db-b5c2-634331b70b4f",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2026-04-30",
+       "precisao": "DIA",
+       "citacao": "Ended 5 months ago (30 Apr 2026)",
+       "origem": "QUOTED_IN_SOURCE_TEXT"
+      }
+     },
+     "coleta": {
+      "id_coleta": "e4d0f8a5-ceb5-4643-a0ac-9372b089605e",
+      "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+      "url_original": "https://endoflife.date/nodejs",
+      "url_canonica": "https://endoflife.date/nodejs",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "e3b39b2f2f490d7a394efc0d39e92bf68a00b452ea7c3cbb23c90cbcf5bbefbd",
+      "coletado_em": "2026-11-13T13:30:52.918Z",
+      "id_operacao_busca": "5e166240-abcc-4404-b8e1-044db4d9f599",
+      "id_operacao_extracao": "f8111c3e-1533-49dd-a795-041708868953",
+      "consulta": "Node.js 20 is in Active LTS",
+      "parametros_busca": {
+       "query": "Node.js 20 is in Active LTS",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://nodejs.org/en/blog/release/v20.9.0",
+        "https://versionlog.com/nodejs/20",
+        "https://endoflife.date/nodejs",
+        "https://tuxcare.com/blog/node-eol",
+        "https://safeguard.sh/resources/blog/node-docker-tag-production-lts-major-exact"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "c9e40167-78cb-4211-8028-50bbba373d11",
+       "operacoes_busca": [
+        {
+         "id_operacao": "5e166240-abcc-4404-b8e1-044db4d9f599",
+         "request_id": "c9e40167-78cb-4211-8028-50bbba373d11",
+         "modo_busca": "GERAL",
+         "resultado_id": "616ebc-03",
+         "parametros": {
+          "query": "Node.js 20 is in Active LTS",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "4ff728cc-4b72-48db-b5c2-634331b70b4f",
+       "resultado_id": "616ebc-03",
+       "relevancia": 0.7003827,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 09 Oct 2026 04:00:00 GMT",
+         "value_normalized": "2026-10-09",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://endoflife.date/nodejs",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-12T00:08:23+00:00",
+         "value_normalized": "2026-11-12",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T00:08:23+00:00",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://endoflife.date/nodejs",
+        "capturado_em": "2026-11-13T13:30:53.023Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Node.js | endoflife.date",
+      "url": "https://endoflife.date/nodejs",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 9555,
+      "caracteres_preparados": 7997,
+      "trecho_analisado": "TÍTULO DA FONTE: Node.js | endoflife.date\nURL DA FONTE: https://endoflife.date/nodejs\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n# Node.js\n\n[framework](/tags/framework) [herodevs](/tags/herodevs) [javascript-runtime](/tags/javascript-runtime) [linux-foundation](/tags/linux-foundation)\n\n[Node.js](https://nodejs.org/) is an open-source, cross-platform JavaScript run-time environment built on Chrome’s V8 JavaScript engine that executes JavaScript code outside a browser.\n\n| Release | Released | Active Support | Security Support | Commercial Support | Latest |\n\n| --- | --- | --- | --- | --- | --- |\n\n| 26 (Upcoming LTS) | 5 months ago (05 May 2026) | Ends in 1 year (27 Oct 2027) | Ends in 2 years and 6 months (30 Apr 2029) | Unavailable | [26.12.0](https://github.com/nodejs/node/blob/main/doc/changelogs/CHANGELOG_V26.md#26.12.0 \"Release Notes / Changelog\") (14 Oct 2026) |\n\n| 25 | 1 year ago (15 Oct 2025) | Ended 6 months ago (01 Apr 2026) | Ended 4 months and 2 weeks ago (01 Jun 2026) | Unavailable | [25.9.0](https://github.com/nodejs/node/blob/main/doc/changelogs/CHANGELOG_V25.md#25.9.0 \"Release Notes / Changelog\") (01 Apr 2026) |\n\n| 24 (LTS) | 1 year and 5 months ago (06 May 2025) | Ends in 4",
+      "citacao_chave": "Ended 5 months ago (30 Apr 2026)",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The end‑of‑life table records that the Active LTS for Node.js 20 ended on 30 Apr 2026, before the reference date."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "The end‑of‑life table records that the Active LTS for Node.js 20 ended on 30 Apr 2026, before the reference date."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "UPDATE_BEFORE_PUBLICATION"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Node.js End-of-Life: Dates, Risks & What to Do Next",
+      "url": "https://tuxcare.com/blog/node-eol",
+      "conteudo": "![](https://tuxcare.com/wp-content/themes/tuxcare-2022/img/home/cve-ico.svg)\n\nCheck the status of CVEs.  [Learn More](https://cve.tuxcare.com).\n\n [CVE Status (opens in new tab)](https://cve.tuxcare.com/)\n\n* [![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAA2ElEQVR42m1Q3Q2DIBB2hI7gCCQt4KMvBR5NBNPHjtANdIN2A93AERyhK5UPiwfESwxy3Pd3VSx+d0+hh1Vqu3FlF66HNzNdXZ0V1272g6+0dzO29f2NQAlzHBaq76Ag1DDi3phHDdUMgEYK3oH2m76ztrsUACqwC2MnutsJvcMa9xYy70UWqdx69VaRB0qBAQETxjH+M59BajfTEvpPYARDuQ32D9zsfXIDSTx45gUnGHEWw5S3PTZAIaFIncJeWQiGgAClw1h5yECVg/DIg0234oOy1G7+AdoGYNfMZ6ecAAAAAElFTkSuQmCC) Tech Support](https://tuxcare.com/support-portal/)\n* [![](data:image/png;base64,iVBORw0KGgoAAAANSUhE…",
+      "coletado_em": "2026-11-13T13:30:52.918Z",
+      "data_publicacao": "2026-04-14",
+      "data_atualizacao": "2026-04-30",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": "https://tuxcare.com/blog/node-eol/",
+      "relevancia": 0.8000679,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "c9e40167-78cb-4211-8028-50bbba373d11",
+       "resultado_id": "d7ecbe-00",
+       "response_time_busca": 1.04,
+       "response_time_extracao": 0.02,
+       "consulta": "Node.js 20 is in Active LTS",
+       "origem_principal": {
+        "id_operacao": "5e166240-abcc-4404-b8e1-044db4d9f599",
+        "request_id": "c9e40167-78cb-4211-8028-50bbba373d11",
+        "modo_busca": "GERAL",
+        "resultado_id": "d7ecbe-00",
+        "parametros": {
+         "query": "Node.js 20 is in Active LTS",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "5e166240-abcc-4404-b8e1-044db4d9f599",
+         "request_id": "c9e40167-78cb-4211-8028-50bbba373d11",
+         "modo_busca": "GERAL",
+         "resultado_id": "d7ecbe-00",
+         "parametros": {
+          "query": "Node.js 20 is in Active LTS",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Tue, 14 Apr 2026 16:36:21 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 14 Apr 2026 16:36:21 GMT",
+         "value_normalized": "2026-04-14",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 13:22:49 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://tuxcare.com/blog/node-eol/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-04-14T16:36:21+00:00",
+         "value_normalized": "2026-04-14",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-08-21T17:12:33+00:00",
+         "value_normalized": "2026-08-21",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datepublished",
+         "value_original": "2026-04-14T16:36:21+00:00",
+         "value_normalized": "2026-04-14",
+         "scope": "DOCUMENT",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "datemodified",
+         "value_original": "2026-08-21T17:12:33+00:00",
+         "value_normalized": "2026-08-21",
+         "scope": "DOCUMENT",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-04-14T16:36:21+00:00",
+         "value_normalized": "2026-04-14",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-08-21T17:12:33+00:00",
+         "value_normalized": "2026-08-21",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://tuxcare.com/blog/node-eol/",
+        "capturado_em": "2026-11-13T13:30:54.263Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "4ff728cc-4b72-48db-b5c2-634331b70b4f",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2026-04-30",
+       "precisao": "DIA",
+       "citacao": "Node.js 20 end-of-life date follows on April 30, 2026",
+       "origem": "QUOTED_IN_SOURCE_TEXT"
+      }
+     },
+     "coleta": {
+      "id_coleta": "6919b66f-92a2-4cbc-a121-9f25c8cdc9d7",
+      "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+      "url_original": "https://tuxcare.com/blog/node-eol",
+      "url_canonica": "https://tuxcare.com/blog/node-eol",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "81afda5adfb411a127533ec8d2d44081b12134ddf0f42b7b6fd17be7944a4b44",
+      "coletado_em": "2026-11-13T13:30:52.918Z",
+      "id_operacao_busca": "5e166240-abcc-4404-b8e1-044db4d9f599",
+      "id_operacao_extracao": "f8111c3e-1533-49dd-a795-041708868953",
+      "consulta": "Node.js 20 is in Active LTS",
+      "parametros_busca": {
+       "query": "Node.js 20 is in Active LTS",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://nodejs.org/en/blog/release/v20.9.0",
+        "https://versionlog.com/nodejs/20",
+        "https://endoflife.date/nodejs",
+        "https://tuxcare.com/blog/node-eol",
+        "https://safeguard.sh/resources/blog/node-docker-tag-production-lts-major-exact"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "c9e40167-78cb-4211-8028-50bbba373d11",
+       "operacoes_busca": [
+        {
+         "id_operacao": "5e166240-abcc-4404-b8e1-044db4d9f599",
+         "request_id": "c9e40167-78cb-4211-8028-50bbba373d11",
+         "modo_busca": "GERAL",
+         "resultado_id": "d7ecbe-00",
+         "parametros": {
+          "query": "Node.js 20 is in Active LTS",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "4ff728cc-4b72-48db-b5c2-634331b70b4f",
+       "resultado_id": "d7ecbe-00",
+       "relevancia": 0.8000679,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 14 Apr 2026 16:36:21 GMT",
+         "value_normalized": "2026-04-14",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 13:22:49 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://tuxcare.com/blog/node-eol/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-04-14T16:36:21+00:00",
+         "value_normalized": "2026-04-14",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-08-21T17:12:33+00:00",
+         "value_normalized": "2026-08-21",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datepublished",
+         "value_original": "2026-04-14T16:36:21+00:00",
+         "value_normalized": "2026-04-14",
+         "scope": "DOCUMENT",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "datemodified",
+         "value_original": "2026-08-21T17:12:33+00:00",
+         "value_normalized": "2026-08-21",
+         "scope": "DOCUMENT",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-04-14T16:36:21+00:00",
+         "value_normalized": "2026-04-14",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-08-21T17:12:33+00:00",
+         "value_normalized": "2026-08-21",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://tuxcare.com/blog/node-eol/",
+        "capturado_em": "2026-11-13T13:30:54.263Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Node.js End-of-Life: Dates, Risks & What to Do Next",
+      "url": "https://tuxcare.com/blog/node-eol",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 16381,
+      "caracteres_preparados": 7992,
+      "trecho_analisado": "TÍTULO DA FONTE: Node.js End-of-Life: Dates, Risks & What to Do Next\nURL DA FONTE: https://tuxcare.com/blog/node-eol\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n[![TuxCare Inc](https://tuxcare.com/wp-content/themes/tuxcare-2022/img/home/logo.svg)](https://tuxcare.com/)\n\n**php2shell patches (CVE-2026-109618 and CVE-2026-109619) for EOL PHP are out now.** With sales replies slower than usual due to high demand, the fastest route to patched packages is to [buy ELS for Runtimes online (opens in new tab)](/buy/els/?family=rt).\n\n| [Read the patch FAQ](/els-php2shell-patches-faq/)\n\n+ [Linux Tips & Patch Management](https://tuxcare.com/blog/category/linux-tips-and-patch-management/)\n\n# Node.js End-of-Life: Dates, Risks & What to Do Next\n\nApril 14, 2026 -  📖 9 min\n\n## Key Takeaways\n\n* Node.js follows a predictable LTS lifecycle of about 30 months.\n\n* End-of-life Node.js versions expose systems to unpatched CVEs, compliance failures, and dependency breakage.\n\n* The safest path is to upgrade to a supported LTS version when possible.\n\n* If an immediate upgrade isn’t feasible, TuxCare helps keep your applications patched and compliant beyond end of life.\n\n[When a Node.js version reaches end of life](h",
+      "citacao_chave": "Node.js 20 end-of-life date follows on April 30, 2026.",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The article notes Node.js 20 reaches end‑of‑life on 30 Apr 2026 and that from 1 May 2026 it no longer receives official patches, indicating Active LTS has ended."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "The article notes Node.js 20 reaches end‑of‑life on 30 Apr 2026 and that from 1 May 2026 it no longer receives official patches, indicating Active LTS has ended."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 197,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2026-04-30"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "Which Node.js Docker tag should production use: lts, major",
+      "url": "https://safeguard.sh/resources/blog/node-docker-tag-production-lts-major-exact",
+      "conteudo": "[Skip to content](#main-content)\n\n[![Safeguard](/brand/safeguard-lockup-ink.svg)![Safeguard](/brand/safeguard-lockup-white.svg)](/)\n\nDeveloper Tools•\n\n# Which Node.js Docker tag should production use: lts, major or exact?\n\nPin the major line and variant, such as 24-slim, and rebuild often. Floating lts moves under you, and exact versions need a rebuild routine. How to choose.\n\nSS\n\nSafeguard Security Team\n\n4 min read\n\nFor production, pin a supported even-numbered major line with a variant, such as node:24-slim, and rebuild on a schedule. A floating lts tag moves to a new major when the project promotes one, and a fully exact tag stops receiving patches until you change it yourself.\n\n## What t…",
+      "coletado_em": "2026-11-13T13:30:52.918Z",
+      "data_publicacao": "2026-10-19",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://safeguard.sh/resources/blog/node-docker-tag-production-lts-major-exact",
+      "relevancia": 0.5171137,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "f55559f9-2160-4a85-81f8-4dd03a41d6fb",
+       "resultado_id": "74829a-02",
+       "response_time_busca": 2,
+       "response_time_extracao": 0.02,
+       "consulta": "Node.js 20 is in Active LTS",
+       "origem_principal": {
+        "id_operacao": "0b39bcb9-e66f-4f7f-b268-dec9843373e1",
+        "request_id": "f55559f9-2160-4a85-81f8-4dd03a41d6fb",
+        "modo_busca": "NOTICIAS",
+        "resultado_id": "74829a-02",
+        "parametros": {
+         "query": "Node.js 20 is in Active LTS",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "0b39bcb9-e66f-4f7f-b268-dec9843373e1",
+         "request_id": "f55559f9-2160-4a85-81f8-4dd03a41d6fb",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "74829a-02",
+         "parametros": {
+          "query": "Node.js 20 is in Active LTS",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Mon, 19 Oct 2026 05:50:11 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 19 Oct 2026 05:50:11 GMT",
+         "value_normalized": "2026-10-19",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://safeguard.sh/resources/blog/node-docker-tag-production-lts-major-exact",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-10-19T05:50:11.388Z",
+         "value_normalized": "2026-10-19",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-10-19T05:50:11.388Z",
+         "value_normalized": "2026-10-19",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-19T05:50:11.388Z",
+         "value_normalized": "2026-10-19",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-10-19T05:50:11.388Z",
+         "value_normalized": "2026-10-19",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://safeguard.sh/resources/blog/node-docker-tag-production-lts-major-exact",
+        "capturado_em": "2026-11-13T13:30:55.455Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "4ff728cc-4b72-48db-b5c2-634331b70b4f",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "4f87c09c-e1c7-4376-af3c-6c95837c5238",
+      "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+      "url_original": "https://safeguard.sh/resources/blog/node-docker-tag-production-lts-major-exact",
+      "url_canonica": "https://safeguard.sh/resources/blog/node-docker-tag-production-lts-major-exact",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "e9d4b1e6bdc3e7af112cd646372447eb45fe8ad5120515fa56ecfc53ea19d505",
+      "coletado_em": "2026-11-13T13:30:52.918Z",
+      "id_operacao_busca": "0b39bcb9-e66f-4f7f-b268-dec9843373e1",
+      "id_operacao_extracao": "f8111c3e-1533-49dd-a795-041708868953",
+      "consulta": "Node.js 20 is in Active LTS",
+      "parametros_busca": {
+       "query": "Node.js 20 is in Active LTS",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://nodejs.org/en/blog/release/v20.9.0",
+        "https://versionlog.com/nodejs/20",
+        "https://endoflife.date/nodejs",
+        "https://tuxcare.com/blog/node-eol",
+        "https://safeguard.sh/resources/blog/node-docker-tag-production-lts-major-exact"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "f55559f9-2160-4a85-81f8-4dd03a41d6fb",
+       "operacoes_busca": [
+        {
+         "id_operacao": "0b39bcb9-e66f-4f7f-b268-dec9843373e1",
+         "request_id": "f55559f9-2160-4a85-81f8-4dd03a41d6fb",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "74829a-02",
+         "parametros": {
+          "query": "Node.js 20 is in Active LTS",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "request_id_extracao": "4ff728cc-4b72-48db-b5c2-634331b70b4f",
+       "resultado_id": "74829a-02",
+       "relevancia": 0.5171137,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 19 Oct 2026 05:50:11 GMT",
+         "value_normalized": "2026-10-19",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://safeguard.sh/resources/blog/node-docker-tag-production-lts-major-exact",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-10-19T05:50:11.388Z",
+         "value_normalized": "2026-10-19",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-10-19T05:50:11.388Z",
+         "value_normalized": "2026-10-19",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-19T05:50:11.388Z",
+         "value_normalized": "2026-10-19",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-10-19T05:50:11.388Z",
+         "value_normalized": "2026-10-19",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://safeguard.sh/resources/blog/node-docker-tag-production-lts-major-exact",
+        "capturado_em": "2026-11-13T13:30:55.455Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Which Node.js Docker tag should production use: lts, major",
+      "url": "https://safeguard.sh/resources/blog/node-docker-tag-production-lts-major-exact",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 6625,
+      "caracteres_preparados": 6625,
+      "trecho_analisado": "TÍTULO DA FONTE: Which Node.js Docker tag should production use: lts, major\nURL DA FONTE: https://safeguard.sh/resources/blog/node-docker-tag-production-lts-major-exact\n\nCONTEÚDO DA FONTE:\n[Skip to content](#main-content)\n\n[![Safeguard](/brand/safeguard-lockup-ink.svg)![Safeguard](/brand/safeguard-lockup-white.svg)](/)\n\nDeveloper Tools•\n\n# Which Node.js Docker tag should production use: lts, major or exact?\n\nPin the major line and variant, such as 24-slim, and rebuild often. Floating lts moves under you, and exact versions need a rebuild routine. How to choose.\n\nSS\n\nSafeguard Security Team\n\n4 min read\n\nFor production, pin a supported even-numbered major line with a variant, such as node:24-slim, and rebuild on a schedule. A floating lts tag moves to a new major when the project promotes one, and a fully exact tag stops receiving patches until you change it yourself.\n\n## What the tags mean\n\nThe official Node.js image publishes several kinds of tag for the same release. For the current Active LTS line, the Docker Library page lists tags such as the major number, the minor, the full patch version, a codename, and `lts`. Variants add a suffix, for example slim, alpine or a Debian relea",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "RELATED_INSUFFICIENT",
+      "justificativa": "The source discusses LTS status of other Node.js versions (24, 22, 26) but does not provide the current status of Node.js 20."
+     },
+     "classificacao": {
+      "postura": "INSUFFICIENT",
+      "justificativa": "The source discusses LTS status of other Node.js versions (24, 22, 26) but does not provide the current status of Node.js 20."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 25,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2026-10-19"
+     }
+    }
+   ],
+   "erro_busca": null,
+   "risco_desatualizacao": {
+    "nivel": "HIGH",
+    "sensivel_ao_tempo": true,
+    "motivos": [
+     "Software versions and support dates change often (checked against a 90-day window)"
+    ]
+   },
+   "dominios_oficiais_usados": [],
+   "dominios_oficiais_automaticos": [],
+   "agregacao": {
+    "status": "CLASSIFICADO",
+    "conclusao_factual": {
+     "status": "CONTRADIZ",
+     "resumo": "As evidências utilizáveis contradizem a afirmação."
+    },
+    "veredito": "CONTRADICAO_FRACA",
+    "resumo": "As evidências utilizáveis contradizem a afirmação, mas nenhuma fonte oficial com data ligada ao fato confirma a contradição. Trate a afirmação como possivelmente desatualizada ou incorreta e revise as fontes.",
+    "afirmacao": "Node.js 20 is in Active LTS",
+    "score_qualidade_evidencia": {
+     "valor": 40,
+     "escala": "0-100",
+     "natureza": "HEURISTICA",
+     "interpretacao": "Qualidade estrutural das evidências, não probabilidade de verdade.",
+     "componentes": {
+      "autoridade": 10,
+      "atualidade": 0,
+      "diversidade_fontes": 20,
+      "concordancia": 10
+     }
+    },
+    "freshness": {
+     "score": 3,
+     "status": "STALE",
+     "confidence": "LIMITED",
+     "algorithm_id": "CLAIM_FRESHNESS_SCORE",
+     "algorithm_version": "1.1.0",
+     "policy_id": "versao_api:90d:v1",
+     "as_of": "2026-11-13T13:30:47.939Z",
+     "evidence_summary": {
+      "received": 4,
+      "eligible": 3,
+      "independent_domains": 3,
+      "fresh": 0,
+      "stale": 3,
+      "excluded": 1
+     },
+     "drivers": [
+      {
+       "code": "ATTRIBUTE_DATED_STALE_EVIDENCE",
+       "evidence_id": null,
+       "date": "2024-10-01",
+       "age_days": 773,
+       "posture": "CONTRADICTS",
+       "domain": "nodejs.org",
+       "dependency_group": "source_cluster_001"
+      },
+      {
+       "code": "ATTRIBUTE_DATED_STALE_EVIDENCE",
+       "evidence_id": null,
+       "date": "2026-04-01",
+       "age_days": 226,
+       "posture": "CONTRADICTS",
+       "domain": "versionlog.com",
+       "dependency_group": "source_cluster_002"
+      },
+      {
+       "code": "ATTRIBUTE_DATED_STALE_EVIDENCE",
+       "evidence_id": null,
+       "date": "2026-04-30",
+       "age_days": 197,
+       "posture": "CONTRADICTS",
+       "domain": "tuxcare.com",
+       "dependency_group": "source_cluster_004"
+      },
+      {
+       "code": "EVIDENCE_EXCLUDED_FROM_TEMPORAL_SCORE",
+       "count": 1
+      }
+     ],
+     "limitations": [
+      "Índice temporal determinístico; não é probabilidade de verdade.",
+      "Datas de página sem vínculo explícito ao atributo foram excluídas."
+     ]
+    },
+    "concordancia": {
+     "algorithm_id": "SOURCE_AGREEMENT_INDEX",
+     "algorithm_version": "1.1.0",
+     "weights": {
+      "OFICIAL": 3,
+      "ACADEMICO": 3,
+      "NOTICIA": 2,
+      "REFERENCIA": 1.5,
+      "OUTRO": 1,
+      "BLOG_FORUM": 0.25
+     },
+     "score": 0,
+     "coverage": "STRONG",
+     "independent_sources": 4,
+     "source_types": [
+      "OFICIAL",
+      "NOTICIA",
+      "REFERENCIA",
+      "OUTRO"
+     ],
+     "supporting": 0,
+     "authoritative_supporting": 0,
+     "contradicting": 4,
+     "split": 0,
+     "by_type": {
+      "OFICIAL": {
+       "supports": 0,
+       "contradicts": 1,
+       "split": 0
+      },
+      "NOTICIA": {
+       "supports": 0,
+       "contradicts": 1,
+       "split": 0
+      },
+      "REFERENCIA": {
+       "supports": 0,
+       "contradicts": 1,
+       "split": 0
+      },
+      "OUTRO": {
+       "supports": 0,
+       "contradicts": 1,
+       "split": 0
+      }
+     },
+     "limitations": [
+      "Agreement between sources is not a probability of truth: sources can share the same mistake.",
+      "Copies and pages from the same site count once; independence is approximated by domain and text similarity."
+     ]
+    },
+    "recencia_pagina": {
+     "algorithm_id": "PAGE_DATE_RECENCY_INDEX",
+     "algorithm_version": "1.0.0",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "as_of": "2026-11-13T13:30:47.939Z",
+     "score": 3,
+     "status": "STALE",
+     "policy_id": "versao_api:90d:page:v1",
+     "newest_date": "2026-04-30",
+     "sources": [
+      {
+       "date": "2024-10-01",
+       "age_days": 773,
+       "status": "STALE",
+       "posture": "CONTRADICTS",
+       "domain": "nodejs.org",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-04-01",
+       "age_days": 226,
+       "status": "STALE",
+       "posture": "CONTRADICTS",
+       "domain": "versionlog.com",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-04-30",
+       "age_days": 197,
+       "status": "STALE",
+       "posture": "CONTRADICTS",
+       "domain": "tuxcare.com",
+       "evidence_id": null
+      }
+     ],
+     "limitations": [
+      "Baseado na data da página, não na data em que o dado específico mudou: confiança baixa.",
+      "Não substitui o índice de atualidade principal e não é probabilidade de verdade."
+     ]
+    },
+    "atualidade_afirmacao": {
+     "algorithm_id": "CLAIM_CURRENCY_SCORE",
+     "algorithm_version": "1.0.0",
+     "formula": "evidence_recency × support_share",
+     "window_days": 90,
+     "score": 0,
+     "status": "CONTRADICTED",
+     "basis": "FACT_DATE",
+     "confidence": "MEDIUM",
+     "evidence_recency": 3,
+     "support_share": 0,
+     "newest_date": "2026-04-30",
+     "newest_age_days": 197,
+     "within_window": false
+    },
+    "versao_regras": "1.2.0",
+    "metodo": "AGREGACAO_DETERMINISTICA",
+    "fontes_independentes": 4,
+    "grupos_distintos_de_evidencia": 4,
+    "dependencia_detectada": 0,
+    "dependencia_nao_verificada": true,
+    "nota_independencia": "Cópias exatas, quase duplicadas, URLs canônicas iguais e páginas do mesmo domínio são agrupadas; domínios sem sinal de cópia não têm independência editorial comprovada.",
+    "total_evidencias_utilizaveis": 4,
+    "fontes": [
+     {
+      "dominio": "nodejs.org",
+      "dominios": [
+       "nodejs.org"
+      ],
+      "grupo_dependencia_id": "source_cluster_001",
+      "oficial": true,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://nodejs.org/en/blog/release/v20.9.0"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Node.js — Node.js 20.9.0 (LTS)",
+        "url": "https://nodejs.org/en/blog/release/v20.9.0",
+        "categoria_fonte": "OFICIAL",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:30:52.918Z",
+        "data_publicacao": "2023-10-24",
+        "data_atualizacao": "2024-10-01",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Tue, 24 Oct 2023 00:00:00 GMT",
+          "value_normalized": "2023-10-24",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://nodejs.org/en/blog/release/v20.9.0",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Last Updated",
+          "value_original": "Oct 24, 2023",
+          "value_normalized": "2023-10-24",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_001",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "versionlog.com",
+      "dominios": [
+       "versionlog.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_002",
+      "oficial": false,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://versionlog.com/nodejs/20"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Node.js 20 (LTS) - What's New, Support Lifecycle & EOL",
+        "url": "https://versionlog.com/nodejs/20",
+        "categoria_fonte": "NOTICIA",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:30:52.918Z",
+        "data_publicacao": "2023-04-17",
+        "data_atualizacao": "2026-04-01",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Mon, 17 Apr 2023 00:00:00 GMT",
+          "value_normalized": "2023-04-17",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://versionlog.com/nodejs/20/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-03-24T00:00:00+00:00",
+          "value_normalized": "2026-03-24",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "softwareapplication"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-10-19T09:05:09+00:00",
+          "value_normalized": "2026-10-19",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "webpage"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_002",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "endoflife.date",
+      "dominios": [
+       "endoflife.date"
+      ],
+      "grupo_dependencia_id": "source_cluster_003",
+      "oficial": false,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://endoflife.date/nodejs"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Node.js | endoflife.date",
+        "url": "https://endoflife.date/nodejs",
+        "categoria_fonte": "REFERENCIA",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "UNVERIFIABLE",
+        "status_datas_declaradas": "INVALIDA_OU_INCOERENTE",
+        "consultado_em": "2026-11-13T13:30:52.918Z",
+        "data_publicacao": "2026-10-09",
+        "data_atualizacao": "2026-04-30",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Fri, 09 Oct 2026 04:00:00 GMT",
+          "value_normalized": "2026-10-09",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://endoflife.date/nodejs",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-11-12T00:08:23+00:00",
+          "value_normalized": "2026-11-12",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "webpage"
+          ]
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-11-12T00:08:23+00:00",
+          "value_normalized": "2026-11-12",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_003",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "tuxcare.com",
+      "dominios": [
+       "tuxcare.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_004",
+      "oficial": false,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://tuxcare.com/blog/node-eol"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Node.js End-of-Life: Dates, Risks & What to Do Next",
+        "url": "https://tuxcare.com/blog/node-eol",
+        "categoria_fonte": "OUTRO",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:30:52.918Z",
+        "data_publicacao": "2026-04-14",
+        "data_atualizacao": "2026-04-30",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Tue, 14 Apr 2026 16:36:21 GMT",
+          "value_normalized": "2026-04-14",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Fri, 13 Nov 2026 13:22:49 GMT",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://tuxcare.com/blog/node-eol/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2026-04-14T16:36:21+00:00",
+          "value_normalized": "2026-04-14",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "ARTICLE_MODIFIED_TIME",
+          "field": "article:modified_time",
+          "value_original": "2026-08-21T17:12:33+00:00",
+          "value_normalized": "2026-08-21",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datepublished",
+          "value_original": "2026-04-14T16:36:21+00:00",
+          "value_normalized": "2026-04-14",
+          "scope": "DOCUMENT",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "datemodified",
+          "value_original": "2026-08-21T17:12:33+00:00",
+          "value_normalized": "2026-08-21",
+          "scope": "DOCUMENT",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-04-14T16:36:21+00:00",
+          "value_normalized": "2026-04-14",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-08-21T17:12:33+00:00",
+          "value_normalized": "2026-08-21",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_004",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     }
+    ],
+    "limitacoes": [
+     "Nenhuma evidência possui data verificável e status de atualidade FRESH.",
+     "Domínios sem sinal detectado de duplicação não têm independência editorial comprovada; republicação com edição extensa ainda pode passar despercebida."
+    ],
+    "avaliado_em": "2026-11-13T13:31:03.565Z"
+   }
+  },
+  {
+   "id": "afirmacao_2",
+   "texto": "Node.js 20 is the recommended version for production",
+   "tipo_afirmacao": "versao_api",
+   "origem_tipo_afirmacao": "MODELO",
+   "nuances": {
+    "idioma": "en",
+    "variante": null,
+    "confianca_idioma": 1,
+    "valores": [],
+    "datas": [],
+    "expressoes_temporais": [],
+    "condicoes": [],
+    "mudancas": [],
+    "tempo_coloquial": [],
+    "girias": {
+     "aliases": [],
+     "expressoes": []
+    },
+    "consulta_busca": "Node.js 20 is the recommended version for production",
+    "dominios_oficiais_sugeridos": [],
+    "autoridades": [],
+    "notas": []
+   },
+   "evidencias": [
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OFICIAL",
+      "titulo": "Node.js — Node.js 20.0.0 (Current)",
+      "url": "https://nodejs.org/en/blog/release/v20.0.0",
+      "conteudo": "[Skip to content](#main)\n\n# Node.js 20.0.0 (Current)\n\n[RG](https://github.com/RafaelGSS)\n\nRafael Gonzaga\n\nNode.js 20.0.0 (Current)\n\n### [Notable Changes](#notable-changes)\n\n#### [Permission Model](#permission-model)\n\nNode.js now has an experimental feature called the Permission Model. It allows developers to restrict access to specific resources during program execution, such as file system operations, child process spawning, and worker thread creation. The API exists behind a flag `--experimental-permission` which when enabled will restrict access to all available permissions. By using this feature, developers can prevent their applications from accessing or modifying sensitive data or runn…",
+      "coletado_em": "2026-11-13T13:31:09.847Z",
+      "data_publicacao": "2023-04-18",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://nodejs.org/en/blog/release/v20.0.0",
+      "relevancia": 0.49088386,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "4373d52f-bcda-4402-9973-e508f106c56a",
+       "resultado_id": "1d8dab-03",
+       "response_time_busca": 1.12,
+       "response_time_extracao": 0.02,
+       "consulta": "Node.js 20 is the recommended version for production",
+       "origem_principal": {
+        "id_operacao": "8de98650-b28b-4c2e-8148-349fab6d07ec",
+        "request_id": "4373d52f-bcda-4402-9973-e508f106c56a",
+        "modo_busca": "GERAL",
+        "resultado_id": "1d8dab-03",
+        "parametros": {
+         "query": "Node.js 20 is the recommended version for production",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "8de98650-b28b-4c2e-8148-349fab6d07ec",
+         "request_id": "4373d52f-bcda-4402-9973-e508f106c56a",
+         "modo_busca": "GERAL",
+         "resultado_id": "1d8dab-03",
+         "parametros": {
+          "query": "Node.js 20 is the recommended version for production",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Tue, 18 Apr 2023 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 18 Apr 2023 00:00:00 GMT",
+         "value_normalized": "2023-04-18",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://nodejs.org/en/blog/release/v20.0.0",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Last Updated",
+         "value_original": "Apr 18, 2023",
+         "value_normalized": "2023-04-18",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://nodejs.org/en/blog/release/v20.0.0",
+        "capturado_em": "2026-11-13T13:31:09.800Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "a702bbd6-c55a-4431-915d-12be9308ef55",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "f474a519-2cda-48c7-84e8-93596fa8b424",
+      "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+      "url_original": "https://nodejs.org/en/blog/release/v20.0.0",
+      "url_canonica": "https://nodejs.org/en/blog/release/v20.0.0",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "ef3f3f8af33128c2789d07c24333f70a38229bc75f84f57527f2aecf3cc43491",
+      "coletado_em": "2026-11-13T13:31:09.847Z",
+      "id_operacao_busca": "8de98650-b28b-4c2e-8148-349fab6d07ec",
+      "id_operacao_extracao": "32d1a2bb-5463-467e-8c31-199738299d6e",
+      "consulta": "Node.js 20 is the recommended version for production",
+      "parametros_busca": {
+       "query": "Node.js 20 is the recommended version for production",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://nodejs.org/en/blog/release/v20.0.0",
+        "https://thehackernews.com/2026/01/critical-nodejs-vulnerability-can-cause.html",
+        "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of",
+        "https://www.investors.com/news/technology/eli-lilly-trillion-dollar-club-tech-companies/",
+        "https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "4373d52f-bcda-4402-9973-e508f106c56a",
+       "operacoes_busca": [
+        {
+         "id_operacao": "8de98650-b28b-4c2e-8148-349fab6d07ec",
+         "request_id": "4373d52f-bcda-4402-9973-e508f106c56a",
+         "modo_busca": "GERAL",
+         "resultado_id": "1d8dab-03",
+         "parametros": {
+          "query": "Node.js 20 is the recommended version for production",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "a702bbd6-c55a-4431-915d-12be9308ef55",
+       "resultado_id": "1d8dab-03",
+       "relevancia": 0.49088386,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 18 Apr 2023 00:00:00 GMT",
+         "value_normalized": "2023-04-18",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://nodejs.org/en/blog/release/v20.0.0",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Last Updated",
+         "value_original": "Apr 18, 2023",
+         "value_normalized": "2023-04-18",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://nodejs.org/en/blog/release/v20.0.0",
+        "capturado_em": "2026-11-13T13:31:09.800Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Node.js — Node.js 20.0.0 (Current)",
+      "url": "https://nodejs.org/en/blog/release/v20.0.0",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 45226,
+      "caracteres_preparados": 7963,
+      "trecho_analisado": "TÍTULO DA FONTE: Node.js — Node.js 20.0.0 (Current)\nURL DA FONTE: https://nodejs.org/en/blog/release/v20.0.0\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n[Skip to content](#main)\n\n# Node.js 20.0.0 (Current)\n\n[RG](https://github.com/RafaelGSS)\n\nRafael Gonzaga\n\nNode.js 20.0.0 (Current)\n\n### [Notable Changes](#notable-changes)\n\n#### [Permission Model](#permission-model)\n\nNode.js now has an experimental feature called the Permission Model.\n\nIt allows developers to restrict access to specific resources during program execution, such as file system operations, child process spawning, and worker thread creation.\n\nBy using this feature, developers can prevent their applications from accessing or modifying sensitive data or running potentially harmful code.\n\nMore information about the Permission Model can be found in the [Node.js documentation](https://nodejs.org/api/permissions.html#process-based-permissions).\n\nThe Permission Model was a contribution by Rafael Gonzaga in [#44004](https://github.com/nodejs/node/pull/44004).\n\n#### [Custom ESM loader hooks run on dedicated thread](#custom-esm-loader-hooks-run-on-dedicated-thread)\n\n#### [V8 11.3](#v8-113)\n\nThe V8 engine is updated to version 11.3, whic",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source describes new features of Node.js 20 and notes a module is production‑ready, but it does not state that Node.js 20 itself is recommended for production."
+     },
+     "classificacao": {
+      "postura": "INSUFFICIENT",
+      "justificativa": "The source describes new features of Node.js 20 and notes a module is production‑ready, but it does not state that Node.js 20 itself is recommended for production."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 1305,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2023-04-18"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "Critical Node.js Vulnerability Can Cause Server Crashes via async_hooks Stack Overflow - The Hacker News",
+      "url": "https://thehackernews.com/2026/01/critical-nodejs-vulnerability-can-cause.html",
+      "conteudo": "#1 Trusted Cybersecurity News Platform\n\nFollowed by 5.80+ million[**](https://twitter.com/thehackersnews) [**](https://www.linkedin.com/company/thehackernews/) [**](https://www.facebook.com/thehackernews)\n\n[![The Hacker News Logo](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA1IAAABdCAMAAACYRqd9AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACWUExURUdwTP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7KwB0MAAAAxdFJOUwBAwHCwIA+QYNCgAfKA+AUK/FHgOu4YSByq18UveCm76RNZ5Wlkhsql3Jy2jDWUlyR/G9pxAAASqUlEQVR42u2d6WKyvBKAowKqAQFx39e6t+X+b+7U9m2LyWQlgqdf5mcrSibz…",
+      "coletado_em": "2026-11-13T13:31:09.847Z",
+      "data_publicacao": "2026-01-14",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://thehackernews.com/2026/01/critical-nodejs-vulnerability-can-cause.html",
+      "relevancia": 0.060418423,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "8808b389-dded-4862-b985-90da206eec33",
+       "resultado_id": "e9d3e6-00",
+       "response_time_busca": 4.29,
+       "response_time_extracao": 0.02,
+       "consulta": "Node.js 20 is the recommended version for production",
+       "origem_principal": {
+        "id_operacao": "d27a4838-60ed-4aeb-b552-9ba27e4ea3e1",
+        "request_id": "8808b389-dded-4862-b985-90da206eec33",
+        "modo_busca": "NOTICIAS",
+        "resultado_id": "e9d3e6-00",
+        "parametros": {
+         "query": "Node.js 20 is the recommended version for production",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "d27a4838-60ed-4aeb-b552-9ba27e4ea3e1",
+         "request_id": "8808b389-dded-4862-b985-90da206eec33",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "e9d3e6-00",
+         "parametros": {
+          "query": "Node.js 20 is the recommended version for production",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Wed, 14 Jan 2026 07:05:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 14 Jan 2026 07:05:00 GMT",
+         "value_normalized": "2026-01-14",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 11:52:31 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://thehackernews.com/2026/01/critical-nodejs-vulnerability-can-cause.html",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datepublished",
+         "value_original": "2026-01-14T12:35:00+05:30",
+         "value_normalized": "2026-01-14",
+         "scope": "DOCUMENT",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "datemodified",
+         "value_original": "2026-01-14T09:28:31Z",
+         "value_normalized": "2026-01-14",
+         "scope": "DOCUMENT",
+         "source": "HTML_META"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://thehackernews.com/2026/01/critical-nodejs-vulnerability-can-cause.html",
+        "capturado_em": "2026-11-13T13:31:09.603Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "a702bbd6-c55a-4431-915d-12be9308ef55",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "df186f15-cd7f-47df-be90-386efa7418ca",
+      "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+      "url_original": "https://thehackernews.com/2026/01/critical-nodejs-vulnerability-can-cause.html",
+      "url_canonica": "https://thehackernews.com/2026/01/critical-nodejs-vulnerability-can-cause.html",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "2b8537aa4a0217cb683749237022849032a9bfa2470be77792266aac84e5d472",
+      "coletado_em": "2026-11-13T13:31:09.847Z",
+      "id_operacao_busca": "d27a4838-60ed-4aeb-b552-9ba27e4ea3e1",
+      "id_operacao_extracao": "32d1a2bb-5463-467e-8c31-199738299d6e",
+      "consulta": "Node.js 20 is the recommended version for production",
+      "parametros_busca": {
+       "query": "Node.js 20 is the recommended version for production",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://nodejs.org/en/blog/release/v20.0.0",
+        "https://thehackernews.com/2026/01/critical-nodejs-vulnerability-can-cause.html",
+        "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of",
+        "https://www.investors.com/news/technology/eli-lilly-trillion-dollar-club-tech-companies/",
+        "https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "8808b389-dded-4862-b985-90da206eec33",
+       "operacoes_busca": [
+        {
+         "id_operacao": "d27a4838-60ed-4aeb-b552-9ba27e4ea3e1",
+         "request_id": "8808b389-dded-4862-b985-90da206eec33",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "e9d3e6-00",
+         "parametros": {
+          "query": "Node.js 20 is the recommended version for production",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "request_id_extracao": "a702bbd6-c55a-4431-915d-12be9308ef55",
+       "resultado_id": "e9d3e6-00",
+       "relevancia": 0.060418423,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 14 Jan 2026 07:05:00 GMT",
+         "value_normalized": "2026-01-14",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 11:52:31 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://thehackernews.com/2026/01/critical-nodejs-vulnerability-can-cause.html",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datepublished",
+         "value_original": "2026-01-14T12:35:00+05:30",
+         "value_normalized": "2026-01-14",
+         "scope": "DOCUMENT",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "datemodified",
+         "value_original": "2026-01-14T09:28:31Z",
+         "value_normalized": "2026-01-14",
+         "scope": "DOCUMENT",
+         "source": "HTML_META"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://thehackernews.com/2026/01/critical-nodejs-vulnerability-can-cause.html",
+        "capturado_em": "2026-11-13T13:31:09.603Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Critical Node.js Vulnerability Can Cause Server Crashes via async_hooks Stack Overflow - The Hacker News",
+      "url": "https://thehackernews.com/2026/01/critical-nodejs-vulnerability-can-cause.html",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 36096,
+      "caracteres_preparados": 7971,
+      "trecho_analisado": "TÍTULO DA FONTE: Critical Node.js Vulnerability Can Cause Server Crashes via async_hooks Stack Overflow - The Hacker News\nURL DA FONTE: https://thehackernews.com/2026/01/critical-nodejs-vulnerability-can-cause.html\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n[![cybersecurity](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgueiGhtTJ4g8vfPjVOP22mnT6eczZI-CgiOkXQ_Zv0gVno2MkG5UlOExxvSSAylm8NAtCfFkeaPxbyR3vYtpyOVi9ROWrrVZ9FKHFBH1IrQCCR46b2kh7JNKxenqefzCkCUewWhqRlds-IYjwzH7N7iWGpXxzeqhS6vIHDWIohTDx2ZZZReOOwVWv-SAmG/s727-nu-rw-lo-l85-e365/wiz-d.png)](https://thehackernews.uk/ai-infographic-d)\n\n# [Critical Node.js Vulnerability Can Cause Server Crashes via async\\_hooks Stack Overflow](https://thehackernews.com/2026/01/critical-nodejs-vulnerability-can-cause.html)\n\n**Ravie Lakshmanan**Jan 14, 2026Application Security / Vulnerability\n\n[![Critical Node.js Vulnerability](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII= \"Critical Node.js Vulnerability\")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaCf34rufIAaB1zg0XCGzy86tGwLrk8gGoZ9woUybQk2mzmVq3TlkTzYf1MYnIA12yy5ujravpnTZ3UcDEtRlt_vPDS8VQroTd44vbZuatBDMsh3o",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "UNRELATED",
+      "justificativa": "The article discusses a security vulnerability affecting many Node.js versions and does not address which version is recommended for production."
+     },
+     "classificacao": {
+      "postura": "IRRELEVANT",
+      "justificativa": "The article discusses a security vulnerability affecting many Node.js versions and does not address which version is recommended for production."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 303,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2026-01-14"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Node.js Version Support: EOL Dates and Latest Releases (July 2026)",
+      "url": "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of",
+      "conteudo": "[NEW\n\nNode.js is going End-of-Life. Stay secure and compliant with Never-Ending Support.\n\n![](https://cdn.prod.website-files.com/62865614b39c464b76d339aa/65159b3f6df722a807194087_arrow-forward-slim-min.svg)](https://www.herodevs.com/support/node-nes)\n\n[![](https://cdn.prod.website-files.com/62865614b39c464b76d339aa/641c8722f2df570d33bfc249_arrow_backward_pink.svg)\n\nView all Blog Posts](/blog)\n\n![](https://cdn.prod.website-files.com/62876589ec366575fa309b1e/6a3c15a27123a4fe571fe226_EOL%20Software.svg)\n\nEOL Software\n\nJun 23, 2026\n\n# Node.js Version Support: EOL Dates and Latest Releases (July 2026)\n\nEnd-of-life means a technology no longer receives support, like vulnerability fixes, from the o…",
+      "coletado_em": "2026-11-13T13:31:09.847Z",
+      "data_publicacao": "2026-06-23",
+      "data_atualizacao": "2026-04-30",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of",
+      "relevancia": 0.66530186,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "4373d52f-bcda-4402-9973-e508f106c56a",
+       "resultado_id": "283506-01",
+       "response_time_busca": 1.12,
+       "response_time_extracao": 0.02,
+       "consulta": "Node.js 20 is the recommended version for production",
+       "origem_principal": {
+        "id_operacao": "8de98650-b28b-4c2e-8148-349fab6d07ec",
+        "request_id": "4373d52f-bcda-4402-9973-e508f106c56a",
+        "modo_busca": "GERAL",
+        "resultado_id": "283506-01",
+        "parametros": {
+         "query": "Node.js 20 is the recommended version for production",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "8de98650-b28b-4c2e-8148-349fab6d07ec",
+         "request_id": "4373d52f-bcda-4402-9973-e508f106c56a",
+         "modo_busca": "GERAL",
+         "resultado_id": "283506-01",
+         "parametros": {
+          "query": "Node.js 20 is the recommended version for production",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Tue, 23 Jun 2026 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 23 Jun 2026 00:00:00 GMT",
+         "value_normalized": "2026-06-23",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Thu, 12 Nov 2026 23:04:41 GMT",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2024-08-20T15:09:56.122Z",
+         "value_normalized": "2024-08-20",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-13T15:47:25.404Z",
+         "value_normalized": "2026-10-13",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of",
+        "capturado_em": "2026-11-13T13:31:09.790Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "a702bbd6-c55a-4431-915d-12be9308ef55",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2026-04-30",
+       "precisao": "DIA",
+       "citacao": "Node.js 20 reached end-of-life on April 30, 2026.",
+       "origem": "QUOTED_IN_SOURCE_TEXT"
+      }
+     },
+     "coleta": {
+      "id_coleta": "b17c7c64-63bf-4977-b9a7-404feec8543e",
+      "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+      "url_original": "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of",
+      "url_canonica": "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "707665aca07105208eb7cd89f41e097cce43fd22bb0892dd9c354ee2775f53c2",
+      "coletado_em": "2026-11-13T13:31:09.847Z",
+      "id_operacao_busca": "8de98650-b28b-4c2e-8148-349fab6d07ec",
+      "id_operacao_extracao": "32d1a2bb-5463-467e-8c31-199738299d6e",
+      "consulta": "Node.js 20 is the recommended version for production",
+      "parametros_busca": {
+       "query": "Node.js 20 is the recommended version for production",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://nodejs.org/en/blog/release/v20.0.0",
+        "https://thehackernews.com/2026/01/critical-nodejs-vulnerability-can-cause.html",
+        "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of",
+        "https://www.investors.com/news/technology/eli-lilly-trillion-dollar-club-tech-companies/",
+        "https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "4373d52f-bcda-4402-9973-e508f106c56a",
+       "operacoes_busca": [
+        {
+         "id_operacao": "8de98650-b28b-4c2e-8148-349fab6d07ec",
+         "request_id": "4373d52f-bcda-4402-9973-e508f106c56a",
+         "modo_busca": "GERAL",
+         "resultado_id": "283506-01",
+         "parametros": {
+          "query": "Node.js 20 is the recommended version for production",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "a702bbd6-c55a-4431-915d-12be9308ef55",
+       "resultado_id": "283506-01",
+       "relevancia": 0.66530186,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 23 Jun 2026 00:00:00 GMT",
+         "value_normalized": "2026-06-23",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Thu, 12 Nov 2026 23:04:41 GMT",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2024-08-20T15:09:56.122Z",
+         "value_normalized": "2024-08-20",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-13T15:47:25.404Z",
+         "value_normalized": "2026-10-13",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of",
+        "capturado_em": "2026-11-13T13:31:09.790Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Node.js Version Support: EOL Dates and Latest Releases (July 2026)",
+      "url": "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 17241,
+      "caracteres_preparados": 7984,
+      "trecho_analisado": "TÍTULO DA FONTE: Node.js Version Support: EOL Dates and Latest Releases (July 2026)\nURL DA FONTE: https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\nGive me the TL;DR\n\n![Node.js Version Support: EOL Dates and Latest Releases (July 2026)](https://cdn.prod.website-files.com/62876589ec366575fa309b1e/66c4b15535a59d4e63ca29d8_Node%20EOL-1.png)\n\n## **A complete reference for every Node.js release timeline, the CVEs hitting end-of-life versions, and what your options are once official support stops.**\n\n‍\n\nNode.js powers a huge share of the modern backend: it runs on millions of production servers, underpins the tooling for nearly every frontend framework, and is a core dependency in enterprise stacks across finance, healthcare, and government.\n\nIt also ships on a strict, predictable schedule.\n\nOnce a version reaches EOL, newly disclosed CVEs against it go unpatched in the official distribution, and your SCA scanners start flagging the runtime itself as a vulnerability with no fix path.\n\nAs of mid-2026, Node.js 18 and everything below it are end-of-life, and Node.js 20 reached EOL on April 30, 2026.\n\nThis guide is the de",
+      "citacao_chave": "Node.js 20 reached end-of-life on April 30, 2026.",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source states that Node.js 20 reached end‑of‑life on 30 April 2026, meaning it is no longer supported and therefore not recommended for production after that date."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "The source states that Node.js 20 reached end‑of‑life on 30 April 2026, meaning it is no longer supported and therefore not recommended for production after that date."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "UPDATE_BEFORE_PUBLICATION"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "Eli Lilly Tops $1 Trillion, Joins Tech Titans In Exclusive Club - Investor's Business Daily",
+      "url": "https://www.investors.com/news/technology/eli-lilly-trillion-dollar-club-tech-companies/",
+      "conteudo": "**BREAKING: [Tech Futures Fall, Nvidia Dives As Board Mulls Ousting CEO Huang](https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-coreweave-sandisk-nvidia-amd-nebius-bloom/)**\n\nStore\n\n[Subscribe](https://get.investors.com/ibd/?intcode=hpsubbutton|hpsubbutton|na|na|na|na|na||144112&src=A00544)Sign In\n\nMy Subscriptions\n\n[![Founder's Club](https://www.investors.com/wp-content/themes/ibd/dist/images/ibd_placeholders/product-foundersclub.png)Founder's Club](http://foundersclub.investors.com)\n\n[![SwingTrader](https://www.investors.com/wp-content/themes/ibd/dist/images/ibd_placeholders/Product_swingtrader.jpeg)SwingTrader](https://swingtrader.investors.com)\n\n[![Leaderboard]…",
+      "coletado_em": "2026-11-13T13:31:09.847Z",
+      "data_publicacao": "2025-11-21",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www.investors.com/news/technology/eli-lilly-trillion-dollar-club-tech-companies/",
+      "relevancia": 0.052327625,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "8808b389-dded-4862-b985-90da206eec33",
+       "resultado_id": "11d6f8-01",
+       "response_time_busca": 4.29,
+       "response_time_extracao": 0.02,
+       "consulta": "Node.js 20 is the recommended version for production",
+       "origem_principal": {
+        "id_operacao": "d27a4838-60ed-4aeb-b552-9ba27e4ea3e1",
+        "request_id": "8808b389-dded-4862-b985-90da206eec33",
+        "modo_busca": "NOTICIAS",
+        "resultado_id": "11d6f8-01",
+        "parametros": {
+         "query": "Node.js 20 is the recommended version for production",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "d27a4838-60ed-4aeb-b552-9ba27e4ea3e1",
+         "request_id": "8808b389-dded-4862-b985-90da206eec33",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "11d6f8-01",
+         "parametros": {
+          "query": "Node.js 20 is the recommended version for production",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Fri, 21 Nov 2025 17:16:39 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 21 Nov 2025 17:16:39 GMT",
+         "value_normalized": "2025-11-21",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 13:31:10 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.investors.com/news/technology/eli-lilly-trillion-dollar-club-tech-companies/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2025-11-21T17:16:39+00:00",
+         "value_normalized": "2025-11-21",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2025-11-21T21:42:57+00:00",
+         "value_normalized": "2025-11-21",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2025-11-21T17:16:39+00:00",
+         "value_normalized": "2025-11-21",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2025-11-21T21:42:57+00:00",
+         "value_normalized": "2025-11-21",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.investors.com/news/technology/eli-lilly-trillion-dollar-club-tech-companies/",
+        "capturado_em": "2026-11-13T13:31:10.669Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "a702bbd6-c55a-4431-915d-12be9308ef55",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "f88718b9-2752-4e86-af7b-f9ed0ad34637",
+      "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+      "url_original": "https://www.investors.com/news/technology/eli-lilly-trillion-dollar-club-tech-companies/",
+      "url_canonica": "https://www.investors.com/news/technology/eli-lilly-trillion-dollar-club-tech-companies/",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "c164bbeef848fdcd36a9ecc3fc29c1091f17e0738d23ffe00a4f49d5090910de",
+      "coletado_em": "2026-11-13T13:31:09.847Z",
+      "id_operacao_busca": "d27a4838-60ed-4aeb-b552-9ba27e4ea3e1",
+      "id_operacao_extracao": "32d1a2bb-5463-467e-8c31-199738299d6e",
+      "consulta": "Node.js 20 is the recommended version for production",
+      "parametros_busca": {
+       "query": "Node.js 20 is the recommended version for production",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://nodejs.org/en/blog/release/v20.0.0",
+        "https://thehackernews.com/2026/01/critical-nodejs-vulnerability-can-cause.html",
+        "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of",
+        "https://www.investors.com/news/technology/eli-lilly-trillion-dollar-club-tech-companies/",
+        "https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "8808b389-dded-4862-b985-90da206eec33",
+       "operacoes_busca": [
+        {
+         "id_operacao": "d27a4838-60ed-4aeb-b552-9ba27e4ea3e1",
+         "request_id": "8808b389-dded-4862-b985-90da206eec33",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "11d6f8-01",
+         "parametros": {
+          "query": "Node.js 20 is the recommended version for production",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "request_id_extracao": "a702bbd6-c55a-4431-915d-12be9308ef55",
+       "resultado_id": "11d6f8-01",
+       "relevancia": 0.052327625,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 21 Nov 2025 17:16:39 GMT",
+         "value_normalized": "2025-11-21",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 13:31:10 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.investors.com/news/technology/eli-lilly-trillion-dollar-club-tech-companies/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2025-11-21T17:16:39+00:00",
+         "value_normalized": "2025-11-21",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2025-11-21T21:42:57+00:00",
+         "value_normalized": "2025-11-21",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2025-11-21T17:16:39+00:00",
+         "value_normalized": "2025-11-21",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2025-11-21T21:42:57+00:00",
+         "value_normalized": "2025-11-21",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.investors.com/news/technology/eli-lilly-trillion-dollar-club-tech-companies/",
+        "capturado_em": "2026-11-13T13:31:10.669Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Eli Lilly Tops $1 Trillion, Joins Tech Titans In Exclusive Club - Investor's Business Daily",
+      "url": "https://www.investors.com/news/technology/eli-lilly-trillion-dollar-club-tech-companies/",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 17586,
+      "caracteres_preparados": 7875,
+      "trecho_analisado": "TÍTULO DA FONTE: Eli Lilly Tops $1 Trillion, Joins Tech Titans In Exclusive Club - Investor's Business Daily\nURL DA FONTE: https://www.investors.com/news/technology/eli-lilly-trillion-dollar-club-tech-companies/\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n* [Videos](https://www.investors.com/ibd-videos/)\n\n* [Learn](https://www.investors.com/how-to-invest/how-to-invest-rules-for-when-buy-and-sell-stocks-in-bull-and-bear-markets/)\n\n* [Store](https://get.investors.com/?src=APA1BQ)\n\n[MARKET TREND](https://research.investors.com/markettrend.aspx)\n\n[The Big Picture](https://www.investors.com/category/market-trend/the-big-picture/)[Stock Market Today](https://www.investors.com/news/stock-market-today-stock-market-news/)[ETF Market Strategy](https://www.investors.com/market-trend/ibds-etf-market-strategy/ibds-etf-market-strategy/)[Stock Market Data](https://www.investors.com/research/stock-market-data-dow-jones-sp-500-nasdaq-spdr-etfs/)[Psychological Indicators](https://research.investors.com/psychological-market-indicators/)[New?\n\nStart Here](https://get.investors.com/getting-started/?src=A00332A&intcode=EditorialTests_GettingStarted_MarketTrend)[IBD Digital: 2 Months for $20](https://get.investo",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "UNRELATED",
+      "justificativa": "The content is about Eli Lilly’s market cap and unrelated to Node.js version recommendations."
+     },
+     "classificacao": {
+      "postura": "IRRELEVANT",
+      "justificativa": "The content is about Eli Lilly’s market cap and unrelated to Node.js version recommendations."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 357,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2025-11-21"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "BLOG_FORUM",
+      "titulo": "Node.js LTS vs Current: Choosing the Right Version for Production | NodeSource posted on the topic | LinkedIn",
+      "url": "https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk",
+      "conteudo": "[![View organization page for NodeSource]()](https://www.linkedin.com/company/nodesource?trk=public_post_feed-actor-image) \n\n7,591 followers\n\n* [Report this post](/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fposts%2Fnodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk&trk=public_post_ellipsis-menu-semaphore-sign-in-redirect&guestReportContentType=POST&_f=guest-reporting)\n\nIf you're running [Node.js](http://Node.js?trk=public_post-text) in production, understanding the difference between LTS and Current is critical. Not all [Node.js](http://Node.js?trk=public_post-text) versions are meant for the same purpose: • Current → latest features, still st…",
+      "coletado_em": "2026-11-13T13:31:09.847Z",
+      "data_publicacao": "2026-05-02",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk",
+      "relevancia": 0.68257374,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "4373d52f-bcda-4402-9973-e508f106c56a",
+       "resultado_id": "233b1d-00",
+       "response_time_busca": 1.12,
+       "response_time_extracao": 0.02,
+       "consulta": "Node.js 20 is the recommended version for production",
+       "origem_principal": {
+        "id_operacao": "8de98650-b28b-4c2e-8148-349fab6d07ec",
+        "request_id": "4373d52f-bcda-4402-9973-e508f106c56a",
+        "modo_busca": "GERAL",
+        "resultado_id": "233b1d-00",
+        "parametros": {
+         "query": "Node.js 20 is the recommended version for production",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "8de98650-b28b-4c2e-8148-349fab6d07ec",
+         "request_id": "4373d52f-bcda-4402-9973-e508f106c56a",
+         "modo_busca": "GERAL",
+         "resultado_id": "233b1d-00",
+         "parametros": {
+          "query": "Node.js 20 is the recommended version for production",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Sat, 02 May 2026 21:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Sat, 02 May 2026 21:00:00 GMT",
+         "value_normalized": "2026-05-02",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-04-15T22:38:26.476Z",
+         "value_normalized": "2026-04-15",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "videoobject"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-04-15T22:38:41.891Z",
+         "value_normalized": "2026-04-15",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "comment"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-04-20T14:57:38.196Z",
+         "value_normalized": "2026-04-20",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "comment"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk",
+        "capturado_em": "2026-11-13T13:31:10.231Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "a702bbd6-c55a-4431-915d-12be9308ef55",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "22209cff-8a75-4fa8-af56-e184590fd27c",
+      "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+      "url_original": "https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk",
+      "url_canonica": "https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "60019374990ffe25c22859b5f1432a2bdae0eed48090f250e50ce38653488c81",
+      "coletado_em": "2026-11-13T13:31:09.847Z",
+      "id_operacao_busca": "8de98650-b28b-4c2e-8148-349fab6d07ec",
+      "id_operacao_extracao": "32d1a2bb-5463-467e-8c31-199738299d6e",
+      "consulta": "Node.js 20 is the recommended version for production",
+      "parametros_busca": {
+       "query": "Node.js 20 is the recommended version for production",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://nodejs.org/en/blog/release/v20.0.0",
+        "https://thehackernews.com/2026/01/critical-nodejs-vulnerability-can-cause.html",
+        "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of",
+        "https://www.investors.com/news/technology/eli-lilly-trillion-dollar-club-tech-companies/",
+        "https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "4373d52f-bcda-4402-9973-e508f106c56a",
+       "operacoes_busca": [
+        {
+         "id_operacao": "8de98650-b28b-4c2e-8148-349fab6d07ec",
+         "request_id": "4373d52f-bcda-4402-9973-e508f106c56a",
+         "modo_busca": "GERAL",
+         "resultado_id": "233b1d-00",
+         "parametros": {
+          "query": "Node.js 20 is the recommended version for production",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "a702bbd6-c55a-4431-915d-12be9308ef55",
+       "resultado_id": "233b1d-00",
+       "relevancia": 0.68257374,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Sat, 02 May 2026 21:00:00 GMT",
+         "value_normalized": "2026-05-02",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-04-15T22:38:26.476Z",
+         "value_normalized": "2026-04-15",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "videoobject"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-04-15T22:38:41.891Z",
+         "value_normalized": "2026-04-15",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "comment"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-04-20T14:57:38.196Z",
+         "value_normalized": "2026-04-20",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "comment"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk",
+        "capturado_em": "2026-11-13T13:31:10.231Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Node.js LTS vs Current: Choosing the Right Version for Production | NodeSource posted on the topic | LinkedIn",
+      "url": "https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 40245,
+      "caracteres_preparados": 7964,
+      "trecho_analisado": "TÍTULO DA FONTE: Node.js LTS vs Current: Choosing the Right Version for Production | NodeSource posted on the topic | LinkedIn\nURL DA FONTE: https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n7,591 followers\n\n* [Report this post](/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fposts%2Fnodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk&trk=public_post_ellipsis-menu-semaphore-sign-in-redirect&guestReportContentType=POST&_f=guest-reporting)\n\nIf you're running [Node.js](http://Node.js?trk=public_post-text) in production, understanding the difference between LTS and Current is critical.\n\nNot all [Node.js](http://Node.js?trk=public_post-text) versions are meant for the same purpose: • Current → latest features, still stabilizing • LTS → long-term support, production-ready In this video, we break down: • What LTS and Current actually mean • How [Node.js](http://Node.js?trk=public_post-text) versions evolve • A real example of risky vs safe versions • Which one you should use depending on your system 🎬 Watch here: [https://lnkd.in/eVWqUurK](https:",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The post says Node.js 20 is reaching end‑of‑life and is being deprecated by Vercel, indicating it is not the recommended version for production."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "The post says Node.js 20 is reaching end‑of‑life and is being deprecated by Vercel, indicating it is not the recommended version for production."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 195,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2026-05-02"
+     }
+    }
+   ],
+   "erro_busca": null,
+   "risco_desatualizacao": {
+    "nivel": "HIGH",
+    "sensivel_ao_tempo": true,
+    "motivos": [
+     "Software versions and support dates change often (checked against a 90-day window)"
+    ]
+   },
+   "dominios_oficiais_usados": [],
+   "dominios_oficiais_automaticos": [],
+   "agregacao": {
+    "status": "CLASSIFICADO",
+    "conclusao_factual": {
+     "status": "CONTRADIZ",
+     "resumo": "As evidências utilizáveis contradizem a afirmação."
+    },
+    "veredito": "CONTRADICAO_FRACA",
+    "resumo": "As evidências utilizáveis contradizem a afirmação, mas nenhuma fonte oficial com data ligada ao fato confirma a contradição. Trate a afirmação como possivelmente desatualizada ou incorreta e revise as fontes.",
+    "afirmacao": "Node.js 20 is the recommended version for production",
+    "score_qualidade_evidencia": {
+     "valor": 30,
+     "escala": "0-100",
+     "natureza": "HEURISTICA",
+     "interpretacao": "Qualidade estrutural das evidências, não probabilidade de verdade.",
+     "componentes": {
+      "autoridade": 0,
+      "atualidade": 0,
+      "diversidade_fontes": 20,
+      "concordancia": 10
+     }
+    },
+    "freshness": {
+     "score": null,
+     "status": "UNVERIFIABLE",
+     "confidence": "INSUFFICIENT",
+     "algorithm_id": "CLAIM_FRESHNESS_SCORE",
+     "algorithm_version": "1.1.0",
+     "policy_id": "versao_api:90d:v1",
+     "as_of": "2026-11-13T13:30:47.939Z",
+     "evidence_summary": {
+      "received": 2,
+      "eligible": 0,
+      "independent_domains": 0,
+      "excluded": 2
+     },
+     "drivers": [
+      {
+       "code": "NO_ATTRIBUTE_DATED_EVIDENCE"
+      }
+     ],
+     "limitations": [
+      "Não há evidência com data verificável ligada ao atributo desta afirmação."
+     ]
+    },
+    "concordancia": {
+     "algorithm_id": "SOURCE_AGREEMENT_INDEX",
+     "algorithm_version": "1.1.0",
+     "weights": {
+      "OFICIAL": 3,
+      "ACADEMICO": 3,
+      "NOTICIA": 2,
+      "REFERENCIA": 1.5,
+      "OUTRO": 1,
+      "BLOG_FORUM": 0.25
+     },
+     "score": 0,
+     "coverage": "MODERATE",
+     "independent_sources": 2,
+     "source_types": [
+      "OUTRO",
+      "BLOG_FORUM"
+     ],
+     "supporting": 0,
+     "authoritative_supporting": 0,
+     "contradicting": 2,
+     "split": 0,
+     "by_type": {
+      "OUTRO": {
+       "supports": 0,
+       "contradicts": 1,
+       "split": 0
+      },
+      "BLOG_FORUM": {
+       "supports": 0,
+       "contradicts": 1,
+       "split": 0
+      }
+     },
+     "limitations": [
+      "Agreement between sources is not a probability of truth: sources can share the same mistake.",
+      "Copies and pages from the same site count once; independence is approximated by domain and text similarity."
+     ]
+    },
+    "recencia_pagina": {
+     "algorithm_id": "PAGE_DATE_RECENCY_INDEX",
+     "algorithm_version": "1.0.0",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "as_of": "2026-11-13T13:30:47.939Z",
+     "score": 5,
+     "status": "STALE",
+     "policy_id": "versao_api:90d:page:v1",
+     "newest_date": "2026-05-02",
+     "sources": [
+      {
+       "date": "2026-05-02",
+       "age_days": 195,
+       "status": "STALE",
+       "posture": "CONTRADICTS",
+       "domain": "linkedin.com",
+       "evidence_id": null
+      }
+     ],
+     "limitations": [
+      "Baseado na data da página, não na data em que o dado específico mudou: confiança baixa.",
+      "Não substitui o índice de atualidade principal e não é probabilidade de verdade."
+     ]
+    },
+    "atualidade_afirmacao": {
+     "algorithm_id": "CLAIM_CURRENCY_SCORE",
+     "algorithm_version": "1.0.0",
+     "formula": "evidence_recency × support_share",
+     "window_days": 90,
+     "score": 0,
+     "status": "CONTRADICTED",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "evidence_recency": 5,
+     "support_share": 0,
+     "newest_date": "2026-05-02",
+     "newest_age_days": 195,
+     "within_window": false
+    },
+    "versao_regras": "1.2.0",
+    "metodo": "AGREGACAO_DETERMINISTICA",
+    "fontes_independentes": 2,
+    "grupos_distintos_de_evidencia": 2,
+    "dependencia_detectada": 0,
+    "dependencia_nao_verificada": true,
+    "nota_independencia": "Cópias exatas, quase duplicadas, URLs canônicas iguais e páginas do mesmo domínio são agrupadas; domínios sem sinal de cópia não têm independência editorial comprovada.",
+    "total_evidencias_utilizaveis": 2,
+    "fontes": [
+     {
+      "dominio": "herodevs.com",
+      "dominios": [
+       "herodevs.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_001",
+      "oficial": false,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Node.js Version Support: EOL Dates and Latest Releases (July 2026)",
+        "url": "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of",
+        "categoria_fonte": "OUTRO",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "UNVERIFIABLE",
+        "status_datas_declaradas": "INVALIDA_OU_INCOERENTE",
+        "consultado_em": "2026-11-13T13:31:09.847Z",
+        "data_publicacao": "2026-06-23",
+        "data_atualizacao": "2026-04-30",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Tue, 23 Jun 2026 00:00:00 GMT",
+          "value_normalized": "2026-06-23",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Thu, 12 Nov 2026 23:04:41 GMT",
+          "value_normalized": "2026-11-12",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2024-08-20T15:09:56.122Z",
+          "value_normalized": "2024-08-20",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "blogposting"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-10-13T15:47:25.404Z",
+          "value_normalized": "2026-10-13",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "blogposting"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_001",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "linkedin.com",
+      "dominios": [
+       "linkedin.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_002",
+      "oficial": false,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Node.js LTS vs Current: Choosing the Right Version for Production | NodeSource posted on the topic | LinkedIn",
+        "url": "https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk",
+        "categoria_fonte": "BLOG_FORUM",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:31:09.847Z",
+        "data_publicacao": "2026-05-02",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Sat, 02 May 2026 21:00:00 GMT",
+          "value_normalized": "2026-05-02",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-04-15T22:38:26.476Z",
+          "value_normalized": "2026-04-15",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "videoobject"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-04-15T22:38:41.891Z",
+          "value_normalized": "2026-04-15",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "comment"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-04-20T14:57:38.196Z",
+          "value_normalized": "2026-04-20",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "comment"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_002",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     }
+    ],
+    "limitacoes": [
+     "Nenhuma evidência possui data verificável e status de atualidade FRESH.",
+     "Uma data da página ou do resultado de busca não comprova quando o atributo da afirmação foi publicado ou atualizado.",
+     "Nenhuma fonte pertence ao cadastro de domínios oficiais informado.",
+     "Domínios sem sinal detectado de duplicação não têm independência editorial comprovada; republicação com edição extensa ainda pode passar despercebida."
+    ],
+    "avaliado_em": "2026-11-13T13:31:37.678Z"
+   }
+  }
+ ],
+ "afirmacoes_omitidas": [],
+ "resposta_corrigida": {
+  "texto": "Node.js 20 reached end‑of‑life on April 30 2026, after its Active LTS period ended in October 2024 [1][2][3]. Therefore, it is not recommended for production [4][5].",
+  "mudancas": [
+   {
+    "claim_id": "afirmacao_1",
+    "what": "added citations"
+   },
+   {
+    "claim_id": "afirmacao_2",
+    "what": "added citations"
+   }
+  ],
+  "fontes_citadas": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "tentativas": 2,
+  "citacoes_anexadas": false,
+  "fontes": [
+   {
+    "n": 1,
+    "url": "https://nodejs.org/en/blog/release/v20.9.0",
+    "titulo": "Node.js — Node.js 20.9.0 (LTS)",
+    "tipo": "OFICIAL",
+    "postura": "CONTRADICTS",
+    "data": "2024-10-01"
+   },
+   {
+    "n": 2,
+    "url": "https://versionlog.com/nodejs/20",
+    "titulo": "Node.js 20 (LTS) - What's New, Support Lifecycle & EOL",
+    "tipo": "NOTICIA",
+    "postura": "CONTRADICTS",
+    "data": "2026-04-01"
+   },
+   {
+    "n": 3,
+    "url": "https://endoflife.date/nodejs",
+    "titulo": "Node.js | endoflife.date",
+    "tipo": "REFERENCIA",
+    "postura": "CONTRADICTS",
+    "data": "2026-04-30"
+   },
+   {
+    "n": 4,
+    "url": "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of",
+    "titulo": "Node.js Version Support: EOL Dates and Latest Releases (July 2026)",
+    "tipo": "OUTRO",
+    "postura": "CONTRADICTS",
+    "data": "2026-04-30"
+   },
+   {
+    "n": 5,
+    "url": "https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk",
+    "titulo": "Node.js LTS vs Current: Choosing the Right Version for Production | NodeSource posted on the topic | LinkedIn",
+    "tipo": "BLOG_FORUM",
+    "postura": "CONTRADICTS",
+    "data": "2026-05-02"
+   }
+  ],
+  "metodo": "MODEL_REWRITE_FROM_VERIFIED_EVIDENCE"
+ },
+ "rastreabilidade_modelo": [
+  {
+   "id_chamada": "fdce31ed-3901-4ea7-b3fd-d62a19d379d4",
+   "id_requisicao_enviada": "8d780d44-bd19-4f27-becb-6b86fdbfb9ef",
+   "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+   "etapa": "DECOMPOSICAO",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 745,
+   "tokens": {
+    "entrada": 847,
+    "saida": 201,
+    "total": 1048
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "8d780d44-bd19-4f27-becb-6b86fdbfb9ef",
+   "id_trace": "65ebf2aa2da6438a9e04280a6e2ad76b",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 745.466,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:30:47.940Z"
+  },
+  {
+   "id_chamada": "9c296a2c-b2e1-4a03-ac32-57c8114c244f",
+   "id_requisicao_enviada": "3d7e83c1-9c18-4812-9a4f-938b143f987f",
+   "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 3045,
+   "tokens": {
+    "entrada": 4213,
+    "saida": 2048,
+    "total": 6261
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "3d7e83c1-9c18-4812-9a4f-938b143f987f",
+   "id_trace": "6a0aaa8f3a8748a9ba0364e2a86a7d75",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 3045.534,
+   "status_http": 200,
+   "status": "RESPOSTA_INVALIDA",
+   "registrada_em": "2026-11-13T13:30:55.492Z",
+   "erro": "Resposta vazia ou em formato inesperado."
+  },
+  {
+   "id_chamada": "67769da4-d2d9-4877-a345-9a0623556e6a",
+   "id_requisicao_enviada": "5a75dbe0-11a1-4d4a-a318-76d31115898a",
+   "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 4846,
+   "tokens": {
+    "entrada": 4213,
+    "saida": 1952,
+    "total": 6165
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "5a75dbe0-11a1-4d4a-a318-76d31115898a",
+   "id_trace": "03fe247b169d4e14953910518b26e23f",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 4880.784,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:30:58.571Z"
+  },
+  {
+   "id_chamada": "fa1757bf-20cf-4b55-9ff9-4e744995fd99",
+   "id_requisicao_enviada": "e9278bb1-3517-42da-a521-2308114d1a95",
+   "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_2",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 2998,
+   "tokens": {
+    "entrada": 4146,
+    "saida": 2048,
+    "total": 6194
+   },
+   "espera_limite_ms": 19500,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "e9278bb1-3517-42da-a521-2308114d1a95",
+   "id_trace": "9fa54a3a7cb743dca1d377b5e18f6dee",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 2998.83,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:31:10.709Z"
+  },
+  {
+   "id_chamada": "65f4f2ee-31fe-4ff6-8f71-a629cec69e61",
+   "id_requisicao_enviada": "34d136b8-51b1-4f94-891f-f3c58937a25e",
+   "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_2",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 4198,
+   "tokens": {
+    "entrada": 4146,
+    "saida": 1777,
+    "total": 5923
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "34d136b8-51b1-4f94-891f-f3c58937a25e",
+   "id_trace": "e3f25d98919d4e12bdb60e258a8ff10c",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 4234.004,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:31:33.378Z"
+  },
+  {
+   "id_chamada": "921174d9-0fa5-4175-aafa-4807d69e4b7b",
+   "id_requisicao_enviada": "3502d72c-5856-47bf-b184-9cf37c33d4c6",
+   "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 1126,
+   "tokens": {
+    "entrada": 1297,
+    "saida": 557,
+    "total": 1854
+   },
+   "espera_limite_ms": 17098,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "3502d72c-5856-47bf-b184-9cf37c33d4c6",
+   "id_trace": "96ee2dbf98bd45d08167ac9874b75573",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 1126.573,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:31:37.679Z"
+  },
+  {
+   "id_chamada": "168698f1-476b-4ec1-b6cd-a5ce0c9f1ca3",
+   "id_requisicao_enviada": "eff19ec3-c27a-4ca5-9f1c-286ffdc4e2a4",
+   "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 2,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 2720,
+   "tokens": {
+    "entrada": 1376,
+    "saida": 1073,
+    "total": 2449
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "eff19ec3-c27a-4ca5-9f1c-286ffdc4e2a4",
+   "id_trace": "9198d3f6585545978ffce7620e887865",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 2758.127,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:31:56.011Z"
+  }
+ ],
+ "rastreabilidade_pesquisa": [
+  {
+   "id_operacao": "5e166240-abcc-4404-b8e1-044db4d9f599",
+   "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Node.js 20 is in Active LTS",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:30:48.976Z",
+   "finalizada_em": "2026-11-13T13:30:50.305Z",
+   "duracao_ms": 1328,
+   "request_id": "c9e40167-78cb-4211-8028-50bbba373d11",
+   "response_time": 1.04,
+   "erro": null,
+   "modo_busca": "GERAL",
+   "parametros": {
+    "query": "Node.js 20 is in Active LTS",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "d7ecbe-00",
+     "titulo": "Node.js End-of-Life: Dates, Risks & What to Do Next",
+     "url": "https://tuxcare.com/blog/node-eol",
+     "relevancia": 0.8000679,
+     "data_publicacao": "2026-04-14"
+    },
+    {
+     "resultado_id": "af9db8-01",
+     "titulo": "Node.js — Node.js 20.9.0 (LTS)",
+     "url": "https://nodejs.org/en/blog/release/v20.9.0",
+     "relevancia": 0.746139,
+     "data_publicacao": "2023-10-24"
+    },
+    {
+     "resultado_id": "6c6dca-02",
+     "titulo": "Node.js Version Support: EOL Dates and Latest Releases (July 2026)",
+     "url": "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of",
+     "relevancia": 0.74539834,
+     "data_publicacao": "2026-06-23"
+    },
+    {
+     "resultado_id": "616ebc-03",
+     "titulo": "Node.js | endoflife.date",
+     "url": "https://endoflife.date/nodejs",
+     "relevancia": 0.7003827,
+     "data_publicacao": "2026-10-09"
+    },
+    {
+     "resultado_id": "50e9a6-04",
+     "titulo": "Node.js release schedule explained",
+     "url": "https://nearform.com/digital-community/node-js-release-schedule-explained",
+     "relevancia": 0.68299675,
+     "data_publicacao": "2024-05-14"
+    }
+   ]
+  },
+  {
+   "id_operacao": "0b39bcb9-e66f-4f7f-b268-dec9843373e1",
+   "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Node.js 20 is in Active LTS",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:30:50.305Z",
+   "finalizada_em": "2026-11-13T13:30:52.496Z",
+   "duracao_ms": 2191,
+   "request_id": "f55559f9-2160-4a85-81f8-4dd03a41d6fb",
+   "response_time": 2,
+   "erro": null,
+   "modo_busca": "NOTICIAS",
+   "parametros": {
+    "query": "Node.js 20 is in Active LTS",
+    "search_depth": "basic",
+    "max_results": 4,
+    "include_answer": false,
+    "include_published_date": true,
+    "topic": "news"
+   },
+   "quantidade_resultados": 4,
+   "resultados": [
+    {
+     "resultado_id": "c44bbd-00",
+     "titulo": "Node.js 20 (LTS) - What's New, Support Lifecycle & EOL",
+     "url": "https://versionlog.com/nodejs/20",
+     "relevancia": 0.8031738,
+     "data_publicacao": "2023-04-17"
+    },
+    {
+     "resultado_id": "3914ba-01",
+     "titulo": "Node.js Long Term Support (LTS) Explained",
+     "url": "https://www.facebook.com/fb-answers/nodejs-long-term-support",
+     "relevancia": 0.7405498,
+     "data_publicacao": "2026-11-04"
+    },
+    {
+     "resultado_id": "74829a-02",
+     "titulo": "Which Node.js Docker tag should production use: lts, major",
+     "url": "https://safeguard.sh/resources/blog/node-docker-tag-production-lts-major-exact",
+     "relevancia": 0.5171137,
+     "data_publicacao": "2026-10-19"
+    },
+    {
+     "resultado_id": "e4531d-03",
+     "titulo": "Node.js 22 (LTS) - What's New, Support Lifecycle & EOL",
+     "url": "https://versionlog.com/nodejs/22",
+     "relevancia": 0.3270232,
+     "data_publicacao": "2026-09-23"
+    }
+   ]
+  },
+  {
+   "id_operacao": "f8111c3e-1533-49dd-a795-041708868953",
+   "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "EXTRACAO",
+   "consulta": "Node.js 20 is in Active LTS",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:30:52.507Z",
+   "finalizada_em": "2026-11-13T13:30:52.918Z",
+   "duracao_ms": 411,
+   "request_id": "4ff728cc-4b72-48db-b5c2-634331b70b4f",
+   "response_time": 0.02,
+   "erro": null,
+   "urls_solicitadas": [
+    "https://nodejs.org/en/blog/release/v20.9.0",
+    "https://versionlog.com/nodejs/20",
+    "https://endoflife.date/nodejs",
+    "https://tuxcare.com/blog/node-eol",
+    "https://safeguard.sh/resources/blog/node-docker-tag-production-lts-major-exact"
+   ],
+   "parametros": {
+    "urls": [
+     "https://nodejs.org/en/blog/release/v20.9.0",
+     "https://versionlog.com/nodejs/20",
+     "https://endoflife.date/nodejs",
+     "https://tuxcare.com/blog/node-eol",
+     "https://safeguard.sh/resources/blog/node-docker-tag-production-lts-major-exact"
+    ],
+    "extract_depth": "basic",
+    "format": "markdown",
+    "include_images": false
+   },
+   "quantidade_resultados": 5,
+   "urls_extraidas": [
+    "https://nodejs.org/en/blog/release/v20.9.0",
+    "https://versionlog.com/nodejs/20",
+    "https://endoflife.date/nodejs",
+    "https://tuxcare.com/blog/node-eol",
+    "https://safeguard.sh/resources/blog/node-docker-tag-production-lts-major-exact"
+   ]
+  },
+  {
+   "id_operacao": "8de98650-b28b-4c2e-8148-349fab6d07ec",
+   "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+   "id_afirmacao": "afirmacao_2",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Node.js 20 is the recommended version for production",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:31:03.566Z",
+   "finalizada_em": "2026-11-13T13:31:04.933Z",
+   "duracao_ms": 1367,
+   "request_id": "4373d52f-bcda-4402-9973-e508f106c56a",
+   "response_time": 1.12,
+   "erro": null,
+   "modo_busca": "GERAL",
+   "parametros": {
+    "query": "Node.js 20 is the recommended version for production",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "233b1d-00",
+     "titulo": "Node.js LTS vs Current: Choosing the Right Version for Production | NodeSource posted on the topic | LinkedIn",
+     "url": "https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk",
+     "relevancia": 0.68257374,
+     "data_publicacao": "2026-05-02"
+    },
+    {
+     "resultado_id": "283506-01",
+     "titulo": "Node.js Version Support: EOL Dates and Latest Releases (July 2026)",
+     "url": "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of",
+     "relevancia": 0.66530186,
+     "data_publicacao": "2026-06-23"
+    },
+    {
+     "resultado_id": "fe68cf-02",
+     "titulo": "Node.js v20 upgrade guide: Best Practices and Performance Insights",
+     "url": "https://medium.com/@Games24x7Tech/node-js-v20-upgrade-guide-best-practices-and-performance-insights-f76d7ace09ff",
+     "relevancia": 0.5439234,
+     "data_publicacao": "2024-09-06"
+    },
+    {
+     "resultado_id": "1d8dab-03",
+     "titulo": "Node.js — Node.js 20.0.0 (Current)",
+     "url": "https://nodejs.org/en/blog/release/v20.0.0",
+     "relevancia": 0.49088386,
+     "data_publicacao": "2023-04-18"
+    },
+    {
+     "resultado_id": "17a61c-04",
+     "titulo": "10up Engineering Best Practices",
+     "url": "https://10up.github.io/Engineering-Best-Practices/nodejs",
+     "relevancia": 0.45374593,
+     "data_publicacao": null
+    }
+   ]
+  },
+  {
+   "id_operacao": "d27a4838-60ed-4aeb-b552-9ba27e4ea3e1",
+   "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+   "id_afirmacao": "afirmacao_2",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Node.js 20 is the recommended version for production",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:31:04.933Z",
+   "finalizada_em": "2026-11-13T13:31:09.428Z",
+   "duracao_ms": 4495,
+   "request_id": "8808b389-dded-4862-b985-90da206eec33",
+   "response_time": 4.29,
+   "erro": null,
+   "modo_busca": "NOTICIAS",
+   "parametros": {
+    "query": "Node.js 20 is the recommended version for production",
+    "search_depth": "basic",
+    "max_results": 4,
+    "include_answer": false,
+    "include_published_date": true,
+    "topic": "news"
+   },
+   "quantidade_resultados": 4,
+   "resultados": [
+    {
+     "resultado_id": "e9d3e6-00",
+     "titulo": "Critical Node.js Vulnerability Can Cause Server Crashes via async_hooks Stack Overflow - The Hacker News",
+     "url": "https://thehackernews.com/2026/01/critical-nodejs-vulnerability-can-cause.html",
+     "relevancia": 0.060418423,
+     "data_publicacao": "2026-01-14"
+    },
+    {
+     "resultado_id": "11d6f8-01",
+     "titulo": "Eli Lilly Tops $1 Trillion, Joins Tech Titans In Exclusive Club - Investor's Business Daily",
+     "url": "https://www.investors.com/news/technology/eli-lilly-trillion-dollar-club-tech-companies/",
+     "relevancia": 0.052327625,
+     "data_publicacao": "2025-11-21"
+    },
+    {
+     "resultado_id": "96bca4-02",
+     "titulo": "Biotech Duo Skyrockets On 'Sweeping Success' In Cancer Treatment - Investor's Business Daily",
+     "url": "https://www.investors.com/news/technology/jazz-pharmaceuticals-zymeworks-gastric-cancer-ziihera/",
+     "relevancia": 0.05033063,
+     "data_publicacao": "2025-11-17"
+    },
+    {
+     "resultado_id": "abc24a-03",
+     "titulo": "Critical jsPDF vulnerability enables arbitrary file read in Node.js deployments - csoonline.com",
+     "url": "https://www.csoonline.com/article/4114360/critical-jspdf-vulnerability-enables-arbitrary-file-read-in-node-js-deployments.html",
+     "relevancia": 0.046205748,
+     "data_publicacao": "2026-01-08"
+    }
+   ]
+  },
+  {
+   "id_operacao": "32d1a2bb-5463-467e-8c31-199738299d6e",
+   "id_verificacao": "64e80ea7-859d-42a4-9d1e-54ea74b65b60",
+   "id_afirmacao": "afirmacao_2",
+   "provedor": "tavily",
+   "etapa": "EXTRACAO",
+   "consulta": "Node.js 20 is the recommended version for production",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:31:09.429Z",
+   "finalizada_em": "2026-11-13T13:31:09.847Z",
+   "duracao_ms": 418,
+   "request_id": "a702bbd6-c55a-4431-915d-12be9308ef55",
+   "response_time": 0.02,
+   "erro": null,
+   "urls_solicitadas": [
+    "https://nodejs.org/en/blog/release/v20.0.0",
+    "https://thehackernews.com/2026/01/critical-nodejs-vulnerability-can-cause.html",
+    "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of",
+    "https://www.investors.com/news/technology/eli-lilly-trillion-dollar-club-tech-companies/",
+    "https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk"
+   ],
+   "parametros": {
+    "urls": [
+     "https://nodejs.org/en/blog/release/v20.0.0",
+     "https://thehackernews.com/2026/01/critical-nodejs-vulnerability-can-cause.html",
+     "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of",
+     "https://www.investors.com/news/technology/eli-lilly-trillion-dollar-club-tech-companies/",
+     "https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk"
+    ],
+    "extract_depth": "basic",
+    "format": "markdown",
+    "include_images": false
+   },
+   "quantidade_resultados": 5,
+   "urls_extraidas": [
+    "https://nodejs.org/en/blog/release/v20.0.0",
+    "https://thehackernews.com/2026/01/critical-nodejs-vulnerability-can-cause.html",
+    "https://www.herodevs.com/blog-posts/node-js-end-of-life-dates-you-should-be-aware-of",
+    "https://www.investors.com/news/technology/eli-lilly-trillion-dollar-club-tech-companies/",
+    "https://www.linkedin.com/posts/nodesource_if-youre-running-nodejs-in-production-activity-7450311604014886912-NPwk"
+   ]
+  }
+ ],
+ "modo": "real",
+ "simulado": false,
+ "gateway": {
+  "gateway": "bifrost",
+  "chamadas": 7,
+  "falhas": 1,
+  "cadeia_modelos": [
+   "groq/openai/gpt-oss-20b",
+   "groq/openai/gpt-oss-120b"
+  ],
+  "queda_simulada": false,
+  "respostas_por_modelo": [
+   {
+    "modelo": "groq/openai/gpt-oss-20b",
+    "chamadas": 3
+   },
+   {
+    "modelo": "groq/openai/gpt-oss-120b",
+    "chamadas": 3
+   }
+  ],
+  "respostas_de_reserva": 3,
+  "tokens_total": 23633,
+  "latencia_media_ms": 2791
+ },
+ "duracao_ms": 70904,
+ "gravado_em": "2026-11-13T13:31:58.830Z"
+}

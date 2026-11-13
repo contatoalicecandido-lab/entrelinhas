@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Entrelinhas · read between the lines of every AI answer</title>
+  <title>Entrelinhas · read between the lines of any AI answer</title>
   <meta name="description" content="Entrelinhas checks each claim in an AI answer against today's sources, shows what still holds, what is outdated and what is wrong, and rewrites the answer with citations.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A0B'/%3E%3Cpath d='M14 20h36M14 44h36' stroke='%23ffffff' stroke-opacity='.4' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M14 32h22' stroke='%23FF5A1F' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='32' r='4.5' fill='%23FF5A1F'/%3E%3C/svg%3E">
   <link rel="preload" href="/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
@@ -227,7 +227,7 @@
     </div>
 
     <div class="numeros-linha">
-      <div class="numero-item destaque"><p class="numero-grande">23</p><p>times Bifrost switched to a backup AI model on its own when the main one hit its limit, so no check was lost.</p></div>
+      <div class="numero-item destaque"><p class="numero-grande">22<span> of 60</span></p><p>AI calls in our live test were answered by a backup model through Bifrost when the main one hit its limit, so all 15 checks finished.</p></div>
       <div class="numero-item"><p class="numero-grande">14<span> of 15</span></p><p>real claims, with answers we know today, judged correctly in a live test.</p></div>
       <div class="numero-item"><p class="numero-grande">0</p><p>outdated claims passed as true in the same test.</p></div>
     </div>
@@ -263,6 +263,7 @@
           <li><strong>Click</strong> Check with Entrelinhas in your bookmarks. Entrelinhas opens with the text ready to check.</li>
         </ul>
         <p class="favorito-acao"><a id="favorito" class="botao-favorito" href="#">Check with Entrelinhas</a><span id="favorito-destino" hidden></span></p>
+        <p id="favorito-aviso" class="favorito-aviso" hidden>On this public demo the button opens Entrelinhas on your own computer, so it works once Entrelinhas runs locally (see Getting started in the README).</p>
       </div>
       <div class="api">
         <h3>For developers</h3>
@@ -274,7 +275,7 @@
 }
 <span class="c">→</span> claims, verdicts, freshness,
   updated answer, gateway trace</code></pre>
-        <p class="api-link"><a href="https://github.com/contatoalicecandido-lab/entrelinhas#readme">Read the API guide ↗</a></p>
+        <p class="api-link"><a href="https://github.com/contatoalicecandido-lab/entrelinhas#api">Read the API guide ↗</a></p>
       </div>
     </div>
 

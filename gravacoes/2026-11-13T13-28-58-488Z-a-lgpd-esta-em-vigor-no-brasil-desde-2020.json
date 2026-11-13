@@ -1,0 +1,2024 @@
+{
+ "sistema": "Entrelinhas",
+ "id_verificacao": "c3d64905-c699-437a-8075-a504fe7c52e0",
+ "texto_original": "A LGPD está em vigor no Brasil desde 2020.",
+ "verificado_em": "2026-11-13T13:28:58.471Z",
+ "total_afirmacoes": 1,
+ "sintese": {
+  "veredito": "CORROBORADA",
+  "resumo": "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
+  "total_afirmacoes": 1,
+  "contagem_vereditos": {
+   "CORROBORADA": 1
+  }
+ },
+ "afirmacoes": [
+  {
+   "id": "afirmacao_1",
+   "texto": "A LGPD está em vigor no Brasil desde 2020.",
+   "tipo_afirmacao": "regulamento",
+   "origem_tipo_afirmacao": "MODELO",
+   "nuances": {
+    "idioma": "pt",
+    "variante": "pt-BR",
+    "confianca_idioma": 0.85,
+    "valores": [],
+    "datas": [],
+    "expressoes_temporais": [],
+    "condicoes": [],
+    "mudancas": [
+     {
+      "texto": "em vigor",
+      "rotulo": "legal validity: check the date it takes effect"
+     }
+    ],
+    "tempo_coloquial": [],
+    "girias": {
+     "aliases": [],
+     "expressoes": []
+    },
+    "consulta_busca": "A LGPD está em vigor no Brasil desde 2020.",
+    "dominios_oficiais_sugeridos": [
+     "gov.br"
+    ],
+    "autoridades": [
+     {
+      "dominio": "gov.br",
+      "autoridade": "ANPD / gov.br",
+      "termo": "LGPD"
+     }
+    ],
+    "notas": [
+     "\"em vigor\": legal validity: check the date it takes effect.",
+     "\"LGPD\" points to a Brazilian authority: ANPD / gov.br (gov.br) is searched as an official source."
+    ]
+   },
+   "evidencias": [
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OFICIAL",
+      "titulo": "O que muda com a LGPD — LGPD - Lei Geral de Proteção de Dados Pessoais | Serpro",
+      "url": "https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd",
+      "conteudo": "* [Portal do Governo Brasileiro](http://brasil.gov.br)\n* [Atualize sua Barra de Governo](http://epwg.governoeletronico.gov.br/barra/atualize.html)\n\n# O que muda com a LGPD\n\nInfo\n\n## O que é a Lei Geral de Proteção de Dados Pessoais? Dê um \"giro\" pela lei e conheça desde já as principais transformações que ela traz para o país\n\nDe compras on-line a redes sociais, de hospitais a bancos, de escolas a teatros, de hotéis a órgãos públicos, da publicidade à tecnologia: pode ter certeza, a Lei Geral de Proteção de Dados Pessoais (LGPD) afeta diferentes setores e serviços, e a todos nós brasileiras e brasileiros, seja no papel de indivíduo, empresa ou governo. Aqui, a gente te ajuda a entender os se…",
+      "coletado_em": "2026-11-13T13:28:51.496Z",
+      "data_publicacao": null,
+      "data_atualizacao": "2020-08-01",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": null,
+      "relevancia": 0.8177201,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "d27b35f4-2a71-4ca3-a7fd-4125cd42bb91",
+       "resultado_id": "7ebaaa-01",
+       "response_time_busca": 1.02,
+       "response_time_extracao": 0.02,
+       "consulta": "A LGPD está em vigor no Brasil desde 2020.",
+       "origem_principal": {
+        "id_operacao": "c347c03b-2d36-41c7-b352-9f5362ce5073",
+        "request_id": "d27b35f4-2a71-4ca3-a7fd-4125cd42bb91",
+        "modo_busca": "GERAL",
+        "resultado_id": "7ebaaa-01",
+        "parametros": {
+         "query": "A LGPD está em vigor no Brasil desde 2020.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "c347c03b-2d36-41c7-b352-9f5362ce5073",
+         "request_id": "d27b35f4-2a71-4ca3-a7fd-4125cd42bb91",
+         "modo_busca": "GERAL",
+         "resultado_id": "7ebaaa-01",
+         "parametros": {
+          "query": "A LGPD está em vigor no Brasil desde 2020.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": null,
+       "sinais_data": [],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd",
+        "capturado_em": "2026-11-13T13:28:49.934Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "d3cf6177-3d5c-4c69-a3ef-3d9f7f286886",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2020-08-01",
+       "precisao": "MES",
+       "citacao": "com vigência a partir de agosto de 2020.",
+       "origem": "QUOTED_IN_SOURCE_TEXT"
+      }
+     },
+     "coleta": {
+      "id_coleta": "c97bc7eb-9a29-4e99-bfc9-a11bf1deb4a7",
+      "id_verificacao": "c3d64905-c699-437a-8075-a504fe7c52e0",
+      "url_original": "https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd",
+      "url_canonica": "https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "7f3f8a02c4653f815a34494608e852f57ea152bc02f1dca5ea9b20060c87c912",
+      "coletado_em": "2026-11-13T13:28:51.496Z",
+      "id_operacao_busca": "c347c03b-2d36-41c7-b352-9f5362ce5073",
+      "id_operacao_extracao": "2c225379-c8b6-4899-9897-75211478dac1",
+      "consulta": "A LGPD está em vigor no Brasil desde 2020.",
+      "parametros_busca": {
+       "query": "A LGPD está em vigor no Brasil desde 2020.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd",
+        "https://valor.globo.com/legislacao/noticia/2026/10/30/lgpd-completa-seis-anos-com-os-desafios-da-inteligencia-artificial.ghtml",
+        "https://irisbh.com.br/desafios-vigor-lgpd",
+        "https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor",
+        "https://www.poder360.com.br/poder-governo/5-medidas-de-lula-perderam-validade-no-congresso-desde-outubro"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "d27b35f4-2a71-4ca3-a7fd-4125cd42bb91",
+       "operacoes_busca": [
+        {
+         "id_operacao": "c347c03b-2d36-41c7-b352-9f5362ce5073",
+         "request_id": "d27b35f4-2a71-4ca3-a7fd-4125cd42bb91",
+         "modo_busca": "GERAL",
+         "resultado_id": "7ebaaa-01",
+         "parametros": {
+          "query": "A LGPD está em vigor no Brasil desde 2020.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "d3cf6177-3d5c-4c69-a3ef-3d9f7f286886",
+       "resultado_id": "7ebaaa-01",
+       "relevancia": 0.8177201,
+       "sinais_data": [],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd",
+        "capturado_em": "2026-11-13T13:28:49.934Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "O que muda com a LGPD — LGPD - Lei Geral de Proteção de Dados Pessoais | Serpro",
+      "url": "https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 6343,
+      "caracteres_preparados": 6343,
+      "trecho_analisado": "TÍTULO DA FONTE: O que muda com a LGPD — LGPD - Lei Geral de Proteção de Dados Pessoais | Serpro\nURL DA FONTE: https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd\n\nCONTEÚDO DA FONTE:\n* [Portal do Governo Brasileiro](http://brasil.gov.br)\n* [Atualize sua Barra de Governo](http://epwg.governoeletronico.gov.br/barra/atualize.html)\n\n# O que muda com a LGPD\n\nInfo\n\n## O que é a Lei Geral de Proteção de Dados Pessoais? Dê um \"giro\" pela lei e conheça desde já as principais transformações que ela traz para o país\n\nDe compras on-line a redes sociais, de hospitais a bancos, de escolas a teatros, de hotéis a órgãos públicos, da publicidade à tecnologia: pode ter certeza, a Lei Geral de Proteção de Dados Pessoais (LGPD) afeta diferentes setores e serviços, e a todos nós brasileiras e brasileiros, seja no papel de indivíduo, empresa ou governo. Aqui, a gente te ajuda a entender os seus direitos como cidadão, ou suas obrigações, caso você seja responsável por bases de dados de pessoas.\n\nE damos, é claro, as boas-vindas a você que quer entender mais a LGPD, contribuir com ela, e buscar suporte. Vamos nessa?\n\n### Para começar *Já que você topou, então vamos dar um \"giro\" pela LGPD e c",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source states LGPD’s effective date as August 2020, matching the claim that it has been in effect since 2020."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The source states LGPD’s effective date as August 2020, matching the claim that it has been in effect since 2020."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 2295,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2020-08-01"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "LGPD completa seis anos com os desafios da inteligência artificial | Legislação | Valor Econômico",
+      "url": "https://valor.globo.com/legislacao/noticia/2026/10/30/lgpd-completa-seis-anos-com-os-desafios-da-inteligencia-artificial.ghtml",
+      "conteudo": "[Entrar](#)\n\n* [Minha conta](https://minhaconta.globo.com)\n* [Portal do Assinante](https://editoraglobo.my.site.com/assinante/s/)\n* [Newsletter](https://valor.globo.com/newsletter/assine-newsletter/)\n* [Sair](#)\n\nCarregando...\n\n[Legislação](https://valor.globo.com/legislacao)\n\n# LGPD completa seis anos com os desafios da inteligência artificial\n\n## Número geral de incidentes registrados aumentou 222% em 5 anos, diz a ANPD\n\n![](data:image/png;base64,UklGRtYOAABXRUJQVlA4WAoAAAAIAAAAZwEAZwEAVlA4TPUNAAAvZ8FZAP+ioG0bJvxJt/uDMP/zP/8/cNA1BRGJCOgSEwgSCFLQPcrPonEb08dIIkjROArSNmBa/753HETEBHgmTFTGmhlA4t//tm1/k2jbd+w9k5DSQKVYqtGCdPgiCIIgyoBlSrUzBSlTbKUSwnH8/3+HHIEzcy3k/O2K6P8EQHUAN640klGRWdleYUFlYe/YojK…",
+      "coletado_em": "2026-11-13T13:28:51.496Z",
+      "data_publicacao": "2026-10-30",
+      "data_atualizacao": "2020-09-01",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": null,
+      "relevancia": 0.7902067,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "9bcf8c44-fa34-495f-8ad8-5aa486d41f43",
+       "resultado_id": "6a78df-00",
+       "response_time_busca": 3.89,
+       "response_time_extracao": 0.02,
+       "consulta": "A LGPD está em vigor no Brasil desde 2020.",
+       "origem_principal": {
+        "id_operacao": "56eae547-889c-4e6d-895c-30601f4a0a18",
+        "request_id": "9bcf8c44-fa34-495f-8ad8-5aa486d41f43",
+        "modo_busca": "NOTICIAS_BR",
+        "resultado_id": "6a78df-00",
+        "parametros": {
+         "query": "A LGPD está em vigor no Brasil desde 2020.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news",
+         "include_domains": [
+          "g1.globo.com",
+          "oglobo.globo.com",
+          "valor.globo.com",
+          "folha.uol.com.br",
+          "uol.com.br",
+          "estadao.com.br",
+          "agenciabrasil.ebc.com.br",
+          "cnnbrasil.com.br",
+          "infomoney.com.br",
+          "exame.com",
+          "poder360.com.br",
+          "correiobraziliense.com.br",
+          "metropoles.com",
+          "veja.abril.com.br",
+          "terra.com.br",
+          "band.com.br",
+          "r7.com",
+          "bbc.com",
+          "jota.info",
+          "canaltech.com.br"
+         ]
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "56eae547-889c-4e6d-895c-30601f4a0a18",
+         "request_id": "9bcf8c44-fa34-495f-8ad8-5aa486d41f43",
+         "modo_busca": "NOTICIAS_BR",
+         "resultado_id": "6a78df-00",
+         "parametros": {
+          "query": "A LGPD está em vigor no Brasil desde 2020.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "include_domains": [
+           "g1.globo.com",
+           "oglobo.globo.com",
+           "valor.globo.com",
+           "folha.uol.com.br",
+           "uol.com.br",
+           "estadao.com.br",
+           "agenciabrasil.ebc.com.br",
+           "cnnbrasil.com.br",
+           "infomoney.com.br",
+           "exame.com",
+           "poder360.com.br",
+           "correiobraziliense.com.br",
+           "metropoles.com",
+           "veja.abril.com.br",
+           "terra.com.br",
+           "band.com.br",
+           "r7.com",
+           "bbc.com",
+           "jota.info",
+           "canaltech.com.br"
+          ]
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Fri, 30 Oct 2026 08:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 30 Oct 2026 08:00:00 GMT",
+         "value_normalized": "2026-10-30",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "BODY_TOO_LARGE",
+        "detalhe": "SOURCE_BODY_TOO_LARGE",
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "d3cf6177-3d5c-4c69-a3ef-3d9f7f286886",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2020-09-01",
+       "precisao": "MES",
+       "citacao": "entrou em vigor em setembro de 2020.",
+       "origem": "QUOTED_IN_SOURCE_TEXT"
+      }
+     },
+     "coleta": {
+      "id_coleta": "d2a0f5e0-f4b4-4630-ac51-ff7369e2c8be",
+      "id_verificacao": "c3d64905-c699-437a-8075-a504fe7c52e0",
+      "url_original": "https://valor.globo.com/legislacao/noticia/2026/10/30/lgpd-completa-seis-anos-com-os-desafios-da-inteligencia-artificial.ghtml",
+      "url_canonica": "https://valor.globo.com/legislacao/noticia/2026/10/30/lgpd-completa-seis-anos-com-os-desafios-da-inteligencia-artificial.ghtml",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "c0539581ce28c540ddb36da66a5d9c3319b31ba9c364d105854f6cbf2a0d27a3",
+      "coletado_em": "2026-11-13T13:28:51.496Z",
+      "id_operacao_busca": "56eae547-889c-4e6d-895c-30601f4a0a18",
+      "id_operacao_extracao": "2c225379-c8b6-4899-9897-75211478dac1",
+      "consulta": "A LGPD está em vigor no Brasil desde 2020.",
+      "parametros_busca": {
+       "query": "A LGPD está em vigor no Brasil desde 2020.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news",
+       "include_domains": [
+        "g1.globo.com",
+        "oglobo.globo.com",
+        "valor.globo.com",
+        "folha.uol.com.br",
+        "uol.com.br",
+        "estadao.com.br",
+        "agenciabrasil.ebc.com.br",
+        "cnnbrasil.com.br",
+        "infomoney.com.br",
+        "exame.com",
+        "poder360.com.br",
+        "correiobraziliense.com.br",
+        "metropoles.com",
+        "veja.abril.com.br",
+        "terra.com.br",
+        "band.com.br",
+        "r7.com",
+        "bbc.com",
+        "jota.info",
+        "canaltech.com.br"
+       ]
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd",
+        "https://valor.globo.com/legislacao/noticia/2026/10/30/lgpd-completa-seis-anos-com-os-desafios-da-inteligencia-artificial.ghtml",
+        "https://irisbh.com.br/desafios-vigor-lgpd",
+        "https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor",
+        "https://www.poder360.com.br/poder-governo/5-medidas-de-lula-perderam-validade-no-congresso-desde-outubro"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "9bcf8c44-fa34-495f-8ad8-5aa486d41f43",
+       "operacoes_busca": [
+        {
+         "id_operacao": "56eae547-889c-4e6d-895c-30601f4a0a18",
+         "request_id": "9bcf8c44-fa34-495f-8ad8-5aa486d41f43",
+         "modo_busca": "NOTICIAS_BR",
+         "resultado_id": "6a78df-00",
+         "parametros": {
+          "query": "A LGPD está em vigor no Brasil desde 2020.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "include_domains": [
+           "g1.globo.com",
+           "oglobo.globo.com",
+           "valor.globo.com",
+           "folha.uol.com.br",
+           "uol.com.br",
+           "estadao.com.br",
+           "agenciabrasil.ebc.com.br",
+           "cnnbrasil.com.br",
+           "infomoney.com.br",
+           "exame.com",
+           "poder360.com.br",
+           "correiobraziliense.com.br",
+           "metropoles.com",
+           "veja.abril.com.br",
+           "terra.com.br",
+           "band.com.br",
+           "r7.com",
+           "bbc.com",
+           "jota.info",
+           "canaltech.com.br"
+          ]
+         }
+        }
+       ],
+       "request_id_extracao": "d3cf6177-3d5c-4c69-a3ef-3d9f7f286886",
+       "resultado_id": "6a78df-00",
+       "relevancia": 0.7902067,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 30 Oct 2026 08:00:00 GMT",
+         "value_normalized": "2026-10-30",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "BODY_TOO_LARGE",
+        "detalhe": "SOURCE_BODY_TOO_LARGE",
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "LGPD completa seis anos com os desafios da inteligência artificial | Legislação | Valor Econômico",
+      "url": "https://valor.globo.com/legislacao/noticia/2026/10/30/lgpd-completa-seis-anos-com-os-desafios-da-inteligencia-artificial.ghtml",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 20226,
+      "caracteres_preparados": 7980,
+      "trecho_analisado": "TÍTULO DA FONTE: LGPD completa seis anos com os desafios da inteligência artificial | Legislação | Valor Econômico\nURL DA FONTE: https://valor.globo.com/legislacao/noticia/2026/10/30/lgpd-completa-seis-anos-com-os-desafios-da-inteligencia-artificial.ghtml\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n[Legislação](https://valor.globo.com/legislacao)\n\n# LGPD completa seis anos com os desafios da inteligência artificial\n\n## Número geral de incidentes registrados aumentou 222% em 5 anos, diz a ANPD\n\nAtualizado\n\n* [Facebook](https://www.facebook.com/dialog/share?app_id=289255557788943&href=https://valor.globo.com/legislacao/noticia/2026/10/30/lgpd-completa-seis-anos-com-os-desafios-da-inteligencia-artificial.ghtml%3Futm_source%3DFacebook%26utm_medium%3DSocial%26utm_campaign%3Dcompartilhar)\n\n* [Twitter](https://twitter.com/intent/tweet?text=Valor%20Econ%C3%B4mico%3A%20LGPD%20completa%20seis%20anos%20com%20os%20desafios%20da%20intelig%C3%AAncia%20artificial&url=https://valor.globo.com/legislacao/noticia/2026/10/30/lgpd-completa-seis-anos-com-os-desafios-da-inteligencia-artificial.ghtml%3Futm_source%3DTwitter%26utm_medium%3DSocial%26utm_campaign%3Dcompartilhar)\n\n* [Whatsapp](https://api.whatsapp.com",
+      "citacao_chave": "entrou em vigor em setembro de 2020.",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The article confirms that the LGPD entered into force in September 2020."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The article confirms that the LGPD entered into force in September 2020."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "UPDATE_BEFORE_PUBLICATION"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "LGPD em vigor: novidades legais e desafios restantes » IRIS-BH",
+      "url": "https://irisbh.com.br/desafios-vigor-lgpd",
+      "conteudo": "[![](https://irisbh.com.br/wp-content/themes/irisbh/images/logo-header.svg)](https://irisbh.com.br)\n\n* [English](https://irisbh.com.br/en/lgpd-in-effect-legal-news-and-remaining-challenges/)\n* [Português](https://irisbh.com.br/desafios-vigor-lgpd/)\n\n[Assine nossa newsletter](https://irisbh.com.br/newsletter/)\n\n---\n\n* [English](https://irisbh.com.br/en/lgpd-in-effect-legal-news-and-remaining-challenges/)\n* [Português](https://irisbh.com.br/desafios-vigor-lgpd/)\n\n### Assine aqui nossa newsletter\n\nDeixe seu e-mail abaixo e fique por dentro das novidades, eventos e publicações do IRIS-BH.\n\n\n\n[Blog](https://irisbh.com.br/blog/)\n\n# LGPD em vigor: novidades legais e desafios restantes\n\n## Escrito p…",
+      "coletado_em": "2026-11-13T13:28:51.496Z",
+      "data_publicacao": "2020-10-05",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://irisbh.com.br/desafios-vigor-lgpd/",
+      "relevancia": 0.82976806,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "d27b35f4-2a71-4ca3-a7fd-4125cd42bb91",
+       "resultado_id": "5c6614-00",
+       "response_time_busca": 1.02,
+       "response_time_extracao": 0.02,
+       "consulta": "A LGPD está em vigor no Brasil desde 2020.",
+       "origem_principal": {
+        "id_operacao": "c347c03b-2d36-41c7-b352-9f5362ce5073",
+        "request_id": "d27b35f4-2a71-4ca3-a7fd-4125cd42bb91",
+        "modo_busca": "GERAL",
+        "resultado_id": "5c6614-00",
+        "parametros": {
+         "query": "A LGPD está em vigor no Brasil desde 2020.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "c347c03b-2d36-41c7-b352-9f5362ce5073",
+         "request_id": "d27b35f4-2a71-4ca3-a7fd-4125cd42bb91",
+         "modo_busca": "GERAL",
+         "resultado_id": "5c6614-00",
+         "parametros": {
+          "query": "A LGPD está em vigor no Brasil desde 2020.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Mon, 05 Oct 2020 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 05 Oct 2020 00:00:00 GMT",
+         "value_normalized": "2020-10-05",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://irisbh.com.br/desafios-vigor-lgpd/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2020-10-05T18:09:36+00:00",
+         "value_normalized": "2020-10-05",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2020-10-05T18:10:37+00:00",
+         "value_normalized": "2020-10-05",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://irisbh.com.br/desafios-vigor-lgpd/",
+        "capturado_em": "2026-11-13T13:28:50.329Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "d3cf6177-3d5c-4c69-a3ef-3d9f7f286886",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "b5bb2f0b-fea2-403e-876d-e4b416653b44",
+      "id_verificacao": "c3d64905-c699-437a-8075-a504fe7c52e0",
+      "url_original": "https://irisbh.com.br/desafios-vigor-lgpd",
+      "url_canonica": "https://irisbh.com.br/desafios-vigor-lgpd",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "66a850feae1b5228b6d76cf1aef049856c80ca753eba71b652cc9ef9cac72547",
+      "coletado_em": "2026-11-13T13:28:51.496Z",
+      "id_operacao_busca": "c347c03b-2d36-41c7-b352-9f5362ce5073",
+      "id_operacao_extracao": "2c225379-c8b6-4899-9897-75211478dac1",
+      "consulta": "A LGPD está em vigor no Brasil desde 2020.",
+      "parametros_busca": {
+       "query": "A LGPD está em vigor no Brasil desde 2020.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd",
+        "https://valor.globo.com/legislacao/noticia/2026/10/30/lgpd-completa-seis-anos-com-os-desafios-da-inteligencia-artificial.ghtml",
+        "https://irisbh.com.br/desafios-vigor-lgpd",
+        "https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor",
+        "https://www.poder360.com.br/poder-governo/5-medidas-de-lula-perderam-validade-no-congresso-desde-outubro"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "d27b35f4-2a71-4ca3-a7fd-4125cd42bb91",
+       "operacoes_busca": [
+        {
+         "id_operacao": "c347c03b-2d36-41c7-b352-9f5362ce5073",
+         "request_id": "d27b35f4-2a71-4ca3-a7fd-4125cd42bb91",
+         "modo_busca": "GERAL",
+         "resultado_id": "5c6614-00",
+         "parametros": {
+          "query": "A LGPD está em vigor no Brasil desde 2020.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "d3cf6177-3d5c-4c69-a3ef-3d9f7f286886",
+       "resultado_id": "5c6614-00",
+       "relevancia": 0.82976806,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 05 Oct 2020 00:00:00 GMT",
+         "value_normalized": "2020-10-05",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://irisbh.com.br/desafios-vigor-lgpd/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2020-10-05T18:09:36+00:00",
+         "value_normalized": "2020-10-05",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2020-10-05T18:10:37+00:00",
+         "value_normalized": "2020-10-05",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://irisbh.com.br/desafios-vigor-lgpd/",
+        "capturado_em": "2026-11-13T13:28:50.329Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "LGPD em vigor: novidades legais e desafios restantes » IRIS-BH",
+      "url": "https://irisbh.com.br/desafios-vigor-lgpd",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 15629,
+      "caracteres_preparados": 7985,
+      "trecho_analisado": "TÍTULO DA FONTE: LGPD em vigor: novidades legais e desafios restantes » IRIS-BH\nURL DA FONTE: https://irisbh.com.br/desafios-vigor-lgpd\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n* [English](https://irisbh.com.br/en/lgpd-in-effect-legal-news-and-remaining-challenges/)\n\n* [Português](https://irisbh.com.br/desafios-vigor-lgpd/)\n\n[Assine nossa newsletter](https://irisbh.com.br/newsletter/)\n\n---\n\n* [English](https://irisbh.com.br/en/lgpd-in-effect-legal-news-and-remaining-challenges/)\n\n* [Português](https://irisbh.com.br/desafios-vigor-lgpd/)\n\n### Assine aqui nossa newsletter\n\n[Blog](https://irisbh.com.br/blog/)\n\n# LGPD em vigor: novidades legais e desafios restantes\n\n## Escrito por\n\n### Victor Vieira [(Ver todos os posts desta autoria)](https://irisbh.com.br/author/victorbarbieri/)\n\n5 de outubro de 2020\n\nEm 18 de setembro de 2020, a **Lei Geral de Proteção de Dados (LGPD) entrou em vigor**.\n\nEsse acontecimento marcou o fim de um longo período de incertezas que perdurou desde o momento da sanção da lei, em agosto de 2018.\n\nCom a LGPD em vigor, pode-se observar o surgimento de inúmeras **repercussões no Direito brasileiro**.\n\nContudo, ainda há diversas questões em aberto para o cenário da prot",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source reports the LGPD began to be effective on 18 September 2020."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The source reports the LGPD began to be effective on 18 September 2020."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 2230,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2020-10-05"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OFICIAL",
+      "titulo": "Lei Geral de Proteção de Dados entra em vigor — Senado Notícias",
+      "url": "https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor",
+      "conteudo": "![Title](https://www.senado.leg.br/noticias/essencial/images/senado.svg)\n![Acessibilidade](https://www.senado.leg.br/noticias/essencial/images/hands.svg)\n![Senado Notícias](/noticias/++plone++senado_noticias/img/logo_branca.svg)\n\n# Lei Geral de Proteção de Dados entra em vigor\n\n[Compartilhe este conteúdo no Whatsapp](whatsapp://send?text=Lei%20Geral%20de%20Prote%C3%A7%C3%A3o%20de%20Dados%20entra%20em%20vigor%0A%0Ahttps%3A%2F%2Fwww12.senado.leg.br%2Fnoticias%2Fmaterias%2F2020%2F09%2F18%2Flei-geral-de-protecao-de-dados-entra-em-vigor%3Futm_medium%3Dshare-button%26utm_source%3Dwhatsapp)\n[Compartilhe este conteúdo no Facebook](https://facebook.com/sharer.php?u=https%3A%2F%2Fwww12.senado.leg.br%2…",
+      "coletado_em": "2026-11-13T13:28:51.496Z",
+      "data_publicacao": "2020-09-18",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor",
+      "relevancia": 0.7767923,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "d27b35f4-2a71-4ca3-a7fd-4125cd42bb91",
+       "resultado_id": "2a14da-02",
+       "response_time_busca": 1.02,
+       "response_time_extracao": 0.02,
+       "consulta": "A LGPD está em vigor no Brasil desde 2020.",
+       "origem_principal": {
+        "id_operacao": "c347c03b-2d36-41c7-b352-9f5362ce5073",
+        "request_id": "d27b35f4-2a71-4ca3-a7fd-4125cd42bb91",
+        "modo_busca": "GERAL",
+        "resultado_id": "2a14da-02",
+        "parametros": {
+         "query": "A LGPD está em vigor no Brasil desde 2020.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "c347c03b-2d36-41c7-b352-9f5362ce5073",
+         "request_id": "d27b35f4-2a71-4ca3-a7fd-4125cd42bb91",
+         "modo_busca": "GERAL",
+         "resultado_id": "2a14da-02",
+         "parametros": {
+          "query": "A LGPD está em vigor no Brasil desde 2020.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Fri, 18 Sep 2020 19:09:25 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 18 Sep 2020 19:09:25 GMT",
+         "value_normalized": "2020-09-18",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2020-09-18T16:40:44-03:00",
+         "value_normalized": "2020-09-18",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2020-09-18T16:09:25-03:00",
+         "value_normalized": "2020-09-18",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor",
+        "capturado_em": "2026-11-13T13:28:50.059Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "d3cf6177-3d5c-4c69-a3ef-3d9f7f286886",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "50e01d14-4f48-40b8-a29c-cf11a9f53fc0",
+      "id_verificacao": "c3d64905-c699-437a-8075-a504fe7c52e0",
+      "url_original": "https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor",
+      "url_canonica": "https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "f7d8e8ca884dc597fc1efd8457be4816fddbf76991c4e587b88e8cd3fd6c0771",
+      "coletado_em": "2026-11-13T13:28:51.496Z",
+      "id_operacao_busca": "c347c03b-2d36-41c7-b352-9f5362ce5073",
+      "id_operacao_extracao": "2c225379-c8b6-4899-9897-75211478dac1",
+      "consulta": "A LGPD está em vigor no Brasil desde 2020.",
+      "parametros_busca": {
+       "query": "A LGPD está em vigor no Brasil desde 2020.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd",
+        "https://valor.globo.com/legislacao/noticia/2026/10/30/lgpd-completa-seis-anos-com-os-desafios-da-inteligencia-artificial.ghtml",
+        "https://irisbh.com.br/desafios-vigor-lgpd",
+        "https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor",
+        "https://www.poder360.com.br/poder-governo/5-medidas-de-lula-perderam-validade-no-congresso-desde-outubro"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "d27b35f4-2a71-4ca3-a7fd-4125cd42bb91",
+       "operacoes_busca": [
+        {
+         "id_operacao": "c347c03b-2d36-41c7-b352-9f5362ce5073",
+         "request_id": "d27b35f4-2a71-4ca3-a7fd-4125cd42bb91",
+         "modo_busca": "GERAL",
+         "resultado_id": "2a14da-02",
+         "parametros": {
+          "query": "A LGPD está em vigor no Brasil desde 2020.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "d3cf6177-3d5c-4c69-a3ef-3d9f7f286886",
+       "resultado_id": "2a14da-02",
+       "relevancia": 0.7767923,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 18 Sep 2020 19:09:25 GMT",
+         "value_normalized": "2020-09-18",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2020-09-18T16:40:44-03:00",
+         "value_normalized": "2020-09-18",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2020-09-18T16:09:25-03:00",
+         "value_normalized": "2020-09-18",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor",
+        "capturado_em": "2026-11-13T13:28:50.059Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Lei Geral de Proteção de Dados entra em vigor — Senado Notícias",
+      "url": "https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 14538,
+      "caracteres_preparados": 6217,
+      "trecho_analisado": "TÍTULO DA FONTE: Lei Geral de Proteção de Dados entra em vigor — Senado Notícias\nURL DA FONTE: https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n![Senado Notícias](/noticias/++plone++senado_noticias/img/logo_branca.svg)\n\n# Lei Geral de Proteção de Dados entra em vigor\n\n[Compartilhe este conteúdo no Whatsapp](whatsapp://send?text=Lei%20Geral%20de%20Prote%C3%A7%C3%A3o%20de%20Dados%20entra%20em%20vigor%0A%0Ahttps%3A%2F%2Fwww12.senado.leg.br%2Fnoticias%2Fmaterias%2F2020%2F09%2F18%2Flei-geral-de-protecao-de-dados-entra-em-vigor%3Futm_medium%3Dshare-button%26utm_source%3Dwhatsapp)\n\n[Compartilhe este conteúdo no Facebook](https://facebook.com/sharer.php?u=https%3A%2F%2Fwww12.senado.leg.br%2Fnoticias%2Fmaterias%2F2020%2F09%2F18%2Flei-geral-de-protecao-de-dados-entra-em-vigor%3Futm_medium%3Dshare-button%26utm_source%3Dfacebook)\n\n[Compartilhe este conteúdo no X](https://twitter.com/share?url=https%3A%2F%2Fwww12.senado.leg.br%2Fnoticias%2Fmaterias%2F2020%2F09%2F18%2Flei-geral-de-protecao-de-dados-entra-em-vigor%3Futm_medium%3Dshare-button%26utm_source%3Dtwitter&text=Lei%20Geral%20de%20Prote%C3%A7%C3%A3o%2",
+      "citacao_chave": "A Lei Geral de Proteção de Dados entrou em vigor nesta sexta-feira (18).",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "Senado Notícias records the LGPD's entry into force on 18 September 2020."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "Senado Notícias records the LGPD's entry into force on 18 September 2020."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 2247,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2020-09-18"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "5 medidas de Lula perderam validade no Congresso desde outubro",
+      "url": "https://www.poder360.com.br/poder-governo/5-medidas-de-lula-perderam-validade-no-congresso-desde-outubro",
+      "conteudo": "Disponível em https://www.poder360.com.br/poder-governo/5-medidas-de-lula-perderam-validade-no-congresso-desde-outubro/\n\n[![Poder360](https://www.poder360.com.br/wp-content/themes/poder/assets/img/lgo/poder_5.svg)](https://www.poder360.com.br/)\n\nSÓ TEXTO\n\n[ASSINE O PODER DRIVE PODER DRIVE](https://drive.poder360.com.br/)\n\n* [![Facebook](https://www.poder360.com.br/wp-content/themes/poder/assets/img/ico/facebook_list.svg)](https://www.facebook.com/sharer/sharer.php?u=https://www.poder360.com.br/poder-governo/5-medidas-de-lula-perderam-validade-no-congresso-desde-outubro/&text=5 medidas de Lula perderam validade no Congresso desde outubro)\n* [![Whatsapp](https://www.poder360.com.br/wp-content/…",
+      "coletado_em": "2026-11-13T13:28:51.496Z",
+      "data_publicacao": "2026-11-11",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": null,
+      "relevancia": 0.3054901,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "9bcf8c44-fa34-495f-8ad8-5aa486d41f43",
+       "resultado_id": "cf40f1-01",
+       "response_time_busca": 3.89,
+       "response_time_extracao": 0.02,
+       "consulta": "A LGPD está em vigor no Brasil desde 2020.",
+       "origem_principal": {
+        "id_operacao": "56eae547-889c-4e6d-895c-30601f4a0a18",
+        "request_id": "9bcf8c44-fa34-495f-8ad8-5aa486d41f43",
+        "modo_busca": "NOTICIAS_BR",
+        "resultado_id": "cf40f1-01",
+        "parametros": {
+         "query": "A LGPD está em vigor no Brasil desde 2020.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news",
+         "include_domains": [
+          "g1.globo.com",
+          "oglobo.globo.com",
+          "valor.globo.com",
+          "folha.uol.com.br",
+          "uol.com.br",
+          "estadao.com.br",
+          "agenciabrasil.ebc.com.br",
+          "cnnbrasil.com.br",
+          "infomoney.com.br",
+          "exame.com",
+          "poder360.com.br",
+          "correiobraziliense.com.br",
+          "metropoles.com",
+          "veja.abril.com.br",
+          "terra.com.br",
+          "band.com.br",
+          "r7.com",
+          "bbc.com",
+          "jota.info",
+          "canaltech.com.br"
+         ]
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "56eae547-889c-4e6d-895c-30601f4a0a18",
+         "request_id": "9bcf8c44-fa34-495f-8ad8-5aa486d41f43",
+         "modo_busca": "NOTICIAS_BR",
+         "resultado_id": "cf40f1-01",
+         "parametros": {
+          "query": "A LGPD está em vigor no Brasil desde 2020.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "include_domains": [
+           "g1.globo.com",
+           "oglobo.globo.com",
+           "valor.globo.com",
+           "folha.uol.com.br",
+           "uol.com.br",
+           "estadao.com.br",
+           "agenciabrasil.ebc.com.br",
+           "cnnbrasil.com.br",
+           "infomoney.com.br",
+           "exame.com",
+           "poder360.com.br",
+           "correiobraziliense.com.br",
+           "metropoles.com",
+           "veja.abril.com.br",
+           "terra.com.br",
+           "band.com.br",
+           "r7.com",
+           "bbc.com",
+           "jota.info",
+           "canaltech.com.br"
+          ]
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Wed, 11 Nov 2026 19:53:29 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 11 Nov 2026 19:53:29 GMT",
+         "value_normalized": "2026-11-11",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "FETCH_FAILED",
+        "detalhe": "SOURCE_TIMEOUT",
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "d3cf6177-3d5c-4c69-a3ef-3d9f7f286886",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "013a50ca-2d00-4ea3-aa35-d012a33fb509",
+      "id_verificacao": "c3d64905-c699-437a-8075-a504fe7c52e0",
+      "url_original": "https://www.poder360.com.br/poder-governo/5-medidas-de-lula-perderam-validade-no-congresso-desde-outubro",
+      "url_canonica": "https://www.poder360.com.br/poder-governo/5-medidas-de-lula-perderam-validade-no-congresso-desde-outubro",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "906e142522117aa88273b0e7960157b71065eba7a84fd53340074706ca070cdb",
+      "coletado_em": "2026-11-13T13:28:51.496Z",
+      "id_operacao_busca": "56eae547-889c-4e6d-895c-30601f4a0a18",
+      "id_operacao_extracao": "2c225379-c8b6-4899-9897-75211478dac1",
+      "consulta": "A LGPD está em vigor no Brasil desde 2020.",
+      "parametros_busca": {
+       "query": "A LGPD está em vigor no Brasil desde 2020.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news",
+       "include_domains": [
+        "g1.globo.com",
+        "oglobo.globo.com",
+        "valor.globo.com",
+        "folha.uol.com.br",
+        "uol.com.br",
+        "estadao.com.br",
+        "agenciabrasil.ebc.com.br",
+        "cnnbrasil.com.br",
+        "infomoney.com.br",
+        "exame.com",
+        "poder360.com.br",
+        "correiobraziliense.com.br",
+        "metropoles.com",
+        "veja.abril.com.br",
+        "terra.com.br",
+        "band.com.br",
+        "r7.com",
+        "bbc.com",
+        "jota.info",
+        "canaltech.com.br"
+       ]
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd",
+        "https://valor.globo.com/legislacao/noticia/2026/10/30/lgpd-completa-seis-anos-com-os-desafios-da-inteligencia-artificial.ghtml",
+        "https://irisbh.com.br/desafios-vigor-lgpd",
+        "https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor",
+        "https://www.poder360.com.br/poder-governo/5-medidas-de-lula-perderam-validade-no-congresso-desde-outubro"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "9bcf8c44-fa34-495f-8ad8-5aa486d41f43",
+       "operacoes_busca": [
+        {
+         "id_operacao": "56eae547-889c-4e6d-895c-30601f4a0a18",
+         "request_id": "9bcf8c44-fa34-495f-8ad8-5aa486d41f43",
+         "modo_busca": "NOTICIAS_BR",
+         "resultado_id": "cf40f1-01",
+         "parametros": {
+          "query": "A LGPD está em vigor no Brasil desde 2020.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "include_domains": [
+           "g1.globo.com",
+           "oglobo.globo.com",
+           "valor.globo.com",
+           "folha.uol.com.br",
+           "uol.com.br",
+           "estadao.com.br",
+           "agenciabrasil.ebc.com.br",
+           "cnnbrasil.com.br",
+           "infomoney.com.br",
+           "exame.com",
+           "poder360.com.br",
+           "correiobraziliense.com.br",
+           "metropoles.com",
+           "veja.abril.com.br",
+           "terra.com.br",
+           "band.com.br",
+           "r7.com",
+           "bbc.com",
+           "jota.info",
+           "canaltech.com.br"
+          ]
+         }
+        }
+       ],
+       "request_id_extracao": "d3cf6177-3d5c-4c69-a3ef-3d9f7f286886",
+       "resultado_id": "cf40f1-01",
+       "relevancia": 0.3054901,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 11 Nov 2026 19:53:29 GMT",
+         "value_normalized": "2026-11-11",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "FETCH_FAILED",
+        "detalhe": "SOURCE_TIMEOUT",
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "5 medidas de Lula perderam validade no Congresso desde outubro",
+      "url": "https://www.poder360.com.br/poder-governo/5-medidas-de-lula-perderam-validade-no-congresso-desde-outubro",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 11914,
+      "caracteres_preparados": 6798,
+      "trecho_analisado": "TÍTULO DA FONTE: 5 medidas de Lula perderam validade no Congresso desde outubro\nURL DA FONTE: https://www.poder360.com.br/poder-governo/5-medidas-de-lula-perderam-validade-no-congresso-desde-outubro\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\nDisponível em https://www.poder360.com.br/poder-governo/5-medidas-de-lula-perderam-validade-no-congresso-desde-outubro/\n\n[![Poder360](https://www.poder360.com.br/wp-content/themes/poder/assets/img/lgo/poder_5.svg)](https://www.poder360.com.br/)\n\n[ASSINE O PODER DRIVE PODER DRIVE](https://drive.poder360.com.br/)\n\n* [![Facebook](https://www.poder360.com.br/wp-content/themes/poder/assets/img/ico/facebook_list.svg)](https://www.facebook.com/sharer/sharer.php?u=https://www.poder360.com.br/poder-governo/5-medidas-de-lula-perderam-validade-no-congresso-desde-outubro/&text=5 medidas de Lula perderam validade no Congresso desde outubro)\n\n* [![Whatsapp](https://www.poder360.com.br/wp-content/themes/poder/assets/img/ico/whatsapp_list.svg)](https://api.whatsapp.com/send?text=5 medidas de Lula perderam validade no Congresso desde outubro https://www.poder360.com.br/poder-governo/5-medidas-de-lula-perderam-validade-no-congresso-desde-outubro/)\n\n* [![Twitter](https:",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "UNRELATED",
+      "justificativa": "This source discusses Lula's measures and does not mention the LGPD."
+     },
+     "classificacao": {
+      "postura": "IRRELEVANT",
+      "justificativa": "This source discusses Lula's measures and does not mention the LGPD."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 2,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2026-11-11"
+     }
+    }
+   ],
+   "erro_busca": null,
+   "risco_desatualizacao": {
+    "nivel": "HIGH",
+    "sensivel_ao_tempo": true,
+    "motivos": [
+     "Laws and official rules change, usually yearly (checked against a 365-day window)",
+     "Mentions 2020, which is in the past",
+     "Describes a change (\"no longer\", \"came into force\"…)"
+    ]
+   },
+   "dominios_oficiais_usados": [
+    "gov.br"
+   ],
+   "dominios_oficiais_automaticos": [
+    "gov.br"
+   ],
+   "agregacao": {
+    "status": "CLASSIFICADO",
+    "conclusao_factual": {
+     "status": "APOIA",
+     "resumo": "As evidências utilizáveis apoiam a afirmação. Isso, por si só, não demonstra que ela continua válida agora."
+    },
+    "veredito": "CORROBORADA",
+    "resumo": "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
+    "afirmacao": "A LGPD está em vigor no Brasil desde 2020.",
+    "score_qualidade_evidencia": {
+     "valor": 50,
+     "escala": "0-100",
+     "natureza": "HEURISTICA",
+     "interpretacao": "Qualidade estrutural das evidências, não probabilidade de verdade.",
+     "componentes": {
+      "autoridade": 20,
+      "atualidade": 0,
+      "diversidade_fontes": 20,
+      "concordancia": 10
+     }
+    },
+    "freshness": {
+     "score": 0,
+     "status": "STALE",
+     "confidence": "LIMITED",
+     "algorithm_id": "CLAIM_FRESHNESS_SCORE",
+     "algorithm_version": "1.1.0",
+     "policy_id": "regulamento:365d:v1",
+     "as_of": "2026-11-13T13:28:42.962Z",
+     "evidence_summary": {
+      "received": 4,
+      "eligible": 1,
+      "independent_domains": 1,
+      "fresh": 0,
+      "stale": 1,
+      "excluded": 3
+     },
+     "drivers": [
+      {
+       "code": "ATTRIBUTE_DATED_STALE_EVIDENCE",
+       "evidence_id": null,
+       "date": "2020-08-01",
+       "age_days": 2295,
+       "posture": "SUPPORTS",
+       "domain": "serpro.gov.br",
+       "dependency_group": "source_cluster_001"
+      },
+      {
+       "code": "EVIDENCE_EXCLUDED_FROM_TEMPORAL_SCORE",
+       "count": 3
+      }
+     ],
+     "limitations": [
+      "Índice temporal determinístico; não é probabilidade de verdade.",
+      "Datas de página sem vínculo explícito ao atributo foram excluídas."
+     ]
+    },
+    "concordancia": {
+     "algorithm_id": "SOURCE_AGREEMENT_INDEX",
+     "algorithm_version": "1.1.0",
+     "weights": {
+      "OFICIAL": 3,
+      "ACADEMICO": 3,
+      "NOTICIA": 2,
+      "REFERENCIA": 1.5,
+      "OUTRO": 1,
+      "BLOG_FORUM": 0.25
+     },
+     "score": 100,
+     "coverage": "STRONG",
+     "independent_sources": 4,
+     "source_types": [
+      "OFICIAL",
+      "NOTICIA",
+      "OUTRO"
+     ],
+     "supporting": 4,
+     "authoritative_supporting": 2,
+     "contradicting": 0,
+     "split": 0,
+     "by_type": {
+      "OFICIAL": {
+       "supports": 2,
+       "contradicts": 0,
+       "split": 0
+      },
+      "NOTICIA": {
+       "supports": 1,
+       "contradicts": 0,
+       "split": 0
+      },
+      "OUTRO": {
+       "supports": 1,
+       "contradicts": 0,
+       "split": 0
+      }
+     },
+     "limitations": [
+      "Agreement between sources is not a probability of truth: sources can share the same mistake.",
+      "Copies and pages from the same site count once; independence is approximated by domain and text similarity."
+     ]
+    },
+    "recencia_pagina": {
+     "algorithm_id": "PAGE_DATE_RECENCY_INDEX",
+     "algorithm_version": "1.0.0",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "as_of": "2026-11-13T13:28:42.962Z",
+     "score": 0,
+     "status": "STALE",
+     "policy_id": "regulamento:365d:page:v1",
+     "newest_date": "2020-10-05",
+     "sources": [
+      {
+       "date": "2020-08-01",
+       "age_days": 2295,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "domain": "serpro.gov.br",
+       "evidence_id": null
+      },
+      {
+       "date": "2020-10-05",
+       "age_days": 2230,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "domain": "irisbh.com.br",
+       "evidence_id": null
+      },
+      {
+       "date": "2020-09-18",
+       "age_days": 2247,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "domain": "www12.senado.leg.br",
+       "evidence_id": null
+      }
+     ],
+     "limitations": [
+      "Baseado na data da página, não na data em que o dado específico mudou: confiança baixa.",
+      "Não substitui o índice de atualidade principal e não é probabilidade de verdade."
+     ]
+    },
+    "atualidade_afirmacao": {
+     "algorithm_id": "CLAIM_CURRENCY_SCORE",
+     "algorithm_version": "1.0.0",
+     "formula": "evidence_recency × support_share",
+     "window_days": 365,
+     "score": 0,
+     "status": "AGING",
+     "basis": "FACT_DATE",
+     "confidence": "MEDIUM",
+     "evidence_recency": 0,
+     "support_share": 1,
+     "newest_date": "2020-08-01",
+     "newest_age_days": 2295,
+     "within_window": false
+    },
+    "versao_regras": "1.2.0",
+    "metodo": "AGREGACAO_DETERMINISTICA",
+    "fontes_independentes": 4,
+    "grupos_distintos_de_evidencia": 4,
+    "dependencia_detectada": 0,
+    "dependencia_nao_verificada": true,
+    "nota_independencia": "Cópias exatas, quase duplicadas, URLs canônicas iguais e páginas do mesmo domínio são agrupadas; domínios sem sinal de cópia não têm independência editorial comprovada.",
+    "total_evidencias_utilizaveis": 4,
+    "fontes": [
+     {
+      "dominio": "serpro.gov.br",
+      "dominios": [
+       "serpro.gov.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_001",
+      "oficial": true,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd"
+      ],
+      "evidencias": [
+       {
+        "titulo": "O que muda com a LGPD — LGPD - Lei Geral de Proteção de Dados Pessoais | Serpro",
+        "url": "https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd",
+        "categoria_fonte": "OFICIAL",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:28:51.496Z",
+        "data_publicacao": null,
+        "data_atualizacao": "2020-08-01",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [],
+        "grupo_dependencia_id": "source_cluster_001",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "valor.globo.com",
+      "dominios": [
+       "valor.globo.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_002",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://valor.globo.com/legislacao/noticia/2026/10/30/lgpd-completa-seis-anos-com-os-desafios-da-inteligencia-artificial.ghtml"
+      ],
+      "evidencias": [
+       {
+        "titulo": "LGPD completa seis anos com os desafios da inteligência artificial | Legislação | Valor Econômico",
+        "url": "https://valor.globo.com/legislacao/noticia/2026/10/30/lgpd-completa-seis-anos-com-os-desafios-da-inteligencia-artificial.ghtml",
+        "categoria_fonte": "NOTICIA",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "UNVERIFIABLE",
+        "status_datas_declaradas": "INVALIDA_OU_INCOERENTE",
+        "consultado_em": "2026-11-13T13:28:51.496Z",
+        "data_publicacao": "2026-10-30",
+        "data_atualizacao": "2020-09-01",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Fri, 30 Oct 2026 08:00:00 GMT",
+          "value_normalized": "2026-10-30",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_002",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "irisbh.com.br",
+      "dominios": [
+       "irisbh.com.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_003",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://irisbh.com.br/desafios-vigor-lgpd"
+      ],
+      "evidencias": [
+       {
+        "titulo": "LGPD em vigor: novidades legais e desafios restantes » IRIS-BH",
+        "url": "https://irisbh.com.br/desafios-vigor-lgpd",
+        "categoria_fonte": "OUTRO",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:28:51.496Z",
+        "data_publicacao": "2020-10-05",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Mon, 05 Oct 2020 00:00:00 GMT",
+          "value_normalized": "2020-10-05",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://irisbh.com.br/desafios-vigor-lgpd/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2020-10-05T18:09:36+00:00",
+          "value_normalized": "2020-10-05",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2020-10-05T18:10:37+00:00",
+          "value_normalized": "2020-10-05",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_003",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "www12.senado.leg.br",
+      "dominios": [
+       "www12.senado.leg.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_004",
+      "oficial": true,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Lei Geral de Proteção de Dados entra em vigor — Senado Notícias",
+        "url": "https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor",
+        "categoria_fonte": "OFICIAL",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:28:51.496Z",
+        "data_publicacao": "2020-09-18",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Fri, 18 Sep 2020 19:09:25 GMT",
+          "value_normalized": "2020-09-18",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_MODIFIED_TIME",
+          "field": "article:modified_time",
+          "value_original": "2020-09-18T16:40:44-03:00",
+          "value_normalized": "2020-09-18",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2020-09-18T16:09:25-03:00",
+          "value_normalized": "2020-09-18",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_004",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     }
+    ],
+    "limitacoes": [
+     "Nenhuma evidência possui data verificável e status de atualidade FRESH.",
+     "Uma data da página ou do resultado de busca não comprova quando o atributo da afirmação foi publicado ou atualizado.",
+     "Domínios sem sinal detectado de duplicação não têm independência editorial comprovada; republicação com edição extensa ainda pode passar despercebida."
+    ],
+    "avaliado_em": "2026-11-13T13:28:57.463Z"
+   }
+  }
+ ],
+ "afirmacoes_omitidas": [],
+ "resposta_corrigida": {
+  "texto": "A LGPD está em vigor no Brasil desde 2020. [1][2][3]",
+  "mudancas": [
+   {
+    "claim_id": "afirmacao_1",
+    "what": "kept"
+   }
+  ],
+  "fontes_citadas": [
+   1,
+   2,
+   3
+  ],
+  "tentativas": 1,
+  "citacoes_anexadas": false,
+  "fontes": [
+   {
+    "n": 1,
+    "url": "https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd",
+    "titulo": "O que muda com a LGPD — LGPD - Lei Geral de Proteção de Dados Pessoais | Serpro",
+    "tipo": "OFICIAL",
+    "postura": "SUPPORTS",
+    "data": "2020-08-01"
+   },
+   {
+    "n": 2,
+    "url": "https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor",
+    "titulo": "Lei Geral de Proteção de Dados entra em vigor — Senado Notícias",
+    "tipo": "OFICIAL",
+    "postura": "SUPPORTS",
+    "data": "2020-09-18"
+   },
+   {
+    "n": 3,
+    "url": "https://valor.globo.com/legislacao/noticia/2026/10/30/lgpd-completa-seis-anos-com-os-desafios-da-inteligencia-artificial.ghtml",
+    "titulo": "LGPD completa seis anos com os desafios da inteligência artificial | Legislação | Valor Econômico",
+    "tipo": "NOTICIA",
+    "postura": "SUPPORTS",
+    "data": "2020-09-01"
+   }
+  ],
+  "metodo": "MODEL_REWRITE_FROM_VERIFIED_EVIDENCE"
+ },
+ "rastreabilidade_modelo": [
+  {
+   "id_chamada": "b872fe36-9fb9-4e6d-81a7-4b339ef30a4c",
+   "id_requisicao_enviada": "d5517eed-1746-4230-b865-1d07fe5112e1",
+   "id_verificacao": "c3d64905-c699-437a-8075-a504fe7c52e0",
+   "etapa": "DECOMPOSICAO",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 654,
+   "tokens": {
+    "entrada": 840,
+    "saida": 216,
+    "total": 1056
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "d5517eed-1746-4230-b865-1d07fe5112e1",
+   "id_trace": "bf8a3931554246928409d83d3391d708",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 654.099,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:28:42.964Z"
+  },
+  {
+   "id_chamada": "d68b50d0-0c6f-433c-9fc2-bedcb6ad31fc",
+   "id_requisicao_enviada": "5863d968-60fd-4571-ac36-67bcd8b85fa9",
+   "id_verificacao": "c3d64905-c699-437a-8075-a504fe7c52e0",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 2511,
+   "tokens": {
+    "entrada": 4178,
+    "saida": 1666,
+    "total": 5844
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "5863d968-60fd-4571-ac36-67bcd8b85fa9",
+   "id_trace": "fea953b8c5e54d718a5d71fbe0e6748b",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 2511.369,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:28:54.893Z"
+  },
+  {
+   "id_chamada": "3c27f4d3-0d09-4078-b7a4-1b579f3c35a7",
+   "id_requisicao_enviada": "34ffe9af-9521-4a36-a62d-0198683b7b1c",
+   "id_verificacao": "c3d64905-c699-437a-8075-a504fe7c52e0",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 963,
+   "tokens": {
+    "entrada": 951,
+    "saida": 270,
+    "total": 1221
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "34ffe9af-9521-4a36-a62d-0198683b7b1c",
+   "id_trace": "e417fbe91f664aaca7c78647ebc1cbc4",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 997.839,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:28:57.463Z"
+  }
+ ],
+ "rastreabilidade_pesquisa": [
+  {
+   "id_operacao": "c347c03b-2d36-41c7-b352-9f5362ce5073",
+   "id_verificacao": "c3d64905-c699-437a-8075-a504fe7c52e0",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "A LGPD está em vigor no Brasil desde 2020.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:28:43.693Z",
+   "finalizada_em": "2026-11-13T13:28:45.380Z",
+   "duracao_ms": 1687,
+   "request_id": "d27b35f4-2a71-4ca3-a7fd-4125cd42bb91",
+   "response_time": 1.02,
+   "erro": null,
+   "modo_busca": "GERAL",
+   "parametros": {
+    "query": "A LGPD está em vigor no Brasil desde 2020.",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true,
+    "country": "brazil"
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "5c6614-00",
+     "titulo": "LGPD em vigor: novidades legais e desafios restantes » IRIS-BH",
+     "url": "https://irisbh.com.br/desafios-vigor-lgpd",
+     "relevancia": 0.82976806,
+     "data_publicacao": "2020-10-05"
+    },
+    {
+     "resultado_id": "7ebaaa-01",
+     "titulo": "O que muda com a LGPD — LGPD - Lei Geral de Proteção de Dados Pessoais | Serpro",
+     "url": "https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd",
+     "relevancia": 0.8177201,
+     "data_publicacao": null
+    },
+    {
+     "resultado_id": "2a14da-02",
+     "titulo": "Lei Geral de Proteção de Dados entra em vigor — Senado Notícias",
+     "url": "https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor",
+     "relevancia": 0.7767923,
+     "data_publicacao": "2020-09-18"
+    },
+    {
+     "resultado_id": "a0b194-03",
+     "titulo": "Marco legal da proteção de dados pessoais é sancionado; lei entra em vigor em 2020 - Portal da Câmara dos Deputados",
+     "url": "https://www.camara.leg.br/noticias/543434-marco-legal-da-protecao-de-dados-pessoais-e-sancionado-lei-entra-em-vigor-em-2020",
+     "relevancia": 0.7229184,
+     "data_publicacao": "2018-08-14"
+    },
+    {
+     "resultado_id": "21e0f9-04",
+     "titulo": "Lei Geral de Proteção de Dados Pessoais (LGPD) — Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome",
+     "url": "https://www.gov.br/mds/pt-br/acesso-a-informacao/governanca/integridade/campanhas/lgpd",
+     "relevancia": 0.5329113,
+     "data_publicacao": null
+    }
+   ]
+  },
+  {
+   "id_operacao": "56eae547-889c-4e6d-895c-30601f4a0a18",
+   "id_verificacao": "c3d64905-c699-437a-8075-a504fe7c52e0",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "A LGPD está em vigor no Brasil desde 2020.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:28:45.380Z",
+   "finalizada_em": "2026-11-13T13:28:49.722Z",
+   "duracao_ms": 4342,
+   "request_id": "9bcf8c44-fa34-495f-8ad8-5aa486d41f43",
+   "response_time": 3.89,
+   "erro": null,
+   "modo_busca": "NOTICIAS_BR",
+   "parametros": {
+    "query": "A LGPD está em vigor no Brasil desde 2020.",
+    "search_depth": "basic",
+    "max_results": 4,
+    "include_answer": false,
+    "include_published_date": true,
+    "topic": "news",
+    "include_domains": [
+     "g1.globo.com",
+     "oglobo.globo.com",
+     "valor.globo.com",
+     "folha.uol.com.br",
+     "uol.com.br",
+     "estadao.com.br",
+     "agenciabrasil.ebc.com.br",
+     "cnnbrasil.com.br",
+     "infomoney.com.br",
+     "exame.com",
+     "poder360.com.br",
+     "correiobraziliense.com.br",
+     "metropoles.com",
+     "veja.abril.com.br",
+     "terra.com.br",
+     "band.com.br",
+     "r7.com",
+     "bbc.com",
+     "jota.info",
+     "canaltech.com.br"
+    ]
+   },
+   "quantidade_resultados": 4,
+   "resultados": [
+    {
+     "resultado_id": "6a78df-00",
+     "titulo": "LGPD completa seis anos com os desafios da inteligência artificial | Legislação | Valor Econômico",
+     "url": "https://valor.globo.com/legislacao/noticia/2026/10/30/lgpd-completa-seis-anos-com-os-desafios-da-inteligencia-artificial.ghtml",
+     "relevancia": 0.7902067,
+     "data_publicacao": "2026-10-30"
+    },
+    {
+     "resultado_id": "cf40f1-01",
+     "titulo": "5 medidas de Lula perderam validade no Congresso desde outubro",
+     "url": "https://www.poder360.com.br/poder-governo/5-medidas-de-lula-perderam-validade-no-congresso-desde-outubro",
+     "relevancia": 0.3054901,
+     "data_publicacao": "2026-11-11"
+    },
+    {
+     "resultado_id": "0d8bdc-02",
+     "titulo": "Decreto de Lula obriga empresas a ter atendimento humano em SACs",
+     "url": "https://www.poder360.com.br/poder-governo/decreto-de-lula-obriga-empresas-a-ter-atendimento-humano-em-sacs",
+     "relevancia": 0.15253653,
+     "data_publicacao": "2026-11-07"
+    },
+    {
+     "resultado_id": "6731bc-03",
+     "titulo": "Varejo tem queda de 4% no 1º mês após proibição das bets | Poder360",
+     "url": "https://www.poder360.com.br/conteudo-patrocinado/varejo-tem-queda-de-4-no-1o-mes-apos-proibicao-das-bets",
+     "relevancia": 0.1337543,
+     "data_publicacao": "2026-11-13"
+    }
+   ]
+  },
+  {
+   "id_operacao": "2c225379-c8b6-4899-9897-75211478dac1",
+   "id_verificacao": "c3d64905-c699-437a-8075-a504fe7c52e0",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "EXTRACAO",
+   "consulta": "A LGPD está em vigor no Brasil desde 2020.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:28:49.724Z",
+   "finalizada_em": "2026-11-13T13:28:51.496Z",
+   "duracao_ms": 1772,
+   "request_id": "d3cf6177-3d5c-4c69-a3ef-3d9f7f286886",
+   "response_time": 0.02,
+   "erro": null,
+   "urls_solicitadas": [
+    "https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd",
+    "https://valor.globo.com/legislacao/noticia/2026/10/30/lgpd-completa-seis-anos-com-os-desafios-da-inteligencia-artificial.ghtml",
+    "https://irisbh.com.br/desafios-vigor-lgpd",
+    "https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor",
+    "https://www.poder360.com.br/poder-governo/5-medidas-de-lula-perderam-validade-no-congresso-desde-outubro"
+   ],
+   "parametros": {
+    "urls": [
+     "https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd",
+     "https://valor.globo.com/legislacao/noticia/2026/10/30/lgpd-completa-seis-anos-com-os-desafios-da-inteligencia-artificial.ghtml",
+     "https://irisbh.com.br/desafios-vigor-lgpd",
+     "https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor",
+     "https://www.poder360.com.br/poder-governo/5-medidas-de-lula-perderam-validade-no-congresso-desde-outubro"
+    ],
+    "extract_depth": "basic",
+    "format": "markdown",
+    "include_images": false
+   },
+   "quantidade_resultados": 5,
+   "urls_extraidas": [
+    "https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd",
+    "https://valor.globo.com/legislacao/noticia/2026/10/30/lgpd-completa-seis-anos-com-os-desafios-da-inteligencia-artificial.ghtml",
+    "https://irisbh.com.br/desafios-vigor-lgpd",
+    "https://www12.senado.leg.br/noticias/materias/2020/09/18/lei-geral-de-protecao-de-dados-entra-em-vigor",
+    "https://www.poder360.com.br/poder-governo/5-medidas-de-lula-perderam-validade-no-congresso-desde-outubro"
+   ]
+  }
+ ],
+ "modo": "real",
+ "simulado": false,
+ "gateway": {
+  "gateway": "bifrost",
+  "chamadas": 3,
+  "falhas": 0,
+  "cadeia_modelos": [
+   "groq/openai/gpt-oss-20b",
+   "groq/openai/gpt-oss-120b"
+  ],
+  "queda_simulada": false,
+  "respostas_por_modelo": [
+   {
+    "modelo": "groq/openai/gpt-oss-20b",
+    "chamadas": 2
+   },
+   {
+    "modelo": "groq/openai/gpt-oss-120b",
+    "chamadas": 1
+   }
+  ],
+  "respostas_de_reserva": 1,
+  "tokens_total": 8121,
+  "latencia_media_ms": 1388
+ },
+ "duracao_ms": 15539,
+ "gravado_em": "2026-11-13T13:28:58.488Z"
+}

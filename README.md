@@ -2,7 +2,7 @@
 
 ### Read between the lines of any AI answer. A stale-answer detector for AI applications, in English and Portuguese
 
-AI assistants tend to agree with whatever you bring them. Paste a blog post or a hunch into a chatbot and it will often confirm it. Entrelinhas does the opposite: it takes an AI-generated answer, splits it into claims and checks each one against **independent, current sources**: official sites first, then news and scientific articles, with blogs counting least.
+AI assistants tend to agree with whatever you bring them. Paste a blog post or a hunch into a chatbot and it will often confirm it. Entrelinhas does the opposite: it takes an AI-generated answer, splits it into claims and checks each one against **independent, current sources**: official sites first, then news and scientific articles, with blogs counting least. It shows **what still holds, what is outdated and what is simply wrong**.
 
 For every answer it shows, in this order:
 
@@ -24,7 +24,7 @@ It is **built for Portuguese, not translated into it**. It reads:
 
 **Try it now, no install:** <https://contatoalicecandido-lab.github.io/entrelinhas/>. Click **See a real check**. The public demo replays real live checks (real Tavily searches, real model calls through Bifrost) and the built-in examples, without API keys. To check your own text, run it locally (see [Getting started](#getting-started)).
 
-**Check any AI answer from any site:** with Entrelinhas running locally, drag the **Check with Entrelinhas** button (on the page, in the “Use cases” section, under “A verification layer for any AI app”) to your bookmarks bar. Select an answer on ChatGPT, Gemini or any page and click it: Entrelinhas opens with the text ready. Apps can call the same check with `POST /api/verificar`.
+**Check any AI answer from any site:** with Entrelinhas running locally, drag the **Check with Entrelinhas** button (on the page, in the section “Use Entrelinhas on any AI app”) to your bookmarks bar. Select an answer on ChatGPT, Gemini or any page and click it: Entrelinhas opens with the text ready. Apps can call the same check with `POST /api/verificar` (see [API](#api)).
 
 ## The problem
 
@@ -39,7 +39,7 @@ Large language models confidently repeat facts that have changed: prices go up, 
    - years already in the past.
 3. **Gathers diverse evidence with Tavily**:
    - a general search, boosted to Brazil for Portuguese claims;
-   - a news search;
+   - a news search limited to the period in which a change would matter (`time_range`: last month for prices, last year for versions, companies and rules), so recent news of a change surfaces first;
    - a scientific search for health and science claims;
    - a search on official domains, which come from the user's trusted sites or from the Brazilian authority map.
 
@@ -83,6 +83,8 @@ What the score means in practice:
 
 Each card shows the basis of its score and a confidence level. The score is a documented heuristic, **not a probability of truth**.
 
+In the API response this claim score is `agregacao.atualidade_afirmacao` (the number on the card). A second field, `agregacao.freshness`, only measures how recent the sources are, whether or not they agree with the claim. A contradicted claim can therefore have recent sources (`freshness` 57) and still a claim score of 0.
+
 ### Why these windows
 
 | Category | Window | Why |
@@ -114,7 +116,7 @@ Run it against a live server with `node avaliacao/rodar-casos-reais.js`. It paus
 
 | | |
 |---|---|
-| Exact verdict (Current/Corroborated for true claims, Contradicted or Likely outdated for outdated ones) | **14 of 15** (93%) |
+| Exact verdict (Current/Corroborated for true claims, Contradicted by sources or Likely outdated for outdated ones) | **14 of 15** (93%) |
 | Right direction (also counting “Supported but unconfirmed” and “Conflicting”) | **15 of 15** |
 | Outdated claims confirmed as true | **0** |
 | True claims marked as contradicted | **0** |
@@ -137,9 +139,14 @@ Run it against a live server with `node avaliacao/rodar-casos-reais.js`. It paus
 | Jack Dorsey is CEO of Twitter | outdated | Contradicted by sources |
 | GPT-4 is OpenAI's newest model | outdated | Contradicted by sources |
 
-The one partial case is Netflix: sources with the old and the new price were both found, so the verdict was Conflicting instead of Contradicted. It still warns the reader not to rely on the claim.
+**Read these numbers with their limits:**
+- **How strong each “outdated” verdict is.** Of the 6 outdated claims caught, 1 was contradicted by a current official source with a date (*Likely outdated*). The other 5 were contradicted by most independent sources, but no official source dated the fact (*Contradicted by sources*, internally `CONTRADICAO_FRACA`, “weak contradiction”). The interface presents those 5 as a strong warning, not a final ruling.
+- **The partial case.** Netflix found sources with both the old and the new price, so the verdict was *Conflicting* instead of contradicted. It still tells the reader not to rely on the claim.
+- **Low freshness on true claims.** Some true claims (LGPD, Pix, ChatGPT Plus, Node.js 22) came back *Corroborated* with a low freshness score. That is intended: the sources that confirm them are older than the window for that kind of fact, so the report labels them *Aging* and suggests looking for a recent source.
+- **Tuned on the same cases.** The rules were improved after the first run on these same 15 claims, so 14 of 15 is not an independent accuracy estimate. To check that honestly, `avaliacao/casos-novos-2026-11-13.json` holds 8 new claims (4 true, 4 outdated) written after the fixes and never used to tune anything. Run them with `CASOS=avaliacao/casos-novos-2026-11-13.json node avaliacao/rodar-casos-reais.js`. The news `time_range` filter was added after the 13 Nov run, so these new cases also test it.
+- **Small sample.** 15 claims show behavior; they are not a statistical accuracy estimate.
 
-Some true claims (LGPD, Pix, ChatGPT Plus, Node.js 22) came back Corroborated with a low freshness score. That is intended: the sources that confirm them are older than the window for that kind of fact, so the report labels them Aging and suggests looking for a recent source.
+**Bifrost during this run** (`avaliacao/gateway-casos-reais-2026-11-13.json`, built by `node avaliacao/resumir-gateway.js 2026-11-13T13` from the 15 recorded checks in `gravacoes/`): 60 model calls, **22 answered by the backup model** when the main one hit the free tier's limit, 4 answers in an invalid format that Entrelinhas retried, and all 15 checks finished.
 
 The first run, on 12 Nov 2026, scored 11 of 15 exact and 15 of 15 in the right direction (`avaliacao/resultado-casos-reais-2026-11-12.json`).
 
@@ -156,16 +163,16 @@ What the run taught us, already fixed:
 | Technology | Purpose |
 |---|---|
 | Node.js 22.5+ (no framework) | Server, pipeline and tests; built-in `node:sqlite` |
-| Tavily Search and Extract | General, news, scientific and official-domain search; page extraction |
+| Tavily Search and Extract | General, news (filtered by `time_range` per claim type), scientific and official-domain search; page extraction |
 | Bifrost by Maxim AI | AI gateway for every model call: fallback chain, routing info, rate-limit handling, per-stage labels |
 | Groq (gpt-oss-20b, gpt-oss-120b) | Models served through Bifrost; more models or providers can be chained |
 | SQLite | Full verification trace |
 
 ### What Bifrost does in Entrelinhas
 
-Every model call goes to `http://localhost:8080/v1/chat/completions` with the virtual key from `BIFROST_KEY`. The gateway does real work:
+Every model call goes to `http://localhost:8080/v1/chat/completions` (or the gateway set in `BIFROST_URL`) with the virtual key from `BIFROST_KEY`. The gateway does real work:
 
-- **Fallback chain.** Each request names a main model and backups: `groq/openai/gpt-oss-20b` → `groq/openai/gpt-oss-120b` by default. Set `BIFROST_MODEL` and `BIFROST_FALLBACKS` (comma-separated) to add more, for example a Gemini model, for failover across providers. When the main model fails or hits the free tier's per-minute token limit, Bifrost retries the backups on its own, so Entrelinhas has no retry code for that. In the 15-claim benchmark, backup models answered **23 of 50** model calls when the main model hit its limit, and every check finished.
+- **Fallback chain.** Each request names a main model and backups: `groq/openai/gpt-oss-20b` → `groq/openai/gpt-oss-120b` by default. Set `BIFROST_MODEL` and `BIFROST_FALLBACKS` (comma-separated) to add more, for example a Gemini model, for failover across providers. When the main model fails or hits the free tier's per-minute token limit, Bifrost retries the backups on its own, so Entrelinhas has no retry code for that. In the 13 Nov benchmark, the backup model answered **22 of 60** model calls when the main model hit its limit, and all 15 checks finished (`avaliacao/gateway-casos-reais-2026-11-13.json`).
 - **Routing info.** `extra_fields.routing_info` (provider, model, `is_fallback`), token usage and latency are recorded for every call and shown in the **AI gateway · Bifrost** panel.
 - **Rate limits.** If the whole chain is limited, Entrelinhas waits the `retry_after_ms` that Bifrost reports (at most 25 s) and tries once more. A daily quota cannot be waited out: on Groq's free tier, gpt-oss-20b has a daily token limit, which is why a second provider in the chain matters.
 - **Labels for observability.** Requests carry `x-bf-dim-app` and `x-bf-dim-stage` (decomposition, batch analysis, updated answer), plus request and verification IDs.
@@ -184,7 +191,7 @@ The selected problem statement is **Build a Stale-Answer Detector for AI Applica
 | Tavily and Bifrost, meaningfully | Tavily for every search and extraction. Bifrost for every model call, with fallback chain, routing info, rate-limit handling and an outage drill (`src/bifrost.js`). |
 | Expected outcome: which claims are supported by current sources | Verdict, agreement and sources per claim, plus the **updated answer** with citations (`src/resposta-corrigida.js`). |
 
-The scores are documented heuristics, not calibrated probabilities. See [`submission/FORM_COPY.md`](submission/FORM_COPY.md) and [`ESPECIFICACAO_FRESHNESS_SCORE.md`](ESPECIFICACAO_FRESHNESS_SCORE.md). Official event: [HackCulture](https://hackculture.io/hackathons/ai-global-hackathon).
+The scores are documented heuristics, not calibrated probabilities. See [`submission/FORM_COPY.md`](submission/FORM_COPY.md) and [`ESPECIFICACAO_FRESHNESS_SCORE.md`](notas/ESPECIFICACAO_FRESHNESS_SCORE.md). Official event: [HackCulture](https://hackculture.io/hackathons/ai-global-hackathon).
 
 ### Web interface
 
@@ -217,17 +224,77 @@ The demo runs claim decomposition, Tavily Search and Extract, source corresponde
 
 Available claim types are `preco`, `versao_api`, `regulamento`, and `empresa`. If no type is given, the category is resolved automatically: the model proposes one during decomposition (validated against the allowed list) and deterministic keyword rules are the fallback. The origin is recorded in `origem_tipo_afirmacao` (`CONFIGURADO`, `MODELO` or `HEURISTICA`). Official domains are optional. When supplied, Entrelinhas makes one additional Tavily search per claim to seek those domains while retaining the general search. This adds Tavily usage.
 
-Missing, invalid, future, or page-only dates do not produce a claim freshness score. Tavily `published_date`, HTTP `Last-Modified`, article metadata and document `dateModified` remain page/document-scoped. Visible “Updated/Atualizado em” labels remain `PAGE`; “prices consulted on” is recorded as `OBSERVATION`; only a visible update date linked to the claim's entity/value can become `ATTRIBUTE`. Schema.org `priceValidUntil` is retained as an `OFFER` validity signal and is not treated as an update timestamp. See [Tavily Search API](https://docs.tavily.com/documentation/api-reference/endpoint/search), [Tavily Extract API](https://docs.tavily.com/documentation/api-reference/endpoint/extract), and the detailed [temporal signal contract](ESPECIFICACAO_FRESHNESS_SCORE.md).
+Missing, invalid, future, or page-only dates do not produce a claim freshness score. Tavily `published_date`, HTTP `Last-Modified`, article metadata and document `dateModified` remain page/document-scoped. Visible “Updated/Atualizado em” labels remain `PAGE`; “prices consulted on” is recorded as `OBSERVATION`; only a visible update date linked to the claim's entity/value can become `ATTRIBUTE`. Schema.org `priceValidUntil` is retained as an `OFFER` validity signal and is not treated as an update timestamp. See [Tavily Search API](https://docs.tavily.com/documentation/api-reference/endpoint/search), [Tavily Extract API](https://docs.tavily.com/documentation/api-reference/endpoint/extract), and the detailed [temporal signal contract](notas/ESPECIFICACAO_FRESHNESS_SCORE.md).
 
 For up to three extracted URLs, production execution attempts a separate direct page metadata read: HTTPS only, public IPv4 DNS result pinned to the connection, redirects manually followed and revalidated, 1 MiB body cap, 5-second timeout, and HTML/XHTML only. This is a best-effort read; network failures, non-HTML pages, unsafe URLs, missing dates, or unlinked dates remain explicit and do not become freshness evidence. In tests this request is injected/mocked; no page or provider network calls are made.
 
-Evidence aggregation now groups pages by domain, declared canonical URL, exact normalized-content hash, or conservative near-duplicate five-token shingle Jaccard similarity (minimum 40 tokens, threshold 0.88). This reduces obvious republication inflation. It cannot establish editorial provenance, detect heavily edited copies, or prove independence when no duplicate signal is found; the output says this directly. See [public implementation research and design choices](PESQUISA_REFERENCIAS.md).
+Evidence aggregation now groups pages by domain, declared canonical URL, exact normalized-content hash, or conservative near-duplicate five-token shingle Jaccard similarity (minimum 40 tokens, threshold 0.88). This reduces obvious republication inflation. It cannot establish editorial provenance, detect heavily edited copies, or prove independence when no duplicate signal is found; the output says this directly. See [public implementation research and design choices](notas/PESQUISA_REFERENCIAS.md).
 
 Four public pages have human labels recorded before parsing in [`avaliacao/rotulos-paginas-reais-v1.json`](avaliacao/rotulos-paginas-reais-v1.json). Their short visible excerpts are covered offline; they are not raw HTML fixtures or a real-web accuracy benchmark. A separate live check is available as `node avaliacao/validar-paginas-reais.js --live` and performs bounded GET requests to those pages.
 
 The stance classifier receives the reference date (today) and must answer CONTRADICTS when a present-tense claim is contradicted by deadlines stated in the evidence itself (for example, a release page saying a version stayed in Active LTS only until a date that has already passed). It still does not judge a page by its age; that remains the job of the deterministic date rules.
 
 The demo shows factual verdict and temporal state separately. A source can support an assertion while freshness remains inconclusive. The 0 to 100 value is a deterministic temporal index under a documented half-life formula, not a probability or calibrated confidence. A reproducible synthetic evaluation is available with `node avaliacao/teste-avaliacao-rotulada-v1.js`; it tests rules and regression cases, not accuracy on real-world sources.
+
+## API
+
+The web interface uses the same local HTTP API that any app can call. It runs on your machine (`npm run web`, port 3000 by default) and needs Tavily and Bifrost configured for live checks.
+
+### `POST /api/verificar`
+
+Request (JSON):
+
+| Field | Required | What it does |
+|---|---|---|
+| `texto` | yes | The AI answer to check, up to 4,000 characters. |
+| `modo` | yes | `"real"` for a live check (Tavily + Bifrost), `"exemplo"` for the offline simulated example. |
+| `dominiosOficiais` | no | Extra trusted sites, for example `["gov.br", "nodejs.org"]`. Adds one Tavily search per claim. |
+| `tipo` | no | Force one claim type: `preco`, `versao_api`, `regulamento` or `empresa`. By default it is detected per claim. |
+| `simularQuedaModelo` | no | `true` sends the first model call to a model that does not exist, to show Bifrost answering from a backup. |
+
+```bash
+curl -s http://127.0.0.1:3000/api/verificar \
+  -H "Content-Type: application/json" \
+  -d '{"texto": "Node.js 20 is the current Active LTS release. ChatGPT Plus costs $20 per month.", "modo": "real"}'
+```
+
+Response (shortened from a real recorded check, `gravacoes/2026-11-12T23-26-59-580Z-…json`):
+
+```json
+{
+  "total_afirmacoes": 3,
+  "afirmacoes": [
+    {
+      "texto": "Node.js 20 is the current Active LTS release",
+      "tipo_afirmacao": "versao_api",
+      "risco_desatualizacao": { "nivel": "HIGH", "sensivel_ao_tempo": true },
+      "agregacao": {
+        "veredito": "CONTRADICAO_FRACA",
+        "concordancia": { "score": 0, "independent_sources": 5, "supporting": 0, "contradicting": 5 },
+        "atualidade_afirmacao": { "score": 0, "status": "CONTRADICTED", "window_days": 90 },
+        "fontes": ["…each source with its type, date, stance and the quote it was judged on…"]
+      }
+    }
+  ],
+  "resposta_corrigida": {
+    "texto": "Node.js 20 is no longer an Active LTS release; it reached end-of-life on 30 April 2026 and is therefore not the recommended version for production [2][3][4]. ChatGPT Plus costs $20 per month [6][7][8].",
+    "fontes": ["…numbered sources cited in the text…"]
+  },
+  "gateway": { "gateway": "bifrost", "chamadas": 6, "respostas_de_reserva": 4, "cadeia_modelos": ["groq/openai/gpt-oss-20b", "groq/openai/gpt-oss-120b"] }
+}
+```
+
+How to read the main fields:
+- `agregacao.veredito`: the verdict. `ATUAL` (Current), `CORROBORADA` (Corroborated), `SUPORTE_FRACO` (Supported, unconfirmed), `NAO_VERIFICAVEL` (Not verifiable), `CONFLITO` (Conflicting), `CONTRADICAO_FRACA` (Contradicted by sources: most independent sources disagree, but no official source dates the fact) and `CONTRADITA_POR_FONTE_ATUAL` (Likely outdated: a current official source disagrees).
+- `agregacao.concordancia.score`: source agreement, 0 to 100.
+- `agregacao.atualidade_afirmacao.score`: the claim's freshness score, 0 to 100 (the number on the card).
+- `agregacao.freshness`: how recent the sources are, whether or not they agree. Not the claim score.
+- `resposta_corrigida`: the rewritten answer, with numbered citations that point to `fontes`.
+- `gateway`: what Bifrost did in this check: model calls, which model answered, backups used, tokens.
+
+### `GET /api/status`
+
+Tells whether live mode is configured, the limits (characters, claims, sources per claim) and the Bifrost model chain (model names only, never keys).
 
 ## Requirements
 
@@ -294,6 +361,16 @@ BIFROST_KEY=your_bifrost_virtual_key
 
 Replace the placeholders with your actual credentials.
 
+Optional settings:
+
+| Variable | Default | What it changes |
+|---|---|---|
+| `BIFROST_URL` | `http://localhost:8080` | Where the Bifrost gateway runs, if not on this machine. |
+| `BIFROST_MODEL` | `groq/openai/gpt-oss-20b` | Main model. |
+| `BIFROST_FALLBACKS` | `groq/openai/gpt-oss-120b` | Backup models, comma-separated, in order. A model from another provider (for example Gemini) makes Bifrost fail over across providers. |
+| `PORT` | `3000` | Port of the web interface. |
+| `ENTRELINHAS_GRAVAR` | off | `1` records every live check to `gravacoes/` (used for the public demo and the benchmark proof). |
+
 The Groq provider API key belongs in the Bifrost configuration, not in the Entrelinhas `.env` file.
 
 **Never commit `.env` or API credentials to the repository.**
@@ -353,6 +430,7 @@ entrelinhas/
 ├── index.js                 # connectivity smoke test (real calls)
 ├── rodar-testes.js          # offline test runner (npm test)
 ├── public/                  # web page: index.html, app.js, estilo.css
+├── docs/                    # public demo built for GitHub Pages (built by node scripts/montar-demo-estatica.js)
 ├── src/
 │   ├── verificador.js       # orchestrates the pipeline
 │   ├── afirmacoes.js        # claim decomposition + category suggestion (Bifrost)
@@ -361,16 +439,21 @@ entrelinhas/
 │   ├── sinais-temporais.js  # page date signals and their scope
 │   ├── preparar-evidencia.js, evidencia.js
 │   ├── correspondencia.js, classificador.js, bifrost.js
-│   ├── atualidade.js        # FRESH / STALE / UNVERIFIABLE
-│   ├── freshness-score.js   # per-claim 0 to 100 freshness score
+│   ├── atualidade.js        # FRESH / STALE / UNVERIFIABLE per source
+│   ├── atualidade-afirmacao.js  # claim freshness score (the number on the card)
+│   ├── freshness-score.js   # how recent the evidence is
+│   ├── concordancia.js      # source agreement index
+│   ├── resposta-corrigida.js  # rewritten answer with citations
 │   ├── independencia-fontes.js
 │   ├── agregador.js         # verdict per claim
 │   ├── modo-exemplo.js      # simulated providers for the demo
 │   ├── banco.js             # SQLite traceability
 │   └── comparador-fontes.js, normalizar-fonte.js, avaliador-impacto.js  # snapshot history
-├── avaliacao/               # labeled evaluation and demo script
-├── submission/              # hackathon form copy and pitch deck
-└── teste-*.js               # tests
+├── avaliacao/               # real-claim benchmark: cases, results, gateway summary, new held-out cases
+├── gravacoes/               # recorded live checks (the 13 Nov benchmark and the public demo selection)
+├── testes/                  # offline tests (npm test)
+├── notas/                   # technical notes in Portuguese (score spec, research, decisions, history)
+└── submission/              # hackathon form copy, video script and pitch deck
 ```
 
 ## Testing and validation
@@ -410,7 +493,15 @@ Applications also need to understand whether the evidence behind an answer is st
 
 Entrelinhas aims to make evidence more transparent, traceable, and temporally aware, helping AI systems communicate not only what their sources say, but also how current that information is.
 
+**Who it is for first.** The first users are teams that already ship AI answers to customers: support chatbots and AI products, where one outdated price or policy becomes a complaint. They would call the API after generation and show the verdicts or block the risky claims. People who rely on AI for everyday decisions use the same check through the browser button. A hosted version would charge per check for teams and a low monthly plan for individuals; this is a plan, not a tested business.
+
+**What it costs and how long it takes today.** Each check uses a few Tavily searches and extractions per claim and 3 to 7 model calls through Bifrost. On free tiers a check takes about 15 to 70 seconds, so it fits review before reuse (support macros, published content, decisions) better than real-time chat. Faster paid models and caching repeated claims would cut that time.
+
 ---
 
 **Entrelinhas**  
-*Evidence has a history. Its validity has a timeline.*
+*Read between the lines of any AI answer.*
+
+## License
+
+MIT. See [LICENSE](LICENSE).

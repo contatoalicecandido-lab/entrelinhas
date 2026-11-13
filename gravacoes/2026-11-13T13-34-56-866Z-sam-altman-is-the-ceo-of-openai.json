@@ -1,0 +1,2469 @@
+{
+ "sistema": "Entrelinhas",
+ "id_verificacao": "4293aad0-6ae3-4898-aeea-e2725707bc8e",
+ "texto_original": "Sam Altman is the CEO of OpenAI.",
+ "verificado_em": "2026-11-13T13:34:56.828Z",
+ "total_afirmacoes": 1,
+ "sintese": {
+  "veredito": "CORROBORADA",
+  "resumo": "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
+  "total_afirmacoes": 1,
+  "contagem_vereditos": {
+   "CORROBORADA": 1
+  }
+ },
+ "afirmacoes": [
+  {
+   "id": "afirmacao_1",
+   "texto": "Sam Altman is the CEO of OpenAI.",
+   "tipo_afirmacao": "empresa",
+   "origem_tipo_afirmacao": "MODELO",
+   "nuances": {
+    "idioma": "en",
+    "variante": null,
+    "confianca_idioma": 1,
+    "valores": [],
+    "datas": [],
+    "expressoes_temporais": [],
+    "condicoes": [],
+    "mudancas": [],
+    "tempo_coloquial": [],
+    "girias": {
+     "aliases": [],
+     "expressoes": []
+    },
+    "consulta_busca": "Sam Altman is the CEO of OpenAI.",
+    "dominios_oficiais_sugeridos": [],
+    "autoridades": [],
+    "notas": []
+   },
+   "evidencias": [
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "Sam Altman says OpenAI won’t go public until its models are safe | The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+      "conteudo": "For months, people have wondered when OpenAI will go public. CEO Sam Altman says it won’t happen until the company can make better promises about model safety, with no firm timeline in sight. “We intend to continue with AI progress … but as the models have had this surge forward in capability, and we see more of that ahead of us, we have got to be able to make confident safety claims,” Altman said Tuesday during a Q&A with reporters after his DevDay keynote. At the same time, he said, waiting too long for an IPO would be “bad for the world.”\n\n# Sam Altman says OpenAI won’t go public until its models are safe\n\n﻿The OpenAI CEO said he didn’t want ‘additional pressure’ from Wall Street.\n\n﻿The O…",
+      "coletado_em": "2026-11-13T13:34:49.111Z",
+      "data_publicacao": "2026-09-30",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+      "relevancia": 0.7772999,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "1ceac975-ecd6-4caa-9fef-6bd2e50e751e",
+       "resultado_id": "923863-01",
+       "response_time_busca": 0.99,
+       "response_time_extracao": 0.04,
+       "consulta": "Sam Altman is the CEO of OpenAI.",
+       "origem_principal": {
+        "id_operacao": "910518c7-7ffe-43ee-a5b4-79f86ba2feb8",
+        "request_id": "1ceac975-ecd6-4caa-9fef-6bd2e50e751e",
+        "modo_busca": "NOTICIAS",
+        "resultado_id": "923863-01",
+        "parametros": {
+         "query": "Sam Altman is the CEO of OpenAI.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "910518c7-7ffe-43ee-a5b4-79f86ba2feb8",
+         "request_id": "1ceac975-ecd6-4caa-9fef-6bd2e50e751e",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "923863-01",
+         "parametros": {
+          "query": "Sam Altman is the CEO of OpenAI.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Wed, 30 Sep 2026 00:19:13 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 30 Sep 2026 00:19:13 GMT",
+         "value_normalized": "2026-09-30",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-09-30T00:19:13+00:00",
+         "value_normalized": "2026-09-30",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-09-30T00:19:13+00:00",
+         "value_normalized": "2026-09-30",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-09-30T00:19:13+00:00",
+         "value_normalized": "2026-09-30",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-09-30T00:19:13+00:00",
+         "value_normalized": "2026-09-30",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-09-30T00:19:13+00:00",
+         "value_normalized": "2026-09-30",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-10-01T14:36:50+00:00",
+         "value_normalized": "2026-10-01",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-09-30T18:07:38+00:00",
+         "value_normalized": "2026-09-30",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-09-30T07:48:09+00:00",
+         "value_normalized": "2026-09-30",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T21:55:32+00:00",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T19:42:40+00:00",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T18:06:54+00:00",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T17:44:33+00:00",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T17:00:00+00:00",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-13T12:48:03+00:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-13T12:00:00+00:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T14:00:00+00:00",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T21:45:00+00:00",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+        "capturado_em": "2026-11-13T13:34:49.080Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "e7ec4588-46ca-40f0-aa33-c829385d6eaf",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "852e0f9c-52a6-4765-af00-7bb6f7a3ff08",
+      "id_verificacao": "4293aad0-6ae3-4898-aeea-e2725707bc8e",
+      "url_original": "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+      "url_canonica": "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "9033a597f9c85a339da3c8eff57914542277eea1daa565e6f476585cc49b4289",
+      "coletado_em": "2026-11-13T13:34:49.111Z",
+      "id_operacao_busca": "910518c7-7ffe-43ee-a5b4-79f86ba2feb8",
+      "id_operacao_extracao": "5d4e7a94-1791-4c1b-b9c7-6b1cda5b2b99",
+      "consulta": "Sam Altman is the CEO of OpenAI.",
+      "parametros_busca": {
+       "query": "Sam Altman is the CEO of OpenAI.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+        "https://en.wikipedia.org/wiki/Sam_Altman",
+        "https://www.aspenideas.org/speakers/sam-altman",
+        "https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9",
+        "https://www.britannica.com/money/Sam-Altman"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "1ceac975-ecd6-4caa-9fef-6bd2e50e751e",
+       "operacoes_busca": [
+        {
+         "id_operacao": "910518c7-7ffe-43ee-a5b4-79f86ba2feb8",
+         "request_id": "1ceac975-ecd6-4caa-9fef-6bd2e50e751e",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "923863-01",
+         "parametros": {
+          "query": "Sam Altman is the CEO of OpenAI.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "request_id_extracao": "e7ec4588-46ca-40f0-aa33-c829385d6eaf",
+       "resultado_id": "923863-01",
+       "relevancia": 0.7772999,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 30 Sep 2026 00:19:13 GMT",
+         "value_normalized": "2026-09-30",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-09-30T00:19:13+00:00",
+         "value_normalized": "2026-09-30",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-09-30T00:19:13+00:00",
+         "value_normalized": "2026-09-30",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-09-30T00:19:13+00:00",
+         "value_normalized": "2026-09-30",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-09-30T00:19:13+00:00",
+         "value_normalized": "2026-09-30",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-09-30T00:19:13+00:00",
+         "value_normalized": "2026-09-30",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-10-01T14:36:50+00:00",
+         "value_normalized": "2026-10-01",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-09-30T18:07:38+00:00",
+         "value_normalized": "2026-09-30",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-09-30T07:48:09+00:00",
+         "value_normalized": "2026-09-30",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T21:55:32+00:00",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T19:42:40+00:00",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T18:06:54+00:00",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T17:44:33+00:00",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T17:00:00+00:00",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-13T12:48:03+00:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-13T12:00:00+00:00",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T14:00:00+00:00",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-12T21:45:00+00:00",
+         "value_normalized": "2026-11-12",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+        "capturado_em": "2026-11-13T13:34:49.080Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Sam Altman says OpenAI won’t go public until its models are safe | The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 3036,
+      "caracteres_preparados": 3036,
+      "trecho_analisado": "TÍTULO DA FONTE: Sam Altman says OpenAI won’t go public until its models are safe | The Verge\nURL DA FONTE: https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety\n\nCONTEÚDO DA FONTE:\nFor months, people have wondered when OpenAI will go public. CEO Sam Altman says it won’t happen until the company can make better promises about model safety, with no firm timeline in sight. “We intend to continue with AI progress … but as the models have had this surge forward in capability, and we see more of that ahead of us, we have got to be able to make confident safety claims,” Altman said Tuesday during a Q&A with reporters after his DevDay keynote. At the same time, he said, waiting too long for an IPO would be “bad for the world.”\n\n# Sam Altman says OpenAI won’t go public until its models are safe\n\n﻿The OpenAI CEO said he didn’t want ‘additional pressure’ from Wall Street.\n\n﻿The OpenAI CEO said he didn’t want ‘additional pressure’ from Wall Street.\n\nAltman’s comments come after months of controversy about whether or not OpenAI and its rivals can control their own creations. In July, news broke that an unreleased OpenAI model had hacked into a rival",
+      "citacao_chave": "CEO Sam Altman says it won’t happen until the company can make better promises about model safety",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The article refers to Sam Altman as \"CEO Sam Altman\", confirming his role as OpenAI's chief executive at present."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The article refers to Sam Altman as \"CEO Sam Altman\", confirming his role as OpenAI's chief executive at present."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 44,
+      "validade_maxima_dias": 180,
+      "data_utilizada": "2026-09-30"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "REFERENCIA",
+      "titulo": "Sam Altman - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sam_Altman",
+      "conteudo": "[Jump to content](#bodyContent)\n\n[![](/static/images/icons/enwiki-25.svg)  ![Wikipedia](/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](/wiki/Main_Page)\n\n[Search](/wiki/Special:Search \"Search Wikipedia [f]\")\n\n## Contents\n\n* [1 Early life](#Early_life)\n* [2 Business career](#Business_career)\n  + [2.1 Early career](#Early_career)\n  + [2.2 Y Combinator](#Y_Combinator)\n  + [2.3 Investor](#Investor)\n    - [2.3.1 Biotech](#Biotech)\n    - [2.3.2 Reddit](#Reddit)\n    - [2.3.3 Worldcoin](#Worldcoin)\n    - [2.3.4 Energy investments](#Energy_investments)\n  + [2.4 OpenAI](#OpenAI)\n    - [2.4.1 OpenAI beg…",
+      "coletado_em": "2026-11-13T13:34:49.111Z",
+      "data_publicacao": "2026-11-07",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://en.wikipedia.org/wiki/Sam_Altman",
+      "relevancia": 0.8678218,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "dfdd145f-5fd1-40d7-9a31-6257ab7e3a4c",
+       "resultado_id": "58b29c-00",
+       "response_time_busca": 1.26,
+       "response_time_extracao": 0.04,
+       "consulta": "Sam Altman is the CEO of OpenAI.",
+       "origem_principal": {
+        "id_operacao": "73154570-dd0c-41ac-927d-9ca3ecaaecfd",
+        "request_id": "dfdd145f-5fd1-40d7-9a31-6257ab7e3a4c",
+        "modo_busca": "GERAL",
+        "resultado_id": "58b29c-00",
+        "parametros": {
+         "query": "Sam Altman is the CEO of OpenAI.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "73154570-dd0c-41ac-927d-9ca3ecaaecfd",
+         "request_id": "dfdd145f-5fd1-40d7-9a31-6257ab7e3a4c",
+         "modo_busca": "GERAL",
+         "resultado_id": "58b29c-00",
+         "parametros": {
+          "query": "Sam Altman is the CEO of OpenAI.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Sat, 07 Nov 2026 20:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Sat, 07 Nov 2026 20:00:00 GMT",
+         "value_normalized": "2026-11-07",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 07:21:18 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://en.wikipedia.org/wiki/Sam_Altman",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2009-04-19T10:49:32Z",
+         "value_normalized": "2009-04-19",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-12T22:10:31Z",
+         "value_normalized": "2026-11-12",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://en.wikipedia.org/wiki/Sam_Altman",
+        "capturado_em": "2026-11-13T13:34:48.936Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "e7ec4588-46ca-40f0-aa33-c829385d6eaf",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "49e3894b-86d6-4fa3-aaca-ded4da9de6cd",
+      "id_verificacao": "4293aad0-6ae3-4898-aeea-e2725707bc8e",
+      "url_original": "https://en.wikipedia.org/wiki/Sam_Altman",
+      "url_canonica": "https://en.wikipedia.org/wiki/Sam_Altman",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "4c188fb81e8384bad68a92c832dd53ca6a486c631b8988c3094956774b312f23",
+      "coletado_em": "2026-11-13T13:34:49.111Z",
+      "id_operacao_busca": "73154570-dd0c-41ac-927d-9ca3ecaaecfd",
+      "id_operacao_extracao": "5d4e7a94-1791-4c1b-b9c7-6b1cda5b2b99",
+      "consulta": "Sam Altman is the CEO of OpenAI.",
+      "parametros_busca": {
+       "query": "Sam Altman is the CEO of OpenAI.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+        "https://en.wikipedia.org/wiki/Sam_Altman",
+        "https://www.aspenideas.org/speakers/sam-altman",
+        "https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9",
+        "https://www.britannica.com/money/Sam-Altman"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "dfdd145f-5fd1-40d7-9a31-6257ab7e3a4c",
+       "operacoes_busca": [
+        {
+         "id_operacao": "73154570-dd0c-41ac-927d-9ca3ecaaecfd",
+         "request_id": "dfdd145f-5fd1-40d7-9a31-6257ab7e3a4c",
+         "modo_busca": "GERAL",
+         "resultado_id": "58b29c-00",
+         "parametros": {
+          "query": "Sam Altman is the CEO of OpenAI.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "e7ec4588-46ca-40f0-aa33-c829385d6eaf",
+       "resultado_id": "58b29c-00",
+       "relevancia": 0.8678218,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Sat, 07 Nov 2026 20:00:00 GMT",
+         "value_normalized": "2026-11-07",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 07:21:18 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://en.wikipedia.org/wiki/Sam_Altman",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2009-04-19T10:49:32Z",
+         "value_normalized": "2009-04-19",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-12T22:10:31Z",
+         "value_normalized": "2026-11-12",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://en.wikipedia.org/wiki/Sam_Altman",
+        "capturado_em": "2026-11-13T13:34:48.936Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Sam Altman - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sam_Altman",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 173710,
+      "caracteres_preparados": 7988,
+      "trecho_analisado": "TÍTULO DA FONTE: Sam Altman - Wikipedia\nURL DA FONTE: https://en.wikipedia.org/wiki/Sam_Altman\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n| Signature |\n\n**Samuel Harris Altman** (born April 22, 1985) is an American entrepreneur and investor who has been the [chief executive officer](https://en.wikipedia.org/wiki/Chief_executive_officer \"Chief executive officer\") (CEO) of the [artificial intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence \"Artificial intelligence\") company [OpenAI](https://en.wikipedia.org/wiki/OpenAI \"OpenAI\") since 2019.\n\nAltman attended [Stanford University](https://en.wikipedia.org/wiki/Stanford_University \"Stanford University\") for two years before he dropped out and co-founded [Loopt](https://en.wikipedia.org/wiki/Loopt \"Loopt\"), a [geosocial networking](https://en.wikipedia.org/wiki/Geosocial_networking \"Geosocial networking\") application for [smartphones](https://en.wikipedia.org/wiki/Smartphones \"Smartphones\").\n\nLoopt was acquired by [Green Dot Corporation](https://en.wikipedia.org/wiki/Green_Dot_Corporation \"Green Dot Corporation\") for $43.4 million in March 2012.[[1]](#cite_note-:4-1) In 2011, Altman joined [Y Combinator](https://en.wikipedia.org",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "Wikipedia states Altman has been CEO of OpenAI since 2019 and notes he remained CEO after a brief board conflict, supporting the claim."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "Wikipedia states Altman has been CEO of OpenAI since 2019 and notes he remained CEO after a brief board conflict, supporting the claim."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 6,
+      "validade_maxima_dias": 180,
+      "data_utilizada": "2026-11-07"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Co-Founder and CEO, OpenAI | Aspen Ideas",
+      "url": "https://www.aspenideas.org/speakers/sam-altman",
+      "conteudo": "[![Aspen Ideas](/dist/images/logo-2023.svg) ![](data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==)](https://www.aspenideas.org)\n\n![Aif24 Altman Sam]()\n\n# Sam Altman\n\n###### Co-Founder and CEO, OpenAI\n\n**Sam Altman** is the co-founder and CEO of OpenAI, the research and deployment company behind ChatGPT and DALL·E. The firm was started in 2015 as a nonprofit research lab with the mission to build general-purpose artificial intelligence benefitting all humanity. Previously, he was president of the early stage startup accelerator Y Combinator from 2014 to 2019. Altman’s recognition includes being named Time’s 2023 CEO of the year.\n\n[Register](https://www.aspenid…",
+      "coletado_em": "2026-11-13T13:34:49.111Z",
+      "data_publicacao": null,
+      "data_atualizacao": null,
+      "escopo_data": "UNKNOWN",
+      "canonical_url": "https://www.aspenideas.org/speakers/sam-altman",
+      "relevancia": 0.8586001,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "dfdd145f-5fd1-40d7-9a31-6257ab7e3a4c",
+       "resultado_id": "ecdce6-02",
+       "response_time_busca": 1.26,
+       "response_time_extracao": 0.04,
+       "consulta": "Sam Altman is the CEO of OpenAI.",
+       "origem_principal": {
+        "id_operacao": "73154570-dd0c-41ac-927d-9ca3ecaaecfd",
+        "request_id": "dfdd145f-5fd1-40d7-9a31-6257ab7e3a4c",
+        "modo_busca": "GERAL",
+        "resultado_id": "ecdce6-02",
+        "parametros": {
+         "query": "Sam Altman is the CEO of OpenAI.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "73154570-dd0c-41ac-927d-9ca3ecaaecfd",
+         "request_id": "dfdd145f-5fd1-40d7-9a31-6257ab7e3a4c",
+         "modo_busca": "GERAL",
+         "resultado_id": "ecdce6-02",
+         "parametros": {
+          "query": "Sam Altman is the CEO of OpenAI.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": null,
+       "sinais_data": [
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.aspenideas.org/speakers/sam-altman",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.aspenideas.org/speakers/sam-altman",
+        "capturado_em": "2026-11-13T13:34:49.217Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "e7ec4588-46ca-40f0-aa33-c829385d6eaf",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "da5ae909-4e3b-47d3-b0bc-8f06844817b5",
+      "id_verificacao": "4293aad0-6ae3-4898-aeea-e2725707bc8e",
+      "url_original": "https://www.aspenideas.org/speakers/sam-altman",
+      "url_canonica": "https://www.aspenideas.org/speakers/sam-altman",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "e0ca95018cb453bdc6d1fb4d400b700dc6a6f06bc9da1533fc6bb37295180d73",
+      "coletado_em": "2026-11-13T13:34:49.111Z",
+      "id_operacao_busca": "73154570-dd0c-41ac-927d-9ca3ecaaecfd",
+      "id_operacao_extracao": "5d4e7a94-1791-4c1b-b9c7-6b1cda5b2b99",
+      "consulta": "Sam Altman is the CEO of OpenAI.",
+      "parametros_busca": {
+       "query": "Sam Altman is the CEO of OpenAI.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+        "https://en.wikipedia.org/wiki/Sam_Altman",
+        "https://www.aspenideas.org/speakers/sam-altman",
+        "https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9",
+        "https://www.britannica.com/money/Sam-Altman"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "dfdd145f-5fd1-40d7-9a31-6257ab7e3a4c",
+       "operacoes_busca": [
+        {
+         "id_operacao": "73154570-dd0c-41ac-927d-9ca3ecaaecfd",
+         "request_id": "dfdd145f-5fd1-40d7-9a31-6257ab7e3a4c",
+         "modo_busca": "GERAL",
+         "resultado_id": "ecdce6-02",
+         "parametros": {
+          "query": "Sam Altman is the CEO of OpenAI.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "e7ec4588-46ca-40f0-aa33-c829385d6eaf",
+       "resultado_id": "ecdce6-02",
+       "relevancia": 0.8586001,
+       "sinais_data": [
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.aspenideas.org/speakers/sam-altman",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.aspenideas.org/speakers/sam-altman",
+        "capturado_em": "2026-11-13T13:34:49.217Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Co-Founder and CEO, OpenAI | Aspen Ideas",
+      "url": "https://www.aspenideas.org/speakers/sam-altman",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 2307,
+      "caracteres_preparados": 2307,
+      "trecho_analisado": "TÍTULO DA FONTE: Co-Founder and CEO, OpenAI | Aspen Ideas\nURL DA FONTE: https://www.aspenideas.org/speakers/sam-altman\n\nCONTEÚDO DA FONTE:\n[![Aspen Ideas](/dist/images/logo-2023.svg) ![](data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==)](https://www.aspenideas.org)\n\n![Aif24 Altman Sam]()\n\n# Sam Altman\n\n###### Co-Founder and CEO, OpenAI\n\n**Sam Altman** is the co-founder and CEO of OpenAI, the research and deployment company behind ChatGPT and DALL·E. The firm was started in 2015 as a nonprofit research lab with the mission to build general-purpose artificial intelligence benefitting all humanity. Previously, he was president of the early stage startup accelerator Y Combinator from 2014 to 2019. Altman’s recognition includes being named Time’s 2023 CEO of the year.\n\n[Register](https://www.aspenideas.org/register)\n\n[Festival](#mobile_nav_festival) [Health](#mobile_nav_health) [More Events](#mobile_nav_more_events) [Library](#mobile_nav_library) [About](#mobile_nav_about)\n\n[Attend the Aspen Ideas Festival](/attend/festival) [Event Overview](/pages/event-overview-aspen-ideas-festival) [2026 Festival Speakers](https://www.aspenideas.org/speakers?year=202",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The Aspen Ideas profile describes Sam Altman as \"Co‑Founder and CEO, OpenAI\", confirming his current CEO status."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The Aspen Ideas profile describes Sam Altman as \"Co‑Founder and CEO, OpenAI\", confirming his current CEO status."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "MISSING_SOURCE_DATE"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "Sam Altman Unveils OpenAI's Three-Part Strategy at DevDay - Business Insider",
+      "url": "https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9",
+      "conteudo": "Sam Altman laid out OpenAI's three-step vision for business dominance.\n\nThe CEO revealed a slew of updates to ChatGPT and related company products at its developer conference in San Francisco on Tuesday. He also outlined a three-part plan: provide the best AI models, make them the easiest for developers to build on, and become a \"marketplace\" for business customers to reach one another.\n\nAltman's framing speaks to the vast growth the AI company has seen since it burst into the limelight with ChatGPT — and the pressure that OpenAI and rival Anthropic face to justify their lofty valuations with ambitious business plans.\n\nThe first step is \"models,\" then \"building,\" then \"distribution,\" Altman …",
+      "coletado_em": "2026-11-13T13:34:49.111Z",
+      "data_publicacao": "2026-09-29",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9",
+      "relevancia": 0.7496374,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "1ceac975-ecd6-4caa-9fef-6bd2e50e751e",
+       "resultado_id": "1aa021-02",
+       "response_time_busca": 0.99,
+       "response_time_extracao": 0.04,
+       "consulta": "Sam Altman is the CEO of OpenAI.",
+       "origem_principal": {
+        "id_operacao": "910518c7-7ffe-43ee-a5b4-79f86ba2feb8",
+        "request_id": "1ceac975-ecd6-4caa-9fef-6bd2e50e751e",
+        "modo_busca": "NOTICIAS",
+        "resultado_id": "1aa021-02",
+        "parametros": {
+         "query": "Sam Altman is the CEO of OpenAI.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "910518c7-7ffe-43ee-a5b4-79f86ba2feb8",
+         "request_id": "1ceac975-ecd6-4caa-9fef-6bd2e50e751e",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "1aa021-02",
+         "parametros": {
+          "query": "Sam Altman is the CEO of OpenAI.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Tue, 29 Sep 2026 20:49:46 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 29 Sep 2026 20:49:46 GMT",
+         "value_normalized": "2026-09-29",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Tue, 29 Sep 2026 20:49:46 GMT",
+         "value_normalized": "2026-09-29",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datepublished",
+         "value_original": "2026-09-29T20:49:46.474Z",
+         "value_normalized": "2026-09-29",
+         "scope": "DOCUMENT",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "datemodified",
+         "value_original": "2026-09-29T20:49:46.474Z",
+         "value_normalized": "2026-09-29",
+         "scope": "DOCUMENT",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-09-29T20:49:46.474Z",
+         "value_normalized": "2026-09-29",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-09-29T20:49:46.474Z",
+         "value_normalized": "2026-09-29",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9",
+        "capturado_em": "2026-11-13T13:34:49.285Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "e7ec4588-46ca-40f0-aa33-c829385d6eaf",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "3e9202f1-dff1-4326-a0e0-46ecbfea2655",
+      "id_verificacao": "4293aad0-6ae3-4898-aeea-e2725707bc8e",
+      "url_original": "https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9",
+      "url_canonica": "https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "3d695dcba4b816235ba395323f8987d767125f79646ce1d2c6e7a462767e4cd0",
+      "coletado_em": "2026-11-13T13:34:49.111Z",
+      "id_operacao_busca": "910518c7-7ffe-43ee-a5b4-79f86ba2feb8",
+      "id_operacao_extracao": "5d4e7a94-1791-4c1b-b9c7-6b1cda5b2b99",
+      "consulta": "Sam Altman is the CEO of OpenAI.",
+      "parametros_busca": {
+       "query": "Sam Altman is the CEO of OpenAI.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+        "https://en.wikipedia.org/wiki/Sam_Altman",
+        "https://www.aspenideas.org/speakers/sam-altman",
+        "https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9",
+        "https://www.britannica.com/money/Sam-Altman"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "1ceac975-ecd6-4caa-9fef-6bd2e50e751e",
+       "operacoes_busca": [
+        {
+         "id_operacao": "910518c7-7ffe-43ee-a5b4-79f86ba2feb8",
+         "request_id": "1ceac975-ecd6-4caa-9fef-6bd2e50e751e",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "1aa021-02",
+         "parametros": {
+          "query": "Sam Altman is the CEO of OpenAI.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "request_id_extracao": "e7ec4588-46ca-40f0-aa33-c829385d6eaf",
+       "resultado_id": "1aa021-02",
+       "relevancia": 0.7496374,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 29 Sep 2026 20:49:46 GMT",
+         "value_normalized": "2026-09-29",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Tue, 29 Sep 2026 20:49:46 GMT",
+         "value_normalized": "2026-09-29",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datepublished",
+         "value_original": "2026-09-29T20:49:46.474Z",
+         "value_normalized": "2026-09-29",
+         "scope": "DOCUMENT",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "datemodified",
+         "value_original": "2026-09-29T20:49:46.474Z",
+         "value_normalized": "2026-09-29",
+         "scope": "DOCUMENT",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-09-29T20:49:46.474Z",
+         "value_normalized": "2026-09-29",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-09-29T20:49:46.474Z",
+         "value_normalized": "2026-09-29",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9",
+        "capturado_em": "2026-11-13T13:34:49.285Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Sam Altman Unveils OpenAI's Three-Part Strategy at DevDay - Business Insider",
+      "url": "https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 3864,
+      "caracteres_preparados": 3864,
+      "trecho_analisado": "TÍTULO DA FONTE: Sam Altman Unveils OpenAI's Three-Part Strategy at DevDay - Business Insider\nURL DA FONTE: https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9\n\nCONTEÚDO DA FONTE:\nSam Altman laid out OpenAI's three-step vision for business dominance.\n\nThe CEO revealed a slew of updates to ChatGPT and related company products at its developer conference in San Francisco on Tuesday. He also outlined a three-part plan: provide the best AI models, make them the easiest for developers to build on, and become a \"marketplace\" for business customers to reach one another.\n\nAltman's framing speaks to the vast growth the AI company has seen since it burst into the limelight with ChatGPT — and the pressure that OpenAI and rival Anthropic face to justify their lofty valuations with ambitious business plans.\n\nThe first step is \"models,\" then \"building,\" then \"distribution,\" Altman told a crowd of developers and employees at the Fort Mason venue.\n\n\"We want to support you all with a powerful platform for building whatever you can dream of,\" he said.\n\nOpenAI started as a research lab before AI caught Silicon Valley's attention. The company now faces a whole s",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "Business Insider calls Altman \"The CEO\" in the context of OpenAI, indicating he holds the position."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "Business Insider calls Altman \"The CEO\" in the context of OpenAI, indicating he holds the position."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 45,
+      "validade_maxima_dias": 180,
+      "data_utilizada": "2026-09-29"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "REFERENCIA",
+      "titulo": "Sam Altman | Biography, OpenAI, ChatGPT, & Microsoft | Britannica Money",
+      "url": "https://www.britannica.com/money/Sam-Altman",
+      "conteudo": "[History & Society](/History-Society)[Science & Tech](/Science-Tech)[Biographies](/Biographies)[Animals & Nature](/Animals-Nature)[Geography & Travel](/Geography-Travel)[Arts & Culture](/Arts-Culture)[ProCon](/procon)[Games & Quizzes](/quiz/browse)[Videos](/videos)[Today in History](/on-this-day)[Dictionary](/dictionary)[History & Society](/History-Society)\n\n* [History](/browse/World-History)\n* [Philosophy & Religion](/browse/Philosophy-Religion)\n* [Politics, Law & Government](/browse/Politics-Law-Government)\n* [Society & Social Issues](/browse/Lifestyles-Social-Issues)\n\n[Science & Tech](/Science-Tech)\n\n* [Health & Medicine](/browse/Health-Medicine)\n* [Science](/browse/Science)\n* [Technology…",
+      "coletado_em": "2026-11-13T13:34:49.111Z",
+      "data_publicacao": "2026-05-18",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": null,
+      "relevancia": 0.86177105,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "dfdd145f-5fd1-40d7-9a31-6257ab7e3a4c",
+       "resultado_id": "f3ba64-01",
+       "response_time_busca": 1.26,
+       "response_time_extracao": 0.04,
+       "consulta": "Sam Altman is the CEO of OpenAI.",
+       "origem_principal": {
+        "id_operacao": "73154570-dd0c-41ac-927d-9ca3ecaaecfd",
+        "request_id": "dfdd145f-5fd1-40d7-9a31-6257ab7e3a4c",
+        "modo_busca": "GERAL",
+        "resultado_id": "f3ba64-01",
+        "parametros": {
+         "query": "Sam Altman is the CEO of OpenAI.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "73154570-dd0c-41ac-927d-9ca3ecaaecfd",
+         "request_id": "dfdd145f-5fd1-40d7-9a31-6257ab7e3a4c",
+         "modo_busca": "GERAL",
+         "resultado_id": "f3ba64-01",
+         "parametros": {
+          "query": "Sam Altman is the CEO of OpenAI.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        },
+        {
+         "id_operacao": "910518c7-7ffe-43ee-a5b4-79f86ba2feb8",
+         "request_id": "1ceac975-ecd6-4caa-9fef-6bd2e50e751e",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "ac86cc-00",
+         "parametros": {
+          "query": "Sam Altman is the CEO of OpenAI.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Mon, 18 May 2026 21:19:02 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 18 May 2026 21:19:02 GMT",
+         "value_normalized": "2026-05-18",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "HTTP_403",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "e7ec4588-46ca-40f0-aa33-c829385d6eaf",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "004afe18-592b-474b-8d5c-2451cf3294af",
+      "id_verificacao": "4293aad0-6ae3-4898-aeea-e2725707bc8e",
+      "url_original": "https://www.britannica.com/money/Sam-Altman",
+      "url_canonica": "https://www.britannica.com/money/Sam-Altman",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "2ffc49f3ce138027a19ad820cf9d4123867651ea027751791f22a280769b7f16",
+      "coletado_em": "2026-11-13T13:34:49.111Z",
+      "id_operacao_busca": "73154570-dd0c-41ac-927d-9ca3ecaaecfd",
+      "id_operacao_extracao": "5d4e7a94-1791-4c1b-b9c7-6b1cda5b2b99",
+      "consulta": "Sam Altman is the CEO of OpenAI.",
+      "parametros_busca": {
+       "query": "Sam Altman is the CEO of OpenAI.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+        "https://en.wikipedia.org/wiki/Sam_Altman",
+        "https://www.aspenideas.org/speakers/sam-altman",
+        "https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9",
+        "https://www.britannica.com/money/Sam-Altman"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "dfdd145f-5fd1-40d7-9a31-6257ab7e3a4c",
+       "operacoes_busca": [
+        {
+         "id_operacao": "73154570-dd0c-41ac-927d-9ca3ecaaecfd",
+         "request_id": "dfdd145f-5fd1-40d7-9a31-6257ab7e3a4c",
+         "modo_busca": "GERAL",
+         "resultado_id": "f3ba64-01",
+         "parametros": {
+          "query": "Sam Altman is the CEO of OpenAI.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        },
+        {
+         "id_operacao": "910518c7-7ffe-43ee-a5b4-79f86ba2feb8",
+         "request_id": "1ceac975-ecd6-4caa-9fef-6bd2e50e751e",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "ac86cc-00",
+         "parametros": {
+          "query": "Sam Altman is the CEO of OpenAI.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news"
+         }
+        }
+       ],
+       "request_id_extracao": "e7ec4588-46ca-40f0-aa33-c829385d6eaf",
+       "resultado_id": "f3ba64-01",
+       "relevancia": 0.86177105,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 18 May 2026 21:19:02 GMT",
+         "value_normalized": "2026-05-18",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "HTTP_403",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Sam Altman | Biography, OpenAI, ChatGPT, & Microsoft | Britannica Money",
+      "url": "https://www.britannica.com/money/Sam-Altman",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 15623,
+      "caracteres_preparados": 7997,
+      "trecho_analisado": "TÍTULO DA FONTE: Sam Altman | Biography, OpenAI, ChatGPT, & Microsoft | Britannica Money\nURL DA FONTE: https://www.britannica.com/money/Sam-Altman\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n* [Early life](/money/Sam-Altman#ref_365875)\n\n* [Loopt and Y Combinator](/money/Sam-Altman#ref_365876)\n\n* [OpenAI and artificial intelligence](/money/Sam-Altman#ref_365877)\n\n+ [Founding of OpenAI](/money/Sam-Altman#ref_483982)\n\n+ [ChatGPT and AI expansion](/money/Sam-Altman#ref_483983)\n\n+ [OpenAI governance crisis](/money/Sam-Altman#ref_483984)\n\n+ [Musk lawsuit against OpenAI](/money/Sam-Altman#ref_483985)\n\nRead More\n\n* [Loopt and Y Combinator](/money/Sam-Altman#ref_365876)\n\n* [OpenAI and artificial intelligence](/money/Sam-Altman#ref_365877)\n\n+ [Founding of OpenAI](/money/Sam-Altman#ref_483982)\n\n+ [ChatGPT and AI expansion](/money/Sam-Altman#ref_483983)\n\n+ [OpenAI governance crisis](/money/Sam-Altman#ref_483984)\n\n+ [Musk lawsuit against OpenAI](/money/Sam-Altman#ref_483985)\n\nRead More\n\n•\n\n[OpenAI deepens Abu Dhabi foothold as Sam Altman inks deals spanning energy, government and investment](https://www.cnbc.com/2026/11/02/openai-abu-dhabi-ai-deals.html) • (CNBC)\n\nTop Questions\n\n### What roles did Sam ",
+      "citacao_chave": "became CEO of OpenAI in 2019",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "Britannica notes Altman became CEO of OpenAI in 2019 and later remained CEO after board changes, confirming his current role."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "Britannica notes Altman became CEO of OpenAI in 2019 and later remained CEO after board changes, confirming his current role."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 179,
+      "validade_maxima_dias": 180,
+      "data_utilizada": "2026-05-18"
+     }
+    }
+   ],
+   "erro_busca": null,
+   "risco_desatualizacao": {
+    "nivel": "MEDIUM",
+    "sensivel_ao_tempo": true,
+    "motivos": [
+     "Company facts and leadership change within months (checked against a 180-day window)"
+    ]
+   },
+   "dominios_oficiais_usados": [],
+   "dominios_oficiais_automaticos": [],
+   "agregacao": {
+    "status": "CLASSIFICADO",
+    "conclusao_factual": {
+     "status": "APOIA",
+     "resumo": "As evidências utilizáveis apoiam a afirmação. Isso, por si só, não demonstra que ela continua válida agora."
+    },
+    "veredito": "CORROBORADA",
+    "resumo": "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
+    "afirmacao": "Sam Altman is the CEO of OpenAI.",
+    "score_qualidade_evidencia": {
+     "valor": 30,
+     "escala": "0-100",
+     "natureza": "HEURISTICA",
+     "interpretacao": "Qualidade estrutural das evidências, não probabilidade de verdade.",
+     "componentes": {
+      "autoridade": 0,
+      "atualidade": 0,
+      "diversidade_fontes": 20,
+      "concordancia": 10
+     }
+    },
+    "freshness": {
+     "score": null,
+     "status": "UNVERIFIABLE",
+     "confidence": "INSUFFICIENT",
+     "algorithm_id": "CLAIM_FRESHNESS_SCORE",
+     "algorithm_version": "1.1.0",
+     "policy_id": "empresa:180d:v1",
+     "as_of": "2026-11-13T13:34:44.450Z",
+     "evidence_summary": {
+      "received": 5,
+      "eligible": 0,
+      "independent_domains": 0,
+      "excluded": 5
+     },
+     "drivers": [
+      {
+       "code": "NO_ATTRIBUTE_DATED_EVIDENCE"
+      }
+     ],
+     "limitations": [
+      "Não há evidência com data verificável ligada ao atributo desta afirmação."
+     ]
+    },
+    "concordancia": {
+     "algorithm_id": "SOURCE_AGREEMENT_INDEX",
+     "algorithm_version": "1.1.0",
+     "weights": {
+      "OFICIAL": 3,
+      "ACADEMICO": 3,
+      "NOTICIA": 2,
+      "REFERENCIA": 1.5,
+      "OUTRO": 1,
+      "BLOG_FORUM": 0.25
+     },
+     "score": 100,
+     "coverage": "STRONG",
+     "independent_sources": 5,
+     "source_types": [
+      "NOTICIA",
+      "REFERENCIA",
+      "OUTRO"
+     ],
+     "supporting": 5,
+     "authoritative_supporting": 0,
+     "contradicting": 0,
+     "split": 0,
+     "by_type": {
+      "NOTICIA": {
+       "supports": 2,
+       "contradicts": 0,
+       "split": 0
+      },
+      "REFERENCIA": {
+       "supports": 2,
+       "contradicts": 0,
+       "split": 0
+      },
+      "OUTRO": {
+       "supports": 1,
+       "contradicts": 0,
+       "split": 0
+      }
+     },
+     "limitations": [
+      "Agreement between sources is not a probability of truth: sources can share the same mistake.",
+      "Copies and pages from the same site count once; independence is approximated by domain and text similarity."
+     ]
+    },
+    "recencia_pagina": {
+     "algorithm_id": "PAGE_DATE_RECENCY_INDEX",
+     "algorithm_version": "1.0.0",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "as_of": "2026-11-13T13:34:44.450Z",
+     "score": 66,
+     "status": "FRESH",
+     "policy_id": "empresa:180d:page:v1",
+     "newest_date": "2026-11-07",
+     "sources": [
+      {
+       "date": "2026-09-30",
+       "age_days": 44,
+       "status": "FRESH",
+       "posture": "SUPPORTS",
+       "domain": "theverge.com",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-11-07",
+       "age_days": 6,
+       "status": "FRESH",
+       "posture": "SUPPORTS",
+       "domain": "en.wikipedia.org",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-09-29",
+       "age_days": 45,
+       "status": "FRESH",
+       "posture": "SUPPORTS",
+       "domain": "businessinsider.com",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-05-18",
+       "age_days": 179,
+       "status": "FRESH",
+       "posture": "SUPPORTS",
+       "domain": "britannica.com",
+       "evidence_id": null
+      }
+     ],
+     "limitations": [
+      "Baseado na data da página, não na data em que o dado específico mudou: confiança baixa.",
+      "Não substitui o índice de atualidade principal e não é probabilidade de verdade."
+     ]
+    },
+    "atualidade_afirmacao": {
+     "algorithm_id": "CLAIM_CURRENCY_SCORE",
+     "algorithm_version": "1.0.0",
+     "formula": "evidence_recency × support_share",
+     "window_days": 180,
+     "score": 66,
+     "status": "CURRENT",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "evidence_recency": 66,
+     "support_share": 1,
+     "newest_date": "2026-11-07",
+     "newest_age_days": 6,
+     "within_window": true
+    },
+    "versao_regras": "1.2.0",
+    "metodo": "AGREGACAO_DETERMINISTICA",
+    "fontes_independentes": 5,
+    "grupos_distintos_de_evidencia": 5,
+    "dependencia_detectada": 0,
+    "dependencia_nao_verificada": true,
+    "nota_independencia": "Cópias exatas, quase duplicadas, URLs canônicas iguais e páginas do mesmo domínio são agrupadas; domínios sem sinal de cópia não têm independência editorial comprovada.",
+    "total_evidencias_utilizaveis": 5,
+    "fontes": [
+     {
+      "dominio": "theverge.com",
+      "dominios": [
+       "theverge.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_001",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Sam Altman says OpenAI won’t go public until its models are safe | The Verge",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+        "categoria_fonte": "NOTICIA",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:34:49.111Z",
+        "data_publicacao": "2026-09-30",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Wed, 30 Sep 2026 00:19:13 GMT",
+          "value_normalized": "2026-09-30",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2026-09-30T00:19:13+00:00",
+          "value_normalized": "2026-09-30",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "ARTICLE_MODIFIED_TIME",
+          "field": "article:modified_time",
+          "value_original": "2026-09-30T00:19:13+00:00",
+          "value_normalized": "2026-09-30",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-09-30T00:19:13+00:00",
+          "value_normalized": "2026-09-30",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "newsarticle"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-09-30T00:19:13+00:00",
+          "value_normalized": "2026-09-30",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "newsarticle"
+          ]
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-09-30T00:19:13+00:00",
+          "value_normalized": "2026-09-30",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-10-01T14:36:50+00:00",
+          "value_normalized": "2026-10-01",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-09-30T18:07:38+00:00",
+          "value_normalized": "2026-09-30",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-09-30T07:48:09+00:00",
+          "value_normalized": "2026-09-30",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-11-12T21:55:32+00:00",
+          "value_normalized": "2026-11-12",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-11-12T19:42:40+00:00",
+          "value_normalized": "2026-11-12",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-11-12T18:06:54+00:00",
+          "value_normalized": "2026-11-12",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-11-12T17:44:33+00:00",
+          "value_normalized": "2026-11-12",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-11-12T17:00:00+00:00",
+          "value_normalized": "2026-11-12",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-11-13T12:48:03+00:00",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-11-13T12:00:00+00:00",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-11-12T14:00:00+00:00",
+          "value_normalized": "2026-11-12",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-11-12T21:45:00+00:00",
+          "value_normalized": "2026-11-12",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_001",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "en.wikipedia.org",
+      "dominios": [
+       "en.wikipedia.org"
+      ],
+      "grupo_dependencia_id": "source_cluster_002",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://en.wikipedia.org/wiki/Sam_Altman"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Sam Altman - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Sam_Altman",
+        "categoria_fonte": "REFERENCIA",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:34:49.111Z",
+        "data_publicacao": "2026-11-07",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Sat, 07 Nov 2026 20:00:00 GMT",
+          "value_normalized": "2026-11-07",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Fri, 13 Nov 2026 07:21:18 GMT",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://en.wikipedia.org/wiki/Sam_Altman",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2009-04-19T10:49:32Z",
+          "value_normalized": "2009-04-19",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-11-12T22:10:31Z",
+          "value_normalized": "2026-11-12",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_002",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "aspenideas.org",
+      "dominios": [
+       "aspenideas.org"
+      ],
+      "grupo_dependencia_id": "source_cluster_003",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.aspenideas.org/speakers/sam-altman"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Co-Founder and CEO, OpenAI | Aspen Ideas",
+        "url": "https://www.aspenideas.org/speakers/sam-altman",
+        "categoria_fonte": "OUTRO",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "UNVERIFIABLE",
+        "status_datas_declaradas": "AUSENTE",
+        "consultado_em": "2026-11-13T13:34:49.111Z",
+        "data_publicacao": null,
+        "data_atualizacao": null,
+        "escopo_data": "UNKNOWN",
+        "sinais_data": [
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.aspenideas.org/speakers/sam-altman",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_003",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "businessinsider.com",
+      "dominios": [
+       "businessinsider.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_004",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Sam Altman Unveils OpenAI's Three-Part Strategy at DevDay - Business Insider",
+        "url": "https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9",
+        "categoria_fonte": "NOTICIA",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:34:49.111Z",
+        "data_publicacao": "2026-09-29",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Tue, 29 Sep 2026 20:49:46 GMT",
+          "value_normalized": "2026-09-29",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Tue, 29 Sep 2026 20:49:46 GMT",
+          "value_normalized": "2026-09-29",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datepublished",
+          "value_original": "2026-09-29T20:49:46.474Z",
+          "value_normalized": "2026-09-29",
+          "scope": "DOCUMENT",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "datemodified",
+          "value_original": "2026-09-29T20:49:46.474Z",
+          "value_normalized": "2026-09-29",
+          "scope": "DOCUMENT",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-09-29T20:49:46.474Z",
+          "value_normalized": "2026-09-29",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "newsarticle"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-09-29T20:49:46.474Z",
+          "value_normalized": "2026-09-29",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "newsarticle"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_004",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "britannica.com",
+      "dominios": [
+       "britannica.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_005",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.britannica.com/money/Sam-Altman"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Sam Altman | Biography, OpenAI, ChatGPT, & Microsoft | Britannica Money",
+        "url": "https://www.britannica.com/money/Sam-Altman",
+        "categoria_fonte": "REFERENCIA",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:34:49.111Z",
+        "data_publicacao": "2026-05-18",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Mon, 18 May 2026 21:19:02 GMT",
+          "value_normalized": "2026-05-18",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_005",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     }
+    ],
+    "limitacoes": [
+     "Nenhuma evidência possui data verificável e status de atualidade FRESH.",
+     "Uma data da página ou do resultado de busca não comprova quando o atributo da afirmação foi publicado ou atualizado.",
+     "A data da consulta registra quando a página foi observada; não substitui uma data declarada de publicação ou atualização.",
+     "Nenhuma fonte pertence ao cadastro de domínios oficiais informado.",
+     "Domínios sem sinal detectado de duplicação não têm independência editorial comprovada; republicação com edição extensa ainda pode passar despercebida."
+    ],
+    "avaliado_em": "2026-11-13T13:34:56.060Z"
+   }
+  }
+ ],
+ "afirmacoes_omitidas": [],
+ "resposta_corrigida": {
+  "texto": "Sam Altman is the CEO of OpenAI.[1][2][3]",
+  "mudancas": [
+   {
+    "claim_id": "afirmacao_1",
+    "what": "kept"
+   }
+  ],
+  "fontes_citadas": [
+   1,
+   2,
+   3
+  ],
+  "tentativas": 1,
+  "citacoes_anexadas": false,
+  "fontes": [
+   {
+    "n": 1,
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+    "titulo": "Sam Altman says OpenAI won’t go public until its models are safe | The Verge",
+    "tipo": "NOTICIA",
+    "postura": "SUPPORTS",
+    "data": "2026-09-30"
+   },
+   {
+    "n": 2,
+    "url": "https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9",
+    "titulo": "Sam Altman Unveils OpenAI's Three-Part Strategy at DevDay - Business Insider",
+    "tipo": "NOTICIA",
+    "postura": "SUPPORTS",
+    "data": "2026-09-29"
+   },
+   {
+    "n": 3,
+    "url": "https://en.wikipedia.org/wiki/Sam_Altman",
+    "titulo": "Sam Altman - Wikipedia",
+    "tipo": "REFERENCIA",
+    "postura": "SUPPORTS",
+    "data": "2026-11-07"
+   }
+  ],
+  "metodo": "MODEL_REWRITE_FROM_VERIFIED_EVIDENCE"
+ },
+ "rastreabilidade_modelo": [
+  {
+   "id_chamada": "8c1eeba2-d49e-4ab8-9d0b-f9fc140a86f5",
+   "id_requisicao_enviada": "99b427e5-5fa1-4a95-a6fe-68448d8d44a5",
+   "id_verificacao": "4293aad0-6ae3-4898-aeea-e2725707bc8e",
+   "etapa": "DECOMPOSICAO",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 542,
+   "tokens": {
+    "entrada": 840,
+    "saida": 126,
+    "total": 966
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "99b427e5-5fa1-4a95-a6fe-68448d8d44a5",
+   "id_trace": "87674ad7df834176b2eeb51cf037c50f",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 542.109,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:34:44.452Z"
+  },
+  {
+   "id_chamada": "f82b5c32-57b7-4815-8f4c-bb9b7fc660ab",
+   "id_requisicao_enviada": "8b0cbcbf-9827-4ea4-9e95-a4ac0fab9d79",
+   "id_verificacao": "4293aad0-6ae3-4898-aeea-e2725707bc8e",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 2666,
+   "tokens": {
+    "entrada": 3672,
+    "saida": 2048,
+    "total": 5720
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "8b0cbcbf-9827-4ea4-9e95-a4ac0fab9d79",
+   "id_trace": "8b440648f1c447c28ec3f64f41c9c414",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 2666.757,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:34:49.342Z"
+  },
+  {
+   "id_chamada": "bcfaaad4-c5c9-4da3-8429-fb9001b251f6",
+   "id_requisicao_enviada": "3a7c4664-3961-4e43-a48f-d23ba3dbd678",
+   "id_verificacao": "4293aad0-6ae3-4898-aeea-e2725707bc8e",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 3846,
+   "tokens": {
+    "entrada": 3672,
+    "saida": 1604,
+    "total": 5276
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "3a7c4664-3961-4e43-a48f-d23ba3dbd678",
+   "id_trace": "0743d80551aa41168e37f5e27bc8168f",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 3885.28,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:34:52.066Z"
+  },
+  {
+   "id_chamada": "fbdd8fae-58ed-4494-8d17-49ed88cbf1e7",
+   "id_requisicao_enviada": "29aec681-d1a5-4ed9-8ad6-e907e9b29b89",
+   "id_verificacao": "4293aad0-6ae3-4898-aeea-e2725707bc8e",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 721,
+   "tokens": {
+    "entrada": 974,
+    "saida": 187,
+    "total": 1161
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "29aec681-d1a5-4ed9-8ad6-e907e9b29b89",
+   "id_trace": "d1c20e269c9847fe9ebd5fc0e26d3743",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 756.68,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:34:56.060Z"
+  }
+ ],
+ "rastreabilidade_pesquisa": [
+  {
+   "id_operacao": "73154570-dd0c-41ac-927d-9ca3ecaaecfd",
+   "id_verificacao": "4293aad0-6ae3-4898-aeea-e2725707bc8e",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Sam Altman is the CEO of OpenAI.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:34:45.076Z",
+   "finalizada_em": "2026-11-13T13:34:46.977Z",
+   "duracao_ms": 1901,
+   "request_id": "dfdd145f-5fd1-40d7-9a31-6257ab7e3a4c",
+   "response_time": 1.26,
+   "erro": null,
+   "modo_busca": "GERAL",
+   "parametros": {
+    "query": "Sam Altman is the CEO of OpenAI.",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "58b29c-00",
+     "titulo": "Sam Altman - Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Sam_Altman",
+     "relevancia": 0.8678218,
+     "data_publicacao": "2026-11-07"
+    },
+    {
+     "resultado_id": "f3ba64-01",
+     "titulo": "Sam Altman | Biography, OpenAI, ChatGPT, & Microsoft | Britannica Money",
+     "url": "https://www.britannica.com/money/Sam-Altman",
+     "relevancia": 0.86177105,
+     "data_publicacao": "2026-05-18"
+    },
+    {
+     "resultado_id": "ecdce6-02",
+     "titulo": "Co-Founder and CEO, OpenAI | Aspen Ideas",
+     "url": "https://www.aspenideas.org/speakers/sam-altman",
+     "relevancia": 0.8586001,
+     "data_publicacao": null
+    },
+    {
+     "resultado_id": "5c2c59-03",
+     "titulo": "Sam Altman, Co-Founder and CEO of OpenAI: Staying Human While Scaling Superintelligence",
+     "url": "https://www.youtube.com/watch?v=anAmTGcewX8",
+     "relevancia": 0.84325075,
+     "data_publicacao": "2026-10-21"
+    },
+    {
+     "resultado_id": "cc4e01-04",
+     "titulo": "Today, everybody knows Sam Altman as the CEO of OpenAI.\n\nBut when I worked with him, he had different plans.\n\nBack in 2017, times were different for Sam.\n\nIt was hot off of the 2016 election, where… | Jenny Stojkovic | 187 comments",
+     "url": "https://www.linkedin.com/posts/jenniferstojkovic_today-everybody-knows-sam-altman-as-the-activity-7440421831989342208-mAry",
+     "relevancia": 0.81655276,
+     "data_publicacao": "2026-03-19"
+    }
+   ]
+  },
+  {
+   "id_operacao": "910518c7-7ffe-43ee-a5b4-79f86ba2feb8",
+   "id_verificacao": "4293aad0-6ae3-4898-aeea-e2725707bc8e",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Sam Altman is the CEO of OpenAI.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:34:46.977Z",
+   "finalizada_em": "2026-11-13T13:34:48.419Z",
+   "duracao_ms": 1442,
+   "request_id": "1ceac975-ecd6-4caa-9fef-6bd2e50e751e",
+   "response_time": 0.99,
+   "erro": null,
+   "modo_busca": "NOTICIAS",
+   "parametros": {
+    "query": "Sam Altman is the CEO of OpenAI.",
+    "search_depth": "basic",
+    "max_results": 4,
+    "include_answer": false,
+    "include_published_date": true,
+    "topic": "news"
+   },
+   "quantidade_resultados": 4,
+   "resultados": [
+    {
+     "resultado_id": "ac86cc-00",
+     "titulo": "Sam Altman | Biography, OpenAI, ChatGPT, & Microsoft | Britannica Money",
+     "url": "https://www.britannica.com/money/Sam-Altman",
+     "relevancia": 0.86177105,
+     "data_publicacao": "2026-05-18"
+    },
+    {
+     "resultado_id": "923863-01",
+     "titulo": "Sam Altman says OpenAI won’t go public until its models are safe | The Verge",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+     "relevancia": 0.7772999,
+     "data_publicacao": "2026-09-30"
+    },
+    {
+     "resultado_id": "1aa021-02",
+     "titulo": "Sam Altman Unveils OpenAI's Three-Part Strategy at DevDay - Business Insider",
+     "url": "https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9",
+     "relevancia": 0.7496374,
+     "data_publicacao": "2026-09-29"
+    },
+    {
+     "resultado_id": "517240-03",
+     "titulo": "Hawley: OpenAI CEO Sam Altman declined to testify at rogue AI hearing",
+     "url": "https://www.cnbc.com/2026/09/30/hawley-openai-sam-altman-rogue-ai.html",
+     "relevancia": 0.7479843,
+     "data_publicacao": "2026-09-30"
+    }
+   ]
+  },
+  {
+   "id_operacao": "5d4e7a94-1791-4c1b-b9c7-6b1cda5b2b99",
+   "id_verificacao": "4293aad0-6ae3-4898-aeea-e2725707bc8e",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "EXTRACAO",
+   "consulta": "Sam Altman is the CEO of OpenAI.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:34:48.452Z",
+   "finalizada_em": "2026-11-13T13:34:49.111Z",
+   "duracao_ms": 659,
+   "request_id": "e7ec4588-46ca-40f0-aa33-c829385d6eaf",
+   "response_time": 0.04,
+   "erro": null,
+   "urls_solicitadas": [
+    "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+    "https://en.wikipedia.org/wiki/Sam_Altman",
+    "https://www.aspenideas.org/speakers/sam-altman",
+    "https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9",
+    "https://www.britannica.com/money/Sam-Altman"
+   ],
+   "parametros": {
+    "urls": [
+     "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+     "https://en.wikipedia.org/wiki/Sam_Altman",
+     "https://www.aspenideas.org/speakers/sam-altman",
+     "https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9",
+     "https://www.britannica.com/money/Sam-Altman"
+    ],
+    "extract_depth": "basic",
+    "format": "markdown",
+    "include_images": false
+   },
+   "quantidade_resultados": 5,
+   "urls_extraidas": [
+    "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+    "https://en.wikipedia.org/wiki/Sam_Altman",
+    "https://www.aspenideas.org/speakers/sam-altman",
+    "https://www.businessinsider.com/sam-altman-unveils-openai-three-part-strategy-devday-2026-9",
+    "https://www.britannica.com/money/Sam-Altman"
+   ]
+  }
+ ],
+ "modo": "real",
+ "simulado": false,
+ "gateway": {
+  "gateway": "bifrost",
+  "chamadas": 4,
+  "falhas": 0,
+  "cadeia_modelos": [
+   "groq/openai/gpt-oss-20b",
+   "groq/openai/gpt-oss-120b"
+  ],
+  "queda_simulada": false,
+  "respostas_por_modelo": [
+   {
+    "modelo": "groq/openai/gpt-oss-20b",
+    "chamadas": 2
+   },
+   {
+    "modelo": "groq/openai/gpt-oss-120b",
+    "chamadas": 2
+   }
+  ],
+  "respostas_de_reserva": 2,
+  "tokens_total": 13123,
+  "latencia_media_ms": 1963
+ },
+ "duracao_ms": 12432,
+ "gravado_em": "2026-11-13T13:34:56.866Z"
+}

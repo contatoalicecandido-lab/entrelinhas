@@ -262,6 +262,23 @@ function normalizarDominiosOficiais(dominios) {
   }))];
 }
 
+// Janela da busca de notícias por tipo de afirmação. A Tavily aceita
+// time_range "day", "week", "month" ou "year". Notícias recentes são o sinal
+// mais rápido de que um fato mudou (um preço novo, uma versão que saiu de
+// suporte), então a busca de notícias olha só para o período em que uma
+// mudança ainda faria a afirmação ficar desatualizada. A busca geral e a
+// oficial não têm filtro: páginas oficiais antigas continuam válidas.
+const JANELA_NOTICIAS = {
+  preco: "month",
+  versao_api: "year",
+  empresa: "year",
+  regulamento: "year"
+};
+
+function janelaNoticias(tipoAfirmacao) {
+  return JANELA_NOTICIAS[tipoAfirmacao] ?? "year";
+}
+
 async function executarBusca(pergunta, opcoes, dominiosOficiais = [], extras = {}) {
   const registro = criarRegistroBase(opcoes, "BUSCA", pergunta);
   const parametros = {
@@ -281,6 +298,7 @@ async function executarBusca(pergunta, opcoes, dominiosOficiais = [], extras = {
   } else if (extras.topic === "news") {
     // Busca de notícias: amplia o contexto com cobertura jornalística.
     parametros.topic = "news";
+    if (extras.timeRange) parametros.time_range = extras.timeRange;
     registro.modo_busca = "NOTICIAS";
     // Afirmações em português: só veículos brasileiros. O reforço de país da
     // Tavily não vale no tópico de notícias, e sem isso vinham notícias
@@ -411,6 +429,7 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
   if (opcoes.incluirNoticias) {
     const buscaNoticias = await executarBusca(pergunta, opcoes, [], {
       topic: "news",
+      timeRange: janelaNoticias(opcoes.tipoAfirmacao),
       maxResultados: MAX_RESULTADOS_NOTICIAS,
       dominiosNoticias: opcoes.pais === "brazil" ? NOTICIAS_BR : undefined
     });
@@ -750,6 +769,7 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
 }
 
 module.exports = {
+  janelaNoticias,
   ehResultadoUtil,
   NOTICIAS_BR,
   selecionarFontesDiversas,

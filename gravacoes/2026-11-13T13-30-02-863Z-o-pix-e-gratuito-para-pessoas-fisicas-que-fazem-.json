@@ -1,0 +1,2015 @@
+{
+ "sistema": "Entrelinhas",
+ "id_verificacao": "aa59445e-53ae-412d-8e8d-b942e976aec1",
+ "texto_original": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+ "verificado_em": "2026-11-13T13:30:02.832Z",
+ "total_afirmacoes": 1,
+ "sintese": {
+  "veredito": "CORROBORADA",
+  "resumo": "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
+  "total_afirmacoes": 1,
+  "contagem_vereditos": {
+   "CORROBORADA": 1
+  }
+ },
+ "afirmacoes": [
+  {
+   "id": "afirmacao_1",
+   "texto": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+   "tipo_afirmacao": "preco",
+   "origem_tipo_afirmacao": "MODELO",
+   "nuances": {
+    "idioma": "pt",
+    "variante": "pt-BR",
+    "confianca_idioma": 1,
+    "valores": [],
+    "datas": [],
+    "expressoes_temporais": [],
+    "condicoes": [],
+    "mudancas": [],
+    "tempo_coloquial": [],
+    "girias": {
+     "aliases": [],
+     "expressoes": []
+    },
+    "consulta_busca": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+    "dominios_oficiais_sugeridos": [],
+    "autoridades": [],
+    "notas": []
+   },
+   "evidencias": [
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "Pessoas físicas não poderão ser cobradas por uso do Pix | Agência Brasil",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2020-10/pessoas-fisicas-nao-poderao-ser-cobradas-por-uso-do-pix",
+      "conteudo": "[Pular para o conteúdo principal](#main-content)\n\n[![logo ebc](https://agenciabrasil.ebc.com.br/sites/default/themes/agenciabrasil_v3/images/logo-ebc-dark.webp?tnhjsg)](https://ebc.com.br \"Ir para o portal EBC\")\n\n[![logo Agência Brasil](https://agenciabrasil.ebc.com.br/sites/default/themes/agenciabrasil_v3/images/agbrasil-color-logo.svg?tnhjsg)](/)\n\n\n\n[Economia](/economia)\n\n# Pessoas físicas não poderão ser cobradas por uso do Pix\n\nExceção será recebimento de venda de produto ou serviço\n\nWellton Máximo – Repórter da Agência Brasil\n\nPublicado em 02/10/2020 - 18:46\n\nBrasília\n\n![Foto para matéria pagamento celular maquina cartão crédito/débito (Marcello Casal Jr/Agência Brasil)](/sites/default/…",
+      "coletado_em": "2026-11-13T13:29:51.273Z",
+      "data_publicacao": "2020-10-03",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": null,
+      "relevancia": 0.7834919,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+       "resultado_id": "9736f3-02",
+       "response_time_busca": 0.9,
+       "response_time_extracao": 0.03,
+       "consulta": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+       "origem_principal": {
+        "id_operacao": "f5bf931c-a462-4a35-8de4-f62bacff5047",
+        "request_id": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+        "modo_busca": "GERAL",
+        "resultado_id": "9736f3-02",
+        "parametros": {
+         "query": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "f5bf931c-a462-4a35-8de4-f62bacff5047",
+         "request_id": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+         "modo_busca": "GERAL",
+         "resultado_id": "9736f3-02",
+         "parametros": {
+          "query": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Sat, 03 Oct 2020 00:46:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Sat, 03 Oct 2020 00:46:00 GMT",
+         "value_normalized": "2020-10-03",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "02/10/2020",
+         "value_normalized": "2020-10-02",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "HTTP_500",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "bcf60975-8c3d-4409-b1bc-8f8fa5dfef82",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "bdf00daf-544a-4943-9833-09b986e9434d",
+      "id_verificacao": "aa59445e-53ae-412d-8e8d-b942e976aec1",
+      "url_original": "https://agenciabrasil.ebc.com.br/economia/noticia/2020-10/pessoas-fisicas-nao-poderao-ser-cobradas-por-uso-do-pix",
+      "url_canonica": "https://agenciabrasil.ebc.com.br/economia/noticia/2020-10/pessoas-fisicas-nao-poderao-ser-cobradas-por-uso-do-pix",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "8ff95db8183b621ccd646e19294fb71c559e042ab1ddb2e9995837ef558e0b9e",
+      "coletado_em": "2026-11-13T13:29:51.273Z",
+      "id_operacao_busca": "f5bf931c-a462-4a35-8de4-f62bacff5047",
+      "id_operacao_extracao": "26045bbc-bb84-4cd4-8382-9f270e07facc",
+      "consulta": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+      "parametros_busca": {
+       "query": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2020-10/pessoas-fisicas-nao-poderao-ser-cobradas-por-uso-do-pix",
+        "https://sejaefi.com.br/blog/qual-custo-do-pix",
+        "https://www.spcbrasil.com.br/blog/como-funciona-a-taxa-do-pix",
+        "https://transfeera.com/blog/tarifa-pix",
+        "https://www.facebook.com/bancocentraldobrasil/videos/o-pix-%C3%A9-gratuito-para-as-pessoas-f%C3%ADsicas-e-para-os-empreendedores-individuais-ma/25063884226578555"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+       "operacoes_busca": [
+        {
+         "id_operacao": "f5bf931c-a462-4a35-8de4-f62bacff5047",
+         "request_id": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+         "modo_busca": "GERAL",
+         "resultado_id": "9736f3-02",
+         "parametros": {
+          "query": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "bcf60975-8c3d-4409-b1bc-8f8fa5dfef82",
+       "resultado_id": "9736f3-02",
+       "relevancia": 0.7834919,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Sat, 03 Oct 2020 00:46:00 GMT",
+         "value_normalized": "2020-10-03",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "02/10/2020",
+         "value_normalized": "2020-10-02",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "HTTP_500",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Pessoas físicas não poderão ser cobradas por uso do Pix | Agência Brasil",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2020-10/pessoas-fisicas-nao-poderao-ser-cobradas-por-uso-do-pix",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 9217,
+      "caracteres_preparados": 4348,
+      "trecho_analisado": "TÍTULO DA FONTE: Pessoas físicas não poderão ser cobradas por uso do Pix | Agência Brasil\nURL DA FONTE: https://agenciabrasil.ebc.com.br/economia/noticia/2020-10/pessoas-fisicas-nao-poderao-ser-cobradas-por-uso-do-pix\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n[Economia](/economia)\n\n# Pessoas físicas não poderão ser cobradas por uso do Pix\n\nExceção será recebimento de venda de produto ou serviço\n\nVersão em áudio\n\nAnunciada no fim de agosto pelo Banco Central (BC), a proibição de cobrança de tarifas de pessoas físicas na utilização do Pix foi oficializada com a publicação de uma resolução no Diário Oficial da União de hoje (2).\n\nO [texto proíbe](https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolu%C3%A7%C3%A3o%20BCB&numero=19) que as instituições financeiras cobrem as pessoas físicas e os microempreendedores individuais (MEI) pela utilização do Pix nas operações de transferência e de compra.\n\nAs exceções serão o recebimento de vendas de produtos e de serviços, que poderão ser tarifadas.![](https://agenciabrasil.ebc.com.br/ebc.png?id=1389659&o=node)![](https://agenciabrasil.ebc.com.br/ebc.gif?id=1389659&o=node)\n\nA resolução estabelece outra exceção para clientes (pessoas",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The article states that the Central Bank prohibits charging individuals for Pix transfers, confirming the claim that Pix is free for natural persons when transferring money."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The article states that the Central Bank prohibits charging individuals for Pix transfers, confirming the claim that Pix is free for natural persons when transferring money."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 2232,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2020-10-03"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Taxa do Pix para empresas: quanto custa em 2026?",
+      "url": "https://sejaefi.com.br/blog/qual-custo-do-pix",
+      "conteudo": "## Pix\n\n# Taxa do Pix para empresas: como funciona e quanto custa em 2026\n\nCriado em 20 de mai. de 2025\n\n(Atualizado em 18 de jun. de 2026)\n\npor [Equipe Efí](/blog/author/gerencianet)\n\n![](https://sejaefi.com.br/portal/wp-content/uploads/2024/10/taxa-do-pix-pj.png)\n\n**A taxa do Pix para empresas varia de 0,89% a 1,45% por transação**, dependendo do banco, do volume de recebimentos e do canal utilizado. Para o seu cliente final, o Pix continua gratuito; quem paga a tarifa é a empresa que recebe o pagamento, seja por chave Pix, QR Code ou integração via API.\n\nNeste artigo, você vai ver quanto cada banco cobra pelo Pix para empresas em 2026, entender por que a tarifa varia tanto, conhecer o eco…",
+      "coletado_em": "2026-11-13T13:29:51.273Z",
+      "data_publicacao": "2025-05-20",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://sejaefi.com.br/blog/qual-custo-do-pix",
+      "relevancia": 0.8454327,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+       "resultado_id": "f36474-00",
+       "response_time_busca": 0.9,
+       "response_time_extracao": 0.03,
+       "consulta": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+       "origem_principal": {
+        "id_operacao": "f5bf931c-a462-4a35-8de4-f62bacff5047",
+        "request_id": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+        "modo_busca": "GERAL",
+        "resultado_id": "f36474-00",
+        "parametros": {
+         "query": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "f5bf931c-a462-4a35-8de4-f62bacff5047",
+         "request_id": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+         "modo_busca": "GERAL",
+         "resultado_id": "f36474-00",
+         "parametros": {
+          "query": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Tue, 20 May 2025 18:56:49 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 20 May 2025 18:56:49 GMT",
+         "value_normalized": "2025-05-20",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://sejaefi.com.br/blog/qual-custo-do-pix",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2025-05-20T15:56:49-03:00",
+         "value_normalized": "2025-05-20",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-09-23T20:46:53-03:00",
+         "value_normalized": "2026-09-23",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://sejaefi.com.br/blog/qual-custo-do-pix",
+        "capturado_em": "2026-11-13T13:29:52.521Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "bcf60975-8c3d-4409-b1bc-8f8fa5dfef82",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "0cfbf4bc-1306-4840-a67a-ec86e0935473",
+      "id_verificacao": "aa59445e-53ae-412d-8e8d-b942e976aec1",
+      "url_original": "https://sejaefi.com.br/blog/qual-custo-do-pix",
+      "url_canonica": "https://sejaefi.com.br/blog/qual-custo-do-pix",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "3bc3db8b2f3b9245916a0e4e439bb40d86f9ff307d46bed74da08e8693a845f9",
+      "coletado_em": "2026-11-13T13:29:51.273Z",
+      "id_operacao_busca": "f5bf931c-a462-4a35-8de4-f62bacff5047",
+      "id_operacao_extracao": "26045bbc-bb84-4cd4-8382-9f270e07facc",
+      "consulta": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+      "parametros_busca": {
+       "query": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2020-10/pessoas-fisicas-nao-poderao-ser-cobradas-por-uso-do-pix",
+        "https://sejaefi.com.br/blog/qual-custo-do-pix",
+        "https://www.spcbrasil.com.br/blog/como-funciona-a-taxa-do-pix",
+        "https://transfeera.com/blog/tarifa-pix",
+        "https://www.facebook.com/bancocentraldobrasil/videos/o-pix-%C3%A9-gratuito-para-as-pessoas-f%C3%ADsicas-e-para-os-empreendedores-individuais-ma/25063884226578555"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+       "operacoes_busca": [
+        {
+         "id_operacao": "f5bf931c-a462-4a35-8de4-f62bacff5047",
+         "request_id": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+         "modo_busca": "GERAL",
+         "resultado_id": "f36474-00",
+         "parametros": {
+          "query": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "bcf60975-8c3d-4409-b1bc-8f8fa5dfef82",
+       "resultado_id": "f36474-00",
+       "relevancia": 0.8454327,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 20 May 2025 18:56:49 GMT",
+         "value_normalized": "2025-05-20",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://sejaefi.com.br/blog/qual-custo-do-pix",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2025-05-20T15:56:49-03:00",
+         "value_normalized": "2025-05-20",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-09-23T20:46:53-03:00",
+         "value_normalized": "2026-09-23",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://sejaefi.com.br/blog/qual-custo-do-pix",
+        "capturado_em": "2026-11-13T13:29:52.521Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Taxa do Pix para empresas: quanto custa em 2026?",
+      "url": "https://sejaefi.com.br/blog/qual-custo-do-pix",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 22866,
+      "caracteres_preparados": 7990,
+      "trecho_analisado": "TÍTULO DA FONTE: Taxa do Pix para empresas: quanto custa em 2026?\nURL DA FONTE: https://sejaefi.com.br/blog/qual-custo-do-pix\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n## Pix\n\n# Taxa do Pix para empresas: como funciona e quanto custa em 2026\n\nCriado em 20 de mai.\n\npor [Equipe Efí](/blog/author/gerencianet)\n\n![](https://sejaefi.com.br/portal/wp-content/uploads/2024/10/taxa-do-pix-pj.png)\n\n**A taxa do Pix para empresas varia de 0,89% a 1,45% por transação**, dependendo do banco, do volume de recebimentos e do canal utilizado.\n\nPara o seu cliente final, o Pix continua gratuito;\n\nquem paga a tarifa é a empresa que recebe o pagamento, seja por chave Pix, QR Code ou integração via API.\n\nNeste artigo, você vai ver quanto cada banco cobra pelo Pix para empresas em 2026, entender por que a tarifa varia tanto, conhecer o ecossistema Pix que pode automatizar seus recebimentos e descobrir como reduzir esse custo na sua empresa.\n\n## O que é a taxa do Pix e por que sua empresa paga?\n\nA taxa do Pix é a tarifa que a instituição financeira cobra de empresas (PJ) pelo serviço de processar pagamentos recebidos via Pix.\n\nNão é imposto, nem cobrança do governo — é a remuneração do banco pela infraestrutura, ",
+      "citacao_chave": "O Pix segue gratuito para pessoas físicas em transações pessoais.",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The blog says Pix remains free for people physically in personal transactions, which includes transfers, supporting the claim."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The blog says Pix remains free for people physically in personal transactions, which includes transfers, supporting the claim."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 542,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2025-05-20"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Como funciona a taxa do Pix: entenda quando é cobrada!",
+      "url": "https://www.spcbrasil.com.br/blog/como-funciona-a-taxa-do-pix",
+      "conteudo": "![Imagem representativa](/_next/image?url=https%3A%2F%2Fwww.spcbrasil.com.br%2Fuploads%2Flogo_b770a0e7b5.png&w=3840&q=75)\n\nLinks rápidos\n\nLinks rápidos\n\nVoltar\n\nCrédito\n\nCobrança\n\nConsulta\n\nEducação financeira\n\nSegurança e Tecnologia\n\nEmpreendedorismo\n\nEmpréstimo\n\nNegociar dívidas\n\nPesquisa e imprensa\n\nDireitos do consumidor\n\nBoletim SPC Brasil\n\n# Como funciona a taxa do Pix: entenda quando é cobrada e quanto custa\n\nVeja se existe taxa do Pix para pessoa física e jurídica. Descubra os valores, regras atualizadas e quando vale a pena usar o Pix.\n\n![Imagem representativa](/_next/image?url=https%3A%2F%2Fwww.spcbrasil.com.br%2Fuploads%2F22_de_setembro_de_2025_f141f544d9.png&w=1920&q=75)\n![Imagem…",
+      "coletado_em": "2026-11-13T13:29:51.273Z",
+      "data_publicacao": "2025-09-22",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": null,
+      "relevancia": 0.82796735,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+       "resultado_id": "7e6ee8-01",
+       "response_time_busca": 0.9,
+       "response_time_extracao": 0.03,
+       "consulta": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+       "origem_principal": {
+        "id_operacao": "f5bf931c-a462-4a35-8de4-f62bacff5047",
+        "request_id": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+        "modo_busca": "GERAL",
+        "resultado_id": "7e6ee8-01",
+        "parametros": {
+         "query": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "f5bf931c-a462-4a35-8de4-f62bacff5047",
+         "request_id": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+         "modo_busca": "GERAL",
+         "resultado_id": "7e6ee8-01",
+         "parametros": {
+          "query": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Mon, 22 Sep 2025 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 22 Sep 2025 00:00:00 GMT",
+         "value_normalized": "2025-09-22",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "BODY_TOO_LARGE",
+        "detalhe": "SOURCE_BODY_TOO_LARGE",
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "bcf60975-8c3d-4409-b1bc-8f8fa5dfef82",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "a3b97523-0ec9-4f7e-bda7-405d8507ebda",
+      "id_verificacao": "aa59445e-53ae-412d-8e8d-b942e976aec1",
+      "url_original": "https://www.spcbrasil.com.br/blog/como-funciona-a-taxa-do-pix",
+      "url_canonica": "https://www.spcbrasil.com.br/blog/como-funciona-a-taxa-do-pix",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "6d81b3632874c697fa63f5bd069324bf1aad596c9d8eb650edb982cac6c99df2",
+      "coletado_em": "2026-11-13T13:29:51.273Z",
+      "id_operacao_busca": "f5bf931c-a462-4a35-8de4-f62bacff5047",
+      "id_operacao_extracao": "26045bbc-bb84-4cd4-8382-9f270e07facc",
+      "consulta": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+      "parametros_busca": {
+       "query": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2020-10/pessoas-fisicas-nao-poderao-ser-cobradas-por-uso-do-pix",
+        "https://sejaefi.com.br/blog/qual-custo-do-pix",
+        "https://www.spcbrasil.com.br/blog/como-funciona-a-taxa-do-pix",
+        "https://transfeera.com/blog/tarifa-pix",
+        "https://www.facebook.com/bancocentraldobrasil/videos/o-pix-%C3%A9-gratuito-para-as-pessoas-f%C3%ADsicas-e-para-os-empreendedores-individuais-ma/25063884226578555"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+       "operacoes_busca": [
+        {
+         "id_operacao": "f5bf931c-a462-4a35-8de4-f62bacff5047",
+         "request_id": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+         "modo_busca": "GERAL",
+         "resultado_id": "7e6ee8-01",
+         "parametros": {
+          "query": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "bcf60975-8c3d-4409-b1bc-8f8fa5dfef82",
+       "resultado_id": "7e6ee8-01",
+       "relevancia": 0.82796735,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 22 Sep 2025 00:00:00 GMT",
+         "value_normalized": "2025-09-22",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "BODY_TOO_LARGE",
+        "detalhe": "SOURCE_BODY_TOO_LARGE",
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Como funciona a taxa do Pix: entenda quando é cobrada!",
+      "url": "https://www.spcbrasil.com.br/blog/como-funciona-a-taxa-do-pix",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 35440,
+      "caracteres_preparados": 7992,
+      "trecho_analisado": "TÍTULO DA FONTE: Como funciona a taxa do Pix: entenda quando é cobrada!\nURL DA FONTE: https://www.spcbrasil.com.br/blog/como-funciona-a-taxa-do-pix\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\nBoletim SPC Brasil\n\n# Como funciona a taxa do Pix: entenda quando é cobrada e quanto custa\n\nVeja se existe taxa do Pix para pessoa física e jurídica.\n\nDescubra os valores, regras atualizadas e quando vale a pena usar o Pix.\n\n![Imagem representativa](/_next/image?url=https%3A%2F%2Fwww.spcbrasil.com.br%2Fuploads%2F22_de_setembro_de_2025_f141f544d9.png&w=1920&q=75)\n\n![Diminuir tamanho da fonte do artigo](/_next/static/media/decrease_font_size.920bc563.svg)\n\nComo funciona a taxa do Pix?\n\nEssa é uma dúvida comum, principalmente porque o Pix ficou conhecido como uma forma de pagamento gratuita e acessível.\n\nO fato é que ele continua sendo gratuito pra grande parte dos casos, principalmente no caso de pessoas físicas.\n\nContudo, em algumas situações os bancos podem cobrar uma taxa — principalmente quando o uso do Pix tem finalidade comercial.\n\nNeste conteúdo, vamos esclarecer quando essa cobrança acontece, o que muda de acordo com o tipo de conta e o que é importante saber pra usar o Pix com mais tranquilidad",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source explains that for a natural person using Pix for a common transaction such as sending money to a friend, it is free, confirming the claim."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The source explains that for a natural person using Pix for a common transaction such as sending money to a friend, it is free, confirming the claim."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 417,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2025-09-22"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Taxa Pix: quando ela pode ser cobrada e mais | Transfeera",
+      "url": "https://transfeera.com/blog/tarifa-pix",
+      "conteudo": "1. [Home](https://transfeera.com)\n2. Conteúdos\n3. [Blog](https://transfeera.com/blog/)\n4. Taxa Pix: entenda a tarifa Pix e saiba quando ela pode ser cobrada\n\nPix\n\n# Taxa Pix: entenda a tarifa Pix e saiba quando ela pode ser cobrada\n\n![Taxa Pix: entenda a tarifa Pix e saiba quando ela pode ser cobrada](https://transfeera.com/wp-content/uploads/2022/08/transfeera-blog-tarifa-pix.jpg)\n\n[![Victor Papi](https://secure.gravatar.com/avatar/b2d21ef18fd0db59920ae26fa9f2a67c58ba35cfb8028d43e8cf85974a657a25?s=72&d=mm&r=g)](https://transfeera.com/blog/autor/victor-papi/)  [Victor Papi General Manager](https://transfeera.com/blog/autor/victor-papi/)\n\n---\n\nCompartilhe:\n\nUm dos motivos que fizeram o Pix cr…",
+      "coletado_em": "2026-11-13T13:29:51.273Z",
+      "data_publicacao": "2025-06-16",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://transfeera.com/blog/tarifa-pix/",
+      "relevancia": 0.6695288,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+       "resultado_id": "44e64a-03",
+       "response_time_busca": 0.9,
+       "response_time_extracao": 0.03,
+       "consulta": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+       "origem_principal": {
+        "id_operacao": "f5bf931c-a462-4a35-8de4-f62bacff5047",
+        "request_id": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+        "modo_busca": "GERAL",
+        "resultado_id": "44e64a-03",
+        "parametros": {
+         "query": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "f5bf931c-a462-4a35-8de4-f62bacff5047",
+         "request_id": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+         "modo_busca": "GERAL",
+         "resultado_id": "44e64a-03",
+         "parametros": {
+          "query": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Mon, 16 Jun 2025 11:50:46 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 16 Jun 2025 11:50:46 GMT",
+         "value_normalized": "2025-06-16",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Wed, 28 Oct 2026 17:45:38 GMT",
+         "value_normalized": "2026-10-28",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://transfeera.com/blog/tarifa-pix/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-10-07T15:00:46+00:00",
+         "value_normalized": "2026-10-07",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-10-07T15:00:46+00:00",
+         "value_normalized": "2026-10-07",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-10-07T12:00:46-03:00",
+         "value_normalized": "2026-10-07",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://transfeera.com/blog/tarifa-pix/",
+        "capturado_em": "2026-11-13T13:29:50.439Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "bcf60975-8c3d-4409-b1bc-8f8fa5dfef82",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "28b43aed-4117-4d0b-8742-3de5efefdbdc",
+      "id_verificacao": "aa59445e-53ae-412d-8e8d-b942e976aec1",
+      "url_original": "https://transfeera.com/blog/tarifa-pix",
+      "url_canonica": "https://transfeera.com/blog/tarifa-pix",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "34642fe2dcea806a356408e12b0269079ad58abe0b3a1080c32dc0baa1b49167",
+      "coletado_em": "2026-11-13T13:29:51.273Z",
+      "id_operacao_busca": "f5bf931c-a462-4a35-8de4-f62bacff5047",
+      "id_operacao_extracao": "26045bbc-bb84-4cd4-8382-9f270e07facc",
+      "consulta": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+      "parametros_busca": {
+       "query": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2020-10/pessoas-fisicas-nao-poderao-ser-cobradas-por-uso-do-pix",
+        "https://sejaefi.com.br/blog/qual-custo-do-pix",
+        "https://www.spcbrasil.com.br/blog/como-funciona-a-taxa-do-pix",
+        "https://transfeera.com/blog/tarifa-pix",
+        "https://www.facebook.com/bancocentraldobrasil/videos/o-pix-%C3%A9-gratuito-para-as-pessoas-f%C3%ADsicas-e-para-os-empreendedores-individuais-ma/25063884226578555"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+       "operacoes_busca": [
+        {
+         "id_operacao": "f5bf931c-a462-4a35-8de4-f62bacff5047",
+         "request_id": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+         "modo_busca": "GERAL",
+         "resultado_id": "44e64a-03",
+         "parametros": {
+          "query": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "bcf60975-8c3d-4409-b1bc-8f8fa5dfef82",
+       "resultado_id": "44e64a-03",
+       "relevancia": 0.6695288,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 16 Jun 2025 11:50:46 GMT",
+         "value_normalized": "2025-06-16",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Wed, 28 Oct 2026 17:45:38 GMT",
+         "value_normalized": "2026-10-28",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://transfeera.com/blog/tarifa-pix/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-10-07T15:00:46+00:00",
+         "value_normalized": "2026-10-07",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-10-07T15:00:46+00:00",
+         "value_normalized": "2026-10-07",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-10-07T12:00:46-03:00",
+         "value_normalized": "2026-10-07",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://transfeera.com/blog/tarifa-pix/",
+        "capturado_em": "2026-11-13T13:29:50.439Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Taxa Pix: quando ela pode ser cobrada e mais | Transfeera",
+      "url": "https://transfeera.com/blog/tarifa-pix",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 17476,
+      "caracteres_preparados": 7939,
+      "trecho_analisado": "TÍTULO DA FONTE: Taxa Pix: quando ela pode ser cobrada e mais | Transfeera\nURL DA FONTE: https://transfeera.com/blog/tarifa-pix\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n4.\n\nTaxa Pix: entenda a tarifa Pix e saiba quando ela pode ser cobrada\n\nPix\n\n# Taxa Pix: entenda a tarifa Pix e saiba quando ela pode ser cobrada\n\n![Taxa Pix: entenda a tarifa Pix e saiba quando ela pode ser cobrada](https://transfeera.com/wp-content/uploads/2022/08/transfeera-blog-tarifa-pix.jpg)\n\n[![Victor Papi](https://secure.gravatar.com/avatar/b2d21ef18fd0db59920ae26fa9f2a67c58ba35cfb8028d43e8cf85974a657a25?s=72&d=mm&r=g)](https://transfeera.com/blog/autor/victor-papi/)  [Victor Papi General Manager](https://transfeera.com/blog/autor/victor-papi/)\n\nCompartilhe:\n\nUm dos motivos que fizeram o Pix crescer tão rapidamente em popularidade como método de pagamento é a sua agilidade nas transações.\n\nNo entanto, apesar de seu uso já estar bem difundido no Brasil, ainda existem dúvidas com relação ao assunto.\n\nPor exemplo, você sabe afirmar com 100% de certeza se o Pix possui alguma tarifa?\n\nOu se o Pix vai ser taxado?\n\nPensando em esclarecer um pouco mais esse e outros pontos com relação à taxa Pix, preparamos um artigo bem",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The article cites the Central Bank resolution that, for natural persons, there is no Pix fee on payment transactions, directly supporting the claim."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The article cites the Central Bank resolution that, for natural persons, there is no Pix fee on payment transactions, directly supporting the claim."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 515,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2025-06-16"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "BLOG_FORUM",
+      "titulo": "2K views · 41 reactions | O Pix é gratuito para as pessoas físicas e para os empreendedores individuais. Mas como isso é possível? Calma, que o BC te Explica!\n\nNeste episódio, você vai descobrir que o Pix é uma política de Estado criada para promover concorrência, transparência e, principalmente, inclusão financeira no Brasil.\n\nEntenda como o Banco Central idealizou e coordenou a criação do Pix, uma infraestrutura pública digital desenvolvida para ser um meio de pagamento acessível, universal e gratuito para todos os brasileiros.\n\n#BCteExplica #Pix #BancoCentral #PagamentosInstantâneos #InclusãoFinanceira #Inovação #Tecnologia\n\n#PraTodosVerem Vídeo da série “BC te Explica”, com o tema “Por que o Pix é universal e gratuito?”. O apresentador é Gustavo Igreja, servidor do Banco Central. Ele é um homem branco, de cabelos curtos e grisalhos, e veste uma camiseta preta. O vídeo foi gravado em um ambiente interno do Banco Central, com fundo neutro. Ao longo do vídeo, a fala do apresentador é intercalada com imagens ilustrativas que ajudam a explicar o conteúdo. | Banco Central do Brasil",
+      "url": "https://www.facebook.com/bancocentraldobrasil/videos/o-pix-%C3%A9-gratuito-para-as-pessoas-f%C3%ADsicas-e-para-os-empreendedores-individuais-ma/25063884226578555",
+      "conteudo": "[Log In](https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=%2Fbancocentraldobrasil%2Fvideos%2Fo-pix-%25C3%25A9-gratuito-para-as-pessoas-f%25C3%25ADsicas-e-para-os-empreendedores-individuais-ma%2F25063884226578555)\n\nLog In\n\n[Forgot Account?](https://www.facebook.com/recover/initiate?ars=royal_blue_bar)\n\n# [Video](https://www.facebook.com/watch/)\n\n[Home](https://www.facebook.com/watch/)\n\n[Live](https://www.facebook.com/watch/live/?ref=watch)\n\n[Reels](https://www.facebook.com/reel/?s=bookmark)\n\n[Explore](https://www.facebook.com/watch/topic/)\n\nMore\n\n[Home](https://www.facebook.com/watch/)\n\n[Live](https://www.facebook.com/watch/live/?ref=watch)\n\n[Reels](https://www.…",
+      "coletado_em": "2026-11-13T13:29:51.273Z",
+      "data_publicacao": "2025-11-12",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www.facebook.com/reel/25063884226578555/",
+      "relevancia": 0.655336,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+       "resultado_id": "64a379-04",
+       "response_time_busca": 0.9,
+       "response_time_extracao": 0.03,
+       "consulta": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+       "origem_principal": {
+        "id_operacao": "f5bf931c-a462-4a35-8de4-f62bacff5047",
+        "request_id": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+        "modo_busca": "GERAL",
+        "resultado_id": "64a379-04",
+        "parametros": {
+         "query": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "f5bf931c-a462-4a35-8de4-f62bacff5047",
+         "request_id": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+         "modo_busca": "GERAL",
+         "resultado_id": "64a379-04",
+         "parametros": {
+          "query": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Wed, 12 Nov 2025 22:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 12 Nov 2025 22:00:00 GMT",
+         "value_normalized": "2025-11-12",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.facebook.com/reel/25063884226578555/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.facebook.com/bancocentraldobrasil/videos/o-pix-%C3%A9-gratuito-para-as-pessoas-f%C3%ADsicas-e-para-os-empreendedores-individuais-ma/25063884226578555",
+        "capturado_em": "2026-11-13T13:29:50.693Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "bcf60975-8c3d-4409-b1bc-8f8fa5dfef82",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "6c3f67e3-b7c8-4eeb-8421-00998cdb2d80",
+      "id_verificacao": "aa59445e-53ae-412d-8e8d-b942e976aec1",
+      "url_original": "https://www.facebook.com/bancocentraldobrasil/videos/o-pix-%C3%A9-gratuito-para-as-pessoas-f%C3%ADsicas-e-para-os-empreendedores-individuais-ma/25063884226578555",
+      "url_canonica": "https://www.facebook.com/bancocentraldobrasil/videos/o-pix-%C3%A9-gratuito-para-as-pessoas-f%C3%ADsicas-e-para-os-empreendedores-individuais-ma/25063884226578555",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "e60a385d69bf9dbbf97df62080121acd947026bdf9cfd7f7393520fb757f2dd3",
+      "coletado_em": "2026-11-13T13:29:51.273Z",
+      "id_operacao_busca": "f5bf931c-a462-4a35-8de4-f62bacff5047",
+      "id_operacao_extracao": "26045bbc-bb84-4cd4-8382-9f270e07facc",
+      "consulta": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+      "parametros_busca": {
+       "query": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2020-10/pessoas-fisicas-nao-poderao-ser-cobradas-por-uso-do-pix",
+        "https://sejaefi.com.br/blog/qual-custo-do-pix",
+        "https://www.spcbrasil.com.br/blog/como-funciona-a-taxa-do-pix",
+        "https://transfeera.com/blog/tarifa-pix",
+        "https://www.facebook.com/bancocentraldobrasil/videos/o-pix-%C3%A9-gratuito-para-as-pessoas-f%C3%ADsicas-e-para-os-empreendedores-individuais-ma/25063884226578555"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+       "operacoes_busca": [
+        {
+         "id_operacao": "f5bf931c-a462-4a35-8de4-f62bacff5047",
+         "request_id": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+         "modo_busca": "GERAL",
+         "resultado_id": "64a379-04",
+         "parametros": {
+          "query": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "bcf60975-8c3d-4409-b1bc-8f8fa5dfef82",
+       "resultado_id": "64a379-04",
+       "relevancia": 0.655336,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 12 Nov 2025 22:00:00 GMT",
+         "value_normalized": "2025-11-12",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.facebook.com/reel/25063884226578555/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.facebook.com/bancocentraldobrasil/videos/o-pix-%C3%A9-gratuito-para-as-pessoas-f%C3%ADsicas-e-para-os-empreendedores-individuais-ma/25063884226578555",
+        "capturado_em": "2026-11-13T13:29:50.693Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "2K views · 41 reactions | O Pix é gratuito para as pessoas físicas e para os empreendedores individuais. Mas como isso é possível? Calma, que o BC te Explica!\n\nNeste episódio, você vai descobrir que o Pix é uma política de Estado criada para promover concorrência, transparência e, principalmente, inclusão financeira no Brasil.\n\nEntenda como o Banco Central idealizou e coordenou a criação do Pix, uma infraestrutura pública digital desenvolvida para ser um meio de pagamento acessível, universal e gratuito para todos os brasileiros.\n\n#BCteExplica #Pix #BancoCentral #PagamentosInstantâneos #InclusãoFinanceira #Inovação #Tecnologia\n\n#PraTodosVerem Vídeo da série “BC te Explica”, com o tema “Por que o Pix é universal e gratuito?”. O apresentador é Gustavo Igreja, servidor do Banco Central. Ele é um homem branco, de cabelos curtos e grisalhos, e veste uma camiseta preta. O vídeo foi gravado em um ambiente interno do Banco Central, com fundo neutro. Ao longo do vídeo, a fala do apresentador é intercalada com imagens ilustrativas que ajudam a explicar o conteúdo. | Banco Central do Brasil",
+      "url": "https://www.facebook.com/bancocentraldobrasil/videos/o-pix-%C3%A9-gratuito-para-as-pessoas-f%C3%ADsicas-e-para-os-empreendedores-individuais-ma/25063884226578555",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 26513,
+      "caracteres_preparados": 4505,
+      "trecho_analisado": "TÍTULO DA FONTE: 2K views · 41 reactions | O Pix é gratuito para as pessoas físicas e para os empreendedores individuais. Mas como isso é possível? Calma, que o BC te Explica!\n\nNeste episódio, você vai descobrir que o Pix é uma política de Estado criada para promover concorrência, transparência e, principalmente, inclusão financeira no Brasil.\n\nEntenda como o Banco Central idealizou e coordenou a criação do Pix, uma infraestrutura pública digital desenvolvida para ser um meio de pagamento acessível, universal e gratuito para todos os brasileiros.\n\n#BCteExplica #Pix #BancoCentral #PagamentosInstantâneos #InclusãoFinanceira #Inovação #Tecnologia\n\n#PraTodosVerem Vídeo da série “BC te Explica”, com o tema “Por que o Pix é universal e gratuito?”. O apresentador é Gustavo Igreja, servidor do Banco Central. Ele é um homem branco, de cabelos curtos e grisalhos, e veste uma camiseta preta. O vídeo foi gravado em um ambiente interno do Banco Central, com fundo neutro. Ao longo do vídeo, a fala do apresentador é intercalada com imagens ilustrativas que ajudam a explicar o conteúdo. | Banco Central do Brasil\nURL DA FONTE: https://www.facebook.com/bancocentraldobrasil/videos/o-pix-%C3%A9-gratui",
+      "citacao_chave": "O Pix é gratuito para as pessoas físicas e para os empreendedores individuais.",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The video explicitly states that Pix is free for people physically, confirming the claim about free transfers for individuals."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The video explicitly states that Pix is free for people physically, confirming the claim about free transfers for individuals."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 366,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2025-11-12"
+     }
+    }
+   ],
+   "erro_busca": null,
+   "risco_desatualizacao": {
+    "nivel": "HIGH",
+    "sensivel_ao_tempo": true,
+    "motivos": [
+     "Prices change often (checked against a 30-day window)"
+    ]
+   },
+   "dominios_oficiais_usados": [],
+   "dominios_oficiais_automaticos": [],
+   "agregacao": {
+    "status": "CLASSIFICADO",
+    "conclusao_factual": {
+     "status": "APOIA",
+     "resumo": "As evidências utilizáveis apoiam a afirmação. Isso, por si só, não demonstra que ela continua válida agora."
+    },
+    "veredito": "CORROBORADA",
+    "resumo": "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
+    "afirmacao": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+    "score_qualidade_evidencia": {
+     "valor": 30,
+     "escala": "0-100",
+     "natureza": "HEURISTICA",
+     "interpretacao": "Qualidade estrutural das evidências, não probabilidade de verdade.",
+     "componentes": {
+      "autoridade": 0,
+      "atualidade": 0,
+      "diversidade_fontes": 20,
+      "concordancia": 10
+     }
+    },
+    "freshness": {
+     "score": null,
+     "status": "UNVERIFIABLE",
+     "confidence": "INSUFFICIENT",
+     "algorithm_id": "CLAIM_FRESHNESS_SCORE",
+     "algorithm_version": "1.1.0",
+     "policy_id": "preco:30d:v1",
+     "as_of": "2026-11-13T13:29:43.590Z",
+     "evidence_summary": {
+      "received": 5,
+      "eligible": 0,
+      "independent_domains": 0,
+      "excluded": 5
+     },
+     "drivers": [
+      {
+       "code": "NO_ATTRIBUTE_DATED_EVIDENCE"
+      }
+     ],
+     "limitations": [
+      "Não há evidência com data verificável ligada ao atributo desta afirmação."
+     ]
+    },
+    "concordancia": {
+     "algorithm_id": "SOURCE_AGREEMENT_INDEX",
+     "algorithm_version": "1.1.0",
+     "weights": {
+      "OFICIAL": 3,
+      "ACADEMICO": 3,
+      "NOTICIA": 2,
+      "REFERENCIA": 1.5,
+      "OUTRO": 1,
+      "BLOG_FORUM": 0.25
+     },
+     "score": 100,
+     "coverage": "STRONG",
+     "independent_sources": 5,
+     "source_types": [
+      "NOTICIA",
+      "OUTRO",
+      "BLOG_FORUM"
+     ],
+     "supporting": 5,
+     "authoritative_supporting": 0,
+     "contradicting": 0,
+     "split": 0,
+     "by_type": {
+      "NOTICIA": {
+       "supports": 1,
+       "contradicts": 0,
+       "split": 0
+      },
+      "OUTRO": {
+       "supports": 3,
+       "contradicts": 0,
+       "split": 0
+      },
+      "BLOG_FORUM": {
+       "supports": 1,
+       "contradicts": 0,
+       "split": 0
+      }
+     },
+     "limitations": [
+      "Agreement between sources is not a probability of truth: sources can share the same mistake.",
+      "Copies and pages from the same site count once; independence is approximated by domain and text similarity."
+     ]
+    },
+    "recencia_pagina": {
+     "algorithm_id": "PAGE_DATE_RECENCY_INDEX",
+     "algorithm_version": "1.0.0",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "as_of": "2026-11-13T13:29:43.590Z",
+     "score": 0,
+     "status": "STALE",
+     "policy_id": "preco:30d:page:v1",
+     "newest_date": "2025-11-12",
+     "sources": [
+      {
+       "date": "2020-10-03",
+       "age_days": 2232,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "domain": "agenciabrasil.ebc.com.br",
+       "evidence_id": null
+      },
+      {
+       "date": "2025-05-20",
+       "age_days": 542,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "domain": "sejaefi.com.br",
+       "evidence_id": null
+      },
+      {
+       "date": "2025-09-22",
+       "age_days": 417,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "domain": "spcbrasil.com.br",
+       "evidence_id": null
+      },
+      {
+       "date": "2025-06-16",
+       "age_days": 515,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "domain": "transfeera.com",
+       "evidence_id": null
+      },
+      {
+       "date": "2025-11-12",
+       "age_days": 366,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "domain": "facebook.com",
+       "evidence_id": null
+      }
+     ],
+     "limitations": [
+      "Baseado na data da página, não na data em que o dado específico mudou: confiança baixa.",
+      "Não substitui o índice de atualidade principal e não é probabilidade de verdade."
+     ]
+    },
+    "atualidade_afirmacao": {
+     "algorithm_id": "CLAIM_CURRENCY_SCORE",
+     "algorithm_version": "1.0.0",
+     "formula": "evidence_recency × support_share",
+     "window_days": 30,
+     "score": 0,
+     "status": "AGING",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "evidence_recency": 0,
+     "support_share": 1,
+     "newest_date": "2025-11-12",
+     "newest_age_days": 366,
+     "within_window": false
+    },
+    "versao_regras": "1.2.0",
+    "metodo": "AGREGACAO_DETERMINISTICA",
+    "fontes_independentes": 5,
+    "grupos_distintos_de_evidencia": 5,
+    "dependencia_detectada": 0,
+    "dependencia_nao_verificada": true,
+    "nota_independencia": "Cópias exatas, quase duplicadas, URLs canônicas iguais e páginas do mesmo domínio são agrupadas; domínios sem sinal de cópia não têm independência editorial comprovada.",
+    "total_evidencias_utilizaveis": 5,
+    "fontes": [
+     {
+      "dominio": "agenciabrasil.ebc.com.br",
+      "dominios": [
+       "agenciabrasil.ebc.com.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_001",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://agenciabrasil.ebc.com.br/economia/noticia/2020-10/pessoas-fisicas-nao-poderao-ser-cobradas-por-uso-do-pix"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Pessoas físicas não poderão ser cobradas por uso do Pix | Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2020-10/pessoas-fisicas-nao-poderao-ser-cobradas-por-uso-do-pix",
+        "categoria_fonte": "NOTICIA",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:29:51.273Z",
+        "data_publicacao": "2020-10-03",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Sat, 03 Oct 2020 00:46:00 GMT",
+          "value_normalized": "2020-10-03",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Publicado em",
+          "value_original": "02/10/2020",
+          "value_normalized": "2020-10-02",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_001",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "sejaefi.com.br",
+      "dominios": [
+       "sejaefi.com.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_002",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://sejaefi.com.br/blog/qual-custo-do-pix"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Taxa do Pix para empresas: quanto custa em 2026?",
+        "url": "https://sejaefi.com.br/blog/qual-custo-do-pix",
+        "categoria_fonte": "OUTRO",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:29:51.273Z",
+        "data_publicacao": "2025-05-20",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Tue, 20 May 2025 18:56:49 GMT",
+          "value_normalized": "2025-05-20",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://sejaefi.com.br/blog/qual-custo-do-pix",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2025-05-20T15:56:49-03:00",
+          "value_normalized": "2025-05-20",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "ARTICLE_MODIFIED_TIME",
+          "field": "article:modified_time",
+          "value_original": "2026-09-23T20:46:53-03:00",
+          "value_normalized": "2026-09-23",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_002",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "spcbrasil.com.br",
+      "dominios": [
+       "spcbrasil.com.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_003",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.spcbrasil.com.br/blog/como-funciona-a-taxa-do-pix"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Como funciona a taxa do Pix: entenda quando é cobrada!",
+        "url": "https://www.spcbrasil.com.br/blog/como-funciona-a-taxa-do-pix",
+        "categoria_fonte": "OUTRO",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:29:51.273Z",
+        "data_publicacao": "2025-09-22",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Mon, 22 Sep 2025 00:00:00 GMT",
+          "value_normalized": "2025-09-22",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_003",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "transfeera.com",
+      "dominios": [
+       "transfeera.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_004",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://transfeera.com/blog/tarifa-pix"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Taxa Pix: quando ela pode ser cobrada e mais | Transfeera",
+        "url": "https://transfeera.com/blog/tarifa-pix",
+        "categoria_fonte": "OUTRO",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:29:51.273Z",
+        "data_publicacao": "2025-06-16",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Mon, 16 Jun 2025 11:50:46 GMT",
+          "value_normalized": "2025-06-16",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Wed, 28 Oct 2026 17:45:38 GMT",
+          "value_normalized": "2026-10-28",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://transfeera.com/blog/tarifa-pix/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2026-10-07T15:00:46+00:00",
+          "value_normalized": "2026-10-07",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-10-07T15:00:46+00:00",
+          "value_normalized": "2026-10-07",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "2026-10-07T12:00:46-03:00",
+          "value_normalized": "2026-10-07",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_004",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "facebook.com",
+      "dominios": [
+       "facebook.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_005",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.facebook.com/bancocentraldobrasil/videos/o-pix-%C3%A9-gratuito-para-as-pessoas-f%C3%ADsicas-e-para-os-empreendedores-individuais-ma/25063884226578555"
+      ],
+      "evidencias": [
+       {
+        "titulo": "2K views · 41 reactions | O Pix é gratuito para as pessoas físicas e para os empreendedores individuais. Mas como isso é possível? Calma, que o BC te Explica!\n\nNeste episódio, você vai descobrir que o Pix é uma política de Estado criada para promover concorrência, transparência e, principalmente, inclusão financeira no Brasil.\n\nEntenda como o Banco Central idealizou e coordenou a criação do Pix, uma infraestrutura pública digital desenvolvida para ser um meio de pagamento acessível, universal e gratuito para todos os brasileiros.\n\n#BCteExplica #Pix #BancoCentral #PagamentosInstantâneos #InclusãoFinanceira #Inovação #Tecnologia\n\n#PraTodosVerem Vídeo da série “BC te Explica”, com o tema “Por que o Pix é universal e gratuito?”. O apresentador é Gustavo Igreja, servidor do Banco Central. Ele é um homem branco, de cabelos curtos e grisalhos, e veste uma camiseta preta. O vídeo foi gravado em um ambiente interno do Banco Central, com fundo neutro. Ao longo do vídeo, a fala do apresentador é intercalada com imagens ilustrativas que ajudam a explicar o conteúdo. | Banco Central do Brasil",
+        "url": "https://www.facebook.com/bancocentraldobrasil/videos/o-pix-%C3%A9-gratuito-para-as-pessoas-f%C3%ADsicas-e-para-os-empreendedores-individuais-ma/25063884226578555",
+        "categoria_fonte": "BLOG_FORUM",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T13:29:51.273Z",
+        "data_publicacao": "2025-11-12",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Wed, 12 Nov 2025 22:00:00 GMT",
+          "value_normalized": "2025-11-12",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.facebook.com/reel/25063884226578555/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_005",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     }
+    ],
+    "limitacoes": [
+     "Nenhuma evidência possui data verificável e status de atualidade FRESH.",
+     "Uma data da página ou do resultado de busca não comprova quando o atributo da afirmação foi publicado ou atualizado.",
+     "Nenhuma fonte pertence ao cadastro de domínios oficiais informado.",
+     "Domínios sem sinal detectado de duplicação não têm independência editorial comprovada; republicação com edição extensa ainda pode passar despercebida."
+    ],
+    "avaliado_em": "2026-11-13T13:29:59.527Z"
+   }
+  }
+ ],
+ "afirmacoes_omitidas": [],
+ "resposta_corrigida": {
+  "texto": "O Pix é gratuito para pessoas físicas que fazem transferências [1][2][3].",
+  "mudancas": [
+   {
+    "claim_id": "afirmacao_1",
+    "what": "kept"
+   }
+  ],
+  "fontes_citadas": [
+   1,
+   2,
+   3
+  ],
+  "tentativas": 1,
+  "citacoes_anexadas": false,
+  "fontes": [
+   {
+    "n": 1,
+    "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2020-10/pessoas-fisicas-nao-poderao-ser-cobradas-por-uso-do-pix",
+    "titulo": "Pessoas físicas não poderão ser cobradas por uso do Pix | Agência Brasil",
+    "tipo": "NOTICIA",
+    "postura": "SUPPORTS",
+    "data": "2020-10-03"
+   },
+   {
+    "n": 2,
+    "url": "https://sejaefi.com.br/blog/qual-custo-do-pix",
+    "titulo": "Taxa do Pix para empresas: quanto custa em 2026?",
+    "tipo": "OUTRO",
+    "postura": "SUPPORTS",
+    "data": "2025-05-20"
+   },
+   {
+    "n": 3,
+    "url": "https://www.spcbrasil.com.br/blog/como-funciona-a-taxa-do-pix",
+    "titulo": "Como funciona a taxa do Pix: entenda quando é cobrada!",
+    "tipo": "OUTRO",
+    "postura": "SUPPORTS",
+    "data": "2025-09-22"
+   }
+  ],
+  "metodo": "MODEL_REWRITE_FROM_VERIFIED_EVIDENCE"
+ },
+ "rastreabilidade_modelo": [
+  {
+   "id_chamada": "5f29fa76-e23f-4501-bc7b-df6123bdc893",
+   "id_requisicao_enviada": "d9280657-d2dc-470d-b6ab-d3a4132b74c3",
+   "id_verificacao": "aa59445e-53ae-412d-8e8d-b942e976aec1",
+   "etapa": "DECOMPOSICAO",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 597,
+   "tokens": {
+    "entrada": 839,
+    "saida": 156,
+    "total": 995
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "d9280657-d2dc-470d-b6ab-d3a4132b74c3",
+   "id_trace": "2e83627b9ff043c69e2ee2d2a3e53442",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 597.616,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:29:43.590Z"
+  },
+  {
+   "id_chamada": "8b5e1425-8e0c-4581-8fb2-cd4c74712bb6",
+   "id_requisicao_enviada": "8a3752fa-43b6-44a5-b5cb-0f6127c153fe",
+   "id_verificacao": "aa59445e-53ae-412d-8e8d-b942e976aec1",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 2797,
+   "tokens": {
+    "entrada": 4169,
+    "saida": 2048,
+    "total": 6217
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "8a3752fa-43b6-44a5-b5cb-0f6127c153fe",
+   "id_trace": "e6b686889bcd4187b8d5cb8b8ce9d19e",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 2797.586,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:29:52.728Z"
+  },
+  {
+   "id_chamada": "1f0da416-874a-4253-a32d-a02ca935aba3",
+   "id_requisicao_enviada": "e8321aeb-43e6-4de1-b473-108e818a833b",
+   "id_verificacao": "aa59445e-53ae-412d-8e8d-b942e976aec1",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 3837,
+   "tokens": {
+    "entrada": 4169,
+    "saida": 1470,
+    "total": 5639
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "e8321aeb-43e6-4de1-b473-108e818a833b",
+   "id_trace": "97d8294c0ba54579bc39ffda3186cbf2",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 3875.215,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:29:55.587Z"
+  },
+  {
+   "id_chamada": "01ddccc4-c2bd-4502-93e4-d8737ad532c0",
+   "id_requisicao_enviada": "3945e168-35ea-4abd-b2b3-af08330c1b57",
+   "id_verificacao": "aa59445e-53ae-412d-8e8d-b942e976aec1",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 1272,
+   "tokens": {
+    "entrada": 1027,
+    "saida": 237,
+    "total": 1264
+   },
+   "espera_limite_ms": 1880,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "3945e168-35ea-4abd-b2b3-af08330c1b57",
+   "id_trace": "6e657afc0cbc46acbda2a1a4e40586e7",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 1309.732,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T13:29:59.527Z"
+  }
+ ],
+ "rastreabilidade_pesquisa": [
+  {
+   "id_operacao": "f5bf931c-a462-4a35-8de4-f62bacff5047",
+   "id_verificacao": "aa59445e-53ae-412d-8e8d-b942e976aec1",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:29:44.222Z",
+   "finalizada_em": "2026-11-13T13:29:45.616Z",
+   "duracao_ms": 1394,
+   "request_id": "e1bb8062-25e0-4034-849b-cd6aee3ed1e9",
+   "response_time": 0.9,
+   "erro": null,
+   "modo_busca": "GERAL",
+   "parametros": {
+    "query": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true,
+    "country": "brazil"
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "f36474-00",
+     "titulo": "Taxa do Pix para empresas: quanto custa em 2026?",
+     "url": "https://sejaefi.com.br/blog/qual-custo-do-pix",
+     "relevancia": 0.8454327,
+     "data_publicacao": "2025-05-20"
+    },
+    {
+     "resultado_id": "7e6ee8-01",
+     "titulo": "Como funciona a taxa do Pix: entenda quando é cobrada!",
+     "url": "https://www.spcbrasil.com.br/blog/como-funciona-a-taxa-do-pix",
+     "relevancia": 0.82796735,
+     "data_publicacao": "2025-09-22"
+    },
+    {
+     "resultado_id": "9736f3-02",
+     "titulo": "Pessoas físicas não poderão ser cobradas por uso do Pix | Agência Brasil",
+     "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2020-10/pessoas-fisicas-nao-poderao-ser-cobradas-por-uso-do-pix",
+     "relevancia": 0.7834919,
+     "data_publicacao": "2020-10-03"
+    },
+    {
+     "resultado_id": "44e64a-03",
+     "titulo": "Taxa Pix: quando ela pode ser cobrada e mais | Transfeera",
+     "url": "https://transfeera.com/blog/tarifa-pix",
+     "relevancia": 0.6695288,
+     "data_publicacao": "2025-06-16"
+    },
+    {
+     "resultado_id": "64a379-04",
+     "titulo": "2K views · 41 reactions | O Pix é gratuito para as pessoas físicas e para os empreendedores individuais. Mas como isso é possível? Calma, que o BC te Explica!\n\nNeste episódio, você vai descobrir que o Pix é uma política de Estado criada para promover concorrência, transparência e, principalmente, inclusão financeira no Brasil.\n\nEntenda como o Banco Central idealizou e coordenou a criação do Pix, uma infraestrutura pública digital desenvolvida para ser um meio de pagamento acessível, universal e gratuito para todos os brasileiros.\n\n#BCteExplica #Pix #BancoCentral #PagamentosInstantâneos #InclusãoFinanceira #Inovação #Tecnologia\n\n#PraTodosVerem Vídeo da série “BC te Explica”, com o tema “Por que o Pix é universal e gratuito?”. O apresentador é Gustavo Igreja, servidor do Banco Central. Ele é um homem branco, de cabelos curtos e grisalhos, e veste uma camiseta preta. O vídeo foi gravado em um ambiente interno do Banco Central, com fundo neutro. Ao longo do vídeo, a fala do apresentador é intercalada com imagens ilustrativas que ajudam a explicar o conteúdo. | Banco Central do Brasil",
+     "url": "https://www.facebook.com/bancocentraldobrasil/videos/o-pix-%C3%A9-gratuito-para-as-pessoas-f%C3%ADsicas-e-para-os-empreendedores-individuais-ma/25063884226578555",
+     "relevancia": 0.655336,
+     "data_publicacao": "2025-11-12"
+    }
+   ]
+  },
+  {
+   "id_operacao": "9f7c9cc5-99f6-415d-aa8f-20992eb7a9a2",
+   "id_verificacao": "aa59445e-53ae-412d-8e8d-b942e976aec1",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:29:45.616Z",
+   "finalizada_em": "2026-11-13T13:29:49.702Z",
+   "duracao_ms": 4086,
+   "request_id": "ccb1ebc6-2c74-405e-b6fc-cd7e3c8bac45",
+   "response_time": 3.64,
+   "erro": null,
+   "modo_busca": "NOTICIAS_BR",
+   "parametros": {
+    "query": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+    "search_depth": "basic",
+    "max_results": 4,
+    "include_answer": false,
+    "include_published_date": true,
+    "topic": "news",
+    "include_domains": [
+     "g1.globo.com",
+     "oglobo.globo.com",
+     "valor.globo.com",
+     "folha.uol.com.br",
+     "uol.com.br",
+     "estadao.com.br",
+     "agenciabrasil.ebc.com.br",
+     "cnnbrasil.com.br",
+     "infomoney.com.br",
+     "exame.com",
+     "poder360.com.br",
+     "correiobraziliense.com.br",
+     "metropoles.com",
+     "veja.abril.com.br",
+     "terra.com.br",
+     "band.com.br",
+     "r7.com",
+     "bbc.com",
+     "jota.info",
+     "canaltech.com.br"
+    ]
+   },
+   "quantidade_resultados": 4,
+   "resultados": [
+    {
+     "resultado_id": "cba89f-00",
+     "titulo": "UPI: The small fee raising big questions for India's payments revolution - BBC",
+     "url": "https://www.bbc.com/news/articles/ckpd0y9gdp5lo",
+     "relevancia": 0.037467506,
+     "data_publicacao": "2026-09-16"
+    },
+    {
+     "resultado_id": "fa553c-01",
+     "titulo": "India built the world's biggest digital payments miracle. Now comes the bill - BBC",
+     "url": "https://www.bbc.com/news/articles/c8xnwqe00v1o",
+     "relevancia": 0.03615194,
+     "data_publicacao": "2026-08-16"
+    },
+    {
+     "resultado_id": "c29f6f-02",
+     "titulo": "Football gossip: Luis Enrique, Martinez, Nwaneri, Gomes, Gvardiol, Openda - BBC",
+     "url": "https://www.bbc.com/sport/football/articles/c1w23n8j3zyo",
+     "relevancia": 0.0063143647,
+     "data_publicacao": "2026-05-09"
+    },
+    {
+     "resultado_id": "669d33-03",
+     "titulo": "How switching your bank account could earn you up to £220 - BBC",
+     "url": "https://www.bbc.com/news/articles/c5y3ex8ry82o",
+     "relevancia": 0.0045032725,
+     "data_publicacao": "2026-08-16"
+    }
+   ]
+  },
+  {
+   "id_operacao": "26045bbc-bb84-4cd4-8382-9f270e07facc",
+   "id_verificacao": "aa59445e-53ae-412d-8e8d-b942e976aec1",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "EXTRACAO",
+   "consulta": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T13:29:49.704Z",
+   "finalizada_em": "2026-11-13T13:29:51.273Z",
+   "duracao_ms": 1569,
+   "request_id": "bcf60975-8c3d-4409-b1bc-8f8fa5dfef82",
+   "response_time": 0.03,
+   "erro": null,
+   "urls_solicitadas": [
+    "https://agenciabrasil.ebc.com.br/economia/noticia/2020-10/pessoas-fisicas-nao-poderao-ser-cobradas-por-uso-do-pix",
+    "https://sejaefi.com.br/blog/qual-custo-do-pix",
+    "https://www.spcbrasil.com.br/blog/como-funciona-a-taxa-do-pix",
+    "https://transfeera.com/blog/tarifa-pix",
+    "https://www.facebook.com/bancocentraldobrasil/videos/o-pix-%C3%A9-gratuito-para-as-pessoas-f%C3%ADsicas-e-para-os-empreendedores-individuais-ma/25063884226578555"
+   ],
+   "parametros": {
+    "urls": [
+     "https://agenciabrasil.ebc.com.br/economia/noticia/2020-10/pessoas-fisicas-nao-poderao-ser-cobradas-por-uso-do-pix",
+     "https://sejaefi.com.br/blog/qual-custo-do-pix",
+     "https://www.spcbrasil.com.br/blog/como-funciona-a-taxa-do-pix",
+     "https://transfeera.com/blog/tarifa-pix",
+     "https://www.facebook.com/bancocentraldobrasil/videos/o-pix-%C3%A9-gratuito-para-as-pessoas-f%C3%ADsicas-e-para-os-empreendedores-individuais-ma/25063884226578555"
+    ],
+    "extract_depth": "basic",
+    "format": "markdown",
+    "include_images": false
+   },
+   "quantidade_resultados": 5,
+   "urls_extraidas": [
+    "https://agenciabrasil.ebc.com.br/economia/noticia/2020-10/pessoas-fisicas-nao-poderao-ser-cobradas-por-uso-do-pix",
+    "https://sejaefi.com.br/blog/qual-custo-do-pix",
+    "https://www.spcbrasil.com.br/blog/como-funciona-a-taxa-do-pix",
+    "https://transfeera.com/blog/tarifa-pix",
+    "https://www.facebook.com/bancocentraldobrasil/videos/o-pix-%C3%A9-gratuito-para-as-pessoas-f%C3%ADsicas-e-para-os-empreendedores-individuais-ma/25063884226578555"
+   ]
+  }
+ ],
+ "modo": "real",
+ "simulado": false,
+ "gateway": {
+  "gateway": "bifrost",
+  "chamadas": 4,
+  "falhas": 0,
+  "cadeia_modelos": [
+   "groq/openai/gpt-oss-20b",
+   "groq/openai/gpt-oss-120b"
+  ],
+  "queda_simulada": false,
+  "respostas_por_modelo": [
+   {
+    "modelo": "groq/openai/gpt-oss-20b",
+    "chamadas": 2
+   },
+   {
+    "modelo": "groq/openai/gpt-oss-120b",
+    "chamadas": 2
+   }
+  ],
+  "respostas_de_reserva": 2,
+  "tokens_total": 14115,
+  "latencia_media_ms": 2145
+ },
+ "duracao_ms": 19277,
+ "gravado_em": "2026-11-13T13:30:02.863Z"
+}
