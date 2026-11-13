@@ -126,10 +126,10 @@ function configurarModo() {
   radio.disabled = !real;
   opcao.classList.toggle("desativado", !real);
   opcao.querySelector("span").textContent = API.estatico
-    ? "Recorded live checks: real Tavily + Bifrost runs"
+    ? "Recorded live checks"
     : real
-      ? "Live check: searches the web now"
-      : "Live check: needs TAVILY_API_KEY and BIFROST_KEY on the server";
+      ? "Live check"
+      : "Live check (needs API keys)";
   if (API.estatico) selo.textContent = "Public demo";
   (real ? radio : document.querySelector('input[name="modo"][value="exemplo"]')).checked = true;
   const atualizarQueda = () => {
@@ -371,9 +371,9 @@ function mostrarTriagem(afirmacoes) {
   }
   const sensiveis = comRisco.filter(a => a.risco_desatualizacao.sensivel_ao_tempo);
   const ritmos = [...new Set(sensiveis.map(a => a.tipo_afirmacao).filter(t => RITMOS[t]))].map(t => RITMOS[t]);
-  $("titulo-triagem").textContent =
+  $("triagem-resumo").textContent =
     `${comRisco.length} claim${comRisco.length === 1 ? "" : "s"} found · ${sensiveis.length} time-sensitive` +
-    (ritmos.length ? ` (${ritmos.join(", ")})` : "");
+    (ritmos.length ? ` — ${ritmos.join(", ")}.` : ".");
 }
 
 // Painel do Bifrost: cadeia de modelos, quem respondeu, failover e tokens.

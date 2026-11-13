@@ -33,11 +33,14 @@ async function principal() {
   let html = fs.readFileSync(path.join(RAIZ, "public", "index.html"), "utf8");
   html = html
     .replace('href="/estilo.css"', 'href="estilo.css"')
+    .replace('href="/fonts/', 'href="fonts/')
     .replace('<script src="/app.js" defer></script>', '<script src="estatico.js" defer></script>\n  <script src="app.js" defer></script>')
     .replace('class="marca" href="/"', 'class="marca" href="./"')
     .replace('<meta charset="utf-8">', `<meta charset="utf-8">\n  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">`);
   fs.writeFileSync(path.join(DOCS, "index.html"), html);
   for (const f of ["app.js", "estilo.css"]) fs.copyFileSync(path.join(RAIZ, "public", f), path.join(DOCS, f));
+  fs.mkdirSync(path.join(DOCS, "fonts"), { recursive: true });
+  for (const f of fs.readdirSync(path.join(RAIZ, "public", "fonts"))) fs.copyFileSync(path.join(RAIZ, "public", "fonts", f), path.join(DOCS, "fonts", f));
   fs.copyFileSync(path.join(__dirname, "estatico.js"), path.join(DOCS, "estatico.js"));
   fs.writeFileSync(path.join(DOCS, ".nojekyll"), "");
 
