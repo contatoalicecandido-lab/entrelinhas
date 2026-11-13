@@ -1,0 +1,2047 @@
+{
+ "sistema": "Entrelinhas",
+ "id_verificacao": "8d6b84bf-94c6-4fde-a888-aba8713fccdf",
+ "texto_original": "Ubuntu 20.04 LTS is still in standard support.",
+ "verificado_em": "2026-11-13T23:09:14.025Z",
+ "total_afirmacoes": 1,
+ "sintese": {
+  "veredito": "CONTRADICAO_FRACA",
+  "resumo": "As evidências utilizáveis contradizem a afirmação, mas nenhuma fonte oficial com data ligada ao fato confirma a contradição. Trate a afirmação como possivelmente desatualizada ou incorreta e revise as fontes.",
+  "total_afirmacoes": 1,
+  "contagem_vereditos": {
+   "CONTRADICAO_FRACA": 1
+  }
+ },
+ "afirmacoes": [
+  {
+   "id": "afirmacao_1",
+   "texto": "Ubuntu 20.04 LTS is still in standard support.",
+   "tipo_afirmacao": null,
+   "origem_tipo_afirmacao": null,
+   "nuances": {
+    "idioma": "en",
+    "variante": null,
+    "confianca_idioma": 1,
+    "valores": [],
+    "datas": [],
+    "expressoes_temporais": [
+     {
+      "texto": "still",
+      "tipo": "PRESENTE",
+      "rotulo": "present tense: must hold today"
+     }
+    ],
+    "condicoes": [],
+    "mudancas": [],
+    "tempo_coloquial": [],
+    "girias": {
+     "aliases": [],
+     "expressoes": []
+    },
+    "consulta_busca": "Ubuntu 20.04 LTS is still in standard support.",
+    "dominios_oficiais_sugeridos": [],
+    "autoridades": [],
+    "notas": [
+     "\"still\": present tense: must hold today."
+    ]
+   },
+   "evidencias": [
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OFICIAL",
+      "titulo": "Ubuntu 20.04 LTS Standard Support has ended. Here’s how to prepare. | Ubuntu",
+      "url": "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+      "conteudo": "Your submission was sent successfully!\n[*Close*](#)\n\nThank you for contacting us. A member of our team will be in touch shortly.\n[*Close*](#)\n\nYou have successfully unsubscribed!\n[*Close*](#)\n\nThank you for signing up for our newsletter!\n  \nIn these regular emails you will find the latest updates about\nUbuntu and upcoming events where you can meet our team.[*Close*](#)\n\nYour preferences have been successfully updated. [*Close notification*](#)\n\nPlease try again or\n[file a bug report.](https://github.com/canonical/ubuntu.com/issues/new?template=ISSUE_TEMPLATE.yaml)\n[*Close*](#)\n\n![](https://assets.ubuntu.com/v1/82818827-CoF_white.svg)\n![](https://secure.gravatar.com/avatar/d01b49e934800fcc92b…",
+      "coletado_em": "2026-11-13T23:09:00.509Z",
+      "data_publicacao": "2026-06-16",
+      "data_atualizacao": "2026-06-16",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+      "relevancia": 0.83155376,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "a58b5a1c-2eef-4d61-927a-44db8bfac52b",
+       "resultado_id": "d8e088-00",
+       "response_time_busca": 0.62,
+       "response_time_extracao": 0.02,
+       "consulta": "Ubuntu 20.04 LTS is still in standard support.",
+       "origem_principal": {
+        "id_operacao": "568a5a82-55af-4857-8f3c-1b55affba499",
+        "request_id": "a58b5a1c-2eef-4d61-927a-44db8bfac52b",
+        "modo_busca": "GERAL",
+        "resultado_id": "d8e088-00",
+        "parametros": {
+         "query": "Ubuntu 20.04 LTS is still in standard support.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "568a5a82-55af-4857-8f3c-1b55affba499",
+         "request_id": "a58b5a1c-2eef-4d61-927a-44db8bfac52b",
+         "modo_busca": "GERAL",
+         "resultado_id": "d8e088-00",
+         "parametros": {
+          "query": "Ubuntu 20.04 LTS is still in standard support.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Tue, 16 Jun 2026 13:48:39 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 16 Jun 2026 13:48:39 GMT",
+         "value_normalized": "2026-06-16",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2024-11-21T10:08:59",
+         "value_normalized": "2024-11-21",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-06-16T13:48:39",
+         "value_normalized": "2026-06-16",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "5 October 2026",
+         "value_normalized": "2026-10-05",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "21 September 2026",
+         "value_normalized": "2026-09-21",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "17 September 2026",
+         "value_normalized": "2026-09-17",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "25 August 2026",
+         "value_normalized": "2026-08-25",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+        "capturado_em": "2026-11-13T23:09:04.773Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "5d6f0d97-6e3c-41ce-aa6d-80ee4ec8ab64",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2025-05-31",
+       "precisao": "DIA",
+       "citacao": "Ubuntu 20.04 LTS (Focal Fossa) has reached the end of its standard five-year support window on 31 May 2025.",
+       "origem": "QUOTED_IN_SOURCE_TEXT",
+       "confirmada_em": "2026-06-16"
+      }
+     },
+     "coleta": {
+      "id_coleta": "69b32aef-d524-43da-b1df-8d70c6b4eb6d",
+      "id_verificacao": "8d6b84bf-94c6-4fde-a888-aba8713fccdf",
+      "url_original": "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+      "url_canonica": "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "74e418c826ed48b7a964cab26f808c52f45f31b97543a99c7530ba09c07d9e53",
+      "coletado_em": "2026-11-13T23:09:00.509Z",
+      "id_operacao_busca": "568a5a82-55af-4857-8f3c-1b55affba499",
+      "id_operacao_extracao": "d49b4460-3a9c-40fb-a77e-dc4498138bf6",
+      "consulta": "Ubuntu 20.04 LTS is still in standard support.",
+      "parametros_busca": {
+       "query": "Ubuntu 20.04 LTS is still in standard support.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+        "https://www.omgubuntu.co.uk/2026/04/ubuntu-1604-lts-enters-legacy-support",
+        "https://pasqualepillitteri.it/en/news/30224/apt-bug-cve-2026-109518-debian-ubuntu-fake-package-root",
+        "https://itsfoss.com/news/ubuntu-15-year-support-commitment",
+        "https://www.techzine.eu/news/devops/136349/canonical-extends-ubuntu-lts-support-to-15-years"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "a58b5a1c-2eef-4d61-927a-44db8bfac52b",
+       "operacoes_busca": [
+        {
+         "id_operacao": "568a5a82-55af-4857-8f3c-1b55affba499",
+         "request_id": "a58b5a1c-2eef-4d61-927a-44db8bfac52b",
+         "modo_busca": "GERAL",
+         "resultado_id": "d8e088-00",
+         "parametros": {
+          "query": "Ubuntu 20.04 LTS is still in standard support.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "5d6f0d97-6e3c-41ce-aa6d-80ee4ec8ab64",
+       "resultado_id": "d8e088-00",
+       "relevancia": 0.83155376,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 16 Jun 2026 13:48:39 GMT",
+         "value_normalized": "2026-06-16",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2024-11-21T10:08:59",
+         "value_normalized": "2024-11-21",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-06-16T13:48:39",
+         "value_normalized": "2026-06-16",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "5 October 2026",
+         "value_normalized": "2026-10-05",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "21 September 2026",
+         "value_normalized": "2026-09-21",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "17 September 2026",
+         "value_normalized": "2026-09-17",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "25 August 2026",
+         "value_normalized": "2026-08-25",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+        "capturado_em": "2026-11-13T23:09:04.773Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Ubuntu 20.04 LTS Standard Support has ended. Here’s how to prepare. | Ubuntu",
+      "url": "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 9467,
+      "caracteres_preparados": 7993,
+      "trecho_analisado": "TÍTULO DA FONTE: Ubuntu 20.04 LTS Standard Support has ended. Here’s how to prepare. | Ubuntu\nURL DA FONTE: https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\nThank you for contacting us.\n\nA member of our team will be in touch shortly.\n\n[*Close*](#)\n\nThank you for signing up for our newsletter!\n\nIn these regular emails you will find the latest updates about\n\nUbuntu and upcoming events where you can meet our team.[*Close*](#)\n\nYour preferences have been successfully updated.\n\nPlease try again or\n\n[file a bug report.](https://github.com/canonical/ubuntu.com/issues/new?template=ISSUE_TEMPLATE.yaml)\n\n[*Close*](#)\n\n![](https://assets.ubuntu.com/v1/82818827-CoF_white.svg)\n\n![](https://secure.gravatar.com/avatar/d01b49e934800fcc92baf9d8ae675c14de0ea982ef835f514c7ac05f075cb1fb?s=96&d=mm&r=g)\n\n21 November 2024\n\n# Ubuntu 20.04 LTS Standard Support has ended.\n\nHere’s how to prepare.\n\nUbuntu 20.04 LTS (Focal Fossa) has reached the end of its standard five-year support window on 31 May 2025.\n\nIt’s time to start thinking about your options for upgrading.\n\n### **What is an Ubuntu long-term support (LTS",
+      "citacao_chave": "Ubuntu 20.04 LTS (Focal Fossa) has reached the end of its standard five-year support window on 31 May 2025.",
+      "citacao_verificada": true,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source states that Ubuntu 20.04 LTS standard support ended on 31 May 2025, which is before the reference date, so it is not still in standard support."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "The source states that Ubuntu 20.04 LTS standard support ended on 31 May 2025, which is before the reference date, so it is not still in standard support."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "UNKNOWN_CLAIM_TYPE"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "Ubuntu 16.04 LTS security support has ended – unless you pay",
+      "url": "https://www.omgubuntu.co.uk/2026/04/ubuntu-1604-lts-enters-legacy-support",
+      "conteudo": "[Skip to content](#after-header)\n\n\n* [Submit News](https://www.omgubuntu.co.uk/tip)\n\n [![OMG! Ubuntu](https://www.omgubuntu.co.uk/wp-content/themes/omgubuntu-theme-2026_10_0/images/logo.svg?v=20231008132259 \"Go to the homepage\")](https://www.omgubuntu.co.uk/) \n\n* [Mastodon](https://floss.social/@omgubuntu \"OMG! Ubuntu Mastodon Profile\")\n* [Bluesky](https://bsky.app/profile/omgubuntu.co.uk \"OMG! Ubuntu BlueSky account\")\n* [X](https://twitter.com/omgubuntu \"Link to OMG! Ubuntu profile on X\")\n* [Buy me a Coffee](https://buymeacoffee.com/omgubuntu \"Support this site link\")\n* [RSS](https://omgubuntu.co.uk/feed \"OMG! Ubuntu RSS Feed\")\n\n[![OMG! Ubuntu](https://www.omgubuntu.co.uk/wp-content/themes/…",
+      "coletado_em": "2026-11-13T23:09:00.509Z",
+      "data_publicacao": "2026-04-28",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www.omgubuntu.co.uk/2026/04/ubuntu-1604-lts-enters-legacy-support",
+      "relevancia": 0.41229352,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "79e1c9e9-b861-4515-98f8-9eb645d9d843",
+       "resultado_id": "26f249-02",
+       "response_time_busca": 1.54,
+       "response_time_extracao": 0.02,
+       "consulta": "Ubuntu 20.04 LTS is still in standard support.",
+       "origem_principal": {
+        "id_operacao": "ffabd34c-40b6-4f53-86ab-f7c9c7ece8e3",
+        "request_id": "79e1c9e9-b861-4515-98f8-9eb645d9d843",
+        "modo_busca": "NOTICIAS",
+        "resultado_id": "26f249-02",
+        "parametros": {
+         "query": "Ubuntu 20.04 LTS is still in standard support.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news",
+         "time_range": "year"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "ffabd34c-40b6-4f53-86ab-f7c9c7ece8e3",
+         "request_id": "79e1c9e9-b861-4515-98f8-9eb645d9d843",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "26f249-02",
+         "parametros": {
+          "query": "Ubuntu 20.04 LTS is still in standard support.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "time_range": "year"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Tue, 28 Apr 2026 14:53:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 28 Apr 2026 14:53:00 GMT",
+         "value_normalized": "2026-04-28",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 23:09:00 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.omgubuntu.co.uk/2026/04/ubuntu-1604-lts-enters-legacy-support",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-04-28T14:53:00+00:00",
+         "value_normalized": "2026-04-28",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-04-29T03:15:51+00:00",
+         "value_normalized": "2026-04-29",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-04-28T14:53:00+00:00",
+         "value_normalized": "2026-04-28",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-04-29T03:15:51+00:00",
+         "value_normalized": "2026-04-29",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "29 Apr 2026",
+         "value_normalized": "2026-04-29",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.omgubuntu.co.uk/2026/04/ubuntu-1604-lts-enters-legacy-support",
+        "capturado_em": "2026-11-13T23:09:00.790Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "5d6f0d97-6e3c-41ce-aa6d-80ee4ec8ab64",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "c27736ed-431f-40be-b2f3-35c6720d59e7",
+      "id_verificacao": "8d6b84bf-94c6-4fde-a888-aba8713fccdf",
+      "url_original": "https://www.omgubuntu.co.uk/2026/04/ubuntu-1604-lts-enters-legacy-support",
+      "url_canonica": "https://www.omgubuntu.co.uk/2026/04/ubuntu-1604-lts-enters-legacy-support",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "43fd7853d4e70436c157cee0d366de22ae3eab277b60515e90b98bf3e9f5379b",
+      "coletado_em": "2026-11-13T23:09:00.509Z",
+      "id_operacao_busca": "ffabd34c-40b6-4f53-86ab-f7c9c7ece8e3",
+      "id_operacao_extracao": "d49b4460-3a9c-40fb-a77e-dc4498138bf6",
+      "consulta": "Ubuntu 20.04 LTS is still in standard support.",
+      "parametros_busca": {
+       "query": "Ubuntu 20.04 LTS is still in standard support.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news",
+       "time_range": "year"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+        "https://www.omgubuntu.co.uk/2026/04/ubuntu-1604-lts-enters-legacy-support",
+        "https://pasqualepillitteri.it/en/news/30224/apt-bug-cve-2026-109518-debian-ubuntu-fake-package-root",
+        "https://itsfoss.com/news/ubuntu-15-year-support-commitment",
+        "https://www.techzine.eu/news/devops/136349/canonical-extends-ubuntu-lts-support-to-15-years"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "79e1c9e9-b861-4515-98f8-9eb645d9d843",
+       "operacoes_busca": [
+        {
+         "id_operacao": "ffabd34c-40b6-4f53-86ab-f7c9c7ece8e3",
+         "request_id": "79e1c9e9-b861-4515-98f8-9eb645d9d843",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "26f249-02",
+         "parametros": {
+          "query": "Ubuntu 20.04 LTS is still in standard support.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "time_range": "year"
+         }
+        }
+       ],
+       "request_id_extracao": "5d6f0d97-6e3c-41ce-aa6d-80ee4ec8ab64",
+       "resultado_id": "26f249-02",
+       "relevancia": 0.41229352,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 28 Apr 2026 14:53:00 GMT",
+         "value_normalized": "2026-04-28",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 23:09:00 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.omgubuntu.co.uk/2026/04/ubuntu-1604-lts-enters-legacy-support",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-04-28T14:53:00+00:00",
+         "value_normalized": "2026-04-28",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-04-29T03:15:51+00:00",
+         "value_normalized": "2026-04-29",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-04-28T14:53:00+00:00",
+         "value_normalized": "2026-04-28",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-04-29T03:15:51+00:00",
+         "value_normalized": "2026-04-29",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "29 Apr 2026",
+         "value_normalized": "2026-04-29",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.omgubuntu.co.uk/2026/04/ubuntu-1604-lts-enters-legacy-support",
+        "capturado_em": "2026-11-13T23:09:00.790Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Ubuntu 16.04 LTS security support has ended – unless you pay",
+      "url": "https://www.omgubuntu.co.uk/2026/04/ubuntu-1604-lts-enters-legacy-support",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 6491,
+      "caracteres_preparados": 6491,
+      "trecho_analisado": "TÍTULO DA FONTE: Ubuntu 16.04 LTS security support has ended – unless you pay\nURL DA FONTE: https://www.omgubuntu.co.uk/2026/04/ubuntu-1604-lts-enters-legacy-support\n\nCONTEÚDO DA FONTE:\n[Skip to content](#after-header)\n\n\n* [Submit News](https://www.omgubuntu.co.uk/tip)\n\n [![OMG! Ubuntu](https://www.omgubuntu.co.uk/wp-content/themes/omgubuntu-theme-2026_10_0/images/logo.svg?v=20231008132259 \"Go to the homepage\")](https://www.omgubuntu.co.uk/) \n\n* [Mastodon](https://floss.social/@omgubuntu \"OMG! Ubuntu Mastodon Profile\")\n* [Bluesky](https://bsky.app/profile/omgubuntu.co.uk \"OMG! Ubuntu BlueSky account\")\n* [X](https://twitter.com/omgubuntu \"Link to OMG! Ubuntu profile on X\")\n* [Buy me a Coffee](https://buymeacoffee.com/omgubuntu \"Support this site link\")\n* [RSS](https://omgubuntu.co.uk/feed \"OMG! Ubuntu RSS Feed\")\n\n[![OMG! Ubuntu](https://www.omgubuntu.co.uk/wp-content/themes/omgubuntu-theme-2026_10_0/images/logo.svg?v=20231008132259 \"Go to the homepage\")](https://www.omgubuntu.co.uk/)\n\n* [Ubuntu 26.10 News](https://www.omgubuntu.co.uk/tag/ubuntu-26-10)\n* [App Updates](https://www.omgubuntu.co.uk/tag/appupdates)\n* [Explainers](https://www.omgubuntu.co.uk/tag/explainer)\n* [Linux Mint](",
+      "citacao_chave": null,
+      "citacao_verificada": false,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "UNRELATED",
+      "justificativa": "The source discusses Ubuntu 16.04 LTS, not Ubuntu 20.04 LTS."
+     },
+     "classificacao": {
+      "postura": "IRRELEVANT",
+      "justificativa": "The source discusses Ubuntu 16.04 LTS, not Ubuntu 20.04 LTS."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "UNKNOWN_CLAIM_TYPE"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "APT bug CVE-2026-109518 hits Debian and Ubuntu, a fake package can get root",
+      "url": "https://pasqualepillitteri.it/en/news/30224/apt-bug-cve-2026-109518-debian-ubuntu-fake-package-root",
+      "conteudo": "## Accessibility\n\n![Pasquale Pillitteri ingegnere informatico sviluppo software Palermo](/images/pillitteri.jpg)\n![Certificazione Innovation Manager UNI 11814 Palermo](/images/kiwa2.png)\n\n# APT bug CVE-2026-109518 hits Debian and Ubuntu, a fake package can get root\n\n##### A bug in APT, tracked as CVE-2026-109518, lets an on-path attacker install a fake .deb as root on Debian and Ubuntu. Patched versions, checks and the HTTPS switch.\n\n![Most Read](https://pasqualepillitteri.it/uploads/img/news/claude-academy-cover.webp)\n![Cybersecurity](https://pasqualepillitteri.it/uploads/img/news/allarme-bomba-centinaia-scuole-mail-andropov-cover.webp)\n![Claude](https://pasqualepillitteri.it/uploads/img/ne…",
+      "coletado_em": "2026-11-13T23:09:00.509Z",
+      "data_publicacao": "2026-11-05",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": null,
+      "relevancia": 0.7360213,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "79e1c9e9-b861-4515-98f8-9eb645d9d843",
+       "resultado_id": "8b4a90-00",
+       "response_time_busca": 1.54,
+       "response_time_extracao": 0.02,
+       "consulta": "Ubuntu 20.04 LTS is still in standard support.",
+       "origem_principal": {
+        "id_operacao": "ffabd34c-40b6-4f53-86ab-f7c9c7ece8e3",
+        "request_id": "79e1c9e9-b861-4515-98f8-9eb645d9d843",
+        "modo_busca": "NOTICIAS",
+        "resultado_id": "8b4a90-00",
+        "parametros": {
+         "query": "Ubuntu 20.04 LTS is still in standard support.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news",
+         "time_range": "year"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "ffabd34c-40b6-4f53-86ab-f7c9c7ece8e3",
+         "request_id": "79e1c9e9-b861-4515-98f8-9eb645d9d843",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "8b4a90-00",
+         "parametros": {
+          "query": "Ubuntu 20.04 LTS is still in standard support.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "time_range": "year"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Thu, 05 Nov 2026 06:32:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 05 Nov 2026 06:32:00 GMT",
+         "value_normalized": "2026-11-05",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "FETCH_FAILED",
+        "detalhe": "socket hang up",
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "5d6f0d97-6e3c-41ce-aa6d-80ee4ec8ab64",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "e67191eb-885a-44c2-af12-5ae931acced1",
+      "id_verificacao": "8d6b84bf-94c6-4fde-a888-aba8713fccdf",
+      "url_original": "https://pasqualepillitteri.it/en/news/30224/apt-bug-cve-2026-109518-debian-ubuntu-fake-package-root",
+      "url_canonica": "https://pasqualepillitteri.it/en/news/30224/apt-bug-cve-2026-109518-debian-ubuntu-fake-package-root",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "9270169094bad5b0255abed8f523b9e7ef7562a6ac0c3b44efa3adbd5d5af401",
+      "coletado_em": "2026-11-13T23:09:00.509Z",
+      "id_operacao_busca": "ffabd34c-40b6-4f53-86ab-f7c9c7ece8e3",
+      "id_operacao_extracao": "d49b4460-3a9c-40fb-a77e-dc4498138bf6",
+      "consulta": "Ubuntu 20.04 LTS is still in standard support.",
+      "parametros_busca": {
+       "query": "Ubuntu 20.04 LTS is still in standard support.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news",
+       "time_range": "year"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+        "https://www.omgubuntu.co.uk/2026/04/ubuntu-1604-lts-enters-legacy-support",
+        "https://pasqualepillitteri.it/en/news/30224/apt-bug-cve-2026-109518-debian-ubuntu-fake-package-root",
+        "https://itsfoss.com/news/ubuntu-15-year-support-commitment",
+        "https://www.techzine.eu/news/devops/136349/canonical-extends-ubuntu-lts-support-to-15-years"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "79e1c9e9-b861-4515-98f8-9eb645d9d843",
+       "operacoes_busca": [
+        {
+         "id_operacao": "ffabd34c-40b6-4f53-86ab-f7c9c7ece8e3",
+         "request_id": "79e1c9e9-b861-4515-98f8-9eb645d9d843",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "8b4a90-00",
+         "parametros": {
+          "query": "Ubuntu 20.04 LTS is still in standard support.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "time_range": "year"
+         }
+        }
+       ],
+       "request_id_extracao": "5d6f0d97-6e3c-41ce-aa6d-80ee4ec8ab64",
+       "resultado_id": "8b4a90-00",
+       "relevancia": 0.7360213,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 05 Nov 2026 06:32:00 GMT",
+         "value_normalized": "2026-11-05",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "FETCH_FAILED",
+        "detalhe": "socket hang up",
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "APT bug CVE-2026-109518 hits Debian and Ubuntu, a fake package can get root",
+      "url": "https://pasqualepillitteri.it/en/news/30224/apt-bug-cve-2026-109518-debian-ubuntu-fake-package-root",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 19064,
+      "caracteres_preparados": 7980,
+      "trecho_analisado": "TÍTULO DA FONTE: APT bug CVE-2026-109518 hits Debian and Ubuntu, a fake package can get root\nURL DA FONTE: https://pasqualepillitteri.it/en/news/30224/apt-bug-cve-2026-109518-debian-ubuntu-fake-package-root\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n![Certificazione Innovation Manager UNI 11814 Palermo](/images/kiwa2.png)\n\n# APT bug CVE-2026-109518 hits Debian and Ubuntu, a fake package can get root\n\n##### A bug in APT, tracked as CVE-2026-109518, lets an on-path attacker install a fake .deb as root on Debian and Ubuntu.\n\nPatched versions, checks and the HTTPS switch.\n\n![Pasquale Pillitteri](/images/pillitteri.jpg)\n\nOn November 4, 2026, Debian, Ubuntu and the APT developers shipped patches for **CVE-2026-109518**, a bug in APT (the tool that downloads and installs packages on Debian, Ubuntu and their derivatives) that lets anyone who tampers with HTTP traffic to the archive get a .deb file of their choosing installed and walk away with root privileges.\n\nUbuntu scores it 7.7 out of 10 (CVSS 4.0, High severity), while the APT team rates it critical.\n\nAPT sits underneath `apt`, `apt-get`, `aptitude` and Ubuntu's graphical updaters, so there is no single command to steer clear of, since the f",
+      "citacao_chave": "Ubuntu 20.04 LTS | 2.0.12+esm1 | Ubuntu Pro (ESM)",
+      "citacao_verificada": true,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source lists Ubuntu 20.04 LTS under \"Ubuntu Pro (ESM)\", indicating it is no longer in standard support."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "The source lists Ubuntu 20.04 LTS under \"Ubuntu Pro (ESM)\", indicating it is no longer in standard support."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "UNKNOWN_CLAIM_TYPE"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Ubuntu's New 15-Year Commitment Targets Long-Lived Enterprise Systems",
+      "url": "https://itsfoss.com/news/ubuntu-15-year-support-commitment",
+      "conteudo": "[![It's FOSS](/content/images/size/w30/2026/01/itsfoss-logo.png)](https://itsfoss.com) \n[Log in](/membership/)\n\n[Sign up](/signup/)   [Sign in](/signin/)\n\n[Log in](/signin/)   [Subscribe](/signup/)\n\n# Ubuntu's New 15-Year Commitment Targets Long-Lived Enterprise Systems\n\nLegacy add-on extended to five years, starting with Ubuntu 14.04 LTS.\n\n* [![Sourav Rudra](/content/images/size/w30/2026/01/2025-pfp-1-1.jpg)](/author/sourav/ \"Sourav Rudra\")\n\n[Sourav Rudra](/author/sourav/)\n\n2 min read\n\n[Ubuntu](https://ubuntu.com/?ref=itsfoss.com) is Canonical's flagship Linux distribution that **powers a significant portion of the information technology infrastructure today**. It has two major versions: an…",
+      "coletado_em": "2026-11-13T23:09:00.509Z",
+      "data_publicacao": "2025-11-14",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://itsfoss.com/news/ubuntu-15-year-support-commitment/",
+      "relevancia": 0.51935375,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "79e1c9e9-b861-4515-98f8-9eb645d9d843",
+       "resultado_id": "79fec0-01",
+       "response_time_busca": 1.54,
+       "response_time_extracao": 0.02,
+       "consulta": "Ubuntu 20.04 LTS is still in standard support.",
+       "origem_principal": {
+        "id_operacao": "ffabd34c-40b6-4f53-86ab-f7c9c7ece8e3",
+        "request_id": "79e1c9e9-b861-4515-98f8-9eb645d9d843",
+        "modo_busca": "NOTICIAS",
+        "resultado_id": "79fec0-01",
+        "parametros": {
+         "query": "Ubuntu 20.04 LTS is still in standard support.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news",
+         "time_range": "year"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "ffabd34c-40b6-4f53-86ab-f7c9c7ece8e3",
+         "request_id": "79e1c9e9-b861-4515-98f8-9eb645d9d843",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "79fec0-01",
+         "parametros": {
+          "query": "Ubuntu 20.04 LTS is still in standard support.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "time_range": "year"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Fri, 14 Nov 2025 10:44:14 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 14 Nov 2025 10:44:14 GMT",
+         "value_normalized": "2025-11-14",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://itsfoss.com/news/ubuntu-15-year-support-commitment/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2025-11-14T10:44:14.000Z",
+         "value_normalized": "2025-11-14",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2025-11-14T10:44:14.000Z",
+         "value_normalized": "2025-11-14",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2025-11-14T10:44:14.000Z",
+         "value_normalized": "2025-11-14",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2025-11-14T10:44:14.000Z",
+         "value_normalized": "2025-11-14",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2025-11-14",
+         "value_normalized": "2025-11-14",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-13",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://itsfoss.com/news/ubuntu-15-year-support-commitment/",
+        "capturado_em": "2026-11-13T23:09:00.574Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "5d6f0d97-6e3c-41ce-aa6d-80ee4ec8ab64",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "74e91ddd-3c88-4339-a572-ea3d1e3565a3",
+      "id_verificacao": "8d6b84bf-94c6-4fde-a888-aba8713fccdf",
+      "url_original": "https://itsfoss.com/news/ubuntu-15-year-support-commitment",
+      "url_canonica": "https://itsfoss.com/news/ubuntu-15-year-support-commitment",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "876a8f736eddbcb9b3604274c74a3ad65045a5a422a9cf3bf956d2ad3ddf2c9a",
+      "coletado_em": "2026-11-13T23:09:00.509Z",
+      "id_operacao_busca": "ffabd34c-40b6-4f53-86ab-f7c9c7ece8e3",
+      "id_operacao_extracao": "d49b4460-3a9c-40fb-a77e-dc4498138bf6",
+      "consulta": "Ubuntu 20.04 LTS is still in standard support.",
+      "parametros_busca": {
+       "query": "Ubuntu 20.04 LTS is still in standard support.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news",
+       "time_range": "year"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+        "https://www.omgubuntu.co.uk/2026/04/ubuntu-1604-lts-enters-legacy-support",
+        "https://pasqualepillitteri.it/en/news/30224/apt-bug-cve-2026-109518-debian-ubuntu-fake-package-root",
+        "https://itsfoss.com/news/ubuntu-15-year-support-commitment",
+        "https://www.techzine.eu/news/devops/136349/canonical-extends-ubuntu-lts-support-to-15-years"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "79e1c9e9-b861-4515-98f8-9eb645d9d843",
+       "operacoes_busca": [
+        {
+         "id_operacao": "ffabd34c-40b6-4f53-86ab-f7c9c7ece8e3",
+         "request_id": "79e1c9e9-b861-4515-98f8-9eb645d9d843",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "79fec0-01",
+         "parametros": {
+          "query": "Ubuntu 20.04 LTS is still in standard support.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "time_range": "year"
+         }
+        }
+       ],
+       "request_id_extracao": "5d6f0d97-6e3c-41ce-aa6d-80ee4ec8ab64",
+       "resultado_id": "79fec0-01",
+       "relevancia": 0.51935375,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 14 Nov 2025 10:44:14 GMT",
+         "value_normalized": "2025-11-14",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://itsfoss.com/news/ubuntu-15-year-support-commitment/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2025-11-14T10:44:14.000Z",
+         "value_normalized": "2025-11-14",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2025-11-14T10:44:14.000Z",
+         "value_normalized": "2025-11-14",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2025-11-14T10:44:14.000Z",
+         "value_normalized": "2025-11-14",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2025-11-14T10:44:14.000Z",
+         "value_normalized": "2025-11-14",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2025-11-14",
+         "value_normalized": "2025-11-14",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-11-13",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://itsfoss.com/news/ubuntu-15-year-support-commitment/",
+        "capturado_em": "2026-11-13T23:09:00.574Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Ubuntu's New 15-Year Commitment Targets Long-Lived Enterprise Systems",
+      "url": "https://itsfoss.com/news/ubuntu-15-year-support-commitment",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 6233,
+      "caracteres_preparados": 6233,
+      "trecho_analisado": "TÍTULO DA FONTE: Ubuntu's New 15-Year Commitment Targets Long-Lived Enterprise Systems\nURL DA FONTE: https://itsfoss.com/news/ubuntu-15-year-support-commitment\n\nCONTEÚDO DA FONTE:\n[![It's FOSS](/content/images/size/w30/2026/01/itsfoss-logo.png)](https://itsfoss.com) \n[Log in](/membership/)\n\n[Sign up](/signup/)   [Sign in](/signin/)\n\n[Log in](/signin/)   [Subscribe](/signup/)\n\n# Ubuntu's New 15-Year Commitment Targets Long-Lived Enterprise Systems\n\nLegacy add-on extended to five years, starting with Ubuntu 14.04 LTS.\n\n* [![Sourav Rudra](/content/images/size/w30/2026/01/2025-pfp-1-1.jpg)](/author/sourav/ \"Sourav Rudra\")\n\n[Sourav Rudra](/author/sourav/)\n\n2 min read\n\n[Ubuntu](https://ubuntu.com/?ref=itsfoss.com) is Canonical's flagship Linux distribution that **powers a significant portion of the information technology infrastructure today**. It has two major versions: an interim release that comes with nine months of support and a [long-term support](https://itsfoss.com/long-term-support-lts/) release that comes with five years of standard support that is extensible via Ubuntu Pro.\n\nIf you didn't know, [Canonical](https://canonical.com/?ref=itsfoss.com) introduced Ubuntu Pro in 2022 a",
+      "citacao_chave": null,
+      "citacao_verificada": false,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source mentions future 15‑year coverage for Ubuntu 20.04 LTS but does not state its current standard‑support status."
+     },
+     "classificacao": {
+      "postura": "INSUFFICIENT",
+      "justificativa": "The source mentions future 15‑year coverage for Ubuntu 20.04 LTS but does not state its current standard‑support status."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "UNKNOWN_CLAIM_TYPE"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Canonical extends Ubuntu LTS support to 15 years - Techzine Global",
+      "url": "https://www.techzine.eu/news/devops/136349/canonical-extends-ubuntu-lts-support-to-15-years",
+      "conteudo": "Canonical has announced that it is extending the Legacy add-on for Ubuntu Pro. This means that the support period for LTS versions of Ubuntu is now 15 years.\n\nAccording to a blog post by Canonical, this arrangement applies from Ubuntu 14.04 LTS onwards and is intended for long-term production environments where hardware dependency or strict compliance makes regular major upgrades problematic.\n\nPreviously, the maintenance period for an LTS release consisted of five years of regular security updates followed by five years via the ESM (Expanded Security Maintenance) service. In 2024, the Legacy add-on was introduced, enabling two additional years of support, bringing the total to twelve years. …",
+      "coletado_em": "2026-11-13T23:09:00.509Z",
+      "data_publicacao": "2025-11-14",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": null,
+      "relevancia": 0.32391453,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "79e1c9e9-b861-4515-98f8-9eb645d9d843",
+       "resultado_id": "090bb0-03",
+       "response_time_busca": 1.54,
+       "response_time_extracao": 0.02,
+       "consulta": "Ubuntu 20.04 LTS is still in standard support.",
+       "origem_principal": {
+        "id_operacao": "ffabd34c-40b6-4f53-86ab-f7c9c7ece8e3",
+        "request_id": "79e1c9e9-b861-4515-98f8-9eb645d9d843",
+        "modo_busca": "NOTICIAS",
+        "resultado_id": "090bb0-03",
+        "parametros": {
+         "query": "Ubuntu 20.04 LTS is still in standard support.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news",
+         "time_range": "year"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "ffabd34c-40b6-4f53-86ab-f7c9c7ece8e3",
+         "request_id": "79e1c9e9-b861-4515-98f8-9eb645d9d843",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "090bb0-03",
+         "parametros": {
+          "query": "Ubuntu 20.04 LTS is still in standard support.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "time_range": "year"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Fri, 14 Nov 2025 10:03:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 14 Nov 2025 10:03:00 GMT",
+         "value_normalized": "2025-11-14",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "HTTP_403",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "5d6f0d97-6e3c-41ce-aa6d-80ee4ec8ab64",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "35dfb2eb-e763-47e1-acc6-57661ebf5d83",
+      "id_verificacao": "8d6b84bf-94c6-4fde-a888-aba8713fccdf",
+      "url_original": "https://www.techzine.eu/news/devops/136349/canonical-extends-ubuntu-lts-support-to-15-years",
+      "url_canonica": "https://www.techzine.eu/news/devops/136349/canonical-extends-ubuntu-lts-support-to-15-years",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "ff282070c13a92888ce31aacc556b49b8b5525ce51e41314ae66a963e083a5e1",
+      "coletado_em": "2026-11-13T23:09:00.509Z",
+      "id_operacao_busca": "ffabd34c-40b6-4f53-86ab-f7c9c7ece8e3",
+      "id_operacao_extracao": "d49b4460-3a9c-40fb-a77e-dc4498138bf6",
+      "consulta": "Ubuntu 20.04 LTS is still in standard support.",
+      "parametros_busca": {
+       "query": "Ubuntu 20.04 LTS is still in standard support.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news",
+       "time_range": "year"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+        "https://www.omgubuntu.co.uk/2026/04/ubuntu-1604-lts-enters-legacy-support",
+        "https://pasqualepillitteri.it/en/news/30224/apt-bug-cve-2026-109518-debian-ubuntu-fake-package-root",
+        "https://itsfoss.com/news/ubuntu-15-year-support-commitment",
+        "https://www.techzine.eu/news/devops/136349/canonical-extends-ubuntu-lts-support-to-15-years"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "79e1c9e9-b861-4515-98f8-9eb645d9d843",
+       "operacoes_busca": [
+        {
+         "id_operacao": "ffabd34c-40b6-4f53-86ab-f7c9c7ece8e3",
+         "request_id": "79e1c9e9-b861-4515-98f8-9eb645d9d843",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "090bb0-03",
+         "parametros": {
+          "query": "Ubuntu 20.04 LTS is still in standard support.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "time_range": "year"
+         }
+        }
+       ],
+       "request_id_extracao": "5d6f0d97-6e3c-41ce-aa6d-80ee4ec8ab64",
+       "resultado_id": "090bb0-03",
+       "relevancia": 0.32391453,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 14 Nov 2025 10:03:00 GMT",
+         "value_normalized": "2025-11-14",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "HTTP_403",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Canonical extends Ubuntu LTS support to 15 years - Techzine Global",
+      "url": "https://www.techzine.eu/news/devops/136349/canonical-extends-ubuntu-lts-support-to-15-years",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 2623,
+      "caracteres_preparados": 2623,
+      "trecho_analisado": "TÍTULO DA FONTE: Canonical extends Ubuntu LTS support to 15 years - Techzine Global\nURL DA FONTE: https://www.techzine.eu/news/devops/136349/canonical-extends-ubuntu-lts-support-to-15-years\n\nCONTEÚDO DA FONTE:\nCanonical has announced that it is extending the Legacy add-on for Ubuntu Pro. This means that the support period for LTS versions of Ubuntu is now 15 years.\n\nAccording to a blog post by Canonical, this arrangement applies from Ubuntu 14.04 LTS onwards and is intended for long-term production environments where hardware dependency or strict compliance makes regular major upgrades problematic.\n\nPreviously, the maintenance period for an LTS release consisted of five years of regular security updates followed by five years via the ESM (Expanded Security Maintenance) service. In 2024, the Legacy add-on was introduced, enabling two additional years of support, bringing the total to twelve years. Canonical has now announced that the additional period will be extended to five years, bringing the total to fifteen years.\n\nA previous step in this direction was already taken in March 2024, when Canonical announced that the support period for Ubuntu LTS releases would be extended to twel",
+      "citacao_chave": "This means that the support period for LTS versions of Ubuntu is now 15 years.",
+      "citacao_verificada": true,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source describes the overall 15‑year support model for LTS releases but provides no specific information about whether Ubuntu 20.04 LTS is still in standard support."
+     },
+     "classificacao": {
+      "postura": "INSUFFICIENT",
+      "justificativa": "The source describes the overall 15‑year support model for LTS releases but provides no specific information about whether Ubuntu 20.04 LTS is still in standard support."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "UNKNOWN_CLAIM_TYPE"
+     }
+    }
+   ],
+   "erro_busca": null,
+   "janela_validade": null,
+   "risco_desatualizacao": {
+    "nivel": "MEDIUM",
+    "sensivel_ao_tempo": true,
+    "motivos": [
+     "Not a price, version, company or regulation fact",
+     "Claims to be true right now (\"currently\", \"still\", \"latest\"…)"
+    ]
+   },
+   "dominios_oficiais_usados": [],
+   "dominios_oficiais_automaticos": [],
+   "agregacao": {
+    "status": "CLASSIFICADO",
+    "conclusao_factual": {
+     "status": "CONTRADIZ",
+     "resumo": "As evidências utilizáveis contradizem a afirmação."
+    },
+    "veredito": "CONTRADICAO_FRACA",
+    "resumo": "As evidências utilizáveis contradizem a afirmação, mas nenhuma fonte oficial com data ligada ao fato confirma a contradição. Trate a afirmação como possivelmente desatualizada ou incorreta e revise as fontes.",
+    "afirmacao": "Ubuntu 20.04 LTS is still in standard support.",
+    "score_qualidade_evidencia": {
+     "valor": 50,
+     "escala": "0-100",
+     "natureza": "HEURISTICA",
+     "interpretacao": "Qualidade estrutural das evidências, não probabilidade de verdade.",
+     "componentes": {
+      "autoridade": 20,
+      "atualidade": 0,
+      "diversidade_fontes": 20,
+      "concordancia": 10
+     }
+    },
+    "freshness": {
+     "score": null,
+     "status": "UNVERIFIABLE",
+     "confidence": "INSUFFICIENT",
+     "algorithm_id": "CLAIM_FRESHNESS_SCORE",
+     "algorithm_version": "1.1.0",
+     "policy_id": "unknown:NO_VALIDITY_POLICY",
+     "as_of": "2026-11-13T23:08:56.745Z",
+     "evidence_summary": {
+      "received": 2,
+      "eligible": 0,
+      "independent_domains": 0,
+      "excluded": 2
+     },
+     "drivers": [
+      {
+       "code": "UNKNOWN_CLAIM_TYPE"
+      }
+     ],
+     "limitations": [
+      "Não existe uma janela temporal definida para esta categoria de afirmação."
+     ]
+    },
+    "concordancia": {
+     "algorithm_id": "SOURCE_AGREEMENT_INDEX",
+     "algorithm_version": "1.1.0",
+     "weights": {
+      "OFICIAL": 3,
+      "ACADEMICO": 3,
+      "NOTICIA": 2,
+      "REFERENCIA": 1.5,
+      "OUTRO": 1,
+      "BLOG_FORUM": 0.25
+     },
+     "score": 0,
+     "coverage": "STRONG",
+     "independent_sources": 2,
+     "source_types": [
+      "OFICIAL",
+      "OUTRO"
+     ],
+     "supporting": 0,
+     "support_weight": 0,
+     "contradict_weight": 4,
+     "authoritative_supporting": 0,
+     "contradicting": 2,
+     "split": 0,
+     "by_type": {
+      "OFICIAL": {
+       "supports": 0,
+       "contradicts": 1,
+       "split": 0
+      },
+      "OUTRO": {
+       "supports": 0,
+       "contradicts": 1,
+       "split": 0
+      }
+     },
+     "limitations": [
+      "Agreement between sources is not a probability of truth: sources can share the same mistake.",
+      "Copies and pages from the same site count once; independence is approximated by domain and text similarity."
+     ]
+    },
+    "recencia_pagina": {
+     "algorithm_id": "PAGE_DATE_RECENCY_INDEX",
+     "algorithm_version": "1.0.0",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "as_of": "2026-11-13T23:08:56.745Z",
+     "score": null,
+     "status": "UNVERIFIABLE",
+     "newest_date": null,
+     "sources": [],
+     "limitations": [
+      "Sem categoria temporal, não há janela de validade para comparar as datas."
+     ]
+    },
+    "atualidade_afirmacao": {
+     "algorithm_id": "CLAIM_CURRENCY_SCORE",
+     "algorithm_version": "1.1.0",
+     "formula": "evidence_recency × support_share",
+     "window_days": 180,
+     "score": 0,
+     "status": "CONTRADICTED",
+     "basis": "PAGE_DATE_GENERAL_WINDOW",
+     "confidence": "LOW",
+     "evidence_recency": 94,
+     "support_share": 0,
+     "newest_date": "2026-11-05",
+     "newest_age_days": 8,
+     "within_window": true
+    },
+    "versao_regras": "1.3.0",
+    "metodo": "AGREGACAO_DETERMINISTICA",
+    "fontes_independentes": 2,
+    "grupos_distintos_de_evidencia": 2,
+    "dependencia_detectada": 0,
+    "dependencia_nao_verificada": true,
+    "nota_independencia": "Cópias exatas, quase duplicadas, URLs canônicas iguais e páginas do mesmo domínio são agrupadas; domínios sem sinal de cópia não têm independência editorial comprovada.",
+    "total_evidencias_utilizaveis": 2,
+    "fontes": [
+     {
+      "dominio": "ubuntu.com",
+      "dominios": [
+       "ubuntu.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_001",
+      "oficial": true,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Ubuntu 20.04 LTS Standard Support has ended. Here’s how to prepare. | Ubuntu",
+        "url": "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+        "categoria_fonte": "OFICIAL",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "UNVERIFIABLE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T23:09:00.509Z",
+        "data_publicacao": "2026-06-16",
+        "data_atualizacao": "2026-06-16",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Tue, 16 Jun 2026 13:48:39 GMT",
+          "value_normalized": "2026-06-16",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2024-11-21T10:08:59",
+          "value_normalized": "2024-11-21",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-06-16T13:48:39",
+          "value_normalized": "2026-06-16",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "5 October 2026",
+          "value_normalized": "2026-10-05",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "21 September 2026",
+          "value_normalized": "2026-09-21",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "17 September 2026",
+          "value_normalized": "2026-09-17",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         },
+         {
+          "signal_type": "HTML_TIME_DATETIME",
+          "field": "datetime",
+          "value_original": "25 August 2026",
+          "value_normalized": "2026-08-25",
+          "scope": "PAGE",
+          "source": "HTML_TIME_ELEMENT"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_001",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "pasqualepillitteri.it",
+      "dominios": [
+       "pasqualepillitteri.it"
+      ],
+      "grupo_dependencia_id": "source_cluster_002",
+      "oficial": false,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://pasqualepillitteri.it/en/news/30224/apt-bug-cve-2026-109518-debian-ubuntu-fake-package-root"
+      ],
+      "evidencias": [
+       {
+        "titulo": "APT bug CVE-2026-109518 hits Debian and Ubuntu, a fake package can get root",
+        "url": "https://pasqualepillitteri.it/en/news/30224/apt-bug-cve-2026-109518-debian-ubuntu-fake-package-root",
+        "categoria_fonte": "OUTRO",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "UNVERIFIABLE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T23:09:00.509Z",
+        "data_publicacao": "2026-11-05",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Thu, 05 Nov 2026 06:32:00 GMT",
+          "value_normalized": "2026-11-05",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_002",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     }
+    ],
+    "limitacoes": [
+     "Nenhuma evidência possui data verificável e status de atualidade FRESH.",
+     "Uma data da página ou do resultado de busca não comprova quando o atributo da afirmação foi publicado ou atualizado.",
+     "Domínios sem sinal detectado de duplicação não têm independência editorial comprovada; republicação com edição extensa ainda pode passar despercebida."
+    ],
+    "avaliado_em": "2026-11-13T23:09:12.098Z"
+   }
+  }
+ ],
+ "afirmacoes_omitidas": [],
+ "resposta_corrigida": {
+  "texto": "Ubuntu 20.04 LTS has reached the end of its standard five‑year support window on 31 May 2025 and is now only supported via the Extended Security Maintenance (ESM) channel through Ubuntu Pro [1][2].",
+  "mudancas": [
+   {
+    "claim_id": "afirmacao_1",
+    "what": "replaced with updated information"
+   }
+  ],
+  "fontes_citadas": [
+   1,
+   2
+  ],
+  "tentativas": 2,
+  "citacoes_anexadas": false,
+  "fontes": [
+   {
+    "n": 1,
+    "url": "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+    "titulo": "Ubuntu 20.04 LTS Standard Support has ended. Here’s how to prepare. | Ubuntu",
+    "tipo": "OFICIAL",
+    "postura": "CONTRADICTS",
+    "data": "2025-05-31"
+   },
+   {
+    "n": 2,
+    "url": "https://pasqualepillitteri.it/en/news/30224/apt-bug-cve-2026-109518-debian-ubuntu-fake-package-root",
+    "titulo": "APT bug CVE-2026-109518 hits Debian and Ubuntu, a fake package can get root",
+    "tipo": "OUTRO",
+    "postura": "CONTRADICTS",
+    "data": "2026-11-05"
+   }
+  ],
+  "metodo": "MODEL_REWRITE_FROM_VERIFIED_EVIDENCE"
+ },
+ "rastreabilidade_modelo": [
+  {
+   "id_chamada": "d475c0b0-919b-4d00-a60f-64dabe244b54",
+   "id_requisicao_enviada": "37afb821-6b30-4175-ba73-94ca27bb7902",
+   "id_verificacao": "8d6b84bf-94c6-4fde-a888-aba8713fccdf",
+   "etapa": "DECOMPOSICAO",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 535,
+   "tokens": {
+    "entrada": 843,
+    "saida": 151,
+    "total": 994
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "37afb821-6b30-4175-ba73-94ca27bb7902",
+   "id_trace": "d84e1edb63884e9ca0e8dccc952924f7",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 535.49,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:08:56.746Z"
+  },
+  {
+   "id_chamada": "17d4cb25-8324-4dba-92c7-d9a2d2c797cc",
+   "id_requisicao_enviada": "5d1d1586-e2cb-42ec-a50e-3fcf8e98d2b1",
+   "id_verificacao": "8d6b84bf-94c6-4fde-a888-aba8713fccdf",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 2862,
+   "tokens": {
+    "entrada": 4112,
+    "saida": 2048,
+    "total": 6160
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "5d1d1586-e2cb-42ec-a50e-3fcf8e98d2b1",
+   "id_trace": "a47bce3f11f34184a9cc0b76e5dd899d",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 2862.872,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:09:04.796Z"
+  },
+  {
+   "id_chamada": "84348746-8dd8-4152-894f-126eaf1034ae",
+   "id_requisicao_enviada": "e3a025d7-4b2c-424e-849c-f93d7b4938ac",
+   "id_verificacao": "8d6b84bf-94c6-4fde-a888-aba8713fccdf",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 4353,
+   "tokens": {
+    "entrada": 4112,
+    "saida": 1864,
+    "total": 5976
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "e3a025d7-4b2c-424e-849c-f93d7b4938ac",
+   "id_trace": "277dada91cc44364a0623f1f61a9bb33",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 4394.373,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:09:07.676Z"
+  },
+  {
+   "id_chamada": "839ca9c6-1e0d-4f45-8046-4c1ae9a79d84",
+   "id_requisicao_enviada": "2e9e6a77-2819-4f1b-8548-15dc6336a8e4",
+   "id_verificacao": "8d6b84bf-94c6-4fde-a888-aba8713fccdf",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 750,
+   "tokens": {
+    "entrada": 807,
+    "saida": 409,
+    "total": 1216
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "2e9e6a77-2819-4f1b-8548-15dc6336a8e4",
+   "id_trace": "442a6302ddfe4dbaab9d7a2fdf1f5d41",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 750.643,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:09:12.098Z"
+  },
+  {
+   "id_chamada": "8b4b01cc-9924-4452-b665-5c93dece258f",
+   "id_requisicao_enviada": "57ffb343-c2e8-4839-997a-e8310f80b788",
+   "id_verificacao": "8d6b84bf-94c6-4fde-a888-aba8713fccdf",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 2,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 1111,
+   "tokens": {
+    "entrada": 890,
+    "saida": 365,
+    "total": 1255
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "57ffb343-c2e8-4839-997a-e8310f80b788",
+   "id_trace": "387e9b083c2e4c7bbb70ada182d8364a",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 1149.401,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:09:12.861Z"
+  }
+ ],
+ "rastreabilidade_pesquisa": [
+  {
+   "id_operacao": "568a5a82-55af-4857-8f3c-1b55affba499",
+   "id_verificacao": "8d6b84bf-94c6-4fde-a888-aba8713fccdf",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Ubuntu 20.04 LTS is still in standard support.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:08:57.300Z",
+   "finalizada_em": "2026-11-13T23:08:58.144Z",
+   "duracao_ms": 843,
+   "request_id": "a58b5a1c-2eef-4d61-927a-44db8bfac52b",
+   "response_time": 0.62,
+   "erro": null,
+   "modo_busca": "GERAL",
+   "parametros": {
+    "query": "Ubuntu 20.04 LTS is still in standard support.",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "d8e088-00",
+     "titulo": "Ubuntu 20.04 LTS Standard Support has ended. Here’s how to prepare. | Ubuntu",
+     "url": "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+     "relevancia": 0.83155376,
+     "data_publicacao": "2026-06-16"
+    },
+    {
+     "resultado_id": "c844df-01",
+     "titulo": "Ubuntu 20.04 LTS Standard Support has ended. Here’s how to prepare. | Ubuntu",
+     "url": "http://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+     "relevancia": 0.83155376,
+     "data_publicacao": "2026-06-16"
+    },
+    {
+     "resultado_id": "c26448-02",
+     "titulo": "Ubuntu 20.04 LTS Standard Support has ended. Here’s how to prepare. | Ubuntu",
+     "url": "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare?_gl=1%2A9h51ws%2A_gcl_au%2AMTAzMDIyMDMyNi4xNzMyMTg4ODc4",
+     "relevancia": 0.83155376,
+     "data_publicacao": "2026-06-16"
+    },
+    {
+     "resultado_id": "07c99a-03",
+     "titulo": "Ubuntu 20.04 LTS Standard Support has ended. Here’s how to prepare. | Ubuntu",
+     "url": "http://www.ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+     "relevancia": 0.83155376,
+     "data_publicacao": "2026-06-16"
+    },
+    {
+     "resultado_id": "f01447-04",
+     "titulo": "Ubuntu 20.04 LTS standard support is coming to an end – options for AWS Users | Ubuntu",
+     "url": "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-standard-support-options-for-aws",
+     "relevancia": 0.8110782,
+     "data_publicacao": "2026-06-16"
+    }
+   ]
+  },
+  {
+   "id_operacao": "ffabd34c-40b6-4f53-86ab-f7c9c7ece8e3",
+   "id_verificacao": "8d6b84bf-94c6-4fde-a888-aba8713fccdf",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Ubuntu 20.04 LTS is still in standard support.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:08:58.144Z",
+   "finalizada_em": "2026-11-13T23:08:59.986Z",
+   "duracao_ms": 1842,
+   "request_id": "79e1c9e9-b861-4515-98f8-9eb645d9d843",
+   "response_time": 1.54,
+   "erro": null,
+   "modo_busca": "NOTICIAS",
+   "parametros": {
+    "query": "Ubuntu 20.04 LTS is still in standard support.",
+    "search_depth": "basic",
+    "max_results": 4,
+    "include_answer": false,
+    "include_published_date": true,
+    "topic": "news",
+    "time_range": "year"
+   },
+   "quantidade_resultados": 4,
+   "resultados": [
+    {
+     "resultado_id": "8b4a90-00",
+     "titulo": "APT bug CVE-2026-109518 hits Debian and Ubuntu, a fake package can get root",
+     "url": "https://pasqualepillitteri.it/en/news/30224/apt-bug-cve-2026-109518-debian-ubuntu-fake-package-root",
+     "relevancia": 0.7360213,
+     "data_publicacao": "2026-11-05"
+    },
+    {
+     "resultado_id": "79fec0-01",
+     "titulo": "Ubuntu's New 15-Year Commitment Targets Long-Lived Enterprise Systems",
+     "url": "https://itsfoss.com/news/ubuntu-15-year-support-commitment",
+     "relevancia": 0.51935375,
+     "data_publicacao": "2025-11-14"
+    },
+    {
+     "resultado_id": "26f249-02",
+     "titulo": "Ubuntu 16.04 LTS security support has ended – unless you pay",
+     "url": "https://www.omgubuntu.co.uk/2026/04/ubuntu-1604-lts-enters-legacy-support",
+     "relevancia": 0.41229352,
+     "data_publicacao": "2026-04-28"
+    },
+    {
+     "resultado_id": "090bb0-03",
+     "titulo": "Canonical extends Ubuntu LTS support to 15 years - Techzine Global",
+     "url": "https://www.techzine.eu/news/devops/136349/canonical-extends-ubuntu-lts-support-to-15-years",
+     "relevancia": 0.32391453,
+     "data_publicacao": "2025-11-14"
+    }
+   ]
+  },
+  {
+   "id_operacao": "d49b4460-3a9c-40fb-a77e-dc4498138bf6",
+   "id_verificacao": "8d6b84bf-94c6-4fde-a888-aba8713fccdf",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "EXTRACAO",
+   "consulta": "Ubuntu 20.04 LTS is still in standard support.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:08:59.989Z",
+   "finalizada_em": "2026-11-13T23:09:00.509Z",
+   "duracao_ms": 520,
+   "request_id": "5d6f0d97-6e3c-41ce-aa6d-80ee4ec8ab64",
+   "response_time": 0.02,
+   "erro": null,
+   "urls_solicitadas": [
+    "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+    "https://www.omgubuntu.co.uk/2026/04/ubuntu-1604-lts-enters-legacy-support",
+    "https://pasqualepillitteri.it/en/news/30224/apt-bug-cve-2026-109518-debian-ubuntu-fake-package-root",
+    "https://itsfoss.com/news/ubuntu-15-year-support-commitment",
+    "https://www.techzine.eu/news/devops/136349/canonical-extends-ubuntu-lts-support-to-15-years"
+   ],
+   "parametros": {
+    "urls": [
+     "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+     "https://www.omgubuntu.co.uk/2026/04/ubuntu-1604-lts-enters-legacy-support",
+     "https://pasqualepillitteri.it/en/news/30224/apt-bug-cve-2026-109518-debian-ubuntu-fake-package-root",
+     "https://itsfoss.com/news/ubuntu-15-year-support-commitment",
+     "https://www.techzine.eu/news/devops/136349/canonical-extends-ubuntu-lts-support-to-15-years"
+    ],
+    "extract_depth": "basic",
+    "format": "markdown",
+    "include_images": false
+   },
+   "quantidade_resultados": 5,
+   "urls_extraidas": [
+    "https://ubuntu.com/blog/ubuntu-20-04-lts-end-of-life-standard-support-is-coming-to-an-end-heres-how-to-prepare",
+    "https://www.omgubuntu.co.uk/2026/04/ubuntu-1604-lts-enters-legacy-support",
+    "https://pasqualepillitteri.it/en/news/30224/apt-bug-cve-2026-109518-debian-ubuntu-fake-package-root",
+    "https://itsfoss.com/news/ubuntu-15-year-support-commitment",
+    "https://www.techzine.eu/news/devops/136349/canonical-extends-ubuntu-lts-support-to-15-years"
+   ]
+  }
+ ],
+ "modo": "real",
+ "simulado": false,
+ "gateway": {
+  "gateway": "bifrost",
+  "chamadas": 5,
+  "falhas": 0,
+  "cadeia_modelos": [
+   "groq/openai/gpt-oss-20b",
+   "groq/openai/gpt-oss-120b"
+  ],
+  "queda_simulada": false,
+  "respostas_por_modelo": [
+   {
+    "modelo": "groq/openai/gpt-oss-20b",
+    "chamadas": 3
+   },
+   {
+    "modelo": "groq/openai/gpt-oss-120b",
+    "chamadas": 2
+   }
+  ],
+  "respostas_de_reserva": 2,
+  "tokens_total": 15601,
+  "latencia_media_ms": 1939
+ },
+ "duracao_ms": 17297,
+ "gravado_em": "2026-11-13T23:09:14.040Z"
+}

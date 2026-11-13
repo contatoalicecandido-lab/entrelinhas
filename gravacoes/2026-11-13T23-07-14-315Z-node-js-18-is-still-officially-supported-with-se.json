@@ -1,0 +1,1767 @@
+{
+ "sistema": "Entrelinhas",
+ "id_verificacao": "d917b1a0-74ef-46ab-9043-edf81150875c",
+ "texto_original": "Node.js 18 is still officially supported with security updates.",
+ "verificado_em": "2026-11-13T23:07:14.305Z",
+ "total_afirmacoes": 1,
+ "sintese": {
+  "veredito": "CONTRADICAO_FRACA",
+  "resumo": "As evidências utilizáveis contradizem a afirmação, mas nenhuma fonte oficial com data ligada ao fato confirma a contradição. Trate a afirmação como possivelmente desatualizada ou incorreta e revise as fontes.",
+  "total_afirmacoes": 1,
+  "contagem_vereditos": {
+   "CONTRADICAO_FRACA": 1
+  }
+ },
+ "afirmacoes": [
+  {
+   "id": "afirmacao_1",
+   "texto": "Node.js 18 is still officially supported with security updates.",
+   "tipo_afirmacao": "versao_api",
+   "origem_tipo_afirmacao": "HEURISTICA",
+   "nuances": {
+    "idioma": "en",
+    "variante": null,
+    "confianca_idioma": 1,
+    "valores": [],
+    "datas": [],
+    "expressoes_temporais": [
+     {
+      "texto": "still",
+      "tipo": "PRESENTE",
+      "rotulo": "present tense: must hold today"
+     }
+    ],
+    "condicoes": [],
+    "mudancas": [],
+    "tempo_coloquial": [],
+    "girias": {
+     "aliases": [],
+     "expressoes": []
+    },
+    "consulta_busca": "Node.js 18 is still officially supported with security updates.",
+    "dominios_oficiais_sugeridos": [],
+    "autoridades": [],
+    "notas": [
+     "\"still\": present tense: must hold today."
+    ]
+   },
+   "evidencias": [
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OFICIAL",
+      "titulo": "Node.js — Beware of End-of-Life Node.js Versions - Upgrade or Seek Post-EOL Support",
+      "url": "https://nodejs.org/en/blog/announcements/node-18-eol-support",
+      "conteudo": "[Skip to content](#main)\n\n# Beware of End-of-Life Node.js Versions - Upgrade or Seek Post-EOL Support\n\n[MC](https://github.com/mcollina)\n\nMatteo Collina\n\nBeware of End-of-Life Node.js Versions - Upgrade or Seek Post-EOL Support\n\n# [Beware of End-of-Life Node.js Versions *Upgrade or Seek Post-EOL Support*](#beware-of-end-of-life-nodejs-versions-upgrade-or-seek-post-eol-support)\n\nThe Node.js ecosystem is at a critical juncture. With Node.js 18 becoming unsupported, millions of developers need to make the jump, but they should skip 20 entirely and go straight to Node.js 22. The numbers tell a compelling story about why this upgrade isn't just recommended, it's essential. If you can’t upgrade, c…",
+      "coletado_em": "2026-11-13T23:07:11.766Z",
+      "data_publicacao": "2025-06-06",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://nodejs.org/en/blog/announcements/node-18-eol-support",
+      "relevancia": 0.7601169,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "003acabf-055c-4582-9be0-bf7bec1396be",
+       "resultado_id": "adf9ba-01",
+       "response_time_busca": 2.34,
+       "response_time_extracao": 1.62,
+       "consulta": "Node.js 18 is still officially supported with security updates.",
+       "origem_principal": {
+        "id_operacao": "2825f6d0-9022-43fa-93d6-864daf900898",
+        "request_id": "003acabf-055c-4582-9be0-bf7bec1396be",
+        "modo_busca": "GERAL",
+        "resultado_id": "adf9ba-01",
+        "parametros": {
+         "query": "Node.js 18 is still officially supported with security updates.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "2825f6d0-9022-43fa-93d6-864daf900898",
+         "request_id": "003acabf-055c-4582-9be0-bf7bec1396be",
+         "modo_busca": "GERAL",
+         "resultado_id": "adf9ba-01",
+         "parametros": {
+          "query": "Node.js 18 is still officially supported with security updates.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Fri, 06 Jun 2025 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 06 Jun 2025 00:00:00 GMT",
+         "value_normalized": "2025-06-06",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://nodejs.org/en/blog/announcements/node-18-eol-support",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Last Updated",
+         "value_original": "Jun 06, 2025",
+         "value_normalized": "2025-06-06",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://nodejs.org/en/blog/announcements/node-18-eol-support",
+        "capturado_em": "2026-11-13T23:07:09.489Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "9042c553-eb83-4495-91ee-a091dcca611c",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "fb596099-3b85-42f8-9ee3-92ef1820464c",
+      "id_verificacao": "d917b1a0-74ef-46ab-9043-edf81150875c",
+      "url_original": "https://nodejs.org/en/blog/announcements/node-18-eol-support",
+      "url_canonica": "https://nodejs.org/en/blog/announcements/node-18-eol-support",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "6987646e26429d5108401bb583b0460e174eb67ebd9abc077651e0bd38532aa6",
+      "coletado_em": "2026-11-13T23:07:11.766Z",
+      "id_operacao_busca": "2825f6d0-9022-43fa-93d6-864daf900898",
+      "id_operacao_extracao": "673627e9-ca34-4065-9bbe-ebae8fcc8ff4",
+      "consulta": "Node.js 18 is still officially supported with security updates.",
+      "parametros_busca": {
+       "query": "Node.js 18 is still officially supported with security updates.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://nodejs.org/en/blog/announcements/node-18-eol-support",
+        "https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/",
+        "https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare",
+        "https://journalarta.com/2026/10/22/php-node-js-and-litellm-face-a-wave-of-security-trouble/",
+        "https://www.csoonline.com/article/4241027/node2shell-puts-microsoft-and-node-js-on-brotli-patch-duty.html"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "003acabf-055c-4582-9be0-bf7bec1396be",
+       "operacoes_busca": [
+        {
+         "id_operacao": "2825f6d0-9022-43fa-93d6-864daf900898",
+         "request_id": "003acabf-055c-4582-9be0-bf7bec1396be",
+         "modo_busca": "GERAL",
+         "resultado_id": "adf9ba-01",
+         "parametros": {
+          "query": "Node.js 18 is still officially supported with security updates.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "9042c553-eb83-4495-91ee-a091dcca611c",
+       "resultado_id": "adf9ba-01",
+       "relevancia": 0.7601169,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 06 Jun 2025 00:00:00 GMT",
+         "value_normalized": "2025-06-06",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://nodejs.org/en/blog/announcements/node-18-eol-support",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Last Updated",
+         "value_original": "Jun 06, 2025",
+         "value_normalized": "2025-06-06",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://nodejs.org/en/blog/announcements/node-18-eol-support",
+        "capturado_em": "2026-11-13T23:07:09.489Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Node.js — Beware of End-of-Life Node.js Versions - Upgrade or Seek Post-EOL Support",
+      "url": "https://nodejs.org/en/blog/announcements/node-18-eol-support",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 8300,
+      "caracteres_preparados": 7818,
+      "trecho_analisado": "TÍTULO DA FONTE: Node.js — Beware of End-of-Life Node.js Versions - Upgrade or Seek Post-EOL Support\nURL DA FONTE: https://nodejs.org/en/blog/announcements/node-18-eol-support\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n[Skip to content](#main)\n\n# Beware of End-of-Life Node.js Versions - Upgrade or Seek Post-EOL Support\n\n[MC](https://github.com/mcollina)\n\nMatteo Collina\n\nBeware of End-of-Life Node.js Versions - Upgrade or Seek Post-EOL Support\n\n# [Beware of End-of-Life Node.js Versions *Upgrade or Seek Post-EOL Support*](#beware-of-end-of-life-nodejs-versions-upgrade-or-seek-post-eol-support)\n\nThe Node.js ecosystem is at a critical juncture.\n\nWith Node.js 18 becoming unsupported, millions of developers need to make the jump, but they should skip 20 entirely and go straight to Node.js 22.\n\nThe numbers tell a compelling story about why this upgrade isn't just recommended, it's essential.\n\nIf you can’t upgrade, check out our Ecosystem Sustainability Program partner, HeroDevs, which offers [post End-Of-Life Node.js support](https://www.herodevs.com/support/node-nes).\n\n## [The Support Landscape Has Changed—And Security Issues Are Real](#the-support-landscape-has-changedand-security-issues-are-r",
+      "citacao_chave": null,
+      "citacao_verificada": false,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "Not counted: the model quoted text that is not in this source. Model's reason: The source states Node.js 18 is End-Of-Life and receives no updates, including security patches."
+     },
+     "classificacao": {
+      "postura": "INSUFFICIENT",
+      "justificativa": "Not counted: the model quoted text that is not in this source. Model's reason: The source states Node.js 18 is End-Of-Life and receives no updates, including security patches."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 525,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2025-06-06"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "The internet is having a very bad cybersecurity day - TechCrunch",
+      "url": "https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/",
+      "conteudo": "The internet is having a bad day, from a cybersecurity perspective. Government websites around the world went offline, Reuters reported, after AI discovered critical security vulnerabilities that impacted the programming language PHP. The issues were severe enough that the U.S. National Security Agency (NSA) advised organizations using PHP on their systems to either immediately update or take their systems offline until they could.\n\nBut the PHP update wasn’t the only headache cybersecurity folks were facing on Wednesday. Node.js, the open source JavaScript runtime environment, also dropped a security surprise of its own when it shared that four high-severity vulnerabilities were just patched…",
+      "coletado_em": "2026-11-13T23:07:11.766Z",
+      "data_publicacao": "2026-10-21",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/",
+      "relevancia": 0.16158466,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "e9a59144-bcb5-476b-a5b0-d8caefcc0456",
+       "resultado_id": "f3e52a-00",
+       "response_time_busca": 4.86,
+       "response_time_extracao": 1.62,
+       "consulta": "Node.js 18 is still officially supported with security updates.",
+       "origem_principal": {
+        "id_operacao": "7b876395-5545-4300-ba86-a9a1b28bbed7",
+        "request_id": "e9a59144-bcb5-476b-a5b0-d8caefcc0456",
+        "modo_busca": "NOTICIAS",
+        "resultado_id": "f3e52a-00",
+        "parametros": {
+         "query": "Node.js 18 is still officially supported with security updates.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news",
+         "time_range": "year"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "7b876395-5545-4300-ba86-a9a1b28bbed7",
+         "request_id": "e9a59144-bcb5-476b-a5b0-d8caefcc0456",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "f3e52a-00",
+         "parametros": {
+          "query": "Node.js 18 is still officially supported with security updates.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "time_range": "year"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Wed, 21 Oct 2026 19:03:28 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 21 Oct 2026 19:03:28 GMT",
+         "value_normalized": "2026-10-21",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-10-21T19:03:28+00:00",
+         "value_normalized": "2026-10-21",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-10-22T00:02:52+00:00",
+         "value_normalized": "2026-10-22",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-10-21T19:03:28+00:00",
+         "value_normalized": "2026-10-21",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-22T00:02:52+00:00",
+         "value_normalized": "2026-10-22",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-10-21T12:03:28-07:00",
+         "value_normalized": "2026-10-21",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/",
+        "capturado_em": "2026-11-13T23:07:09.484Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "9042c553-eb83-4495-91ee-a091dcca611c",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "c5ad072b-e6f9-4eb2-88a9-01ea229d951d",
+      "id_verificacao": "d917b1a0-74ef-46ab-9043-edf81150875c",
+      "url_original": "https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/",
+      "url_canonica": "https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "6a88be48662a3eb95aabef3b1dd307c6da683970510946c4d889b68d987c44df",
+      "coletado_em": "2026-11-13T23:07:11.766Z",
+      "id_operacao_busca": "7b876395-5545-4300-ba86-a9a1b28bbed7",
+      "id_operacao_extracao": "673627e9-ca34-4065-9bbe-ebae8fcc8ff4",
+      "consulta": "Node.js 18 is still officially supported with security updates.",
+      "parametros_busca": {
+       "query": "Node.js 18 is still officially supported with security updates.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news",
+       "time_range": "year"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://nodejs.org/en/blog/announcements/node-18-eol-support",
+        "https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/",
+        "https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare",
+        "https://journalarta.com/2026/10/22/php-node-js-and-litellm-face-a-wave-of-security-trouble/",
+        "https://www.csoonline.com/article/4241027/node2shell-puts-microsoft-and-node-js-on-brotli-patch-duty.html"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "e9a59144-bcb5-476b-a5b0-d8caefcc0456",
+       "operacoes_busca": [
+        {
+         "id_operacao": "7b876395-5545-4300-ba86-a9a1b28bbed7",
+         "request_id": "e9a59144-bcb5-476b-a5b0-d8caefcc0456",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "f3e52a-00",
+         "parametros": {
+          "query": "Node.js 18 is still officially supported with security updates.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "time_range": "year"
+         }
+        }
+       ],
+       "request_id_extracao": "9042c553-eb83-4495-91ee-a091dcca611c",
+       "resultado_id": "f3e52a-00",
+       "relevancia": 0.16158466,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 21 Oct 2026 19:03:28 GMT",
+         "value_normalized": "2026-10-21",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-10-21T19:03:28+00:00",
+         "value_normalized": "2026-10-21",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-10-22T00:02:52+00:00",
+         "value_normalized": "2026-10-22",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-10-21T19:03:28+00:00",
+         "value_normalized": "2026-10-21",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-22T00:02:52+00:00",
+         "value_normalized": "2026-10-22",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-10-21T12:03:28-07:00",
+         "value_normalized": "2026-10-21",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/",
+        "capturado_em": "2026-11-13T23:07:09.484Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "The internet is having a very bad cybersecurity day - TechCrunch",
+      "url": "https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 3431,
+      "caracteres_preparados": 3431,
+      "trecho_analisado": "TÍTULO DA FONTE: The internet is having a very bad cybersecurity day - TechCrunch\nURL DA FONTE: https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/\n\nCONTEÚDO DA FONTE:\nThe internet is having a bad day, from a cybersecurity perspective. Government websites around the world went offline, Reuters reported, after AI discovered critical security vulnerabilities that impacted the programming language PHP. The issues were severe enough that the U.S. National Security Agency (NSA) advised organizations using PHP on their systems to either immediately update or take their systems offline until they could.\n\nBut the PHP update wasn’t the only headache cybersecurity folks were facing on Wednesday. Node.js, the open source JavaScript runtime environment, also dropped a security surprise of its own when it shared that four high-severity vulnerabilities were just patched in its latest release. One allowed remote code execution, and two others would have permitted a TLS validation bypass, potentially allowing attackers to bypass checks intended to verify a server’s identity.\n\nIn addition, LiteLLM, a popular open source proxy for routing requests to multiple LLM p",
+      "citacao_chave": null,
+      "citacao_verificada": false,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "UNRELATED",
+      "justificativa": "The article discusses Node.js security patches in 2026 but does not refer to Node.js 18 or its support status."
+     },
+     "classificacao": {
+      "postura": "IRRELEVANT",
+      "justificativa": "The article discusses Node.js security patches in 2026 but does not refer to Node.js 18 or its support status."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 23,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2026-10-21"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "HeroDevs Blog | Node.js 18 End-of-Life: What It Means and How to Prepare",
+      "url": "https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare",
+      "conteudo": "[NEW\n\nNode.js is going End-of-Life. Stay secure and compliant with Never-Ending Support.\n\n![](https://cdn.prod.website-files.com/62865614b39c464b76d339aa/65159b3f6df722a807194087_arrow-forward-slim-min.svg)](https://www.herodevs.com/support/node-nes)\n\n[![](https://cdn.prod.website-files.com/62865614b39c464b76d339aa/641c8722f2df570d33bfc249_arrow_backward_pink.svg)\n\nView all Blog Posts](/blog)\n\n![](https://cdn.prod.website-files.com/62876589ec366575fa309b1e/6a3c15a27123a4fe571fe226_EOL%20Software.svg)\n\nEOL Software\n\nFeb 10, 2025\n\n# Node.js 18 End-of-Life: What It Means and How to Prepare\n\n## With Node.js 18 reaching end-of-life in April 2025, businesses must act now to ensure security, compli…",
+      "coletado_em": "2026-11-13T23:07:11.766Z",
+      "data_publicacao": "2025-02-10",
+      "data_atualizacao": "2025-04-30",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": "https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare",
+      "relevancia": 0.7102265,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "003acabf-055c-4582-9be0-bf7bec1396be",
+       "resultado_id": "2e66cc-03",
+       "response_time_busca": 2.34,
+       "response_time_extracao": 1.62,
+       "consulta": "Node.js 18 is still officially supported with security updates.",
+       "origem_principal": {
+        "id_operacao": "2825f6d0-9022-43fa-93d6-864daf900898",
+        "request_id": "003acabf-055c-4582-9be0-bf7bec1396be",
+        "modo_busca": "GERAL",
+        "resultado_id": "2e66cc-03",
+        "parametros": {
+         "query": "Node.js 18 is still officially supported with security updates.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "2825f6d0-9022-43fa-93d6-864daf900898",
+         "request_id": "003acabf-055c-4582-9be0-bf7bec1396be",
+         "modo_busca": "GERAL",
+         "resultado_id": "2e66cc-03",
+         "parametros": {
+          "query": "Node.js 18 is still officially supported with security updates.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Mon, 10 Feb 2025 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 10 Feb 2025 00:00:00 GMT",
+         "value_normalized": "2025-02-10",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 23:07:09 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2025-02-10T17:16:54.378Z",
+         "value_normalized": "2025-02-10",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-13T15:46:40.357Z",
+         "value_normalized": "2026-10-13",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare",
+        "capturado_em": "2026-11-13T23:07:09.696Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "9042c553-eb83-4495-91ee-a091dcca611c",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2025-04-30",
+       "precisao": "DIA",
+       "citacao": "Once Node.js 18 reaches its EOL on April 30, 2025, it will no longer receive security updates or maintenance releases.",
+       "origem": "QUOTED_IN_SOURCE_TEXT",
+       "confirmada_em": "2025-04-30"
+      }
+     },
+     "coleta": {
+      "id_coleta": "0dbea81d-dbd7-4370-b10f-2d5ba7def6ce",
+      "id_verificacao": "d917b1a0-74ef-46ab-9043-edf81150875c",
+      "url_original": "https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare",
+      "url_canonica": "https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "50179e373e06b3ae64d70a28fb5eaeae430e40570481426c2b98a468273ba67b",
+      "coletado_em": "2026-11-13T23:07:11.766Z",
+      "id_operacao_busca": "2825f6d0-9022-43fa-93d6-864daf900898",
+      "id_operacao_extracao": "673627e9-ca34-4065-9bbe-ebae8fcc8ff4",
+      "consulta": "Node.js 18 is still officially supported with security updates.",
+      "parametros_busca": {
+       "query": "Node.js 18 is still officially supported with security updates.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://nodejs.org/en/blog/announcements/node-18-eol-support",
+        "https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/",
+        "https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare",
+        "https://journalarta.com/2026/10/22/php-node-js-and-litellm-face-a-wave-of-security-trouble/",
+        "https://www.csoonline.com/article/4241027/node2shell-puts-microsoft-and-node-js-on-brotli-patch-duty.html"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "003acabf-055c-4582-9be0-bf7bec1396be",
+       "operacoes_busca": [
+        {
+         "id_operacao": "2825f6d0-9022-43fa-93d6-864daf900898",
+         "request_id": "003acabf-055c-4582-9be0-bf7bec1396be",
+         "modo_busca": "GERAL",
+         "resultado_id": "2e66cc-03",
+         "parametros": {
+          "query": "Node.js 18 is still officially supported with security updates.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "9042c553-eb83-4495-91ee-a091dcca611c",
+       "resultado_id": "2e66cc-03",
+       "relevancia": 0.7102265,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 10 Feb 2025 00:00:00 GMT",
+         "value_normalized": "2025-02-10",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 23:07:09 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2025-02-10T17:16:54.378Z",
+         "value_normalized": "2025-02-10",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-13T15:46:40.357Z",
+         "value_normalized": "2026-10-13",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare",
+        "capturado_em": "2026-11-13T23:07:09.696Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "HeroDevs Blog | Node.js 18 End-of-Life: What It Means and How to Prepare",
+      "url": "https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 6905,
+      "caracteres_preparados": 6905,
+      "trecho_analisado": "TÍTULO DA FONTE: HeroDevs Blog | Node.js 18 End-of-Life: What It Means and How to Prepare\nURL DA FONTE: https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare\n\nCONTEÚDO DA FONTE:\n[NEW\n\nNode.js is going End-of-Life. Stay secure and compliant with Never-Ending Support.\n\n![](https://cdn.prod.website-files.com/62865614b39c464b76d339aa/65159b3f6df722a807194087_arrow-forward-slim-min.svg)](https://www.herodevs.com/support/node-nes)\n\n[![](https://cdn.prod.website-files.com/62865614b39c464b76d339aa/641c8722f2df570d33bfc249_arrow_backward_pink.svg)\n\nView all Blog Posts](/blog)\n\n![](https://cdn.prod.website-files.com/62876589ec366575fa309b1e/6a3c15a27123a4fe571fe226_EOL%20Software.svg)\n\nEOL Software\n\nFeb 10, 2025\n\n# Node.js 18 End-of-Life: What It Means and How to Prepare\n\n## With Node.js 18 reaching end-of-life in April 2025, businesses must act now to ensure security, compliance, and application stability.\n\nGive me the TL;DR\n\n![Node.js 18 End-of-Life: What It Means and How to Prepare](https://cdn.prod.website-files.com/62876589ec366575fa309b1e/67aa3acc62dfc4d095ff2684_A%20(16).png)\n\nNode.js 18, introduced in April 2022, has been a significant release in",
+      "citacao_chave": "Once Node.js 18 reaches its EOL on April 30, 2025, it will no longer receive security updates or maintenance releases.",
+      "citacao_verificada": true,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "It states that Node.js 18 reached EOL on April 30, 2025 and will no longer receive security updates."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "It states that Node.js 18 reached EOL on April 30, 2025 and will no longer receive security updates."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 562,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2025-04-30"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "PHP, Node.js and LiteLLM Face a Wave: What to Know - JournalArta",
+      "url": "https://journalarta.com/2026/10/22/php-node-js-and-litellm-face-a-wave-of-security-trouble/",
+      "conteudo": "# PHP, Node.js and LiteLLM Face a Wave of Security Trouble\n\nA cluster of software security problems has put websites and developer tools at risk.\n\n![PHP, Node.js and LiteLLM Face a Wave of Security Trouble](/en/_next/image?url=https%3A%2F%2Fjournalarta.com%2Fwp-content%2Fuploads%2F2026%2F10%2Fphp-node-js-and-litellm-face-a-wave-of-security-trouble-src-ai-ja-hero-1200x675.jpg&w=3840&q=75)\n\nA cluster of software security problems has put websites and developer tools at risk. Government sites around the world went offline after critical PHP vulnerabilities emerged, while Node.js patched four high-severity flaws and the LiteLLM project disclosed a compromise.\n\nThe incidents came to light on Wedn…",
+      "coletado_em": "2026-11-13T23:07:11.766Z",
+      "data_publicacao": "2026-10-21",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": null,
+      "relevancia": 0.13006426,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "e9a59144-bcb5-476b-a5b0-d8caefcc0456",
+       "resultado_id": "0bfb71-01",
+       "response_time_busca": 4.86,
+       "response_time_extracao": 1.62,
+       "consulta": "Node.js 18 is still officially supported with security updates.",
+       "origem_principal": {
+        "id_operacao": "7b876395-5545-4300-ba86-a9a1b28bbed7",
+        "request_id": "e9a59144-bcb5-476b-a5b0-d8caefcc0456",
+        "modo_busca": "NOTICIAS",
+        "resultado_id": "0bfb71-01",
+        "parametros": {
+         "query": "Node.js 18 is still officially supported with security updates.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news",
+         "time_range": "year"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "7b876395-5545-4300-ba86-a9a1b28bbed7",
+         "request_id": "e9a59144-bcb5-476b-a5b0-d8caefcc0456",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "0bfb71-01",
+         "parametros": {
+          "query": "Node.js 18 is still officially supported with security updates.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "time_range": "year"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Wed, 21 Oct 2026 22:34:23 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 21 Oct 2026 22:34:23 GMT",
+         "value_normalized": "2026-10-21",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "HTTP_403",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "9042c553-eb83-4495-91ee-a091dcca611c",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "cbb01df5-ec8f-42b4-95d7-20265710b30c",
+      "id_verificacao": "d917b1a0-74ef-46ab-9043-edf81150875c",
+      "url_original": "https://journalarta.com/2026/10/22/php-node-js-and-litellm-face-a-wave-of-security-trouble/",
+      "url_canonica": "https://journalarta.com/2026/10/22/php-node-js-and-litellm-face-a-wave-of-security-trouble/",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "2482b242a438c1479a1b012e5aac81f75809bd5b4936d14a65e89a9ce5e0568c",
+      "coletado_em": "2026-11-13T23:07:11.766Z",
+      "id_operacao_busca": "7b876395-5545-4300-ba86-a9a1b28bbed7",
+      "id_operacao_extracao": "673627e9-ca34-4065-9bbe-ebae8fcc8ff4",
+      "consulta": "Node.js 18 is still officially supported with security updates.",
+      "parametros_busca": {
+       "query": "Node.js 18 is still officially supported with security updates.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news",
+       "time_range": "year"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://nodejs.org/en/blog/announcements/node-18-eol-support",
+        "https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/",
+        "https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare",
+        "https://journalarta.com/2026/10/22/php-node-js-and-litellm-face-a-wave-of-security-trouble/",
+        "https://www.csoonline.com/article/4241027/node2shell-puts-microsoft-and-node-js-on-brotli-patch-duty.html"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "e9a59144-bcb5-476b-a5b0-d8caefcc0456",
+       "operacoes_busca": [
+        {
+         "id_operacao": "7b876395-5545-4300-ba86-a9a1b28bbed7",
+         "request_id": "e9a59144-bcb5-476b-a5b0-d8caefcc0456",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "0bfb71-01",
+         "parametros": {
+          "query": "Node.js 18 is still officially supported with security updates.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "time_range": "year"
+         }
+        }
+       ],
+       "request_id_extracao": "9042c553-eb83-4495-91ee-a091dcca611c",
+       "resultado_id": "0bfb71-01",
+       "relevancia": 0.13006426,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 21 Oct 2026 22:34:23 GMT",
+         "value_normalized": "2026-10-21",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "HTTP_403",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "PHP, Node.js and LiteLLM Face a Wave: What to Know - JournalArta",
+      "url": "https://journalarta.com/2026/10/22/php-node-js-and-litellm-face-a-wave-of-security-trouble/",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 9599,
+      "caracteres_preparados": 2528,
+      "trecho_analisado": "TÍTULO DA FONTE: PHP, Node.js and LiteLLM Face a Wave: What to Know - JournalArta\nURL DA FONTE: https://journalarta.com/2026/10/22/php-node-js-and-litellm-face-a-wave-of-security-trouble/\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n# PHP, Node.js and LiteLLM Face a Wave of Security Trouble\n\nA cluster of software security problems has put websites and developer tools at risk.\n\n![PHP, Node.js and LiteLLM Face a Wave of Security Trouble](/en/_next/image?url=https%3A%2F%2Fjournalarta.com%2Fwp-content%2Fuploads%2F2026%2F10%2Fphp-node-js-and-litellm-face-a-wave-of-security-trouble-src-ai-ja-hero-1200x675.jpg&w=3840&q=75)\n\nA cluster of software security problems has put websites and developer tools at risk.\n\nGovernment sites around the world went offline after critical PHP vulnerabilities emerged, while Node.js patched four high-severity flaws and the LiteLLM project disclosed a compromise.\n\nThe incidents came to light on Wednesday, according to available reports.\n\nThe U.S.\n\nNational Security Agency advised organizations running PHP to update immediately or take affected systems offline until they could do so.\n\nReuters reported the government website outages, which followed the discovery of the P",
+      "citacao_chave": null,
+      "citacao_verificada": false,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "UNRELATED",
+      "justificativa": "The article mentions Node.js security patches but does not discuss Node.js 18 or its support status."
+     },
+     "classificacao": {
+      "postura": "IRRELEVANT",
+      "justificativa": "The article mentions Node.js security patches but does not discuss Node.js 18 or its support status."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 23,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2026-10-21"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Node2Shell puts Microsoft and Node.js on Brotli patch duty - www.csoonline.com",
+      "url": "https://www.csoonline.com/article/4241027/node2shell-puts-microsoft-and-node-js-on-brotli-patch-duty.html",
+      "conteudo": "1. [Analytics](https://www.csoonline.com/analytics/)\n2. [Application Security](https://www.csoonline.com/application-security/)\n3. [Artificial Intelligence](https://www.csoonline.com/artificial-intelligence/)\n4. [Business Continuity](https://www.csoonline.com/business-continuity/)\n5. [Business Operations](https://www.csoonline.com/business-operations/)\n6. [Careers](https://www.csoonline.com/careers/)\n7. [Cloud Security](https://www.csoonline.com/cloud-security/)\n8. [Compliance](https://www.csoonline.com/compliance/)\n9. [Contributor Content](https://www.csoonline.com/contributor-content/)\n10. [Critical Infrastructure](https://www.csoonline.com/critical-infrastructure/)\n11. [Cybercrime](https:…",
+      "coletado_em": "2026-11-13T23:07:11.766Z",
+      "data_publicacao": "2026-10-27",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": null,
+      "relevancia": 0.1161611,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "e9a59144-bcb5-476b-a5b0-d8caefcc0456",
+       "resultado_id": "426e01-02",
+       "response_time_busca": 4.86,
+       "response_time_extracao": 1.62,
+       "consulta": "Node.js 18 is still officially supported with security updates.",
+       "origem_principal": {
+        "id_operacao": "7b876395-5545-4300-ba86-a9a1b28bbed7",
+        "request_id": "e9a59144-bcb5-476b-a5b0-d8caefcc0456",
+        "modo_busca": "NOTICIAS",
+        "resultado_id": "426e01-02",
+        "parametros": {
+         "query": "Node.js 18 is still officially supported with security updates.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news",
+         "time_range": "year"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "7b876395-5545-4300-ba86-a9a1b28bbed7",
+         "request_id": "e9a59144-bcb5-476b-a5b0-d8caefcc0456",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "426e01-02",
+         "parametros": {
+          "query": "Node.js 18 is still officially supported with security updates.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "time_range": "year"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Tue, 27 Oct 2026 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 27 Oct 2026 00:00:00 GMT",
+         "value_normalized": "2026-10-27",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SKIPPED",
+        "motivo": "NO_PUBLIC_ADDRESS",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "9042c553-eb83-4495-91ee-a091dcca611c",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "decdb7b7-e65e-4245-9059-84ef301c5b2e",
+      "id_verificacao": "d917b1a0-74ef-46ab-9043-edf81150875c",
+      "url_original": "https://www.csoonline.com/article/4241027/node2shell-puts-microsoft-and-node-js-on-brotli-patch-duty.html",
+      "url_canonica": "https://www.csoonline.com/article/4241027/node2shell-puts-microsoft-and-node-js-on-brotli-patch-duty.html",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "5e80d44e308dd5833025d7fbb965291a080f849f8ae339cad7a159f1ef365712",
+      "coletado_em": "2026-11-13T23:07:11.766Z",
+      "id_operacao_busca": "7b876395-5545-4300-ba86-a9a1b28bbed7",
+      "id_operacao_extracao": "673627e9-ca34-4065-9bbe-ebae8fcc8ff4",
+      "consulta": "Node.js 18 is still officially supported with security updates.",
+      "parametros_busca": {
+       "query": "Node.js 18 is still officially supported with security updates.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news",
+       "time_range": "year"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://nodejs.org/en/blog/announcements/node-18-eol-support",
+        "https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/",
+        "https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare",
+        "https://journalarta.com/2026/10/22/php-node-js-and-litellm-face-a-wave-of-security-trouble/",
+        "https://www.csoonline.com/article/4241027/node2shell-puts-microsoft-and-node-js-on-brotli-patch-duty.html"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "e9a59144-bcb5-476b-a5b0-d8caefcc0456",
+       "operacoes_busca": [
+        {
+         "id_operacao": "7b876395-5545-4300-ba86-a9a1b28bbed7",
+         "request_id": "e9a59144-bcb5-476b-a5b0-d8caefcc0456",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "426e01-02",
+         "parametros": {
+          "query": "Node.js 18 is still officially supported with security updates.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "time_range": "year"
+         }
+        }
+       ],
+       "request_id_extracao": "9042c553-eb83-4495-91ee-a091dcca611c",
+       "resultado_id": "426e01-02",
+       "relevancia": 0.1161611,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 27 Oct 2026 00:00:00 GMT",
+         "value_normalized": "2026-10-27",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SKIPPED",
+        "motivo": "NO_PUBLIC_ADDRESS",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Node2Shell puts Microsoft and Node.js on Brotli patch duty - www.csoonline.com",
+      "url": "https://www.csoonline.com/article/4241027/node2shell-puts-microsoft-and-node-js-on-brotli-patch-duty.html",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 14010,
+      "caracteres_preparados": 7003,
+      "trecho_analisado": "TÍTULO DA FONTE: Node2Shell puts Microsoft and Node.js on Brotli patch duty - www.csoonline.com\nURL DA FONTE: https://www.csoonline.com/article/4241027/node2shell-puts-microsoft-and-node-js-on-brotli-patch-duty.html\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n2.\n\n[Application Security](https://www.csoonline.com/application-security/)\n\n3.\n\n7.\n\n[Cloud Security](https://www.csoonline.com/cloud-security/)\n\n8.\n\n[IT Management](https://www.csoonline.com/it-management/)\n\n18.\n\n[Network Security](https://www.csoonline.com/network-security/)\n\n19.\n\n[Physical Security](https://www.csoonline.com/physical-security/)\n\n20.\n\n22.\n\n[Security](https://www.csoonline.com/security/)\n\n23.\n\n[Security Infrastructure](https://www.csoonline.com/security-infrastructure/)\n\n24.\n\nSenior Writer\n\n# Node2Shell puts Microsoft and Node.js on Brotli patch duty\n\nNews\n\nOct 27, 20264 mins\n\n## An out-of-bounds write in Google’s Brotli decoder affects multiple software ecosystems, prompting security updates for .NET, Node.js and two Python packages.\n\n![Hacker](https://www.csoonline.com/wp-content/uploads/2026/10/4241027-0-88019800-1793104511-shutterstock_2466601291.jpg?quality=50&strip=all&w=1024)\n\nA vulnerability in Google’s Brotl",
+      "citacao_chave": null,
+      "citacao_verificada": false,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "UNRELATED",
+      "justificativa": "The article references Node.js security patches for newer release lines and general EOL advice, but does not specifically address Node.js 18."
+     },
+     "classificacao": {
+      "postura": "IRRELEVANT",
+      "justificativa": "The article references Node.js security patches for newer release lines and general EOL advice, but does not specifically address Node.js 18."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 17,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2026-10-27"
+     }
+    }
+   ],
+   "erro_busca": null,
+   "janela_validade": {
+    "dias": 90,
+    "origem": "CATEGORY",
+    "entidade": null,
+    "motivo": null
+   },
+   "risco_desatualizacao": {
+    "nivel": "HIGH",
+    "sensivel_ao_tempo": true,
+    "motivos": [
+     "Software versions and support dates change often (checked against a 90-day window)",
+     "Claims to be true right now (\"currently\", \"still\", \"latest\"…)"
+    ]
+   },
+   "dominios_oficiais_usados": [],
+   "dominios_oficiais_automaticos": [],
+   "agregacao": {
+    "status": "CLASSIFICADO",
+    "conclusao_factual": {
+     "status": "CONTRADIZ",
+     "resumo": "As evidências utilizáveis contradizem a afirmação."
+    },
+    "veredito": "CONTRADICAO_FRACA",
+    "resumo": "As evidências utilizáveis contradizem a afirmação, mas nenhuma fonte oficial com data ligada ao fato confirma a contradição. Trate a afirmação como possivelmente desatualizada ou incorreta e revise as fontes.",
+    "afirmacao": "Node.js 18 is still officially supported with security updates.",
+    "score_qualidade_evidencia": {
+     "valor": 20,
+     "escala": "0-100",
+     "natureza": "HEURISTICA",
+     "interpretacao": "Qualidade estrutural das evidências, não probabilidade de verdade.",
+     "componentes": {
+      "autoridade": 0,
+      "atualidade": 0,
+      "diversidade_fontes": 10,
+      "concordancia": 10
+     }
+    },
+    "freshness": {
+     "score": 0,
+     "status": "STALE",
+     "confidence": "LIMITED",
+     "algorithm_id": "CLAIM_FRESHNESS_SCORE",
+     "algorithm_version": "1.1.0",
+     "policy_id": "versao_api:90d:v1",
+     "as_of": "2026-11-13T23:07:00.261Z",
+     "evidence_summary": {
+      "received": 1,
+      "eligible": 1,
+      "independent_domains": 1,
+      "fresh": 0,
+      "stale": 1,
+      "excluded": 0
+     },
+     "drivers": [
+      {
+       "code": "ATTRIBUTE_DATED_STALE_EVIDENCE",
+       "evidence_id": null,
+       "date": "2025-04-30",
+       "age_days": 562,
+       "posture": "CONTRADICTS",
+       "source_type": "OUTRO",
+       "domain": "herodevs.com",
+       "dependency_group": "source_cluster_001"
+      }
+     ],
+     "limitations": [
+      "Índice temporal determinístico; não é probabilidade de verdade.",
+      "Datas de página sem vínculo explícito ao atributo foram excluídas."
+     ]
+    },
+    "concordancia": {
+     "algorithm_id": "SOURCE_AGREEMENT_INDEX",
+     "algorithm_version": "1.1.0",
+     "weights": {
+      "OFICIAL": 3,
+      "ACADEMICO": 3,
+      "NOTICIA": 2,
+      "REFERENCIA": 1.5,
+      "OUTRO": 1,
+      "BLOG_FORUM": 0.25
+     },
+     "score": 0,
+     "coverage": "WEAK",
+     "independent_sources": 1,
+     "source_types": [
+      "OUTRO"
+     ],
+     "supporting": 0,
+     "support_weight": 0,
+     "contradict_weight": 1,
+     "authoritative_supporting": 0,
+     "contradicting": 1,
+     "split": 0,
+     "by_type": {
+      "OUTRO": {
+       "supports": 0,
+       "contradicts": 1,
+       "split": 0
+      }
+     },
+     "limitations": [
+      "Agreement between sources is not a probability of truth: sources can share the same mistake.",
+      "Copies and pages from the same site count once; independence is approximated by domain and text similarity."
+     ]
+    },
+    "recencia_pagina": {
+     "algorithm_id": "PAGE_DATE_RECENCY_INDEX",
+     "algorithm_version": "1.0.0",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "as_of": "2026-11-13T23:07:00.261Z",
+     "score": 0,
+     "status": "STALE",
+     "policy_id": "versao_api:90d:page:v1",
+     "newest_date": "2025-04-30",
+     "sources": [
+      {
+       "date": "2025-04-30",
+       "age_days": 562,
+       "status": "STALE",
+       "posture": "CONTRADICTS",
+       "source_type": "OUTRO",
+       "domain": "herodevs.com",
+       "evidence_id": null
+      }
+     ],
+     "limitations": [
+      "Baseado na data da página, não na data em que o dado específico mudou: confiança baixa.",
+      "Não substitui o índice de atualidade principal e não é probabilidade de verdade."
+     ]
+    },
+    "atualidade_afirmacao": {
+     "algorithm_id": "CLAIM_CURRENCY_SCORE",
+     "algorithm_version": "1.1.0",
+     "formula": "evidence_recency × support_share",
+     "window_days": 90,
+     "score": 0,
+     "status": "CONTRADICTED",
+     "basis": "FACT_DATE",
+     "confidence": "LOW",
+     "evidence_recency": 0,
+     "support_share": 0,
+     "newest_date": "2025-04-30",
+     "newest_age_days": 562,
+     "within_window": false
+    },
+    "versao_regras": "1.3.0",
+    "metodo": "AGREGACAO_DETERMINISTICA",
+    "fontes_independentes": 1,
+    "grupos_distintos_de_evidencia": 1,
+    "dependencia_detectada": 0,
+    "dependencia_nao_verificada": true,
+    "nota_independencia": "Cópias exatas, quase duplicadas, URLs canônicas iguais e páginas do mesmo domínio são agrupadas; domínios sem sinal de cópia não têm independência editorial comprovada.",
+    "total_evidencias_utilizaveis": 1,
+    "fontes": [
+     {
+      "dominio": "herodevs.com",
+      "dominios": [
+       "herodevs.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_001",
+      "oficial": false,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare"
+      ],
+      "evidencias": [
+       {
+        "titulo": "HeroDevs Blog | Node.js 18 End-of-Life: What It Means and How to Prepare",
+        "url": "https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare",
+        "categoria_fonte": "OUTRO",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T23:07:11.766Z",
+        "data_publicacao": "2025-02-10",
+        "data_atualizacao": "2025-04-30",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Mon, 10 Feb 2025 00:00:00 GMT",
+          "value_normalized": "2025-02-10",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Fri, 13 Nov 2026 23:07:09 GMT",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2025-02-10T17:16:54.378Z",
+          "value_normalized": "2025-02-10",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "blogposting"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-10-13T15:46:40.357Z",
+          "value_normalized": "2026-10-13",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "blogposting"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_001",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     }
+    ],
+    "limitacoes": [
+     "Nenhuma evidência possui data verificável e status de atualidade FRESH.",
+     "Nenhuma fonte pertence ao cadastro de domínios oficiais informado.",
+     "Domínios sem sinal detectado de duplicação não têm independência editorial comprovada; republicação com edição extensa ainda pode passar despercebida."
+    ],
+    "avaliado_em": "2026-11-13T23:07:13.563Z"
+   }
+  }
+ ],
+ "afirmacoes_omitidas": [],
+ "resposta_corrigida": {
+  "texto": "Node.js 18 reached its end‑of‑life on April 30, 2025, and will no longer receive security updates or maintenance releases [1].",
+  "mudancas": [
+   {
+    "claim_id": "afirmacao_1",
+    "what": "replaced with end‑of‑life information"
+   }
+  ],
+  "fontes_citadas": [
+   1
+  ],
+  "tentativas": 1,
+  "citacoes_anexadas": false,
+  "fontes": [
+   {
+    "n": 1,
+    "url": "https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare",
+    "titulo": "HeroDevs Blog | Node.js 18 End-of-Life: What It Means and How to Prepare",
+    "tipo": "OUTRO",
+    "postura": "CONTRADICTS",
+    "data": "2025-04-30"
+   }
+  ],
+  "metodo": "MODEL_REWRITE_FROM_VERIFIED_EVIDENCE"
+ },
+ "rastreabilidade_modelo": [
+  {
+   "id_chamada": "dcfe8e37-1ddc-4428-9dbf-93f9d7749706",
+   "id_requisicao_enviada": "b537ccb1-44aa-4d39-a130-e869685553e1",
+   "id_verificacao": "d917b1a0-74ef-46ab-9043-edf81150875c",
+   "etapa": "DECOMPOSICAO",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 880,
+   "tokens": {
+    "entrada": 842,
+    "saida": 250,
+    "total": 1092
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "b537ccb1-44aa-4d39-a130-e869685553e1",
+   "id_trace": "0c42fd2beef243619e29c28d74b56af9",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 880.979,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:07:00.262Z"
+  },
+  {
+   "id_chamada": "4470202a-f0dd-44bb-b63b-6a2ee5c16c6c",
+   "id_requisicao_enviada": "a9913576-58ad-41b2-95fd-ed822b4d8fc5",
+   "id_verificacao": "d917b1a0-74ef-46ab-9043-edf81150875c",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 1750,
+   "tokens": {
+    "entrada": 3693,
+    "saida": 1259,
+    "total": 4952
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "a9913576-58ad-41b2-95fd-ed822b4d8fc5",
+   "id_trace": "d238fdfc24f94743bdec025e6edb0f02",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 1750.36,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:07:11.792Z"
+  },
+  {
+   "id_chamada": "7d8cb9be-04ae-4f20-98c1-ecf8706c6575",
+   "id_requisicao_enviada": "6cb12238-89d6-47f5-8bc4-cfac852aba98",
+   "id_verificacao": "d917b1a0-74ef-46ab-9043-edf81150875c",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 731,
+   "tokens": {
+    "entrada": 688,
+    "saida": 407,
+    "total": 1095
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "6cb12238-89d6-47f5-8bc4-cfac852aba98",
+   "id_trace": "83c4c7d6bf8c4b79bf77627952d1e8fc",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 731.966,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:07:13.564Z"
+  }
+ ],
+ "rastreabilidade_pesquisa": [
+  {
+   "id_operacao": "2825f6d0-9022-43fa-93d6-864daf900898",
+   "id_verificacao": "d917b1a0-74ef-46ab-9043-edf81150875c",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Node.js 18 is still officially supported with security updates.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:07:01.161Z",
+   "finalizada_em": "2026-11-13T23:07:03.971Z",
+   "duracao_ms": 2810,
+   "request_id": "003acabf-055c-4582-9be0-bf7bec1396be",
+   "response_time": 2.34,
+   "erro": null,
+   "modo_busca": "GERAL",
+   "parametros": {
+    "query": "Node.js 18 is still officially supported with security updates.",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "0922cf-00",
+     "titulo": "Node.js 18 End of Life: Support and Migration Options",
+     "url": "https://tuxcare.com/blog/node-js-18-end-of-life",
+     "relevancia": 0.8159669,
+     "data_publicacao": "2026-08-12"
+    },
+    {
+     "resultado_id": "adf9ba-01",
+     "titulo": "Node.js — Beware of End-of-Life Node.js Versions - Upgrade or Seek Post-EOL Support",
+     "url": "https://nodejs.org/en/blog/announcements/node-18-eol-support",
+     "relevancia": 0.7601169,
+     "data_publicacao": "2025-06-06"
+    },
+    {
+     "resultado_id": "3113bc-02",
+     "titulo": "Announcing the end of support for Node.js 18.x in AWS CDK | AWS DevOps & Developer Productivity Blog",
+     "url": "https://aws.amazon.com/blogs/devops/announcing-the-end-of-support-for-node-js-18-x-in-aws-cdk",
+     "relevancia": 0.7572562,
+     "data_publicacao": "2025-07-15"
+    },
+    {
+     "resultado_id": "2e66cc-03",
+     "titulo": "HeroDevs Blog | Node.js 18 End-of-Life: What It Means and How to Prepare",
+     "url": "https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare",
+     "relevancia": 0.7102265,
+     "data_publicacao": "2025-02-10"
+    },
+    {
+     "resultado_id": "5152fa-04",
+     "titulo": "Node 18 Runtime is no longer supported on Forge - Forge - The Atlassian Developer Community",
+     "url": "https://community.developer.atlassian.com/t/node-18-runtime-is-no-longer-supported-on-forge/94301",
+     "relevancia": 0.60474914,
+     "data_publicacao": "2025-08-04"
+    }
+   ]
+  },
+  {
+   "id_operacao": "7b876395-5545-4300-ba86-a9a1b28bbed7",
+   "id_verificacao": "d917b1a0-74ef-46ab-9043-edf81150875c",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Node.js 18 is still officially supported with security updates.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:07:03.971Z",
+   "finalizada_em": "2026-11-13T23:07:09.286Z",
+   "duracao_ms": 5315,
+   "request_id": "e9a59144-bcb5-476b-a5b0-d8caefcc0456",
+   "response_time": 4.86,
+   "erro": null,
+   "modo_busca": "NOTICIAS",
+   "parametros": {
+    "query": "Node.js 18 is still officially supported with security updates.",
+    "search_depth": "basic",
+    "max_results": 4,
+    "include_answer": false,
+    "include_published_date": true,
+    "topic": "news",
+    "time_range": "year"
+   },
+   "quantidade_resultados": 4,
+   "resultados": [
+    {
+     "resultado_id": "f3e52a-00",
+     "titulo": "The internet is having a very bad cybersecurity day - TechCrunch",
+     "url": "https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/",
+     "relevancia": 0.16158466,
+     "data_publicacao": "2026-10-21"
+    },
+    {
+     "resultado_id": "0bfb71-01",
+     "titulo": "PHP, Node.js and LiteLLM Face a Wave: What to Know - JournalArta",
+     "url": "https://journalarta.com/2026/10/22/php-node-js-and-litellm-face-a-wave-of-security-trouble/",
+     "relevancia": 0.13006426,
+     "data_publicacao": "2026-10-21"
+    },
+    {
+     "resultado_id": "426e01-02",
+     "titulo": "Node2Shell puts Microsoft and Node.js on Brotli patch duty - www.csoonline.com",
+     "url": "https://www.csoonline.com/article/4241027/node2shell-puts-microsoft-and-node-js-on-brotli-patch-duty.html",
+     "relevancia": 0.1161611,
+     "data_publicacao": "2026-10-27"
+    },
+    {
+     "resultado_id": "420b42-03",
+     "titulo": "Critical Node.js Vulnerability Can Cause Server Crashes via async_hooks Stack Overflow - The Hacker News",
+     "url": "https://thehackernews.com/2026/01/critical-nodejs-vulnerability-can-cause.html",
+     "relevancia": 0.11047116,
+     "data_publicacao": "2026-01-14"
+    }
+   ]
+  },
+  {
+   "id_operacao": "673627e9-ca34-4065-9bbe-ebae8fcc8ff4",
+   "id_verificacao": "d917b1a0-74ef-46ab-9043-edf81150875c",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "EXTRACAO",
+   "consulta": "Node.js 18 is still officially supported with security updates.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:07:09.290Z",
+   "finalizada_em": "2026-11-13T23:07:11.766Z",
+   "duracao_ms": 2476,
+   "request_id": "9042c553-eb83-4495-91ee-a091dcca611c",
+   "response_time": 1.62,
+   "erro": null,
+   "urls_solicitadas": [
+    "https://nodejs.org/en/blog/announcements/node-18-eol-support",
+    "https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/",
+    "https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare",
+    "https://journalarta.com/2026/10/22/php-node-js-and-litellm-face-a-wave-of-security-trouble/",
+    "https://www.csoonline.com/article/4241027/node2shell-puts-microsoft-and-node-js-on-brotli-patch-duty.html"
+   ],
+   "parametros": {
+    "urls": [
+     "https://nodejs.org/en/blog/announcements/node-18-eol-support",
+     "https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/",
+     "https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare",
+     "https://journalarta.com/2026/10/22/php-node-js-and-litellm-face-a-wave-of-security-trouble/",
+     "https://www.csoonline.com/article/4241027/node2shell-puts-microsoft-and-node-js-on-brotli-patch-duty.html"
+    ],
+    "extract_depth": "basic",
+    "format": "markdown",
+    "include_images": false
+   },
+   "quantidade_resultados": 5,
+   "urls_extraidas": [
+    "https://nodejs.org/en/blog/announcements/node-18-eol-support",
+    "https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/",
+    "https://www.herodevs.com/blog-posts/node-js-18-end-of-life-what-it-means-and-how-to-prepare",
+    "https://www.csoonline.com/article/4241027/node2shell-puts-microsoft-and-node-js-on-brotli-patch-duty.html",
+    "https://journalarta.com/2026/10/22/php-node-js-and-litellm-face-a-wave-of-security-trouble/"
+   ]
+  }
+ ],
+ "modo": "real",
+ "simulado": false,
+ "gateway": {
+  "gateway": "bifrost",
+  "chamadas": 3,
+  "falhas": 0,
+  "cadeia_modelos": [
+   "groq/openai/gpt-oss-20b",
+   "groq/openai/gpt-oss-120b"
+  ],
+  "queda_simulada": false,
+  "respostas_por_modelo": [
+   {
+    "modelo": "groq/openai/gpt-oss-20b",
+    "chamadas": 3
+   }
+  ],
+  "respostas_de_reserva": 0,
+  "tokens_total": 7139,
+  "latencia_media_ms": 1121
+ },
+ "duracao_ms": 14056,
+ "gravado_em": "2026-11-13T23:07:14.315Z"
+}

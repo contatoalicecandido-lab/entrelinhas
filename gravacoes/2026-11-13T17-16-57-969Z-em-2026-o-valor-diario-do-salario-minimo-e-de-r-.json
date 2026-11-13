@@ -1,0 +1,2191 @@
+{
+ "sistema": "Entrelinhas",
+ "id_verificacao": "65e9ba50-3d62-4a2b-b5d5-e653941e17db",
+ "texto_original": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+ "verificado_em": "2026-11-13T17:16:57.960Z",
+ "total_afirmacoes": 1,
+ "sintese": {
+  "veredito": "CORROBORADA",
+  "resumo": "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
+  "total_afirmacoes": 1,
+  "contagem_vereditos": {
+   "CORROBORADA": 1
+  }
+ },
+ "afirmacoes": [
+  {
+   "id": "afirmacao_1",
+   "texto": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+   "tipo_afirmacao": "preco",
+   "origem_tipo_afirmacao": "MODELO",
+   "nuances": {
+    "idioma": "pt",
+    "variante": "pt-BR",
+    "confianca_idioma": 1,
+    "valores": [
+     {
+      "tipo": "MONETARIO",
+      "texto": "R$ 54,04",
+      "valor": 54.04,
+      "moeda": "BRL",
+      "periodo": null,
+      "qualificador": null
+     }
+    ],
+    "datas": [],
+    "expressoes_temporais": [],
+    "condicoes": [],
+    "mudancas": [],
+    "tempo_coloquial": [],
+    "girias": {
+     "aliases": [],
+     "expressoes": []
+    },
+    "consulta_busca": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+    "dominios_oficiais_sugeridos": [
+     "gov.br"
+    ],
+    "autoridades": [
+     {
+      "dominio": "gov.br",
+      "autoridade": "Federal government (gov.br)",
+      "termo": "salário mínimo"
+     }
+    ],
+    "notas": [
+     "\"R$ 54,04\" uses Brazilian number format: BRL 54.04.",
+     "\"salário mínimo\" points to a Brazilian authority: Federal government (gov.br) (gov.br) is searched as an official source."
+    ]
+   },
+   "evidencias": [
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OFICIAL",
+      "titulo": "D12797",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12797.htm",
+      "conteudo": "> |  |  |\n> | --- | --- |\n> | Brastra.gif (4376 bytes) | **Presidncia da Repblica  Casa Civil  Secretaria Especial para Assuntos Jurdicos** |\n>\n> **[DECRETO N 12.797, DE 23 DE DEZEMBRO DE 2025](http://legislacao.planalto.gov.br/legisla/legislacao.nsf/Viw_Identificacao/DEC%2012.797-2025?OpenDocument)**\n\n|  |  |\n| --- | --- |\n| [Vigncia](#art2) | Dispe sobre o valor do salrio mnimo a vigorar a partir de 1 de janeiro de 2026. |\n\n**O PRESIDENTE DA REPBLICA**, no uso da atribuio que lhe confere o art. 84, *caput*, inciso IV, da Constituio, e tendo em vista o disposto na Lei n 14.663, de 28 de agosto de 2023, e na Lei n 15.077, de 27 de dezembro de 2024,\n\n**DECRETA**:\n\nArt. 1  A partir de 1 de jan…",
+      "coletado_em": "2026-11-13T17:16:53.261Z",
+      "data_publicacao": "2025-12-24",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": null,
+      "relevancia": 0.7627777,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+       "resultado_id": "5e71dc-03",
+       "response_time_busca": 1.06,
+       "response_time_extracao": 0.03,
+       "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+       "origem_principal": {
+        "id_operacao": "d5137ceb-f7e3-4f53-b74a-91313a3ac6c3",
+        "request_id": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+        "modo_busca": "GERAL",
+        "resultado_id": "5e71dc-03",
+        "parametros": {
+         "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "d5137ceb-f7e3-4f53-b74a-91313a3ac6c3",
+         "request_id": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+         "modo_busca": "GERAL",
+         "resultado_id": "5e71dc-03",
+         "parametros": {
+          "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Wed, 24 Dec 2025 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 24 Dec 2025 00:00:00 GMT",
+         "value_normalized": "2025-12-24",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "FETCH_FAILED",
+        "detalhe": "read ECONNRESET",
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "87323d9a-a956-4942-9455-6ce77ad5c7a3",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "1199a71c-4903-458c-adc8-153212ace8a0",
+      "id_verificacao": "65e9ba50-3d62-4a2b-b5d5-e653941e17db",
+      "url_original": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12797.htm",
+      "url_canonica": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12797.htm",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "2b6e8c876bcf7469ee2e64d59af6ad3ba9c99fa4e458285b71ce02b395420aa3",
+      "coletado_em": "2026-11-13T17:16:53.261Z",
+      "id_operacao_busca": "d5137ceb-f7e3-4f53-b74a-91313a3ac6c3",
+      "id_operacao_extracao": "e66ee03a-2c5d-457f-a523-3350874e928e",
+      "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+      "parametros_busca": {
+       "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12797.htm",
+        "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+        "https://www.ieprev.com.br/ferramentas/tabela-dos-salarios-minimos",
+        "https://blog.convenia.com.br/novo-salario-minimo",
+        "https://www.facebook.com/redetvt/videos/trabalhadores-o-novo-sal%C3%A1rio-m%C3%ADnimo-de-r-1621-come%C3%A7a-a-ser-pago-nesta-segunda-fe/2872395909624979"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+       "operacoes_busca": [
+        {
+         "id_operacao": "d5137ceb-f7e3-4f53-b74a-91313a3ac6c3",
+         "request_id": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+         "modo_busca": "GERAL",
+         "resultado_id": "5e71dc-03",
+         "parametros": {
+          "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "87323d9a-a956-4942-9455-6ce77ad5c7a3",
+       "resultado_id": "5e71dc-03",
+       "relevancia": 0.7627777,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 24 Dec 2025 00:00:00 GMT",
+         "value_normalized": "2025-12-24",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "FETCH_FAILED",
+        "detalhe": "read ECONNRESET",
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "D12797",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12797.htm",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 1429,
+      "caracteres_preparados": 1429,
+      "trecho_analisado": "TÍTULO DA FONTE: D12797\nURL DA FONTE: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12797.htm\n\nCONTEÚDO DA FONTE:\n> |  |  |\n> | --- | --- |\n> | Brastra.gif (4376 bytes) | **Presidncia da Repblica  Casa Civil  Secretaria Especial para Assuntos Jurdicos** |\n>\n> **[DECRETO N 12.797, DE 23 DE DEZEMBRO DE 2025](http://legislacao.planalto.gov.br/legisla/legislacao.nsf/Viw_Identificacao/DEC%2012.797-2025?OpenDocument)**\n\n|  |  |\n| --- | --- |\n| [Vigncia](#art2) | Dispe sobre o valor do salrio mnimo a vigorar a partir de 1 de janeiro de 2026. |\n\n**O PRESIDENTE DA REPBLICA**, no uso da atribuio que lhe confere o art. 84, *caput*, inciso IV, da Constituio, e tendo em vista o disposto na Lei n 14.663, de 28 de agosto de 2023, e na Lei n 15.077, de 27 de dezembro de 2024,\n\n**DECRETA**:\n\nArt. 1  A partir de 1 de janeiro de 2026, o valor do salrio mnimo ser de R$ 1.621,00 (mil seiscentos e vinte e um reais).\n\nPargrafo nico.  Em decorrncia do disposto no *caput*, o valor dirio do salrio mnimo corresponder a R$ 54,04 (cinquenta e quatro reais e quatro centavos) e o valor horrio, a R$ 7,37 (sete reais e trinta e sete centavos).\n\nArt. 2  Este Decreto entra em vigor em 1 de janeir",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The official decree states the daily minimum wage will be R$ 54,04 starting 1 January 2026."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The official decree states the daily minimum wage will be R$ 54,04 starting 1 January 2026."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 324,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2025-12-24"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Salário mínimo 2026: valor, reajuste, tabela e impactos",
+      "url": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+      "conteudo": "[Pular para o conteúdo](#conteudo-principal)\n\n[![Barbieri Advogados](https://www.barbieriadvogados.com/wp-content/themes/barbieri/images/logo_barbieri30anos_branco.svg) ![Barbieri Advogados](https://www.barbieriadvogados.com/wp-content/themes/barbieri/images/logo_barbieri30anos_colorido2.svg)](https://www.barbieriadvogados.com/) \n\n* [PT](#)\n* [EN](#)\n* [中文](#)\n\n[![Barbieri Advogados](https://www.barbieriadvogados.com/wp-content/themes/barbieri/images/logo_barbieri30anos_branco.svg)](https://www.barbieriadvogados.com/)\n\n# Salário mínimo 2026: valor, reajuste, tabela e impactos\n\n|\n\n[Direito Trabalhista](https://www.barbieriadvogados.com/category/direito-trabalhista/)\n\n|\n\n18 min de leitura\n\n*At…",
+      "coletado_em": "2026-11-13T17:16:53.261Z",
+      "data_publicacao": "2026-05-18",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela/",
+      "relevancia": 0.8498466,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+       "resultado_id": "89ca1b-00",
+       "response_time_busca": 1.06,
+       "response_time_extracao": 0.03,
+       "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+       "origem_principal": {
+        "id_operacao": "d5137ceb-f7e3-4f53-b74a-91313a3ac6c3",
+        "request_id": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+        "modo_busca": "GERAL",
+        "resultado_id": "89ca1b-00",
+        "parametros": {
+         "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "d5137ceb-f7e3-4f53-b74a-91313a3ac6c3",
+         "request_id": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+         "modo_busca": "GERAL",
+         "resultado_id": "89ca1b-00",
+         "parametros": {
+          "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Mon, 18 May 2026 20:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 18 May 2026 20:00:00 GMT",
+         "value_normalized": "2026-05-18",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-05-18T17:00:00-03:00",
+         "value_normalized": "2026-05-18",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-11-07T23:56:07-03:00",
+         "value_normalized": "2026-11-08",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-05-18T17:00:00-03:00",
+         "value_normalized": "2026-05-18",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-07T23:56:07-03:00",
+         "value_normalized": "2026-11-08",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-05-18",
+         "value_normalized": "2026-05-18",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-07",
+         "value_normalized": "2026-11-07",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela/",
+        "capturado_em": "2026-11-13T17:16:51.966Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "87323d9a-a956-4942-9455-6ce77ad5c7a3",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "3c63c2b9-ae15-4af2-a509-d1cc98420c8a",
+      "id_verificacao": "65e9ba50-3d62-4a2b-b5d5-e653941e17db",
+      "url_original": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+      "url_canonica": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "2f19deaa6bfc0ef9c075e7e40c42ba8a894f3892b03631c49fb68002bfd3b6d1",
+      "coletado_em": "2026-11-13T17:16:53.261Z",
+      "id_operacao_busca": "d5137ceb-f7e3-4f53-b74a-91313a3ac6c3",
+      "id_operacao_extracao": "e66ee03a-2c5d-457f-a523-3350874e928e",
+      "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+      "parametros_busca": {
+       "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12797.htm",
+        "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+        "https://www.ieprev.com.br/ferramentas/tabela-dos-salarios-minimos",
+        "https://blog.convenia.com.br/novo-salario-minimo",
+        "https://www.facebook.com/redetvt/videos/trabalhadores-o-novo-sal%C3%A1rio-m%C3%ADnimo-de-r-1621-come%C3%A7a-a-ser-pago-nesta-segunda-fe/2872395909624979"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+       "operacoes_busca": [
+        {
+         "id_operacao": "d5137ceb-f7e3-4f53-b74a-91313a3ac6c3",
+         "request_id": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+         "modo_busca": "GERAL",
+         "resultado_id": "89ca1b-00",
+         "parametros": {
+          "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "87323d9a-a956-4942-9455-6ce77ad5c7a3",
+       "resultado_id": "89ca1b-00",
+       "relevancia": 0.8498466,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 18 May 2026 20:00:00 GMT",
+         "value_normalized": "2026-05-18",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-05-18T17:00:00-03:00",
+         "value_normalized": "2026-05-18",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-11-07T23:56:07-03:00",
+         "value_normalized": "2026-11-08",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-05-18T17:00:00-03:00",
+         "value_normalized": "2026-05-18",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-07T23:56:07-03:00",
+         "value_normalized": "2026-11-08",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-05-18",
+         "value_normalized": "2026-05-18",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-07",
+         "value_normalized": "2026-11-07",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela/",
+        "capturado_em": "2026-11-13T17:16:51.966Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Salário mínimo 2026: valor, reajuste, tabela e impactos",
+      "url": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 33009,
+      "caracteres_preparados": 7998,
+      "trecho_analisado": "TÍTULO DA FONTE: Salário mínimo 2026: valor, reajuste, tabela e impactos\nURL DA FONTE: https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n[![Barbieri Advogados](https://www.barbieriadvogados.com/wp-content/themes/barbieri/images/logo_barbieri30anos_branco.svg)](https://www.barbieriadvogados.com/)\n\n# Salário mínimo 2026: valor, reajuste, tabela e impactos\n\n|\n\n*Atualizado em outubro de 2026.*\n\nO **salário mínimo 2026** é de R$ 1.621,00 por mês, valor em vigor desde 1.º de janeiro de 2026 por força do [Decreto n.\n\n12.797/2025](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/D12797.htm), que fixou também o valor diário em R$ 54,04 e o valor horário em R$ 7,37.\n\nO reajuste sobre os R$ 1.518,00 de 2025 foi de 6,79%, ou R$ 103,00.\n\nEste artigo reúne o valor atual e a tabela do salário mínimo, a regra de reajuste, o histórico desde o Plano Real, os reflexos previdenciários e trabalhistas, os pisos regionais e a previsão para 2027.\n\n> **Em resumo:** o salário mínimo nacional é de R$ 1.621,00 desde 1.º/1/2026 (Decreto n.\n\n12.797/2025), com valor diário de R$ 54,04 e horário de R$ 7,37, calculado sobre 220 horas mensai",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The article reports the daily minimum wage as R$ 54,04, effective from 1 January 2026 per the decree."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The article reports the daily minimum wage as R$ 54,04, effective from 1 January 2026 per the decree."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 179,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2026-05-18"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Tabela dos Salários Mínimos | IEPREV",
+      "url": "https://www.ieprev.com.br/ferramentas/tabela-dos-salarios-minimos",
+      "conteudo": "[Pular para o conteúdo](#conteudo)\n\n\n[![IEPREV — Instituto de Estudos Previdenciários](/assets/logo-ieprev-color.svg)](/)\n\n[Entrar no PRO](https://app.ieprev.com.br/auth)[Assinar PRO ↗](https://app.ieprev.com.br/auth/onboarding)\n\n\n\nFerramentas · DIREITO PREVIDENCIÁRIO\n\n# Tabela dos Salários Mínimos\n\nSalários mínimos brasileiros a partir do Plano Real (1994)\n\n![](/assets/media/245325279d3716b109.webp)\n\n**Equipe IEPREV** · 2 min de leitura\n\n> A tabela reúne a **evolução do salário mínimo nacional** desde a implantação do **Plano Real, em 1994**, até o valor **fixado para 2026**, conforme os atos normativos publicados ao longo do período.\n>\n> Para **2026**, o salário mínimo foi definido em **R$…",
+      "coletado_em": "2026-11-13T17:16:53.261Z",
+      "data_publicacao": "2025-09-02",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www.ieprev.com.br/ferramentas/tabela-dos-salarios-minimos",
+      "relevancia": 0.5733799,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+       "resultado_id": "026db3-04",
+       "response_time_busca": 1.06,
+       "response_time_extracao": 0.03,
+       "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+       "origem_principal": {
+        "id_operacao": "d5137ceb-f7e3-4f53-b74a-91313a3ac6c3",
+        "request_id": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+        "modo_busca": "GERAL",
+        "resultado_id": "026db3-04",
+        "parametros": {
+         "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "d5137ceb-f7e3-4f53-b74a-91313a3ac6c3",
+         "request_id": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+         "modo_busca": "GERAL",
+         "resultado_id": "026db3-04",
+         "parametros": {
+          "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Tue, 02 Sep 2025 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 02 Sep 2025 00:00:00 GMT",
+         "value_normalized": "2025-09-02",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 15:11:42 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.ieprev.com.br/ferramentas/tabela-dos-salarios-minimos",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2025-09-02",
+         "value_normalized": "2025-09-02",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2025-09-02",
+         "value_normalized": "2025-09-02",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.ieprev.com.br/ferramentas/tabela-dos-salarios-minimos",
+        "capturado_em": "2026-11-13T17:16:51.983Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "87323d9a-a956-4942-9455-6ce77ad5c7a3",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "f086492d-27da-406b-8462-ed82a3891da8",
+      "id_verificacao": "65e9ba50-3d62-4a2b-b5d5-e653941e17db",
+      "url_original": "https://www.ieprev.com.br/ferramentas/tabela-dos-salarios-minimos",
+      "url_canonica": "https://www.ieprev.com.br/ferramentas/tabela-dos-salarios-minimos",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "bb0c316587f5e24f87e2ef56257c633da6aa184ad9adcc45d3d5369759f64555",
+      "coletado_em": "2026-11-13T17:16:53.261Z",
+      "id_operacao_busca": "d5137ceb-f7e3-4f53-b74a-91313a3ac6c3",
+      "id_operacao_extracao": "e66ee03a-2c5d-457f-a523-3350874e928e",
+      "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+      "parametros_busca": {
+       "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12797.htm",
+        "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+        "https://www.ieprev.com.br/ferramentas/tabela-dos-salarios-minimos",
+        "https://blog.convenia.com.br/novo-salario-minimo",
+        "https://www.facebook.com/redetvt/videos/trabalhadores-o-novo-sal%C3%A1rio-m%C3%ADnimo-de-r-1621-come%C3%A7a-a-ser-pago-nesta-segunda-fe/2872395909624979"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+       "operacoes_busca": [
+        {
+         "id_operacao": "d5137ceb-f7e3-4f53-b74a-91313a3ac6c3",
+         "request_id": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+         "modo_busca": "GERAL",
+         "resultado_id": "026db3-04",
+         "parametros": {
+          "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "87323d9a-a956-4942-9455-6ce77ad5c7a3",
+       "resultado_id": "026db3-04",
+       "relevancia": 0.5733799,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 02 Sep 2025 00:00:00 GMT",
+         "value_normalized": "2025-09-02",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 15:11:42 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.ieprev.com.br/ferramentas/tabela-dos-salarios-minimos",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2025-09-02",
+         "value_normalized": "2025-09-02",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2025-09-02",
+         "value_normalized": "2025-09-02",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.ieprev.com.br/ferramentas/tabela-dos-salarios-minimos",
+        "capturado_em": "2026-11-13T17:16:51.983Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Tabela dos Salários Mínimos | IEPREV",
+      "url": "https://www.ieprev.com.br/ferramentas/tabela-dos-salarios-minimos",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 5045,
+      "caracteres_preparados": 5045,
+      "trecho_analisado": "TÍTULO DA FONTE: Tabela dos Salários Mínimos | IEPREV\nURL DA FONTE: https://www.ieprev.com.br/ferramentas/tabela-dos-salarios-minimos\n\nCONTEÚDO DA FONTE:\n[Pular para o conteúdo](#conteudo)\n\n\n[![IEPREV — Instituto de Estudos Previdenciários](/assets/logo-ieprev-color.svg)](/)\n\n[Entrar no PRO](https://app.ieprev.com.br/auth)[Assinar PRO ↗](https://app.ieprev.com.br/auth/onboarding)\n\n\n\nFerramentas · DIREITO PREVIDENCIÁRIO\n\n# Tabela dos Salários Mínimos\n\nSalários mínimos brasileiros a partir do Plano Real (1994)\n\n![](/assets/media/245325279d3716b109.webp)\n\n**Equipe IEPREV** · 2 min de leitura\n\n> A tabela reúne a **evolução do salário mínimo nacional** desde a implantação do **Plano Real, em 1994**, até o valor **fixado para 2026**, conforme os atos normativos publicados ao longo do período.\n>\n> Para **2026**, o salário mínimo foi definido em **R$ 1.621,00**, nos termos do **[Decreto nº 12.797/2025](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/D12797.htm)**, representando um reajuste de **6,79%** em relação ao valor vigente em 2025.\n>\n> O salário mínimo funciona como **piso nacional de remuneração** e serve como **referência para benefícios previdenciários de valor m",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "RELATED_INSUFFICIENT",
+      "justificativa": "The source only gives the monthly minimum wage amount and does not mention the daily value."
+     },
+     "classificacao": {
+      "postura": "INSUFFICIENT",
+      "justificativa": "The source only gives the monthly minimum wage amount and does not mention the daily value."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 437,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2025-09-02"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "BLOG_FORUM",
+      "titulo": "Novo salário mínimo 2026: confira o valor do reajuste",
+      "url": "https://blog.convenia.com.br/novo-salario-minimo",
+      "conteudo": "[Centralize toda a gestão de RH e DP em uma única plataforma. Faça um teste grátis!](https://www.convenia.com.br/)\n\n[![Logo](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E) ![Logo](https://blog.convenia.com.br/wp-content/themes/theme/assets/svg/logo-azul.svg)](https://blog.convenia.com.br)\n\nDepartamento Pessoal\n\n# Salário mínimo 2026: valor, reajuste e impactos para DP\n\n[Lilian Sierban](https://blog.convenia.com.br/author/lilian-sierban/)\n\n•\n\n5 min de leitura\n\n•\n\nAtualizado em 14/07/2026\n\n**O salário mínimo 2026 foi definido e começa a valer em 1º de janeiro.** O novo valor impacta diretamente a folha de pagamento, o salário-hora, benefí…",
+      "coletado_em": "2026-11-13T17:16:53.261Z",
+      "data_publicacao": "2025-12-30",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://blog.convenia.com.br/novo-salario-minimo/",
+      "relevancia": 0.8433798,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+       "resultado_id": "e12353-01",
+       "response_time_busca": 1.06,
+       "response_time_extracao": 0.03,
+       "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+       "origem_principal": {
+        "id_operacao": "d5137ceb-f7e3-4f53-b74a-91313a3ac6c3",
+        "request_id": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+        "modo_busca": "GERAL",
+        "resultado_id": "e12353-01",
+        "parametros": {
+         "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "d5137ceb-f7e3-4f53-b74a-91313a3ac6c3",
+         "request_id": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+         "modo_busca": "GERAL",
+         "resultado_id": "e12353-01",
+         "parametros": {
+          "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Tue, 30 Dec 2025 02:13:41 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 30 Dec 2025 02:13:41 GMT",
+         "value_normalized": "2025-12-30",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 16:01:14 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://blog.convenia.com.br/novo-salario-minimo/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2025-12-30T02:13:41+00:00",
+         "value_normalized": "2025-12-30",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-07-14T22:53:58+00:00",
+         "value_normalized": "2026-07-14",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2025-12-30T02:13:41+00:00",
+         "value_normalized": "2025-12-30",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-07-14T22:53:58+00:00",
+         "value_normalized": "2026-07-14",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Atualizado em",
+         "value_original": "14/07/2026",
+         "value_normalized": "2026-07-14",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "EXPLICIT_ATTRIBUTE_UPDATE_DATE",
+         "field": "visible_text_date",
+         "value_original": "14/07/2026",
+         "value_normalized": "2026-07-14",
+         "scope": "UNKNOWN",
+         "source": "VISIBLE_TEXT",
+         "match_basis": "attribute_cue_without_exact_claim_match",
+         "context": "esso Materiais gratuitos Testar Convenia Grátis Testar Convenia Gratuitamente Departamento Pessoal Salário mínimo 2026: valor, reajuste e impactos para DP Lilian Sierban • 29/12/2025 • --> 5 min de leitura • Atualizado em 14/07/2026 O salário mínimo 2026 foi definido e começa a valer em 1º de janeir",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Atualizado em",
+         "value_original": "14/07/2026",
+         "value_normalized": "2026-07-14",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://blog.convenia.com.br/novo-salario-minimo/",
+        "capturado_em": "2026-11-13T17:16:53.073Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "87323d9a-a956-4942-9455-6ce77ad5c7a3",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "9e59f7a2-824f-4aef-a296-d68179381110",
+      "id_verificacao": "65e9ba50-3d62-4a2b-b5d5-e653941e17db",
+      "url_original": "https://blog.convenia.com.br/novo-salario-minimo",
+      "url_canonica": "https://blog.convenia.com.br/novo-salario-minimo",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "d4b3551bc9072c40cb0d423f37321a204945e725fc0b2a9b7499fd617ecb6921",
+      "coletado_em": "2026-11-13T17:16:53.261Z",
+      "id_operacao_busca": "d5137ceb-f7e3-4f53-b74a-91313a3ac6c3",
+      "id_operacao_extracao": "e66ee03a-2c5d-457f-a523-3350874e928e",
+      "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+      "parametros_busca": {
+       "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12797.htm",
+        "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+        "https://www.ieprev.com.br/ferramentas/tabela-dos-salarios-minimos",
+        "https://blog.convenia.com.br/novo-salario-minimo",
+        "https://www.facebook.com/redetvt/videos/trabalhadores-o-novo-sal%C3%A1rio-m%C3%ADnimo-de-r-1621-come%C3%A7a-a-ser-pago-nesta-segunda-fe/2872395909624979"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+       "operacoes_busca": [
+        {
+         "id_operacao": "d5137ceb-f7e3-4f53-b74a-91313a3ac6c3",
+         "request_id": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+         "modo_busca": "GERAL",
+         "resultado_id": "e12353-01",
+         "parametros": {
+          "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "87323d9a-a956-4942-9455-6ce77ad5c7a3",
+       "resultado_id": "e12353-01",
+       "relevancia": 0.8433798,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 30 Dec 2025 02:13:41 GMT",
+         "value_normalized": "2025-12-30",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 16:01:14 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://blog.convenia.com.br/novo-salario-minimo/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2025-12-30T02:13:41+00:00",
+         "value_normalized": "2025-12-30",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-07-14T22:53:58+00:00",
+         "value_normalized": "2026-07-14",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2025-12-30T02:13:41+00:00",
+         "value_normalized": "2025-12-30",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-07-14T22:53:58+00:00",
+         "value_normalized": "2026-07-14",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Atualizado em",
+         "value_original": "14/07/2026",
+         "value_normalized": "2026-07-14",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "EXPLICIT_ATTRIBUTE_UPDATE_DATE",
+         "field": "visible_text_date",
+         "value_original": "14/07/2026",
+         "value_normalized": "2026-07-14",
+         "scope": "UNKNOWN",
+         "source": "VISIBLE_TEXT",
+         "match_basis": "attribute_cue_without_exact_claim_match",
+         "context": "esso Materiais gratuitos Testar Convenia Grátis Testar Convenia Gratuitamente Departamento Pessoal Salário mínimo 2026: valor, reajuste e impactos para DP Lilian Sierban • 29/12/2025 • --> 5 min de leitura • Atualizado em 14/07/2026 O salário mínimo 2026 foi definido e começa a valer em 1º de janeir",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Atualizado em",
+         "value_original": "14/07/2026",
+         "value_normalized": "2026-07-14",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://blog.convenia.com.br/novo-salario-minimo/",
+        "capturado_em": "2026-11-13T17:16:53.073Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Novo salário mínimo 2026: confira o valor do reajuste",
+      "url": "https://blog.convenia.com.br/novo-salario-minimo",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 24783,
+      "caracteres_preparados": 7996,
+      "trecho_analisado": "TÍTULO DA FONTE: Novo salário mínimo 2026: confira o valor do reajuste\nURL DA FONTE: https://blog.convenia.com.br/novo-salario-minimo\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\nDepartamento Pessoal\n\n# Salário mínimo 2026: valor, reajuste e impactos para DP\n\n[Lilian Sierban](https://blog.convenia.com.br/author/lilian-sierban/)\n\n•\n\nAtualizado em 14/07/2026\n\n**O salário mínimo 2026 foi definido e começa a valer em 1º de janeiro.** O novo valor impacta diretamente a folha de pagamento, o salário-hora, benefícios e diversas rotinas do Departamento Pessoal.\n\nCom o **novo salário mínimo fixado em R$ 1.621,00**, DP e RH precisam revisar cálculos, rubricas, contratos e parametrizações nos sistemas para garantir conformidade legal desde a primeira folha do ano.\n\nNeste conteúdo, você confere **qual é o valor do salário mínimo em 2026**, **quanto foi o reajuste**, **quando ele começa a valer** e, principalmente, **o que muda na prática para DP e RH**, com checklist e orientações claras para evitar erros na virada do ano.\n\nVamos lá?\n\n## **Principais aprendizados**\n\n* O **salário mínimo 2026 é de R$ 1.621,00**, com vigência a partir de **1º de janeiro de 2026**.\n\n* O valor corresponde a **R$ 54,04 por ",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The blog post states the daily minimum wage is R$ 54,04 and that it applies from 1 January 2026."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The blog post states the daily minimum wage is R$ 54,04 and that it applies from 1 January 2026."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 318,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2025-12-30"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "BLOG_FORUM",
+      "titulo": "3.1K views · 75 reactions | TRABALHADORES | O novo salário mínimo de R$ 1.621 começa a ser pago nesta segunda-feira (2). O reajuste foi de 6,79%, equivalente a R$ 103.\n\nSegundo o Departamento Intersindical de Estatística e Estudos Socioeconômicos (Dieese), o novo salário mínimo impacta 61,9 milhões de brasileiros. O aumento deve injetar R$ 81,7 bilhões na economia em 2026.\n\nQuanto vale o mínimo em 2026?\nMensal: R$ 1.621;\nDiário: R$ 54,04;\nHora: R$ 7,37.\n\n#salário #brasil #economia #governolula #trabalho #tvtnews #notícias | Rede TVT",
+      "url": "https://www.facebook.com/redetvt/videos/trabalhadores-o-novo-sal%C3%A1rio-m%C3%ADnimo-de-r-1621-come%C3%A7a-a-ser-pago-nesta-segunda-fe/2872395909624979",
+      "conteudo": "[Log In](https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=%2Fredetvt%2Fvideos%2Ftrabalhadores-o-novo-sal%25C3%25A1rio-m%25C3%25ADnimo-de-r-1621-come%25C3%25A7a-a-ser-pago-nesta-segunda-fe%2F2872395909624979)\n\nLog In\n\n[Forgot Account?](https://www.facebook.com/recover/initiate?ars=royal_blue_bar)\n\n# [Video](https://www.facebook.com/watch/)\n\n[Home](https://www.facebook.com/watch/)\n\n[Live](https://www.facebook.com/watch/live/?ref=watch)\n\n[Reels](https://www.facebook.com/reel/?s=bookmark)\n\n[Explore](https://www.facebook.com/watch/topic/)\n\nMore\n\n[Home](https://www.facebook.com/watch/)\n\n[Live](https://www.facebook.com/watch/live/?ref=watch)\n\n[Reels](https://www.faceb…",
+      "coletado_em": "2026-11-13T17:16:53.261Z",
+      "data_publicacao": "2026-02-15",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www.facebook.com/reel/2872395909624979/",
+      "relevancia": 0.8119744,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+       "resultado_id": "76a5ae-02",
+       "response_time_busca": 1.06,
+       "response_time_extracao": 0.03,
+       "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+       "origem_principal": {
+        "id_operacao": "d5137ceb-f7e3-4f53-b74a-91313a3ac6c3",
+        "request_id": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+        "modo_busca": "GERAL",
+        "resultado_id": "76a5ae-02",
+        "parametros": {
+         "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "d5137ceb-f7e3-4f53-b74a-91313a3ac6c3",
+         "request_id": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+         "modo_busca": "GERAL",
+         "resultado_id": "76a5ae-02",
+         "parametros": {
+          "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Sun, 15 Feb 2026 22:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Sun, 15 Feb 2026 22:00:00 GMT",
+         "value_normalized": "2026-02-15",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.facebook.com/reel/2872395909624979/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.facebook.com/redetvt/videos/trabalhadores-o-novo-sal%C3%A1rio-m%C3%ADnimo-de-r-1621-come%C3%A7a-a-ser-pago-nesta-segunda-fe/2872395909624979",
+        "capturado_em": "2026-11-13T17:16:53.485Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "87323d9a-a956-4942-9455-6ce77ad5c7a3",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "543f6a67-f8f4-48d3-8411-87e840cdad0b",
+      "id_verificacao": "65e9ba50-3d62-4a2b-b5d5-e653941e17db",
+      "url_original": "https://www.facebook.com/redetvt/videos/trabalhadores-o-novo-sal%C3%A1rio-m%C3%ADnimo-de-r-1621-come%C3%A7a-a-ser-pago-nesta-segunda-fe/2872395909624979",
+      "url_canonica": "https://www.facebook.com/redetvt/videos/trabalhadores-o-novo-sal%C3%A1rio-m%C3%ADnimo-de-r-1621-come%C3%A7a-a-ser-pago-nesta-segunda-fe/2872395909624979",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "c4b4abb20983c2f0f4fa9fa72e5eaf9b45f86a445dd9e5f79eae88d228184292",
+      "coletado_em": "2026-11-13T17:16:53.261Z",
+      "id_operacao_busca": "d5137ceb-f7e3-4f53-b74a-91313a3ac6c3",
+      "id_operacao_extracao": "e66ee03a-2c5d-457f-a523-3350874e928e",
+      "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+      "parametros_busca": {
+       "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12797.htm",
+        "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+        "https://www.ieprev.com.br/ferramentas/tabela-dos-salarios-minimos",
+        "https://blog.convenia.com.br/novo-salario-minimo",
+        "https://www.facebook.com/redetvt/videos/trabalhadores-o-novo-sal%C3%A1rio-m%C3%ADnimo-de-r-1621-come%C3%A7a-a-ser-pago-nesta-segunda-fe/2872395909624979"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+       "operacoes_busca": [
+        {
+         "id_operacao": "d5137ceb-f7e3-4f53-b74a-91313a3ac6c3",
+         "request_id": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+         "modo_busca": "GERAL",
+         "resultado_id": "76a5ae-02",
+         "parametros": {
+          "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "87323d9a-a956-4942-9455-6ce77ad5c7a3",
+       "resultado_id": "76a5ae-02",
+       "relevancia": 0.8119744,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Sun, 15 Feb 2026 22:00:00 GMT",
+         "value_normalized": "2026-02-15",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.facebook.com/reel/2872395909624979/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.facebook.com/redetvt/videos/trabalhadores-o-novo-sal%C3%A1rio-m%C3%ADnimo-de-r-1621-come%C3%A7a-a-ser-pago-nesta-segunda-fe/2872395909624979",
+        "capturado_em": "2026-11-13T17:16:53.485Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "3.1K views · 75 reactions | TRABALHADORES | O novo salário mínimo de R$ 1.621 começa a ser pago nesta segunda-feira (2). O reajuste foi de 6,79%, equivalente a R$ 103.\n\nSegundo o Departamento Intersindical de Estatística e Estudos Socioeconômicos (Dieese), o novo salário mínimo impacta 61,9 milhões de brasileiros. O aumento deve injetar R$ 81,7 bilhões na economia em 2026.\n\nQuanto vale o mínimo em 2026?\nMensal: R$ 1.621;\nDiário: R$ 54,04;\nHora: R$ 7,37.\n\n#salário #brasil #economia #governolula #trabalho #tvtnews #notícias | Rede TVT",
+      "url": "https://www.facebook.com/redetvt/videos/trabalhadores-o-novo-sal%C3%A1rio-m%C3%ADnimo-de-r-1621-come%C3%A7a-a-ser-pago-nesta-segunda-fe/2872395909624979",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 31676,
+      "caracteres_preparados": 2592,
+      "trecho_analisado": "TÍTULO DA FONTE: 3.1K views · 75 reactions | TRABALHADORES | O novo salário mínimo de R$ 1.621 começa a ser pago nesta segunda-feira (2). O reajuste foi de 6,79%, equivalente a R$ 103.\n\nSegundo o Departamento Intersindical de Estatística e Estudos Socioeconômicos (Dieese), o novo salário mínimo impacta 61,9 milhões de brasileiros. O aumento deve injetar R$ 81,7 bilhões na economia em 2026.\n\nQuanto vale o mínimo em 2026?\nMensal: R$ 1.621;\nDiário: R$ 54,04;\nHora: R$ 7,37.\n\n#salário #brasil #economia #governolula #trabalho #tvtnews #notícias | Rede TVT\nURL DA FONTE: https://www.facebook.com/redetvt/videos/trabalhadores-o-novo-sal%C3%A1rio-m%C3%ADnimo-de-r-1621-come%C3%A7a-a-ser-pago-nesta-segunda-fe/2872395909624979\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n0:00 / 0:00\n\nTRABALHADORES | O novo salário mínimo de R$ 1.621 começa a ser pago nesta segunda-feira (2).\n\nO reajuste foi de 6,79%, equivalente a R$ 103.\n\nSegundo o Departamento Intersindical de Estatística e Estudos Socioeconômicos (Dieese), o novo salário mínimo impacta 61,9 milhões de brasileiros.\n\nO aumento deve injetar R$ 81,7 bilhões na economia em 2026.\n\nQuanto vale o mínimo em 2026?\n\nMensal: R$ 1.621;\n\nDiário: R$ 54,04;\n\nHora: R$",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The video transcript lists the daily minimum wage as R$ 54,04 and notes it began to be paid on 2 February 2026."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The video transcript lists the daily minimum wage as R$ 54,04 and notes it began to be paid on 2 February 2026."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 271,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2026-02-15"
+     }
+    }
+   ],
+   "erro_busca": null,
+   "risco_desatualizacao": {
+    "nivel": "HIGH",
+    "sensivel_ao_tempo": true,
+    "motivos": [
+     "Prices change often (checked against a 30-day window)"
+    ]
+   },
+   "dominios_oficiais_usados": [
+    "gov.br"
+   ],
+   "dominios_oficiais_automaticos": [
+    "gov.br"
+   ],
+   "agregacao": {
+    "status": "CLASSIFICADO",
+    "conclusao_factual": {
+     "status": "APOIA",
+     "resumo": "As evidências utilizáveis apoiam a afirmação. Isso, por si só, não demonstra que ela continua válida agora."
+    },
+    "veredito": "CORROBORADA",
+    "resumo": "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
+    "afirmacao": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+    "score_qualidade_evidencia": {
+     "valor": 40,
+     "escala": "0-100",
+     "natureza": "HEURISTICA",
+     "interpretacao": "Qualidade estrutural das evidências, não probabilidade de verdade.",
+     "componentes": {
+      "autoridade": 10,
+      "atualidade": 0,
+      "diversidade_fontes": 20,
+      "concordancia": 10
+     }
+    },
+    "freshness": {
+     "score": null,
+     "status": "UNVERIFIABLE",
+     "confidence": "INSUFFICIENT",
+     "algorithm_id": "CLAIM_FRESHNESS_SCORE",
+     "algorithm_version": "1.1.0",
+     "policy_id": "preco:30d:v1",
+     "as_of": "2026-11-13T17:16:44.047Z",
+     "evidence_summary": {
+      "received": 4,
+      "eligible": 0,
+      "independent_domains": 0,
+      "excluded": 4
+     },
+     "drivers": [
+      {
+       "code": "NO_ATTRIBUTE_DATED_EVIDENCE"
+      }
+     ],
+     "limitations": [
+      "Não há evidência com data verificável ligada ao atributo desta afirmação."
+     ]
+    },
+    "concordancia": {
+     "algorithm_id": "SOURCE_AGREEMENT_INDEX",
+     "algorithm_version": "1.1.0",
+     "weights": {
+      "OFICIAL": 3,
+      "ACADEMICO": 3,
+      "NOTICIA": 2,
+      "REFERENCIA": 1.5,
+      "OUTRO": 1,
+      "BLOG_FORUM": 0.25
+     },
+     "score": 100,
+     "coverage": "STRONG",
+     "independent_sources": 4,
+     "source_types": [
+      "OFICIAL",
+      "OUTRO",
+      "BLOG_FORUM"
+     ],
+     "supporting": 4,
+     "authoritative_supporting": 1,
+     "contradicting": 0,
+     "split": 0,
+     "by_type": {
+      "OFICIAL": {
+       "supports": 1,
+       "contradicts": 0,
+       "split": 0
+      },
+      "OUTRO": {
+       "supports": 1,
+       "contradicts": 0,
+       "split": 0
+      },
+      "BLOG_FORUM": {
+       "supports": 2,
+       "contradicts": 0,
+       "split": 0
+      }
+     },
+     "limitations": [
+      "Agreement between sources is not a probability of truth: sources can share the same mistake.",
+      "Copies and pages from the same site count once; independence is approximated by domain and text similarity."
+     ]
+    },
+    "recencia_pagina": {
+     "algorithm_id": "PAGE_DATE_RECENCY_INDEX",
+     "algorithm_version": "1.0.0",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "as_of": "2026-11-13T17:16:44.047Z",
+     "score": 0,
+     "status": "STALE",
+     "policy_id": "preco:30d:page:v1",
+     "newest_date": "2026-05-18",
+     "sources": [
+      {
+       "date": "2025-12-24",
+       "age_days": 324,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "domain": "planalto.gov.br",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-05-18",
+       "age_days": 179,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "domain": "barbieriadvogados.com",
+       "evidence_id": null
+      },
+      {
+       "date": "2025-12-30",
+       "age_days": 318,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "domain": "blog.convenia.com.br",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-02-15",
+       "age_days": 271,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "domain": "facebook.com",
+       "evidence_id": null
+      }
+     ],
+     "limitations": [
+      "Baseado na data da página, não na data em que o dado específico mudou: confiança baixa.",
+      "Não substitui o índice de atualidade principal e não é probabilidade de verdade."
+     ]
+    },
+    "atualidade_afirmacao": {
+     "algorithm_id": "CLAIM_CURRENCY_SCORE",
+     "algorithm_version": "1.1.0",
+     "formula": "evidence_recency × support_share",
+     "window_days": 30,
+     "score": 0,
+     "status": "AGING",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "evidence_recency": 0,
+     "support_share": 1,
+     "newest_date": "2026-05-18",
+     "newest_age_days": 179,
+     "within_window": false
+    },
+    "versao_regras": "1.2.0",
+    "metodo": "AGREGACAO_DETERMINISTICA",
+    "fontes_independentes": 4,
+    "grupos_distintos_de_evidencia": 4,
+    "dependencia_detectada": 0,
+    "dependencia_nao_verificada": true,
+    "nota_independencia": "Cópias exatas, quase duplicadas, URLs canônicas iguais e páginas do mesmo domínio são agrupadas; domínios sem sinal de cópia não têm independência editorial comprovada.",
+    "total_evidencias_utilizaveis": 4,
+    "fontes": [
+     {
+      "dominio": "planalto.gov.br",
+      "dominios": [
+       "planalto.gov.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_001",
+      "oficial": true,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12797.htm"
+      ],
+      "evidencias": [
+       {
+        "titulo": "D12797",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12797.htm",
+        "categoria_fonte": "OFICIAL",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T17:16:53.261Z",
+        "data_publicacao": "2025-12-24",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Wed, 24 Dec 2025 00:00:00 GMT",
+          "value_normalized": "2025-12-24",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_001",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "barbieriadvogados.com",
+      "dominios": [
+       "barbieriadvogados.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_002",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Salário mínimo 2026: valor, reajuste, tabela e impactos",
+        "url": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+        "categoria_fonte": "OUTRO",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T17:16:53.261Z",
+        "data_publicacao": "2026-05-18",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Mon, 18 May 2026 20:00:00 GMT",
+          "value_normalized": "2026-05-18",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2026-05-18T17:00:00-03:00",
+          "value_normalized": "2026-05-18",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "ARTICLE_MODIFIED_TIME",
+          "field": "article:modified_time",
+          "value_original": "2026-11-07T23:56:07-03:00",
+          "value_normalized": "2026-11-08",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-05-18T17:00:00-03:00",
+          "value_normalized": "2026-05-18",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "webpage"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-11-07T23:56:07-03:00",
+          "value_normalized": "2026-11-08",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "webpage"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-05-18",
+          "value_normalized": "2026-05-18",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "blogposting"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-11-07",
+          "value_normalized": "2026-11-07",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "blogposting"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_002",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "blog.convenia.com.br",
+      "dominios": [
+       "blog.convenia.com.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_003",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://blog.convenia.com.br/novo-salario-minimo"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Novo salário mínimo 2026: confira o valor do reajuste",
+        "url": "https://blog.convenia.com.br/novo-salario-minimo",
+        "categoria_fonte": "BLOG_FORUM",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T17:16:53.261Z",
+        "data_publicacao": "2025-12-30",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Tue, 30 Dec 2025 02:13:41 GMT",
+          "value_normalized": "2025-12-30",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Fri, 13 Nov 2026 16:01:14 GMT",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://blog.convenia.com.br/novo-salario-minimo/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2025-12-30T02:13:41+00:00",
+          "value_normalized": "2025-12-30",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "ARTICLE_MODIFIED_TIME",
+          "field": "article:modified_time",
+          "value_original": "2026-07-14T22:53:58+00:00",
+          "value_normalized": "2026-07-14",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2025-12-30T02:13:41+00:00",
+          "value_normalized": "2025-12-30",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-07-14T22:53:58+00:00",
+          "value_normalized": "2026-07-14",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Atualizado em",
+          "value_original": "14/07/2026",
+          "value_normalized": "2026-07-14",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         },
+         {
+          "signal_type": "EXPLICIT_ATTRIBUTE_UPDATE_DATE",
+          "field": "visible_text_date",
+          "value_original": "14/07/2026",
+          "value_normalized": "2026-07-14",
+          "scope": "UNKNOWN",
+          "source": "VISIBLE_TEXT",
+          "match_basis": "attribute_cue_without_exact_claim_match",
+          "context": "esso Materiais gratuitos Testar Convenia Grátis Testar Convenia Gratuitamente Departamento Pessoal Salário mínimo 2026: valor, reajuste e impactos para DP Lilian Sierban • 29/12/2025 • --> 5 min de leitura • Atualizado em 14/07/2026 O salário mínimo 2026 foi definido e começa a valer em 1º de janeir",
+          "parse_status": "PARSED"
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Atualizado em",
+          "value_original": "14/07/2026",
+          "value_normalized": "2026-07-14",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_003",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "facebook.com",
+      "dominios": [
+       "facebook.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_004",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.facebook.com/redetvt/videos/trabalhadores-o-novo-sal%C3%A1rio-m%C3%ADnimo-de-r-1621-come%C3%A7a-a-ser-pago-nesta-segunda-fe/2872395909624979"
+      ],
+      "evidencias": [
+       {
+        "titulo": "3.1K views · 75 reactions | TRABALHADORES | O novo salário mínimo de R$ 1.621 começa a ser pago nesta segunda-feira (2). O reajuste foi de 6,79%, equivalente a R$ 103.\n\nSegundo o Departamento Intersindical de Estatística e Estudos Socioeconômicos (Dieese), o novo salário mínimo impacta 61,9 milhões de brasileiros. O aumento deve injetar R$ 81,7 bilhões na economia em 2026.\n\nQuanto vale o mínimo em 2026?\nMensal: R$ 1.621;\nDiário: R$ 54,04;\nHora: R$ 7,37.\n\n#salário #brasil #economia #governolula #trabalho #tvtnews #notícias | Rede TVT",
+        "url": "https://www.facebook.com/redetvt/videos/trabalhadores-o-novo-sal%C3%A1rio-m%C3%ADnimo-de-r-1621-come%C3%A7a-a-ser-pago-nesta-segunda-fe/2872395909624979",
+        "categoria_fonte": "BLOG_FORUM",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T17:16:53.261Z",
+        "data_publicacao": "2026-02-15",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Sun, 15 Feb 2026 22:00:00 GMT",
+          "value_normalized": "2026-02-15",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.facebook.com/reel/2872395909624979/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_004",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     }
+    ],
+    "limitacoes": [
+     "Nenhuma evidência possui data verificável e status de atualidade FRESH.",
+     "Uma data da página ou do resultado de busca não comprova quando o atributo da afirmação foi publicado ou atualizado.",
+     "Domínios sem sinal detectado de duplicação não têm independência editorial comprovada; republicação com edição extensa ainda pode passar despercebida."
+    ],
+    "avaliado_em": "2026-11-13T17:16:57.911Z"
+   }
+  }
+ ],
+ "afirmacoes_omitidas": [],
+ "resposta_corrigida": {
+  "texto": null,
+  "erro": "Erro Bifrost (429): {\"is_bifrost_error\":false,\"status_code\":429,\"error\":{\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\",\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_<redacted>` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 198845, Requested 2162. Please try again in 7m15.024s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\"},\"extra_fields\":{\"routing_info\":{\"provider\":\"groq\",\"model\":\"openai/gpt-oss-120b\",\"key\":\"entrelinhas-dev-nova\",\"requested_provider\":\"groq\",\"requested_model\":\"openai/gpt-oss-120b\"},\"provider\":\"groq\",\"original_model_requested\":\"openai/gpt-oss-120b\",\"resolved_model_used\":\"openai/gpt-oss-120b\",\"request_type\":\"chat_completion\",\"latency\":39,\"retry_after_ms\":300000}}"
+ },
+ "rastreabilidade_modelo": [
+  {
+   "id_chamada": "a2c9c362-ebe2-4664-8ffc-ffbc3d3991b4",
+   "id_requisicao_enviada": "2e4009c0-d73b-4686-b68b-56b484d9f0c3",
+   "id_verificacao": "65e9ba50-3d62-4a2b-b5d5-e653941e17db",
+   "etapa": "DECOMPOSICAO",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-120b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 697,
+   "tokens": {
+    "entrada": 847,
+    "saida": 147,
+    "total": 994
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-120b",
+   "id_bifrost": "2e4009c0-d73b-4686-b68b-56b484d9f0c3",
+   "id_trace": "a7350022dc174630bac56ae094d299a0",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 697.257,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T17:16:44.048Z"
+  },
+  {
+   "id_chamada": "6b6647a2-7c62-44cd-9a05-8bbf5d23845f",
+   "id_requisicao_enviada": "b19fb75f-ed0e-42f1-a116-1bb8d1c798f1",
+   "id_verificacao": "65e9ba50-3d62-4a2b-b5d5-e653941e17db",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-120b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 4302,
+   "tokens": {
+    "entrada": 4103,
+    "saida": 1788,
+    "total": 5891
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-120b",
+   "id_bifrost": "b19fb75f-ed0e-42f1-a116-1bb8d1c798f1",
+   "id_trace": "f2999f444fea4c55843d45836b050870",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 4302.921,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T17:16:53.538Z"
+  },
+  {
+   "id_chamada": "834cb714-c36d-4442-a1e2-aad62dc6136b",
+   "id_requisicao_enviada": "636318a5-61b4-49b8-94f3-26b46244a798",
+   "id_verificacao": "65e9ba50-3d62-4a2b-b5d5-e653941e17db",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-120b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": null,
+   "servido_por": null,
+   "latencia_total_s": null,
+   "tokens": null,
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-120b",
+   "id_bifrost": "636318a5-61b4-49b8-94f3-26b46244a798",
+   "id_trace": "df612aa2d0144a44a83e2cec9d054fa6",
+   "indice_fallback": null,
+   "latencia_upstream_ms": null,
+   "status_http": 429,
+   "status": "ERRO_HTTP",
+   "registrada_em": "2026-11-13T17:16:57.911Z",
+   "erro": "{\"is_bifrost_error\":false,\"status_code\":429,\"error\":{\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\",\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_<redacted>` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 198845, Requested 2162. Please try again in 7m15.024s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\"},\"extra_fields\":{\"routing_info\":{\"provider\":\"groq\",\"model\":\"openai/gpt-oss-120b\",\"key\":\"entrelinhas-dev-nova\",\"requested_provider\":\"groq\",\"requested_model\":\"openai/gpt-oss-120b\"},\"provider\":\"groq\",\"original_model_requested\":\"openai/gpt-oss-120b\",\"resolved_model_used\":\"openai/gpt-oss-120b\",\"request_type\":\"chat_completion\",\"latency\":39,\"retry_after_ms\":300000}}"
+  }
+ ],
+ "rastreabilidade_pesquisa": [
+  {
+   "id_operacao": "d5137ceb-f7e3-4f53-b74a-91313a3ac6c3",
+   "id_verificacao": "65e9ba50-3d62-4a2b-b5d5-e653941e17db",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T17:16:44.832Z",
+   "finalizada_em": "2026-11-13T17:16:46.377Z",
+   "duracao_ms": 1545,
+   "request_id": "f336a648-dcc3-4bf8-b62f-768086f54bb1",
+   "response_time": 1.06,
+   "erro": null,
+   "modo_busca": "GERAL",
+   "parametros": {
+    "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true,
+    "country": "brazil"
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "89ca1b-00",
+     "titulo": "Salário mínimo 2026: valor, reajuste, tabela e impactos",
+     "url": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+     "relevancia": 0.8498466,
+     "data_publicacao": "2026-05-18"
+    },
+    {
+     "resultado_id": "e12353-01",
+     "titulo": "Novo salário mínimo 2026: confira o valor do reajuste",
+     "url": "https://blog.convenia.com.br/novo-salario-minimo",
+     "relevancia": 0.8433798,
+     "data_publicacao": "2025-12-30"
+    },
+    {
+     "resultado_id": "76a5ae-02",
+     "titulo": "3.1K views · 75 reactions | TRABALHADORES | O novo salário mínimo de R$ 1.621 começa a ser pago nesta segunda-feira (2). O reajuste foi de 6,79%, equivalente a R$ 103.\n\nSegundo o Departamento Intersindical de Estatística e Estudos Socioeconômicos (Dieese), o novo salário mínimo impacta 61,9 milhões de brasileiros. O aumento deve injetar R$ 81,7 bilhões na economia em 2026.\n\nQuanto vale o mínimo em 2026?\nMensal: R$ 1.621;\nDiário: R$ 54,04;\nHora: R$ 7,37.\n\n#salário #brasil #economia #governolula #trabalho #tvtnews #notícias | Rede TVT",
+     "url": "https://www.facebook.com/redetvt/videos/trabalhadores-o-novo-sal%C3%A1rio-m%C3%ADnimo-de-r-1621-come%C3%A7a-a-ser-pago-nesta-segunda-fe/2872395909624979",
+     "relevancia": 0.8119744,
+     "data_publicacao": "2026-02-15"
+    },
+    {
+     "resultado_id": "5e71dc-03",
+     "titulo": "D12797",
+     "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12797.htm",
+     "relevancia": 0.7627777,
+     "data_publicacao": "2025-12-24"
+    },
+    {
+     "resultado_id": "026db3-04",
+     "titulo": "Tabela dos Salários Mínimos | IEPREV",
+     "url": "https://www.ieprev.com.br/ferramentas/tabela-dos-salarios-minimos",
+     "relevancia": 0.5733799,
+     "data_publicacao": "2025-09-02"
+    }
+   ]
+  },
+  {
+   "id_operacao": "9ad43a29-ce6f-4661-b749-d54e783aaf6b",
+   "id_verificacao": "65e9ba50-3d62-4a2b-b5d5-e653941e17db",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T17:16:46.378Z",
+   "finalizada_em": "2026-11-13T17:16:51.709Z",
+   "duracao_ms": 5331,
+   "request_id": "2734ce84-d6e1-4ace-b220-74286d7e9ab3",
+   "response_time": 4.87,
+   "erro": null,
+   "modo_busca": "NOTICIAS_BR",
+   "parametros": {
+    "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+    "search_depth": "basic",
+    "max_results": 4,
+    "include_answer": false,
+    "include_published_date": true,
+    "topic": "news",
+    "time_range": "month",
+    "include_domains": [
+     "g1.globo.com",
+     "oglobo.globo.com",
+     "valor.globo.com",
+     "folha.uol.com.br",
+     "uol.com.br",
+     "estadao.com.br",
+     "agenciabrasil.ebc.com.br",
+     "cnnbrasil.com.br",
+     "infomoney.com.br",
+     "exame.com",
+     "poder360.com.br",
+     "correiobraziliense.com.br",
+     "metropoles.com",
+     "veja.abril.com.br",
+     "terra.com.br",
+     "band.com.br",
+     "r7.com",
+     "bbc.com",
+     "jota.info",
+     "canaltech.com.br"
+    ]
+   },
+   "quantidade_resultados": 4,
+   "resultados": [
+    {
+     "resultado_id": "5250c4-00",
+     "titulo": "Brazil's Congress approves shorter workweek in win for Lula - BBC",
+     "url": "https://www.bbc.com/news/articles/cmwy43pp08elo",
+     "relevancia": 0.011115014,
+     "data_publicacao": "2026-10-15"
+    },
+    {
+     "resultado_id": "3a106a-01",
+     "titulo": "Brazil election: How a changing working class is reshaping the presidential race - BBC",
+     "url": "https://www.bbc.com/news/articles/cw80zx79nkvno",
+     "relevancia": 0.006145092,
+     "data_publicacao": "2026-10-24"
+    },
+    {
+     "resultado_id": "480cc1-02",
+     "titulo": "How do US voters rate Trump's presidency so far? - BBC",
+     "url": "https://www.bbc.com/news/videos/cqr7yk2pe1jlo",
+     "relevancia": 0.005281334,
+     "data_publicacao": "2026-11-03"
+    },
+    {
+     "resultado_id": "3e86ee-03",
+     "titulo": "Bolsonaro and Lula supporters rally ahead of Brazil election - BBC",
+     "url": "https://www.bbc.com/news/videos/c6j9kr72v90no",
+     "relevancia": 0.0037654135,
+     "data_publicacao": "2026-10-25"
+    }
+   ]
+  },
+  {
+   "id_operacao": "e66ee03a-2c5d-457f-a523-3350874e928e",
+   "id_verificacao": "65e9ba50-3d62-4a2b-b5d5-e653941e17db",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "EXTRACAO",
+   "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T17:16:51.711Z",
+   "finalizada_em": "2026-11-13T17:16:53.261Z",
+   "duracao_ms": 1550,
+   "request_id": "87323d9a-a956-4942-9455-6ce77ad5c7a3",
+   "response_time": 0.03,
+   "erro": null,
+   "urls_solicitadas": [
+    "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12797.htm",
+    "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+    "https://www.ieprev.com.br/ferramentas/tabela-dos-salarios-minimos",
+    "https://blog.convenia.com.br/novo-salario-minimo",
+    "https://www.facebook.com/redetvt/videos/trabalhadores-o-novo-sal%C3%A1rio-m%C3%ADnimo-de-r-1621-come%C3%A7a-a-ser-pago-nesta-segunda-fe/2872395909624979"
+   ],
+   "parametros": {
+    "urls": [
+     "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12797.htm",
+     "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+     "https://www.ieprev.com.br/ferramentas/tabela-dos-salarios-minimos",
+     "https://blog.convenia.com.br/novo-salario-minimo",
+     "https://www.facebook.com/redetvt/videos/trabalhadores-o-novo-sal%C3%A1rio-m%C3%ADnimo-de-r-1621-come%C3%A7a-a-ser-pago-nesta-segunda-fe/2872395909624979"
+    ],
+    "extract_depth": "basic",
+    "format": "markdown",
+    "include_images": false
+   },
+   "quantidade_resultados": 5,
+   "urls_extraidas": [
+    "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12797.htm",
+    "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+    "https://www.ieprev.com.br/ferramentas/tabela-dos-salarios-minimos",
+    "https://blog.convenia.com.br/novo-salario-minimo",
+    "https://www.facebook.com/redetvt/videos/trabalhadores-o-novo-sal%C3%A1rio-m%C3%ADnimo-de-r-1621-come%C3%A7a-a-ser-pago-nesta-segunda-fe/2872395909624979"
+   ]
+  }
+ ],
+ "modo": "real",
+ "simulado": false,
+ "gateway": {
+  "gateway": "bifrost",
+  "chamadas": 3,
+  "falhas": 1,
+  "cadeia_modelos": [
+   "groq/openai/gpt-oss-120b"
+  ],
+  "queda_simulada": false,
+  "respostas_por_modelo": [
+   {
+    "modelo": "groq/openai/gpt-oss-120b",
+    "chamadas": 2
+   }
+  ],
+  "respostas_de_reserva": 0,
+  "tokens_total": 6885,
+  "latencia_media_ms": 2500
+ },
+ "duracao_ms": 13924,
+ "gravado_em": "2026-11-13T17:16:57.969Z"
+}

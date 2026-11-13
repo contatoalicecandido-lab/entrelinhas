@@ -1,0 +1,1964 @@
+{
+ "sistema": "Entrelinhas",
+ "id_verificacao": "a17c3d57-3e2f-480e-8bf2-1148116cf30e",
+ "texto_original": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+ "verificado_em": "2026-11-13T17:15:58.993Z",
+ "total_afirmacoes": 1,
+ "sintese": {
+  "veredito": "CORROBORADA",
+  "resumo": "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
+  "total_afirmacoes": 1,
+  "contagem_vereditos": {
+   "CORROBORADA": 1
+  }
+ },
+ "afirmacoes": [
+  {
+   "id": "afirmacao_1",
+   "texto": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+   "tipo_afirmacao": "empresa",
+   "origem_tipo_afirmacao": "MODELO",
+   "nuances": {
+    "idioma": "en",
+    "variante": null,
+    "confianca_idioma": 1,
+    "valores": [],
+    "datas": [],
+    "expressoes_temporais": [],
+    "condicoes": [],
+    "mudancas": [],
+    "tempo_coloquial": [],
+    "girias": {
+     "aliases": [],
+     "expressoes": []
+    },
+    "consulta_busca": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+    "dominios_oficiais_sugeridos": [],
+    "autoridades": [],
+    "notas": []
+   },
+   "evidencias": [
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "REFERENCIA",
+      "titulo": "Sundar Pichai - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sundar_Pichai",
+      "conteudo": "[Jump to content](#bodyContent)\n\n[![](/static/images/icons/enwiki-25.svg)  ![Wikipedia](/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](/wiki/Main_Page)\n\n[Search](/wiki/Special:Search \"Search Wikipedia [f]\")\n\n## Contents\n\n* [1 Early life and education](#Early_life_and_education)\n* [2 Career](#Career)\n* [3 Awards and recognition](#Awards_and_recognition)\n* [4 Personal life](#Personal_life)\n* [5 Notes](#Notes)\n* [6 References](#References)\n* [7 Further reading](#Further_reading)\n* [8 External links](#External_links)\n\n# Sundar Pichai\n\n* [العربية](https://ar.wikipedia.org/wiki/%D8%B3%D8%A7%D9%86%…",
+      "coletado_em": "2026-11-13T17:15:50.904Z",
+      "data_publicacao": "2026-11-01",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://en.wikipedia.org/wiki/Sundar_Pichai",
+      "relevancia": 0.87191176,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+       "resultado_id": "e9cdef-00",
+       "response_time_busca": 1.92,
+       "response_time_extracao": 0.03,
+       "consulta": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+       "origem_principal": {
+        "id_operacao": "c665a4a8-94db-4f72-995f-1ef70961b256",
+        "request_id": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+        "modo_busca": "GERAL",
+        "resultado_id": "e9cdef-00",
+        "parametros": {
+         "query": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "c665a4a8-94db-4f72-995f-1ef70961b256",
+         "request_id": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+         "modo_busca": "GERAL",
+         "resultado_id": "e9cdef-00",
+         "parametros": {
+          "query": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Sun, 01 Nov 2026 15:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Sun, 01 Nov 2026 15:00:00 GMT",
+         "value_normalized": "2026-11-01",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 07:22:32 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://en.wikipedia.org/wiki/Sundar_Pichai",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2009-11-23T04:54:36Z",
+         "value_normalized": "2009-11-23",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-11T11:42:40Z",
+         "value_normalized": "2026-11-11",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://en.wikipedia.org/wiki/Sundar_Pichai",
+        "capturado_em": "2026-11-13T17:15:50.747Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "db696b85-35e9-4943-a196-c4bd84341d81",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "b44b728f-dfba-4ab2-b794-7c45aae8a848",
+      "id_verificacao": "a17c3d57-3e2f-480e-8bf2-1148116cf30e",
+      "url_original": "https://en.wikipedia.org/wiki/Sundar_Pichai",
+      "url_canonica": "https://en.wikipedia.org/wiki/Sundar_Pichai",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "3bf6396090e7bd5e19456519d47b915b00eca7f1dc4a20a6a38f1d31d5e151a9",
+      "coletado_em": "2026-11-13T17:15:50.904Z",
+      "id_operacao_busca": "c665a4a8-94db-4f72-995f-1ef70961b256",
+      "id_operacao_extracao": "28819c1c-aa15-42d6-8bd0-9e1bf80d0419",
+      "consulta": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+      "parametros_busca": {
+       "query": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://en.wikipedia.org/wiki/Sundar_Pichai",
+        "https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google",
+        "https://live.worldbank.org/en/experts/s/sundar-pichai",
+        "https://www.businessroundtable.org/members/sundar-pichai",
+        "https://www.facebook.com/ForbesMENA.English/posts/sundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af/1637329771736243"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+       "operacoes_busca": [
+        {
+         "id_operacao": "c665a4a8-94db-4f72-995f-1ef70961b256",
+         "request_id": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+         "modo_busca": "GERAL",
+         "resultado_id": "e9cdef-00",
+         "parametros": {
+          "query": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "db696b85-35e9-4943-a196-c4bd84341d81",
+       "resultado_id": "e9cdef-00",
+       "relevancia": 0.87191176,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Sun, 01 Nov 2026 15:00:00 GMT",
+         "value_normalized": "2026-11-01",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 07:22:32 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://en.wikipedia.org/wiki/Sundar_Pichai",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2009-11-23T04:54:36Z",
+         "value_normalized": "2009-11-23",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-11T11:42:40Z",
+         "value_normalized": "2026-11-11",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://en.wikipedia.org/wiki/Sundar_Pichai",
+        "capturado_em": "2026-11-13T17:15:50.747Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Sundar Pichai - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sundar_Pichai",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 160700,
+      "caracteres_preparados": 7997,
+      "trecho_analisado": "TÍTULO DA FONTE: Sundar Pichai - Wikipedia\nURL DA FONTE: https://en.wikipedia.org/wiki/Sundar_Pichai\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\nFrom Wikipedia, the free encyclopedia\n\nCEO of Alphabet Inc.\n\nand Google (born 1972)\n\n| Sundar Pichai |\n\n| Awards | [Padma Bhushan](https://en.wikipedia.org/wiki/Padma_Bhushan \"Padma Bhushan\") (2022) |\n\n| [Sundar Pichai's voice](https://en.wikipedia.org/wiki/File:Sundar_Pichai_on_being_CEO_of_Google.ogg \"File:Sundar Pichai on being CEO of Google.ogg\")    Pichai on being chief executive officer of Google Recorded December 11, 2018 |\n\n| Signature |\n\n**Pichai Sundararajan** (born June 10, 1972), better known as **Sundar Pichai**,[[a]](#cite_note-pron-4) is an Indian–American business executive who has been the [CEO](https://en.wikipedia.org/wiki/CEO \"CEO\") of [Google](https://en.wikipedia.org/wiki/Google \"Google\") since 2015 and the CEO of its parent company [Alphabet Inc.](https://en.wikipedia.org/wiki/Alphabet_Inc.\n\n\"Alphabet Inc.\") since 2019.[[4]](#cite_note-5)[[5]](#cite_note-6)[[6]](#cite_note-7)\n\nPichai speaking at the 2015 [Mobile World Congress](https://en.wikipedia.org/wiki/Mobile_World_Congress \"Mobile World Congress\")\n\nPichai worked in eng",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source states that Sundar Pichai became CEO of Alphabet in December 2019 and has been CEO since then, matching the claim."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The source states that Sundar Pichai became CEO of Alphabet in December 2019 and has been CEO since then, matching the claim."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 12,
+      "validade_maxima_dias": 180,
+      "data_utilizada": "2026-11-01"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Sundar Pichai: CEO of Alphabet and Google",
+      "url": "https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google",
+      "conteudo": "[Book demo](/contact-sales?source=header)\n\n[Log in](https://web.quartr.com)\n\nBusiness philosophy\n\n![](https://a.storyblok.com/f/182663/2000x1125/7d01d6ef34/alphabet-ceo_sundar-pichai.png/m/3840x0/filters:quality(85))\n\n[Written by Peter Westberg](https://quartr.com/insights/author/peter-westberg)\n\nUpdated\n\n# Sundar Pichai: CEO of Alphabet and Google\n\n[Written by Peter Westberg](https://quartr.com/insights/author/peter-westberg)\n\nExplore the remarkable story of Sundar Pichai, CEO of Alphabet and Google, who rose from a modest upbringing in Chennai, India, to become one of the most influential individuals globally. This article dives into Pichai's early life, his educational journey, and his pi…",
+      "coletado_em": "2026-11-13T17:15:50.904Z",
+      "data_publicacao": "2024-04-19",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google",
+      "relevancia": 0.86647177,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+       "resultado_id": "21321f-03",
+       "response_time_busca": 1.92,
+       "response_time_extracao": 0.03,
+       "consulta": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+       "origem_principal": {
+        "id_operacao": "c665a4a8-94db-4f72-995f-1ef70961b256",
+        "request_id": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+        "modo_busca": "GERAL",
+        "resultado_id": "21321f-03",
+        "parametros": {
+         "query": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "c665a4a8-94db-4f72-995f-1ef70961b256",
+         "request_id": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+         "modo_busca": "GERAL",
+         "resultado_id": "21321f-03",
+         "parametros": {
+          "query": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Fri, 19 Apr 2024 14:04:22 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 19 Apr 2024 14:04:22 GMT",
+         "value_normalized": "2024-04-19",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2024-04-19T14:04:22.250Z",
+         "value_normalized": "2024-04-19",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2025-09-15T12:40:07.184Z",
+         "value_normalized": "2025-09-15",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2024-04-19T14:16:52.032Z",
+         "value_normalized": "2024-04-19",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2025-09-15T12:40:07.184Z",
+         "value_normalized": "2025-09-15",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google",
+        "capturado_em": "2026-11-13T17:15:51.132Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "db696b85-35e9-4943-a196-c4bd84341d81",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "51588e0d-a562-43b6-9ecd-5390e93cf48b",
+      "id_verificacao": "a17c3d57-3e2f-480e-8bf2-1148116cf30e",
+      "url_original": "https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google",
+      "url_canonica": "https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "6b53ed6d89c644ee7ec04c95fa8027ad927093ddb8258715d04c545c38397b22",
+      "coletado_em": "2026-11-13T17:15:50.904Z",
+      "id_operacao_busca": "c665a4a8-94db-4f72-995f-1ef70961b256",
+      "id_operacao_extracao": "28819c1c-aa15-42d6-8bd0-9e1bf80d0419",
+      "consulta": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+      "parametros_busca": {
+       "query": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://en.wikipedia.org/wiki/Sundar_Pichai",
+        "https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google",
+        "https://live.worldbank.org/en/experts/s/sundar-pichai",
+        "https://www.businessroundtable.org/members/sundar-pichai",
+        "https://www.facebook.com/ForbesMENA.English/posts/sundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af/1637329771736243"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+       "operacoes_busca": [
+        {
+         "id_operacao": "c665a4a8-94db-4f72-995f-1ef70961b256",
+         "request_id": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+         "modo_busca": "GERAL",
+         "resultado_id": "21321f-03",
+         "parametros": {
+          "query": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "db696b85-35e9-4943-a196-c4bd84341d81",
+       "resultado_id": "21321f-03",
+       "relevancia": 0.86647177,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 19 Apr 2024 14:04:22 GMT",
+         "value_normalized": "2024-04-19",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2024-04-19T14:04:22.250Z",
+         "value_normalized": "2024-04-19",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2025-09-15T12:40:07.184Z",
+         "value_normalized": "2025-09-15",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2024-04-19T14:16:52.032Z",
+         "value_normalized": "2024-04-19",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2025-09-15T12:40:07.184Z",
+         "value_normalized": "2025-09-15",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google",
+        "capturado_em": "2026-11-13T17:15:51.132Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Sundar Pichai: CEO of Alphabet and Google",
+      "url": "https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 10171,
+      "caracteres_preparados": 7948,
+      "trecho_analisado": "TÍTULO DA FONTE: Sundar Pichai: CEO of Alphabet and Google\nURL DA FONTE: https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\nBusiness philosophy\n\n![](https://a.storyblok.com/f/182663/2000x1125/7d01d6ef34/alphabet-ceo_sundar-pichai.png/m/3840x0/filters:quality(85))\n\n[Written by Peter Westberg](https://quartr.com/insights/author/peter-westberg)\n\nUpdated\n\n# Sundar Pichai: CEO of Alphabet and Google\n\n[Written by Peter Westberg](https://quartr.com/insights/author/peter-westberg)\n\nExplore the remarkable story of Sundar Pichai, CEO of Alphabet and Google, who rose from a modest upbringing in Chennai, India, to become one of the most influential individuals globally.\n\nThis article dives into Pichai's early life, his educational journey, and his pivotal contributions to Google, highlighting his determination, visionary leadership, and unique blend of technical expertise and emotional intelligence that have shaped his path to immense success.\n\n## Key Insights\n\n* Rise from humble beginnings: Growing up in a modest home in Chennai, India, Sundar Pichai's journey to becoming the CEO of Alphabet and Google is a testament to",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The article explicitly says Sundar Pichai has served as CEO of Alphabet, starting in 2019, confirming the claim."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The article explicitly says Sundar Pichai has served as CEO of Alphabet, starting in 2019, confirming the claim."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 938,
+      "validade_maxima_dias": 180,
+      "data_utilizada": "2024-04-19"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "REFERENCIA",
+      "titulo": "Sundar Pichai | World Bank Live",
+      "url": "https://live.worldbank.org/en/experts/s/sundar-pichai",
+      "conteudo": "[Skip to Main Navigation](#main)\n\nLive Event\n\n[![World Bank Live](https://s7d1.scene7.com/is/image/wbcollab/sitename_en_1?qlt=75&resMode=sharp2 \"World Bank Live\") World Bank Live](https://live.worldbank.org/en/home)\n\nLive Event\n\n* [English](https://live.worldbank.org/en/experts/s/sundar-pichai)\n* [العربية](https://live.albankaldawli.org/ar/experts/s/swndar-bytshay)\n* [Français](https://live.banquemondiale.org/fr/experts/s/sundar-pichai)\n* [Español](https://envivo.bancomundial.org/es/experts/s/sundar-pichai)\n\n\n\nFeatured Speaker\n\n![Sundar  Pichai](https://s7d1.scene7.com/is/image/wbcollab/sundar_pichai_google_ceo-1?qlt=75&resMode=sharp2 \"Sundar  Pichai\")\n\n# Sundar Pichai\n\n## CEO, Google and Al…",
+      "coletado_em": "2026-11-13T17:15:50.904Z",
+      "data_publicacao": null,
+      "data_atualizacao": null,
+      "escopo_data": "UNKNOWN",
+      "canonical_url": "https://live.worldbank.org/en/experts/s/sundar-pichai",
+      "relevancia": 0.8671483,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+       "resultado_id": "b73c13-02",
+       "response_time_busca": 1.92,
+       "response_time_extracao": 0.03,
+       "consulta": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+       "origem_principal": {
+        "id_operacao": "c665a4a8-94db-4f72-995f-1ef70961b256",
+        "request_id": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+        "modo_busca": "GERAL",
+        "resultado_id": "b73c13-02",
+        "parametros": {
+         "query": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "c665a4a8-94db-4f72-995f-1ef70961b256",
+         "request_id": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+         "modo_busca": "GERAL",
+         "resultado_id": "b73c13-02",
+         "parametros": {
+          "query": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": null,
+       "sinais_data": [
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Wed, 11 Nov 2026 01:04:55 GMT",
+         "value_normalized": "2026-11-11",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://live.worldbank.org/en/experts/s/sundar-pichai",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://live.worldbank.org/en/experts/s/sundar-pichai",
+        "capturado_em": "2026-11-13T17:15:50.788Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "db696b85-35e9-4943-a196-c4bd84341d81",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "59409b64-8193-45ae-986d-61eca356ff3b",
+      "id_verificacao": "a17c3d57-3e2f-480e-8bf2-1148116cf30e",
+      "url_original": "https://live.worldbank.org/en/experts/s/sundar-pichai",
+      "url_canonica": "https://live.worldbank.org/en/experts/s/sundar-pichai",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "36402b29807b7dfed452a58c349e8ceae66aa2cb4155897afd0f9462a95cf037",
+      "coletado_em": "2026-11-13T17:15:50.904Z",
+      "id_operacao_busca": "c665a4a8-94db-4f72-995f-1ef70961b256",
+      "id_operacao_extracao": "28819c1c-aa15-42d6-8bd0-9e1bf80d0419",
+      "consulta": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+      "parametros_busca": {
+       "query": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://en.wikipedia.org/wiki/Sundar_Pichai",
+        "https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google",
+        "https://live.worldbank.org/en/experts/s/sundar-pichai",
+        "https://www.businessroundtable.org/members/sundar-pichai",
+        "https://www.facebook.com/ForbesMENA.English/posts/sundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af/1637329771736243"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+       "operacoes_busca": [
+        {
+         "id_operacao": "c665a4a8-94db-4f72-995f-1ef70961b256",
+         "request_id": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+         "modo_busca": "GERAL",
+         "resultado_id": "b73c13-02",
+         "parametros": {
+          "query": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "db696b85-35e9-4943-a196-c4bd84341d81",
+       "resultado_id": "b73c13-02",
+       "relevancia": 0.8671483,
+       "sinais_data": [
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Wed, 11 Nov 2026 01:04:55 GMT",
+         "value_normalized": "2026-11-11",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://live.worldbank.org/en/experts/s/sundar-pichai",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://live.worldbank.org/en/experts/s/sundar-pichai",
+        "capturado_em": "2026-11-13T17:15:50.788Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Sundar Pichai | World Bank Live",
+      "url": "https://live.worldbank.org/en/experts/s/sundar-pichai",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 3636,
+      "caracteres_preparados": 3636,
+      "trecho_analisado": "TÍTULO DA FONTE: Sundar Pichai | World Bank Live\nURL DA FONTE: https://live.worldbank.org/en/experts/s/sundar-pichai\n\nCONTEÚDO DA FONTE:\n[Skip to Main Navigation](#main)\n\nLive Event\n\n[![World Bank Live](https://s7d1.scene7.com/is/image/wbcollab/sitename_en_1?qlt=75&resMode=sharp2 \"World Bank Live\") World Bank Live](https://live.worldbank.org/en/home)\n\nLive Event\n\n* [English](https://live.worldbank.org/en/experts/s/sundar-pichai)\n* [العربية](https://live.albankaldawli.org/ar/experts/s/swndar-bytshay)\n* [Français](https://live.banquemondiale.org/fr/experts/s/sundar-pichai)\n* [Español](https://envivo.bancomundial.org/es/experts/s/sundar-pichai)\n\n\n\nFeatured Speaker\n\n![Sundar  Pichai](https://s7d1.scene7.com/is/image/wbcollab/sundar_pichai_google_ceo-1?qlt=75&resMode=sharp2 \"Sundar  Pichai\")\n\n# Sundar Pichai\n\n## CEO, Google and Alphabet\n\nFeatured on:\n\nSundar Pichai is the CEO of Google and Alphabet and serves on Alphabet’s Board of Directors. He joined Google in 2004 and helped lead the development of Google Toolbar and then Google Chrome, which grew to become the world’s most popular internet browser. In 2014 he was appointed to lead product and engineering for all of Google’s products",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source notes that in December 2019 he became CEO of Alphabet, implying he holds that role now."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The source notes that in December 2019 he became CEO of Alphabet, implying he holds that role now."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "MISSING_SOURCE_DATE"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Sundar Pichai | Business Roundtable",
+      "url": "https://www.businessroundtable.org/members/sundar-pichai",
+      "conteudo": "[![BRT Logo](/_next/image?url=https%3A%2F%2Fdjhius9upau4z.cloudfront.net%2Fbuilder%2Fapi%2Fv1%2Fimage%2Fassets%252F679146658e6d45af922aa9d9409fb683%252F466eb94d9b39432cae1fec050fb4deea&w=640&q=75)](/)\n\n# Sundar Pichai\n\n## CEO\n\nAlphabet Inc.\n\nSundar is the CEO of Google and Alphabet and serves on Alphabet’s Board of Directors.\n\nHe joined Google in 2004 and helped lead the development of Google Toolbar and then Google Chrome, which grew to become the world’s most popular internet browser. In 2014 he was appointed to lead product and engineering for all of Google’s products and platforms - including popular products such as Search, Maps, Play, Android, Chrome, Gmail and Google Apps (now Google …",
+      "coletado_em": "2026-11-13T17:15:50.904Z",
+      "data_publicacao": null,
+      "data_atualizacao": null,
+      "escopo_data": "UNKNOWN",
+      "canonical_url": "https://www.businessroundtable.org/members/sundar-pichai",
+      "relevancia": 0.85741025,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+       "resultado_id": "7e8d7f-04",
+       "response_time_busca": 1.92,
+       "response_time_extracao": 0.03,
+       "consulta": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+       "origem_principal": {
+        "id_operacao": "c665a4a8-94db-4f72-995f-1ef70961b256",
+        "request_id": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+        "modo_busca": "GERAL",
+        "resultado_id": "7e8d7f-04",
+        "parametros": {
+         "query": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "c665a4a8-94db-4f72-995f-1ef70961b256",
+         "request_id": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+         "modo_busca": "GERAL",
+         "resultado_id": "7e8d7f-04",
+         "parametros": {
+          "query": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": null,
+       "sinais_data": [
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.businessroundtable.org/members/sundar-pichai",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.businessroundtable.org/members/sundar-pichai",
+        "capturado_em": "2026-11-13T17:15:50.930Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "db696b85-35e9-4943-a196-c4bd84341d81",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "263615e5-cb63-4532-b3f0-57bfc2dce77f",
+      "id_verificacao": "a17c3d57-3e2f-480e-8bf2-1148116cf30e",
+      "url_original": "https://www.businessroundtable.org/members/sundar-pichai",
+      "url_canonica": "https://www.businessroundtable.org/members/sundar-pichai",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "39169d7007e12f8cc73ef0a0b6ea23b8d10e1937273fca330705536e8553a176",
+      "coletado_em": "2026-11-13T17:15:50.904Z",
+      "id_operacao_busca": "c665a4a8-94db-4f72-995f-1ef70961b256",
+      "id_operacao_extracao": "28819c1c-aa15-42d6-8bd0-9e1bf80d0419",
+      "consulta": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+      "parametros_busca": {
+       "query": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://en.wikipedia.org/wiki/Sundar_Pichai",
+        "https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google",
+        "https://live.worldbank.org/en/experts/s/sundar-pichai",
+        "https://www.businessroundtable.org/members/sundar-pichai",
+        "https://www.facebook.com/ForbesMENA.English/posts/sundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af/1637329771736243"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+       "operacoes_busca": [
+        {
+         "id_operacao": "c665a4a8-94db-4f72-995f-1ef70961b256",
+         "request_id": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+         "modo_busca": "GERAL",
+         "resultado_id": "7e8d7f-04",
+         "parametros": {
+          "query": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "db696b85-35e9-4943-a196-c4bd84341d81",
+       "resultado_id": "7e8d7f-04",
+       "relevancia": 0.85741025,
+       "sinais_data": [
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.businessroundtable.org/members/sundar-pichai",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.businessroundtable.org/members/sundar-pichai",
+        "capturado_em": "2026-11-13T17:15:50.930Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Sundar Pichai | Business Roundtable",
+      "url": "https://www.businessroundtable.org/members/sundar-pichai",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 1877,
+      "caracteres_preparados": 1877,
+      "trecho_analisado": "TÍTULO DA FONTE: Sundar Pichai | Business Roundtable\nURL DA FONTE: https://www.businessroundtable.org/members/sundar-pichai\n\nCONTEÚDO DA FONTE:\n[![BRT Logo](/_next/image?url=https%3A%2F%2Fdjhius9upau4z.cloudfront.net%2Fbuilder%2Fapi%2Fv1%2Fimage%2Fassets%252F679146658e6d45af922aa9d9409fb683%252F466eb94d9b39432cae1fec050fb4deea&w=640&q=75)](/)\n\n# Sundar Pichai\n\n## CEO\n\nAlphabet Inc.\n\nSundar is the CEO of Google and Alphabet and serves on Alphabet’s Board of Directors.\n\nHe joined Google in 2004 and helped lead the development of Google Toolbar and then Google Chrome, which grew to become the world’s most popular internet browser. In 2014 he was appointed to lead product and engineering for all of Google’s products and platforms - including popular products such as Search, Maps, Play, Android, Chrome, Gmail and Google Apps (now Google Workspace). Sundar became Google’s CEO in August 2015. He joined the Board of Directors of Alphabet, Google's parent company, in July 2017. \n\nUnder his leadership as CEO, Google has been focused on developing products and services, powered by the latest advances in AI, that offer help in moments big and small. It has invested in new opportunities such as",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The text states that in December 2019 Sundar became CEO of Alphabet, aligning with the claim."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The text states that in December 2019 Sundar became CEO of Alphabet, aligning with the claim."
+     },
+     "atualidade": {
+      "status": "UNVERIFIABLE",
+      "motivo": "MISSING_SOURCE_DATE"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "BLOG_FORUM",
+      "titulo": "Forbes Middle East English",
+      "url": "https://www.facebook.com/ForbesMENA.English/posts/sundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af/1637329771736243",
+      "conteudo": "[Log In](https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=%2FForbesMENA.English%2Fposts%2Fsundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af%2F1637329771736243)\n\nLog In\n\n[Forgot Account?](https://www.facebook.com/recover/initiate?ars=royal_blue_bar)\n\n## Forbes Middle East English's Post\n\n* * *\n\n[](https://www.facebook.com/ForbesMENA.English?__cft__[0]=AZgT-TI-n-zXk5HXfArUaX06FJu70mxtIomcalg42dxsjr60xNomO5p-nM-VQlErsLj0-SYvf1Jx6NOCoAhmZnL89XSt3VvMi4onB6pxb9yaS0U1_HKLH5U2PzaunFzSlQMvZ-tCqfbUIHs6_s4hmNzZt0dVNORe&__tn__=%3C%3C%2CP-R)\n\n### [**Forbes Middle East English**](https://www.facebook.com/ForbesMENA.English?__cft__[0]=AZgT-TI-n-…",
+      "coletado_em": "2026-11-13T17:15:50.904Z",
+      "data_publicacao": "2026-09-10",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www.facebook.com/ForbesMENA.English/posts/sundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af/1637329771736243/",
+      "relevancia": 0.8678218,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+       "resultado_id": "208028-01",
+       "response_time_busca": 1.92,
+       "response_time_extracao": 0.03,
+       "consulta": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+       "origem_principal": {
+        "id_operacao": "c665a4a8-94db-4f72-995f-1ef70961b256",
+        "request_id": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+        "modo_busca": "GERAL",
+        "resultado_id": "208028-01",
+        "parametros": {
+         "query": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "c665a4a8-94db-4f72-995f-1ef70961b256",
+         "request_id": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+         "modo_busca": "GERAL",
+         "resultado_id": "208028-01",
+         "parametros": {
+          "query": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Thu, 10 Sep 2026 13:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 10 Sep 2026 13:00:00 GMT",
+         "value_normalized": "2026-09-10",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.facebook.com/ForbesMENA.English/posts/sundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af/1637329771736243/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.facebook.com/ForbesMENA.English/posts/sundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af/1637329771736243",
+        "capturado_em": "2026-11-13T17:15:51.920Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "db696b85-35e9-4943-a196-c4bd84341d81",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "3a6d92e1-2dd6-46ea-b957-a985a3cf3a9a",
+      "id_verificacao": "a17c3d57-3e2f-480e-8bf2-1148116cf30e",
+      "url_original": "https://www.facebook.com/ForbesMENA.English/posts/sundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af/1637329771736243",
+      "url_canonica": "https://www.facebook.com/ForbesMENA.English/posts/sundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af/1637329771736243",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "65ffc9617f0e96812ca7cd17eb6ef71d69826e040487dbc5833742cdf2543199",
+      "coletado_em": "2026-11-13T17:15:50.904Z",
+      "id_operacao_busca": "c665a4a8-94db-4f72-995f-1ef70961b256",
+      "id_operacao_extracao": "28819c1c-aa15-42d6-8bd0-9e1bf80d0419",
+      "consulta": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+      "parametros_busca": {
+       "query": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://en.wikipedia.org/wiki/Sundar_Pichai",
+        "https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google",
+        "https://live.worldbank.org/en/experts/s/sundar-pichai",
+        "https://www.businessroundtable.org/members/sundar-pichai",
+        "https://www.facebook.com/ForbesMENA.English/posts/sundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af/1637329771736243"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+       "operacoes_busca": [
+        {
+         "id_operacao": "c665a4a8-94db-4f72-995f-1ef70961b256",
+         "request_id": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+         "modo_busca": "GERAL",
+         "resultado_id": "208028-01",
+         "parametros": {
+          "query": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "db696b85-35e9-4943-a196-c4bd84341d81",
+       "resultado_id": "208028-01",
+       "relevancia": 0.8678218,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 10 Sep 2026 13:00:00 GMT",
+         "value_normalized": "2026-09-10",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.facebook.com/ForbesMENA.English/posts/sundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af/1637329771736243/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.facebook.com/ForbesMENA.English/posts/sundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af/1637329771736243",
+        "capturado_em": "2026-11-13T17:15:51.920Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Forbes Middle East English",
+      "url": "https://www.facebook.com/ForbesMENA.English/posts/sundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af/1637329771736243",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 12736,
+      "caracteres_preparados": 6112,
+      "trecho_analisado": "TÍTULO DA FONTE: Forbes Middle East English\nURL DA FONTE: https://www.facebook.com/ForbesMENA.English/posts/sundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af/1637329771736243\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n[Log In](https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=%2FForbesMENA.English%2Fposts%2Fsundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af%2F1637329771736243)\n\nLog In\n\n[August 20](https://www.facebook.com/ForbesMENA.English/posts/pfbid034DdeLrU5YxFgsWAcp66ZpmgmLQgQ5FmUBa12EiRfqtmzf7CmMR9AwDLyk5sxvWHEl?__cft__[0]=AZgT-TI-n-zXk5HXfArUaX06FJu70mxtIomcalg42dxsjr60xNomO5p-nM-VQlErsLj0-SYvf1Jx6NOCoAhmZnL89XSt3VvMi4onB6pxb9yaS0U1_HKLH5U2PzaunFzSlQMvZ-tCqfbUIHs6_s4hmNzZt0dVNORe&__tn__=%2CO%2CP-R) ·\n\nSundar Pichai has served as CEO of Google’s parent company, Alphabet, since 2019, after joining Google in 2004.\n\nHe played a key role in the development of Google Toolbar and Chrome, which is now used by more than 1 billion people.\n\nPichai holds degrees from the Indian Institute of Technology, Stanford University, and the Wharton School.\n\nHis net worth stands at $1.6 billion as of August 19, 202",
+      "citacao_chave": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The post says Sundar Pichai has served as CEO of Alphabet since 2019, confirming his current role."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The post says Sundar Pichai has served as CEO of Alphabet since 2019, confirming his current role."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 64,
+      "validade_maxima_dias": 180,
+      "data_utilizada": "2026-09-10"
+     }
+    }
+   ],
+   "erro_busca": null,
+   "risco_desatualizacao": {
+    "nivel": "MEDIUM",
+    "sensivel_ao_tempo": true,
+    "motivos": [
+     "Company facts and leadership change within months (checked against a 180-day window)"
+    ]
+   },
+   "dominios_oficiais_usados": [],
+   "dominios_oficiais_automaticos": [],
+   "agregacao": {
+    "status": "CLASSIFICADO",
+    "conclusao_factual": {
+     "status": "APOIA",
+     "resumo": "As evidências utilizáveis apoiam a afirmação. Isso, por si só, não demonstra que ela continua válida agora."
+    },
+    "veredito": "CORROBORADA",
+    "resumo": "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
+    "afirmacao": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+    "score_qualidade_evidencia": {
+     "valor": 30,
+     "escala": "0-100",
+     "natureza": "HEURISTICA",
+     "interpretacao": "Qualidade estrutural das evidências, não probabilidade de verdade.",
+     "componentes": {
+      "autoridade": 0,
+      "atualidade": 0,
+      "diversidade_fontes": 20,
+      "concordancia": 10
+     }
+    },
+    "freshness": {
+     "score": null,
+     "status": "UNVERIFIABLE",
+     "confidence": "INSUFFICIENT",
+     "algorithm_id": "CLAIM_FRESHNESS_SCORE",
+     "algorithm_version": "1.1.0",
+     "policy_id": "empresa:180d:v1",
+     "as_of": "2026-11-13T17:15:43.191Z",
+     "evidence_summary": {
+      "received": 5,
+      "eligible": 0,
+      "independent_domains": 0,
+      "excluded": 5
+     },
+     "drivers": [
+      {
+       "code": "NO_ATTRIBUTE_DATED_EVIDENCE"
+      }
+     ],
+     "limitations": [
+      "Não há evidência com data verificável ligada ao atributo desta afirmação."
+     ]
+    },
+    "concordancia": {
+     "algorithm_id": "SOURCE_AGREEMENT_INDEX",
+     "algorithm_version": "1.1.0",
+     "weights": {
+      "OFICIAL": 3,
+      "ACADEMICO": 3,
+      "NOTICIA": 2,
+      "REFERENCIA": 1.5,
+      "OUTRO": 1,
+      "BLOG_FORUM": 0.25
+     },
+     "score": 100,
+     "coverage": "STRONG",
+     "independent_sources": 5,
+     "source_types": [
+      "REFERENCIA",
+      "OUTRO",
+      "BLOG_FORUM"
+     ],
+     "supporting": 5,
+     "authoritative_supporting": 0,
+     "contradicting": 0,
+     "split": 0,
+     "by_type": {
+      "REFERENCIA": {
+       "supports": 2,
+       "contradicts": 0,
+       "split": 0
+      },
+      "OUTRO": {
+       "supports": 2,
+       "contradicts": 0,
+       "split": 0
+      },
+      "BLOG_FORUM": {
+       "supports": 1,
+       "contradicts": 0,
+       "split": 0
+      }
+     },
+     "limitations": [
+      "Agreement between sources is not a probability of truth: sources can share the same mistake.",
+      "Copies and pages from the same site count once; independence is approximated by domain and text similarity."
+     ]
+    },
+    "recencia_pagina": {
+     "algorithm_id": "PAGE_DATE_RECENCY_INDEX",
+     "algorithm_version": "1.0.0",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "as_of": "2026-11-13T17:15:43.191Z",
+     "score": 51,
+     "status": "MIXED",
+     "policy_id": "empresa:180d:page:v1",
+     "newest_date": "2026-11-01",
+     "sources": [
+      {
+       "date": "2026-11-01",
+       "age_days": 12,
+       "status": "FRESH",
+       "posture": "SUPPORTS",
+       "domain": "en.wikipedia.org",
+       "evidence_id": null
+      },
+      {
+       "date": "2024-04-19",
+       "age_days": 938,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "domain": "quartr.com",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-09-10",
+       "age_days": 64,
+       "status": "FRESH",
+       "posture": "SUPPORTS",
+       "domain": "facebook.com",
+       "evidence_id": null
+      }
+     ],
+     "limitations": [
+      "Baseado na data da página, não na data em que o dado específico mudou: confiança baixa.",
+      "Não substitui o índice de atualidade principal e não é probabilidade de verdade."
+     ]
+    },
+    "atualidade_afirmacao": {
+     "algorithm_id": "CLAIM_CURRENCY_SCORE",
+     "algorithm_version": "1.1.0",
+     "formula": "evidence_recency × support_share",
+     "window_days": 180,
+     "score": 91,
+     "status": "CURRENT",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "evidence_recency": 91,
+     "support_share": 1,
+     "newest_date": "2026-11-01",
+     "newest_age_days": 12,
+     "within_window": true
+    },
+    "versao_regras": "1.2.0",
+    "metodo": "AGREGACAO_DETERMINISTICA",
+    "fontes_independentes": 5,
+    "grupos_distintos_de_evidencia": 5,
+    "dependencia_detectada": 0,
+    "dependencia_nao_verificada": true,
+    "nota_independencia": "Cópias exatas, quase duplicadas, URLs canônicas iguais e páginas do mesmo domínio são agrupadas; domínios sem sinal de cópia não têm independência editorial comprovada.",
+    "total_evidencias_utilizaveis": 5,
+    "fontes": [
+     {
+      "dominio": "en.wikipedia.org",
+      "dominios": [
+       "en.wikipedia.org"
+      ],
+      "grupo_dependencia_id": "source_cluster_001",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://en.wikipedia.org/wiki/Sundar_Pichai"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Sundar Pichai - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Sundar_Pichai",
+        "categoria_fonte": "REFERENCIA",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T17:15:50.904Z",
+        "data_publicacao": "2026-11-01",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Sun, 01 Nov 2026 15:00:00 GMT",
+          "value_normalized": "2026-11-01",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Fri, 13 Nov 2026 07:22:32 GMT",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://en.wikipedia.org/wiki/Sundar_Pichai",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2009-11-23T04:54:36Z",
+          "value_normalized": "2009-11-23",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-11-11T11:42:40Z",
+          "value_normalized": "2026-11-11",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_001",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "quartr.com",
+      "dominios": [
+       "quartr.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_002",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Sundar Pichai: CEO of Alphabet and Google",
+        "url": "https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google",
+        "categoria_fonte": "OUTRO",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T17:15:50.904Z",
+        "data_publicacao": "2024-04-19",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Fri, 19 Apr 2024 14:04:22 GMT",
+          "value_normalized": "2024-04-19",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2024-04-19T14:04:22.250Z",
+          "value_normalized": "2024-04-19",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "ARTICLE_MODIFIED_TIME",
+          "field": "article:modified_time",
+          "value_original": "2025-09-15T12:40:07.184Z",
+          "value_normalized": "2025-09-15",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2024-04-19T14:16:52.032Z",
+          "value_normalized": "2024-04-19",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2025-09-15T12:40:07.184Z",
+          "value_normalized": "2025-09-15",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "article"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_002",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "live.worldbank.org",
+      "dominios": [
+       "live.worldbank.org"
+      ],
+      "grupo_dependencia_id": "source_cluster_003",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://live.worldbank.org/en/experts/s/sundar-pichai"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Sundar Pichai | World Bank Live",
+        "url": "https://live.worldbank.org/en/experts/s/sundar-pichai",
+        "categoria_fonte": "REFERENCIA",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "UNVERIFIABLE",
+        "status_datas_declaradas": "AUSENTE",
+        "consultado_em": "2026-11-13T17:15:50.904Z",
+        "data_publicacao": null,
+        "data_atualizacao": null,
+        "escopo_data": "UNKNOWN",
+        "sinais_data": [
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Wed, 11 Nov 2026 01:04:55 GMT",
+          "value_normalized": "2026-11-11",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://live.worldbank.org/en/experts/s/sundar-pichai",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_003",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "businessroundtable.org",
+      "dominios": [
+       "businessroundtable.org"
+      ],
+      "grupo_dependencia_id": "source_cluster_004",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.businessroundtable.org/members/sundar-pichai"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Sundar Pichai | Business Roundtable",
+        "url": "https://www.businessroundtable.org/members/sundar-pichai",
+        "categoria_fonte": "OUTRO",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "UNVERIFIABLE",
+        "status_datas_declaradas": "AUSENTE",
+        "consultado_em": "2026-11-13T17:15:50.904Z",
+        "data_publicacao": null,
+        "data_atualizacao": null,
+        "escopo_data": "UNKNOWN",
+        "sinais_data": [
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.businessroundtable.org/members/sundar-pichai",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_004",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "facebook.com",
+      "dominios": [
+       "facebook.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_005",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.facebook.com/ForbesMENA.English/posts/sundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af/1637329771736243"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Forbes Middle East English",
+        "url": "https://www.facebook.com/ForbesMENA.English/posts/sundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af/1637329771736243",
+        "categoria_fonte": "BLOG_FORUM",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T17:15:50.904Z",
+        "data_publicacao": "2026-09-10",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Thu, 10 Sep 2026 13:00:00 GMT",
+          "value_normalized": "2026-09-10",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.facebook.com/ForbesMENA.English/posts/sundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af/1637329771736243/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_005",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     }
+    ],
+    "limitacoes": [
+     "Nenhuma evidência possui data verificável e status de atualidade FRESH.",
+     "Uma data da página ou do resultado de busca não comprova quando o atributo da afirmação foi publicado ou atualizado.",
+     "A data da consulta registra quando a página foi observada; não substitui uma data declarada de publicação ou atualização.",
+     "Nenhuma fonte pertence ao cadastro de domínios oficiais informado.",
+     "Domínios sem sinal detectado de duplicação não têm independência editorial comprovada; republicação com edição extensa ainda pode passar despercebida."
+    ],
+    "avaliado_em": "2026-11-13T17:15:56.440Z"
+   }
+  }
+ ],
+ "afirmacoes_omitidas": [],
+ "resposta_corrigida": {
+  "texto": "Sundar Pichai is the CEO of Alphabet, Google's parent company [1][2][3].",
+  "mudancas": [
+   {
+    "claim_id": "afirmacao_1",
+    "what": "added source citations"
+   }
+  ],
+  "fontes_citadas": [
+   1,
+   2,
+   3
+  ],
+  "tentativas": 2,
+  "citacoes_anexadas": false,
+  "fontes": [
+   {
+    "n": 1,
+    "url": "https://en.wikipedia.org/wiki/Sundar_Pichai",
+    "titulo": "Sundar Pichai - Wikipedia",
+    "tipo": "REFERENCIA",
+    "postura": "SUPPORTS",
+    "data": "2026-11-01"
+   },
+   {
+    "n": 2,
+    "url": "https://live.worldbank.org/en/experts/s/sundar-pichai",
+    "titulo": "Sundar Pichai | World Bank Live",
+    "tipo": "REFERENCIA",
+    "postura": "SUPPORTS",
+    "data": null
+   },
+   {
+    "n": 3,
+    "url": "https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google",
+    "titulo": "Sundar Pichai: CEO of Alphabet and Google",
+    "tipo": "OUTRO",
+    "postura": "SUPPORTS",
+    "data": "2024-04-19"
+   }
+  ],
+  "metodo": "MODEL_REWRITE_FROM_VERIFIED_EVIDENCE"
+ },
+ "rastreabilidade_modelo": [
+  {
+   "id_chamada": "2f245e63-6605-49c1-b0b9-547a0ee77f38",
+   "id_requisicao_enviada": "1237a346-8eb2-4e36-9d66-c2f6cd3c5910",
+   "id_verificacao": "a17c3d57-3e2f-480e-8bf2-1148116cf30e",
+   "etapa": "DECOMPOSICAO",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-120b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 928,
+   "tokens": {
+    "entrada": 846,
+    "saida": 188,
+    "total": 1034
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-120b",
+   "id_bifrost": "1237a346-8eb2-4e36-9d66-c2f6cd3c5910",
+   "id_trace": "ac7c41655b504ad8a66e7c45484a4780",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 928.034,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T17:15:43.191Z"
+  },
+  {
+   "id_chamada": "879006eb-1a4a-4bd5-b387-86e39dd189f4",
+   "id_requisicao_enviada": "e2ea8cb3-5e15-4d49-b653-17b41e14eff2",
+   "id_verificacao": "a17c3d57-3e2f-480e-8bf2-1148116cf30e",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-120b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 4378,
+   "tokens": {
+    "entrada": 3556,
+    "saida": 1852,
+    "total": 5408
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-120b",
+   "id_bifrost": "e2ea8cb3-5e15-4d49-b653-17b41e14eff2",
+   "id_trace": "878b7ea566164cbea895f0b10e664790",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 4378.288,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T17:15:51.972Z"
+  },
+  {
+   "id_chamada": "aa4ffdb6-2907-4dc8-87c9-fc21576561b2",
+   "id_requisicao_enviada": "f4fb95c7-c34e-4dfa-9bbc-b99b7b7f16ff",
+   "id_verificacao": "a17c3d57-3e2f-480e-8bf2-1148116cf30e",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-120b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 1648,
+   "tokens": {
+    "entrada": 1098,
+    "saida": 640,
+    "total": 1738
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-120b",
+   "id_bifrost": "f4fb95c7-c34e-4dfa-9bbc-b99b7b7f16ff",
+   "id_trace": "5b97599e19014907ae0c3a743773d69f",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 1648.152,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T17:15:56.440Z"
+  },
+  {
+   "id_chamada": "58f6e373-5735-41e3-926b-05a8a8c890d6",
+   "id_requisicao_enviada": "7909d7ec-1399-4f27-aac4-7a152b2c4cc2",
+   "id_verificacao": "a17c3d57-3e2f-480e-8bf2-1148116cf30e",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 2,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-120b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 879,
+   "tokens": {
+    "entrada": 1155,
+    "saida": 244,
+    "total": 1399
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-120b",
+   "id_bifrost": "7909d7ec-1399-4f27-aac4-7a152b2c4cc2",
+   "id_trace": "5d78c0dfd0bb441f9110737d1ebf423c",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 879.288,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T17:15:58.104Z"
+  }
+ ],
+ "rastreabilidade_pesquisa": [
+  {
+   "id_operacao": "c665a4a8-94db-4f72-995f-1ef70961b256",
+   "id_verificacao": "a17c3d57-3e2f-480e-8bf2-1148116cf30e",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T17:15:44.151Z",
+   "finalizada_em": "2026-11-13T17:15:46.325Z",
+   "duracao_ms": 2174,
+   "request_id": "544d454d-e4ea-4656-9fa4-407cd0d9ff44",
+   "response_time": 1.92,
+   "erro": null,
+   "modo_busca": "GERAL",
+   "parametros": {
+    "query": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "e9cdef-00",
+     "titulo": "Sundar Pichai - Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Sundar_Pichai",
+     "relevancia": 0.87191176,
+     "data_publicacao": "2026-11-01"
+    },
+    {
+     "resultado_id": "208028-01",
+     "titulo": "Forbes Middle East English",
+     "url": "https://www.facebook.com/ForbesMENA.English/posts/sundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af/1637329771736243",
+     "relevancia": 0.8678218,
+     "data_publicacao": "2026-09-10"
+    },
+    {
+     "resultado_id": "b73c13-02",
+     "titulo": "Sundar Pichai | World Bank Live",
+     "url": "https://live.worldbank.org/en/experts/s/sundar-pichai",
+     "relevancia": 0.8671483,
+     "data_publicacao": null
+    },
+    {
+     "resultado_id": "21321f-03",
+     "titulo": "Sundar Pichai: CEO of Alphabet and Google",
+     "url": "https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google",
+     "relevancia": 0.86647177,
+     "data_publicacao": "2024-04-19"
+    },
+    {
+     "resultado_id": "7e8d7f-04",
+     "titulo": "Sundar Pichai | Business Roundtable",
+     "url": "https://www.businessroundtable.org/members/sundar-pichai",
+     "relevancia": 0.85741025,
+     "data_publicacao": null
+    }
+   ]
+  },
+  {
+   "id_operacao": "9d690a2e-4735-452a-ba3d-6686f02e134a",
+   "id_verificacao": "a17c3d57-3e2f-480e-8bf2-1148116cf30e",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T17:15:46.325Z",
+   "finalizada_em": "2026-11-13T17:15:50.500Z",
+   "duracao_ms": 4175,
+   "request_id": "0c097769-8ca7-405e-8855-dd40e9ba5be6",
+   "response_time": 3.97,
+   "erro": null,
+   "modo_busca": "NOTICIAS",
+   "parametros": {
+    "query": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+    "search_depth": "basic",
+    "max_results": 4,
+    "include_answer": false,
+    "include_published_date": true,
+    "topic": "news",
+    "time_range": "year"
+   },
+   "quantidade_resultados": 1,
+   "resultados": [
+    {
+     "resultado_id": "a8d1a0-00",
+     "titulo": "Sundar Pichai - CEO at Google",
+     "url": "https://linkedin.com/in/sundarpichai",
+     "relevancia": 0.818011,
+     "data_publicacao": null
+    }
+   ]
+  },
+  {
+   "id_operacao": "28819c1c-aa15-42d6-8bd0-9e1bf80d0419",
+   "id_verificacao": "a17c3d57-3e2f-480e-8bf2-1148116cf30e",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "EXTRACAO",
+   "consulta": "Sundar Pichai is the CEO of Alphabet, Google's parent company.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T17:15:50.504Z",
+   "finalizada_em": "2026-11-13T17:15:50.904Z",
+   "duracao_ms": 400,
+   "request_id": "db696b85-35e9-4943-a196-c4bd84341d81",
+   "response_time": 0.03,
+   "erro": null,
+   "urls_solicitadas": [
+    "https://en.wikipedia.org/wiki/Sundar_Pichai",
+    "https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google",
+    "https://live.worldbank.org/en/experts/s/sundar-pichai",
+    "https://www.businessroundtable.org/members/sundar-pichai",
+    "https://www.facebook.com/ForbesMENA.English/posts/sundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af/1637329771736243"
+   ],
+   "parametros": {
+    "urls": [
+     "https://en.wikipedia.org/wiki/Sundar_Pichai",
+     "https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google",
+     "https://live.worldbank.org/en/experts/s/sundar-pichai",
+     "https://www.businessroundtable.org/members/sundar-pichai",
+     "https://www.facebook.com/ForbesMENA.English/posts/sundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af/1637329771736243"
+    ],
+    "extract_depth": "basic",
+    "format": "markdown",
+    "include_images": false
+   },
+   "quantidade_resultados": 5,
+   "urls_extraidas": [
+    "https://en.wikipedia.org/wiki/Sundar_Pichai",
+    "https://quartr.com/insights/business-philosophy/sundar-pichai-ceo-of-alphabet-and-google",
+    "https://live.worldbank.org/en/experts/s/sundar-pichai",
+    "https://www.businessroundtable.org/members/sundar-pichai",
+    "https://www.facebook.com/ForbesMENA.English/posts/sundar-pichai-has-served-as-ceo-of-googles-parent-company-alphabet-since-2019-af/1637329771736243"
+   ]
+  }
+ ],
+ "modo": "real",
+ "simulado": false,
+ "gateway": {
+  "gateway": "bifrost",
+  "chamadas": 4,
+  "falhas": 0,
+  "cadeia_modelos": [
+   "groq/openai/gpt-oss-120b"
+  ],
+  "queda_simulada": false,
+  "respostas_por_modelo": [
+   {
+    "modelo": "groq/openai/gpt-oss-120b",
+    "chamadas": 4
+   }
+  ],
+  "respostas_de_reserva": 0,
+  "tokens_total": 9579,
+  "latencia_media_ms": 1958
+ },
+ "duracao_ms": 15842,
+ "gravado_em": "2026-11-13T17:15:59.023Z"
+}

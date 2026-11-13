@@ -84,10 +84,11 @@ On 15 real claims with known answers (8 true, 7 outdated, in Portuguese and Engl
 - the same recorded evidence re-scored with the current, stricter rules (after an adversarial review): **13 of 15** exact, **15 of 15** on the right side. Pix dropped to “Supported, unconfirmed” because most of its sources are company blogs;
 - in both, **0** outdated claims were confirmed as true and **0** true claims were marked as contradicted.
 
-How to read it honestly:
-- the rules were improved after a first run on the same 15 claims (11 of 15 exact on 12 Nov), so `avaliacao/casos-novos-2026-11-13.json` adds 8 new claims written after the fixes, as an independent check of the current code;
-- `avaliacao/linha-de-base.js` asks the model alone, without sources, about the same claims, to measure the gain over “just asking the AI”;
-- 15 claims show behavior; they are not a statistical accuracy estimate.
+Independent check: **8 new claims** written after the rules were tuned (never used to tune them): **6 of 8 exact, 0 wrong, 0 outdated claims confirmed**. The two misses (a too-literal quote check, and a search anchored on the old value) were fixed after the run.
+
+Compared with **the same model alone**, asked with today's date and no search, on the same 23 claims: the model alone got **4 wrong**, including confirming the outdated R$ 1.518 minimum wage as valid; Entrelinhas got **0 wrong**, and every verdict comes with sources.
+
+The rules were first improved on the same 15 claims (11 of 15 exact on 12 Nov), which is why the 8 new claims matter. 23 claims show behavior; they are not a statistical accuracy estimate.
 
 Every check of the run is recorded in `gravacoes/`, and the results are in `avaliacao/`.
 

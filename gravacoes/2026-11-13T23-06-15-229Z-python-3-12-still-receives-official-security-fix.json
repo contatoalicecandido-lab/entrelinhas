@@ -1,0 +1,1818 @@
+{
+ "sistema": "Entrelinhas",
+ "id_verificacao": "80974a46-bbd2-4742-b208-2467bf1a54f3",
+ "texto_original": "Python 3.12 still receives official security fixes.",
+ "verificado_em": "2026-11-13T23:06:15.217Z",
+ "total_afirmacoes": 1,
+ "sintese": {
+  "veredito": "SUPORTE_FRACO",
+  "resumo": "Há evidências que apoiam a afirmação, mas não foi identificada uma fonte oficial atual suficiente para uma conclusão mais forte.",
+  "total_afirmacoes": 1,
+  "contagem_vereditos": {
+   "SUPORTE_FRACO": 1
+  }
+ },
+ "afirmacoes": [
+  {
+   "id": "afirmacao_1",
+   "texto": "Python 3.12 still receives official security fixes.",
+   "tipo_afirmacao": "versao_api",
+   "origem_tipo_afirmacao": "MODELO",
+   "nuances": {
+    "idioma": "en",
+    "variante": null,
+    "confianca_idioma": 1,
+    "valores": [],
+    "datas": [],
+    "expressoes_temporais": [
+     {
+      "texto": "still",
+      "tipo": "PRESENTE",
+      "rotulo": "present tense: must hold today"
+     }
+    ],
+    "condicoes": [],
+    "mudancas": [],
+    "tempo_coloquial": [],
+    "girias": {
+     "aliases": [],
+     "expressoes": []
+    },
+    "consulta_busca": "Python 3.12 still receives official security fixes.",
+    "dominios_oficiais_sugeridos": [],
+    "autoridades": [],
+    "notas": [
+     "\"still\": present tense: must hold today."
+    ]
+   },
+   "evidencias": [
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OFICIAL",
+      "titulo": "Python Release Python 3.12.11 | Python.org",
+      "url": "https://www.python.org/downloads/release/python-31211",
+      "conteudo": "**Notice:** This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets.\n\n[![python™](/static/img/python-logo.png)](/)\n\n[Donate](https://donate.python.org/)\n\n[≡ Menu](#site-map)\n\n* [**A A**](#)\n  + [Smaller](javascript:; \"Make Text Smaller\")\n  + [Larger](javascript:; \"Make Text Larger\")\n  + [Reset](javascript:; \"Reset any font size changes I have made\")\n\n* [Socialize](#)\n  + [LinkedIn](https://www.linkedin.com/company/python-software-foundation/)\n  + [Mastodon](https://fosstodon.org/@ThePSF)\n  + [Chat on IRC](/community/irc/)\n  + [Twitter](https://twitter.com/ThePSF)\n\n# Python 3.12.11\n\nNote: Pyth…",
+      "coletado_em": "2026-11-13T23:06:05.021Z",
+      "data_publicacao": "2025-06-03",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": null,
+      "relevancia": 0.81888163,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "10917b77-ff08-4b0b-8a17-b3ec95035895",
+       "resultado_id": "d9c95c-01",
+       "response_time_busca": 0.89,
+       "response_time_extracao": 0.03,
+       "consulta": "Python 3.12 still receives official security fixes.",
+       "origem_principal": {
+        "id_operacao": "2bd0a1ec-f060-45b8-82dc-9ed51baefea4",
+        "request_id": "10917b77-ff08-4b0b-8a17-b3ec95035895",
+        "modo_busca": "GERAL",
+        "resultado_id": "d9c95c-01",
+        "parametros": {
+         "query": "Python 3.12 still receives official security fixes.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "2bd0a1ec-f060-45b8-82dc-9ed51baefea4",
+         "request_id": "10917b77-ff08-4b0b-8a17-b3ec95035895",
+         "modo_busca": "GERAL",
+         "resultado_id": "d9c95c-01",
+         "parametros": {
+          "query": "Python 3.12 still receives official security fixes.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Tue, 03 Jun 2025 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 03 Jun 2025 00:00:00 GMT",
+         "value_normalized": "2025-06-03",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.python.org/downloads/release/python-31211/",
+        "capturado_em": "2026-11-13T23:06:04.702Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "fd5cbe12-9c2e-42d9-80c4-1ff927de4dbe",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "70efdae2-4d04-483f-8c89-cdf860ccdc79",
+      "id_verificacao": "80974a46-bbd2-4742-b208-2467bf1a54f3",
+      "url_original": "https://www.python.org/downloads/release/python-31211",
+      "url_canonica": "https://www.python.org/downloads/release/python-31211",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "67ce13bf89991f2d72da7a886f336f11b127f0d81288fa197e5c14582786874b",
+      "coletado_em": "2026-11-13T23:06:05.021Z",
+      "id_operacao_busca": "2bd0a1ec-f060-45b8-82dc-9ed51baefea4",
+      "id_operacao_extracao": "32322e03-c96a-497c-8cb1-b10d9530f1eb",
+      "consulta": "Python 3.12 still receives official security fixes.",
+      "parametros_busca": {
+       "query": "Python 3.12 still receives official security fixes.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.python.org/downloads/release/python-31211",
+        "https://safeguard.sh/resources/blog/which-python-versions-still-get-security-fixes",
+        "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+        "https://github.com/wolfi-dev/advisories/blob/main/python-3.12.advisories.yaml",
+        "https://dev.to/matheus_releaserun/python-312-vs-313-vs-314-what-actually-changed-and-which-should-you-use-4kc0"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "10917b77-ff08-4b0b-8a17-b3ec95035895",
+       "operacoes_busca": [
+        {
+         "id_operacao": "2bd0a1ec-f060-45b8-82dc-9ed51baefea4",
+         "request_id": "10917b77-ff08-4b0b-8a17-b3ec95035895",
+         "modo_busca": "GERAL",
+         "resultado_id": "d9c95c-01",
+         "parametros": {
+          "query": "Python 3.12 still receives official security fixes.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "fd5cbe12-9c2e-42d9-80c4-1ff927de4dbe",
+       "resultado_id": "d9c95c-01",
+       "relevancia": 0.81888163,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 03 Jun 2025 00:00:00 GMT",
+         "value_normalized": "2025-06-03",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.python.org/downloads/release/python-31211/",
+        "capturado_em": "2026-11-13T23:06:04.702Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Python Release Python 3.12.11 | Python.org",
+      "url": "https://www.python.org/downloads/release/python-31211",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 3771,
+      "caracteres_preparados": 3771,
+      "trecho_analisado": "TÍTULO DA FONTE: Python Release Python 3.12.11 | Python.org\nURL DA FONTE: https://www.python.org/downloads/release/python-31211\n\nCONTEÚDO DA FONTE:\n**Notice:** This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets.\n\n[![python™](/static/img/python-logo.png)](/)\n\n[Donate](https://donate.python.org/)\n\n[≡ Menu](#site-map)\n\n* [**A A**](#)\n  + [Smaller](javascript:; \"Make Text Smaller\")\n  + [Larger](javascript:; \"Make Text Larger\")\n  + [Reset](javascript:; \"Reset any font size changes I have made\")\n\n* [Socialize](#)\n  + [LinkedIn](https://www.linkedin.com/company/python-software-foundation/)\n  + [Mastodon](https://fosstodon.org/@ThePSF)\n  + [Chat on IRC](/community/irc/)\n  + [Twitter](https://twitter.com/ThePSF)\n\n# Python 3.12.11\n\nNote: Python 3.12.11 has been superseded by [Python 3.12.14](/downloads/release/python-31214/).\n\n**Release date:** June 3, 2025\n\n## This is a security release of Python 3.12\n\n**Note:** The release you're looking at is Python 3.12.11, a **security bugfix release** for the legacy 3.12 series. *Python 3.13* is now the latest feature release series of Python 3. [G",
+      "citacao_chave": null,
+      "citacao_verificada": false,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "Not counted: the model quoted text that is not in this source. Model's reason: The page states Python 3.12 is in the \"security fixes only\" stage until October 2028, meaning it still receives official security fixes today."
+     },
+     "classificacao": {
+      "postura": "INSUFFICIENT",
+      "justificativa": "Not counted: the model quoted text that is not in this source. Model's reason: The page states Python 3.12 is in the \"security fixes only\" stage until October 2028, meaning it still receives official security fixes today."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 528,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2025-06-03"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Which Python versions still get security fixes in October",
+      "url": "https://safeguard.sh/resources/blog/which-python-versions-still-get-security-fixes",
+      "conteudo": "[Skip to content](#main-content)\n\n[![Safeguard](/brand/safeguard-lockup-ink.svg)![Safeguard](/brand/safeguard-lockup-white.svg)](/)\n\nSecurity Guides•\n\n# Which Python versions still get security fixes in October 2026?\n\nPython 3.10 reached end of life on 1 October 2026. See which versions get security fixes, what each status means, and how to plan an upgrade.\n\nSS\n\nSafeguard Security Team\n\n3 min read\n\nAs of 19 October 2026, Python 3.11, 3.12 and 3.13 receive security fixes only, and 3.14 and 3.15 receive bug and security fixes. Python 3.10 reached end of life on 1 October 2026, so it gets no further changes, and 3.9 ended on 31 October 2025.\n\n## The current table\n\nThis comes from the Python Dev…",
+      "coletado_em": "2026-11-13T23:06:05.021Z",
+      "data_publicacao": "2026-10-18",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://safeguard.sh/resources/blog/which-python-versions-still-get-security-fixes",
+      "relevancia": 0.8253083,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "10917b77-ff08-4b0b-8a17-b3ec95035895",
+       "resultado_id": "b3c1ee-00",
+       "response_time_busca": 0.89,
+       "response_time_extracao": 0.03,
+       "consulta": "Python 3.12 still receives official security fixes.",
+       "origem_principal": {
+        "id_operacao": "2bd0a1ec-f060-45b8-82dc-9ed51baefea4",
+        "request_id": "10917b77-ff08-4b0b-8a17-b3ec95035895",
+        "modo_busca": "GERAL",
+        "resultado_id": "b3c1ee-00",
+        "parametros": {
+         "query": "Python 3.12 still receives official security fixes.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "2bd0a1ec-f060-45b8-82dc-9ed51baefea4",
+         "request_id": "10917b77-ff08-4b0b-8a17-b3ec95035895",
+         "modo_busca": "GERAL",
+         "resultado_id": "b3c1ee-00",
+         "parametros": {
+          "query": "Python 3.12 still receives official security fixes.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Sun, 18 Oct 2026 19:58:59 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Sun, 18 Oct 2026 19:58:59 GMT",
+         "value_normalized": "2026-10-18",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://safeguard.sh/resources/blog/which-python-versions-still-get-security-fixes",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-10-18T19:58:59.478Z",
+         "value_normalized": "2026-10-18",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-10-18T19:58:59.478Z",
+         "value_normalized": "2026-10-18",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-18T19:58:59.478Z",
+         "value_normalized": "2026-10-18",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-10-18T19:58:59.478Z",
+         "value_normalized": "2026-10-18",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://safeguard.sh/resources/blog/which-python-versions-still-get-security-fixes",
+        "capturado_em": "2026-11-13T23:06:07.118Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "fd5cbe12-9c2e-42d9-80c4-1ff927de4dbe",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "d3c007af-480a-4c93-93d9-3443271bcf9f",
+      "id_verificacao": "80974a46-bbd2-4742-b208-2467bf1a54f3",
+      "url_original": "https://safeguard.sh/resources/blog/which-python-versions-still-get-security-fixes",
+      "url_canonica": "https://safeguard.sh/resources/blog/which-python-versions-still-get-security-fixes",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "86b7b8587e2c6893b5dea1b901321f002af02ca10ad316adf9146775ef13843c",
+      "coletado_em": "2026-11-13T23:06:05.021Z",
+      "id_operacao_busca": "2bd0a1ec-f060-45b8-82dc-9ed51baefea4",
+      "id_operacao_extracao": "32322e03-c96a-497c-8cb1-b10d9530f1eb",
+      "consulta": "Python 3.12 still receives official security fixes.",
+      "parametros_busca": {
+       "query": "Python 3.12 still receives official security fixes.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.python.org/downloads/release/python-31211",
+        "https://safeguard.sh/resources/blog/which-python-versions-still-get-security-fixes",
+        "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+        "https://github.com/wolfi-dev/advisories/blob/main/python-3.12.advisories.yaml",
+        "https://dev.to/matheus_releaserun/python-312-vs-313-vs-314-what-actually-changed-and-which-should-you-use-4kc0"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "10917b77-ff08-4b0b-8a17-b3ec95035895",
+       "operacoes_busca": [
+        {
+         "id_operacao": "2bd0a1ec-f060-45b8-82dc-9ed51baefea4",
+         "request_id": "10917b77-ff08-4b0b-8a17-b3ec95035895",
+         "modo_busca": "GERAL",
+         "resultado_id": "b3c1ee-00",
+         "parametros": {
+          "query": "Python 3.12 still receives official security fixes.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "fd5cbe12-9c2e-42d9-80c4-1ff927de4dbe",
+       "resultado_id": "b3c1ee-00",
+       "relevancia": 0.8253083,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Sun, 18 Oct 2026 19:58:59 GMT",
+         "value_normalized": "2026-10-18",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://safeguard.sh/resources/blog/which-python-versions-still-get-security-fixes",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-10-18T19:58:59.478Z",
+         "value_normalized": "2026-10-18",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-10-18T19:58:59.478Z",
+         "value_normalized": "2026-10-18",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-18T19:58:59.478Z",
+         "value_normalized": "2026-10-18",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-10-18T19:58:59.478Z",
+         "value_normalized": "2026-10-18",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://safeguard.sh/resources/blog/which-python-versions-still-get-security-fixes",
+        "capturado_em": "2026-11-13T23:06:07.118Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Which Python versions still get security fixes in October",
+      "url": "https://safeguard.sh/resources/blog/which-python-versions-still-get-security-fixes",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 5797,
+      "caracteres_preparados": 5797,
+      "trecho_analisado": "TÍTULO DA FONTE: Which Python versions still get security fixes in October\nURL DA FONTE: https://safeguard.sh/resources/blog/which-python-versions-still-get-security-fixes\n\nCONTEÚDO DA FONTE:\n[Skip to content](#main-content)\n\n[![Safeguard](/brand/safeguard-lockup-ink.svg)![Safeguard](/brand/safeguard-lockup-white.svg)](/)\n\nSecurity Guides•\n\n# Which Python versions still get security fixes in October 2026?\n\nPython 3.10 reached end of life on 1 October 2026. See which versions get security fixes, what each status means, and how to plan an upgrade.\n\nSS\n\nSafeguard Security Team\n\n3 min read\n\nAs of 19 October 2026, Python 3.11, 3.12 and 3.13 receive security fixes only, and 3.14 and 3.15 receive bug and security fixes. Python 3.10 reached end of life on 1 October 2026, so it gets no further changes, and 3.9 ended on 31 October 2025.\n\n## The current table\n\nThis comes from the Python Developer's Guide status of versions page, fetched on the review date below. Dates in italics there are scheduled and can change.\n\n| Version | Status | First release | End of life |\n| --- | --- | --- | --- |\n| 3.15 | bugfix | 2026-10-09 | 2031-10 (scheduled) |\n| 3.14 | bugfix | 2025-10-07 | 2030-10 (scheduled)",
+      "citacao_chave": null,
+      "citacao_verificada": false,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "Not counted: the model quoted text that is not in this source. Model's reason: The article, dated 19 October 2026, says Python 3.12 receives security fixes only, which covers the reference date."
+     },
+     "classificacao": {
+      "postura": "INSUFFICIENT",
+      "justificativa": "Not counted: the model quoted text that is not in this source. Model's reason: The article, dated 19 October 2026, says Python 3.12 receives security fixes only, which covers the reference date."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 26,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2026-10-18"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Python End-of-Life Dates: Every Version's Support Timeline",
+      "url": "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+      "conteudo": "[NEW\n\nHeroDevs supports deprecated open source software past its end of life. View supported technologies.\n\n![](https://cdn.prod.website-files.com/62865614b39c464b76d339aa/65159b3f6df722a807194087_arrow-forward-slim-min.svg)](https://www.herodevs.com/support)\n\n[![](https://cdn.prod.website-files.com/62865614b39c464b76d339aa/641c8722f2df570d33bfc249_arrow_backward_pink.svg)\n\nView all Blog Posts](/blog)\n\n![](https://cdn.prod.website-files.com/62876589ec366575fa309b1e/6a3c15a27123a4fe571fe226_EOL%20Software.svg)\n\nEOL Software\n\nSep 15, 2026\n\n# Python End-of-Life Dates: Every Version's Support Timeline\n\nA complete guide to Python version lifecycles, support phases, and critical end-of-life dates …",
+      "coletado_em": "2026-11-13T23:06:05.021Z",
+      "data_publicacao": "2026-09-15",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+      "relevancia": 0.63431686,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "10917b77-ff08-4b0b-8a17-b3ec95035895",
+       "resultado_id": "e086cf-03",
+       "response_time_busca": 0.89,
+       "response_time_extracao": 0.03,
+       "consulta": "Python 3.12 still receives official security fixes.",
+       "origem_principal": {
+        "id_operacao": "2bd0a1ec-f060-45b8-82dc-9ed51baefea4",
+        "request_id": "10917b77-ff08-4b0b-8a17-b3ec95035895",
+        "modo_busca": "GERAL",
+        "resultado_id": "e086cf-03",
+        "parametros": {
+         "query": "Python 3.12 still receives official security fixes.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "2bd0a1ec-f060-45b8-82dc-9ed51baefea4",
+         "request_id": "10917b77-ff08-4b0b-8a17-b3ec95035895",
+         "modo_busca": "GERAL",
+         "resultado_id": "e086cf-03",
+         "parametros": {
+          "query": "Python 3.12 still receives official security fixes.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Tue, 15 Sep 2026 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 15 Sep 2026 00:00:00 GMT",
+         "value_normalized": "2026-09-15",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 21:43:36 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-03-17T14:39:13.848Z",
+         "value_normalized": "2026-03-17",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-13T15:44:47.003Z",
+         "value_normalized": "2026-10-13",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+        "capturado_em": "2026-11-13T23:06:04.434Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "fd5cbe12-9c2e-42d9-80c4-1ff927de4dbe",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "50e197a8-4e4d-4810-a630-652c8383b96f",
+      "id_verificacao": "80974a46-bbd2-4742-b208-2467bf1a54f3",
+      "url_original": "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+      "url_canonica": "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "284ae78b9065677f52682e0bbcfe90b523b55b2e3be27b34d7f6273f15050436",
+      "coletado_em": "2026-11-13T23:06:05.021Z",
+      "id_operacao_busca": "2bd0a1ec-f060-45b8-82dc-9ed51baefea4",
+      "id_operacao_extracao": "32322e03-c96a-497c-8cb1-b10d9530f1eb",
+      "consulta": "Python 3.12 still receives official security fixes.",
+      "parametros_busca": {
+       "query": "Python 3.12 still receives official security fixes.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.python.org/downloads/release/python-31211",
+        "https://safeguard.sh/resources/blog/which-python-versions-still-get-security-fixes",
+        "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+        "https://github.com/wolfi-dev/advisories/blob/main/python-3.12.advisories.yaml",
+        "https://dev.to/matheus_releaserun/python-312-vs-313-vs-314-what-actually-changed-and-which-should-you-use-4kc0"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "10917b77-ff08-4b0b-8a17-b3ec95035895",
+       "operacoes_busca": [
+        {
+         "id_operacao": "2bd0a1ec-f060-45b8-82dc-9ed51baefea4",
+         "request_id": "10917b77-ff08-4b0b-8a17-b3ec95035895",
+         "modo_busca": "GERAL",
+         "resultado_id": "e086cf-03",
+         "parametros": {
+          "query": "Python 3.12 still receives official security fixes.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "fd5cbe12-9c2e-42d9-80c4-1ff927de4dbe",
+       "resultado_id": "e086cf-03",
+       "relevancia": 0.63431686,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 15 Sep 2026 00:00:00 GMT",
+         "value_normalized": "2026-09-15",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 21:43:36 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-03-17T14:39:13.848Z",
+         "value_normalized": "2026-03-17",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-13T15:44:47.003Z",
+         "value_normalized": "2026-10-13",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+        "capturado_em": "2026-11-13T23:06:04.434Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Python End-of-Life Dates: Every Version's Support Timeline",
+      "url": "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 17739,
+      "caracteres_preparados": 7979,
+      "trecho_analisado": "TÍTULO DA FONTE: Python End-of-Life Dates: Every Version's Support Timeline\nURL DA FONTE: https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\nSep 15, 2026\n\n# Python End-of-Life Dates: Every Version's Support Timeline\n\nA complete guide to Python version lifecycles, support phases, and critical end-of-life dates from 3.8 through 3.14\n\nGive me the TL;DR\n\n![Python End-of-Life Dates: Every Version's Support Timeline](https://cdn.prod.website-files.com/62876589ec366575fa309b1e/69b967825bc9a756e113b8c8_Blog%20image%20-%20march%202026.png)\n\nPython powers everything from machine learning pipelines to enterprise web applications, but every Python version has an expiration date.\n\nWhen a version reaches end of life (EOL), the Python Software Foundation stops releasing security patches, leaving your applications exposed to newly discovered vulnerabilities.\n\nWith Python 3.10 reaching end of life on **October 31, 2026**, just weeks from now, and Python 3.15 entering release candidate stage, the landscape is shifting fast.\n\nThis guide covers the complete support timeline for every actively relevant Python version, from 3.",
+      "citacao_chave": "3.12 | Oct 2, 2023 | Apr 2, 2025 | Oct 31, 2028 | Security-only",
+      "citacao_verificada": true,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The timeline lists Python 3.12's security‑only phase ending on 31 October 2028, so it still gets security fixes in November 2026."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The timeline lists Python 3.12's security‑only phase ending on 31 October 2028, so it still gets security fixes in November 2026."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 59,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2026-09-15"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "advisories/python-3.12.advisories.yaml at main · wolfi-dev/advisories · GitHub",
+      "url": "https://github.com/wolfi-dev/advisories/blob/main/python-3.12.advisories.yaml",
+      "conteudo": "[Skip to content](#start-of-content)   \n \n \n\n## Navigation Menu\n\n[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fwolfi-dev%2Fadvisories%2Fblob%2Fmain%2Fpython-3.12.advisories.yaml)\n\nAppearance settings\n\n[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fwolfi-dev%2Fadvisories%2Fblob%2Fmain%2Fpython-3.12.advisories.yaml)\n\n[Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Fblob%2Fshow&source=header-repo&source_repo=wolfi-dev%2Fadvisories)\n\nAppearance settings\n\nYou signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on…",
+      "coletado_em": "2026-11-13T23:06:05.021Z",
+      "data_publicacao": "2026-01-07",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": null,
+      "relevancia": 0.62772304,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "10917b77-ff08-4b0b-8a17-b3ec95035895",
+       "resultado_id": "4369cf-04",
+       "response_time_busca": 0.89,
+       "response_time_extracao": 0.03,
+       "consulta": "Python 3.12 still receives official security fixes.",
+       "origem_principal": {
+        "id_operacao": "2bd0a1ec-f060-45b8-82dc-9ed51baefea4",
+        "request_id": "10917b77-ff08-4b0b-8a17-b3ec95035895",
+        "modo_busca": "GERAL",
+        "resultado_id": "4369cf-04",
+        "parametros": {
+         "query": "Python 3.12 still receives official security fixes.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "2bd0a1ec-f060-45b8-82dc-9ed51baefea4",
+         "request_id": "10917b77-ff08-4b0b-8a17-b3ec95035895",
+         "modo_busca": "GERAL",
+         "resultado_id": "4369cf-04",
+         "parametros": {
+          "query": "Python 3.12 still receives official security fixes.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Wed, 07 Jan 2026 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 07 Jan 2026 00:00:00 GMT",
+         "value_normalized": "2026-01-07",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://github.com/wolfi-dev/advisories/blob/main/python-3.12.advisories.yaml",
+        "capturado_em": "2026-11-13T23:06:05.218Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "fd5cbe12-9c2e-42d9-80c4-1ff927de4dbe",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "7e3e0ed6-d5d1-40d5-807b-bbc43d67eccc",
+      "id_verificacao": "80974a46-bbd2-4742-b208-2467bf1a54f3",
+      "url_original": "https://github.com/wolfi-dev/advisories/blob/main/python-3.12.advisories.yaml",
+      "url_canonica": "https://github.com/wolfi-dev/advisories/blob/main/python-3.12.advisories.yaml",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "0d6cbdfadb698bc3417655be0e2c2b56f13bf8a6950cbe67784602946fdf9915",
+      "coletado_em": "2026-11-13T23:06:05.021Z",
+      "id_operacao_busca": "2bd0a1ec-f060-45b8-82dc-9ed51baefea4",
+      "id_operacao_extracao": "32322e03-c96a-497c-8cb1-b10d9530f1eb",
+      "consulta": "Python 3.12 still receives official security fixes.",
+      "parametros_busca": {
+       "query": "Python 3.12 still receives official security fixes.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.python.org/downloads/release/python-31211",
+        "https://safeguard.sh/resources/blog/which-python-versions-still-get-security-fixes",
+        "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+        "https://github.com/wolfi-dev/advisories/blob/main/python-3.12.advisories.yaml",
+        "https://dev.to/matheus_releaserun/python-312-vs-313-vs-314-what-actually-changed-and-which-should-you-use-4kc0"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "10917b77-ff08-4b0b-8a17-b3ec95035895",
+       "operacoes_busca": [
+        {
+         "id_operacao": "2bd0a1ec-f060-45b8-82dc-9ed51baefea4",
+         "request_id": "10917b77-ff08-4b0b-8a17-b3ec95035895",
+         "modo_busca": "GERAL",
+         "resultado_id": "4369cf-04",
+         "parametros": {
+          "query": "Python 3.12 still receives official security fixes.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "fd5cbe12-9c2e-42d9-80c4-1ff927de4dbe",
+       "resultado_id": "4369cf-04",
+       "relevancia": 0.62772304,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 07 Jan 2026 00:00:00 GMT",
+         "value_normalized": "2026-01-07",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://github.com/wolfi-dev/advisories/blob/main/python-3.12.advisories.yaml",
+        "capturado_em": "2026-11-13T23:06:05.218Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "advisories/python-3.12.advisories.yaml at main · wolfi-dev/advisories · GitHub",
+      "url": "https://github.com/wolfi-dev/advisories/blob/main/python-3.12.advisories.yaml",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 15981,
+      "caracteres_preparados": 7017,
+      "trecho_analisado": "TÍTULO DA FONTE: advisories/python-3.12.advisories.yaml at main · wolfi-dev/advisories · GitHub\nURL DA FONTE: https://github.com/wolfi-dev/advisories/blob/main/python-3.12.advisories.yaml\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n## Navigation Menu\n\n[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fwolfi-dev%2Fadvisories%2Fblob%2Fmain%2Fpython-3.12.advisories.yaml)\n\nAppearance settings\n\n[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fwolfi-dev%2Fadvisories%2Fblob%2Fmain%2Fpython-3.12.advisories.yaml)\n\n[Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Fblob%2Fshow&source=header-repo&source_repo=wolfi-dev%2Fadvisories)\n\n/\n\n# python-3.12.advisories.yaml\n\nCopy path\n\n## History\n\n[History](/wolfi-dev/advisories/commits/main/python-3.12.advisories.yaml)\n\n510 lines (484 loc) · 15.3 KB\n\n/\n\n# python-3.12.advisories.yaml\n\nCopy path\n\npackage:\n\nname: python-3.12\n\nadvisories:\n\ndata:\n\nsubpackageName: python-3.12\n\ncomponentID: 561bbb46f921db55\n\ncomponentName: python-3.12\n\ncomponentVersion: 3.12.12-r2\n\ncomponentType: apk\n\nUpstream maintainers will need to approve and merge the PR.\n\nFix PR: https://github.com/python/cpython/pull/142149'\n\n-",
+      "citacao_chave": null,
+      "citacao_verificada": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "ERROR",
+      "justificativa": "The model did not return an analysis for this source."
+     },
+     "classificacao": {
+      "postura": "ERROR",
+      "justificativa": "The analysis was not completed."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 310,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2026-01-07"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "BLOG_FORUM",
+      "titulo": "Python 3.12 vs 3.13 vs 3.14: What Actually Changed and Which Should You Use - DEV Community",
+      "url": "https://dev.to/matheus_releaserun/python-312-vs-313-vs-314-what-actually-changed-and-which-should-you-use-4kc0",
+      "conteudo": "![DEV Community](https://media2.dev.to/dynamic/image/quality=100/https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png)\n\n## DEV Community\n\n![](https://assets.dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg)\n![](https://assets.dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg)\n![](https://assets.dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg)\n![](https://assets.dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg)\n![](https://assets.dev.to/assets/raised-hands-74b2…",
+      "coletado_em": "2026-11-13T23:06:05.021Z",
+      "data_publicacao": "2026-02-21",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://releaserun.com/python-3-12-vs-3-13-vs-3-14-comparison/",
+      "relevancia": 0.8056322,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "a008b19a-3c7a-499a-8edc-31b4c91d95c3",
+       "resultado_id": "c538b9-00",
+       "response_time_busca": 3.66,
+       "response_time_extracao": 0.03,
+       "consulta": "Python 3.12 still receives official security fixes.",
+       "origem_principal": {
+        "id_operacao": "db738054-b5b3-4751-a3bf-231109f0bed7",
+        "request_id": "a008b19a-3c7a-499a-8edc-31b4c91d95c3",
+        "modo_busca": "NOTICIAS",
+        "resultado_id": "c538b9-00",
+        "parametros": {
+         "query": "Python 3.12 still receives official security fixes.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news",
+         "time_range": "year"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "db738054-b5b3-4751-a3bf-231109f0bed7",
+         "request_id": "a008b19a-3c7a-499a-8edc-31b4c91d95c3",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "c538b9-00",
+         "parametros": {
+          "query": "Python 3.12 still receives official security fixes.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "time_range": "year"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Sat, 21 Feb 2026 02:53:15 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Sat, 21 Feb 2026 02:53:15 GMT",
+         "value_normalized": "2026-02-21",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://releaserun.com/python-3-12-vs-3-13-vs-3-14-comparison/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-02-21T02:53:15Z",
+         "value_normalized": "2026-02-21",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-02-21T02:53:15Z",
+         "value_normalized": "2026-02-21",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-02-21T02:53:15Z",
+         "value_normalized": "2026-02-21",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-02-07T13:42:20Z",
+         "value_normalized": "2026-02-07",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://dev.to/matheus_releaserun/python-312-vs-313-vs-314-what-actually-changed-and-which-should-you-use-4kc0",
+        "capturado_em": "2026-11-13T23:06:04.426Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "fd5cbe12-9c2e-42d9-80c4-1ff927de4dbe",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "082d6506-f104-4084-9de6-7ecb73242bb6",
+      "id_verificacao": "80974a46-bbd2-4742-b208-2467bf1a54f3",
+      "url_original": "https://dev.to/matheus_releaserun/python-312-vs-313-vs-314-what-actually-changed-and-which-should-you-use-4kc0",
+      "url_canonica": "https://dev.to/matheus_releaserun/python-312-vs-313-vs-314-what-actually-changed-and-which-should-you-use-4kc0",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "bb5cfbc2242a6b9b6aa090d745c0fdf95eb95139721f200a33ae0836c5f4efb1",
+      "coletado_em": "2026-11-13T23:06:05.021Z",
+      "id_operacao_busca": "db738054-b5b3-4751-a3bf-231109f0bed7",
+      "id_operacao_extracao": "32322e03-c96a-497c-8cb1-b10d9530f1eb",
+      "consulta": "Python 3.12 still receives official security fixes.",
+      "parametros_busca": {
+       "query": "Python 3.12 still receives official security fixes.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news",
+       "time_range": "year"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.python.org/downloads/release/python-31211",
+        "https://safeguard.sh/resources/blog/which-python-versions-still-get-security-fixes",
+        "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+        "https://github.com/wolfi-dev/advisories/blob/main/python-3.12.advisories.yaml",
+        "https://dev.to/matheus_releaserun/python-312-vs-313-vs-314-what-actually-changed-and-which-should-you-use-4kc0"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "a008b19a-3c7a-499a-8edc-31b4c91d95c3",
+       "operacoes_busca": [
+        {
+         "id_operacao": "db738054-b5b3-4751-a3bf-231109f0bed7",
+         "request_id": "a008b19a-3c7a-499a-8edc-31b4c91d95c3",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "c538b9-00",
+         "parametros": {
+          "query": "Python 3.12 still receives official security fixes.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "time_range": "year"
+         }
+        }
+       ],
+       "request_id_extracao": "fd5cbe12-9c2e-42d9-80c4-1ff927de4dbe",
+       "resultado_id": "c538b9-00",
+       "relevancia": 0.8056322,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Sat, 21 Feb 2026 02:53:15 GMT",
+         "value_normalized": "2026-02-21",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://releaserun.com/python-3-12-vs-3-13-vs-3-14-comparison/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-02-21T02:53:15Z",
+         "value_normalized": "2026-02-21",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-02-21T02:53:15Z",
+         "value_normalized": "2026-02-21",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-02-21T02:53:15Z",
+         "value_normalized": "2026-02-21",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        },
+        {
+         "signal_type": "HTML_TIME_DATETIME",
+         "field": "datetime",
+         "value_original": "2026-02-07T13:42:20Z",
+         "value_normalized": "2026-02-07",
+         "scope": "PAGE",
+         "source": "HTML_TIME_ELEMENT"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://dev.to/matheus_releaserun/python-312-vs-313-vs-314-what-actually-changed-and-which-should-you-use-4kc0",
+        "capturado_em": "2026-11-13T23:06:04.426Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Python 3.12 vs 3.13 vs 3.14: What Actually Changed and Which Should You Use - DEV Community",
+      "url": "https://dev.to/matheus_releaserun/python-312-vs-313-vs-314-what-actually-changed-and-which-should-you-use-4kc0",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 19099,
+      "caracteres_preparados": 7991,
+      "trecho_analisado": "TÍTULO DA FONTE: Python 3.12 vs 3.13 vs 3.14: What Actually Changed and Which Should You Use - DEV Community\nURL DA FONTE: https://dev.to/matheus_releaserun/python-312-vs-313-vs-314-what-actually-changed-and-which-should-you-use-4kc0\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n•\n\nOriginally published at [releaserun.com](https://releaserun.com/python-3-12-vs-3-13-vs-3-14-comparison/)\n\n![](https://assets.dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg)\n\n![](https://assets.dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg)\n\n# Python 3.12 vs 3.13 vs 3.14: What Actually Changed and Which Should You Use\n\nPython has shipped three major releases in three years, and each one tells a different story.\n\nPython 3.12 cleaned house.\n\nPython 3.13 planted experimental seeds.\n\nPython 3.14 harvested them.\n\nIf you're deciding which version to run in production, pin in your Docker images, or target in your library's CI matrix — this guide breaks down exactly what changed and what it means for you.\n\nBefore we get into specifics, here's the narrative arc across these three versions:\n\n**Python 3.12** (Oct 2023) was about polish",
+      "citacao_chave": null,
+      "citacao_verificada": false,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "Not counted: the model quoted text that is not in this source. Model's reason: The blog states that Python 3.12 receives security patches until 2028, indicating ongoing official security fixes."
+     },
+     "classificacao": {
+      "postura": "INSUFFICIENT",
+      "justificativa": "Not counted: the model quoted text that is not in this source. Model's reason: The blog states that Python 3.12 receives security patches until 2028, indicating ongoing official security fixes."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 265,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2026-02-21"
+     }
+    }
+   ],
+   "erro_busca": null,
+   "janela_validade": {
+    "dias": 90,
+    "origem": "CATEGORY",
+    "entidade": null,
+    "motivo": null
+   },
+   "risco_desatualizacao": {
+    "nivel": "HIGH",
+    "sensivel_ao_tempo": true,
+    "motivos": [
+     "Software versions and support dates change often (checked against a 90-day window)",
+     "Claims to be true right now (\"currently\", \"still\", \"latest\"…)"
+    ]
+   },
+   "dominios_oficiais_usados": [],
+   "dominios_oficiais_automaticos": [],
+   "agregacao": {
+    "status": "CLASSIFICADO",
+    "conclusao_factual": {
+     "status": "APOIA",
+     "resumo": "As evidências utilizáveis apoiam a afirmação. Isso, por si só, não demonstra que ela continua válida agora."
+    },
+    "veredito": "SUPORTE_FRACO",
+    "resumo": "Há evidências que apoiam a afirmação, mas não foi identificada uma fonte oficial atual suficiente para uma conclusão mais forte.",
+    "afirmacao": "Python 3.12 still receives official security fixes.",
+    "score_qualidade_evidencia": {
+     "valor": 20,
+     "escala": "0-100",
+     "natureza": "HEURISTICA",
+     "interpretacao": "Qualidade estrutural das evidências, não probabilidade de verdade.",
+     "componentes": {
+      "autoridade": 0,
+      "atualidade": 0,
+      "diversidade_fontes": 10,
+      "concordancia": 10
+     }
+    },
+    "freshness": {
+     "score": null,
+     "status": "UNVERIFIABLE",
+     "confidence": "INSUFFICIENT",
+     "algorithm_id": "CLAIM_FRESHNESS_SCORE",
+     "algorithm_version": "1.1.0",
+     "policy_id": "versao_api:90d:v1",
+     "as_of": "2026-11-13T23:05:57.528Z",
+     "evidence_summary": {
+      "received": 1,
+      "eligible": 0,
+      "independent_domains": 0,
+      "excluded": 1
+     },
+     "drivers": [
+      {
+       "code": "NO_ATTRIBUTE_DATED_EVIDENCE"
+      }
+     ],
+     "limitations": [
+      "Não há evidência com data verificável ligada ao atributo desta afirmação."
+     ]
+    },
+    "concordancia": {
+     "algorithm_id": "SOURCE_AGREEMENT_INDEX",
+     "algorithm_version": "1.1.0",
+     "weights": {
+      "OFICIAL": 3,
+      "ACADEMICO": 3,
+      "NOTICIA": 2,
+      "REFERENCIA": 1.5,
+      "OUTRO": 1,
+      "BLOG_FORUM": 0.25
+     },
+     "score": 100,
+     "coverage": "WEAK",
+     "independent_sources": 1,
+     "source_types": [
+      "OUTRO"
+     ],
+     "supporting": 1,
+     "support_weight": 1,
+     "contradict_weight": 0,
+     "authoritative_supporting": 0,
+     "contradicting": 0,
+     "split": 0,
+     "by_type": {
+      "OUTRO": {
+       "supports": 1,
+       "contradicts": 0,
+       "split": 0
+      }
+     },
+     "limitations": [
+      "Agreement between sources is not a probability of truth: sources can share the same mistake.",
+      "Copies and pages from the same site count once; independence is approximated by domain and text similarity."
+     ]
+    },
+    "recencia_pagina": {
+     "algorithm_id": "PAGE_DATE_RECENCY_INDEX",
+     "algorithm_version": "1.0.0",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "as_of": "2026-11-13T23:05:57.528Z",
+     "score": 40,
+     "status": "FRESH",
+     "policy_id": "versao_api:90d:page:v1",
+     "newest_date": "2026-09-15",
+     "sources": [
+      {
+       "date": "2026-09-15",
+       "age_days": 59,
+       "status": "FRESH",
+       "posture": "SUPPORTS",
+       "source_type": "OUTRO",
+       "domain": "herodevs.com",
+       "evidence_id": null
+      }
+     ],
+     "limitations": [
+      "Baseado na data da página, não na data em que o dado específico mudou: confiança baixa.",
+      "Não substitui o índice de atualidade principal e não é probabilidade de verdade."
+     ]
+    },
+    "atualidade_afirmacao": {
+     "algorithm_id": "CLAIM_CURRENCY_SCORE",
+     "algorithm_version": "1.1.0",
+     "formula": "evidence_recency × support_share",
+     "window_days": 90,
+     "score": 40,
+     "status": "CURRENT",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "evidence_recency": 40,
+     "support_share": 1,
+     "newest_date": "2026-09-15",
+     "newest_age_days": 59,
+     "within_window": true
+    },
+    "versao_regras": "1.3.0",
+    "metodo": "AGREGACAO_DETERMINISTICA",
+    "fontes_independentes": 1,
+    "grupos_distintos_de_evidencia": 1,
+    "dependencia_detectada": 0,
+    "dependencia_nao_verificada": true,
+    "nota_independencia": "Cópias exatas, quase duplicadas, URLs canônicas iguais e páginas do mesmo domínio são agrupadas; domínios sem sinal de cópia não têm independência editorial comprovada.",
+    "total_evidencias_utilizaveis": 1,
+    "fontes": [
+     {
+      "dominio": "herodevs.com",
+      "dominios": [
+       "herodevs.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_001",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Python End-of-Life Dates: Every Version's Support Timeline",
+        "url": "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+        "categoria_fonte": "OUTRO",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T23:06:05.021Z",
+        "data_publicacao": "2026-09-15",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Tue, 15 Sep 2026 00:00:00 GMT",
+          "value_normalized": "2026-09-15",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Fri, 13 Nov 2026 21:43:36 GMT",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-03-17T14:39:13.848Z",
+          "value_normalized": "2026-03-17",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "blogposting"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-10-13T15:44:47.003Z",
+          "value_normalized": "2026-10-13",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "blogposting"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_001",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     }
+    ],
+    "limitacoes": [
+     "Nenhuma evidência possui data verificável e status de atualidade FRESH.",
+     "Uma data da página ou do resultado de busca não comprova quando o atributo da afirmação foi publicado ou atualizado.",
+     "Nenhuma fonte pertence ao cadastro de domínios oficiais informado.",
+     "Domínios sem sinal detectado de duplicação não têm independência editorial comprovada; republicação com edição extensa ainda pode passar despercebida."
+    ],
+    "avaliado_em": "2026-11-13T23:06:14.013Z"
+   }
+  }
+ ],
+ "afirmacoes_omitidas": [],
+ "resposta_corrigida": {
+  "texto": "Python 3.12 still receives official security fixes, according to one source[1].",
+  "mudancas": [
+   {
+    "claim_id": "afirmacao_1",
+    "what": "added hedge and citation"
+   }
+  ],
+  "fontes_citadas": [
+   1
+  ],
+  "tentativas": 1,
+  "citacoes_anexadas": false,
+  "fontes": [
+   {
+    "n": 1,
+    "url": "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+    "titulo": "Python End-of-Life Dates: Every Version's Support Timeline",
+    "tipo": "OUTRO",
+    "postura": "SUPPORTS",
+    "data": "2026-09-15"
+   }
+  ],
+  "metodo": "MODEL_REWRITE_FROM_VERIFIED_EVIDENCE"
+ },
+ "rastreabilidade_modelo": [
+  {
+   "id_chamada": "ea590ea9-83af-41dd-8737-d6610d0f7d1f",
+   "id_requisicao_enviada": "0c2e808d-5068-41d3-97ba-e54dfe59e31e",
+   "id_verificacao": "80974a46-bbd2-4742-b208-2467bf1a54f3",
+   "etapa": "DECOMPOSICAO",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 825,
+   "tokens": {
+    "entrada": 841,
+    "saida": 376,
+    "total": 1217
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "0c2e808d-5068-41d3-97ba-e54dfe59e31e",
+   "id_trace": "bbb5c5eefead4c66bb5ea1b46efb2131",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 825.362,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:05:57.529Z"
+  },
+  {
+   "id_chamada": "390caafc-8d0b-4f03-96eb-2733e08d94dd",
+   "id_requisicao_enviada": "ef75cde1-6f32-4a8a-9e5e-3a9e6498886b",
+   "id_verificacao": "80974a46-bbd2-4742-b208-2467bf1a54f3",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 2621,
+   "tokens": {
+    "entrada": 4625,
+    "saida": 2048,
+    "total": 6673
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "ef75cde1-6f32-4a8a-9e5e-3a9e6498886b",
+   "id_trace": "6e9528117cd34a83a6e9154c7740528b",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 2621.399,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:06:07.159Z"
+  },
+  {
+   "id_chamada": "f6e260d7-85d1-4955-bec3-8efabd4496da",
+   "id_requisicao_enviada": "801ce2ff-d4da-4218-a197-4a92bf5b4ab6",
+   "id_verificacao": "80974a46-bbd2-4742-b208-2467bf1a54f3",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 4118,
+   "tokens": {
+    "entrada": 4625,
+    "saida": 1652,
+    "total": 6277
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "801ce2ff-d4da-4218-a197-4a92bf5b4ab6",
+   "id_trace": "c5cc41f33814469d97189345d66bcba4",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 4164.87,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:06:09.810Z"
+  },
+  {
+   "id_chamada": "49960e59-f765-4724-8fec-b37f60d3fa1a",
+   "id_requisicao_enviada": "66553142-3244-46a6-8c6c-9a9a3123f715",
+   "id_verificacao": "80974a46-bbd2-4742-b208-2467bf1a54f3",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 1156,
+   "tokens": {
+    "entrada": 676,
+    "saida": 377,
+    "total": 1053
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "66553142-3244-46a6-8c6c-9a9a3123f715",
+   "id_trace": "cb15f33f2813475d956fce839cc214dc",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 1193.263,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:06:14.013Z"
+  }
+ ],
+ "rastreabilidade_pesquisa": [
+  {
+   "id_operacao": "2bd0a1ec-f060-45b8-82dc-9ed51baefea4",
+   "id_verificacao": "80974a46-bbd2-4742-b208-2467bf1a54f3",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Python 3.12 still receives official security fixes.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:05:58.489Z",
+   "finalizada_em": "2026-11-13T23:05:59.965Z",
+   "duracao_ms": 1476,
+   "request_id": "10917b77-ff08-4b0b-8a17-b3ec95035895",
+   "response_time": 0.89,
+   "erro": null,
+   "modo_busca": "GERAL",
+   "parametros": {
+    "query": "Python 3.12 still receives official security fixes.",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "b3c1ee-00",
+     "titulo": "Which Python versions still get security fixes in October",
+     "url": "https://safeguard.sh/resources/blog/which-python-versions-still-get-security-fixes",
+     "relevancia": 0.8253083,
+     "data_publicacao": "2026-10-18"
+    },
+    {
+     "resultado_id": "d9c95c-01",
+     "titulo": "Python Release Python 3.12.11 | Python.org",
+     "url": "https://www.python.org/downloads/release/python-31211",
+     "relevancia": 0.81888163,
+     "data_publicacao": "2025-06-03"
+    },
+    {
+     "resultado_id": "d18dae-02",
+     "titulo": "Status of Python versions",
+     "url": "https://devguide.python.org/versions",
+     "relevancia": 0.71092945,
+     "data_publicacao": "2026-10-29"
+    },
+    {
+     "resultado_id": "e086cf-03",
+     "titulo": "Python End-of-Life Dates: Every Version's Support Timeline",
+     "url": "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+     "relevancia": 0.63431686,
+     "data_publicacao": "2026-09-15"
+    },
+    {
+     "resultado_id": "4369cf-04",
+     "titulo": "advisories/python-3.12.advisories.yaml at main · wolfi-dev/advisories · GitHub",
+     "url": "https://github.com/wolfi-dev/advisories/blob/main/python-3.12.advisories.yaml",
+     "relevancia": 0.62772304,
+     "data_publicacao": "2026-01-07"
+    }
+   ]
+  },
+  {
+   "id_operacao": "db738054-b5b3-4751-a3bf-231109f0bed7",
+   "id_verificacao": "80974a46-bbd2-4742-b208-2467bf1a54f3",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Python 3.12 still receives official security fixes.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:05:59.965Z",
+   "finalizada_em": "2026-11-13T23:06:04.074Z",
+   "duracao_ms": 4109,
+   "request_id": "a008b19a-3c7a-499a-8edc-31b4c91d95c3",
+   "response_time": 3.66,
+   "erro": null,
+   "modo_busca": "NOTICIAS",
+   "parametros": {
+    "query": "Python 3.12 still receives official security fixes.",
+    "search_depth": "basic",
+    "max_results": 4,
+    "include_answer": false,
+    "include_published_date": true,
+    "topic": "news",
+    "time_range": "year"
+   },
+   "quantidade_resultados": 4,
+   "resultados": [
+    {
+     "resultado_id": "c538b9-00",
+     "titulo": "Python 3.12 vs 3.13 vs 3.14: What Actually Changed and Which Should You Use - DEV Community",
+     "url": "https://dev.to/matheus_releaserun/python-312-vs-313-vs-314-what-actually-changed-and-which-should-you-use-4kc0",
+     "relevancia": 0.8056322,
+     "data_publicacao": "2026-02-21"
+    },
+    {
+     "resultado_id": "33d5d7-01",
+     "titulo": "Python 3.10 End of Life: A Practical Upgrade Guide for 2026",
+     "url": "https://piyushmehta.com/blog/python-310-end-of-life-upgrade-guide",
+     "relevancia": 0.7874412,
+     "data_publicacao": "2026-10-05"
+    },
+    {
+     "resultado_id": "648d52-02",
+     "titulo": "Cyber Security wants us to use the latest version all the time : r/Python",
+     "url": "https://www.reddit.com/r/Python/comments/1v1ngel/cyber_security_wants_us_to_use_the_latest_version",
+     "relevancia": 0.74186105,
+     "data_publicacao": "2026-08-10"
+    },
+    {
+     "resultado_id": "5f3b08-03",
+     "titulo": "Status of Python versions",
+     "url": "https://devguide.python.org/versions",
+     "relevancia": 0.71092945,
+     "data_publicacao": "2026-10-29"
+    }
+   ]
+  },
+  {
+   "id_operacao": "32322e03-c96a-497c-8cb1-b10d9530f1eb",
+   "id_verificacao": "80974a46-bbd2-4742-b208-2467bf1a54f3",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "EXTRACAO",
+   "consulta": "Python 3.12 still receives official security fixes.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:06:04.081Z",
+   "finalizada_em": "2026-11-13T23:06:05.021Z",
+   "duracao_ms": 939,
+   "request_id": "fd5cbe12-9c2e-42d9-80c4-1ff927de4dbe",
+   "response_time": 0.03,
+   "erro": null,
+   "urls_solicitadas": [
+    "https://www.python.org/downloads/release/python-31211",
+    "https://safeguard.sh/resources/blog/which-python-versions-still-get-security-fixes",
+    "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+    "https://github.com/wolfi-dev/advisories/blob/main/python-3.12.advisories.yaml",
+    "https://dev.to/matheus_releaserun/python-312-vs-313-vs-314-what-actually-changed-and-which-should-you-use-4kc0"
+   ],
+   "parametros": {
+    "urls": [
+     "https://www.python.org/downloads/release/python-31211",
+     "https://safeguard.sh/resources/blog/which-python-versions-still-get-security-fixes",
+     "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+     "https://github.com/wolfi-dev/advisories/blob/main/python-3.12.advisories.yaml",
+     "https://dev.to/matheus_releaserun/python-312-vs-313-vs-314-what-actually-changed-and-which-should-you-use-4kc0"
+    ],
+    "extract_depth": "basic",
+    "format": "markdown",
+    "include_images": false
+   },
+   "quantidade_resultados": 5,
+   "urls_extraidas": [
+    "https://www.python.org/downloads/release/python-31211",
+    "https://safeguard.sh/resources/blog/which-python-versions-still-get-security-fixes",
+    "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+    "https://github.com/wolfi-dev/advisories/blob/main/python-3.12.advisories.yaml",
+    "https://dev.to/matheus_releaserun/python-312-vs-313-vs-314-what-actually-changed-and-which-should-you-use-4kc0"
+   ]
+  }
+ ],
+ "modo": "real",
+ "simulado": false,
+ "gateway": {
+  "gateway": "bifrost",
+  "chamadas": 4,
+  "falhas": 0,
+  "cadeia_modelos": [
+   "groq/openai/gpt-oss-20b",
+   "groq/openai/gpt-oss-120b"
+  ],
+  "queda_simulada": false,
+  "respostas_por_modelo": [
+   {
+    "modelo": "groq/openai/gpt-oss-20b",
+    "chamadas": 2
+   },
+   {
+    "modelo": "groq/openai/gpt-oss-120b",
+    "chamadas": 2
+   }
+  ],
+  "respostas_de_reserva": 2,
+  "tokens_total": 15220,
+  "latencia_media_ms": 2201
+ },
+ "duracao_ms": 17727,
+ "gravado_em": "2026-11-13T23:06:15.229Z"
+}

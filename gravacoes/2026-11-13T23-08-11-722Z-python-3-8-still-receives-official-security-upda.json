@@ -1,0 +1,1925 @@
+{
+ "sistema": "Entrelinhas",
+ "id_verificacao": "801194c8-d95b-49a7-8555-7ac82f4891c2",
+ "texto_original": "Python 3.8 still receives official security updates.",
+ "verificado_em": "2026-11-13T23:08:11.710Z",
+ "total_afirmacoes": 1,
+ "sintese": {
+  "veredito": "CONTRADITA_POR_FONTE_ATUAL",
+  "resumo": "Uma fonte oficial atual contradiz a afirmação. As evidências analisadas não sustentam a afirmação como foi apresentada.",
+  "total_afirmacoes": 1,
+  "contagem_vereditos": {
+   "CONTRADITA_POR_FONTE_ATUAL": 1
+  }
+ },
+ "afirmacoes": [
+  {
+   "id": "afirmacao_1",
+   "texto": "Python 3.8 still receives official security updates.",
+   "tipo_afirmacao": "versao_api",
+   "origem_tipo_afirmacao": "MODELO",
+   "nuances": {
+    "idioma": "en",
+    "variante": null,
+    "confianca_idioma": 1,
+    "valores": [],
+    "datas": [],
+    "expressoes_temporais": [
+     {
+      "texto": "still",
+      "tipo": "PRESENTE",
+      "rotulo": "present tense: must hold today"
+     }
+    ],
+    "condicoes": [],
+    "mudancas": [],
+    "tempo_coloquial": [],
+    "girias": {
+     "aliases": [],
+     "expressoes": []
+    },
+    "consulta_busca": "Python 3.8 still receives official security updates.",
+    "dominios_oficiais_sugeridos": [],
+    "autoridades": [],
+    "notas": [
+     "\"still\": present tense: must hold today."
+    ]
+   },
+   "evidencias": [
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OFICIAL",
+      "titulo": "Status of Python versions",
+      "url": "https://devguide.python.org/versions",
+      "conteudo": "- [x] - [x] [Skip to content](https://devguide.python.org/versions/#furo-main-content)\n\n[Python Developer's Guide](https://devguide.python.org/)\n\n[![Image 1: Logo](https://devguide.python.org/_static/python-logo.svg) Python Developer's Guide](https://devguide.python.org/)\n\n*   [Getting started](https://devguide.python.org/getting-started/)- [x] \n    *   [Quick reference](https://devguide.python.org/getting-started/quick-reference/)\n    *   [Setup and building](https://devguide.python.org/getting-started/setup-building/)\n    *   [Fixing “easy” issues (and beyond)](https://devguide.python.org/getting-started/fixing-issues/)\n    *   [Git bootcamp and cheat sheet](https://devguide.python.org/get…",
+      "coletado_em": "2026-11-13T23:08:07.124Z",
+      "data_publicacao": "2026-10-29",
+      "data_atualizacao": "2026-10-29",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": null,
+      "relevancia": 0.38219908,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "103c640e-21c0-42d1-a557-b87f0a3c492a",
+       "resultado_id": "be5634-04",
+       "response_time_busca": 2.3,
+       "response_time_extracao": 0.5,
+       "consulta": "Python 3.8 still receives official security updates.",
+       "origem_principal": {
+        "id_operacao": "1204b6a7-3551-4f99-ba38-4020301866b5",
+        "request_id": "103c640e-21c0-42d1-a557-b87f0a3c492a",
+        "modo_busca": "GERAL",
+        "resultado_id": "be5634-04",
+        "parametros": {
+         "query": "Python 3.8 still receives official security updates.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "1204b6a7-3551-4f99-ba38-4020301866b5",
+         "request_id": "103c640e-21c0-42d1-a557-b87f0a3c492a",
+         "modo_busca": "GERAL",
+         "resultado_id": "be5634-04",
+         "parametros": {
+          "query": "Python 3.8 still receives official security updates.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Thu, 29 Oct 2026 19:17:16 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 29 Oct 2026 19:17:16 GMT",
+         "value_normalized": "2026-10-29",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Wed, 11 Nov 2026 08:50:42 GMT",
+         "value_normalized": "2026-11-11",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-05-27T13:42:06+00:00",
+         "value_normalized": "2026-05-27",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://devguide.python.org/versions/",
+        "capturado_em": "2026-11-13T23:08:06.868Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "580c6b73-55a7-4b92-882a-047ad767fe76",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2024-10-07",
+       "precisao": "DIA",
+       "citacao": "3.8 | **PEP 569** | end-of-life | 2019-10-14 | 2024-10-07",
+       "origem": "QUOTED_IN_SOURCE_TEXT",
+       "confirmada_em": "2026-10-29"
+      }
+     },
+     "coleta": {
+      "id_coleta": "95879b4d-1639-43f1-86d1-a660cb8884b8",
+      "id_verificacao": "801194c8-d95b-49a7-8555-7ac82f4891c2",
+      "url_original": "https://devguide.python.org/versions",
+      "url_canonica": "https://devguide.python.org/versions",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "bf45b90deb7d1cbf59977ffcee33b41a6bee729ff7a9809f19df75f926c1c748",
+      "coletado_em": "2026-11-13T23:08:07.124Z",
+      "id_operacao_busca": "1204b6a7-3551-4f99-ba38-4020301866b5",
+      "id_operacao_extracao": "8e64cdc4-8342-4f09-965b-197342f3a818",
+      "consulta": "Python 3.8 still receives official security updates.",
+      "parametros_busca": {
+       "query": "Python 3.8 still receives official security updates.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://devguide.python.org/versions",
+        "https://en.wikipedia.org/wiki/History_of_Python",
+        "https://releaserun.com/versions/python/3.8",
+        "https://pythonspeed.com/articles/stop-using-python-3.8",
+        "https://devcenter.heroku.com/changelog-items/3094"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "103c640e-21c0-42d1-a557-b87f0a3c492a",
+       "operacoes_busca": [
+        {
+         "id_operacao": "1204b6a7-3551-4f99-ba38-4020301866b5",
+         "request_id": "103c640e-21c0-42d1-a557-b87f0a3c492a",
+         "modo_busca": "GERAL",
+         "resultado_id": "be5634-04",
+         "parametros": {
+          "query": "Python 3.8 still receives official security updates.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "580c6b73-55a7-4b92-882a-047ad767fe76",
+       "resultado_id": "be5634-04",
+       "relevancia": 0.38219908,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 29 Oct 2026 19:17:16 GMT",
+         "value_normalized": "2026-10-29",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Wed, 11 Nov 2026 08:50:42 GMT",
+         "value_normalized": "2026-11-11",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-05-27T13:42:06+00:00",
+         "value_normalized": "2026-05-27",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://devguide.python.org/versions/",
+        "capturado_em": "2026-11-13T23:08:06.868Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Status of Python versions",
+      "url": "https://devguide.python.org/versions",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 10983,
+      "caracteres_preparados": 7884,
+      "trecho_analisado": "TÍTULO DA FONTE: Status of Python versions\nURL DA FONTE: https://devguide.python.org/versions\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n- [x] - [x] [Skip to content](https://devguide.python.org/versions/#furo-main-content)\n\n[Python Developer's Guide](https://devguide.python.org/)\n\n[![Image 1: Logo](https://devguide.python.org/_static/python-logo.svg) Python Developer's Guide](https://devguide.python.org/)\n\n*   [Getting started](https://devguide.python.org/getting-started/)- [x]\n\n*   [Quick reference](https://devguide.python.org/getting-started/quick-reference/)\n\n*   [Setup and building](https://devguide.python.org/getting-started/setup-building/)\n\n*   [Fixing “easy” issues (and beyond)](https://devguide.python.org/getting-started/fixing-issues/)\n\n*   [Git bootcamp and cheat sheet](https://devguide.python.org/getting-started/git-boot-camp/)\n\n*   [Lifecycle of a pull request](https://devguide.python.org/getting-started/pull-request-lifecycle/)\n\n*   [Where to get help](https://devguide.python.org/getting-started/getting-help/)\n\n*   [Guidelines for using AI tools](https://devguide.python.org/getting-started/ai-tools/)\n\n*   [Development workflow](https://devguide.python.org/developer-workflow",
+      "citacao_chave": "3.8 | **PEP 569** | end-of-life | 2019-10-14 | 2024-10-07",
+      "citacao_verificada": true,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source states that Python 3.8 reached end‑of‑life on 2024‑10‑07, meaning no further security updates are provided."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "The source states that Python 3.8 reached end‑of‑life on 2024‑10‑07, meaning no further security updates are provided."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 15,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2026-10-29"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "REFERENCIA",
+      "titulo": "History of Python - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/History_of_Python",
+      "conteudo": "[Jump to content](#bodyContent)\n\n[![](/static/images/icons/enwiki-25.svg)  ![Wikipedia](/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](/wiki/Main_Page)\n\n[Search](/wiki/Special:Search \"Search Wikipedia [f]\")\n\n## Contents\n\n* [1 Early history](#Early_history)\n* [2 Version 1](#Version_1)\n  + [2.1 BeOpen](#BeOpen)\n* [3 Version 2](#Version_2)\n* [4 Version 3](#Version_3)\n  + [4.1 Compatibility](#Compatibility)\n  + [4.2 Features](#Features)\n  + [4.3 Subsequent releases](#Subsequent_releases)\n    - [4.3.1 Security](#Security)\n* [5 Table of versions](#Table_of_versions)\n  + [5.1 Support](#Support)\n* […",
+      "coletado_em": "2026-11-13T23:08:07.124Z",
+      "data_publicacao": "2026-08-08",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://en.wikipedia.org/wiki/History_of_Python",
+      "relevancia": 0.54643565,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "00718cd8-c7af-4641-8cef-fa0a012889af",
+       "resultado_id": "90093b-01",
+       "response_time_busca": 3.14,
+       "response_time_extracao": 0.5,
+       "consulta": "Python 3.8 still receives official security updates.",
+       "origem_principal": {
+        "id_operacao": "9079d3ad-18d0-4d35-858c-c68cf863ac45",
+        "request_id": "00718cd8-c7af-4641-8cef-fa0a012889af",
+        "modo_busca": "NOTICIAS",
+        "resultado_id": "90093b-01",
+        "parametros": {
+         "query": "Python 3.8 still receives official security updates.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news",
+         "time_range": "year"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "9079d3ad-18d0-4d35-858c-c68cf863ac45",
+         "request_id": "00718cd8-c7af-4641-8cef-fa0a012889af",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "90093b-01",
+         "parametros": {
+          "query": "Python 3.8 still receives official security updates.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "time_range": "year"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Sat, 08 Aug 2026 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Sat, 08 Aug 2026 00:00:00 GMT",
+         "value_normalized": "2026-08-08",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 07:20:43 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://en.wikipedia.org/wiki/History_of_Python",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2009-02-01T21:15:47Z",
+         "value_normalized": "2009-02-01",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-11T03:53:16Z",
+         "value_normalized": "2026-11-11",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://en.wikipedia.org/wiki/History_of_Python",
+        "capturado_em": "2026-11-13T23:08:06.864Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "580c6b73-55a7-4b92-882a-047ad767fe76",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "a91178d4-9e62-4241-8f01-012856b277f2",
+      "id_verificacao": "801194c8-d95b-49a7-8555-7ac82f4891c2",
+      "url_original": "https://en.wikipedia.org/wiki/History_of_Python",
+      "url_canonica": "https://en.wikipedia.org/wiki/History_of_Python",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "3aa82b5b1ee1e7b5290cba84d8fbb762426cc41b06dffec6bb449b51a0270802",
+      "coletado_em": "2026-11-13T23:08:07.124Z",
+      "id_operacao_busca": "9079d3ad-18d0-4d35-858c-c68cf863ac45",
+      "id_operacao_extracao": "8e64cdc4-8342-4f09-965b-197342f3a818",
+      "consulta": "Python 3.8 still receives official security updates.",
+      "parametros_busca": {
+       "query": "Python 3.8 still receives official security updates.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news",
+       "time_range": "year"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://devguide.python.org/versions",
+        "https://en.wikipedia.org/wiki/History_of_Python",
+        "https://releaserun.com/versions/python/3.8",
+        "https://pythonspeed.com/articles/stop-using-python-3.8",
+        "https://devcenter.heroku.com/changelog-items/3094"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "00718cd8-c7af-4641-8cef-fa0a012889af",
+       "operacoes_busca": [
+        {
+         "id_operacao": "9079d3ad-18d0-4d35-858c-c68cf863ac45",
+         "request_id": "00718cd8-c7af-4641-8cef-fa0a012889af",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "90093b-01",
+         "parametros": {
+          "query": "Python 3.8 still receives official security updates.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "time_range": "year"
+         }
+        }
+       ],
+       "request_id_extracao": "580c6b73-55a7-4b92-882a-047ad767fe76",
+       "resultado_id": "90093b-01",
+       "relevancia": 0.54643565,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Sat, 08 Aug 2026 00:00:00 GMT",
+         "value_normalized": "2026-08-08",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 07:20:43 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://en.wikipedia.org/wiki/History_of_Python",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2009-02-01T21:15:47Z",
+         "value_normalized": "2009-02-01",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-11T03:53:16Z",
+         "value_normalized": "2026-11-11",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://en.wikipedia.org/wiki/History_of_Python",
+        "capturado_em": "2026-11-13T23:08:06.864Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "History of Python - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/History_of_Python",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 75314,
+      "caracteres_preparados": 7975,
+      "trecho_analisado": "TÍTULO DA FONTE: History of Python - Wikipedia\nURL DA FONTE: https://en.wikipedia.org/wiki/History_of_Python\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n+ [4.3 Subsequent releases](#Subsequent_releases)\n\n- [4.3.1 Security](#Security)\n\n* [5 Table of versions](#Table_of_versions)\n\n* [8 External links](#External_links)\n\n# History of Python\n\n* [العربية](https://ar.wikipedia.org/wiki/%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE_%D8%A8%D8%A7%D9%8A%D8%AB%D9%88%D9%86 \"تاريخ بايثون – Arabic\")\n\n* [Azərbaycanca](https://az.wikipedia.org/wiki/Python_tarixi \"Python tarixi – Azerbaijani\")\n\n* [Español](https://es.wikipedia.org/wiki/Historia_de_Python \"Historia de Python – Spanish\")\n\n* [فارسی](https://fa.wikipedia.org/wiki/%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DA%86%D9%87_%D9%BE%D8%A7%DB%8C%D8%AA%D9%88%D9%86 \"تاریخچه پایتون – Persian\")\n\n* [한국어](https://ko.wikipedia.org/wiki/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%98_%EC%97%AD%EC%82%AC \"파이썬의 역사 – Korean\")\n\n* [Русский](https://ru.wikipedia.org/wiki/%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F_%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F_Python \"История языка программирования Python – Russian\")\n\n* [Српски",
+      "citacao_chave": null,
+      "citacao_verificada": false,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "Not counted: the model quoted text that is not in this source. Model's reason: Wikipedia lists Python 3.8 as unsupported with end‑of‑life 2024‑10‑07, indicating it no longer receives official security updates."
+     },
+     "classificacao": {
+      "postura": "INSUFFICIENT",
+      "justificativa": "Not counted: the model quoted text that is not in this source. Model's reason: Wikipedia lists Python 3.8 as unsupported with end‑of‑life 2024‑10‑07, indicating it no longer receives official security updates."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 97,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2026-08-08"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_search",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Python 3.8: End of Life - Upgrade Guide & Migration Path - ReleaseRun",
+      "url": "https://releaserun.com/versions/python/3.8",
+      "conteudo": "No. Python 3.8 has reached end of life and no longer receives security updates. Running EOL software exposes your applications to unpatched vulnerabilities. You should plan an upgrade to a currently supported version.\n\n## Related Resources\n\nPython Hub Page   All Python Versions   Free Developer Tools\n\nGet release updates for Python\n\nBreaking changes, security patches, EOL warnings. Monthly digest, no spam.\n\nFree forever. Unsubscribe anytime. We track 50+ technologies. [...] Python 3.8 reached end of life on October 7, 2024, roughly 1 year ago. Since then, no security patches have been issued. If you are still running Python 3.8, you should treat upgrading as a high-priority item. Any CVEs di…",
+      "coletado_em": "2026-11-13T23:08:02.904Z",
+      "data_publicacao": null,
+      "data_atualizacao": "2024-10-07",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": null,
+      "relevancia": 0.81167597,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "103c640e-21c0-42d1-a557-b87f0a3c492a",
+       "resultado_id": "921996-00",
+       "response_time_busca": 2.3,
+       "response_time_extracao": 0.5,
+       "consulta": "Python 3.8 still receives official security updates.",
+       "origem_principal": {
+        "id_operacao": "1204b6a7-3551-4f99-ba38-4020301866b5",
+        "request_id": "103c640e-21c0-42d1-a557-b87f0a3c492a",
+        "modo_busca": "GERAL",
+        "resultado_id": "921996-00",
+        "parametros": {
+         "query": "Python 3.8 still receives official security updates.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "1204b6a7-3551-4f99-ba38-4020301866b5",
+         "request_id": "103c640e-21c0-42d1-a557-b87f0a3c492a",
+         "modo_busca": "GERAL",
+         "resultado_id": "921996-00",
+         "parametros": {
+          "query": "Python 3.8 still receives official security updates.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": null,
+       "sinais_data": [],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "FETCH_FAILED",
+        "detalhe": "Client network socket disconnected before secure TLS connection was established",
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": false,
+        "request_id": "580c6b73-55a7-4b92-882a-047ad767fe76",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2024-10-07",
+       "precisao": "DIA",
+       "citacao": "Python 3.8 reached end of life on October 7, 2024, roughly 1 year ago.",
+       "origem": "QUOTED_IN_SOURCE_TEXT",
+       "confirmada_em": "2024-10-07"
+      }
+     },
+     "coleta": {
+      "id_coleta": "f360a6f6-0fc9-44a8-8945-0910f5b12179",
+      "id_verificacao": "801194c8-d95b-49a7-8555-7ac82f4891c2",
+      "url_original": "https://releaserun.com/versions/python/3.8",
+      "url_canonica": "https://releaserun.com/versions/python/3.8",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_search",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "fee6a09694d0fefebd9fae0a8b1e14446ce91e06f8a76c264f6de7555223d8ce",
+      "coletado_em": "2026-11-13T23:08:02.904Z",
+      "id_operacao_busca": "1204b6a7-3551-4f99-ba38-4020301866b5",
+      "id_operacao_extracao": "8e64cdc4-8342-4f09-965b-197342f3a818",
+      "consulta": "Python 3.8 still receives official security updates.",
+      "parametros_busca": {
+       "query": "Python 3.8 still receives official security updates.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://devguide.python.org/versions",
+        "https://en.wikipedia.org/wiki/History_of_Python",
+        "https://releaserun.com/versions/python/3.8",
+        "https://pythonspeed.com/articles/stop-using-python-3.8",
+        "https://devcenter.heroku.com/changelog-items/3094"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "103c640e-21c0-42d1-a557-b87f0a3c492a",
+       "operacoes_busca": [
+        {
+         "id_operacao": "1204b6a7-3551-4f99-ba38-4020301866b5",
+         "request_id": "103c640e-21c0-42d1-a557-b87f0a3c492a",
+         "modo_busca": "GERAL",
+         "resultado_id": "921996-00",
+         "parametros": {
+          "query": "Python 3.8 still receives official security updates.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "580c6b73-55a7-4b92-882a-047ad767fe76",
+       "resultado_id": "921996-00",
+       "relevancia": 0.81167597,
+       "sinais_data": [],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "FETCH_FAILED",
+        "detalhe": "Client network socket disconnected before secure TLS connection was established",
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": false,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Python 3.8: End of Life - Upgrade Guide & Migration Path - ReleaseRun",
+      "url": "https://releaserun.com/versions/python/3.8",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 1384,
+      "caracteres_preparados": 1384,
+      "trecho_analisado": "TÍTULO DA FONTE: Python 3.8: End of Life - Upgrade Guide & Migration Path - ReleaseRun\nURL DA FONTE: https://releaserun.com/versions/python/3.8\n\nCONTEÚDO DA FONTE:\nNo. Python 3.8 has reached end of life and no longer receives security updates. Running EOL software exposes your applications to unpatched vulnerabilities. You should plan an upgrade to a currently supported version.\n\n## Related Resources\n\nPython Hub Page   All Python Versions   Free Developer Tools\n\nGet release updates for Python\n\nBreaking changes, security patches, EOL warnings. Monthly digest, no spam.\n\nFree forever. Unsubscribe anytime. We track 50+ technologies. [...] Python 3.8 reached end of life on October 7, 2024, roughly 1 year ago. Since then, no security patches have been issued. If you are still running Python 3.8, you should treat upgrading as a high-priority item. Any CVEs discovered against this version will not be fixed upstream. [...] ## Frequently Asked Questions\n\nWhen was Python 3.8 released? \n\nPython 3.8 was released on October 14, 2019.\n\n   When does Python 3.8 reach end of life? \n\nPython 3.8 reached end of life on October 7, 2024. It no longer receives security patches or bug fixes. You should upg",
+      "citacao_chave": "Python 3.8 reached end of life on October 7, 2024, roughly 1 year ago.",
+      "citacao_verificada": true,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The text explicitly says Python 3.8 has reached end‑of‑life on October 7, 2024, and no security patches have been issued since."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "The text explicitly says Python 3.8 has reached end‑of‑life on October 7, 2024, and no security patches have been issued since."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 767,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2024-10-07"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "It’s time to stop using Python 3.8",
+      "url": "https://pythonspeed.com/articles/stop-using-python-3.8",
+      "conteudo": "# It’s time to stop using Python 3.8\n\nby [Itamar Turner-Trauring](mailto:itamar@pythonspeed.com)  \nLast updated 10 Oct 2024, originally created 12 Sep 2024\n\nUpgrading to new software versions is work, and work that doesn’t benefit your software’s users. Users care about features and bug fixes, not how up-to-date you are.\n\nSo it’s perhaps not surprising how many people still use Python 3.8. As of September 2024, [about 14% of packages downloaded from PyPI were for Python 3.8](https://pypistats.org/packages/__all__). This includes automated downloads as part of CI runs, so it doesn’t mean 3.8 is used in 14% of applications, but that’s still 250 *million* packages installed in a single day!\n\nSt…",
+      "coletado_em": "2026-11-13T23:08:07.124Z",
+      "data_publicacao": "2024-09-12",
+      "data_atualizacao": "2024-10-07",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": "https://pythonspeed.com/articles/stop-using-python-3.8/",
+      "relevancia": 0.7826625,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "103c640e-21c0-42d1-a557-b87f0a3c492a",
+       "resultado_id": "c353d7-02",
+       "response_time_busca": 2.3,
+       "response_time_extracao": 0.5,
+       "consulta": "Python 3.8 still receives official security updates.",
+       "origem_principal": {
+        "id_operacao": "1204b6a7-3551-4f99-ba38-4020301866b5",
+        "request_id": "103c640e-21c0-42d1-a557-b87f0a3c492a",
+        "modo_busca": "GERAL",
+        "resultado_id": "c353d7-02",
+        "parametros": {
+         "query": "Python 3.8 still receives official security updates.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "1204b6a7-3551-4f99-ba38-4020301866b5",
+         "request_id": "103c640e-21c0-42d1-a557-b87f0a3c492a",
+         "modo_busca": "GERAL",
+         "resultado_id": "c353d7-02",
+         "parametros": {
+          "query": "Python 3.8 still receives official security updates.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Thu, 12 Sep 2024 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 12 Sep 2024 00:00:00 GMT",
+         "value_normalized": "2024-09-12",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://pythonspeed.com/articles/stop-using-python-3.8/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2024-09-12T00:00:00+00:00",
+         "value_normalized": "2024-09-12",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2024-09-12T00:00:00+00:00",
+         "value_normalized": "2024-09-12",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2024-10-10T10:29:48+00:00",
+         "value_normalized": "2024-10-10",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://pythonspeed.com/articles/stop-using-python-3.8",
+        "capturado_em": "2026-11-13T23:08:06.831Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "580c6b73-55a7-4b92-882a-047ad767fe76",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2024-10-07",
+       "precisao": "DIA",
+       "citacao": "Python 3.8 has reached its end of life as of October 7, 2024.",
+       "origem": "QUOTED_IN_SOURCE_TEXT",
+       "confirmada_em": "2024-10-07"
+      }
+     },
+     "coleta": {
+      "id_coleta": "ffb3069d-8bbb-4f21-a93b-eaf1f48efb0d",
+      "id_verificacao": "801194c8-d95b-49a7-8555-7ac82f4891c2",
+      "url_original": "https://pythonspeed.com/articles/stop-using-python-3.8",
+      "url_canonica": "https://pythonspeed.com/articles/stop-using-python-3.8",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "1744127563f72917cb8ed40808cb614178885e5d4f15d74af06a0dd20e905f94",
+      "coletado_em": "2026-11-13T23:08:07.124Z",
+      "id_operacao_busca": "1204b6a7-3551-4f99-ba38-4020301866b5",
+      "id_operacao_extracao": "8e64cdc4-8342-4f09-965b-197342f3a818",
+      "consulta": "Python 3.8 still receives official security updates.",
+      "parametros_busca": {
+       "query": "Python 3.8 still receives official security updates.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://devguide.python.org/versions",
+        "https://en.wikipedia.org/wiki/History_of_Python",
+        "https://releaserun.com/versions/python/3.8",
+        "https://pythonspeed.com/articles/stop-using-python-3.8",
+        "https://devcenter.heroku.com/changelog-items/3094"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "103c640e-21c0-42d1-a557-b87f0a3c492a",
+       "operacoes_busca": [
+        {
+         "id_operacao": "1204b6a7-3551-4f99-ba38-4020301866b5",
+         "request_id": "103c640e-21c0-42d1-a557-b87f0a3c492a",
+         "modo_busca": "GERAL",
+         "resultado_id": "c353d7-02",
+         "parametros": {
+          "query": "Python 3.8 still receives official security updates.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "580c6b73-55a7-4b92-882a-047ad767fe76",
+       "resultado_id": "c353d7-02",
+       "relevancia": 0.7826625,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Thu, 12 Sep 2024 00:00:00 GMT",
+         "value_normalized": "2024-09-12",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://pythonspeed.com/articles/stop-using-python-3.8/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2024-09-12T00:00:00+00:00",
+         "value_normalized": "2024-09-12",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2024-09-12T00:00:00+00:00",
+         "value_normalized": "2024-09-12",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2024-10-10T10:29:48+00:00",
+         "value_normalized": "2024-10-10",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://pythonspeed.com/articles/stop-using-python-3.8",
+        "capturado_em": "2026-11-13T23:08:06.831Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "It’s time to stop using Python 3.8",
+      "url": "https://pythonspeed.com/articles/stop-using-python-3.8",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 5851,
+      "caracteres_preparados": 5851,
+      "trecho_analisado": "TÍTULO DA FONTE: It’s time to stop using Python 3.8\nURL DA FONTE: https://pythonspeed.com/articles/stop-using-python-3.8\n\nCONTEÚDO DA FONTE:\n# It’s time to stop using Python 3.8\n\nby [Itamar Turner-Trauring](mailto:itamar@pythonspeed.com)  \nLast updated 10 Oct 2024, originally created 12 Sep 2024\n\nUpgrading to new software versions is work, and work that doesn’t benefit your software’s users. Users care about features and bug fixes, not how up-to-date you are.\n\nSo it’s perhaps not surprising how many people still use Python 3.8. As of September 2024, [about 14% of packages downloaded from PyPI were for Python 3.8](https://pypistats.org/packages/__all__). This includes automated downloads as part of CI runs, so it doesn’t mean 3.8 is used in 14% of applications, but that’s still 250 *million* packages installed in a single day!\n\nStill, there is only so much time you can delay upgrading, and for Python 3.8, the time to upgrade is as soon as possible. **Python 3.8 has reached its end of life as of October 7, 2024.**\n\nNo more bug fixes.\n\nNo more security fixes.\n\n[“He’s dead, Jim.”](https://www.youtube.com/watch?v=MH7KYmGnj40)\n\nStill not convinced? Let’s see why you want to upgrade.\n\n## ",
+      "citacao_chave": "Python 3.8 has reached its end of life as of October 7, 2024.",
+      "citacao_verificada": true,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "It states that Python 3.8 has reached its end of life as of October 7, 2024, and no security fixes will be provided."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "It states that Python 3.8 has reached its end of life as of October 7, 2024, and no security fixes will be provided."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 767,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2024-10-07"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Python 3.8 is no longer supported | Heroku Dev Center",
+      "url": "https://devcenter.heroku.com/changelog-items/3094",
+      "conteudo": "[Skip Navigation](#skip-link)\n\nView categories\n\n# Categories\n\n* [Heroku Architecture](/categories/heroku-architecture) \n  + [Compute (Dynos)](/categories/dynos) \n    - [Dyno Management](/categories/dyno-management)\n    - [Dyno Concepts](/categories/dyno-concepts)\n    - [Dyno Behavior](/categories/dyno-behavior)\n    - [Dyno Reference](/categories/dyno-reference)\n    - [Dyno Troubleshooting](/categories/dyno-troubleshooting)\n  + [Stacks (operating system images)](/categories/stacks)\n  + [Networking & DNS](/categories/networking-dns)\n  + [Platform Policies](/categories/platform-policies)\n  + [Platform Principles](/categories/platform-principles)\n  + [Buildpacks](/categories/heroku-buildpacks)\n\n…",
+      "coletado_em": "2026-11-13T23:08:07.124Z",
+      "data_publicacao": "2025-01-08",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://devcenter.heroku.com/changelog-items/3094",
+      "relevancia": 0.7676898,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "103c640e-21c0-42d1-a557-b87f0a3c492a",
+       "resultado_id": "870afd-03",
+       "response_time_busca": 2.3,
+       "response_time_extracao": 0.5,
+       "consulta": "Python 3.8 still receives official security updates.",
+       "origem_principal": {
+        "id_operacao": "1204b6a7-3551-4f99-ba38-4020301866b5",
+        "request_id": "103c640e-21c0-42d1-a557-b87f0a3c492a",
+        "modo_busca": "GERAL",
+        "resultado_id": "870afd-03",
+        "parametros": {
+         "query": "Python 3.8 still receives official security updates.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "1204b6a7-3551-4f99-ba38-4020301866b5",
+         "request_id": "103c640e-21c0-42d1-a557-b87f0a3c492a",
+         "modo_busca": "GERAL",
+         "resultado_id": "870afd-03",
+         "parametros": {
+          "query": "Python 3.8 still receives official security updates.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Wed, 08 Jan 2025 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 08 Jan 2025 00:00:00 GMT",
+         "value_normalized": "2025-01-08",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://devcenter.heroku.com/changelog-items/3094",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://devcenter.heroku.com/changelog-items/3094",
+        "capturado_em": "2026-11-13T23:08:07.643Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "580c6b73-55a7-4b92-882a-047ad767fe76",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "38e5a663-01e3-4dcf-a40a-9cce97adcebc",
+      "id_verificacao": "801194c8-d95b-49a7-8555-7ac82f4891c2",
+      "url_original": "https://devcenter.heroku.com/changelog-items/3094",
+      "url_canonica": "https://devcenter.heroku.com/changelog-items/3094",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "551d1067112b97e055ec185b719d3e133cadaeeeba61054636f3f9b4af105ce1",
+      "coletado_em": "2026-11-13T23:08:07.124Z",
+      "id_operacao_busca": "1204b6a7-3551-4f99-ba38-4020301866b5",
+      "id_operacao_extracao": "8e64cdc4-8342-4f09-965b-197342f3a818",
+      "consulta": "Python 3.8 still receives official security updates.",
+      "parametros_busca": {
+       "query": "Python 3.8 still receives official security updates.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://devguide.python.org/versions",
+        "https://en.wikipedia.org/wiki/History_of_Python",
+        "https://releaserun.com/versions/python/3.8",
+        "https://pythonspeed.com/articles/stop-using-python-3.8",
+        "https://devcenter.heroku.com/changelog-items/3094"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "103c640e-21c0-42d1-a557-b87f0a3c492a",
+       "operacoes_busca": [
+        {
+         "id_operacao": "1204b6a7-3551-4f99-ba38-4020301866b5",
+         "request_id": "103c640e-21c0-42d1-a557-b87f0a3c492a",
+         "modo_busca": "GERAL",
+         "resultado_id": "870afd-03",
+         "parametros": {
+          "query": "Python 3.8 still receives official security updates.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "580c6b73-55a7-4b92-882a-047ad767fe76",
+       "resultado_id": "870afd-03",
+       "relevancia": 0.7676898,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 08 Jan 2025 00:00:00 GMT",
+         "value_normalized": "2025-01-08",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://devcenter.heroku.com/changelog-items/3094",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://devcenter.heroku.com/changelog-items/3094",
+        "capturado_em": "2026-11-13T23:08:07.643Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Python 3.8 is no longer supported | Heroku Dev Center",
+      "url": "https://devcenter.heroku.com/changelog-items/3094",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 8301,
+      "caracteres_preparados": 2258,
+      "trecho_analisado": "TÍTULO DA FONTE: Python 3.8 is no longer supported | Heroku Dev Center\nURL DA FONTE: https://devcenter.heroku.com/changelog-items/3094\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n- [Working with PHP](/categories/working-with-php)\n\n+ [Python](/categories/python-support)\n\n- [Working with Python](/categories/working-with-python)\n\n- [Background Jobs in Python](/categories/background-jobs-in-python)\n\n- [Python Behavior in Heroku](/categories/python-behavior-in-heroku)\n\n- [Working with Django](/categories/working-with-django)\n\n* [Collaboration](/categories/collaboration)\n\n* [Security](/categories/security)\n\n+ [App Security](/categories/app-security)\n\n+ [Identities & Authentication](/categories/identities-authentication)\n\n+ [Other Salesforce Integrations](/categories/other-salesforce-integrations)\n\n# Python 3.8 is no longer supported\n\nChange effective on 08 January 2025\n\nPython 3.8 reached its upstream end-of-life [on 7th October 2024](https://devguide.python.org/versions/#supported-versions) and so no longer receives upstream bug or security fixes.\n\nIn accordance with our [Python Version Support Policy](https://devcenter.heroku.com/articles/python-support#python-version-support-policy), we previ",
+      "citacao_chave": null,
+      "citacao_verificada": false,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "Not counted: the model quoted text that is not in this source. Model's reason: Heroku’s changelog notes that Python 3.8 reached upstream end‑of‑life on 7th October 2024, ceasing official security updates."
+     },
+     "classificacao": {
+      "postura": "INSUFFICIENT",
+      "justificativa": "Not counted: the model quoted text that is not in this source. Model's reason: Heroku’s changelog notes that Python 3.8 reached upstream end‑of‑life on 7th October 2024, ceasing official security updates."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 674,
+      "validade_maxima_dias": 90,
+      "data_utilizada": "2025-01-08"
+     }
+    }
+   ],
+   "erro_busca": null,
+   "janela_validade": {
+    "dias": 90,
+    "origem": "CATEGORY",
+    "entidade": null,
+    "motivo": null
+   },
+   "risco_desatualizacao": {
+    "nivel": "HIGH",
+    "sensivel_ao_tempo": true,
+    "motivos": [
+     "Software versions and support dates change often (checked against a 90-day window)",
+     "Claims to be true right now (\"currently\", \"still\", \"latest\"…)"
+    ]
+   },
+   "dominios_oficiais_usados": [],
+   "dominios_oficiais_automaticos": [],
+   "agregacao": {
+    "status": "CLASSIFICADO",
+    "conclusao_factual": {
+     "status": "CONTRADIZ",
+     "resumo": "As evidências utilizáveis contradizem a afirmação."
+    },
+    "veredito": "CONTRADITA_POR_FONTE_ATUAL",
+    "resumo": "Uma fonte oficial atual contradiz a afirmação. As evidências analisadas não sustentam a afirmação como foi apresentada.",
+    "afirmacao": "Python 3.8 still receives official security updates.",
+    "score_qualidade_evidencia": {
+     "valor": 53,
+     "escala": "0-100",
+     "natureza": "HEURISTICA",
+     "interpretacao": "Qualidade estrutural das evidências, não probabilidade de verdade.",
+     "componentes": {
+      "autoridade": 13,
+      "atualidade": 10,
+      "diversidade_fontes": 20,
+      "concordancia": 10
+     }
+    },
+    "freshness": {
+     "score": 26,
+     "status": "MIXED",
+     "confidence": "LIMITED",
+     "algorithm_id": "CLAIM_FRESHNESS_SCORE",
+     "algorithm_version": "1.1.0",
+     "policy_id": "versao_api:90d:v1",
+     "as_of": "2026-11-13T23:07:59.456Z",
+     "evidence_summary": {
+      "received": 3,
+      "eligible": 3,
+      "independent_domains": 3,
+      "fresh": 1,
+      "stale": 2,
+      "excluded": 0
+     },
+     "drivers": [
+      {
+       "code": "ATTRIBUTE_DATED_FRESH_EVIDENCE",
+       "evidence_id": null,
+       "date": "2026-10-29",
+       "age_days": 15,
+       "posture": "CONTRADICTS",
+       "source_type": "OFICIAL",
+       "domain": "devguide.python.org",
+       "dependency_group": "source_cluster_001"
+      },
+      {
+       "code": "ATTRIBUTE_DATED_STALE_EVIDENCE",
+       "evidence_id": null,
+       "date": "2024-10-07",
+       "age_days": 767,
+       "posture": "CONTRADICTS",
+       "source_type": "OUTRO",
+       "domain": "releaserun.com",
+       "dependency_group": "source_cluster_002"
+      },
+      {
+       "code": "ATTRIBUTE_DATED_STALE_EVIDENCE",
+       "evidence_id": null,
+       "date": "2024-10-07",
+       "age_days": 767,
+       "posture": "CONTRADICTS",
+       "source_type": "OUTRO",
+       "domain": "pythonspeed.com",
+       "dependency_group": "source_cluster_003"
+      },
+      {
+       "code": "MATERIAL_EVIDENCE_DISAGREEMENT"
+      }
+     ],
+     "limitations": [
+      "Índice temporal determinístico; não é probabilidade de verdade.",
+      "Datas de página sem vínculo explícito ao atributo foram excluídas."
+     ]
+    },
+    "concordancia": {
+     "algorithm_id": "SOURCE_AGREEMENT_INDEX",
+     "algorithm_version": "1.1.0",
+     "weights": {
+      "OFICIAL": 3,
+      "ACADEMICO": 3,
+      "NOTICIA": 2,
+      "REFERENCIA": 1.5,
+      "OUTRO": 1,
+      "BLOG_FORUM": 0.25
+     },
+     "score": 0,
+     "coverage": "STRONG",
+     "independent_sources": 3,
+     "source_types": [
+      "OFICIAL",
+      "OUTRO"
+     ],
+     "supporting": 0,
+     "support_weight": 0,
+     "contradict_weight": 5,
+     "authoritative_supporting": 0,
+     "contradicting": 3,
+     "split": 0,
+     "by_type": {
+      "OFICIAL": {
+       "supports": 0,
+       "contradicts": 1,
+       "split": 0
+      },
+      "OUTRO": {
+       "supports": 0,
+       "contradicts": 2,
+       "split": 0
+      }
+     },
+     "limitations": [
+      "Agreement between sources is not a probability of truth: sources can share the same mistake.",
+      "Copies and pages from the same site count once; independence is approximated by domain and text similarity."
+     ]
+    },
+    "recencia_pagina": {
+     "algorithm_id": "PAGE_DATE_RECENCY_INDEX",
+     "algorithm_version": "1.0.0",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "as_of": "2026-11-13T23:07:59.456Z",
+     "score": 26,
+     "status": "MIXED",
+     "policy_id": "versao_api:90d:page:v1",
+     "newest_date": "2026-10-29",
+     "sources": [
+      {
+       "date": "2026-10-29",
+       "age_days": 15,
+       "status": "FRESH",
+       "posture": "CONTRADICTS",
+       "source_type": "OFICIAL",
+       "domain": "devguide.python.org",
+       "evidence_id": null
+      },
+      {
+       "date": "2024-10-07",
+       "age_days": 767,
+       "status": "STALE",
+       "posture": "CONTRADICTS",
+       "source_type": "OUTRO",
+       "domain": "releaserun.com",
+       "evidence_id": null
+      },
+      {
+       "date": "2024-10-07",
+       "age_days": 767,
+       "status": "STALE",
+       "posture": "CONTRADICTS",
+       "source_type": "OUTRO",
+       "domain": "pythonspeed.com",
+       "evidence_id": null
+      }
+     ],
+     "limitations": [
+      "Baseado na data da página, não na data em que o dado específico mudou: confiança baixa.",
+      "Não substitui o índice de atualidade principal e não é probabilidade de verdade."
+     ]
+    },
+    "atualidade_afirmacao": {
+     "algorithm_id": "CLAIM_CURRENCY_SCORE",
+     "algorithm_version": "1.1.0",
+     "formula": "evidence_recency × support_share",
+     "window_days": 90,
+     "score": 0,
+     "status": "CONTRADICTED",
+     "basis": "FACT_DATE",
+     "confidence": "MEDIUM",
+     "evidence_recency": 79,
+     "support_share": 0,
+     "newest_date": "2026-10-29",
+     "newest_age_days": 15,
+     "within_window": true
+    },
+    "versao_regras": "1.3.0",
+    "metodo": "AGREGACAO_DETERMINISTICA",
+    "fontes_independentes": 3,
+    "grupos_distintos_de_evidencia": 3,
+    "dependencia_detectada": 0,
+    "dependencia_nao_verificada": true,
+    "nota_independencia": "Cópias exatas, quase duplicadas, URLs canônicas iguais e páginas do mesmo domínio são agrupadas; domínios sem sinal de cópia não têm independência editorial comprovada.",
+    "total_evidencias_utilizaveis": 3,
+    "fontes": [
+     {
+      "dominio": "devguide.python.org",
+      "dominios": [
+       "devguide.python.org"
+      ],
+      "grupo_dependencia_id": "source_cluster_001",
+      "oficial": true,
+      "atual": true,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://devguide.python.org/versions"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Status of Python versions",
+        "url": "https://devguide.python.org/versions",
+        "categoria_fonte": "OFICIAL",
+        "postura": "CONTRADICTS",
+        "atual": true,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T23:08:07.124Z",
+        "data_publicacao": "2026-10-29",
+        "data_atualizacao": "2026-10-29",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Thu, 29 Oct 2026 19:17:16 GMT",
+          "value_normalized": "2026-10-29",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Wed, 11 Nov 2026 08:50:42 GMT",
+          "value_normalized": "2026-11-11",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "ARTICLE_MODIFIED_TIME",
+          "field": "article:modified_time",
+          "value_original": "2026-05-27T13:42:06+00:00",
+          "value_normalized": "2026-05-27",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_001",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "releaserun.com",
+      "dominios": [
+       "releaserun.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_002",
+      "oficial": false,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://releaserun.com/versions/python/3.8"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Python 3.8: End of Life - Upgrade Guide & Migration Path - ReleaseRun",
+        "url": "https://releaserun.com/versions/python/3.8",
+        "categoria_fonte": "OUTRO",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T23:08:02.904Z",
+        "data_publicacao": null,
+        "data_atualizacao": "2024-10-07",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [],
+        "grupo_dependencia_id": "source_cluster_002",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "pythonspeed.com",
+      "dominios": [
+       "pythonspeed.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_003",
+      "oficial": false,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://pythonspeed.com/articles/stop-using-python-3.8"
+      ],
+      "evidencias": [
+       {
+        "titulo": "It’s time to stop using Python 3.8",
+        "url": "https://pythonspeed.com/articles/stop-using-python-3.8",
+        "categoria_fonte": "OUTRO",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T23:08:07.124Z",
+        "data_publicacao": "2024-09-12",
+        "data_atualizacao": "2024-10-07",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Thu, 12 Sep 2024 00:00:00 GMT",
+          "value_normalized": "2024-09-12",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://pythonspeed.com/articles/stop-using-python-3.8/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2024-09-12T00:00:00+00:00",
+          "value_normalized": "2024-09-12",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2024-09-12T00:00:00+00:00",
+          "value_normalized": "2024-09-12",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "blogposting"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2024-10-10T10:29:48+00:00",
+          "value_normalized": "2024-10-10",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "blogposting"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_003",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     }
+    ],
+    "limitacoes": [
+     "Domínios sem sinal detectado de duplicação não têm independência editorial comprovada; republicação com edição extensa ainda pode passar despercebida."
+    ],
+    "avaliado_em": "2026-11-13T23:08:10.122Z"
+   }
+  }
+ ],
+ "afirmacoes_omitidas": [],
+ "resposta_corrigida": {
+  "texto": "Python 3.8 reached end of life on October 7, 2024, and no longer receives official security updates [1][2][3].",
+  "mudancas": [
+   {
+    "claim_id": "afirmacao_1",
+    "what": "replaced with contradictory information and citations"
+   }
+  ],
+  "fontes_citadas": [
+   1,
+   2,
+   3
+  ],
+  "tentativas": 2,
+  "citacoes_anexadas": false,
+  "fontes": [
+   {
+    "n": 1,
+    "url": "https://devguide.python.org/versions",
+    "titulo": "Status of Python versions",
+    "tipo": "OFICIAL",
+    "postura": "CONTRADICTS",
+    "data": "2024-10-07"
+   },
+   {
+    "n": 2,
+    "url": "https://releaserun.com/versions/python/3.8",
+    "titulo": "Python 3.8: End of Life - Upgrade Guide & Migration Path - ReleaseRun",
+    "tipo": "OUTRO",
+    "postura": "CONTRADICTS",
+    "data": "2024-10-07"
+   },
+   {
+    "n": 3,
+    "url": "https://pythonspeed.com/articles/stop-using-python-3.8",
+    "titulo": "It’s time to stop using Python 3.8",
+    "tipo": "OUTRO",
+    "postura": "CONTRADICTS",
+    "data": "2024-10-07"
+   }
+  ],
+  "metodo": "MODEL_REWRITE_FROM_VERIFIED_EVIDENCE"
+ },
+ "rastreabilidade_modelo": [
+  {
+   "id_chamada": "11dd37dc-76a5-43c6-b824-0fcb926ae111",
+   "id_requisicao_enviada": "3728caaf-7896-4faf-a56d-f9e2f8e7c523",
+   "id_verificacao": "801194c8-d95b-49a7-8555-7ac82f4891c2",
+   "etapa": "DECOMPOSICAO",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 866,
+   "tokens": {
+    "entrada": 841,
+    "saida": 361,
+    "total": 1202
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "3728caaf-7896-4faf-a56d-f9e2f8e7c523",
+   "id_trace": "f695dc6866c44c5eb6711d8abc5dc214",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 866.657,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:07:59.456Z"
+  },
+  {
+   "id_chamada": "9bca155c-d2ad-4dea-8424-69de74ff1ba3",
+   "id_requisicao_enviada": "f330aca2-ace7-469a-a3f3-a895a71b9565",
+   "id_verificacao": "801194c8-d95b-49a7-8555-7ac82f4891c2",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 2415,
+   "tokens": {
+    "entrada": 4016,
+    "saida": 1798,
+    "total": 5814
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "f330aca2-ace7-469a-a3f3-a895a71b9565",
+   "id_trace": "9c6cd7a025e34c4d9771cba7fba371e3",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 2415.145,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:08:07.684Z"
+  },
+  {
+   "id_chamada": "4e284da2-4b59-4410-8432-9163c1a9c521",
+   "id_requisicao_enviada": "bed52482-5c8f-4734-bf46-98701bec5d6a",
+   "id_verificacao": "801194c8-d95b-49a7-8555-7ac82f4891c2",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 515,
+   "tokens": {
+    "entrada": 884,
+    "saida": 189,
+    "total": 1073
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "bed52482-5c8f-4734-bf46-98701bec5d6a",
+   "id_trace": "07d072c310e446f09eec41a4cc53d78f",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 515.134,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:08:10.123Z"
+  },
+  {
+   "id_chamada": "4f696f57-1eda-43d0-b5f6-ae6a0fdca402",
+   "id_requisicao_enviada": "dec51776-07d6-4e53-b512-8d4d402b3768",
+   "id_verificacao": "801194c8-d95b-49a7-8555-7ac82f4891c2",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 2,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 1021,
+   "tokens": {
+    "entrada": 946,
+    "saida": 250,
+    "total": 1196
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "dec51776-07d6-4e53-b512-8d4d402b3768",
+   "id_trace": "5890b7b10467403d8708a3e8e1be2f2f",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 1054.254,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:08:10.647Z"
+  }
+ ],
+ "rastreabilidade_pesquisa": [
+  {
+   "id_operacao": "1204b6a7-3551-4f99-ba38-4020301866b5",
+   "id_verificacao": "801194c8-d95b-49a7-8555-7ac82f4891c2",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Python 3.8 still receives official security updates.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:08:00.346Z",
+   "finalizada_em": "2026-11-13T23:08:02.904Z",
+   "duracao_ms": 2558,
+   "request_id": "103c640e-21c0-42d1-a557-b87f0a3c492a",
+   "response_time": 2.3,
+   "erro": null,
+   "modo_busca": "GERAL",
+   "parametros": {
+    "query": "Python 3.8 still receives official security updates.",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "921996-00",
+     "titulo": "Python 3.8: End of Life - Upgrade Guide & Migration Path - ReleaseRun",
+     "url": "https://releaserun.com/versions/python/3.8",
+     "relevancia": 0.81167597,
+     "data_publicacao": null
+    },
+    {
+     "resultado_id": "e9b0ba-01",
+     "titulo": "Installing Python 3.8: A Comprehensive Guide - CodeRivers",
+     "url": "https://coderivers.org/blog/install-python-38",
+     "relevancia": 0.8077641,
+     "data_publicacao": "2025-01-26"
+    },
+    {
+     "resultado_id": "c353d7-02",
+     "titulo": "It’s time to stop using Python 3.8",
+     "url": "https://pythonspeed.com/articles/stop-using-python-3.8",
+     "relevancia": 0.7826625,
+     "data_publicacao": "2024-09-12"
+    },
+    {
+     "resultado_id": "870afd-03",
+     "titulo": "Python 3.8 is no longer supported | Heroku Dev Center",
+     "url": "https://devcenter.heroku.com/changelog-items/3094",
+     "relevancia": 0.7676898,
+     "data_publicacao": "2025-01-08"
+    },
+    {
+     "resultado_id": "be5634-04",
+     "titulo": "Status of Python versions",
+     "url": "https://devguide.python.org/versions",
+     "relevancia": 0.38219908,
+     "data_publicacao": "2026-10-29"
+    }
+   ]
+  },
+  {
+   "id_operacao": "9079d3ad-18d0-4d35-858c-c68cf863ac45",
+   "id_verificacao": "801194c8-d95b-49a7-8555-7ac82f4891c2",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Python 3.8 still receives official security updates.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:08:02.904Z",
+   "finalizada_em": "2026-11-13T23:08:06.254Z",
+   "duracao_ms": 3350,
+   "request_id": "00718cd8-c7af-4641-8cef-fa0a012889af",
+   "response_time": 3.14,
+   "erro": null,
+   "modo_busca": "NOTICIAS",
+   "parametros": {
+    "query": "Python 3.8 still receives official security updates.",
+    "search_depth": "basic",
+    "max_results": 4,
+    "include_answer": false,
+    "include_published_date": true,
+    "topic": "news",
+    "time_range": "year"
+   },
+   "quantidade_resultados": 4,
+   "resultados": [
+    {
+     "resultado_id": "f28156-00",
+     "titulo": "Python End-of-Life Dates: Every Version's Support Timeline",
+     "url": "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+     "relevancia": 0.68573904,
+     "data_publicacao": "2026-09-15"
+    },
+    {
+     "resultado_id": "90093b-01",
+     "titulo": "History of Python - Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/History_of_Python",
+     "relevancia": 0.54643565,
+     "data_publicacao": "2026-08-08"
+    },
+    {
+     "resultado_id": "f0e864-02",
+     "titulo": "When (and why) to upgrade your Python version",
+     "url": "https://www.runpod.io/blog/when-to-upgrade-python-version",
+     "relevancia": 0.52844214,
+     "data_publicacao": "2026-09-12"
+    },
+    {
+     "resultado_id": "67fcd6-03",
+     "titulo": "AWS Lambda Python 3.9 EOL Guide | CloudQuery Blog",
+     "url": "https://www.cloudquery.io/blog/python-39-lambda-deprecation",
+     "relevancia": 0.41057903,
+     "data_publicacao": "2026-02-10"
+    }
+   ]
+  },
+  {
+   "id_operacao": "8e64cdc4-8342-4f09-965b-197342f3a818",
+   "id_verificacao": "801194c8-d95b-49a7-8555-7ac82f4891c2",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "EXTRACAO",
+   "consulta": "Python 3.8 still receives official security updates.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:08:06.257Z",
+   "finalizada_em": "2026-11-13T23:08:07.124Z",
+   "duracao_ms": 867,
+   "request_id": "580c6b73-55a7-4b92-882a-047ad767fe76",
+   "response_time": 0.5,
+   "erro": null,
+   "urls_solicitadas": [
+    "https://devguide.python.org/versions",
+    "https://en.wikipedia.org/wiki/History_of_Python",
+    "https://releaserun.com/versions/python/3.8",
+    "https://pythonspeed.com/articles/stop-using-python-3.8",
+    "https://devcenter.heroku.com/changelog-items/3094"
+   ],
+   "parametros": {
+    "urls": [
+     "https://devguide.python.org/versions",
+     "https://en.wikipedia.org/wiki/History_of_Python",
+     "https://releaserun.com/versions/python/3.8",
+     "https://pythonspeed.com/articles/stop-using-python-3.8",
+     "https://devcenter.heroku.com/changelog-items/3094"
+    ],
+    "extract_depth": "basic",
+    "format": "markdown",
+    "include_images": false
+   },
+   "quantidade_resultados": 4,
+   "urls_extraidas": [
+    "https://devguide.python.org/versions",
+    "https://en.wikipedia.org/wiki/History_of_Python",
+    "https://pythonspeed.com/articles/stop-using-python-3.8",
+    "https://devcenter.heroku.com/changelog-items/3094"
+   ]
+  }
+ ],
+ "modo": "real",
+ "simulado": false,
+ "gateway": {
+  "gateway": "bifrost",
+  "chamadas": 4,
+  "falhas": 0,
+  "cadeia_modelos": [
+   "groq/openai/gpt-oss-20b",
+   "groq/openai/gpt-oss-120b"
+  ],
+  "queda_simulada": false,
+  "respostas_por_modelo": [
+   {
+    "modelo": "groq/openai/gpt-oss-20b",
+    "chamadas": 3
+   },
+   {
+    "modelo": "groq/openai/gpt-oss-120b",
+    "chamadas": 1
+   }
+  ],
+  "respostas_de_reserva": 1,
+  "tokens_total": 9285,
+  "latencia_media_ms": 1213
+ },
+ "duracao_ms": 12271,
+ "gravado_em": "2026-11-13T23:08:11.722Z"
+}

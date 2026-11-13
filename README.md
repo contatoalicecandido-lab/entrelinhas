@@ -146,13 +146,40 @@ Run it against a live server with `node avaliacao/rodar-casos-reais.js`. It paus
 
 Why Pix dropped: four of its five supporting sources are company blogs, and “Corroborated” now needs supporting weight of at least 4 (one official source plus one news outlet, for example), so three or four weak sites are not enough. It is still on the right side: “Supported, unconfirmed” tells the reader to look closer.
 
+**Independent check: 8 new claims** written after the rules were tuned and never used to tune them (`avaliacao/casos-novos-2026-11-13.json`, 4 true and 4 outdated, run live on 13 Nov: `avaliacao/resultado-casos-novos-2026-11-13.json`, recordings in `gravacoes/`):
+
+| Claim | Known answer | Entrelinhas |
+|---|---|---|
+| Satya Nadella is the CEO of Microsoft | true | Corroborated |
+| Sundar Pichai is the CEO of Alphabet | true | Corroborated |
+| Em 2026, o salário mínimo diário é R$ 54,04 | true | Corroborated |
+| Python 3.12 still receives security fixes | true | Supported, unconfirmed (partial) |
+| Node.js 18 is still supported | outdated | Contradicted by sources |
+| Python 3.8 still receives security updates | outdated | Likely outdated |
+| Ubuntu 20.04 LTS is still in standard support | outdated | Contradicted by sources |
+| O salário mínimo atual é R$ 1.412 | outdated | Not verifiable (no decision) |
+
+**6 of 8 exact, 0 wrong, 0 outdated claims confirmed as true.** The two misses taught us two things, both fixed after the run (so these two cases are no longer independent tests):
+- *Python 3.12*: the quote check was too literal and dropped three good sources, including python.org, over curly quotes and markdown. It now ignores differences that do not change the text and still rejects any quote with a different number or sentence.
+- *R$ 1.412*: searching with the old value only found 2024 news repeating it. A claim with a value now also gets a search without the value and with the current year, to find today's value.
+
+**Compared with the model alone** (`avaliacao/linha-de-base.js`: the same model, through Bifrost, asked with today's date whether each claim is still true, with no search):
+
+| On the same 23 claims | Model alone | Entrelinhas (current rules) |
+|---|---|---|
+| Right answer | 17 | 19 exact, 3 cautious (partial or not verifiable) |
+| Wrong answer | **4** | **0** |
+| Outdated claim confirmed as true | **1** (said the 2025 minimum wage, R$ 1.518, is still valid) | **0** |
+| Sources the reader can check | none | every verdict |
+
+The model alone also called Brazil's current minimum wage (R$ 1.621) and the current Selic and dengue vaccine policy outdated. Results: `avaliacao/linha-de-base-casos-reais-2026-11-13.json` and `avaliacao/linha-de-base-casos-novos-2026-11-13.json`.
+
 **Read these numbers with their limits:**
 - **How strong each “outdated” verdict is.** Of the 6 outdated claims caught, 1 was contradicted by a current official source with a date (*Likely outdated*). The other 5 were contradicted by most independent sources, but no official source dated the fact (*Contradicted by sources*, internally `CONTRADICAO_FRACA`, “weak contradiction”). The interface presents those 5 as a strong warning, not a final ruling.
 - **The partial case.** Netflix found sources with both the old and the new price, so the verdict was *Conflicting* instead of contradicted. It still tells the reader not to rely on the claim.
 - **Low freshness on true claims.** Some true claims (Pix, ChatGPT Plus) come back with a low freshness score. That is intended: the non-blog sources that confirm them are older than the window for that kind of fact, so the report labels them *Aging* and suggests looking for a recent source.
-- **Tuned on the same cases.** The rules were improved after the first run on these same 15 claims, so these numbers are not an independent accuracy estimate. To check that honestly, `avaliacao/casos-novos-2026-11-13.json` holds 8 new claims (4 true, 4 outdated) written after the fixes and never used to tune anything. Run them with `CASOS=avaliacao/casos-novos-2026-11-13.json node avaliacao/rodar-casos-reais.js`. The news `time_range` filter was added after the 13 Nov run, so these new cases also test it.
-- **Compared with what?** `avaliacao/linha-de-base.js` asks the model alone (through Bifrost, no search) whether each claim is still true, with today's date, so the gain of Entrelinhas over “just asking the AI” can be measured on the same cases.
-- **Small sample.** 15 claims show behavior; they are not a statistical accuracy estimate.
+- **Tuned on the same cases.** The rules were improved after the first run on these same 15 claims, so those numbers are not an independent accuracy estimate; the 8 new claims above are.
+- **Small sample.** 23 claims show behavior; they are not a statistical accuracy estimate.
 
 **Bifrost during this run** (`avaliacao/gateway-casos-reais-2026-11-13.json`, built by `node avaliacao/resumir-gateway.js 2026-11-13T13` from the 15 recorded checks in `gravacoes/`): 60 model calls, **22 answered by the backup model** when the main one hit the free tier's limit, 4 answers in an invalid format that Entrelinhas retried, and all 15 checks finished.
 

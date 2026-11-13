@@ -25,6 +25,9 @@ gravacoes/*
 !gravacoes/selecao.json
 # Gravações da rodada de casos reais de 13 nov 2026 (prova do benchmark)
 !gravacoes/2026-11-13T13-*.json
+# Gravações dos 8 casos novos (teste independente)
+!gravacoes/2026-11-13T17-1*.json
+!gravacoes/2026-11-13T23-*.json
 # Gravações usadas pela demonstração pública (gravacoes/selecao.json)
 !gravacoes/2026-11-12T23-26-59-580Z-node-js-20-is-the-current-active-lts-release-and.json
 !gravacoes/2026-11-13T14-04-12-875Z-o-netflix-padrao-ta-saindo-por-44-90-conto-por-m.json
