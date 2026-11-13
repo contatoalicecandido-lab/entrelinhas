@@ -76,8 +76,12 @@ function ehSiteDaEntidade(h, afirmacao) {
   for (const [termo, dominios] of Object.entries(ENTIDADES)) {
     if (texto.includes(termo) && dominios.some(d => h === d || h.endsWith(`.${d}`))) return true;
   }
+  // O nome do site precisa ser uma PALAVRA da afirmação ("Nubank" →
+  // nubank.com.br, "Node.js" → nodejs.org), não um pedaço do texto:
+  // salariominimo.com.br ou taxaselic.com.br não viram oficiais.
   const nome = nomeDoSite(h);
-  return Boolean(nome && nome.length >= 4 && texto.includes(nome));
+  const palavras = new Set(String(afirmacao).split(/\s+/).map(compacto).filter(Boolean));
+  return Boolean(nome && nome.length >= 3 && palavras.has(nome));
 }
 
 const ROTULOS = {
@@ -122,13 +126,21 @@ function classificarFonte(url, opcoes = {}) {
     return { tipo: "ACADEMICO", rotulo: ROTULOS.ACADEMICO, motivo: "ACADEMIC_SOURCE" };
   }
   if (pareceGoverno(h)) return { tipo: "OFICIAL", rotulo: ROTULOS.OFICIAL, motivo: "GOVERNMENT_DOMAIN" };
+  // Comunidade e fórum de uma empresa (community.openai.com) não falam por ela.
+  if (/^(blog|community|forum|forums|discuss|answers)\./.test(h) && !pareceGoverno(h)) {
+    return { tipo: "BLOG_FORUM", rotulo: ROTULOS.BLOG_FORUM, motivo: "BLOG_SUBDOMAIN" };
+  }
   if (!pertence(h, BLOG_FORUM) && !pertence(h, NOTICIAS) && ehSiteDaEntidade(h, opcoes.afirmacao)) {
     return { tipo: "OFICIAL", rotulo: ROTULOS.OFICIAL, motivo: "ENTITY_OWN_DOMAIN" };
   }
   if (pertence(h, BLOG_FORUM)) return { tipo: "BLOG_FORUM", rotulo: ROTULOS.BLOG_FORUM, motivo: "KNOWN_BLOG_OR_FORUM" };
   if (pertence(h, REFERENCIA)) return { tipo: "REFERENCIA", rotulo: ROTULOS.REFERENCIA, motivo: "KNOWN_REFERENCE" };
   if (pertence(h, NOTICIAS)) return { tipo: "NOTICIA", rotulo: ROTULOS.NOTICIA, motivo: "KNOWN_NEWS_OUTLET" };
-  if (opcoes.deBuscaDeNoticias) return { tipo: "NOTICIA", rotulo: ROTULOS.NOTICIA, motivo: "FROM_NEWS_SEARCH" };
+  // Vir da busca de notícias não basta para ser notícia (blogs aparecem lá).
+  // Só conta como notícia se o endereço tiver cara de matéria datada.
+  if (opcoes.deBuscaDeNoticias && /\/20\d{2}\/\d{1,2}(\/|-)/.test(String(url))) {
+    return { tipo: "NOTICIA", rotulo: ROTULOS.NOTICIA, motivo: "FROM_NEWS_SEARCH_DATED_ARTICLE" };
+  }
   if (/^(blog|community|forum|forums)\./.test(h)) return { tipo: "BLOG_FORUM", rotulo: ROTULOS.BLOG_FORUM, motivo: "BLOG_SUBDOMAIN" };
   return { tipo: "OUTRO", rotulo: ROTULOS.OUTRO, motivo: "UNCLASSIFIED" };
 }

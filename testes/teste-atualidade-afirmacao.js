@@ -129,3 +129,15 @@ console.log(`\n${n} testes passaram.`);
   assert.equal(nota.status, "CURRENT");
   console.log("PASSOU: a nota usa a fonte mais nova que confirma, não a média");
 }
+
+// Um blog recente não torna "atual" um preço que só uma fonte oficial antiga confirma.
+{
+  const { recenciaDaMaisNova } = require("../src/atualidade-afirmacao");
+  const r = recenciaDaMaisNova([
+    { date: "2023-02-01", age_days: 1381, posture: "SUPPORTS", source_type: "OFICIAL" },
+    { date: "2026-11-11", age_days: 1, posture: "SUPPORTS", source_type: "BLOG_FORUM" }
+  ], 30);
+  assert.equal(r.data, "2023-02-01", "o blog de ontem não substitui a fonte mais forte");
+  assert.ok(r.recencia < 5);
+  console.log("PASSOU: blog recente não deixa um fato antigo com cara de atual");
+}

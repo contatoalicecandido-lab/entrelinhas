@@ -207,6 +207,8 @@ function prepararEvidencias(afirmacao, dominiosOficiais) {
         utilizavel,
         oficial,
         atual,
+        // false: o modelo tomou posição sem uma citação conferida no texto.
+        citacao_verificada: evidencia?.preparacao?.citacao_verificada ?? null,
         data_vinculada_ao_atributo: dataVinculadaAoAtributo,
         status_atualidade: atualidade.status ?? "UNVERIFIABLE",
         status_datas_declaradas: statusDatasDeclaradas,
@@ -350,12 +352,15 @@ function determinarVeredito(grupos, concordancia = null) {
   }
 
   if (oficiaisAtuaisApoiando) {
-    // Uma contradição atual independente ainda merece conflito.
+    // Uma contradição atual independente ainda merece conflito. E nunca é
+    // verde ("It holds") quando a maioria ponderada das fontes discorda,
+    // mesmo que as fontes que discordam só tenham data de página.
     const haContradicaoAtual = grupos.some(
       grupo => grupo.atual && grupo.postura === "CONTRADICTS"
     );
+    const maioriaDiscorda = concordancia && Number.isFinite(concordancia.score) && concordancia.score < 50;
 
-    return haContradicaoAtual
+    return haContradicaoAtual || maioriaDiscorda
       ? "CONFLITO"
       : "ATUAL";
   }
@@ -399,8 +404,12 @@ function determinarVeredito(grupos, concordancia = null) {
 
   // Só há contradição, mas sem fonte oficial com data ligada ao fato:
   // sinal relevante de resposta desatualizada ou incorreta, não definitivo.
+  // Exige peso mínimo: um único blog ou fórum que discorda não basta para
+  // dizer "contradita"; fica como não verificável (amarelo, "olhe de perto").
   if (haContradicao) {
-    return "CONTRADICAO_FRACA";
+    return concordancia && Number.isFinite(concordancia.contradict_weight) && concordancia.contradict_weight < 1
+      ? "NAO_VERIFICAVEL"
+      : "CONTRADICAO_FRACA";
   }
 
   return "NAO_VERIFICAVEL";
@@ -529,6 +538,7 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
     evidencias.map(evidencia => ({
       match: true,
       postura: evidencia.postura,
+      sourceType: evidencia.categoria_fonte ?? null,
       temporalStatus: evidencia.status_atualidade,
       domain: evidencia.dominio,
       dependencyGroup: evidencia.grupo_dependencia_id,
@@ -550,6 +560,7 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
     evidencias.map(evidencia => ({
       match: true,
       postura: evidencia.postura,
+      sourceType: evidencia.categoria_fonte ?? null,
       domain: evidencia.dominio,
       dependencyGroup: evidencia.grupo_dependencia_id,
       publicationDate: evidencia.data_publicacao,
@@ -571,6 +582,7 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
         evidencias.map(evidencia => ({
           match: true,
           postura: evidencia.postura,
+          sourceType: evidencia.categoria_fonte ?? null,
           domain: evidencia.dominio,
           dependencyGroup: evidencia.grupo_dependencia_id,
           publicationDate: evidencia.data_publicacao,

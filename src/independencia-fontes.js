@@ -1,4 +1,5 @@
 const { createHash } = require("node:crypto");
+const { dominioRegistravel } = require("./dominio");
 
 const SHINGLE_SIZE = 5;
 const MIN_NEAR_DUPLICATE_TOKENS = 40;
@@ -37,10 +38,23 @@ function jaccard(left, right) {
   return intersection / (left.size + right.size - intersection);
 }
 
+// Mesmo dono = mesma voz: help.openai.com e openai.com, g1 e oglobo (globo.com).
 function normalizeDomain(url) {
-  try { return new URL(url).hostname.toLowerCase().replace(/^www\./, "").replace(/\.$/, ""); }
-  catch { return null; }
+  return dominioRegistravel(url);
 }
+
+// Quanto do texto menor está dentro do maior: pega a mesma matéria cercada
+// por menus e rodapés diferentes, que a semelhança total (Jaccard) não pega.
+function containment(left, right) {
+  if (!left.size || !right.size) return { ratio: 0, shared: 0 };
+  let shared = 0;
+  const [small, big] = left.size <= right.size ? [left, right] : [right, left];
+  for (const value of small) if (big.has(value)) shared++;
+  return { ratio: shared / small.size, shared };
+}
+const MIN_CONTAINMENT_TOKENS = 25;
+const CONTAINMENT_THRESHOLD = 0.8;
+const SHARED_PASSAGE_SHINGLES = 60;
 
 function getCanonicalUrl(evidence) {
   if (evidence?.canonical_url) {
@@ -83,9 +97,15 @@ function clusterizarDependencias(evidencias) {
       if (a.canonical && b.canonical && a.canonical === b.canonical) { union(i, j, "SAME_CANONICAL_URL"); continue; }
       if (!a.normalized || !b.normalized) continue;
       if (a.hash === b.hash && a.tokenCount >= MIN_EXACT_DUPLICATE_TOKENS) { union(i, j, "EXACT_CONTENT_HASH"); continue; }
-      if (Math.min(a.tokenCount, b.tokenCount) < MIN_NEAR_DUPLICATE_TOKENS) continue;
-      const similarity = jaccard(a.shingles, b.shingles);
-      if (similarity >= NEAR_DUPLICATE_THRESHOLD) union(i, j, `NEAR_DUPLICATE_JACCARD_${similarity.toFixed(3)}`);
+      if (Math.min(a.tokenCount, b.tokenCount) >= MIN_NEAR_DUPLICATE_TOKENS) {
+        const similarity = jaccard(a.shingles, b.shingles);
+        if (similarity >= NEAR_DUPLICATE_THRESHOLD) { union(i, j, `NEAR_DUPLICATE_JACCARD_${similarity.toFixed(3)}`); continue; }
+      }
+      if (Math.min(a.tokenCount, b.tokenCount) < MIN_CONTAINMENT_TOKENS) continue;
+      const contido = containment(a.shingles, b.shingles);
+      if (contido.ratio >= CONTAINMENT_THRESHOLD) { union(i, j, `TEXT_CONTAINED_${contido.ratio.toFixed(3)}`); continue; }
+      // Um trecho longo idêntico (60 sequências de 5 palavras) = mesma matéria republicada.
+      if (contido.shared >= SHARED_PASSAGE_SHINGLES) union(i, j, `SHARED_PASSAGE_${contido.shared}`);
     }
   }
 

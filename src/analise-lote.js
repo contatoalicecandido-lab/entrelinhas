@@ -185,12 +185,22 @@ function validarResposta(dados, fontes, opcoesValidacao = {}) {
       ? item.reason.trim().slice(0, 600)
       : "No reason given by the model.";
     let citacao = typeof item.key_quote === "string" ? item.key_quote.trim().slice(0, 240) : "";
+    let motivoFinal = motivo;
+    let citacaoVerificada = false;
     if (citacao && !normalizarParaBusca(porId.get(item.id).texto).includes(normalizarParaBusca(citacao))) {
-      // Citação não encontrada no texto: descartada para não exibir algo inventado.
+      // Citação que NÃO está no texto da fonte: sinal de invenção (ou de uma
+      // instrução escondida na página que o modelo obedeceu). A fonte deixa de
+      // contar como apoio ou contradição.
       citacao = "";
+      if (postura === "SUPPORTS" || postura === "CONTRADICTS") {
+        postura = "INSUFFICIENT";
+        motivoFinal = `Not counted: the model quoted text that is not in this source. Model's reason: ${motivo}`.slice(0, 600);
+      }
+    } else if (citacao) {
+      citacaoVerificada = true;
     }
     const dataFato = validarDataDoFato(item.fact_date, porId.get(item.id).texto, opcoesValidacao.dataReferencia);
-    resultado.set(item.id, { correspondencia, postura, motivo, citacao, dataFato });
+    resultado.set(item.id, { correspondencia, postura, motivo: motivoFinal, citacao, citacaoVerificada, dataFato });
   }
   return resultado;
 }

@@ -75,7 +75,7 @@ async function integracao() {
         assert.equal(opcoes.pais, "brazil", "afirmação em português busca no Brasil");
         return ["https://g1.globo.com/p", "https://pt.wikipedia.org/p", "https://medium.com/p"].map((url, i) => ({
           tipo_fonte: "tavily_extract", titulo: `F${i}`, url, conteudo: `Texto da fonte ${i}: o plano Pro custa R$ 59,90 por mês desde outubro de 2026.`,
-          coletado_em: "2026-11-12T10:00:00.000Z", data_publicacao: null, data_atualizacao: null, relevancia: 0.9,
+          coletado_em: "2026-11-12T10:00:00.000Z", data_publicacao: i === 0 ? "2026-11-10" : null, data_atualizacao: null, relevancia: 0.9,
           categoria_fonte: ["NOTICIA", "REFERENCIA", "BLOG_FORUM"][i]
         }));
       } },
@@ -108,6 +108,10 @@ async function integracao() {
     assert.equal(a.nuances.idioma, "pt");
     assert.equal(a.evidencias[0].fonte.escopo_data, "ATTRIBUTE", "data do fato vira data ligada ao atributo");
     assert.equal(a.evidencias[0].fonte.data_fato.origem, "QUOTED_IN_SOURCE_TEXT");
+    // Fato de 1º/10 numa página publicada em 10/11: a página confirma o fato em 10/11.
+    assert.equal(a.evidencias[0].fonte.data_fato.data, "2026-10-01");
+    assert.equal(a.evidencias[0].fonte.data_atualizacao, "2026-11-10", "data da confirmação = publicação, não a data antiga do fato");
+    assert.equal(a.evidencias[0].atualidade.status, "FRESH", "a fonte não é descartada como incoerente");
     assert.ok(Number.isFinite(a.agregacao.freshness.score), "com data do fato há nota de atualidade");
     assert.ok(a.agregacao.concordancia);
     assert.ok(banco.obterVerificacao(r.id_verificacao));

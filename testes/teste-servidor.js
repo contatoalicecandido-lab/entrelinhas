@@ -68,6 +68,21 @@ async function main() {
       ok(`rejeita ${nome} (${esperado})`);
     }
 
+    // Proteções contra outro site usar o servidor local (banca adversarial).
+    const disfarcado = await postar({ texto: "x", modo: "exemplo" }, "text/plain; charset=application/json");
+    assert.equal(disfarcado.status, 415, "text/plain disfarçado de JSON é recusado");
+    const deFora = await fetch(`${base}/api/verificar`, { method: "POST", headers: { "Content-Type": "application/json", Origin: "https://evil.example" }, body: "{}" });
+    assert.equal(deFora.status, 403, "POST vindo de outro site é recusado");
+    const http = require("node:http");
+    const hostFalso = await new Promise((resolve, reject) => {
+      const r = http.request(`${base}/api/status`, { headers: { Host: "evil.example" } }, resp => { resp.resume(); resolve(resp.statusCode); });
+      r.on("error", reject); r.end();
+    });
+    assert.equal(hostFalso, 421, "Host diferente de 127.0.0.1/localhost é recusado (DNS rebinding)");
+    const navegacao = await fetch(`${base}/?text=oi`, { headers: { "Sec-Fetch-Site": "cross-site" } });
+    assert.equal(navegacao.status, 200, "abrir a página vindo de outro site (botão de favoritos) continua funcionando");
+    ok("recusa JSON disfarçado, POST de outro site e Host falso; botão de favoritos continua funcionando");
+
     const travessia = await fetch(`${base}/%2e%2e/.env`);
     assert.equal(travessia.status, 404);
     ok("não serve arquivos fora da lista permitida");

@@ -91,3 +91,14 @@ async function main() {
   }
 }
 main().catch(e => { console.error("FALHOU:", e); process.exitCode = 1; });
+
+// Itens quebrados da Tavily não derrubam a busca inteira.
+{
+  const assert = require("node:assert/strict");
+  const { limparResultados } = require("../src/tavily");
+  const limpos = limparResultados([null, { url: "https://a.com/x", title: 42, content: null }, { title: "sem url" }, "texto"]);
+  assert.equal(limpos.length, 1);
+  assert.equal(limpos[0].title, "42");
+  assert.equal(limpos[0].content, "");
+  console.log("PASSOU: itens nulos ou malformados da Tavily são descartados ou consertados");
+}

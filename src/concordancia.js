@@ -15,8 +15,11 @@ const ALGORITMO = "SOURCE_AGREEMENT_INDEX";
 const VERSAO = "1.1.0";
 
 function pesoDoGrupo(grupo) {
-  // O grupo vale pelo seu tipo de fonte mais forte.
-  return Math.max(...grupo.evidencias.map(e => PESOS[e.categoria_fonte] ?? PESOS.OUTRO));
+  // O grupo vale pelo seu tipo de fonte mais forte. Se o modelo tomou posição
+  // sem nenhuma citação conferida no texto da fonte, o voto vale metade.
+  const peso = Math.max(...grupo.evidencias.map(e => PESOS[e.categoria_fonte] ?? PESOS.OUTRO));
+  const semCitacao = grupo.evidencias.every(e => e.citacao_verificada === false);
+  return semCitacao ? peso / 2 : peso;
 }
 
 function tipoDoGrupo(grupo) {
@@ -72,6 +75,8 @@ function calcularConcordancia(grupos) {
     independent_sources: independentes,
     source_types: tipos,
     supporting: apoio.length,
+    support_weight: Math.round(pesoApoio * 100) / 100,
+    contradict_weight: Math.round(pesoContra * 100) / 100,
     authoritative_supporting: apoioComAutoridade,
     contradicting: contra.length,
     split: divididos.length,
@@ -89,6 +94,9 @@ function calcularConcordancia(grupos) {
 // Usado quando não há fonte oficial com data ligada ao fato.
 function estaCorroborada(concordancia) {
   if (concordancia.coverage !== "STRONG" || concordancia.contradicting !== 0 || concordancia.split !== 0) return false;
+  // Três vozes fracas (sites quaisquer, blogs) não bastam: o apoio precisa
+  // pesar pelo menos o mesmo que uma fonte oficial mais uma notícia.
+  if (Number.isFinite(concordancia.support_weight) && concordancia.support_weight < 4) return false;
   if (concordancia.supporting >= 3) return true;
   return concordancia.supporting >= 2 && (concordancia.authoritative_supporting ?? 0) >= 1 && concordancia.source_types.length >= 2;
 }

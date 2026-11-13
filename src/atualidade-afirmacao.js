@@ -30,7 +30,11 @@ function recenciaDaMaisNova(itens, janela) {
   const datados = itens.filter(i => Number.isFinite(i?.age_days) && i.age_days >= 0);
   if (!datados.length) return null;
   const confirmam = datados.filter(i => i.posture === "SUPPORTS");
-  const base = confirmam.length ? confirmam : datados;
+  const candidatos = confirmam.length ? confirmam : datados;
+  // Blog ou fórum recente não basta para tornar "atual" um fato que só
+  // fontes antigas mais fortes confirmam: ele só conta se for o único tipo.
+  const fortes = candidatos.filter(i => i.source_type !== "BLOG_FORUM");
+  const base = fortes.length ? fortes : candidatos;
   const maisNova = base.reduce((a, b) => (b.age_days < a.age_days ? b : a));
   return { recencia: Math.round(100 * Math.pow(2, -maisNova.age_days / (janela / 2))), data: maisNova.date ?? null };
 }

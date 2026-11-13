@@ -360,11 +360,20 @@ async function analisarEvidenciasEmLote(afirmacao, evidenciasSelecionadas, resul
     // data ligada ao atributo, a menos que a fonte já tenha uma melhor.
     const dataFato = analise.get(p.id)?.dataFato;
     if (dataFato && p.fonte.escopo_data !== "ATTRIBUTE") {
+      // Quando a data do fato é ANTERIOR à publicação da página ("em vigor
+      // desde setembro de 2020", numa matéria de outubro de 2026), a página
+      // confirma o fato na data em que foi publicada: essa é a data da
+      // confirmação. Gravar 2020 como "atualização" tornaria a fonte
+      // incoerente (atualizada antes de publicada) e descartaria a melhor
+      // evidência. A data do fato fica guardada à parte, em data_fato.
+      const publicada = /^\d{4}-\d{2}-\d{2}/.test(String(p.fonte.data_publicacao ?? ""))
+        ? String(p.fonte.data_publicacao).slice(0, 10) : null;
+      const confirmadaEm = publicada && dataFato.data < publicada ? publicada : dataFato.data;
       p.fonte = {
         ...p.fonte,
-        data_atualizacao: dataFato.data,
+        data_atualizacao: confirmadaEm,
         escopo_data: "ATTRIBUTE",
-        data_fato: { ...dataFato, origem: "QUOTED_IN_SOURCE_TEXT" }
+        data_fato: { ...dataFato, origem: "QUOTED_IN_SOURCE_TEXT", confirmada_em: confirmadaEm }
       };
     }
     const atualidade = avaliarAtualidade(p.fonte, resultado.tipo_afirmacao, opcoes.dataReferencia, resultado.janela_validade?.dias);
@@ -394,6 +403,7 @@ async function analisarEvidenciasEmLote(afirmacao, evidenciasSelecionadas, resul
         ...metadadosPreparacao,
         trecho_analisado: typeof conteudo_para_analise === "string" ? conteudo_para_analise.slice(0, 1200) : null,
         citacao_chave: item?.citacao || null,
+        citacao_verificada: item ? Boolean(item.citacaoVerificada) : null,
         metodo_analise: "LOTE"
       },
       ...convertido,

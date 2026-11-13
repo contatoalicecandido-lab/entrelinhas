@@ -85,7 +85,7 @@ function lerCorpo(req) {
     });
     req.on("end", () => {
       if (excedeu) {
-        reject(Object.assign(new Error("Pedido grande demais."), { status: 413 }));
+        reject(Object.assign(new Error("Request too large."), { status: 413 }));
         return;
       }
       resolve(Buffer.concat(partes).toString("utf8"));
@@ -102,24 +102,24 @@ function validarDominio(valor) {
   const dominio = String(valor).trim().toLowerCase()
     .replace(/^https?:\/\//, "").replace(/\/.*$/, "");
   if (!/^(?=.{1,253}$)([a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,63}$/.test(dominio)) {
-    throw erroDeEntrada(`Domínio inválido: ${String(valor).slice(0, 80)}`);
+    throw erroDeEntrada(`Invalid domain: ${String(valor).slice(0, 80)}`);
   }
   return dominio;
 }
 
 function validarPedido(dados) {
   if (!dados || typeof dados !== "object" || Array.isArray(dados)) {
-    throw erroDeEntrada("Formato de pedido inválido.");
+    throw erroDeEntrada("Invalid request format.");
   }
   const texto = typeof dados.texto === "string" ? dados.texto.trim() : "";
-  if (!texto) throw erroDeEntrada("Cole uma resposta de IA para verificar.");
+  if (!texto) throw erroDeEntrada("Paste an AI answer to check.");
   if (texto.length > LIMITE_TEXTO) {
-    throw erroDeEntrada(`O texto passa de ${LIMITE_TEXTO} caracteres. Envie um trecho menor.`);
+    throw erroDeEntrada(`The text is longer than ${LIMITE_TEXTO} characters. Send a shorter part.`);
   }
   const modo = dados.modo === "real" ? "real" : "exemplo";
   const listaDominios = Array.isArray(dados.dominiosOficiais) ? dados.dominiosOficiais : [];
   if (listaDominios.length > MAX_DOMINIOS) {
-    throw erroDeEntrada(`Informe no máximo ${MAX_DOMINIOS} domínios oficiais.`);
+    throw erroDeEntrada(`Use at most ${MAX_DOMINIOS} trusted sites.`);
   }
   const dominiosOficiais = [...new Set(listaDominios.filter(d => String(d).trim()).map(validarDominio))];
   const tipo = dados.tipo && TIPOS.includes(dados.tipo) ? dados.tipo : null;
@@ -199,7 +199,7 @@ async function executarVerificacao(pedido) {
     }
 
     if (!modoRealDisponivel) {
-      throw erroDeEntrada("O modo real não está disponível: configure TAVILY_API_KEY e BIFROST_KEY no .env e rode `npm run web`.");
+      throw erroDeEntrada("Live checks are not available: set TAVILY_API_KEY and BIFROST_KEY in .env and run `npm run web`.");
     }
 
     // Carregado só no modo real, para não exigir credenciais no modo exemplo.
@@ -243,29 +243,49 @@ function gravarVerificacao(resultado) {
   }
 }
 
+// Mensagem de erro para o navegador: curta, em inglês, sem o corpo bruto do
+// provedor (que pode trazer identificadores da conta). O detalhe fica no log.
+function mensagemPublica(erro, status) {
+  const texto = String(erro?.message ?? "");
+  if (status !== 502) return texto;
+  if (/429|rate.?limit|limite/i.test(texto)) {
+    const espera = /try again in ([\dhms.]+)/i.exec(texto)?.[1];
+    return `The AI model hit its usage limit (rate limit).${espera ? ` Try again in ${espera}.` : " Try again in a few minutes."}`;
+  }
+  return "An external service (search or AI model) failed. Details are in the server log; try again in a few minutes.";
+}
+
 async function tratarVerificacao(req, res) {
-  if (!String(req.headers["content-type"] ?? "").includes("application/json")) {
-    return responderJson(res, 415, { erro: "Envie JSON." });
+  // Só JSON de verdade: "text/plain; charset=application/json" passaria num
+  // includes() e é o tipo que um site malicioso consegue mandar sem licença.
+  const tipoMidia = String(req.headers["content-type"] ?? "").split(";")[0].trim().toLowerCase();
+  if (tipoMidia !== "application/json") {
+    return responderJson(res, 415, { erro: "Send JSON (Content-Type: application/json)." });
   }
   if (ocupado) {
-    return responderJson(res, 429, { erro: "Já existe uma verificação em andamento. Aguarde ela terminar." });
+    return responderJson(res, 429, { erro: "A check is already running. Wait for it to finish." });
   }
   ocupado = true;
+  let trabalho = null;
   const inicio = Date.now();
   try {
     const corpo = await lerCorpo(req);
     let dados;
-    try { dados = JSON.parse(corpo); } catch { throw erroDeEntrada("JSON inválido."); }
+    try { dados = JSON.parse(corpo); } catch { throw erroDeEntrada("Invalid JSON."); }
     const pedido = validarPedido(dados);
     // Tempo máximo de uma verificação inteira: se algo travar lá dentro
     // (rede, provedor), o pedido falha com aviso e o servidor fica livre.
     let temporizador;
     const limite = new Promise((_, rejeitar) => {
       temporizador = setTimeout(() => rejeitar(Object.assign(
-        new Error(`A verificação passou de ${Math.round(TEMPO_MAXIMO_VERIFICACAO_MS / 1000)} s e foi interrompida. Os provedores podem estar no limite de uso; tente de novo em alguns minutos.`),
+        new Error(`The check took longer than ${Math.round(TEMPO_MAXIMO_VERIFICACAO_MS / 1000)} s and was stopped. The providers may be at their usage limit (rate limit); try again in a few minutes.`),
         { status: 504 })), TEMPO_MAXIMO_VERIFICACAO_MS);
     });
-    const resultado = await Promise.race([executarVerificacao(pedido), limite]).finally(() => clearTimeout(temporizador));
+    // "ocupado" só volta a falso quando a checagem termina de fato, mesmo
+    // depois do tempo limite: assim duas checagens nunca rodam juntas.
+    trabalho = executarVerificacao(pedido);
+    trabalho.catch(() => {}).finally(() => { ocupado = false; });
+    const resultado = await Promise.race([trabalho, limite]).finally(() => clearTimeout(temporizador));
     resultado.duracao_ms = Date.now() - inicio;
     if (pedido.modo === "real" && process.env.ENTRELINHAS_GRAVAR === "1") gravarVerificacao(resultado);
     console.log(`[${new Date().toISOString()}] verificação ${pedido.modo}: ${resultado.total_afirmacoes} afirmação(ões) em ${resultado.duracao_ms} ms`);
@@ -274,20 +294,16 @@ async function tratarVerificacao(req, res) {
     const status = erro.status ?? 502;
     // Mensagens internas podem citar o provedor; nunca contêm credenciais.
     console.error(`[${new Date().toISOString()}] falha (${status}): ${erro.message}`);
-    responderJson(res, status, {
-      erro: status === 502
-        ? `A verificação falhou ao falar com um serviço externo: ${erro.message}`
-        : erro.message
-    });
+    responderJson(res, status, { erro: mensagemPublica(erro, status) });
   } finally {
-    ocupado = false;
+    if (!trabalho) ocupado = false;
   }
 }
 
 function servirArquivo(res, nome, tipo) {
   const caminho = path.join(__dirname, "public", nome);
   fs.readFile(caminho, (erro, conteudo) => {
-    if (erro) return responderJson(res, 404, { erro: "Arquivo não encontrado." });
+    if (erro) return responderJson(res, 404, { erro: "File not found." });
     res.writeHead(200, { ...CABECALHOS_SEGURANCA, "Content-Type": tipo });
     res.end(conteudo);
   });
@@ -295,6 +311,25 @@ function servirArquivo(res, nome, tipo) {
 
 function criarServidor() {
   return http.createServer((req, res) => {
+    // Só aceita pedidos endereçados a este computador (contra DNS rebinding)
+    // e, quando o navegador informa a origem, só da própria página (contra
+    // um site qualquer disparar checagens e gastar os créditos de quem roda).
+    const porta = req.socket?.localPort ?? PORTA;
+    const hostsValidos = new Set([`127.0.0.1:${porta}`, `localhost:${porta}`]);
+    if (!hostsValidos.has(String(req.headers.host ?? "").toLowerCase())) {
+      return responderJson(res, 421, { erro: "This server only answers requests for 127.0.0.1 or localhost." });
+    }
+    // GET e HEAD só leem a página (o botão de favoritos abre a página vindo de
+    // outro site, e isso precisa funcionar); pedidos que fazem algo, não.
+    if (req.method !== "GET" && req.method !== "HEAD") {
+      const origem = req.headers.origin;
+      if (origem && !hostsValidos.has(origem.replace(/^https?:\/\//, "").toLowerCase())) {
+        return responderJson(res, 403, { erro: "Requests from other sites are not allowed." });
+      }
+      if (["cross-site", "same-site"].includes(String(req.headers["sec-fetch-site"] ?? ""))) {
+        return responderJson(res, 403, { erro: "Requests from other sites are not allowed." });
+      }
+    }
     const url = new URL(req.url, `http://${HOST}`);
     const leitura = req.method === "GET" || req.method === "HEAD";
     if (leitura && ARQUIVOS_PUBLICOS[url.pathname]) {
@@ -316,7 +351,7 @@ function criarServidor() {
     if (req.method === "POST" && url.pathname === "/api/verificar") {
       return tratarVerificacao(req, res);
     }
-    responderJson(res, 404, { erro: "Rota não encontrada." });
+    responderJson(res, 404, { erro: "Not found." });
   });
 }
 

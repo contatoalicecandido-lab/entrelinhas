@@ -17,21 +17,39 @@ function semAcento(texto) {
   return String(texto ?? "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 }
 
+// Palavras que existem em espanhol ou francês e NÃO em português: evitam
+// que "La tasa de interés en México es de 10%" vire português e mande a busca
+// para o Brasil.
+const SO_ESPANHOL = new Set(["el", "la", "los", "las", "y", "es", "del", "en", "una", "pero", "muy", "tasa", "interés", "año", "años", "hoy", "ahora", "precio", "están", "también", "según", "mes", "dólares"]);
+const SO_FRANCES = new Set(["le", "les", "est", "des", "du", "et", "une", "pour", "avec", "sont", "mais", "cette", "aujourd", "hui", "euros", "prix", "taux", "selon", "plus", "dans", "au", "aux"]);
+
 function detectarIdioma(texto) {
-  const palavras = String(texto ?? "").toLowerCase().match(/[a-zà-ÿç]+/g) ?? [];
+  const bruto = String(texto ?? "");
+  const palavras = bruto.toLowerCase().match(/[a-zà-ÿçñ]+/g) ?? [];
   if (palavras.length === 0) return { idioma: "desconhecido", confianca: 0 };
   let pt = 0;
   let en = 0;
+  let es = 0;
+  let fr = 0;
   for (const p of palavras) {
     if (STOPWORDS_PT.has(p)) pt += 1;
     if (STOPWORDS_EN.has(p)) en += 1;
-    if (/[ãõçáéíóúâêô]/.test(p)) pt += 1.5;
+    if (SO_ESPANHOL.has(p)) es += 1;
+    if (SO_FRANCES.has(p)) fr += 1;
+    if (/[ãõ]/.test(p)) pt += 1.5;
+    else if (/[çáéíóúâêô]/.test(p)) pt += 0.75;
+    if (/ñ/.test(p)) es += 1.5;
+    if (/[èàùëïœ]/.test(p)) fr += 1.5;
   }
-  if (/R\$\s?\d/.test(texto)) pt += 2;
-  const total = pt + en;
+  if (/R\$\s?\d/.test(bruto)) pt += 2;
+  if (/[¿¡]/.test(bruto)) es += 2;
+  const pontos = { pt, en, es, fr };
+  const total = pt + en + es + fr;
   if (total === 0) return { idioma: "desconhecido", confianca: 0 };
-  const idioma = pt >= en ? "pt" : "en";
-  return { idioma, confianca: Math.round((Math.max(pt, en) / total) * 100) / 100 };
+  // Empate entre português e outra língua latina: fica com português só se
+  // houver marca exclusiva do português (ã, õ, R$).
+  const idioma = Object.entries(pontos).sort((a, b) => b[1] - a[1] || (a[0] === "pt" ? -1 : 1))[0][0];
+  return { idioma, confianca: Math.round((pontos[idioma] / total) * 100) / 100 };
 }
 
 const MOEDAS = [

@@ -1,5 +1,6 @@
 
 const { randomUUID, createHash } = require("node:crypto");
+const { dominioRegistravel, ehPaginaDeBuscador } = require("./dominio");
 const { validarEvidencia } = require("./evidencia");
 const { normalizarFonte } = require("./normalizar-fonte");
 const sinaisTemporais = require("./sinais-temporais");
@@ -92,6 +93,20 @@ function gerarHashConteudo(conteudo) {
 // Tempo máximo de uma chamada à Tavily. Sem isso, uma conexão travada
 // deixaria a verificação inteira esperando indefinidamente.
 const TEMPO_LIMITE_TAVILY_MS = 45000;
+
+// Um item quebrado na resposta (null, título numérico, URL ausente) é
+// descartado ou consertado, em vez de derrubar a busca inteira da afirmação.
+function limparResultados(lista) {
+  if (!Array.isArray(lista)) return lista;
+  return lista
+    .filter(item => item && typeof item === "object" && typeof item.url === "string" && /^https?:\/\//.test(item.url))
+    .map(item => ({
+      ...item,
+      title: typeof item.title === "string" ? item.title : (item.title == null ? null : String(item.title)),
+      content: typeof item.content === "string" ? item.content : (item.content == null ? "" : String(item.content)),
+      raw_content: typeof item.raw_content === "string" ? item.raw_content : null
+    }));
+}
 
 async function fazerRequisicaoTavily(endpoint, corpo) {
   let resposta;
@@ -195,7 +210,7 @@ async function extrairConteudo(urls, pergunta, opcoes = {}) {
     );
 
     const resultados = Array.isArray(dados.results)
-      ? dados.results
+      ? limparResultados(dados.results)
       : [];
 
     registro.status = "SUCESSO";
@@ -317,6 +332,7 @@ async function executarBusca(pergunta, opcoes, dominiosOficiais = [], extras = {
   const inicio = Date.now();
   try {
     const dados = await fazerRequisicaoTavily("search", parametros);
+    if (Array.isArray(dados?.results)) dados.results = limparResultados(dados.results);
     if (!Array.isArray(dados.results)) {
       throw new Error("A Tavily não retornou uma lista válida de resultados.");
     }
@@ -357,14 +373,15 @@ function ehResultadoUtil(resultado) {
   let host = "";
   try { host = new URL(resultado.url).hostname.toLowerCase().replace(/^www\./, ""); } catch { return false; }
   if (host === "tavily.com" || host.endsWith(".tavily.com")) return false;
+  // Página de resultados de um buscador não é fonte.
+  if (ehPaginaDeBuscador(resultado.url)) return false;
   if (typeof resultado.score === "number" && resultado.score < RELEVANCIA_MINIMA) return false;
   return true;
 }
 
 function selecionarFontesDiversas(candidatos, maxFontes, dominiosOficiais, afirmacao = "") {
-  const hostDe = url => {
-    try { return new URL(url).hostname.toLowerCase().replace(/^www\./, ""); } catch { return url; }
-  };
+  // Um site = um domínio registrável: help.openai.com e openai.com são o mesmo.
+  const hostDe = url => dominioRegistravel(url) ?? url;
   const porTipo = new Map([...ORDEM_TIPOS_DIVERSOS, "BLOG_FORUM"].map(tipo => [tipo, []]));
   for (const resultado of candidatos) {
     const tipo = classificarFonte(resultado.url, {
@@ -397,9 +414,11 @@ function selecionarFontesDiversas(candidatos, maxFontes, dominiosOficiais, afirm
     if (escolhidos.length >= maxFontes) break;
     if (!dominiosUsados.has(hostDe(r.url))) { escolhidos.push(r); dominiosUsados.add(hostDe(r.url)); }
   }
+  // Se ainda faltar, completa só com sites que ainda não entraram: nunca
+  // duas páginas do mesmo site (menos fontes é melhor que voz repetida).
   for (const r of candidatos) {
     if (escolhidos.length >= maxFontes) break;
-    if (!escolhidos.includes(r)) escolhidos.push(r);
+    if (!escolhidos.includes(r) && !dominiosUsados.has(hostDe(r.url))) { escolhidos.push(r); dominiosUsados.add(hostDe(r.url)); }
   }
   return escolhidos;
 }
@@ -769,6 +788,7 @@ async function pesquisarComTavily(pergunta, opcoes = {}) {
 }
 
 module.exports = {
+  limparResultados,
   janelaNoticias,
   ehResultadoUtil,
   NOTICIAS_BR,

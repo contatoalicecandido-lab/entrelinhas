@@ -57,6 +57,7 @@ function freshnessForClaim(evidence, { claimType, validityDays, asOf, acceptPage
     ageDays,
     status,
     posture: evidence.postura,
+    sourceType: evidence.sourceType ?? null,
     domain: evidence.domain,
     dependencyGroup: evidence.dependencyGroup ?? evidence.domain,
     evidenceId: evidence.evidenceId ?? null,
@@ -130,6 +131,7 @@ function calculateClaimFreshnessScore(evidences, options = {}) {
     date: item.selectedDate,
     age_days: item.ageDays,
     posture: item.posture,
+    source_type: item.sourceType,
     domain: item.domain,
     dependency_group: item.dependencyGroup
   }));
@@ -209,7 +211,7 @@ function calculatePageDateRecency(evidences, options = {}) {
     newest_date: newest.selectedDate,
     sources: groups.map(item => ({
       date: item.selectedDate, age_days: item.ageDays, status: item.status,
-      posture: item.posture, domain: item.domain, evidence_id: item.evidenceId
+      posture: item.posture, source_type: item.sourceType, domain: item.domain, evidence_id: item.evidenceId
     })),
     limitations: [
       "Baseado na data da página, não na data em que o dado específico mudou: confiança baixa.",
