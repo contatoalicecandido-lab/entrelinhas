@@ -657,3 +657,7 @@ main.folha { overflow: hidden; }
   .passos li { padding: 20px; }
 }
 .parede { inset: 38% -4% 0 -4%; mask-image: linear-gradient(180deg, transparent 0%, #000 18%, #000 52%, transparent 80%); -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 18%, #000 52%, transparent 80%); }
+.problema .secao-cabeca { max-width: 1060px; }
+.parede { top: 46%; }
+.secao-cabeca { max-width: 1060px; }
+.sem-quebra { white-space: nowrap; }
