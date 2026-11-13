@@ -1,0 +1,2406 @@
+{
+ "sistema": "Entrelinhas",
+ "id_verificacao": "d1da9211-83e4-4077-b1d6-96c610c51cbc",
+ "texto_original": "O salário mínimo atual no Brasil é de R$ 1.412.",
+ "verificado_em": "2026-11-13T23:21:27.421Z",
+ "total_afirmacoes": 1,
+ "sintese": {
+  "veredito": "CONTRADICAO_FRACA",
+  "resumo": "As evidências utilizáveis contradizem a afirmação, mas nenhuma fonte oficial com data ligada ao fato confirma a contradição. Trate a afirmação como possivelmente desatualizada ou incorreta e revise as fontes.",
+  "total_afirmacoes": 1,
+  "contagem_vereditos": {
+   "CONTRADICAO_FRACA": 1
+  }
+ },
+ "afirmacoes": [
+  {
+   "id": "afirmacao_1",
+   "texto": "O salário mínimo atual no Brasil é de R$ 1.412.",
+   "tipo_afirmacao": "regulamento",
+   "origem_tipo_afirmacao": "HEURISTICA",
+   "nuances": {
+    "idioma": "pt",
+    "variante": "pt-BR",
+    "confianca_idioma": 1,
+    "valores": [
+     {
+      "tipo": "MONETARIO",
+      "texto": "R$ 1.412",
+      "valor": 1412,
+      "moeda": "BRL",
+      "periodo": null,
+      "qualificador": null
+     }
+    ],
+    "datas": [],
+    "expressoes_temporais": [],
+    "condicoes": [],
+    "mudancas": [],
+    "tempo_coloquial": [],
+    "girias": {
+     "aliases": [],
+     "expressoes": []
+    },
+    "consulta_busca": "O salário mínimo atual no Brasil é de R$ 1.412.",
+    "dominios_oficiais_sugeridos": [
+     "gov.br"
+    ],
+    "autoridades": [
+     {
+      "dominio": "gov.br",
+      "autoridade": "Federal government (gov.br)",
+      "termo": "salário mínimo"
+     }
+    ],
+    "notas": [
+     "\"R$ 1.412\" uses Brazilian number format: BRL 1,412.00.",
+     "\"salário mínimo\" points to a Brazilian authority: Federal government (gov.br) (gov.br) is searched as an official source."
+    ]
+   },
+   "evidencias": [
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "Salário mínimo em 2026: veja o valor atualizado e o que muda | Brasil | Valor Econômico",
+      "url": "https://valor.globo.com/brasil/noticia/2026/07/29/salario-minimo-em-2026-veja-o-valor-atualizado-e-o-que-muda.ghtml",
+      "conteudo": "[Entrar](#)\n\n* [Minha conta](https://minhaconta.globo.com)\n* [Portal do Assinante](https://editoraglobo.my.site.com/assinante/s/)\n* [Newsletter](https://valor.globo.com/newsletter/assine-newsletter/)\n* [Sair](#)\n\nCarregando...\n\n[Brasil](https://valor.globo.com/brasil)\n\n# Salário mínimo em 2026: veja o valor atualizado e o que muda\n\n## Piso nacional é de R$ 1.621 desde janeiro de 2026. Valor serve de referência para trabalhadores CLT, benefícios sociais e aposentadorias do INSS\n\n![](data:image/png;base64,UklGRtYOAABXRUJQVlA4WAoAAAAIAAAAZwEAZwEAVlA4TPUNAAAvZ8FZAP+ioG0bJvxJt/uDMP/zP/8/cNA1BRGJCOgSEwgSCFLQPcrPonEb08dIIkjROArSNmBa/753HETEBHgmTFTGmhlA4t//tm1/k2jbd+w9k5DSQKVYqtGCdPgiCIIgyoBlSrUzBSl…",
+      "coletado_em": "2026-11-13T23:21:19.955Z",
+      "data_publicacao": "2026-07-29",
+      "data_atualizacao": "2026-07-29",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": null,
+      "relevancia": 0.82768893,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "db4fc4fa-8617-4e50-a2a1-7656f69285a4",
+       "resultado_id": "43ced7-01",
+       "response_time_busca": 1.06,
+       "response_time_extracao": 0.03,
+       "consulta": "O salário mínimo atual no Brasil é de R$ 1.412.",
+       "origem_principal": {
+        "id_operacao": "613e0fa6-95e2-45b1-8367-0166dacb2f6d",
+        "request_id": "db4fc4fa-8617-4e50-a2a1-7656f69285a4",
+        "modo_busca": "GERAL_SEM_VALOR",
+        "resultado_id": "43ced7-01",
+        "parametros": {
+         "query": "O salário mínimo atual no Brasil 2026",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "613e0fa6-95e2-45b1-8367-0166dacb2f6d",
+         "request_id": "db4fc4fa-8617-4e50-a2a1-7656f69285a4",
+         "modo_busca": "GERAL_SEM_VALOR",
+         "resultado_id": "43ced7-01",
+         "parametros": {
+          "query": "O salário mínimo atual no Brasil 2026",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Wed, 29 Jul 2026 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 29 Jul 2026 00:00:00 GMT",
+         "value_normalized": "2026-07-29",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "BODY_TOO_LARGE",
+        "detalhe": "SOURCE_BODY_TOO_LARGE",
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "eb8bb7cb-3eb3-4513-8dcc-c2f62d37f28b",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2026-01-01",
+       "precisao": "DIA",
+       "citacao": "Piso nacional é de R$ 1.621 desde janeiro de 2026.",
+       "origem": "QUOTED_IN_SOURCE_TEXT",
+       "confirmada_em": "2026-07-29"
+      }
+     },
+     "coleta": {
+      "id_coleta": "392bef99-ec5c-4b0d-a38b-e2800f88ccf2",
+      "id_verificacao": "d1da9211-83e4-4077-b1d6-96c610c51cbc",
+      "url_original": "https://valor.globo.com/brasil/noticia/2026/07/29/salario-minimo-em-2026-veja-o-valor-atualizado-e-o-que-muda.ghtml",
+      "url_canonica": "https://valor.globo.com/brasil/noticia/2026/07/29/salario-minimo-em-2026-veja-o-valor-atualizado-e-o-que-muda.ghtml",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "ab25f899851bc4d53c34a07e9cc72160bd81a7218d76f2ae6582e2caa37dcaad",
+      "coletado_em": "2026-11-13T23:21:19.955Z",
+      "id_operacao_busca": "613e0fa6-95e2-45b1-8367-0166dacb2f6d",
+      "id_operacao_extracao": "08d96169-dc24-4893-ac54-b13f526a8003",
+      "consulta": "O salário mínimo atual no Brasil é de R$ 1.412.",
+      "parametros_busca": {
+       "query": "O salário mínimo atual no Brasil 2026",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://valor.globo.com/brasil/noticia/2026/07/29/salario-minimo-em-2026-veja-o-valor-atualizado-e-o-que-muda.ghtml",
+        "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira",
+        "https://sindicom-jaboatao.portaldocomercio.org.br/comercio/salario-minimo-de-r-1-412-entrou-em-vigor-nesta-segunda-feira-01",
+        "https://www.cut.org.br/noticias/novo-vvalor-do-salario-minimo-devera-ser-de-r-1-518-no-proximo-ano-80f7"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "db4fc4fa-8617-4e50-a2a1-7656f69285a4",
+       "operacoes_busca": [
+        {
+         "id_operacao": "613e0fa6-95e2-45b1-8367-0166dacb2f6d",
+         "request_id": "db4fc4fa-8617-4e50-a2a1-7656f69285a4",
+         "modo_busca": "GERAL_SEM_VALOR",
+         "resultado_id": "43ced7-01",
+         "parametros": {
+          "query": "O salário mínimo atual no Brasil 2026",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "eb8bb7cb-3eb3-4513-8dcc-c2f62d37f28b",
+       "resultado_id": "43ced7-01",
+       "relevancia": 0.82768893,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 29 Jul 2026 00:00:00 GMT",
+         "value_normalized": "2026-07-29",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "BODY_TOO_LARGE",
+        "detalhe": "SOURCE_BODY_TOO_LARGE",
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Salário mínimo em 2026: veja o valor atualizado e o que muda | Brasil | Valor Econômico",
+      "url": "https://valor.globo.com/brasil/noticia/2026/07/29/salario-minimo-em-2026-veja-o-valor-atualizado-e-o-que-muda.ghtml",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 15467,
+      "caracteres_preparados": 4774,
+      "trecho_analisado": "TÍTULO DA FONTE: Salário mínimo em 2026: veja o valor atualizado e o que muda | Brasil | Valor Econômico\nURL DA FONTE: https://valor.globo.com/brasil/noticia/2026/07/29/salario-minimo-em-2026-veja-o-valor-atualizado-e-o-que-muda.ghtml\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\nCarregando...\n\n[Brasil](https://valor.globo.com/brasil)\n\n# Salário mínimo em 2026: veja o valor atualizado e o que muda\n\n## Piso nacional é de R$ 1.621 desde janeiro de 2026.\n\nAtualizado\n\n* [Facebook](https://www.facebook.com/dialog/share?app_id=289255557788943&href=https://valor.globo.com/brasil/noticia/2026/07/29/salario-minimo-em-2026-veja-o-valor-atualizado-e-o-que-muda.ghtml%3Futm_source%3DFacebook%26utm_medium%3DSocial%26utm_campaign%3Dcompartilhar)\n\n* [Twitter](https://twitter.com/intent/tweet?text=Valor%20Econ%C3%B4mico%3A%20Sal%C3%A1rio%20m%C3%ADnimo%20em%202026%3A%20veja%20o%20valor%20atualizado%20e%20o%20que%20muda&url=https://valor.globo.com/brasil/noticia/2026/07/29/salario-minimo-em-2026-veja-o-valor-atualizado-e-o-que-muda.ghtml%3Futm_source%3DTwitter%26utm_medium%3DSocial%26utm_campaign%3Dcompartilhar)\n\n* [Whatsapp](https://api.whatsapp.com/send?text=https://valor.globo.com/brasil/noticia/2026/07/29/",
+      "citacao_chave": "Piso nacional é de R$ 1.621 desde janeiro de 2026.",
+      "citacao_verificada": true,
+      "citacao_rejeitada": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "Source states the salary minimum in 2026 is R$ 1.621, which is higher than R$ 1.412."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "Source states the salary minimum in 2026 is R$ 1.621, which is higher than R$ 1.412."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 107,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2026-07-29"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Salário mínimo 2026: valor, reajuste, tabela e impactos",
+      "url": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+      "conteudo": "[Pular para o conteúdo](#conteudo-principal)\n\n[![Barbieri Advogados](https://www.barbieriadvogados.com/wp-content/themes/barbieri/images/logo_barbieri30anos_branco.svg) ![Barbieri Advogados](https://www.barbieriadvogados.com/wp-content/themes/barbieri/images/logo_barbieri30anos_colorido2.svg)](https://www.barbieriadvogados.com/) \n\n* [PT](#)\n* [EN](#)\n* [中文](#)\n\n[![Barbieri Advogados](https://www.barbieriadvogados.com/wp-content/themes/barbieri/images/logo_barbieri30anos_branco.svg)](https://www.barbieriadvogados.com/)\n\n# Salário mínimo 2026: valor, reajuste, tabela e impactos\n\n|\n\n[Direito Trabalhista](https://www.barbieriadvogados.com/category/direito-trabalhista/)\n\n|\n\n18 min de leitura\n\n*At…",
+      "coletado_em": "2026-11-13T23:21:19.955Z",
+      "data_publicacao": "2026-05-18",
+      "data_atualizacao": "2026-05-18",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela/",
+      "relevancia": 0.84234506,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "db4fc4fa-8617-4e50-a2a1-7656f69285a4",
+       "resultado_id": "b52e87-00",
+       "response_time_busca": 1.06,
+       "response_time_extracao": 0.03,
+       "consulta": "O salário mínimo atual no Brasil é de R$ 1.412.",
+       "origem_principal": {
+        "id_operacao": "613e0fa6-95e2-45b1-8367-0166dacb2f6d",
+        "request_id": "db4fc4fa-8617-4e50-a2a1-7656f69285a4",
+        "modo_busca": "GERAL_SEM_VALOR",
+        "resultado_id": "b52e87-00",
+        "parametros": {
+         "query": "O salário mínimo atual no Brasil 2026",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "613e0fa6-95e2-45b1-8367-0166dacb2f6d",
+         "request_id": "db4fc4fa-8617-4e50-a2a1-7656f69285a4",
+         "modo_busca": "GERAL_SEM_VALOR",
+         "resultado_id": "b52e87-00",
+         "parametros": {
+          "query": "O salário mínimo atual no Brasil 2026",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Mon, 18 May 2026 20:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 18 May 2026 20:00:00 GMT",
+         "value_normalized": "2026-05-18",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-05-18T17:00:00-03:00",
+         "value_normalized": "2026-05-18",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-11-07T23:56:07-03:00",
+         "value_normalized": "2026-11-08",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-05-18T17:00:00-03:00",
+         "value_normalized": "2026-05-18",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-07T23:56:07-03:00",
+         "value_normalized": "2026-11-08",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-05-18",
+         "value_normalized": "2026-05-18",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-07",
+         "value_normalized": "2026-11-07",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela/",
+        "capturado_em": "2026-11-13T23:21:19.410Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "eb8bb7cb-3eb3-4513-8dcc-c2f62d37f28b",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2026-01-01",
+       "precisao": "DIA",
+       "citacao": "O salário mínimo 2026 é de R$ 1.621,00 por mês, valor em vigor desde 1.º de janeiro de 2026",
+       "origem": "QUOTED_IN_SOURCE_TEXT",
+       "confirmada_em": "2026-05-18"
+      }
+     },
+     "coleta": {
+      "id_coleta": "4c6862e6-ad39-42b3-88f7-773f5b47f730",
+      "id_verificacao": "d1da9211-83e4-4077-b1d6-96c610c51cbc",
+      "url_original": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+      "url_canonica": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "2f19deaa6bfc0ef9c075e7e40c42ba8a894f3892b03631c49fb68002bfd3b6d1",
+      "coletado_em": "2026-11-13T23:21:19.955Z",
+      "id_operacao_busca": "613e0fa6-95e2-45b1-8367-0166dacb2f6d",
+      "id_operacao_extracao": "08d96169-dc24-4893-ac54-b13f526a8003",
+      "consulta": "O salário mínimo atual no Brasil é de R$ 1.412.",
+      "parametros_busca": {
+       "query": "O salário mínimo atual no Brasil 2026",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://valor.globo.com/brasil/noticia/2026/07/29/salario-minimo-em-2026-veja-o-valor-atualizado-e-o-que-muda.ghtml",
+        "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira",
+        "https://sindicom-jaboatao.portaldocomercio.org.br/comercio/salario-minimo-de-r-1-412-entrou-em-vigor-nesta-segunda-feira-01",
+        "https://www.cut.org.br/noticias/novo-vvalor-do-salario-minimo-devera-ser-de-r-1-518-no-proximo-ano-80f7"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "db4fc4fa-8617-4e50-a2a1-7656f69285a4",
+       "operacoes_busca": [
+        {
+         "id_operacao": "613e0fa6-95e2-45b1-8367-0166dacb2f6d",
+         "request_id": "db4fc4fa-8617-4e50-a2a1-7656f69285a4",
+         "modo_busca": "GERAL_SEM_VALOR",
+         "resultado_id": "b52e87-00",
+         "parametros": {
+          "query": "O salário mínimo atual no Brasil 2026",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "eb8bb7cb-3eb3-4513-8dcc-c2f62d37f28b",
+       "resultado_id": "b52e87-00",
+       "relevancia": 0.84234506,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 18 May 2026 20:00:00 GMT",
+         "value_normalized": "2026-05-18",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-05-18T17:00:00-03:00",
+         "value_normalized": "2026-05-18",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-11-07T23:56:07-03:00",
+         "value_normalized": "2026-11-08",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-05-18T17:00:00-03:00",
+         "value_normalized": "2026-05-18",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-07T23:56:07-03:00",
+         "value_normalized": "2026-11-08",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-05-18",
+         "value_normalized": "2026-05-18",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-07",
+         "value_normalized": "2026-11-07",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela/",
+        "capturado_em": "2026-11-13T23:21:19.410Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Salário mínimo 2026: valor, reajuste, tabela e impactos",
+      "url": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 33009,
+      "caracteres_preparados": 7989,
+      "trecho_analisado": "TÍTULO DA FONTE: Salário mínimo 2026: valor, reajuste, tabela e impactos\nURL DA FONTE: https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n*Atualizado em outubro de 2026.*\n\nO **salário mínimo 2026** é de R$ 1.621,00 por mês, valor em vigor desde 1.º de janeiro de 2026 por força do [Decreto n.\n\n12.797/2025](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/D12797.htm), que fixou também o valor diário em R$ 54,04 e o valor horário em R$ 7,37.\n\nO reajuste sobre os R$ 1.518,00 de 2025 foi de 6,79%, ou R$ 103,00.\n\nEste artigo reúne o valor atual e a tabela do salário mínimo, a regra de reajuste, o histórico desde o Plano Real, os reflexos previdenciários e trabalhistas, os pisos regionais e a previsão para 2027.\n\n> **Em resumo:** o salário mínimo nacional é de R$ 1.621,00 desde 1.º/1/2026 (Decreto n.\n\n12.797/2025), com valor diário de R$ 54,04 e horário de R$ 7,37, calculado sobre 220 horas mensais.\n\nPara 2027, o projeto de lei orçamentária prevê R$ 1.741,00.\n\n## O que é o salário mínimo?\n\nO salário mínimo é o menor valor que pode ser pago ao trabalhador por uma jornada integral no Brasil.\n\nEstá previsto no art.\n\n##",
+      "citacao_chave": "O salário mínimo 2026 é de R$ 1.621,00 por mês, valor em vigor desde 1.º de janeiro de 2026",
+      "citacao_verificada": true,
+      "citacao_rejeitada": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "Source indicates the salary minimum effective from 1 January 2026 is R$ 1.621."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "Source indicates the salary minimum effective from 1 January 2026 is R$ 1.621."
+     },
+     "atualidade": {
+      "status": "FRESH",
+      "motivo": "WITHIN_VALIDITY_PERIOD",
+      "idade_dias": 179,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2026-05-18"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "Salário mínimo de R$ 1.412 começa a ser pago nesta quinta-feira | Agência Brasil",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira",
+      "conteudo": "[Pular para o conteúdo principal](#main-content)\n\n[![logo ebc](https://agenciabrasil.ebc.com.br/sites/default/themes/agenciabrasil_v3/images/logo-ebc-dark.webp?tnhjsg)](https://ebc.com.br \"Ir para o portal EBC\")\n\n[![logo Agência Brasil](https://agenciabrasil.ebc.com.br/sites/default/themes/agenciabrasil_v3/images/agbrasil-color-logo.svg?tnhjsg)](/)\n\n\n\n[Economia](/economia)\n\n# Salário mínimo de R$ 1.412 começa a ser pago nesta quinta-feira\n\nBenefícios e contribuições também sobem a partir deste mês\n\nWellton Máximo – Repórter da Agência Brasil\n\nPublicado em 31/01/2024 - 15:52\n\nBrasília\n\n![Real Moeda brasileira, dinheiro.\nFoto: Marcello Casal Jr/Agência Brasil/Arquivo](/sites/default/files/thum…",
+      "coletado_em": "2026-11-13T23:21:19.955Z",
+      "data_publicacao": null,
+      "data_atualizacao": "2024-01-31",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": "https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira",
+      "relevancia": 0.82104415,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "d4af760d-6c29-4a01-b093-9d8fc5bf5bc7",
+       "resultado_id": "2f2443-00",
+       "response_time_busca": 0,
+       "response_time_extracao": 0.03,
+       "consulta": "O salário mínimo atual no Brasil é de R$ 1.412.",
+       "origem_principal": {
+        "id_operacao": "9cf03edd-9a8c-4adb-9316-af172140f9f6",
+        "request_id": "d4af760d-6c29-4a01-b093-9d8fc5bf5bc7",
+        "modo_busca": "GERAL",
+        "resultado_id": "2f2443-00",
+        "parametros": {
+         "query": "O salário mínimo atual no Brasil é de R$ 1.412.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "9cf03edd-9a8c-4adb-9316-af172140f9f6",
+         "request_id": "d4af760d-6c29-4a01-b093-9d8fc5bf5bc7",
+         "modo_busca": "GERAL",
+         "resultado_id": "2f2443-00",
+         "parametros": {
+          "query": "O salário mínimo atual no Brasil é de R$ 1.412.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Wed, 31 Jan 2024 21:52:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 31 Jan 2024 21:52:00 GMT",
+         "value_normalized": "2024-01-31",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 23:10:08 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2024-01-31T18:52:00-03:00",
+         "value_normalized": "2024-01-31",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "31/01/2024",
+         "value_normalized": "2024-01-31",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "EXPLICIT_ATTRIBUTE_UPDATE_DATE",
+         "field": "visible_text_date",
+         "value_original": "31/01/2024",
+         "value_normalized": "2024-01-31",
+         "scope": "ATTRIBUTE",
+         "source": "VISIBLE_TEXT",
+         "match_basis": "claim_value_or_entity_in_local_context",
+         "context": "sta quinta-feira Benefícios e contribuições também sobem a partir deste mês Wellton Máximo – Repórter da Agência Brasil Publicado em 31/01/2024 - 15:52 | 00:00 --> Brasília © Marcello Casal Jr/Agência Brasil/Arquivo Versão em áudio A partir desta quinta-feira (1º), os trabalhadores começam a receber",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "31/01/2024",
+         "value_normalized": "2024-01-31",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira",
+        "capturado_em": "2026-11-13T23:21:19.447Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "eb8bb7cb-3eb3-4513-8dcc-c2f62d37f28b",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "0813aeb3-ea98-4f53-95d3-8686a150a35f",
+      "id_verificacao": "d1da9211-83e4-4077-b1d6-96c610c51cbc",
+      "url_original": "https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira",
+      "url_canonica": "https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "5997a1aa335047430ac1dff4b247e7891eebe1ad82e24bbd99db691db6988280",
+      "coletado_em": "2026-11-13T23:21:19.955Z",
+      "id_operacao_busca": "9cf03edd-9a8c-4adb-9316-af172140f9f6",
+      "id_operacao_extracao": "08d96169-dc24-4893-ac54-b13f526a8003",
+      "consulta": "O salário mínimo atual no Brasil é de R$ 1.412.",
+      "parametros_busca": {
+       "query": "O salário mínimo atual no Brasil é de R$ 1.412.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://valor.globo.com/brasil/noticia/2026/07/29/salario-minimo-em-2026-veja-o-valor-atualizado-e-o-que-muda.ghtml",
+        "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira",
+        "https://sindicom-jaboatao.portaldocomercio.org.br/comercio/salario-minimo-de-r-1-412-entrou-em-vigor-nesta-segunda-feira-01",
+        "https://www.cut.org.br/noticias/novo-vvalor-do-salario-minimo-devera-ser-de-r-1-518-no-proximo-ano-80f7"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "d4af760d-6c29-4a01-b093-9d8fc5bf5bc7",
+       "operacoes_busca": [
+        {
+         "id_operacao": "9cf03edd-9a8c-4adb-9316-af172140f9f6",
+         "request_id": "d4af760d-6c29-4a01-b093-9d8fc5bf5bc7",
+         "modo_busca": "GERAL",
+         "resultado_id": "2f2443-00",
+         "parametros": {
+          "query": "O salário mínimo atual no Brasil é de R$ 1.412.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "eb8bb7cb-3eb3-4513-8dcc-c2f62d37f28b",
+       "resultado_id": "2f2443-00",
+       "relevancia": 0.82104415,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 31 Jan 2024 21:52:00 GMT",
+         "value_normalized": "2024-01-31",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 23:10:08 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2024-01-31T18:52:00-03:00",
+         "value_normalized": "2024-01-31",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "31/01/2024",
+         "value_normalized": "2024-01-31",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "EXPLICIT_ATTRIBUTE_UPDATE_DATE",
+         "field": "visible_text_date",
+         "value_original": "31/01/2024",
+         "value_normalized": "2024-01-31",
+         "scope": "ATTRIBUTE",
+         "source": "VISIBLE_TEXT",
+         "match_basis": "claim_value_or_entity_in_local_context",
+         "context": "sta quinta-feira Benefícios e contribuições também sobem a partir deste mês Wellton Máximo – Repórter da Agência Brasil Publicado em 31/01/2024 - 15:52 | 00:00 --> Brasília © Marcello Casal Jr/Agência Brasil/Arquivo Versão em áudio A partir desta quinta-feira (1º), os trabalhadores começam a receber",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "31/01/2024",
+         "value_normalized": "2024-01-31",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira",
+        "capturado_em": "2026-11-13T23:21:19.447Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Salário mínimo de R$ 1.412 começa a ser pago nesta quinta-feira | Agência Brasil",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 10979,
+      "caracteres_preparados": 7882,
+      "trecho_analisado": "TÍTULO DA FONTE: Salário mínimo de R$ 1.412 começa a ser pago nesta quinta-feira | Agência Brasil\nURL DA FONTE: https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n[![logo ebc](https://agenciabrasil.ebc.com.br/sites/default/themes/agenciabrasil_v3/images/logo-ebc-dark.webp?tnhjsg)](https://ebc.com.br \"Ir para o portal EBC\")\n\n[![logo Agência Brasil](https://agenciabrasil.ebc.com.br/sites/default/themes/agenciabrasil_v3/images/agbrasil-color-logo.svg?tnhjsg)](/)\n\n[Economia](/economia)\n\n# Salário mínimo de R$ 1.412 começa a ser pago nesta quinta-feira\n\nBenefícios e contribuições também sobem a partir deste mês\n\nWellton Máximo – Repórter da Agência Brasil\n\nPublicado em 31/01/2024 - 15:52\n\n![Real Moeda brasileira, dinheiro.\n\nFoto: Marcello Casal Jr/Agência Brasil/Arquivo](/sites/default/files/thumbnails/image/loading_v2.gif \"Marcello Casal Jr/Agência Brasil/Arquivo\")\n\n© Marcello Casal Jr/Agência Brasil/Arquivo\n\nVersão em áudio\n\nA partir desta quinta-feira (1º), os trabalhadores começam a receber o salário mínimo oficial de R$ 1.412.\n\nO dinheiro, referente à folha de janeiro, é 6,97% mai",
+      "citacao_chave": "A partir desta quinta-feira (1º), os trabalhadores começam a receber o salário mínimo oficial de R$ 1.412.",
+      "citacao_verificada": true,
+      "citacao_rejeitada": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "Source reports R$ 1.412 was the minimum as of January 2024, not the current value in 2026."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "Source reports R$ 1.412 was the minimum as of January 2024, not the current value in 2026."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 1017,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2024-01-31"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Salário mínimo de R$ 1.412 entrou em vigor nesta segunda-feira (01) - SINDICATO DO COMÉRCIO DE JABOATÃO DOS GUARARAPES",
+      "url": "https://sindicom-jaboatao.portaldocomercio.org.br/comercio/salario-minimo-de-r-1-412-entrou-em-vigor-nesta-segunda-feira-01",
+      "conteudo": " [Ir para o conteúdo](#content)\n\n## SINDICATO DO COMÉRCIO DE JABOATÃO DOS GUARARAPES\n\n* [CNC](https://www.portaldocomercio.org.br/)\n* [FEDERAÇÕES E SINDICATOS](https://portaldocomercio.org.br/sistema-cnc/)\n* [SESC](https://portaldocomercio.org.br/sistema-cnc/)\n* [SENAC](https://portaldocomercio.org.br/sistema-cnc/)\n\n* Comércio, Economia, Política, Sistema Comércio\n\n# Salário mínimo de R$ 1.412 entrou em vigor nesta segunda-feira (01)\n\n* ![Foto de rhuan](https://secure.gravatar.com/avatar/76cf7fb9f7f69c2b8dc8c39d19e5f46f79b314c8ec36a790578799494319e5dd?s=96&d=mm&r=g)   Por rhuan\n* • Publicado em\n* •\n\n#### Compartilhe essa publicação:\n\n![](https://portal-bucket.azureedge.net/wp-content/sites/1…",
+      "coletado_em": "2026-11-13T23:21:19.955Z",
+      "data_publicacao": "2024-01-02",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://sindicom-jaboatao.portaldocomercio.org.br/comercio/salario-minimo-de-r-1-412-entrou-em-vigor-nesta-segunda-feira-01/",
+      "relevancia": 0.81640637,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "d4af760d-6c29-4a01-b093-9d8fc5bf5bc7",
+       "resultado_id": "be3646-01",
+       "response_time_busca": 0,
+       "response_time_extracao": 0.03,
+       "consulta": "O salário mínimo atual no Brasil é de R$ 1.412.",
+       "origem_principal": {
+        "id_operacao": "9cf03edd-9a8c-4adb-9316-af172140f9f6",
+        "request_id": "d4af760d-6c29-4a01-b093-9d8fc5bf5bc7",
+        "modo_busca": "GERAL",
+        "resultado_id": "be3646-01",
+        "parametros": {
+         "query": "O salário mínimo atual no Brasil é de R$ 1.412.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "9cf03edd-9a8c-4adb-9316-af172140f9f6",
+         "request_id": "d4af760d-6c29-4a01-b093-9d8fc5bf5bc7",
+         "modo_busca": "GERAL",
+         "resultado_id": "be3646-01",
+         "parametros": {
+          "query": "O salário mínimo atual no Brasil é de R$ 1.412.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Tue, 02 Jan 2024 19:09:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 02 Jan 2024 19:09:00 GMT",
+         "value_normalized": "2024-01-02",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://sindicom-jaboatao.portaldocomercio.org.br/comercio/salario-minimo-de-r-1-412-entrou-em-vigor-nesta-segunda-feira-01/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2024-01-02T19:09:00+00:00",
+         "value_normalized": "2024-01-02",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2024-01-02T19:09:02+00:00",
+         "value_normalized": "2024-01-02",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2024-01-02T16:09:00-03:00",
+         "value_normalized": "2024-01-02",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2024-01-02T16:09:02-03:00",
+         "value_normalized": "2024-01-02",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "02/01/2024",
+         "value_normalized": "2024-01-02",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://sindicom-jaboatao.portaldocomercio.org.br/comercio/salario-minimo-de-r-1-412-entrou-em-vigor-nesta-segunda-feira-01/",
+        "capturado_em": "2026-11-13T23:21:23.854Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "eb8bb7cb-3eb3-4513-8dcc-c2f62d37f28b",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "7bc65ffb-7c38-4278-83c8-e372873269f0",
+      "id_verificacao": "d1da9211-83e4-4077-b1d6-96c610c51cbc",
+      "url_original": "https://sindicom-jaboatao.portaldocomercio.org.br/comercio/salario-minimo-de-r-1-412-entrou-em-vigor-nesta-segunda-feira-01",
+      "url_canonica": "https://sindicom-jaboatao.portaldocomercio.org.br/comercio/salario-minimo-de-r-1-412-entrou-em-vigor-nesta-segunda-feira-01",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "9057e06251f141c44385bd05b741ffb8b8e9b758a261ef45c9e7e9ad8a1a6166",
+      "coletado_em": "2026-11-13T23:21:19.955Z",
+      "id_operacao_busca": "9cf03edd-9a8c-4adb-9316-af172140f9f6",
+      "id_operacao_extracao": "08d96169-dc24-4893-ac54-b13f526a8003",
+      "consulta": "O salário mínimo atual no Brasil é de R$ 1.412.",
+      "parametros_busca": {
+       "query": "O salário mínimo atual no Brasil é de R$ 1.412.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://valor.globo.com/brasil/noticia/2026/07/29/salario-minimo-em-2026-veja-o-valor-atualizado-e-o-que-muda.ghtml",
+        "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira",
+        "https://sindicom-jaboatao.portaldocomercio.org.br/comercio/salario-minimo-de-r-1-412-entrou-em-vigor-nesta-segunda-feira-01",
+        "https://www.cut.org.br/noticias/novo-vvalor-do-salario-minimo-devera-ser-de-r-1-518-no-proximo-ano-80f7"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "d4af760d-6c29-4a01-b093-9d8fc5bf5bc7",
+       "operacoes_busca": [
+        {
+         "id_operacao": "9cf03edd-9a8c-4adb-9316-af172140f9f6",
+         "request_id": "d4af760d-6c29-4a01-b093-9d8fc5bf5bc7",
+         "modo_busca": "GERAL",
+         "resultado_id": "be3646-01",
+         "parametros": {
+          "query": "O salário mínimo atual no Brasil é de R$ 1.412.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "eb8bb7cb-3eb3-4513-8dcc-c2f62d37f28b",
+       "resultado_id": "be3646-01",
+       "relevancia": 0.81640637,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 02 Jan 2024 19:09:00 GMT",
+         "value_normalized": "2024-01-02",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://sindicom-jaboatao.portaldocomercio.org.br/comercio/salario-minimo-de-r-1-412-entrou-em-vigor-nesta-segunda-feira-01/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2024-01-02T19:09:00+00:00",
+         "value_normalized": "2024-01-02",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2024-01-02T19:09:02+00:00",
+         "value_normalized": "2024-01-02",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2024-01-02T16:09:00-03:00",
+         "value_normalized": "2024-01-02",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2024-01-02T16:09:02-03:00",
+         "value_normalized": "2024-01-02",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "02/01/2024",
+         "value_normalized": "2024-01-02",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://sindicom-jaboatao.portaldocomercio.org.br/comercio/salario-minimo-de-r-1-412-entrou-em-vigor-nesta-segunda-feira-01/",
+        "capturado_em": "2026-11-13T23:21:23.854Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Salário mínimo de R$ 1.412 entrou em vigor nesta segunda-feira (01) - SINDICATO DO COMÉRCIO DE JABOATÃO DOS GUARARAPES",
+      "url": "https://sindicom-jaboatao.portaldocomercio.org.br/comercio/salario-minimo-de-r-1-412-entrou-em-vigor-nesta-segunda-feira-01",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 4067,
+      "caracteres_preparados": 4067,
+      "trecho_analisado": "TÍTULO DA FONTE: Salário mínimo de R$ 1.412 entrou em vigor nesta segunda-feira (01) - SINDICATO DO COMÉRCIO DE JABOATÃO DOS GUARARAPES\nURL DA FONTE: https://sindicom-jaboatao.portaldocomercio.org.br/comercio/salario-minimo-de-r-1-412-entrou-em-vigor-nesta-segunda-feira-01\n\nCONTEÚDO DA FONTE:\n[Ir para o conteúdo](#content)\n\n## SINDICATO DO COMÉRCIO DE JABOATÃO DOS GUARARAPES\n\n* [CNC](https://www.portaldocomercio.org.br/)\n* [FEDERAÇÕES E SINDICATOS](https://portaldocomercio.org.br/sistema-cnc/)\n* [SESC](https://portaldocomercio.org.br/sistema-cnc/)\n* [SENAC](https://portaldocomercio.org.br/sistema-cnc/)\n\n* Comércio, Economia, Política, Sistema Comércio\n\n# Salário mínimo de R$ 1.412 entrou em vigor nesta segunda-feira (01)\n\n* ![Foto de rhuan](https://secure.gravatar.com/avatar/76cf7fb9f7f69c2b8dc8c39d19e5f46f79b314c8ec36a790578799494319e5dd?s=96&d=mm&r=g)   Por rhuan\n* • Publicado em\n* •\n\n#### Compartilhe essa publicação:\n\n![](https://portal-bucket.azureedge.net/wp-content/sites/10/2024/01/dinheiro_caixa_mcajr_abr_2907221127-1-1024x613.webp)\n\nMarcello Casal Jr / Agência Brasil\n\nA partir desta segunda-feira (1º), o salário mínimo oficial será de R$ 1.412. O valor, que será pago a part",
+      "citacao_chave": "A partir desta segunda-feira (1º), o salário mínimo oficial será de R$ 1.412.",
+      "citacao_verificada": true,
+      "citacao_rejeitada": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "Source states R$ 1.412 was the minimum starting 1 January 2024, not the current value in 2026."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "Source states R$ 1.412 was the minimum starting 1 January 2024, not the current value in 2026."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 1046,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2024-01-02"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Novo valor do salário mínimo será de R$ 1.518 no próximo ano - CUT - Central Única dos Trabalhadores",
+      "url": "https://www.cut.org.br/noticias/novo-vvalor-do-salario-minimo-devera-ser-de-r-1-518-no-proximo-ano-80f7",
+      "conteudo": "* [![TVT](/images/logo-tvt.png)](http://www.tvt.org.br/ \"Acesse o site da TVT\")\n* [![Rádio CUT](/images/radio.png)](https://open.spotify.com/show/4GCgrvsxsImDP6NXiEISSc)\n\n* [![Kwai](/images/kwai.png)](https://kwai-video.com/u/@cut_brasil/4Cq2ab3x \"kwai\")\n\nMENU\n\n[![CUT - Central Única dos Trabalhadores](//assets.cut.org.br/system/uploads/settings/1/home_logo/logo-cut.svg)](https://www.cut.org.br \"CUT - Central Única dos Trabalhadores\") [![CUT - Central Única dos Trabalhadores](//assets.cut.org.br/system/uploads/settings/1/home_logo/logo-cut.svg)](https://www.cut.org.br \"CUT - Central Única dos Trabalhadores\")\n\n\n\n[Home](https://www.cut.org.br) [CUT - Central Única dos Trabalhadores](https://ww…",
+      "coletado_em": "2026-11-13T23:21:19.955Z",
+      "data_publicacao": "2024-12-30",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www.cut.org.br/noticias/novo-vvalor-do-salario-minimo-devera-ser-de-r-1-518-no-proximo-ano-80f7",
+      "relevancia": 0.7520126,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "d4af760d-6c29-4a01-b093-9d8fc5bf5bc7",
+       "resultado_id": "730766-04",
+       "response_time_busca": 0,
+       "response_time_extracao": 0.03,
+       "consulta": "O salário mínimo atual no Brasil é de R$ 1.412.",
+       "origem_principal": {
+        "id_operacao": "9cf03edd-9a8c-4adb-9316-af172140f9f6",
+        "request_id": "d4af760d-6c29-4a01-b093-9d8fc5bf5bc7",
+        "modo_busca": "GERAL",
+        "resultado_id": "730766-04",
+        "parametros": {
+         "query": "O salário mínimo atual no Brasil é de R$ 1.412.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "9cf03edd-9a8c-4adb-9316-af172140f9f6",
+         "request_id": "d4af760d-6c29-4a01-b093-9d8fc5bf5bc7",
+         "modo_busca": "GERAL",
+         "resultado_id": "730766-04",
+         "parametros": {
+          "query": "O salário mínimo atual no Brasil é de R$ 1.412.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Mon, 30 Dec 2024 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 30 Dec 2024 00:00:00 GMT",
+         "value_normalized": "2024-12-30",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.cut.org.br/noticias/novo-vvalor-do-salario-minimo-devera-ser-de-r-1-518-no-proximo-ano-80f7",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.cut.org.br/noticias/novo-vvalor-do-salario-minimo-devera-ser-de-r-1-518-no-proximo-ano-80f7",
+        "capturado_em": "2026-11-13T23:21:19.831Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "eb8bb7cb-3eb3-4513-8dcc-c2f62d37f28b",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "310a80ad-23d3-4568-835a-ef34b9596b3f",
+      "id_verificacao": "d1da9211-83e4-4077-b1d6-96c610c51cbc",
+      "url_original": "https://www.cut.org.br/noticias/novo-vvalor-do-salario-minimo-devera-ser-de-r-1-518-no-proximo-ano-80f7",
+      "url_canonica": "https://www.cut.org.br/noticias/novo-vvalor-do-salario-minimo-devera-ser-de-r-1-518-no-proximo-ano-80f7",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "1205fa79d4834630ccbd1f604a61e02fce2faf49e9197808472d2d35acb470cb",
+      "coletado_em": "2026-11-13T23:21:19.955Z",
+      "id_operacao_busca": "9cf03edd-9a8c-4adb-9316-af172140f9f6",
+      "id_operacao_extracao": "08d96169-dc24-4893-ac54-b13f526a8003",
+      "consulta": "O salário mínimo atual no Brasil é de R$ 1.412.",
+      "parametros_busca": {
+       "query": "O salário mínimo atual no Brasil é de R$ 1.412.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://valor.globo.com/brasil/noticia/2026/07/29/salario-minimo-em-2026-veja-o-valor-atualizado-e-o-que-muda.ghtml",
+        "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira",
+        "https://sindicom-jaboatao.portaldocomercio.org.br/comercio/salario-minimo-de-r-1-412-entrou-em-vigor-nesta-segunda-feira-01",
+        "https://www.cut.org.br/noticias/novo-vvalor-do-salario-minimo-devera-ser-de-r-1-518-no-proximo-ano-80f7"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "d4af760d-6c29-4a01-b093-9d8fc5bf5bc7",
+       "operacoes_busca": [
+        {
+         "id_operacao": "9cf03edd-9a8c-4adb-9316-af172140f9f6",
+         "request_id": "d4af760d-6c29-4a01-b093-9d8fc5bf5bc7",
+         "modo_busca": "GERAL",
+         "resultado_id": "730766-04",
+         "parametros": {
+          "query": "O salário mínimo atual no Brasil é de R$ 1.412.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "eb8bb7cb-3eb3-4513-8dcc-c2f62d37f28b",
+       "resultado_id": "730766-04",
+       "relevancia": 0.7520126,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 30 Dec 2024 00:00:00 GMT",
+         "value_normalized": "2024-12-30",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.cut.org.br/noticias/novo-vvalor-do-salario-minimo-devera-ser-de-r-1-518-no-proximo-ano-80f7",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.cut.org.br/noticias/novo-vvalor-do-salario-minimo-devera-ser-de-r-1-518-no-proximo-ano-80f7",
+        "capturado_em": "2026-11-13T23:21:19.831Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Novo valor do salário mínimo será de R$ 1.518 no próximo ano - CUT - Central Única dos Trabalhadores",
+      "url": "https://www.cut.org.br/noticias/novo-vvalor-do-salario-minimo-devera-ser-de-r-1-518-no-proximo-ano-80f7",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 5143,
+      "caracteres_preparados": 5143,
+      "trecho_analisado": "TÍTULO DA FONTE: Novo valor do salário mínimo será de R$ 1.518 no próximo ano - CUT - Central Única dos Trabalhadores\nURL DA FONTE: https://www.cut.org.br/noticias/novo-vvalor-do-salario-minimo-devera-ser-de-r-1-518-no-proximo-ano-80f7\n\nCONTEÚDO DA FONTE:\n* [![TVT](/images/logo-tvt.png)](http://www.tvt.org.br/ \"Acesse o site da TVT\")\n* [![Rádio CUT](/images/radio.png)](https://open.spotify.com/show/4GCgrvsxsImDP6NXiEISSc)\n\n* [![Kwai](/images/kwai.png)](https://kwai-video.com/u/@cut_brasil/4Cq2ab3x \"kwai\")\n\nMENU\n\n[![CUT - Central Única dos Trabalhadores](//assets.cut.org.br/system/uploads/settings/1/home_logo/logo-cut.svg)](https://www.cut.org.br \"CUT - Central Única dos Trabalhadores\") [![CUT - Central Única dos Trabalhadores](//assets.cut.org.br/system/uploads/settings/1/home_logo/logo-cut.svg)](https://www.cut.org.br \"CUT - Central Única dos Trabalhadores\")\n\n\n\n[Home](https://www.cut.org.br) [CUT - Central Única dos Trabalhadores](https://www.cut.org.br?subodmain=www) [Notícias](https://www.cut.org.br/noticias)\n\n# Novo valor do salário mínimo será de R$ 1.518 no próximo ano\n\nO reajuste total deve ficar em torno 7,5% que representa mais R$ 106 na renda dos trabalhadores\n\n**Publicad",
+      "citacao_chave": "O piso nacional será de R$ 1.518 (+7,5%) – um aumento de R$ 106 em relação ao piso deste ano que está em R$ 1.412.",
+      "citacao_verificada": true,
+      "citacao_rejeitada": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "Source says the new minimum for 2025 will be R$ 1.518, which will be in effect in 2026."
+     },
+     "classificacao": {
+      "postura": "CONTRADICTS",
+      "justificativa": "Source says the new minimum for 2025 will be R$ 1.518, which will be in effect in 2026."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 683,
+      "validade_maxima_dias": 365,
+      "data_utilizada": "2024-12-30"
+     }
+    }
+   ],
+   "erro_busca": null,
+   "janela_validade": {
+    "dias": 365,
+    "origem": "CATEGORY",
+    "entidade": null,
+    "motivo": null
+   },
+   "risco_desatualizacao": {
+    "nivel": "MEDIUM",
+    "sensivel_ao_tempo": true,
+    "motivos": [
+     "Laws and official rules change, usually yearly (checked against a 365-day window)"
+    ]
+   },
+   "dominios_oficiais_usados": [
+    "gov.br"
+   ],
+   "dominios_oficiais_automaticos": [
+    "gov.br"
+   ],
+   "agregacao": {
+    "status": "CLASSIFICADO",
+    "conclusao_factual": {
+     "status": "CONTRADIZ",
+     "resumo": "As evidências utilizáveis contradizem a afirmação."
+    },
+    "veredito": "CONTRADICAO_FRACA",
+    "resumo": "As evidências utilizáveis contradizem a afirmação, mas nenhuma fonte oficial com data ligada ao fato confirma a contradição. Trate a afirmação como possivelmente desatualizada ou incorreta e revise as fontes.",
+    "afirmacao": "O salário mínimo atual no Brasil é de R$ 1.412.",
+    "score_qualidade_evidencia": {
+     "valor": 45,
+     "escala": "0-100",
+     "natureza": "HEURISTICA",
+     "interpretacao": "Qualidade estrutural das evidências, não probabilidade de verdade.",
+     "componentes": {
+      "autoridade": 0,
+      "atualidade": 15,
+      "diversidade_fontes": 20,
+      "concordancia": 10
+     }
+    },
+    "freshness": {
+     "score": 40,
+     "status": "MIXED",
+     "confidence": "LIMITED",
+     "algorithm_id": "CLAIM_FRESHNESS_SCORE",
+     "algorithm_version": "1.1.0",
+     "policy_id": "regulamento:365d:v1",
+     "as_of": "2026-11-13T23:21:16.733Z",
+     "evidence_summary": {
+      "received": 5,
+      "eligible": 3,
+      "independent_domains": 3,
+      "fresh": 2,
+      "stale": 1,
+      "excluded": 2
+     },
+     "drivers": [
+      {
+       "code": "ATTRIBUTE_DATED_FRESH_EVIDENCE",
+       "evidence_id": null,
+       "date": "2026-07-29",
+       "age_days": 107,
+       "posture": "CONTRADICTS",
+       "source_type": "NOTICIA",
+       "domain": "valor.globo.com",
+       "dependency_group": "source_cluster_001"
+      },
+      {
+       "code": "ATTRIBUTE_DATED_FRESH_EVIDENCE",
+       "evidence_id": null,
+       "date": "2026-05-18",
+       "age_days": 179,
+       "posture": "CONTRADICTS",
+       "source_type": "OUTRO",
+       "domain": "barbieriadvogados.com",
+       "dependency_group": "source_cluster_002"
+      },
+      {
+       "code": "ATTRIBUTE_DATED_STALE_EVIDENCE",
+       "evidence_id": null,
+       "date": "2024-01-31",
+       "age_days": 1017,
+       "posture": "CONTRADICTS",
+       "source_type": "NOTICIA",
+       "domain": "agenciabrasil.ebc.com.br",
+       "dependency_group": "source_cluster_003"
+      },
+      {
+       "code": "MATERIAL_EVIDENCE_DISAGREEMENT"
+      },
+      {
+       "code": "EVIDENCE_EXCLUDED_FROM_TEMPORAL_SCORE",
+       "count": 2
+      }
+     ],
+     "limitations": [
+      "Índice temporal determinístico; não é probabilidade de verdade.",
+      "Datas de página sem vínculo explícito ao atributo foram excluídas."
+     ]
+    },
+    "concordancia": {
+     "algorithm_id": "SOURCE_AGREEMENT_INDEX",
+     "algorithm_version": "1.1.0",
+     "weights": {
+      "OFICIAL": 3,
+      "ACADEMICO": 3,
+      "NOTICIA": 2,
+      "REFERENCIA": 1.5,
+      "OUTRO": 1,
+      "BLOG_FORUM": 0.25
+     },
+     "score": 0,
+     "coverage": "STRONG",
+     "independent_sources": 4,
+     "source_types": [
+      "NOTICIA",
+      "OUTRO"
+     ],
+     "supporting": 0,
+     "support_weight": 0,
+     "contradict_weight": 6,
+     "authoritative_supporting": 0,
+     "contradicting": 4,
+     "split": 0,
+     "by_type": {
+      "NOTICIA": {
+       "supports": 0,
+       "contradicts": 2,
+       "split": 0
+      },
+      "OUTRO": {
+       "supports": 0,
+       "contradicts": 2,
+       "split": 0
+      }
+     },
+     "limitations": [
+      "Agreement between sources is not a probability of truth: sources can share the same mistake.",
+      "Copies and pages from the same site count once; independence is approximated by domain and text similarity."
+     ]
+    },
+    "recencia_pagina": {
+     "algorithm_id": "PAGE_DATE_RECENCY_INDEX",
+     "algorithm_version": "1.0.0",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "as_of": "2026-11-13T23:21:16.733Z",
+     "score": 32,
+     "status": "MIXED",
+     "policy_id": "regulamento:365d:page:v1",
+     "newest_date": "2026-07-29",
+     "sources": [
+      {
+       "date": "2026-07-29",
+       "age_days": 107,
+       "status": "FRESH",
+       "posture": "CONTRADICTS",
+       "source_type": "NOTICIA",
+       "domain": "valor.globo.com",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-05-18",
+       "age_days": 179,
+       "status": "FRESH",
+       "posture": "CONTRADICTS",
+       "source_type": "OUTRO",
+       "domain": "barbieriadvogados.com",
+       "evidence_id": null
+      },
+      {
+       "date": "2024-01-31",
+       "age_days": 1017,
+       "status": "STALE",
+       "posture": "CONTRADICTS",
+       "source_type": "NOTICIA",
+       "domain": "agenciabrasil.ebc.com.br",
+       "evidence_id": null
+      },
+      {
+       "date": "2024-12-30",
+       "age_days": 683,
+       "status": "STALE",
+       "posture": "CONTRADICTS",
+       "source_type": "OUTRO",
+       "domain": "cut.org.br",
+       "evidence_id": null
+      }
+     ],
+     "limitations": [
+      "Baseado na data da página, não na data em que o dado específico mudou: confiança baixa.",
+      "Não substitui o índice de atualidade principal e não é probabilidade de verdade."
+     ]
+    },
+    "atualidade_afirmacao": {
+     "algorithm_id": "CLAIM_CURRENCY_SCORE",
+     "algorithm_version": "1.1.0",
+     "formula": "evidence_recency × support_share",
+     "window_days": 365,
+     "score": 0,
+     "status": "CONTRADICTED",
+     "basis": "FACT_DATE",
+     "confidence": "MEDIUM",
+     "evidence_recency": 67,
+     "support_share": 0,
+     "newest_date": "2026-07-29",
+     "newest_age_days": 107,
+     "within_window": true
+    },
+    "versao_regras": "1.3.0",
+    "metodo": "AGREGACAO_DETERMINISTICA",
+    "fontes_independentes": 4,
+    "grupos_distintos_de_evidencia": 4,
+    "dependencia_detectada": 2,
+    "dependencia_nao_verificada": true,
+    "nota_independencia": "Cópias exatas, quase duplicadas, URLs canônicas iguais e páginas do mesmo domínio são agrupadas; domínios sem sinal de cópia não têm independência editorial comprovada.",
+    "total_evidencias_utilizaveis": 5,
+    "fontes": [
+     {
+      "dominio": "valor.globo.com",
+      "dominios": [
+       "valor.globo.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_001",
+      "oficial": false,
+      "atual": true,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://valor.globo.com/brasil/noticia/2026/07/29/salario-minimo-em-2026-veja-o-valor-atualizado-e-o-que-muda.ghtml"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Salário mínimo em 2026: veja o valor atualizado e o que muda | Brasil | Valor Econômico",
+        "url": "https://valor.globo.com/brasil/noticia/2026/07/29/salario-minimo-em-2026-veja-o-valor-atualizado-e-o-que-muda.ghtml",
+        "categoria_fonte": "NOTICIA",
+        "postura": "CONTRADICTS",
+        "atual": true,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T23:21:19.955Z",
+        "data_publicacao": "2026-07-29",
+        "data_atualizacao": "2026-07-29",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Wed, 29 Jul 2026 00:00:00 GMT",
+          "value_normalized": "2026-07-29",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_001",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "barbieriadvogados.com",
+      "dominios": [
+       "barbieriadvogados.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_002",
+      "oficial": false,
+      "atual": true,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Salário mínimo 2026: valor, reajuste, tabela e impactos",
+        "url": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+        "categoria_fonte": "OUTRO",
+        "postura": "CONTRADICTS",
+        "atual": true,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "FRESH",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T23:21:19.955Z",
+        "data_publicacao": "2026-05-18",
+        "data_atualizacao": "2026-05-18",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Mon, 18 May 2026 20:00:00 GMT",
+          "value_normalized": "2026-05-18",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2026-05-18T17:00:00-03:00",
+          "value_normalized": "2026-05-18",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "ARTICLE_MODIFIED_TIME",
+          "field": "article:modified_time",
+          "value_original": "2026-11-07T23:56:07-03:00",
+          "value_normalized": "2026-11-08",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-05-18T17:00:00-03:00",
+          "value_normalized": "2026-05-18",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "webpage"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-11-07T23:56:07-03:00",
+          "value_normalized": "2026-11-08",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "webpage"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-05-18",
+          "value_normalized": "2026-05-18",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "blogposting"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-11-07",
+          "value_normalized": "2026-11-07",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "blogposting"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_002",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "agenciabrasil.ebc.com.br",
+      "dominios": [
+       "agenciabrasil.ebc.com.br",
+       "sindicom-jaboatao.portaldocomercio.org.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_003",
+      "oficial": false,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 2,
+      "urls": [
+       "https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira",
+       "https://sindicom-jaboatao.portaldocomercio.org.br/comercio/salario-minimo-de-r-1-412-entrou-em-vigor-nesta-segunda-feira-01"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Salário mínimo de R$ 1.412 começa a ser pago nesta quinta-feira | Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira",
+        "categoria_fonte": "NOTICIA",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T23:21:19.955Z",
+        "data_publicacao": null,
+        "data_atualizacao": "2024-01-31",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Wed, 31 Jan 2024 21:52:00 GMT",
+          "value_normalized": "2024-01-31",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Fri, 13 Nov 2026 23:10:08 GMT",
+          "value_normalized": "2026-11-13",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2024-01-31T18:52:00-03:00",
+          "value_normalized": "2024-01-31",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Publicado em",
+          "value_original": "31/01/2024",
+          "value_normalized": "2024-01-31",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         },
+         {
+          "signal_type": "EXPLICIT_ATTRIBUTE_UPDATE_DATE",
+          "field": "visible_text_date",
+          "value_original": "31/01/2024",
+          "value_normalized": "2024-01-31",
+          "scope": "ATTRIBUTE",
+          "source": "VISIBLE_TEXT",
+          "match_basis": "claim_value_or_entity_in_local_context",
+          "context": "sta quinta-feira Benefícios e contribuições também sobem a partir deste mês Wellton Máximo – Repórter da Agência Brasil Publicado em 31/01/2024 - 15:52 | 00:00 --> Brasília © Marcello Casal Jr/Agência Brasil/Arquivo Versão em áudio A partir desta quinta-feira (1º), os trabalhadores começam a receber",
+          "parse_status": "PARSED"
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Publicado em",
+          "value_original": "31/01/2024",
+          "value_normalized": "2024-01-31",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_003",
+        "dependencia_detectada": true,
+        "motivo_dependencia": "SHARED_PASSAGE_316"
+       },
+       {
+        "titulo": "Salário mínimo de R$ 1.412 entrou em vigor nesta segunda-feira (01) - SINDICATO DO COMÉRCIO DE JABOATÃO DOS GUARARAPES",
+        "url": "https://sindicom-jaboatao.portaldocomercio.org.br/comercio/salario-minimo-de-r-1-412-entrou-em-vigor-nesta-segunda-feira-01",
+        "categoria_fonte": "OUTRO",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T23:21:19.955Z",
+        "data_publicacao": "2024-01-02",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Tue, 02 Jan 2024 19:09:00 GMT",
+          "value_normalized": "2024-01-02",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://sindicom-jaboatao.portaldocomercio.org.br/comercio/salario-minimo-de-r-1-412-entrou-em-vigor-nesta-segunda-feira-01/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2024-01-02T19:09:00+00:00",
+          "value_normalized": "2024-01-02",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "ARTICLE_MODIFIED_TIME",
+          "field": "article:modified_time",
+          "value_original": "2024-01-02T19:09:02+00:00",
+          "value_normalized": "2024-01-02",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2024-01-02T16:09:00-03:00",
+          "value_normalized": "2024-01-02",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "blogposting"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2024-01-02T16:09:02-03:00",
+          "value_normalized": "2024-01-02",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "blogposting"
+          ]
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Publicado em",
+          "value_original": "02/01/2024",
+          "value_normalized": "2024-01-02",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_003",
+        "dependencia_detectada": true,
+        "motivo_dependencia": "SHARED_PASSAGE_316"
+       }
+      ]
+     },
+     {
+      "dominio": "cut.org.br",
+      "dominios": [
+       "cut.org.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_004",
+      "oficial": false,
+      "atual": false,
+      "postura": "CONTRADICTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.cut.org.br/noticias/novo-vvalor-do-salario-minimo-devera-ser-de-r-1-518-no-proximo-ano-80f7"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Novo valor do salário mínimo será de R$ 1.518 no próximo ano - CUT - Central Única dos Trabalhadores",
+        "url": "https://www.cut.org.br/noticias/novo-vvalor-do-salario-minimo-devera-ser-de-r-1-518-no-proximo-ano-80f7",
+        "categoria_fonte": "OUTRO",
+        "postura": "CONTRADICTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T23:21:19.955Z",
+        "data_publicacao": "2024-12-30",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Mon, 30 Dec 2024 00:00:00 GMT",
+          "value_normalized": "2024-12-30",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.cut.org.br/noticias/novo-vvalor-do-salario-minimo-devera-ser-de-r-1-518-no-proximo-ano-80f7",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_004",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     }
+    ],
+    "limitacoes": [
+     "Uma data da página ou do resultado de busca não comprova quando o atributo da afirmação foi publicado ou atualizado.",
+     "Nenhuma fonte pertence ao cadastro de domínios oficiais informado.",
+     "Evidências do mesmo domínio, URL canônica ou conteúdo duplicado/quase duplicado foram agrupadas para não inflar diversidade.",
+     "Domínios sem sinal detectado de duplicação não têm independência editorial comprovada; republicação com edição extensa ainda pode passar despercebida."
+    ],
+    "avaliado_em": "2026-11-13T23:21:26.242Z"
+   }
+  }
+ ],
+ "afirmacoes_omitidas": [],
+ "resposta_corrigida": {
+  "texto": "O salário mínimo atual no Brasil é de R$ 1.621 [1][3].",
+  "mudancas": [
+   {
+    "claim_id": "afirmacao_1",
+    "what": "replaced with correct salary value"
+   }
+  ],
+  "fontes_citadas": [
+   1,
+   3
+  ],
+  "tentativas": 1,
+  "citacoes_anexadas": false,
+  "fontes": [
+   {
+    "n": 1,
+    "url": "https://valor.globo.com/brasil/noticia/2026/07/29/salario-minimo-em-2026-veja-o-valor-atualizado-e-o-que-muda.ghtml",
+    "titulo": "Salário mínimo em 2026: veja o valor atualizado e o que muda | Brasil | Valor Econômico",
+    "tipo": "NOTICIA",
+    "postura": "CONTRADICTS",
+    "data": "2026-01-01"
+   },
+   {
+    "n": 2,
+    "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira",
+    "titulo": "Salário mínimo de R$ 1.412 começa a ser pago nesta quinta-feira | Agência Brasil",
+    "tipo": "NOTICIA",
+    "postura": "CONTRADICTS",
+    "data": "2024-01-31"
+   },
+   {
+    "n": 3,
+    "url": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+    "titulo": "Salário mínimo 2026: valor, reajuste, tabela e impactos",
+    "tipo": "OUTRO",
+    "postura": "CONTRADICTS",
+    "data": "2026-01-01"
+   }
+  ],
+  "metodo": "MODEL_REWRITE_FROM_VERIFIED_EVIDENCE"
+ },
+ "rastreabilidade_modelo": [
+  {
+   "id_chamada": "28146cdf-055b-4be1-bc02-365395c0f515",
+   "id_requisicao_enviada": "6e2cfb1e-5636-4dec-acff-7b053cf9f445",
+   "id_verificacao": "d1da9211-83e4-4077-b1d6-96c610c51cbc",
+   "etapa": "DECOMPOSICAO",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 614,
+   "tokens": {
+    "entrada": 842,
+    "saida": 218,
+    "total": 1060
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "6e2cfb1e-5636-4dec-acff-7b053cf9f445",
+   "id_trace": "9d9916d76f034378ab4f10c6099db1c4",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 614.589,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:21:16.734Z"
+  },
+  {
+   "id_chamada": "15e53297-ac1d-4b7b-986e-8fcea2a28902",
+   "id_requisicao_enviada": "e2fc062d-81dc-4b49-b1bb-e0560dcd98e5",
+   "id_verificacao": "d1da9211-83e4-4077-b1d6-96c610c51cbc",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 2303,
+   "tokens": {
+    "entrada": 4601,
+    "saida": 1660,
+    "total": 6261
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "e2fc062d-81dc-4b49-b1bb-e0560dcd98e5",
+   "id_trace": "e36707874c9544fbad0d53a41f3fa46f",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 2303.948,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:21:23.888Z"
+  },
+  {
+   "id_chamada": "e28dcf1a-9c76-4ad0-aa20-67c95292ed92",
+   "id_requisicao_enviada": "dec0c9b7-490b-4fc9-9cf9-3a9e10a19579",
+   "id_verificacao": "d1da9211-83e4-4077-b1d6-96c610c51cbc",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 1133,
+   "tokens": {
+    "entrada": 921,
+    "saida": 282,
+    "total": 1203
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "dec0c9b7-490b-4fc9-9cf9-3a9e10a19579",
+   "id_trace": "247e1b12302743499fb09eced0cf4cfc",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 1168.44,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:21:26.243Z"
+  }
+ ],
+ "rastreabilidade_pesquisa": [
+  {
+   "id_operacao": "9cf03edd-9a8c-4adb-9316-af172140f9f6",
+   "id_verificacao": "d1da9211-83e4-4077-b1d6-96c610c51cbc",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "O salário mínimo atual no Brasil é de R$ 1.412.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:21:17.441Z",
+   "finalizada_em": "2026-11-13T23:21:17.667Z",
+   "duracao_ms": 225,
+   "request_id": "d4af760d-6c29-4a01-b093-9d8fc5bf5bc7",
+   "response_time": 0,
+   "erro": null,
+   "modo_busca": "GERAL",
+   "parametros": {
+    "query": "O salário mínimo atual no Brasil é de R$ 1.412.",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true,
+    "country": "brazil"
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "2f2443-00",
+     "titulo": "Salário mínimo de R$ 1.412 começa a ser pago nesta quinta-feira | Agência Brasil",
+     "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira",
+     "relevancia": 0.82104415,
+     "data_publicacao": "2024-01-31"
+    },
+    {
+     "resultado_id": "be3646-01",
+     "titulo": "Salário mínimo de R$ 1.412 entrou em vigor nesta segunda-feira (01) - SINDICATO DO COMÉRCIO DE JABOATÃO DOS GUARARAPES",
+     "url": "https://sindicom-jaboatao.portaldocomercio.org.br/comercio/salario-minimo-de-r-1-412-entrou-em-vigor-nesta-segunda-feira-01",
+     "relevancia": 0.81640637,
+     "data_publicacao": "2024-01-02"
+    },
+    {
+     "resultado_id": "928aa5-02",
+     "titulo": "Jornal Hoje | Salário mínimo será de R$ 1.412 a partir de 1º de janeiro | Globoplay",
+     "url": "https://globoplay.globo.com/v/12223720",
+     "relevancia": 0.7776378,
+     "data_publicacao": "2026-01-01"
+    },
+    {
+     "resultado_id": "c40bee-03",
+     "titulo": "Salário mínimo de R$ 1.412 começa a ser pago nesta quinta (1º) | CNN NOVO DIA",
+     "url": "https://www.youtube.com/watch?v=FqPRUtGsOZk",
+     "relevancia": 0.7772999,
+     "data_publicacao": "2024-02-01"
+    },
+    {
+     "resultado_id": "730766-04",
+     "titulo": "Novo valor do salário mínimo será de R$ 1.518 no próximo ano - CUT - Central Única dos Trabalhadores",
+     "url": "https://www.cut.org.br/noticias/novo-vvalor-do-salario-minimo-devera-ser-de-r-1-518-no-proximo-ano-80f7",
+     "relevancia": 0.7520126,
+     "data_publicacao": "2024-12-30"
+    }
+   ]
+  },
+  {
+   "id_operacao": "613e0fa6-95e2-45b1-8367-0166dacb2f6d",
+   "id_verificacao": "d1da9211-83e4-4077-b1d6-96c610c51cbc",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "O salário mínimo atual no Brasil 2026",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:21:17.669Z",
+   "finalizada_em": "2026-11-13T23:21:19.014Z",
+   "duracao_ms": 1345,
+   "request_id": "db4fc4fa-8617-4e50-a2a1-7656f69285a4",
+   "response_time": 1.06,
+   "erro": null,
+   "modo_busca": "GERAL_SEM_VALOR",
+   "parametros": {
+    "query": "O salário mínimo atual no Brasil 2026",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true,
+    "country": "brazil"
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "b52e87-00",
+     "titulo": "Salário mínimo 2026: valor, reajuste, tabela e impactos",
+     "url": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+     "relevancia": 0.84234506,
+     "data_publicacao": "2026-05-18"
+    },
+    {
+     "resultado_id": "43ced7-01",
+     "titulo": "Salário mínimo em 2026: veja o valor atualizado e o que muda | Brasil | Valor Econômico",
+     "url": "https://valor.globo.com/brasil/noticia/2026/07/29/salario-minimo-em-2026-veja-o-valor-atualizado-e-o-que-muda.ghtml",
+     "relevancia": 0.82768893,
+     "data_publicacao": "2026-07-29"
+    },
+    {
+     "resultado_id": "71aff0-02",
+     "titulo": "Salário mínimo 2026: qual o valor e o que muda com ele",
+     "url": "https://blog.nubank.com.br/salario-minimo-2026",
+     "relevancia": 0.81844676,
+     "data_publicacao": "2021-12-22"
+    },
+    {
+     "resultado_id": "345ed7-03",
+     "titulo": "Valor do salário-mínimo em 2026: valores atualizados",
+     "url": "https://www.serasa.com.br/blog/valor-do-salario-minimo",
+     "relevancia": 0.8152325,
+     "data_publicacao": "2026-03-24"
+    },
+    {
+     "resultado_id": "7fb54a-04",
+     "titulo": "Salário mínimo 2026 de R$ 1.621: saiba quem é impactado com o reajuste",
+     "url": "https://www.youtube.com/watch?v=NU5tHxBLiHM",
+     "relevancia": 0.8025555,
+     "data_publicacao": "2026-01-16"
+    }
+   ]
+  },
+  {
+   "id_operacao": "633dba33-d17b-4f1c-97aa-fe45d5fb76db",
+   "id_verificacao": "d1da9211-83e4-4077-b1d6-96c610c51cbc",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "O salário mínimo atual no Brasil é de R$ 1.412.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:21:19.014Z",
+   "finalizada_em": "2026-11-13T23:21:19.185Z",
+   "duracao_ms": 171,
+   "request_id": "e214bbc5-a98e-4fe5-bbff-21fcb1d31603",
+   "response_time": 0,
+   "erro": null,
+   "modo_busca": "NOTICIAS_BR",
+   "parametros": {
+    "query": "O salário mínimo atual no Brasil é de R$ 1.412.",
+    "search_depth": "basic",
+    "max_results": 4,
+    "include_answer": false,
+    "include_published_date": true,
+    "topic": "news",
+    "time_range": "year",
+    "include_domains": [
+     "g1.globo.com",
+     "oglobo.globo.com",
+     "valor.globo.com",
+     "folha.uol.com.br",
+     "uol.com.br",
+     "estadao.com.br",
+     "agenciabrasil.ebc.com.br",
+     "cnnbrasil.com.br",
+     "infomoney.com.br",
+     "exame.com",
+     "poder360.com.br",
+     "correiobraziliense.com.br",
+     "metropoles.com",
+     "veja.abril.com.br",
+     "terra.com.br",
+     "band.com.br",
+     "r7.com",
+     "bbc.com",
+     "jota.info",
+     "canaltech.com.br"
+    ]
+   },
+   "quantidade_resultados": 4,
+   "resultados": [
+    {
+     "resultado_id": "b18bd7-00",
+     "titulo": "Salário mínimo 2026: veja o novo valor e quem recebe o reajuste | Brasil | Valor Econômico",
+     "url": "https://valor.globo.com/brasil/noticia/2026/01/12/salario-minimo-2026-valor.ghtml",
+     "relevancia": 0.7725307,
+     "data_publicacao": "2026-01-12"
+    },
+    {
+     "resultado_id": "c59e2a-01",
+     "titulo": "Construção empregou 2,5 milhões e pagou média de 2,1 salários mínimos | Agência Brasil",
+     "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-06/construcao-empregou-25-milhoes-e-pagou-media-de-21-salarios-minimos",
+     "relevancia": 0.7468782,
+     "data_publicacao": "2026-06-10"
+    },
+    {
+     "resultado_id": "5f9eca-02",
+     "titulo": "Valor do salário mínimo é de R$ 1.621,00 em 2026; veja o que muda e o impacto na economia | Brasil | Valor Econômico",
+     "url": "https://valor.globo.com/brasil/noticia/2026/01/26/salario-minimo-2026-novo-valor-reajuste-e-impacto-para-quem-recebe.ghtml",
+     "relevancia": 0.74576885,
+     "data_publicacao": "2026-01-26"
+    },
+    {
+     "resultado_id": "01f8d2-03",
+     "titulo": "Salário mínimo de R$ 1.621 começa a valer nesta quinta; veja o que muda e como o valor foi calculado | G1",
+     "url": "https://g1.globo.com/economia/noticia/2026/01/01/salario-minimo-de-r-1621-comeca-a-valer-nesta-quinta-1o-veja-o-que-muda-e-como-o-valor-foi-calculado.ghtml",
+     "relevancia": 0.5017319,
+     "data_publicacao": "2026-01-01"
+    }
+   ]
+  },
+  {
+   "id_operacao": "08d96169-dc24-4893-ac54-b13f526a8003",
+   "id_verificacao": "d1da9211-83e4-4077-b1d6-96c610c51cbc",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "EXTRACAO",
+   "consulta": "O salário mínimo atual no Brasil é de R$ 1.412.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:21:19.189Z",
+   "finalizada_em": "2026-11-13T23:21:19.955Z",
+   "duracao_ms": 765,
+   "request_id": "eb8bb7cb-3eb3-4513-8dcc-c2f62d37f28b",
+   "response_time": 0.03,
+   "erro": null,
+   "urls_solicitadas": [
+    "https://valor.globo.com/brasil/noticia/2026/07/29/salario-minimo-em-2026-veja-o-valor-atualizado-e-o-que-muda.ghtml",
+    "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+    "https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira",
+    "https://sindicom-jaboatao.portaldocomercio.org.br/comercio/salario-minimo-de-r-1-412-entrou-em-vigor-nesta-segunda-feira-01",
+    "https://www.cut.org.br/noticias/novo-vvalor-do-salario-minimo-devera-ser-de-r-1-518-no-proximo-ano-80f7"
+   ],
+   "parametros": {
+    "urls": [
+     "https://valor.globo.com/brasil/noticia/2026/07/29/salario-minimo-em-2026-veja-o-valor-atualizado-e-o-que-muda.ghtml",
+     "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+     "https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira",
+     "https://sindicom-jaboatao.portaldocomercio.org.br/comercio/salario-minimo-de-r-1-412-entrou-em-vigor-nesta-segunda-feira-01",
+     "https://www.cut.org.br/noticias/novo-vvalor-do-salario-minimo-devera-ser-de-r-1-518-no-proximo-ano-80f7"
+    ],
+    "extract_depth": "basic",
+    "format": "markdown",
+    "include_images": false
+   },
+   "quantidade_resultados": 5,
+   "urls_extraidas": [
+    "https://valor.globo.com/brasil/noticia/2026/07/29/salario-minimo-em-2026-veja-o-valor-atualizado-e-o-que-muda.ghtml",
+    "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+    "https://agenciabrasil.ebc.com.br/economia/noticia/2024-01/salario-minimo-de-r-1412-comeca-ser-pago-nesta-quinta-feira",
+    "https://sindicom-jaboatao.portaldocomercio.org.br/comercio/salario-minimo-de-r-1-412-entrou-em-vigor-nesta-segunda-feira-01",
+    "https://www.cut.org.br/noticias/novo-vvalor-do-salario-minimo-devera-ser-de-r-1-518-no-proximo-ano-80f7"
+   ]
+  }
+ ],
+ "modo": "real",
+ "simulado": false,
+ "gateway": {
+  "gateway": "bifrost",
+  "chamadas": 3,
+  "falhas": 0,
+  "cadeia_modelos": [
+   "groq/openai/gpt-oss-20b",
+   "groq/openai/gpt-oss-120b"
+  ],
+  "queda_simulada": false,
+  "respostas_por_modelo": [
+   {
+    "modelo": "groq/openai/gpt-oss-20b",
+    "chamadas": 2
+   },
+   {
+    "modelo": "groq/openai/gpt-oss-120b",
+    "chamadas": 1
+   }
+  ],
+  "respostas_de_reserva": 1,
+  "tokens_total": 8524,
+  "latencia_media_ms": 1362
+ },
+ "duracao_ms": 10701,
+ "gravado_em": "2026-11-13T23:21:27.432Z"
+}

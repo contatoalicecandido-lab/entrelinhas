@@ -13,13 +13,19 @@ const RAIZ = path.join(__dirname, "..");
 const arquivoCasos = process.env.CASOS ? path.resolve(process.env.CASOS) : path.join(__dirname, "casos-reais-2026-11.json");
 const arquivoResultado = process.env.RESULTADO ? path.resolve(process.env.RESULTADO) : path.join(__dirname, "resultado-casos-reais-2026-11-13.json");
 const { casos } = JSON.parse(fs.readFileSync(arquivoCasos, "utf8"));
-const original = new Map(JSON.parse(fs.readFileSync(arquivoResultado, "utf8")).linhas.map(l => [l.id, l]));
-// A gravação de cada caso é a mais recente com o mesmo texto e um veredito.
+const rodada = JSON.parse(fs.readFileSync(arquivoResultado, "utf8"));
+const original = new Map(rodada.linhas.map(l => [l.id, l]));
+// A gravação de cada caso é a mais recente com o mesmo texto feita ATÉ o fim
+// daquela rodada: checagens feitas depois (por exemplo, para conferir uma
+// correção) não entram no lugar das originais.
+const fimDaRodada = Date.parse(rodada.executado_em) + 60000;
+const horaDoArquivo = f => Date.parse(f.slice(0, 24).replace(/T(\d{2})-(\d{2})-(\d{2})-(\d{3})Z/, "T$1:$2:$3.$4Z"));
 const norm = t => String(t ?? "").replace(/\s+/g, " ").trim();
 const gravacoes = fs.readdirSync(path.join(RAIZ, "gravacoes")).filter(f => /^\d{4}-.*\.json$/.test(f)).sort();
 const porTexto = new Map();
 for (const f of gravacoes) {
   const d = JSON.parse(fs.readFileSync(path.join(RAIZ, "gravacoes", f), "utf8"));
+  if (Number.isFinite(fimDaRodada) && horaDoArquivo(f) > fimDaRodada) continue;
   if (d.afirmacoes?.[0]?.agregacao) porTexto.set(norm(d.texto_original), f);
 }
 

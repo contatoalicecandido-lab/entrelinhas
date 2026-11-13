@@ -163,6 +163,8 @@ Why Pix dropped: four of its five supporting sources are company blogs, and “C
 - *Python 3.12*: the quote check was too literal and dropped three good sources, including python.org, over curly quotes and markdown. It now ignores differences that do not change the text and still rejects any quote with a different number or sentence.
 - *R$ 1.412*: searching with the old value only found 2024 news repeating it. A claim with a value now also gets a search without the value and with the current year, to find today's value.
 
+Re-run live after the fixes (`avaliacao/resultado-casos-novos-depois-das-correcoes-2026-11-13.json`): Python 3.12 came back *Corroborated* and R$ 1.412 *Contradicted by sources*, both exact. They are reported separately because the fixes were made after seeing these cases.
+
 **Compared with the model alone** (`avaliacao/linha-de-base.js`: the same model, through Bifrost, asked with today's date whether each claim is still true, with no search):
 
 | On the same 23 claims | Model alone | Entrelinhas (current rules) |
