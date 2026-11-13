@@ -671,6 +671,16 @@ function criarCartao(afirmacao, simulado) {
   cartao.append(cab);
 
   cartao.append(el("h3", "afirmacao", afirmacao.texto));
+  // Gíria e formatos brasileiros normalizados antes da busca ("zap" → WhatsApp,
+  // "44,90 conto" → R$ 44,90). A análise continua usando o texto original.
+  const lidaComo = afirmacao.nuances?.consulta_busca;
+  const normalizar = t => String(t ?? "").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+  if (lidaComo && normalizar(lidaComo) !== normalizar(afirmacao.texto)) {
+    const linha = el("p", "lida-como");
+    linha.append(el("span", "lida-como-rotulo", "Searched as"));
+    linha.append(document.createTextNode(` “${lidaComo}”`));
+    cartao.append(linha);
+  }
   cartao.append(el("p", "explicacao", afirmacao.erro_busca ? `${v.texto} Search error: ${afirmacao.erro_busca}` : v.texto));
   cartao.append(criarMetricas(afirmacao));
 

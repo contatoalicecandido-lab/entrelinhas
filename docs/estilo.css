@@ -788,3 +788,7 @@ main.folha { overflow: hidden; }
 
 /* public demo: bookmarklet needs the local install */
 .favorito-aviso { margin: 14px 0 0; max-width: 46ch; color: #a9a7a1; font-size: 14px; line-height: 1.5; }
+
+/* claim card: slang normalized before searching */
+.lida-como { margin: -4px 0 12px; font-size: 14.5px; color: var(--suave); }
+.lida-como-rotulo { display: inline-block; margin-right: 6px; padding: 2px 9px; border-radius: 999px; background: rgba(255, 90, 31, .12); color: #b4461c; font-size: 12.5px; font-weight: 600; }
