@@ -1,16 +1,16 @@
-# HackCulture submission copy — Stale-Answer Detector
+# HackCulture submission copy · Stale-Answer Detector
 
 **Selected Problem Statement:** Build a Stale-Answer Detector for AI Applications (requires Tavily and Bifrost). Open-Source Bifrost Gateway (B4) is not selected and no B4 contribution is claimed.
 
-**Status (12 Nov 2026):** working prototype with a local web interface, live Tavily + Bifrost verification, a no-key demo mode, a real-claims accuracy benchmark and 52 offline test files.
+**Status (13 Nov 2026):** working prototype with a web interface, live Tavily + Bifrost verification, a public demo that replays recorded live checks without keys, a real-claims accuracy benchmark and 52 offline test files.
 
 ## Project title
 
-Entrelinhas — Is this AI answer really true?
+Entrelinhas · Every AI answer has an expiry date
 
 ## Short description
 
-AI assistants tend to agree with whatever you ask. Entrelinhas checks an AI answer claim by claim against independent, current sources found live with Tavily: official sites, news and scientific articles first, blogs last. A model reads them through Bifrost. Each claim gets:
+Every AI answer has an expiry date, and nothing on the screen tells you when it passed. Entrelinhas (Portuguese for “between the lines”) checks an AI answer claim by claim against independent, current sources found live with Tavily: official sites, news and scientific articles first, blogs last. A model reads them through Bifrost. Each claim gets:
 - a stale-risk flag;
 - a verdict;
 - a freshness score;
@@ -22,7 +22,7 @@ The answer comes back corrected, with citations, in English or Portuguese.
 
 Entrelinhas works in six steps.
 
-1. **Splits and flags.** The answer is split into atomic claims, each tagged as a price, software version, company fact, or law/rule, with a validity window for each category. Before any search, a deterministic triage explains which claims can be stale and why, for example: “3 claims found · 2 time-sensitive (prices change ~monthly, laws ~yearly)”.
+1. **Splits and flags.** The answer is split into atomic claims, each tagged as a price, software version, company fact, or law/rule, with a validity window for each category. Before any search, a deterministic triage explains which claims can be stale and why, for example: “3 claims found · 2 time-sensitive: prices change about monthly, rules about yearly.”.
 2. **Searches.** Tavily runs, for every claim:
    - a general search;
    - a news search (Brazilian outlets for Portuguese claims);
@@ -73,7 +73,7 @@ Entrelinhas works in six steps.
 | 1. Claim identification | Done: atomic claims with category. |
 | 2. Freshness detection | Done: stale-risk triage before searching, with reasons. |
 | 3. Live verification | Done: Tavily general, news, scientific and official search and extraction; one validated Bifrost analysis per claim. |
-| 4. Freshness score per claim | Done: 0–100 = source recency × support share, with basis and confidence. A documented heuristic, not a probability. |
+| 4. Freshness score per claim | Done: 0 to 100 = source recency × support share, with status (current, aging, uncertain, contradicted), basis and confidence. A documented heuristic, not a probability. |
 | Tavily and Bifrost | Done: Tavily for all search and extraction. Bifrost for all model calls, with fallback chain, routing info, rate-limit handling and an outage drill. |
 | Expected outcome | Done: which claims current sources support, plus an updated answer with citations. |
 
@@ -96,14 +96,16 @@ The cases, their sources and the results are in `avaliacao/`. It is a small samp
 
 ## Limitations
 
-- Local web interface; no hosted demo (a video shows it running).
+- Live checks run locally with your own Tavily and Bifrost keys. The public demo (https://contatoalicecandido-lab.github.io/entrelinhas/) replays recorded live checks and built-in examples without keys.
 - Scores are documented heuristics, not calibrated probabilities; independent sources can share an error.
 - Validity windows are configurable defaults; the Selic rate, for example, moves faster than the yearly window for rules.
-- The free model tier limits tokens per minute; a check takes 15–70 s.
+- The free model tier limits tokens per minute; a check takes about 15 to 70 s.
 
 ## Repository and demo
 
 Public repository: https://github.com/contatoalicecandido-lab/entrelinhas
+
+Public demo, no install: https://contatoalicecandido-lab.github.io/entrelinhas/ (click **See a real check**). Pitch deck: `submission/Entrelinhas_Pitch_Deck.pptx`.
 
 Run `npm run web:exemplo` for the no-key demo, or `npm run web` with Tavily and Bifrost configured for live verification. Video script: `submission/VIDEO_SCRIPT.md`. Do not claim a video is attached unless one is recorded and uploaded.
 

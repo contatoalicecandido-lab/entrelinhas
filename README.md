@@ -1,6 +1,6 @@
 # Entrelinhas
 
-### Is this AI answer really true? Multi-source, freshness-aware fact checking for AI answers, in English and Portuguese
+### Every AI answer has an expiry date. A stale-answer detector for AI applications, in English and Portuguese
 
 AI assistants tend to agree with whatever you bring them. Paste a blog post or a hunch into a chatbot and it will often confirm it. Entrelinhas does the opposite: it takes an AI-generated answer, splits it into claims and checks each one against **independent, current sources**: official sites first, then news and scientific articles, with blogs counting least.
 
@@ -10,7 +10,7 @@ For every answer it shows, in this order:
 2. **An updated answer**: the original answer rewritten using only verified source quotes, with numbered citations, next to what the AI said.
 3. **One card per claim** with:
    - a **verdict**: Current, Corroborated, Supported but unconfirmed, Conflicting, Contradicted by sources, Likely outdated or Not verifiable;
-   - a **freshness score (0–100)**: source recency × share of sources that support the claim, with its basis and confidence;
+   - a **freshness score (0 to 100)**: source recency × share of sources that support the claim, with its basis and confidence;
    - **source agreement** weighted by source type, and **who says what**;
    - **every source** with its stance, a quote checked against the source text, and its dates.
 4. **The AI gateway panel**: which model answered each step through Bifrost, whether a backup model took over, tokens and latency.
@@ -22,9 +22,9 @@ It is **built for Portuguese, not translated into it**. It reads:
 - slang such as “9 pau” (R$ 9 mil), “50 conto” and “zap”;
 - Brazilian authorities (Banco Central, gov.br, Anatel…), which it searches automatically.
 
-**Try it now, no install:** <https://contatoalicecandido-lab.github.io/entrelinhas/>. The public demo replays real live checks (real Tavily searches, real model calls through Bifrost) and the built-in examples, without API keys. To check your own text, run it locally (see [Getting started](#getting-started)).
+**Try it now, no install:** <https://contatoalicecandido-lab.github.io/entrelinhas/>. Click **See a real check**. The public demo replays real live checks (real Tavily searches, real model calls through Bifrost) and the built-in examples, without API keys. To check your own text, run it locally (see [Getting started](#getting-started)).
 
-**Check any AI answer from any site:** with Entrelinhas running locally, drag the **✓ Check with Entrelinhas** button (on the page, under “Check any AI answer, on any site”) to your bookmarks bar. Select an answer on ChatGPT, Gemini or any page and click it: Entrelinhas opens with the text ready. Apps can call the same check with `POST /api/verificar`.
+**Check any AI answer from any site:** with Entrelinhas running locally, drag the **Check with Entrelinhas** button (on the page, in the “Use cases” section, under “A verification layer for any AI app”) to your bookmarks bar. Select an answer on ChatGPT, Gemini or any page and click it: Entrelinhas opens with the text ready. Apps can call the same check with `POST /api/verificar`.
 
 ## The problem
 
@@ -68,7 +68,7 @@ AI answer
 
 ## Freshness score and validity windows
 
-**Freshness score (0–100) = source recency × support share.**
+**Freshness score (0 to 100) = source recency × support share.**
 
 - **Source recency** uses a half-life equal to half of the category's validity window: `100 × 2^(−age / (window / 2))`.
   - A source exactly half a window old scores 50.
@@ -174,7 +174,7 @@ The selected problem statement is **Build a Stale-Answer Detector for AI Applica
 | 1. Claim identification | The answer is split into atomic claims, each with a category (`src/afirmacoes.js`, `src/tipo-afirmacao.js`). |
 | 2. Freshness detection | Stale-risk triage before searching, with reasons such as category window, “currently” and past years (`src/risco-desatualizacao.js`), shown as the first panel. |
 | 3. Live verification | Tavily general, news, scientific and official searches plus extraction (`src/tavily.js`); one validated Bifrost analysis per claim (`src/analise-lote.js`). |
-| 4. Freshness score per claim | 0–100 = source recency × support share, with basis and confidence (`src/atualidade-afirmacao.js`). |
+| 4. Freshness score per claim | 0 to 100 = source recency × support share, with basis and confidence (`src/atualidade-afirmacao.js`). |
 | Tavily and Bifrost, meaningfully | Tavily for every search and extraction. Bifrost for every model call, with fallback chain, routing info, rate-limit handling and an outage drill (`src/bifrost.js`). |
 | Expected outcome: which claims are supported by current sources | Verdict, agreement and sources per claim, plus the **updated answer** with citations (`src/resposta-corrigida.js`). |
 
@@ -221,7 +221,7 @@ Four public pages have human labels recorded before parsing in [`avaliacao/rotul
 
 The stance classifier receives the reference date (today) and must answer CONTRADICTS when a present-tense claim is contradicted by deadlines stated in the evidence itself (for example, a release page saying a version stayed in Active LTS only until a date that has already passed). It still does not judge a page by its age; that remains the job of the deterministic date rules.
 
-The demo shows factual verdict and temporal state separately. A source can support an assertion while freshness remains inconclusive. The 0–100 value is a deterministic temporal index under a documented half-life formula, not a probability or calibrated confidence. A reproducible synthetic evaluation is available with `node avaliacao/teste-avaliacao-rotulada-v1.js`; it tests rules and regression cases, not accuracy on real-world sources.
+The demo shows factual verdict and temporal state separately. A source can support an assertion while freshness remains inconclusive. The 0 to 100 value is a deterministic temporal index under a documented half-life formula, not a probability or calibrated confidence. A reproducible synthetic evaluation is available with `node avaliacao/teste-avaliacao-rotulada-v1.js`; it tests rules and regression cases, not accuracy on real-world sources.
 
 ## Requirements
 
@@ -356,7 +356,7 @@ entrelinhas/
 │   ├── preparar-evidencia.js, evidencia.js
 │   ├── correspondencia.js, classificador.js, bifrost.js
 │   ├── atualidade.js        # FRESH / STALE / UNVERIFIABLE
-│   ├── freshness-score.js   # per-claim 0–100 freshness score
+│   ├── freshness-score.js   # per-claim 0 to 100 freshness score
 │   ├── independencia-fontes.js
 │   ├── agregador.js         # verdict per claim
 │   ├── modo-exemplo.js      # simulated providers for the demo
@@ -390,11 +390,7 @@ Real API integration is checked separately through `node index.js`.
 
 ## Current scope and limitations
 
-Entrelinhas is an evolving backend prototype.
-
-The current implementation focuses on evidence handling, temporal assessment, source comparison, traceability, and persistence.
-
-It includes a local web interface for demonstration; it is not yet a hosted, multi-user product.
+Entrelinhas is a working hackathon prototype. Live checks run locally with your own Tavily and Bifrost keys; the public demo replays recorded live checks and built-in examples without keys. It is not yet a hosted, multi-user product.
 
 Freshness assessment is not a guarantee of factual correctness. Results depend on source availability, date detection, configured validity rules, and the quality of the retrieved evidence.
 
