@@ -6,9 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Entrelinhas · read between the lines of every AI answer</title>
   <meta name="description" content="Entrelinhas finds the claims in an AI answer that have gone stale, checks each one against live sources, scores its freshness and rewrites the answer with citations.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A0B'/%3E%3Cpath d='M14 20h36M14 44h36' stroke='%23ffffff' stroke-opacity='.4' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M14 32h26l6-6' stroke='%23FF5A1F' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A0B'/%3E%3Cpath d='M14 20h36M14 44h36' stroke='%23ffffff' stroke-opacity='.4' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M14 32h22' stroke='%23FF5A1F' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='32' r='4.5' fill='%23FF5A1F'/%3E%3C/svg%3E">
   <link rel="preload" href="fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/instrument-serif-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="estilo.css">
   <script src="estatico.js" defer></script>
   <script src="app.js" defer></script>
@@ -16,6 +15,12 @@
 <body>
   <svg width="0" height="0" class="sr" aria-hidden="true" focusable="false">
     <defs>
+      <linearGradient id="i-laranja" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFC9A8"/><stop offset=".42" stop-color="#FF6A2B"/><stop offset="1" stop-color="#C23B0B"/></linearGradient>
+      <linearGradient id="i-lado" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B8380B"/><stop offset="1" stop-color="#6E2005"/></linearGradient>
+      <linearGradient id="i-vidro" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".42"/><stop offset="1" stop-color="#fff" stop-opacity=".07"/></linearGradient>
+      <linearGradient id="i-vidro-lado" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".16"/><stop offset="1" stop-color="#fff" stop-opacity=".03"/></linearGradient>
+      <radialGradient id="i-brilho" cx=".3" cy=".25" r=".6"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+      <filter id="i-sombra" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3"/></filter>
       <linearGradient id="g-laranja" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FF5A1F" stop-opacity="0"/><stop offset=".55" stop-color="#FF5A1F"/><stop offset="1" stop-color="#FFB089"/></linearGradient>
     </defs>
   </svg>
@@ -23,8 +28,8 @@
   <div class="palco">
     <header class="barra">
       <a class="marca" href="./" aria-label="Entrelinhas home">
-        <svg class="marca-icone" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 18h48M8 46h48" stroke="currentColor" stroke-opacity=".38" stroke-width="3" stroke-linecap="round"/><path d="M8 32h34l8-8" fill="none" stroke="#FF5A1F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span class="marca-nome">entrelinhas</span>
+        <svg class="marca-icone" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 18h48M8 46h48" stroke="currentColor" stroke-opacity=".38" stroke-width="3.5" stroke-linecap="round"/><path d="M8 32h28" stroke="#FF5A1F" stroke-width="3.5" stroke-linecap="round"/><circle cx="46" cy="32" r="5" fill="#FF5A1F"/></svg>
+        <span class="marca-nome">Entre<em>linhas</em></span>
       </a>
       <nav class="barra-links" aria-label="Sections">
         <a href="#como-funciona">Method</a>
@@ -67,7 +72,7 @@
           </details>
         </div>
         <div class="exemplos-linha">
-          <span class="serifa">Try</span>
+          <span class="rotulo">Try</span>
           <div id="exemplos" class="exemplos" aria-label="Load an example"></div>
         </div>
         <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
@@ -75,7 +80,7 @@
     </section>
 
     <div class="marcas" aria-label="Built on Tavily, Bifrost, Groq, SQLite and Node.js">
-      <span class="serifa">Built on</span>
+      <span class="rotulo">Built on</span>
       <span class="logo lg-tavily"><svg class="lg-icone" aria-hidden="true" fill="currentColor" fill-rule="evenodd" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.033 14.273a1.612 1.612 0 011.139.47l.04.042.044.043a1.61 1.61 0 010 2.277l-3.073 3.073.816.816c.6.6.303 1.627-.525 1.814l-5.159 1.165a1.07 1.07 0 01-.897-.2l-.102-.09a1.07 1.07 0 01-.289-1l1.164-5.158A1.079 1.079 0 013.006 17l.816.817 3.074-3.074a1.612 1.612 0 011.137-.47zM17.042 13.246c0-.85.935-1.366 1.653-.912l4.47 2.824c.336.212.503.562.503.911 0 .35-.167.7-.501.913l-4.472 2.824a1.079 1.079 0 01-1.654-.912v-1.155h-7.027c.37-.4.605-.902.677-1.438l.022-.232a2.65 2.65 0 00-.492-1.669h6.821v-1.154zM8.188 0c.35 0 .7.168.913.503l2.823 4.47a1.079 1.079 0 01-.911 1.655H9.857v6.692h-1.67a2.633 2.633 0 00-1.668.48V6.629H5.365c-.849 0-1.366-.936-.912-1.654L7.276.503A1.072 1.072 0 018.188 0z"></path></svg><svg class="lg-texto" aria-hidden="true" fill="currentColor" fill-rule="evenodd" viewBox="0 0 62 24" xmlns="http://www.w3.org/2000/svg"><path d="M59.717 6.84L52.504 24H49.37l2.524-5.804-4.668-11.355h3.301l3.007 8.138 3.05-8.138h3.133zM45.873 3.963v14.529H42.93V3.963l2.944-.001zM38.78 5.448c-.519 0-.954-.16-1.304-.483a1.687 1.687 0 01-.505-1.241c0-.49.169-.897.505-1.22.35-.336.785-.504 1.304-.504.518 0 .946.168 1.282.504.35.322.526.674.526 1.164 0 .491-.175.96-.526 1.296-.336.323-.764.484-1.282.484zm1.45 1.388v11.655h-2.943V6.836h2.944zm-10.464 8.942l2.944-8.937h3.133l-4.31 11.65h-3.575l-4.29-11.65h3.154l2.944 8.937zm-19.654-3.154c0-1.178.23-2.222.693-3.134.477-.911 1.114-1.612 1.914-2.103.813-.49 1.717-.736 2.712-.736.869 0 1.626.176 2.271.526.66.35 1.184.792 1.577 1.325V6.84h2.965v11.65H19.28v-1.703c-.38.546-.905 1.002-1.578 1.367-.66.35-1.423.526-2.292.526a5.003 5.003 0 01-2.691-.757c-.8-.506-1.437-1.214-1.914-2.125-.463-.925-.693-1.983-.693-3.174zm9.167.041c0-.715-.14-1.325-.42-1.829-.28-.519-.659-.912-1.136-1.178a2.976 2.976 0 00-1.535-.42 2.982 2.982 0 00-1.513.4c-.463.265-.842.659-1.137 1.177-.28.504-.42 1.107-.42 1.808 0 .701.14 1.318.42 1.85.295.52.674.919 1.136 1.199.476.28.981.42 1.514.42.547 0 1.059-.132 1.536-.398.478-.283.87-.69 1.135-1.178.28-.52.42-1.136.42-1.85zM6.353 9.258v5.636c0 .393.092.68.274.862.196.168.518.253.967.253H8.96v2.481h-1.85c-2.482 0-3.723-1.206-3.723-3.617V9.258H2V6.84h1.388V3.96h2.965v2.88H8.96v2.418H6.353z"></path></svg></span>
       <img class="logo lg-bifrost" src="logos/bifrost.png" alt="" width="315" height="72">
       <span class="logo lg-groq"><svg class="lg-texto" aria-hidden="true" fill="currentColor" fill-rule="evenodd" viewBox="0 0 64 24" xmlns="http://www.w3.org/2000/svg"><path d="M37.925 2.039c4.142 0 7.509 3.368 7.509 7.528l-.004.244c-.128 4.047-3.437 7.284-7.505 7.284-4.15 0-7.509-3.368-7.509-7.528s3.36-7.528 7.509-7.528zm-11.144-.023c.26 0 .522.015.775.046l.015-.008a7.464 7.464 0 012.922.969L29.09 5.468a4.619 4.619 0 00-2.309-.6h-.253l-.253.016c-.338.03-.66.092-.982.177-.621.169-1.196.469-1.703.869a4.062 4.062 0 00-1.418 2.322l-.04.234-.03.235c-.007.077-.023.161-.023.238l-.014 2.713v2.593l-.016 2.522h-2.815l-.03-4.973V8.852c0-.139.015-.262.022-.392.023-.262.062-.523.115-.777.1-.523.269-1.03.491-1.515a6.998 6.998 0 011.948-2.484 7.465 7.465 0 012.754-1.391c.49-.131.99-.216 1.495-.254.123-.008.253-.023.376-.023h.376zM37.925 4.86a4.7 4.7 0 00-4.694 4.706 4.7 4.7 0 004.694 4.706 4.7 4.7 0 004.694-4.706l-.005-.216a4.7 4.7 0 00-4.689-4.49zM9.578 2C5.428 1.96 2.038 5.298 2 9.458c-.038 4.16 3.29 7.559 7.44 7.597h2.608v-2.822h-2.47c-2.592.031-4.717-2.053-4.748-4.652a4.7 4.7 0 014.64-4.76h.108c2.52 0 4.577 1.992 4.696 4.49l.005.216v6.936c0 2.576-2.093 4.676-4.655 4.706a4.663 4.663 0 01-3.267-1.376l-1.994 2A7.46 7.46 0 009.57 24h.1c4.096-.062 7.386-3.391 7.409-7.497V9.35c-.1-4.09-3.428-7.35-7.501-7.35zm44.929.038c-4.15 0-7.509 3.368-7.509 7.528s3.36 7.528 7.509 7.528h2.57v-2.822h-2.57a4.7 4.7 0 01-4.694-4.706 4.7 4.7 0 014.694-4.706A4.707 4.707 0 0159.16 8.94l.024.22v14.456H62V9.566c-.008-4.152-3.352-7.527-7.493-7.527z"></path></svg></span>
@@ -101,19 +106,19 @@
       <div id="aviso-simulado" class="aviso" hidden>Example mode: sources are fictional (<code>.example</code> domains) and search and model responses are simulated. Categories, Portuguese handling, agreement, freshness and verdicts come from the real engine.</div>
 
       <header class="resumo">
-        <p class="serifa">Your report</p>
+        <p class="rotulo">Your report</p>
         <h2 id="titulo-resultado">What still holds</h2>
         <p id="resumo-frase" class="resumo-frase"></p>
         <div id="contagens" class="contagens"></div>
       </header>
 
       <section id="triagem" class="bloco-relatorio triagem" hidden aria-labelledby="titulo-triagem">
-        <div class="bloco-cabeca"><p class="serifa">Flag</p><h3 id="titulo-triagem">Stale-risk triage</h3><p class="dica">Before any search, each claim is flagged by how fast it can expire, and why.</p><p id="triagem-resumo" class="triagem-resumo"></p></div>
+        <div class="bloco-cabeca"><p class="rotulo">Flag</p><h3 id="titulo-triagem">Stale-risk triage</h3><p class="dica">Before any search, each claim is flagged by how fast it can expire, and why.</p><p id="triagem-resumo" class="triagem-resumo"></p></div>
         <ol id="triagem-lista" class="triagem-lista"></ol>
       </section>
 
       <section id="corrigida" class="bloco-relatorio corrigida" hidden aria-labelledby="titulo-corrigida">
-        <div class="bloco-cabeca"><p class="serifa">Correct</p><h3 id="titulo-corrigida">Updated answer</h3><p class="dica">Rewritten using only verified sources. Numbers link to them.</p></div>
+        <div class="bloco-cabeca"><p class="rotulo">Correct</p><h3 id="titulo-corrigida">Updated answer</h3><p class="dica">Rewritten using only verified sources. Numbers link to them.</p></div>
         <div class="corrigida-corpo">
           <div class="comparacao">
             <div class="lado-antigo"><p class="rotulo-comparacao">What the AI said</p><blockquote id="corrigida-original"></blockquote></div>
@@ -126,12 +131,12 @@
       <div id="omitidas" class="aviso neutro" hidden></div>
 
       <section class="bloco-relatorio">
-        <div class="bloco-cabeca"><p class="serifa">Verify</p><h3>Claim by claim</h3><p class="dica">Verdict, source agreement and a freshness score for every claim, with the evidence behind it.</p></div>
+        <div class="bloco-cabeca"><p class="rotulo">Verify</p><h3>Claim by claim</h3><p class="dica">Verdict, source agreement and a freshness score for every claim, with the evidence behind it.</p></div>
         <div id="cartoes" class="cartoes"></div>
       </section>
 
       <section id="gateway" class="bloco-relatorio gateway" hidden aria-labelledby="titulo-gateway">
-        <div class="bloco-cabeca"><p class="serifa">Route</p><h3 id="titulo-gateway">AI gateway, Bifrost</h3><p class="dica">Every model call goes through Bifrost. If the main model fails or hits a rate limit, Bifrost answers from a backup, with no retry code in Entrelinhas.</p></div>
+        <div class="bloco-cabeca"><p class="rotulo">Route</p><h3 id="titulo-gateway">AI gateway, Bifrost</h3><p class="dica">Every model call goes through Bifrost. If the main model fails or hits a rate limit, Bifrost answers from a backup, with no retry code in Entrelinhas.</p></div>
         <div id="gateway-conteudo"></div>
       </section>
       <p id="rastreio" class="rastreio"></p>
@@ -139,14 +144,14 @@
 
     <section class="secao problema" aria-labelledby="titulo-problema">
       <div class="secao-cabeca">
-        <p class="serifa">The problem</p>
+        <p class="rotulo">The problem</p>
         <h2 id="titulo-problema">Models freeze the world on the day they were trained. <span class="apagado">The world keeps moving.</span></h2>
       </div>
       <div class="ladrilhos quatro">
-        <div class="ladrilho"><p class="validade">about a month</p><h3>Prices</h3><p>Plans and fees change monthly. A month-old price is already a guess.</p></div>
-        <div class="ladrilho"><p class="validade">about a quarter</p><h3>Software versions</h3><p>Releases and LTS lines turn over every few months.</p></div>
-        <div class="ladrilho"><p class="validade">about six months</p><h3>Company facts</h3><p>Leaders, products and policies drift quietly.</p></div>
-        <div class="ladrilho"><p class="validade">about a year</p><h3>Laws and rules</h3><p>Slow to change, and costly when an answer misses it.</p></div>
+        <div class="ladrilho"><p class="validade-rotulo">Goes stale in about</p><p class="validade">a month</p><h3>Prices</h3><p>Plans and fees change monthly. A month-old price is already a guess.</p></div>
+        <div class="ladrilho"><p class="validade-rotulo">Goes stale in about</p><p class="validade">a quarter</p><h3>Software versions</h3><p>Releases and LTS lines turn over every few months.</p></div>
+        <div class="ladrilho"><p class="validade-rotulo">Goes stale in about</p><p class="validade">six months</p><h3>Company facts</h3><p>Leaders, products and policies drift quietly.</p></div>
+        <div class="ladrilho"><p class="validade-rotulo">Goes stale in about</p><p class="validade">a year</p><h3>Laws and rules</h3><p>Slow to change, and costly when an answer misses it.</p></div>
       </div>
     </section>
   </main>
@@ -154,7 +159,7 @@
   <section id="como-funciona" class="noite metodo" aria-labelledby="titulo-metodo">
     <div class="metodo-topo">
       <div>
-        <p class="serifa claro">Method</p>
+        <p class="rotulo">Method</p>
         <h2 id="titulo-metodo">From a confident answer <br class="quebra">to a <em>current</em> one.</h2>
         <p class="metodo-texto">Five moves, every one of them traceable. Each search, each model call and each quote is stored and matched against the source text.</p>
       </div>
@@ -167,11 +172,11 @@
       </svg>
     </div>
     <ol class="passos">
-      <li><svg class="glifo" viewBox="0 0 48 48" aria-hidden="true"><path d="M4 24h14M18 24c8 0 8-14 16-14h10M18 24h26M18 24c8 0 8 14 16 14h10"/></svg><h3>Split and flag</h3><p>The answer becomes atomic claims, each flagged by how fast it expires.</p></li>
-      <li><svg class="glifo" viewBox="0 0 48 48" aria-hidden="true"><circle cx="20" cy="20" r="12"/><path d="M29 29l13 13M14 20h12"/></svg><h3>Search live</h3><p>Tavily searches official sites, the news and science. Diverse types, never two from one site, blogs last.</p></li>
-      <li><svg class="glifo" viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="8" width="22" height="30" rx="4"/><rect x="21" y="12" width="22" height="30" rx="4"/><path d="M27 21h10M27 27h10M27 33h6"/></svg><h3>Read together</h3><p>One model call through Bifrost reads every source for a claim, knowing today’s date.</p></li>
-      <li><svg class="glifo" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6v36M10 42h28M8 14h32M8 14l-5 12h10zM40 14l-5 12h10z"/></svg><h3>Weigh and score</h3><p>Copies count once, official and scientific sources weigh most. Freshness is recency times agreement.</p></li>
-      <li><svg class="glifo" viewBox="0 0 48 48" aria-hidden="true"><path d="M30 6l12 12-22 22H8V28zM24 12l12 12M4 44h40"/></svg><h3>Rewrite</h3><p>The answer is written again from verified quotes only, with numbered citations.</p></li>
+      <li><svg class="glifo" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="57" rx="20" ry="3.5" fill="#000" opacity=".55" filter="url(#i-sombra)"/><rect x="6" y="14" width="38" height="11" rx="5.5" fill="url(#i-vidro-lado)"/><rect x="6" y="10" width="38" height="11" rx="5.5" fill="url(#i-vidro)"/><rect x="18" y="29" width="38" height="11" rx="5.5" fill="url(#i-vidro-lado)"/><rect x="18" y="25" width="38" height="11" rx="5.5" fill="url(#i-vidro)"/><rect x="10" y="44" width="32" height="11" rx="5.5" fill="url(#i-lado)"/><rect x="10" y="40" width="32" height="11" rx="5.5" fill="url(#i-laranja)"/><rect x="15" y="42" width="14" height="2.5" rx="1.25" fill="#fff" opacity=".55"/></svg><h3>Split and flag</h3><p>The answer becomes atomic claims, each flagged by how fast it expires.</p></li>
+      <li><svg class="glifo" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="34" cy="58" rx="20" ry="3.5" fill="#000" opacity=".55" filter="url(#i-sombra)"/><path d="M38 41l14 14" stroke="url(#i-lado)" stroke-width="10" stroke-linecap="round"/><path d="M37 38l14 14" stroke="url(#i-laranja)" stroke-width="8" stroke-linecap="round"/><circle cx="27" cy="27" r="19" fill="url(#i-laranja)"/><circle cx="27" cy="27" r="13" fill="#1a0d08"/><circle cx="27" cy="27" r="13" fill="url(#i-vidro)"/><ellipse cx="22" cy="21" rx="6" ry="4" fill="url(#i-brilho)" opacity=".8"/></svg><h3>Search live</h3><p>Tavily searches official sites, the news and science. Diverse types, never two from one site, blogs last.</p></li>
+      <li><svg class="glifo" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="58" rx="20" ry="3.5" fill="#000" opacity=".55" filter="url(#i-sombra)"/><g transform="rotate(-10 22 30)"><rect x="6" y="8" width="28" height="38" rx="6" fill="url(#i-vidro)"/><rect x="11" y="16" width="16" height="3" rx="1.5" fill="#fff" opacity=".4"/><rect x="11" y="23" width="12" height="3" rx="1.5" fill="#fff" opacity=".3"/></g><g transform="rotate(8 42 34)"><rect x="28" y="16" width="28" height="38" rx="6" fill="url(#i-lado)"/><rect x="27" y="13" width="28" height="38" rx="6" fill="url(#i-laranja)"/><rect x="32" y="21" width="16" height="3" rx="1.5" fill="#fff" opacity=".75"/><rect x="32" y="28" width="12" height="3" rx="1.5" fill="#fff" opacity=".55"/><rect x="32" y="35" width="14" height="3" rx="1.5" fill="#fff" opacity=".55"/></g></svg><h3>Read together</h3><p>One model call through Bifrost reads every source for a claim, knowing today’s date.</p></li>
+      <li><svg class="glifo" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="58" rx="22" ry="3.5" fill="#000" opacity=".55" filter="url(#i-sombra)"/><path d="M8 46a24 24 0 0148 0" fill="none" stroke="url(#i-vidro-lado)" stroke-width="10" stroke-linecap="round" transform="translate(0 4)"/><path d="M8 46a24 24 0 0148 0" fill="none" stroke="url(#i-vidro)" stroke-width="10" stroke-linecap="round"/><path d="M8 46a24 24 0 0137-19.8" fill="none" stroke="url(#i-lado)" stroke-width="10" stroke-linecap="round" transform="translate(0 4)"/><path d="M8 46a24 24 0 0137-19.8" fill="none" stroke="url(#i-laranja)" stroke-width="10" stroke-linecap="round"/><path d="M32 46l12-15" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/><circle cx="32" cy="46" r="5" fill="url(#i-laranja)"/><circle cx="30.5" cy="44.5" r="1.8" fill="#fff" opacity=".8"/></svg><h3>Weigh &amp; score</h3><p>Copies count once, official and scientific sources weigh most. Freshness is recency times agreement.</p></li>
+      <li><svg class="glifo" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="58" rx="20" ry="3.5" fill="#000" opacity=".55" filter="url(#i-sombra)"/><path d="M8 52c8-6 14 4 22-2s12-2 18-4" fill="none" stroke="url(#i-vidro)" stroke-width="3" stroke-linecap="round"/><g transform="rotate(45 34 26)"><rect x="27" y="2" width="15" height="40" rx="5" fill="url(#i-lado)"/><rect x="26" y="0" width="14" height="40" rx="5" fill="url(#i-laranja)"/><path d="M26 40h14l-7 12z" fill="#FFD9C4"/><path d="M31 48.5h4l-2 3.5z" fill="#3a1608"/><rect x="29" y="5" width="3" height="28" rx="1.5" fill="#fff" opacity=".5"/></g></svg><h3>Rewrite</h3><p>The answer is written again from verified quotes only, with numbered citations.</p></li>
     </ol>
   </section>
 
@@ -184,41 +189,19 @@
 
   <section id="prova" class="folha secao prova" aria-labelledby="titulo-prova">
     <div class="secao-cabeca">
-      <p class="serifa">Evidence</p>
+      <p class="rotulo">Evidence</p>
       <h2 id="titulo-prova">Find the <em>shortest path</em> from stale to true.</h2>
     </div>
     <div class="antes-depois">
-      <figure class="ladrilho ilustracao">
-        <svg viewBox="0 0 360 230" aria-hidden="true">
-          <rect class="balao" x="20" y="20" width="320" height="170" rx="22"/>
-          <path class="balao" d="M52 190l-8 26 30-26"/>
-          <rect class="txt" x="48" y="50" width="220" height="10" rx="5"/>
-          <rect class="txt velho" x="48" y="76" width="150" height="10" rx="5"/>
-          <rect class="txt" x="206" y="76" width="96" height="10" rx="5"/>
-          <rect class="txt" x="48" y="102" width="250" height="10" rx="5"/>
-          <rect class="txt" x="48" y="128" width="80" height="10" rx="5"/>
-          <rect class="txt velho" x="136" y="128" width="140" height="10" rx="5"/>
-          <rect class="txt" x="48" y="154" width="180" height="10" rx="5"/>
-          <path class="onda" d="M48 94q5-5 10 0t10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0"/>
-          <path class="onda" d="M136 146q5-5 10 0t10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0 10 0"/>
-        </svg>
-        <figcaption><span class="serifa">Without</span>A fluent answer, two claims already expired. Nothing on the screen tells you which.</figcaption>
+      <figure class="ladrilho exemplo">
+        <p class="rotulo">What the AI said</p>
+        <p class="exemplo-texto"><span class="vencido">Node.js 20 is the current Active LTS release and the recommended version for production.</span> ChatGPT Plus costs $20 per month.</p>
+        <figcaption>Fluent and confident. One of its two claims expired months ago, and nothing on the screen says which.</figcaption>
       </figure>
-      <figure class="ladrilho ilustracao escuro">
-        <svg viewBox="0 0 360 230" aria-hidden="true">
-          <rect class="balao" x="20" y="20" width="320" height="170" rx="22"/>
-          <path class="balao" d="M52 190l-8 26 30-26"/>
-          <rect class="txt" x="48" y="50" width="220" height="10" rx="5"/>
-          <rect class="txt novo" x="48" y="76" width="150" height="10" rx="5"/>
-          <rect class="ref" x="204" y="73" width="22" height="16" rx="5"/><rect class="ref" x="230" y="73" width="22" height="16" rx="5"/>
-          <rect class="txt" x="48" y="102" width="250" height="10" rx="5"/>
-          <rect class="txt" x="48" y="128" width="80" height="10" rx="5"/>
-          <rect class="txt novo" x="136" y="128" width="140" height="10" rx="5"/>
-          <rect class="ref" x="282" y="125" width="22" height="16" rx="5"/>
-          <rect class="txt" x="48" y="154" width="180" height="10" rx="5"/>
-          <path class="check" d="M296 44l8 8 16-16"/>
-        </svg>
-        <figcaption><span class="serifa">With Entrelinhas</span>The same answer, re-anchored to current sources, each fix with its citation.</figcaption>
+      <figure class="ladrilho exemplo escuro">
+        <p class="rotulo">What Entrelinhas returned</p>
+        <p class="exemplo-texto"><span class="corrigido">Node.js 20 is no longer an Active LTS release; it reached end-of-life on 30 April 2026 and is therefore not the recommended version for production</span><span class="ref">2</span><span class="ref">3</span><span class="ref">4</span>. ChatGPT Plus costs $20 per month<span class="ref">6</span><span class="ref">7</span><span class="ref">8</span>.</p>
+        <figcaption>A recorded live check from 12 November 2026: real sources found by Tavily, read through Bifrost, each fix with its citations.</figcaption>
       </figure>
     </div>
 
@@ -232,14 +215,14 @@
   <section id="favorito-secao" class="noite favorito-secao" aria-labelledby="titulo-favorito">
     <div class="favorito-grade">
       <div>
-        <p class="serifa claro">Anywhere</p>
+        <p class="rotulo">Anywhere</p>
         <h2 id="titulo-favorito">A verification layer <br class="quebra">for <em>any</em> AI app.</h2>
         <p>Drag the button to your bookmarks bar. On ChatGPT, Gemini or any page, select an answer and click it. Entrelinhas opens with the text ready to check.</p>
         <p class="favorito-acao"><a id="favorito" class="botao-favorito" href="#">Check with Entrelinhas</a></p>
         <p class="dica">Opens <span id="favorito-destino"></span>. Nothing is sent until you click Check answer.</p>
       </div>
       <div class="api">
-        <p class="serifa claro">For developers</p>
+        <p class="rotulo">For developers</p>
         <pre><code><span class="c">POST</span> /api/verificar
 {
   "texto": "the AI answer",
@@ -253,7 +236,7 @@
 
   <section id="como-ler" class="folha secao" aria-labelledby="titulo-ler">
     <div class="secao-cabeca">
-      <p class="serifa">Reading the report</p>
+      <p class="rotulo">Reading the report</p>
       <h2 id="titulo-ler">Seven verdicts. <span class="apagado">No black box.</span></h2>
     </div>
     <div id="legenda" class="legenda"></div>
@@ -263,7 +246,7 @@
   <footer class="rodape noite">
     <a class="rodape-chamada" href="#titulo-hero"><span>Check an answer</span><span class="seta" aria-hidden="true">↗</span></a>
     <div class="rodape-linha">
-      <span class="marca-nome">entrelinhas</span>
+      <span class="marca-nome">Entre<em>linhas</em></span>
       <span>Geek Room Global AI Hackathon 2026</span>
       <span>Tavily, Bifrost and SQLite</span>
     </div>

@@ -188,13 +188,13 @@ function montarLegenda() {
   const caixa = $("legenda");
   caixa.replaceChildren();
   const grupos = [
-    ["It holds", ["ATUAL", "CORROBORADA"]],
-    ["Look closer", ["SUPORTE_FRACO", "CONFLITO", "NAO_VERIFICAVEL"]],
-    ["It has expired", ["CONTRADICAO_FRACA", "CONTRADITA_POR_FONTE_ATUAL"]]
+    ["It holds", "g-holds", ["ATUAL", "CORROBORADA"]],
+    ["Look closer", "g-closer", ["SUPORTE_FRACO", "CONFLITO", "NAO_VERIFICAVEL"]],
+    ["It has expired", "g-expired", ["CONTRADICAO_FRACA", "CONTRADITA_POR_FONTE_ATUAL"]]
   ];
-  for (const [nome, codigos] of grupos) {
-    const grupo = el("div", "legenda-grupo");
-    grupo.append(el("p", "serifa", nome));
+  for (const [nome, cor, codigos] of grupos) {
+    const grupo = el("div", `ladrilho legenda-grupo ${cor}`);
+    grupo.append(el("p", "rotulo", nome));
     for (const codigo of codigos) {
       const v = VEREDITOS[codigo];
       const item = el("div", "legenda-item");
