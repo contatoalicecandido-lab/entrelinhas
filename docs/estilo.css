@@ -40,10 +40,9 @@ button { font: inherit; cursor: pointer; }
 [hidden] { display: none !important; }
 .sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; padding: 0; margin: -1px; }
 h1, h2, h3 { font-weight: 400; letter-spacing: -.035em; margin: 0; }
-h1 em, h2 em { font-style: normal; color: var(--laranja); background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; padding-right: .04em; }
+h1 em, h2 em { font-style: normal; color: var(--laranja); }
 .apagado { color: var(--suave-claro); }
-.rotulo { display: inline-block; font: 700 15px/1.2 var(--sans); letter-spacing: -.015em; margin: 0; background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-.texto-grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.rotulo { display: inline-block; font: 700 15px/1.2 var(--sans); letter-spacing: -.015em; margin: 0; color: var(--laranja); }
 .dica { font-size: 13.5px; color: var(--suave); margin: 6px 0 0; }
 @media (max-width: 760px) { .quebra { display: none; } }
 
@@ -57,7 +56,7 @@ h1 em, h2 em { font-style: normal; color: var(--laranja); background: var(--grad
 }
 
 .hero { position: relative; z-index: 1; max-width: 980px; margin: 0 auto; padding: clamp(48px, 9vw, 108px) var(--margem) 56px; text-align: center; }
-.sobretitulo { display: inline-block; margin: 0 0 26px; padding: 9px 16px; border-radius: 999px; font: 500 13.5px/1 var(--sans); letter-spacing: -.005em; color: #f0d4c6; background: linear-gradient(90deg, rgba(255, 90, 31, .16), rgba(255, 90, 31, .02)); box-shadow: inset 0 0 0 1px rgba(255, 128, 72, .28); }
+.sobretitulo { display: block; margin: 0 0 22px; font: 600 15px/1.2 var(--sans); letter-spacing: -.01em; color: #ffb089; text-shadow: 0 0 24px rgba(255, 90, 31, .55); }
 .hero h1 { font-weight: 300; font-size: clamp(44px, 8vw, 104px); line-height: .98; letter-spacing: -.055em; color: #fbfaf7; }
 .hero h1 em { font-weight: 300; }
 .hero-texto { max-width: 620px; margin: 28px auto 0; color: #b6b4ae; font-size: clamp(16px, 1.6vw, 18.5px); line-height: 1.55; font-weight: 300; }
@@ -127,7 +126,7 @@ main.folha { padding: 1px 0 0; }
 .ladrilhos { display: grid; gap: 12px; }
 .ladrilhos.quatro { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .ladrilhos.tres { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.validade { font: 800 30px/1 var(--sans); letter-spacing: -.045em; white-space: nowrap; margin: 0; background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.validade { font: 800 30px/1 var(--sans); letter-spacing: -.045em; white-space: nowrap; margin: 0; color: var(--laranja); }
 .problema .ladrilho p:not(.validade) { margin: 8px 0 0; color: var(--suave); font-size: 14.5px; }
 
 /* ---------------------------------------------------------------- Noite */
@@ -365,13 +364,13 @@ a.fonte-titulo:hover { color: var(--laranja); }
 .marca-nome em { font-style: normal; color: var(--laranja); }
 .barra-links { display: flex; gap: 28px; }
 .barra-links a { position: relative; color: #d9d6cf; text-decoration: none; font-size: 14px; font-weight: 500; padding: 6px 0; transition: color .2s; }
-.barra-links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; border-radius: 2px; background: var(--grad); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+.barra-links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; border-radius: 2px; background: var(--laranja); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
 .barra-links a:hover { color: #fff; }
 .barra-links a:hover::after { transform: scaleX(1); }
 
 /* Selo do modo: pílula viva com ondas de sinal */
 .selo { justify-self: end; display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; letter-spacing: -.01em; color: #e7e5df; padding: 9px 16px 9px 14px; border-radius: 14px; background: rgba(255, 255, 255, .07); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .1); }
-.selo.real { color: #fff; background: linear-gradient(135deg, #ff5a1f, #ff8a4c); box-shadow: 0 10px 28px -10px rgba(255, 90, 31, .9), inset 0 1px 0 rgba(255, 255, 255, .35); }
+.selo.real { color: #fff; background: var(--laranja); box-shadow: 0 10px 28px -10px rgba(255, 90, 31, .9), inset 0 1px 0 rgba(255, 255, 255, .35); }
 .selo.real::before {
   content: ""; width: 14px; height: 12px; flex: none;
   background: linear-gradient(#fff, #fff) 0 100% / 3px 50% no-repeat, linear-gradient(#fff, #fff) 5.5px 100% / 3px 100% no-repeat, linear-gradient(#fff, #fff) 11px 100% / 3px 70% no-repeat;
@@ -394,7 +393,6 @@ a.fonte-titulo:hover { color: var(--laranja); }
 .ladrilho::before { content: ""; position: absolute; top: -120px; right: -120px; width: 280px; height: 280px; border-radius: 50%; background: radial-gradient(circle, rgba(255, 90, 31, .2), rgba(255, 90, 31, 0) 65%); pointer-events: none; }
 .problema .ladrilho, .legenda-grupo { transition: transform .3s ease, box-shadow .3s ease; }
 .problema .ladrilho:hover, .legenda-grupo:hover { transform: translateY(-3px); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .9), inset 0 0 0 1px rgba(255, 255, 255, .45), 0 30px 60px -28px rgba(255, 90, 31, .45); }
-.problema .ladrilho::after { content: "↗"; position: absolute; top: 22px; right: 24px; font-size: 18px; font-weight: 600; color: var(--laranja); }
 .problema .ladrilho { padding-top: 34px; min-height: 250px; }
 .problema h3 { font-size: 20px; font-weight: 600; letter-spacing: -.03em; margin-top: 64px; }
 .problema .ladrilho p:not(.validade) { margin: 8px 0 0; color: var(--suave); font-size: 14.5px; }
@@ -431,7 +429,7 @@ a.fonte-titulo:hover { color: var(--laranja); }
 .legenda-grupo.g-holds { --brilho: #2fae6a; }
 .legenda-grupo.g-closer { --brilho: #e0a020; }
 .legenda-grupo.g-expired { --brilho: #e0402c; }
-.legenda-grupo > .rotulo { font-size: 26px; font-weight: 800; letter-spacing: -.045em; background: none; -webkit-text-fill-color: var(--tinta); color: var(--tinta); }
+.legenda-grupo > .rotulo { font-size: 26px; font-weight: 800; letter-spacing: -.045em; color: var(--tinta); }
 .legenda-item .pilula { font-size: 19px; }
 .legenda-item p { margin: 6px 0 0; font-size: 14px; color: var(--suave); }
 .legenda-notas { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -467,3 +465,17 @@ a.fonte-titulo:hover { color: var(--laranja); }
 }
 .validade-rotulo { margin: 0 0 8px; font-size: 13px; font-weight: 500; color: var(--suave); }
 .problema h3 { margin-top: 56px; }
+
+/* The problem: vidro de verdade, com formas de luz por trás */
+.problema .ladrilhos { position: relative; isolation: isolate; }
+.problema .ladrilhos::before, .problema .ladrilhos::after { content: ""; position: absolute; z-index: -1; border-radius: 50%; filter: blur(46px); pointer-events: none; }
+.problema .ladrilhos::before { width: 46%; height: 150%; left: 6%; top: -20%; background: rgba(255, 106, 48, .55); }
+.problema .ladrilhos::after { width: 34%; height: 120%; right: 4%; top: 0; background: rgba(255, 176, 137, .7); }
+.problema .ladrilho {
+  background: linear-gradient(150deg, rgba(255, 255, 255, .55), rgba(255, 255, 255, .18));
+  backdrop-filter: blur(22px) saturate(160%); -webkit-backdrop-filter: blur(22px) saturate(160%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .95), inset 0 0 0 1px rgba(255, 255, 255, .55), 0 24px 48px -30px rgba(120, 40, 10, .45);
+}
+.problema .ladrilho::before { display: none; }
+.metodo-requisitos { max-width: 480px; margin: 18px 0 0; font-size: 15px; font-weight: 600; color: #ffb089 !important; }
+.noite .rotulo { color: var(--laranja); }
