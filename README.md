@@ -110,32 +110,38 @@ Per-entity windows (Selic 45 days, inflation monthly) are next on the list. Cali
 
 Run it against a live server with `node avaliacao/rodar-casos-reais.js`. It pauses 45 s between claims because of the free model tier's tokens-per-minute limit.
 
-**Result of the live run on 12 Nov 2026** (`avaliacao/resultado-casos-reais-2026-11-12.json`):
+**Result of the live run on 13 Nov 2026** (`avaliacao/resultado-casos-reais-2026-11-13.json`):
 
 | | |
 |---|---|
-| Exact verdict (Current/Corroborated for true claims, Contradicted for outdated ones) | **11 of 15** (73%) |
+| Exact verdict (Current/Corroborated for true claims, Contradicted or Likely outdated for outdated ones) | **14 of 15** (93%) |
 | Right direction (also counting “Supported but unconfirmed” and “Conflicting”) | **15 of 15** |
 | Outdated claims confirmed as true | **0** |
 | True claims marked as contradicted | **0** |
 
 | Claim | Known answer | Verdict |
 |---|---|---|
-| Salário mínimo 2026 é R$ 1.621 | true | Current |
-| Salário mínimo 2026 é R$ 1.518 | outdated | Contradicted by sources |
-| Selic está em 13,75% | true | Supported but unconfirmed |
+| Salário mínimo 2026 é R$ 1.621 | true | Corroborated |
+| Salário mínimo 2026 é R$ 1.518 | outdated | Likely outdated |
+| Selic está em 13,75% | true | Corroborated |
 | Selic está em 10,5% | outdated | Contradicted by sources |
-| Netflix Padrão custa R$ 44,90 | outdated (R$ 51,90 since 15 Oct) | Contradicted by sources |
-| Qdenga no SUS, 10 a 14 anos | true | Supported but unconfirmed |
+| Netflix Padrão custa R$ 44,90 | outdated (R$ 51,90 since 15 Oct) | Conflicting (partial) |
+| Qdenga no SUS, 10 a 14 anos | true | Corroborated |
 | LGPD em vigor desde 2020 | true | Corroborated |
 | Pix gratuito para pessoa física | true | Corroborated |
 | Node.js 20 is Active LTS | outdated (EOL 30 Apr 2026) | Contradicted by sources |
-| Node.js 22 still gets security updates | true | Supported but unconfirmed |
+| Node.js 22 still gets security updates | true | Corroborated |
 | ChatGPT Plus costs $20/month | true | Corroborated |
 | Sam Altman is CEO of OpenAI | true | Corroborated |
 | Python 2.7 still gets security updates | outdated | Contradicted by sources |
 | Jack Dorsey is CEO of Twitter | outdated | Contradicted by sources |
-| GPT-4 is OpenAI's newest model | outdated | Conflicting |
+| GPT-4 is OpenAI's newest model | outdated | Contradicted by sources |
+
+The one partial case is Netflix: sources with the old and the new price were both found, so the verdict was Conflicting instead of Contradicted. It still warns the reader not to rely on the claim.
+
+Some true claims (LGPD, Pix, ChatGPT Plus, Node.js 22) came back Corroborated with a low freshness score. That is intended: the sources that confirm them are older than the window for that kind of fact, so the report labels them Aging and suggests looking for a recent source.
+
+The first run, on 12 Nov 2026, scored 11 of 15 exact and 15 of 15 in the right direction (`avaliacao/resultado-casos-reais-2026-11-12.json`).
 
 What the run taught us, already fixed:
 - Portuguese claims got international English news (Selic), so news search now uses Brazilian outlets only.

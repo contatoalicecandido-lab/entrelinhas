@@ -131,6 +131,9 @@ function configurarModo() {
       ? "Live check"
       : "Live check (needs API keys)";
   if (API.estatico) selo.textContent = "Public demo";
+  $("aviso-publico").hidden = !API.estatico;
+  document.body.classList.toggle("publico", Boolean(API.estatico));
+  if (API.estatico) $("texto").placeholder = "Pick a recorded check below. To check your own text, run Entrelinhas on your computer.";
   (real ? radio : document.querySelector('input[name="modo"][value="exemplo"]')).checked = true;
   const atualizarQueda = () => {
     const temReserva = (estado.status?.bifrost?.reservas ?? []).length > 0;
@@ -155,6 +158,7 @@ function montarExemplos() {
       if (real && !real.disabled) real.checked = true;
       atualizarEntrada();
       mostrarMensagem("");
+      if (API.estatico) verificar();
     });
     caixa.append(b);
   }
@@ -168,6 +172,7 @@ function montarExemplos() {
       document.querySelector('input[name="modo"][value="exemplo"]').checked = true;
       atualizarEntrada();
       mostrarMensagem("");
+      if (API.estatico) verificar();
     });
     caixa.append(b);
   }
@@ -185,7 +190,7 @@ function montarExemplos() {
   const primeiro = caixa.querySelector("button.gravacao") ?? caixa.querySelector("button");
   verReal.hidden = !primeiro;
   if (!caixa.querySelector("button.gravacao")) verReal.textContent = "See an example check";
-  verReal.onclick = () => { if (!primeiro) return; primeiro.click(); verificar(); };
+  verReal.onclick = () => { if (!primeiro) return; primeiro.click(); if (!API.estatico) verificar(); };
 }
 
 // Botão de favoritos: selecione um trecho em qualquer site (ChatGPT, Gemini,
@@ -204,13 +209,15 @@ function montarLegenda() {
   const caixa = $("legenda");
   caixa.replaceChildren();
   const grupos = [
-    ["It holds", "g-holds", ["ATUAL", "CORROBORADA"]],
-    ["Look closer", "g-closer", ["SUPORTE_FRACO", "CONFLITO", "NAO_VERIFICAVEL"]],
-    ["It has expired", "g-expired", ["CONTRADICAO_FRACA", "CONTRADITA_POR_FONTE_ATUAL"]]
+    ["It holds", "g-holds", "The sources back the claim today.", ["ATUAL", "CORROBORADA"]],
+    ["Look closer", "g-closer", "Not enough evidence to be sure either way.", ["SUPORTE_FRACO", "NAO_VERIFICAVEL"]],
+    ["Don't rely on it", "g-expired", "The sources disagree, or say the claim is wrong or out of date.", ["CONFLITO", "CONTRADICAO_FRACA", "CONTRADITA_POR_FONTE_ATUAL"]]
   ];
-  for (const [nome, cor, codigos] of grupos) {
+  for (const [nome, cor, resumo, codigos] of grupos) {
     const grupo = el("div", `ladrilho legenda-grupo ${cor}`);
-    grupo.append(el("p", "rotulo", nome));
+    const cabeca = el("div", "legenda-cabeca");
+    cabeca.append(el("p", "legenda-nome", nome), el("p", "legenda-resumo", resumo));
+    grupo.append(cabeca);
     for (const codigo of codigos) {
       const v = VEREDITOS[codigo];
       const item = el("div", "legenda-item");
@@ -219,17 +226,6 @@ function montarLegenda() {
     }
     caixa.append(grupo);
   }
-  const extras = [
-    ["Source agreement, 0 to 100", "How much independent sources agree with the claim. Official and scientific sources weigh 3, news 2, references 1.5, other websites 1, blogs and forums 0.25. Copies and pages of one site count once."],
-    ["Freshness, 0 to 100", "For prices, API versions, regulations and company facts: how recent the date tied to this exact fact is. A page's publish date never counts as proof."]
-  ];
-  const notas = el("div", "legenda-notas");
-  for (const [titulo, texto] of extras) {
-    const bloco = el("div");
-    bloco.append(el("h3", null, titulo), el("p", null, texto));
-    notas.append(bloco);
-  }
-  caixa.append(notas);
 }
 
 /* ---------- progresso ---------- */
@@ -238,6 +234,7 @@ function iniciarProgresso() {
   const secao = $("progresso");
   const itens = [...secao.querySelectorAll("li")];
   secao.hidden = false;
+  document.querySelector(".console").classList.add("verificando");
   estado.inicio = Date.now();
   const real = modo() === "real";
   const marcos = real ? [0, 6, 20, 0] : [0, 0.3, 0.6, 0.9];
@@ -261,6 +258,7 @@ function iniciarProgresso() {
 function pararProgresso() {
   clearInterval(estado.temporizador);
   $("progresso").hidden = true;
+  document.querySelector(".console").classList.remove("verificando");
 }
 
 /* ---------- verificação ---------- */
@@ -523,7 +521,9 @@ function criarMetricas(afirmacao) {
     const idade = idadeLegivel(at.newest_age_days);
     const rotuloStatus = at.status === "CURRENT" && idade && at.window_days
       ? `Current: a source from ${idade} confirms it, inside the ${at.window_days}-day window`
-      : st.texto;
+      : at.status === "AGING" && idade
+        ? `Aging: the newest source that confirms it is from ${idade}. It may still hold; look for a recent source.`
+        : st.texto;
     m2.append(el("p", `metrica-etiqueta status-${at.status.toLowerCase()}`, rotuloStatus));
     if (at.status === "CURRENT" && at.score < 50) {
       m2.append(el("p", "metrica-nota", "The score is lower because most confirming pages are older. The newest one is what keeps the claim current."));

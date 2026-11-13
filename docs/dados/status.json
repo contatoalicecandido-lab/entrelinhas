@@ -43,9 +43,9 @@
   },
   {
    "rotulo": "Live · Netflix price, in slang (PT)",
-   "texto": "O Netflix padrão tá saindo por 44,90 conto por mês.",
-   "arquivo": "dados/gravacoes/2026-11-12T23-10-42-867Z-o-netflix-padrao-ta-saindo-por-44-90-conto-por-m.json",
-   "data": "2026-11-12T23:10:42.867Z"
+   "texto": "O Netflix padrão tá saindo por 44,90 conto por mês e o zap é de graça",
+   "arquivo": "dados/gravacoes/2026-11-13T14-04-12-875Z-o-netflix-padrao-ta-saindo-por-44-90-conto-por-m.json",
+   "data": "2026-11-13T14:04:12.875Z"
   },
   {
    "rotulo": "Live · Dengue vaccine on Brazil's SUS (PT)",
@@ -55,9 +55,9 @@
   },
   {
    "rotulo": "Live · Twitter CEO + Python 2",
-   "texto": "Jack Dorsey is the current CEO of Twitter, and Python 2.7 still receives official security updates.",
-   "arquivo": "dados/gravacoes/2026-11-12T23-13-12-110Z-jack-dorsey-is-the-current-ceo-of-twitter-and-py.json",
-   "data": "2026-11-12T23:13:12.110Z"
+   "texto": "Jack Dorsey is the current CEO of Twitter, and Python 2.7 still receives official security updates",
+   "arquivo": "dados/gravacoes/2026-11-13T14-02-51-924Z-jack-dorsey-is-the-current-ceo-of-twitter-and-py.json",
+   "data": "2026-11-13T14:02:51.924Z"
   }
  ],
  "limites": {

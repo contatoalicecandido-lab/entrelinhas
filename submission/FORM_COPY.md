@@ -79,12 +79,12 @@ Entrelinhas works in six steps.
 
 ## Accuracy on real claims
 
-On 15 real claims with answers known on 12 Nov 2026 (8 true, 7 outdated, in Portuguese and English):
-- **11 of 15** got the exact verdict;
+On 15 real claims with answers known on 13 Nov 2026 (8 true, 7 outdated, in Portuguese and English):
+- **14 of 15** got the exact verdict (the other one, Netflix, came back Conflicting, still a warning);
 - **15 of 15** went in the right direction;
 - **0** outdated claims were confirmed as true, and **0** true claims were marked as contradicted.
 
-The cases, their sources and the results are in `avaliacao/`. It is a small sample, not a statistical accuracy estimate.
+The cases, their sources and the results are in `avaliacao/`. A first run on 12 Nov scored 11 of 15 exact; the fixes it pointed to are in the README. It is a small sample, not a statistical accuracy estimate.
 
 ## Architecture and technology
 

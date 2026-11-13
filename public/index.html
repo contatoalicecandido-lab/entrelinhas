@@ -30,10 +30,11 @@
         <span class="marca-nome">Entre<em>linhas</em></span>
       </a>
       <nav class="barra-links" aria-label="Sections">
+        <a href="#sobre">About</a>
         <a href="#como-funciona">Method</a>
-        <a href="#prova">Evidence</a>
-        <a href="#favorito-secao">Use cases</a>
-        <a href="#como-ler">Verdicts</a>
+        <a href="#prova">Example</a>
+        <a href="#como-ler">Results</a>
+        <a href="#favorito-secao">Use it anywhere</a>
       </nav>
       <span id="selo-modo" class="selo"></span>
     </header>
@@ -41,7 +42,7 @@
     <section class="hero" aria-labelledby="titulo-hero">
       <p class="sobretitulo">A stale-answer detector for AI applications</p>
       <h1 id="titulo-hero">Every AI answer has <br class="quebra">an <em>expiry date.</em></h1>
-      <p class="hero-texto">Entrelinhas, Portuguese for “between the lines”, finds the claims in an AI answer that have expired, checks each one live and rewrites the answer with sources.</p>
+      <p class="hero-texto">Paste any AI answer. See which parts still hold today, with sources.</p>
 
       <section class="console" aria-labelledby="titulo-entrada">
         <h2 id="titulo-entrada" class="sr">Check an answer</h2>
@@ -53,27 +54,36 @@
             <button id="botao-verificar" class="botao-enviar" type="button">Check answer</button>
           </div>
         </div>
-        <div class="console-linha">
-          <fieldset class="modo">
-            <legend class="sr">Mode</legend>
-            <label id="opcao-real"><input type="radio" name="modo" value="real"> <span>Live check</span></label>
-            <label><input type="radio" name="modo" value="exemplo" checked> <span>Demo examples</span></label>
-          </fieldset>
-          <details class="ajustes">
-            <summary>Trusted sites</summary>
-            <div class="ajustes-corpo">
-              <label class="sr" for="dominios">Trusted sites</label>
-              <input id="dominios" type="text" placeholder="gov.br, who.int, nodejs.org" autocomplete="off">
-              <p class="dica">Searched first and counted as official. Brazilian authorities and the company’s own site are detected automatically.</p>
-              <label id="opcao-queda" class="opcao-queda" hidden><input id="simular-queda" type="checkbox"> <span>Simulate an outage of the main model <span class="opcional">Bifrost switches to a backup model on its own.</span></span></label>
-            </div>
-          </details>
-        </div>
+            <section id="progresso" class="progresso" hidden aria-live="polite">
+          <p class="progresso-titulo">Checking your answer</p>
+          <ol>
+            <li>Breaking the answer into single claims</li>
+            <li>Searching today's sources with Tavily</li>
+            <li>Reading every source through Bifrost</li>
+            <li>Weighing the sources and scoring each claim</li>
+          </ol>
+          <div class="barra-progresso"><span></span></div>
+          <p id="tempo-decorrido" class="dica"></p>
+        </section>
+        <p id="aviso-publico" class="aviso-publico" hidden>This public demo replays real checks recorded live with Tavily and Bifrost. Pick one below. To check your own text, run Entrelinhas on your computer.</p>
+        <fieldset class="modo" hidden>
+          <legend class="sr">Mode</legend>
+          <label id="opcao-real"><input type="radio" name="modo" value="real"> <span>Live check</span></label>
+          <label><input type="radio" name="modo" value="exemplo" checked> <span>Examples</span></label>
+        </fieldset>
         <div class="exemplos-linha">
           <button id="ver-real" class="ver-real" type="button">See a real check</button>
           <span class="exemplos-ou">or try</span>
           <div id="exemplos" class="exemplos" aria-label="Load an example"></div>
         </div>
+        <details class="ajustes">
+          <summary>Advanced options</summary>
+          <div class="ajustes-corpo">
+            <label class="ajuste-titulo" for="dominios">Trusted sites <span class="ajuda" tabindex="0" role="note" aria-label="Sites you trust most on this topic, like gov.br or who.int. They are searched first and count as official sources." data-dica="Sites you trust most on this topic, like gov.br or who.int. They are searched first and count as official sources.">?</span></label>
+            <input id="dominios" type="text" placeholder="gov.br, who.int, nodejs.org" autocomplete="off">
+            <label id="opcao-queda" class="opcao-queda" hidden><input id="simular-queda" type="checkbox"> <span>For judges: simulate a model outage</span> <span class="ajuda" tabindex="0" role="note" aria-label="Pretends the main AI model is down, to show Bifrost switching to a backup model on its own. The check still finishes." data-dica="Pretends the main AI model is down, to show Bifrost switching to a backup model on its own. The check still finishes.">?</span></label>
+          </div>
+        </details>
         <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
       </section>
     </section>
@@ -89,16 +99,6 @@
   </div>
 
   <main class="folha">
-    <section id="progresso" class="progresso" hidden aria-live="polite">
-      <div class="barra-progresso"><span></span></div>
-      <ol>
-        <li>Splitting the answer into claims and flagging what can expire</li>
-        <li>Searching official sites, news and science live with Tavily</li>
-        <li>Reading every source against its claim through Bifrost</li>
-        <li>Weighing independent sources and scoring freshness</li>
-      </ol>
-      <p id="tempo-decorrido" class="dica"></p>
-    </section>
 
     <section id="resultado" class="resultado" hidden aria-labelledby="titulo-resultado">
       <div id="aviso-gravado" class="aviso gravado" hidden></div>
@@ -143,7 +143,6 @@
 
     <section class="secao problema" aria-labelledby="titulo-problema">
       <div class="secao-cabeca">
-        <p class="rotulo">The problem</p>
         <h2 id="titulo-problema">Models freeze the world on the day they were trained. <span class="apagado">The world keeps moving.</span></h2>
       </div>
       <div class="parede" aria-hidden="true"><span class="">Node.js 16 is the current LTS release.</span><span class="laranja">A Selic está em 2% ao ano.</span><span class="">Python 2.7 still gets security updates.</span><span class="laranja">Twitter is run by Jack Dorsey.</span><span class="">Internet Explorer is Microsoft’s default browser.</span><span class="">O salário mínimo é R$ 1.212.</span><span class="laranja">Queen Elizabeth II is the UK’s monarch.</span><span class="">Windows 10 is the latest Windows.</span><span class="">The UK is a member of the EU.</span><span class="laranja">Pluto is the ninth planet.</span><span class="">Node.js 20 is the recommended version for production.</span><span class="laranja">Python 2 is still supported.</span><span class="">Node.js 16 is the current LTS release.</span><span class="laranja">A Selic está em 2% ao ano.</span><span class="">Python 2.7 still gets security updates.</span><span class="laranja">Twitter is run by Jack Dorsey.</span><span class="">Internet Explorer is Microsoft’s default browser.</span><span class="">O salário mínimo é R$ 1.212.</span><span class="laranja">Queen Elizabeth II is the UK’s monarch.</span><span class="">Windows 10 is the latest Windows.</span><span class="">The UK is a member of the EU.</span><span class="laranja">Pluto is the ninth planet.</span><span class="">Node.js 20 is the recommended version for production.</span><span class="laranja">Python 2 is still supported.</span></div>
@@ -154,15 +153,23 @@
         <div class="ladrilho"><p class="validade-rotulo">Goes stale in about</p><p class="validade">a year</p><h3>Laws and rules</h3><p>Slow to change, and costly when an answer misses it.</p></div>
       </div>
     </section>
+
+    <section id="sobre" class="secao sobre" aria-labelledby="titulo-sobre">
+      <div class="sobre-grade">
+        <h2 id="titulo-sobre"><em>Entrelinhas</em> means “between the lines” in Portuguese.</h2>
+        <div class="sobre-texto">
+          <p>It reads an AI answer the way a careful editor would. It breaks the answer into single statements, checks each one against today's sources, and shows which still hold, which have changed and which nobody can confirm. Then it rewrites the answer with sources.</p>
+          <p>It is not only about dates. Prices, software versions, who runs a company, laws, numbers: anything an AI states with confidence and that may be out of date, or simply wrong.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <section id="como-funciona" class="noite metodo" aria-labelledby="titulo-metodo">
     <div class="metodo-topo">
       <div>
-        <p class="rotulo">Method</p>
         <h2 id="titulo-metodo">From a confident answer <br class="quebra">to a <em>current</em> one.</h2>
-        <p class="metodo-texto">Five moves, every one of them traceable. Each search, each model call and each quote is stored and matched against the source text.</p>
-        <p class="metodo-requisitos dica-escura">Claim identification, freshness detection, live verification and a freshness score for every claim, in one pass.</p>
+        <p class="metodo-texto">Claim identification, freshness detection, live verification and a freshness score for every claim, in one pass.</p>
       </div>
       <svg class="simbolo" viewBox="0 0 320 320" aria-hidden="true">
         <g fill="none" stroke="url(#g-laranja)" stroke-width="2" stroke-linecap="round">
@@ -173,82 +180,93 @@
       </svg>
     </div>
     <ol class="passos">
-      <li><svg class="glifo" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="57" rx="20" ry="3.5" fill="#000" opacity=".55" filter="url(#i-sombra)"/><rect x="6" y="14" width="38" height="11" rx="5.5" fill="url(#i-vidro-lado)"/><rect x="6" y="10" width="38" height="11" rx="5.5" fill="url(#i-vidro)"/><rect x="18" y="29" width="38" height="11" rx="5.5" fill="url(#i-vidro-lado)"/><rect x="18" y="25" width="38" height="11" rx="5.5" fill="url(#i-vidro)"/><rect x="10" y="44" width="32" height="11" rx="5.5" fill="url(#i-lado)"/><rect x="10" y="40" width="32" height="11" rx="5.5" fill="url(#i-laranja)"/><rect x="15" y="42" width="14" height="2.5" rx="1.25" fill="#fff" opacity=".55"/></svg><h3>Split and flag</h3><p>The answer becomes atomic claims, each flagged by how fast it expires.</p></li>
-      <li><svg class="glifo" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="34" cy="58" rx="20" ry="3.5" fill="#000" opacity=".55" filter="url(#i-sombra)"/><path d="M38 41l14 14" stroke="url(#i-lado)" stroke-width="10" stroke-linecap="round"/><path d="M37 38l14 14" stroke="url(#i-laranja)" stroke-width="8" stroke-linecap="round"/><circle cx="27" cy="27" r="19" fill="url(#i-laranja)"/><circle cx="27" cy="27" r="13" fill="#1a0d08"/><circle cx="27" cy="27" r="13" fill="url(#i-vidro)"/><ellipse cx="22" cy="21" rx="6" ry="4" fill="url(#i-brilho)" opacity=".8"/></svg><h3>Search live</h3><p>Tavily searches official sites, the news and science. Diverse types, never two from one site, blogs last.</p></li>
+      <li><svg class="glifo" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="57" rx="20" ry="3.5" fill="#000" opacity=".55" filter="url(#i-sombra)"/><rect x="6" y="14" width="38" height="11" rx="5.5" fill="url(#i-vidro-lado)"/><rect x="6" y="10" width="38" height="11" rx="5.5" fill="url(#i-vidro)"/><rect x="18" y="29" width="38" height="11" rx="5.5" fill="url(#i-vidro-lado)"/><rect x="18" y="25" width="38" height="11" rx="5.5" fill="url(#i-vidro)"/><rect x="10" y="44" width="32" height="11" rx="5.5" fill="url(#i-lado)"/><rect x="10" y="40" width="32" height="11" rx="5.5" fill="url(#i-laranja)"/><rect x="15" y="42" width="14" height="2.5" rx="1.25" fill="#fff" opacity=".55"/></svg><h3>Split and flag</h3><p>The answer is broken into single statements, called claims. Each one is tagged by how fast it can go out of date.</p></li>
+      <li><svg class="glifo" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="34" cy="58" rx="20" ry="3.5" fill="#000" opacity=".55" filter="url(#i-sombra)"/><path d="M38 41l14 14" stroke="url(#i-lado)" stroke-width="10" stroke-linecap="round"/><path d="M37 38l14 14" stroke="url(#i-laranja)" stroke-width="8" stroke-linecap="round"/><circle cx="27" cy="27" r="19" fill="url(#i-laranja)"/><circle cx="27" cy="27" r="13" fill="#1a0d08"/><circle cx="27" cy="27" r="13" fill="url(#i-vidro)"/><ellipse cx="22" cy="21" rx="6" ry="4" fill="url(#i-brilho)" opacity=".8"/></svg><h3>Search live</h3><p>Tavily searches the web right now: official sites first, then news and science. Up to five different sources per claim.</p></li>
       <li><svg class="glifo" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="58" rx="20" ry="3.5" fill="#000" opacity=".55" filter="url(#i-sombra)"/><g transform="rotate(-10 22 30)"><rect x="6" y="8" width="28" height="38" rx="6" fill="url(#i-vidro)"/><rect x="11" y="16" width="16" height="3" rx="1.5" fill="#fff" opacity=".4"/><rect x="11" y="23" width="12" height="3" rx="1.5" fill="#fff" opacity=".3"/></g><g transform="rotate(8 42 34)"><rect x="28" y="16" width="28" height="38" rx="6" fill="url(#i-lado)"/><rect x="27" y="13" width="28" height="38" rx="6" fill="url(#i-laranja)"/><rect x="32" y="21" width="16" height="3" rx="1.5" fill="#fff" opacity=".75"/><rect x="32" y="28" width="12" height="3" rx="1.5" fill="#fff" opacity=".55"/><rect x="32" y="35" width="14" height="3" rx="1.5" fill="#fff" opacity=".55"/></g></svg><h3>Read together</h3><p>An AI model reads every source for a claim, knowing today’s date. Calls go through Bifrost, a gateway that switches to a backup model if one fails.</p></li>
       <li><svg class="glifo" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="58" rx="22" ry="3.5" fill="#000" opacity=".55" filter="url(#i-sombra)"/><path d="M8 46a24 24 0 0148 0" fill="none" stroke="url(#i-vidro-lado)" stroke-width="10" stroke-linecap="round" transform="translate(0 4)"/><path d="M8 46a24 24 0 0148 0" fill="none" stroke="url(#i-vidro)" stroke-width="10" stroke-linecap="round"/><path d="M8 46a24 24 0 0137-19.8" fill="none" stroke="url(#i-lado)" stroke-width="10" stroke-linecap="round" transform="translate(0 4)"/><path d="M8 46a24 24 0 0137-19.8" fill="none" stroke="url(#i-laranja)" stroke-width="10" stroke-linecap="round"/><path d="M32 46l12-15" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/><circle cx="32" cy="46" r="5" fill="url(#i-laranja)"/><circle cx="30.5" cy="44.5" r="1.8" fill="#fff" opacity=".8"/></svg><h3>Weigh &amp; score</h3><p>Copies count once and official sources weigh most. Each claim gets a freshness score: how recent the confirming sources are, weighted by how many agree.</p></li>
-      <li><svg class="glifo" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="58" rx="20" ry="3.5" fill="#000" opacity=".55" filter="url(#i-sombra)"/><path d="M8 52c8-6 14 4 22-2s12-2 18-4" fill="none" stroke="url(#i-vidro)" stroke-width="3" stroke-linecap="round"/><g transform="rotate(45 34 26)"><rect x="27" y="2" width="15" height="40" rx="5" fill="url(#i-lado)"/><rect x="26" y="0" width="14" height="40" rx="5" fill="url(#i-laranja)"/><path d="M26 40h14l-7 12z" fill="#FFD9C4"/><path d="M31 48.5h4l-2 3.5z" fill="#3a1608"/><rect x="29" y="5" width="3" height="28" rx="1.5" fill="#fff" opacity=".5"/></g></svg><h3>Rewrite</h3><p>The answer is written again from verified quotes only, with numbered citations.</p></li>
+      <li><svg class="glifo" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="58" rx="20" ry="3.5" fill="#000" opacity=".55" filter="url(#i-sombra)"/><path d="M8 52c8-6 14 4 22-2s12-2 18-4" fill="none" stroke="url(#i-vidro)" stroke-width="3" stroke-linecap="round"/><g transform="rotate(45 34 26)"><rect x="27" y="2" width="15" height="40" rx="5" fill="url(#i-lado)"/><rect x="26" y="0" width="14" height="40" rx="5" fill="url(#i-laranja)"/><path d="M26 40h14l-7 12z" fill="#FFD9C4"/><path d="M31 48.5h4l-2 3.5z" fill="#3a1608"/><rect x="29" y="5" width="3" height="28" rx="1.5" fill="#fff" opacity=".5"/></g></svg><h3>Rewrite</h3><p>Entrelinhas writes the answer again using only what the sources confirm, with a numbered source for each fix.</p></li>
     </ol>
   </section>
 
 
   <section id="prova" class="folha secao prova" aria-labelledby="titulo-prova">
     <div class="secao-cabeca">
-      <p class="rotulo">Evidence</p>
-      <h2 id="titulo-prova">Find the <em>shortest path</em> from stale to true.</h2>
+      <h2 id="titulo-prova">From an outdated answer <br class="quebra">to a <em>correct</em> one.</h2>
     </div>
     <div class="antes-depois">
-      <figure class="ladrilho exemplo">
+      <figure class="exemplo-bloco">
+        <div class="ladrilho exemplo">
         <p class="rotulo">What the AI said</p>
         <p class="exemplo-texto"><span class="vencido">Node.js 20 is the current Active LTS release and the recommended version for production.</span> ChatGPT Plus costs $20 per month.</p>
+      </div>
         <figcaption>Fluent and confident. One of its two claims expired months ago, and nothing on the screen says which.</figcaption>
       </figure>
-      <figure class="ladrilho exemplo escuro">
+      <figure class="exemplo-bloco">
+        <div class="ladrilho exemplo escuro">
         <p class="rotulo">What Entrelinhas returned</p>
         <p class="exemplo-texto"><span class="corrigido">Node.js 20 is no longer an Active LTS release; it reached end-of-life on 30 April 2026 and is therefore not the recommended version for </span><span class="sem-quebra"><span class="corrigido">production</span><span class="ref">2</span><span class="ref">3</span><span class="ref">4</span>.</span> ChatGPT Plus costs $20 per <span class="sem-quebra">month<span class="ref">6</span><span class="ref">7</span><span class="ref">8</span>.</span></p>
+      </div>
         <figcaption>A recorded live check from 12 November 2026: real sources found by Tavily, read through Bifrost, each fix with its citations.</figcaption>
       </figure>
     </div>
 
-    <figure class="previa">
+    <div class="por-afirmacao">
+      <p class="por-afirmacao-texto">Not just one verdict for the whole answer. <span class="apagado">Entrelinhas gives each claim its own verdict, agreement score and freshness status.</span></p>
       <div class="previa-linhas">
         <div class="previa-linha">
           <p class="previa-afirmacao">Node.js 20 is the current Active LTS release</p>
           <span class="pilula tom-ruim">Contradicted by sources</span>
-          <dl><div><dt>Source agreement</dt><dd>0<small>/100</small></dd></div><div><dt>Sources</dt><dd>5 <small>contradict</small></dd></div><div><dt>Freshness</dt><dd class="ruim">Contradicted</dd></div></dl>
+          <dl><div><dt>Source agreement</dt><dd>0<small>/100</small></dd></div><div><dt>Sources</dt><dd>5 <small>disagree</small></dd></div><div><dt>Freshness</dt><dd class="ruim">Outdated</dd></div></dl>
         </div>
         <div class="previa-linha">
           <p class="previa-afirmacao">ChatGPT Plus costs $20 per month</p>
           <span class="pilula tom-corroborado">Corroborated</span>
-          <dl><div><dt>Source agreement</dt><dd>100<small>/100</small></dd></div><div><dt>Sources</dt><dd>5 <small>support</small></dd></div><div><dt>Freshness</dt><dd class="bom">Current, newest 2 days old</dd></div></dl>
+          <dl><div><dt>Source agreement</dt><dd>100<small>/100</small></dd></div><div><dt>Sources</dt><dd>5 <small>agree</small></dd></div><div><dt>Freshness</dt><dd class="bom">Current</dd></div></dl>
         </div>
       </div>
-      <div class="previa-texto">
-        <p class="rotulo">Every claim gets its own score</p>
-        <h3>Not one verdict for the whole answer. A verdict, an agreement score and a freshness status for each claim.</h3>
-        <p>From the same recorded check. Two claims, two very different outcomes.</p>
-      </div>
-    </figure>
+    </div>
 
-    <div class="ladrilhos tres numeros">
-      <div class="ladrilho numero"><p class="numero-grande">15<span> of 15</span></p><p>real claims placed on the right side: still true or out of date</p></div>
-      <div class="ladrilho numero"><p class="numero-grande">0</p><p>stale claims ever confirmed as true</p></div>
-      <div class="ladrilho numero"><p class="numero-grande">23</p><p>times Bifrost switched to a backup model on its own, so no check was lost to a rate limit</p></div>
+    <div class="numeros-linha">
+      <div class="numero-item destaque"><p class="numero-grande">23</p><p>times Bifrost switched to a backup AI model on its own when the main one hit its limit, so no check was lost.</p></div>
+      <div class="numero-item"><p class="numero-grande">14<span> of 15</span></p><p>real claims, with answers we know today, judged correctly in a live test.</p></div>
+      <div class="numero-item"><p class="numero-grande">0</p><p>outdated claims passed as true in the same test.</p></div>
+    </div>
+  </section>
+
+  <section id="como-ler" class="folha secao como-ler" aria-labelledby="titulo-ler">
+    <div class="secao-cabeca">
+      <h2 id="titulo-ler">What the results mean.</h2>
+      <p class="secao-sub">Every claim gets one of seven verdicts, grouped in three colors.</p>
+    </div>
+    <div id="legenda" class="legenda"></div>
+    <div class="zero-cem">
+      <h3 class="zero-cem-titulo">From 0 to 100</h3>
+      <div class="zero-cem-grade">
+        <div class="zero-cem-item"><h4>Source agreement</h4><p>How many of the independent sources support this claim. 100 means all of them agree; 0 means all of them disagree. Official and scientific sources count most, and copies of the same article count once.</p></div>
+        <div class="zero-cem-item"><h4>Freshness</h4><p>How recently the sources confirmed this fact. 100 means it was confirmed in the last few days, and the score drops as the confirmations get older. Each kind of fact has its own pace: prices about a month, software versions a quarter, company facts six months, laws a year.</p></div>
+      </div>
+    </div>
+    <div class="bom-saber">
+      <h3>Good to know</h3>
+      <p>These scores show how well today's sources back a claim. They are not a guarantee: several sources can repeat the same mistake. Before deciding something important, read the quotes behind the verdict.</p>
     </div>
   </section>
 
   <section id="favorito-secao" class="noite favorito-secao" aria-labelledby="titulo-favorito">
-    <div class="usos">
-      <p class="rotulo">Use cases</p>
-      <h2>Built for teams that <br class="quebra">ship <em>AI answers.</em></h2>
-      <div class="usos-grade">
-        <div class="uso"><h3>Support chatbots</h3><p>Catch the outdated price or policy before your bot tells a customer.</p></div>
-        <div class="uso"><h3>AI product teams</h3><p>One API call after generation adds verdicts, freshness and citations to any answer.</p></div>
-        <div class="uso"><h3>Content and newsrooms</h3><p>Check drafts written with AI against today’s sources before they go out.</p></div>
-        <div class="uso"><h3>Health, legal and finance</h3><p>Where a stale rule is a liability, every claim comes with its evidence trail.</p></div>
-      </div>
-    </div>
-
     <div class="favorito-grade">
       <div>
-        <p class="rotulo">Anywhere</p>
-        <h3 id="titulo-favorito" class="titulo-medio">A verification layer for any AI app.</h3>
-        <p>Drag the button to your bookmarks bar. On ChatGPT, Gemini or any page, select an answer and click it. Entrelinhas opens with the text ready to check.</p>
-        <p class="favorito-acao"><a id="favorito" class="botao-favorito" href="#">Check with Entrelinhas</a></p>
-        <p class="dica">Nothing is sent until you click Check answer. <span id="favorito-destino" hidden></span></p>
+        <h2 id="titulo-favorito">Use Entrelinhas on <br class="quebra"><em>any AI app.</em></h2>
+        <p class="favorito-intro">Check an answer right where you read it, in your browser.</p>
+        <ul class="passos-favorito">
+          <li><strong>Drag</strong> the button below to your bookmarks bar.</li>
+          <li><strong>Open</strong> your favorite AI (ChatGPT, Gemini, Claude or any other page) and <strong>select</strong> the whole answer, as if you were going to copy it.</li>
+          <li><strong>Click</strong> Check with Entrelinhas in your bookmarks. Entrelinhas opens with the text ready to check.</li>
+        </ul>
+        <p class="favorito-acao"><a id="favorito" class="botao-favorito" href="#">Check with Entrelinhas</a><span id="favorito-destino" hidden></span></p>
       </div>
       <div class="api">
-        <p class="rotulo">For developers</p>
+        <h3>For developers</h3>
+        <p>Add Entrelinhas to your own app. Send an answer to the API and get back the claims, verdicts, freshness scores and the corrected answer.</p>
         <pre><code><span class="c">POST</span> /api/verificar
 {
   "texto": "the AI answer",
@@ -260,22 +278,21 @@
       </div>
     </div>
 
-  </section>
-
-  <section id="como-ler" class="folha secao" aria-labelledby="titulo-ler">
-    <div class="secao-cabeca">
-      <p class="rotulo">Reading the report</p>
-      <h2 id="titulo-ler">Seven verdicts. <span class="apagado">No black box.</span></h2>
+    <div class="usos">
+      <h2>For anyone who relies <br class="quebra">on <em>AI answers.</em></h2>
+      <div class="usos-grade cinco">
+        <div class="uso"><h3>Everyday questions</h3><p>Before you pay, sign or decide, check that the price, rule or fact the AI gave you still holds.</p></div>
+        <div class="uso"><h3>Support chatbots</h3><p>Catch the outdated price or policy before your bot tells a customer.</p></div>
+        <div class="uso"><h3>AI product teams</h3><p>One API call after generation adds verdicts, freshness and sources to any answer.</p></div>
+        <div class="uso"><h3>Content and newsrooms</h3><p>Check drafts written with AI against today's sources before they go out.</p></div>
+        <div class="uso"><h3>Health, legal and finance</h3><p>Where an outdated rule is a liability, every claim comes with its evidence.</p></div>
+      </div>
     </div>
-    <details class="legenda-detalhe">
-      <summary><span class="abrir">See all seven verdicts</span><span class="fechar">Hide the verdicts</span></summary>
-      <div id="legenda" class="legenda"></div>
-    </details>
-    <p class="dica nota-final">Source agreement and freshness are deterministic indexes, not probabilities of truth. Independent sources can share a mistake, and a recent page can still be wrong.</p>
   </section>
 
   <footer class="rodape noite">
-    <a class="rodape-chamada" href="#titulo-hero"><span>Check an answer</span><span class="seta" aria-hidden="true">↗</span></a>
+    <a class="rodape-chamada" href="#titulo-hero"><span>Check an answer</span><span class="seta" aria-hidden="true">↑</span></a>
+    <p class="rodape-dica">Back to the top to paste an answer.</p>
     <div class="rodape-linha">
       <span class="marca-nome">Entre<em>linhas</em></span>
       <span>Geek Room Global AI Hackathon 2026</span>
