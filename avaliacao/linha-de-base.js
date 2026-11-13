@@ -24,19 +24,43 @@ function pontuar(esperado, resposta) {
   return esperado === "DESATUALIZADA" ? "ERRO_GRAVE" : "ERRO";
 }
 
+function esperaPedida(mensagem) {
+  const m = /try again in (?:(\d+)m)?([\d.]+)s/i.exec(String(mensagem));
+  return m ? Math.ceil(((Number(m[1] ?? 0) * 60) + Number(m[2])) * 1000) + 5000 : null;
+}
+const semIdOrganizacao = texto => String(texto ?? "").replace(/org_[A-Za-z0-9]+/g, "org_<redacted>");
+const nomeBase = process.env.CASOS ? path.basename(process.env.CASOS, ".json").replace(/-\d{4}-\d{2}-\d{2}$/, "") : "casos-reais";
+const destino = process.env.RESULTADO ? path.resolve(process.env.RESULTADO) : path.join(__dirname, `linha-de-base-${nomeBase}-${hoje}.json`);
+
+async function perguntarCaso(caso) {
+  try {
+    const texto = await perguntarAoModelo(caso.texto, INSTRUCOES, { etapa: "LINHA_DE_BASE" });
+    const resposta = (/"answer"\s*:\s*"(TRUE|OUTDATED|UNSURE)"/i.exec(String(texto))?.[1] ?? "UNSURE").toUpperCase();
+    return { id: caso.id, esperado: caso.esperado, resposta, resultado: pontuar(caso.esperado, resposta), erro: null };
+  } catch (e) {
+    return { id: caso.id, esperado: caso.esperado, resposta: null, resultado: "FALHA_EXECUCAO", erro: semIdOrganizacao(e.message) };
+  }
+}
+
 async function principal() {
+  const anteriores = new Map();
+  if (fs.existsSync(destino)) {
+    for (const l of JSON.parse(fs.readFileSync(destino, "utf8")).linhas ?? []) if (l.resultado !== "FALHA_EXECUCAO") anteriores.set(l.id, l);
+    if (anteriores.size) console.log(`Retomando: ${anteriores.size} caso(s) já feitos não serão refeitos.`);
+  }
   const linhas = [];
   for (const caso of casos) {
-    let resposta = null; let erro = null;
-    try {
-      const texto = await perguntarAoModelo(caso.texto, INSTRUCOES, { etapa: "LINHA_DE_BASE" });
-      resposta = (/"answer"\s*:\s*"(TRUE|OUTDATED|UNSURE)"/i.exec(String(texto))?.[1] ?? "UNSURE").toUpperCase();
-    } catch (e) {
-      erro = e.message;
+    if (anteriores.has(caso.id)) { linhas.push(anteriores.get(caso.id)); continue; }
+    let linha = await perguntarCaso(caso);
+    for (let t = 2; linha.resultado === "FALHA_EXECUCAO" && t <= 4; t += 1) {
+      const espera = esperaPedida(linha.erro);
+      if (!espera || espera > 15 * 60 * 1000) break;
+      console.log(`Limite de uso do modelo. Esperando ${Math.round(espera / 1000)} s (${t}/4)...`);
+      await new Promise(r => setTimeout(r, espera));
+      linha = await perguntarCaso(caso);
     }
-    const linha = { id: caso.id, esperado: caso.esperado, resposta, resultado: erro ? "FALHA_EXECUCAO" : pontuar(caso.esperado, resposta), erro };
     linhas.push(linha);
-    console.log(`${linha.resultado.padEnd(14)} ${caso.id.padEnd(24)} esperado ${caso.esperado.padEnd(13)} modelo ${resposta}`);
+    console.log(`${linha.resultado.padEnd(14)} ${caso.id.padEnd(24)} esperado ${caso.esperado.padEnd(13)} modelo ${linha.resposta}`);
     if (caso !== casos.at(-1)) await new Promise(r => setTimeout(r, PAUSA_MS));
   }
   const validas = linhas.filter(l => l.resultado !== "FALHA_EXECUCAO");
@@ -47,10 +71,9 @@ async function principal() {
     sem_decisao: conta("SEM_DECISAO"),
     erros: conta("ERRO"),
     erros_graves_confirmou_desatualizada: conta("ERRO_GRAVE"),
-    acuracia_estrita: validas.length ? +(conta("ACERTO") / validas.length).toFixed(3) : null
+    acuracia_estrita: validas.length ? +(conta("ACERTO") / validas.length).toFixed(3) : null,
+    falhas_execucao: linhas.length - validas.length
   };
-  const nomeBase = process.env.CASOS ? path.basename(process.env.CASOS, ".json") : "casos-reais";
-  const destino = path.join(__dirname, `linha-de-base-${nomeBase}-${hoje}.json`);
   fs.writeFileSync(destino, JSON.stringify({ executado_em: new Date().toISOString(), metodo: "modelo sozinho via Bifrost, sem busca", resumo, linhas }, null, 2));
   console.log("\n", resumo, `\nSalvo em ${destino}`);
 }

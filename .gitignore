@@ -33,3 +33,6 @@ gravacoes/*
 
 # Saída do benchmark antigo com chamadas reais (gerada por testes/teste-benchmark.js)
 dados/resultado-benchmark.json
+
+# Atalho local para rodar os testes ao vivo
+RODAR-TESTE.command
