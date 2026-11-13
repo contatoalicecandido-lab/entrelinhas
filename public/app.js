@@ -171,6 +171,15 @@ function montarExemplos() {
     });
     caixa.append(b);
   }
+  // Lista enxuta: três visíveis, o resto atrás de "More".
+  const botoes = [...caixa.querySelectorAll("button")];
+  if (botoes.length > 4) {
+    botoes.slice(3).forEach(b => { b.hidden = true; });
+    const mais = el("button", "mais", `More (${botoes.length - 3})`);
+    mais.type = "button";
+    mais.addEventListener("click", () => { botoes.forEach(b => { b.hidden = false; }); mais.remove(); });
+    caixa.append(mais);
+  }
   // "See a real check": carrega a primeira gravação real (ou o primeiro exemplo) e já verifica.
   const verReal = $("ver-real");
   const primeiro = caixa.querySelector("button.gravacao") ?? caixa.querySelector("button");
@@ -476,6 +485,17 @@ const FUNDAMENTOS = {
 };
 const CONFIANCAS = { HIGH: "High", MEDIUM: "Medium", LOW: "Low" };
 
+// Idade legível de uma data: "today", "2 days ago", "3 months ago".
+function idadeLegivel(dias) {
+  if (!Number.isInteger(dias) || dias < 0) return null;
+  if (dias === 0) return "today";
+  if (dias === 1) return "yesterday";
+  if (dias < 60) return `${dias} days ago`;
+  const meses = Math.round(dias / 30);
+  if (meses < 24) return `${meses} months ago`;
+  return `${Math.round(dias / 365)} years ago`;
+}
+
 function criarMetricas(afirmacao) {
   const ag = afirmacao.agregacao ?? {};
   const conc = ag.concordancia ?? null;
@@ -500,7 +520,14 @@ function criarMetricas(afirmacao) {
   if (at && Number.isFinite(at.score)) {
     const st = STATUS_ATUALIDADE[at.status] ?? STATUS_ATUALIDADE.UNCERTAIN;
     valorComBarra(m2, at.score, st.cor);
-    m2.append(el("p", `metrica-etiqueta status-${at.status.toLowerCase()}`, st.texto));
+    const idade = idadeLegivel(at.newest_age_days);
+    const rotuloStatus = at.status === "CURRENT" && idade && at.window_days
+      ? `Current: a source from ${idade} confirms it, inside the ${at.window_days}-day window`
+      : st.texto;
+    m2.append(el("p", `metrica-etiqueta status-${at.status.toLowerCase()}`, rotuloStatus));
+    if (at.status === "CURRENT" && at.score < 50) {
+      m2.append(el("p", "metrica-nota", "The score is lower because most confirming pages are older. The newest one is what keeps the claim current."));
+    }
     const janela = at.basis === "PAGE_DATE_GENERAL_WINDOW"
       ? `general ${at.window_days}-day window`
       : cat ? `${cat[1]}-day window for ${PLURAIS[afirmacao.tipo_afirmacao]}` : "";

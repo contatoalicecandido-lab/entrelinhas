@@ -4,6 +4,10 @@
   "rotulo": "Live · Node.js 20 + ChatGPT Plus"
  },
  {
+  "arquivo": "2026-11-12T23-17-52-501Z-sam-altman-is-the-ceo-of-openai.json",
+  "rotulo": "Live · Bifrost outage drill"
+ },
+ {
   "arquivo": "2026-11-12T23-45-04-017Z-o-salario-minimo-em-2026-e-de-r-1-518-e-a-taxa-s.json",
   "rotulo": "Live · Brazil minimum wage + Selic rate (PT)"
  },
@@ -18,9 +22,5 @@
  {
   "arquivo": "2026-11-12T23-13-12-110Z-jack-dorsey-is-the-current-ceo-of-twitter-and-py.json",
   "rotulo": "Live · Twitter CEO + Python 2"
- },
- {
-  "arquivo": "2026-11-12T23-17-52-501Z-sam-altman-is-the-ceo-of-openai.json",
-  "rotulo": "Live · Bifrost outage drill"
  }
 ]

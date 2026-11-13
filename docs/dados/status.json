@@ -30,6 +30,12 @@
    "data": "2026-11-12T23:26:59.580Z"
   },
   {
+   "rotulo": "Live · Bifrost outage drill",
+   "texto": "Sam Altman is the CEO of OpenAI.",
+   "arquivo": "dados/gravacoes/2026-11-12T23-17-52-501Z-sam-altman-is-the-ceo-of-openai.json",
+   "data": "2026-11-12T23:17:52.501Z"
+  },
+  {
    "rotulo": "Live · Brazil minimum wage + Selic rate (PT)",
    "texto": "O salário mínimo em 2026 é de R$ 1.518 e a taxa Selic está atualmente em 10,5% ao ano.",
    "arquivo": "dados/gravacoes/2026-11-12T23-45-04-017Z-o-salario-minimo-em-2026-e-de-r-1-518-e-a-taxa-s.json",
@@ -52,12 +58,6 @@
    "texto": "Jack Dorsey is the current CEO of Twitter, and Python 2.7 still receives official security updates.",
    "arquivo": "dados/gravacoes/2026-11-12T23-13-12-110Z-jack-dorsey-is-the-current-ceo-of-twitter-and-py.json",
    "data": "2026-11-12T23:13:12.110Z"
-  },
-  {
-   "rotulo": "Live · Bifrost outage drill",
-   "texto": "Sam Altman is the CEO of OpenAI.",
-   "arquivo": "dados/gravacoes/2026-11-12T23-17-52-501Z-sam-altman-is-the-ceo-of-openai.json",
-   "data": "2026-11-12T23:17:52.501Z"
   }
  ],
  "limites": {

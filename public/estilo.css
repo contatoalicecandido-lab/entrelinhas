@@ -661,3 +661,5 @@ main.folha { overflow: hidden; }
 .parede { top: 46%; }
 .secao-cabeca { max-width: 1060px; }
 .sem-quebra { white-space: nowrap; }
+.exemplos button.mais { color: #85837e; }
+.exemplos button.mais::after { content: " +"; color: var(--laranja); }
