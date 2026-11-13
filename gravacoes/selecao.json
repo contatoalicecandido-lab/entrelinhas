@@ -8,8 +8,12 @@
   "rotulo": "Live · Bifrost outage drill"
  },
  {
-  "arquivo": "2026-11-12T23-45-04-017Z-o-salario-minimo-em-2026-e-de-r-1-518-e-a-taxa-s.json",
-  "rotulo": "Live · Brazil minimum wage + Selic rate (PT)"
+  "arquivo": "2026-11-13T13-23-46-585Z-o-salario-minimo-em-2026-e-de-r-1-518.json",
+  "rotulo": "Live · Brazil minimum wage, old value (PT)"
+ },
+ {
+  "arquivo": "2026-11-13T13-25-47-199Z-a-taxa-selic-esta-atualmente-em-10-5-ao-ano.json",
+  "rotulo": "Live · Selic rate, old value (PT)"
  },
  {
   "arquivo": "2026-11-13T14-04-12-875Z-o-netflix-padrao-ta-saindo-por-44-90-conto-por-m.json",
@@ -20,7 +24,7 @@
   "rotulo": "Live · Dengue vaccine on Brazil's SUS (PT)"
  },
  {
-  "arquivo": "2026-11-13T14-02-51-924Z-jack-dorsey-is-the-current-ceo-of-twitter-and-py.json",
-  "rotulo": "Live · Twitter CEO + Python 2"
+  "arquivo": "2026-11-13T13-36-58-246Z-jack-dorsey-is-the-current-ceo-of-twitter.json",
+  "rotulo": "Live · Twitter CEO"
  }
 ]

@@ -152,7 +152,7 @@ The first run, on 12 Nov 2026, scored 11 of 15 exact and 15 of 15 in the right d
 
 What the run taught us, already fixed:
 - Portuguese claims got international English news (Selic), so news search now uses Brazilian outlets only.
-- Long-standing facts (“em vigor desde 2020”) were labeled *Aging*, so freshness now uses the most recent confirmation.
+- Long-standing facts (“em vigor desde 2020”) were scored only by the date the fact started, so freshness now also uses the page dates of the sources that confirm the claim, and the newest one counts. When every confirming page is old, the claim still comes back *Aging* (LGPD, Pix and ChatGPT Plus in the 13 Nov run): it holds, but no recent source confirmed it. The card says so.
 - The updated answer, which is the last call, sometimes hit the free tier's per-minute limit, so the client now waits for Bifrost's `retry_after_ms`.
 - One updated answer came back in the wrong language, so the language is now pinned.
 
@@ -258,7 +258,7 @@ curl -s http://127.0.0.1:3000/api/verificar \
   -d '{"texto": "Node.js 20 is the current Active LTS release. ChatGPT Plus costs $20 per month.", "modo": "real"}'
 ```
 
-Response (shortened from a real recorded check, `gravacoes/2026-11-12T23-26-59-580Z-…json`):
+Response (shortened from a real recorded check, `docs/dados/gravacoes/2026-11-12T23-26-59-580Z-…json`, the one behind **See a real check**):
 
 ```json
 {

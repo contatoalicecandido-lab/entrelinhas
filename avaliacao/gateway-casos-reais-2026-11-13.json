@@ -5,7 +5,8 @@
     "chamadas_ao_modelo": 60,
     "respondidas_por_modelo_reserva": 22,
     "respostas_invalidas_refeitas": 4,
-    "quedas_simuladas": 0
+    "quedas_simuladas": 0,
+    "nota": "respostas_por_modelo, em cada linha, conta só as chamadas que deram certo; as respostas inválidas refeitas entram em chamadas, mas não na soma por modelo."
   },
   "linhas": [
     {

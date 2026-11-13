@@ -133,6 +133,7 @@ function configurarModo() {
   if (API.estatico) selo.textContent = "Public demo";
   $("aviso-publico").hidden = !API.estatico;
   document.body.classList.toggle("publico", Boolean(API.estatico));
+  if (API.estatico) { const dica = document.querySelector(".rodape-dica"); if (dica) dica.textContent = "Back to the top to try a recorded check."; }
   if (API.estatico) $("texto").placeholder = "Pick a recorded check below. To check your own text, run Entrelinhas on your computer.";
   (real ? radio : document.querySelector('input[name="modo"][value="exemplo"]')).checked = true;
   const atualizarQueda = () => {
@@ -324,18 +325,28 @@ function renderizarResultado(dados) {
   mostrarCorrigida(dados);
   mostrarTriagem(afirmacoes);
   mostrarGateway(dados.gateway, dados.simulado);
-  $("rastreio").textContent = `Verification ${dados.id_verificacao} · ${dados.rastreabilidade_modelo?.length ?? 0} model calls via ${dados.simulado ? "simulated provider" : "Bifrost"} · ${dados.rastreabilidade_pesquisa?.length ?? 0} search operations via ${dados.simulado ? "simulated provider" : "Tavily"} · ${dados.duracao_ms ?? "n/a"} ms · stored in SQLite (in memory)`;
+  $("rastreio").textContent = `Verification ${dados.id_verificacao} · ${dados.rastreabilidade_modelo?.length ?? 0} model calls via ${dados.simulado ? "simulated provider" : "Bifrost"} · ${dados.rastreabilidade_pesquisa?.length ?? 0} search operations via ${dados.simulado ? "simulated provider" : "Tavily"} · ${Number.isFinite(dados.duracao_ms) ? `${Math.round(dados.duracao_ms / 1000)} s` : "n/a"} · stored in SQLite (in memory)`;
 }
 
 // Resposta corrigida: texto com citações [n] viradas em links seguros.
 function mostrarCorrigida(dados) {
   const rc = dados.resposta_corrigida;
   const painel = $("corrigida");
-  if (!rc || !rc.texto) { painel.hidden = true; return; }
+  if (!rc || (!rc.texto && !rc.erro)) { painel.hidden = true; return; }
   painel.hidden = false;
   $("corrigida-original").textContent = dados.texto_original ?? "";
   const alvo = $("corrigida-texto");
   alvo.replaceChildren();
+  if (!rc.texto) {
+    // A reescrita é a última chamada ao modelo; se ela falhar (por exemplo,
+    // limite diário do plano gratuito), o relatório continua valendo.
+    const limite = /429|limit|limite|quota|cota/i.test(String(rc.erro));
+    alvo.append(document.createTextNode(limite
+      ? "The updated answer was not written this time: the AI model hit its daily usage limit. The verdicts and sources below are complete."
+      : "The updated answer could not be written this time. The verdicts and sources below are complete."));
+    $("corrigida-fontes").replaceChildren();
+    return;
+  }
   const porNumero = new Map((rc.fontes ?? []).map(f => [f.n, f]));
   for (const parte of rc.texto.split(/(\[\d{1,2}\])/)) {
     const m = /^\[(\d{1,2})\]$/.exec(parte);

@@ -2,6 +2,8 @@
 // Cada checagem ao vivo feita com ENTRELINHAS_GRAVAR=1 salva em gravacoes/ o
 // resumo do gateway: chamadas ao modelo, quantas o modelo reserva respondeu e
 // quantas voltaram com resposta inválida (refeitas pelo Entrelinhas).
+// respostas_por_modelo conta só as chamadas que deram certo; por isso a soma
+// por modelo é menor que "chamadas" quando houve resposta inválida refeita.
 // Uso: node avaliacao/resumir-gateway.js 2026-11-13T13
 const fs = require("node:fs");
 const path = require("node:path");
@@ -28,7 +30,8 @@ const resumo = {
   chamadas_ao_modelo: soma("chamadas"),
   respondidas_por_modelo_reserva: soma("respostas_de_reserva"),
   respostas_invalidas_refeitas: soma("respostas_invalidas_refeitas"),
-  quedas_simuladas: linhas.filter(l => l.queda_simulada).length
+  quedas_simuladas: linhas.filter(l => l.queda_simulada).length,
+  nota: "respostas_por_modelo, em cada linha, conta só as chamadas que deram certo; as respostas inválidas refeitas entram em chamadas, mas não na soma por modelo."
 };
 
 if (require.main === module) {

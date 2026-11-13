@@ -36,10 +36,16 @@
    "data": "2026-11-12T23:17:52.501Z"
   },
   {
-   "rotulo": "Live · Brazil minimum wage + Selic rate (PT)",
-   "texto": "O salário mínimo em 2026 é de R$ 1.518 e a taxa Selic está atualmente em 10,5% ao ano.",
-   "arquivo": "dados/gravacoes/2026-11-12T23-45-04-017Z-o-salario-minimo-em-2026-e-de-r-1-518-e-a-taxa-s.json",
-   "data": "2026-11-12T23:45:04.018Z"
+   "rotulo": "Live · Brazil minimum wage, old value (PT)",
+   "texto": "O salário mínimo em 2026 é de R$ 1.518.",
+   "arquivo": "dados/gravacoes/2026-11-13T13-23-46-585Z-o-salario-minimo-em-2026-e-de-r-1-518.json",
+   "data": "2026-11-13T13:23:46.585Z"
+  },
+  {
+   "rotulo": "Live · Selic rate, old value (PT)",
+   "texto": "A taxa Selic está atualmente em 10,5% ao ano.",
+   "arquivo": "dados/gravacoes/2026-11-13T13-25-47-199Z-a-taxa-selic-esta-atualmente-em-10-5-ao-ano.json",
+   "data": "2026-11-13T13:25:47.199Z"
   },
   {
    "rotulo": "Live · Netflix price, in slang (PT)",
@@ -54,10 +60,10 @@
    "data": "2026-11-12T23:15:31.545Z"
   },
   {
-   "rotulo": "Live · Twitter CEO + Python 2",
-   "texto": "Jack Dorsey is the current CEO of Twitter, and Python 2.7 still receives official security updates",
-   "arquivo": "dados/gravacoes/2026-11-13T14-02-51-924Z-jack-dorsey-is-the-current-ceo-of-twitter-and-py.json",
-   "data": "2026-11-13T14:02:51.924Z"
+   "rotulo": "Live · Twitter CEO",
+   "texto": "Jack Dorsey is the current CEO of Twitter.",
+   "arquivo": "dados/gravacoes/2026-11-13T13-36-58-246Z-jack-dorsey-is-the-current-ceo-of-twitter.json",
+   "data": "2026-11-13T13:36:58.246Z"
   }
  ],
  "limites": {
