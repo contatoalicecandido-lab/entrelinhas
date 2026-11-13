@@ -51,3 +51,21 @@ console.log(`\n${n} testes passaram.`);
   assert.equal(avaliarAtualidade(fonte, "regulamento", ref, selic.dias).status, "STALE");
   console.log("PASSOU: Selic e inflação têm janela própria (45 e 30 dias), com motivo na triagem");
 }
+
+// A janela da entidade chega à nota final da afirmação (agregador).
+{
+  const assert = require("node:assert/strict");
+  const { agregarEvidencias } = require("../src/agregador");
+  const ev = data => ({
+    fonte: { url: `https://site${data}.com/x`, tipo_fonte: "tavily_search", data_publicacao: data, escopo_data: "PAGE", categoria_fonte: "NOTICIA", conteudo: `Texto ${data}` },
+    correspondencia: { status: "MATCH" }, classificacao: { postura: "SUPPORTS" }, atualidade: { status: "FRESH" }
+  });
+  const base = { texto: "A taxa Selic está em 15% ao ano.", tipo_afirmacao: "regulamento", evidencias: [ev("2026-08-01"), ev("2026-08-02")] };
+  const ref = { asOf: new Date("2026-11-13T12:00:00Z") };
+  const anual = agregarEvidencias(base, ref).atualidade_afirmacao;
+  const selic = agregarEvidencias({ ...base, janela_validade: { dias: 45, origem: "ENTITY" } }, ref).atualidade_afirmacao;
+  assert.equal(anual.window_days, 365);
+  assert.equal(selic.window_days, 45);
+  assert.ok(selic.score < anual.score, "com 45 dias, páginas de agosto valem menos para a Selic");
+  console.log("PASSOU: a janela da Selic (45 dias) chega à nota final");
+}

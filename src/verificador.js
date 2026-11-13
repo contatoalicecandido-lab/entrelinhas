@@ -217,6 +217,7 @@ function agregarResultadoAfirmacao(resultado, opcoes) {
     {
       texto: resultado.texto,
       tipo_afirmacao: resultado.tipo_afirmacao,
+      janela_validade: resultado.janela_validade,
       evidencias: resultado.evidencias
     },
     { dominiosOficiais, asOf: opcoes.dataReferencia ?? new Date() }

@@ -6,7 +6,7 @@ const { clusterizarDependencias } = require("./independencia-fontes");
 const { calcularConcordancia, estaCorroborada } = require("./concordancia");
 const { classificarFonte } = require("./tipo-fonte");
 
-const VERSAO_REGRAS = "1.2.0";
+const VERSAO_REGRAS = "1.3.0";
 
 const VEREDITOS = [
   "ATUAL",

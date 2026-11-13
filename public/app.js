@@ -300,7 +300,7 @@ function renderizarResultado(dados) {
   $("aviso-simulado").hidden = !dados.simulado;
   const g = dados.gravacao;
   $("aviso-gravado").hidden = !g;
-  if (g) $("aviso-gravado").textContent = `Recorded live check from ${formatarDataCurta(String(g.data).slice(0, 10))}: real web sources found with Tavily and real model calls through Bifrost, replayed here without API keys. To check your own text, run Entrelinhas locally (see the GitHub README).`;
+  if (g) $("aviso-gravado").textContent = `Recorded live check from ${formatarDataCurta(String(g.data).slice(0, 10))}: real web sources found with Tavily and real model calls through Bifrost, replayed here without API keys.${dados.reavaliacao ? " Verdicts and scores are recomputed with the current rules from those same sources; the updated answer is the one written at recording time." : ""} To check your own text, run Entrelinhas locally (see the GitHub README).`;
   const afirmacoes = dados.afirmacoes ?? [];
   const porVeredito = {};
   for (const a of afirmacoes) {
@@ -540,9 +540,12 @@ function criarMetricas(afirmacao) {
     if (at.status === "CURRENT" && at.score < 50) {
       m2.append(el("p", "metrica-nota", "The score is lower because even the newest confirming source is getting older. It is still inside the window, so the claim counts as current."));
     }
+    // A janela usada de fato (a da Selic é 45 dias, não a anual das regras).
+    const entidade = afirmacao.janela_validade?.origem === "ENTITY";
     const janela = at.basis === "PAGE_DATE_GENERAL_WINDOW"
       ? `general ${at.window_days}-day window`
-      : cat ? `${cat[1]}-day window for ${PLURAIS[afirmacao.tipo_afirmacao]}` : "";
+      : entidade ? `${at.window_days}-day window for this value (${afirmacao.janela_validade.motivo})`
+        : cat ? `${at.window_days ?? cat[1]}-day window for ${PLURAIS[afirmacao.tipo_afirmacao]}` : "";
     m2.append(el("p", "metrica-nota",
       `Source recency ${at.evidence_recency} × support ${Math.round(at.support_share * 100)}%. ` +
       `Based on ${FUNDAMENTOS[at.basis] ?? "source dates"}${janela ? ` · ${janela}` : ""}` +

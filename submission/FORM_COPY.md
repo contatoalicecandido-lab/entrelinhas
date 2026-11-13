@@ -29,8 +29,8 @@ Entrelinhas works in six steps.
    - a scientific search for health and science claims;
    - an official-domain search. Brazilian authorities such as the Banco Central or gov.br are detected automatically.
 
-   It extracts up to five sources of different types and never two from one site.
-3. **Reads the sources.** One Bifrost call per claim reads all of them, knowing today's date, and decides for each source whether it supports or contradicts the claim. The output is validated: every quote and every fact date must exist in the source text.
+   It extracts up to five sources of different types and never two from one site (subdomains count as the same site).
+3. **Reads the sources.** One Bifrost call per claim reads all of them, knowing today's date, and decides for each source whether it supports or contradicts the claim. The output is validated: every quote and every fact date must exist in the source text, and a stance whose quote is not in the source is not counted.
 4. **Weighs.** Deterministic rules group copies, weigh source types (official and scientific 3, news 2, reference 1.5, other 1, blog 0.25) and compute:
    - source agreement;
    - a **freshness score per claim**: source recency × support share, with its basis and confidence;
@@ -79,14 +79,14 @@ Entrelinhas works in six steps.
 
 ## Accuracy on real claims
 
-On 15 real claims with known answers (8 true, 7 outdated, in Portuguese and English), run live on 13 Nov 2026:
-- **14 of 15** got the exact verdict. The other one, Netflix, came back Conflicting, which still warns the reader;
-- **15 of 15** went in the right direction;
-- **0** outdated claims were confirmed as true, and **0** true claims were marked as contradicted.
+On 15 real claims with known answers (8 true, 7 outdated, in Portuguese and English):
+- live run on 13 Nov 2026: **14 of 15** exact verdicts, **15 of 15** on the right side;
+- the same recorded evidence re-scored with the current, stricter rules (after an adversarial review): **13 of 15** exact, **15 of 15** on the right side. Pix dropped to “Supported, unconfirmed” because most of its sources are company blogs;
+- in both, **0** outdated claims were confirmed as true and **0** true claims were marked as contradicted.
 
 How to read it honestly:
-- of the 6 outdated claims caught, 1 was contradicted by a dated official source and 5 by most independent sources without an official date. The interface says so;
-- the rules were improved after a first run on the same 15 claims (11 of 15 exact on 12 Nov), so `avaliacao/casos-novos-2026-11-13.json` adds 8 new claims written after the fixes, to be run as an independent check of the current code (the news time filter and freshness score v1.1 came after the 13 Nov run);
+- the rules were improved after a first run on the same 15 claims (11 of 15 exact on 12 Nov), so `avaliacao/casos-novos-2026-11-13.json` adds 8 new claims written after the fixes, as an independent check of the current code;
+- `avaliacao/linha-de-base.js` asks the model alone, without sources, about the same claims, to measure the gain over “just asking the AI”;
 - 15 claims show behavior; they are not a statistical accuracy estimate.
 
 Every check of the run is recorded in `gravacoes/`, and the results are in `avaliacao/`.
@@ -103,7 +103,7 @@ Every check of the run is recorded in `gravacoes/`, and the results are in `aval
 
 - Live checks run locally with your own Tavily and Bifrost keys. The public demo (https://contatoalicecandido-lab.github.io/entrelinhas/) replays recorded live checks and built-in examples without keys.
 - Scores are documented heuristics, not calibrated probabilities; independent sources can share an error.
-- Validity windows are configurable defaults; the Selic rate, for example, moves faster than the yearly window for rules.
+- Validity windows are configurable defaults. Fast official values have their own (Selic 45 days, inflation 30 days); others may still need one.
 - The free model tier limits tokens per minute; a check takes about 15 to 90 s.
 
 ## Repository and demo

@@ -15,11 +15,9 @@ const ALGORITMO = "SOURCE_AGREEMENT_INDEX";
 const VERSAO = "1.1.0";
 
 function pesoDoGrupo(grupo) {
-  // O grupo vale pelo seu tipo de fonte mais forte. Se o modelo tomou posição
-  // sem nenhuma citação conferida no texto da fonte, o voto vale metade.
-  const peso = Math.max(...grupo.evidencias.map(e => PESOS[e.categoria_fonte] ?? PESOS.OUTRO));
-  const semCitacao = grupo.evidencias.every(e => e.citacao_verificada === false);
-  return semCitacao ? peso / 2 : peso;
+  // O grupo vale pelo seu tipo de fonte mais forte. (Uma posição cuja
+  // citação não existe no texto da fonte já foi descartada na análise.)
+  return Math.max(...grupo.evidencias.map(e => PESOS[e.categoria_fonte] ?? PESOS.OUTRO));
 }
 
 function tipoDoGrupo(grupo) {

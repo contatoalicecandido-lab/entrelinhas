@@ -136,6 +136,12 @@ function classificarFonte(url, opcoes = {}) {
   if (pertence(h, BLOG_FORUM)) return { tipo: "BLOG_FORUM", rotulo: ROTULOS.BLOG_FORUM, motivo: "KNOWN_BLOG_OR_FORUM" };
   if (pertence(h, REFERENCIA)) return { tipo: "REFERENCIA", rotulo: ROTULOS.REFERENCIA, motivo: "KNOWN_REFERENCE" };
   if (pertence(h, NOTICIAS)) return { tipo: "NOTICIA", rotulo: ROTULOS.NOTICIA, motivo: "KNOWN_NEWS_OUTLET" };
+  // Página dentro de /blog/ de um site qualquer é blog, mesmo vindo da busca de notícias.
+  try {
+    if (/^\/(blog|blogs|forum|forums|community)(\/|$)/i.test(new URL(String(url)).pathname)) {
+      return { tipo: "BLOG_FORUM", rotulo: ROTULOS.BLOG_FORUM, motivo: "BLOG_PATH" };
+    }
+  } catch { /* URL já validada acima */ }
   // Vir da busca de notícias não basta para ser notícia (blogs aparecem lá).
   // Só conta como notícia se o endereço tiver cara de matéria datada.
   if (opcoes.deBuscaDeNoticias && /\/20\d{2}\/\d{1,2}(\/|-)/.test(String(url))) {

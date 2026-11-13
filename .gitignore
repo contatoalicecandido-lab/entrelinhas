@@ -37,3 +37,4 @@ dados/resultado-benchmark.json
 # Atalho local para rodar os testes ao vivo
 RODAR-TESTE.command
 PUBLICAR.command
+.revisao/

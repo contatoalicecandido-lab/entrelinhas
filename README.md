@@ -43,10 +43,10 @@ Large language models confidently repeat facts that have changed: prices go up, 
    - a scientific search for health and science claims;
    - a search on official domains, which come from the user's trusted sites or from the Brazilian authority map.
 
-   Up to five sources of different types are extracted, never two from one site, and blogs come last. Results that carry no content are dropped.
-4. **Reads all sources for a claim in one Bifrost call**. The model decides whether each source is about the same object, and whether it supports or contradicts the claim. It also returns the date of the fact. Its output is validated: every quote, and every fact date, must exist in the source text. Pages are cleaned of menus and links first, and the most relevant passages are selected.
+   Up to five sources of different types are extracted, never two from one site (subdomains such as help.openai.com and openai.com count as one site), and blogs come last. Results that carry no content and search-engine result pages are dropped.
+4. **Reads all sources for a claim in one Bifrost call**. The model decides whether each source is about the same object, and whether it supports or contradicts the claim. It also returns the date of the fact. Its output is validated: every quote shown, and every fact date, must exist in the source text, and a stance whose quote is not in the source text is not counted at all (this blocks instructions hidden in a page and invented quotes). Pages are cleaned of menus and links first, and the most relevant passages are selected.
 5. **Weighs and explains deterministically**:
-   - copies and pages from the same site count once;
+   - copies and pages from the same site count once: same registrable domain, same canonical URL, the same text, or one text contained in another (the same article wrapped in different menus);
    - source types are weighted (official 3, scientific 3, news 2, reference 1.5, other 1, blog/forum 0.25);
    - agreement, freshness and a verdict are computed.
 
@@ -117,38 +117,40 @@ Calibrating the windows against labeled cases is future work, using the benchmar
 
 Run it against a live server with `node avaliacao/rodar-casos-reais.js`. It pauses 45 s between claims because of the free model tier's tokens-per-minute limit.
 
-**Result of the live run on 13 Nov 2026** (`avaliacao/resultado-casos-reais-2026-11-13.json`):
+**Result of the live run on 13 Nov 2026** (`avaliacao/resultado-casos-reais-2026-11-13.json`), and the **same recorded evidence re-scored with the current rules** after an adversarial review tightened them (`avaliacao/reavaliacao-casos-reais-2026-11-13.json`, rebuilt by `node avaliacao/reavaliar-benchmark.js`, no new calls):
 
-| | |
-|---|---|
-| Exact verdict (Current/Corroborated for true claims, Contradicted by sources or Likely outdated for outdated ones) | **14 of 15** (93%) |
-| Right direction (also counting “Supported but unconfirmed” and “Conflicting”) | **15 of 15** |
-| Outdated claims confirmed as true | **0** |
-| True claims marked as contradicted | **0** |
-
-| Claim | Known answer | Verdict |
+| | Live run, 13 Nov | Current rules (same evidence) |
 |---|---|---|
-| Salário mínimo 2026 é R$ 1.621 | true | Corroborated |
-| Salário mínimo 2026 é R$ 1.518 | outdated | Likely outdated |
-| Selic está em 13,75% | true | Corroborated |
-| Selic está em 10,5% | outdated | Contradicted by sources |
-| Netflix Padrão custa R$ 44,90 | outdated (R$ 51,90 since 15 Oct) | Conflicting (partial) |
-| Qdenga no SUS, 10 a 14 anos | true | Corroborated |
-| LGPD em vigor desde 2020 | true | Corroborated |
-| Pix gratuito para pessoa física | true | Corroborated |
-| Node.js 20 is Active LTS | outdated (EOL 30 Apr 2026) | Contradicted by sources |
-| Node.js 22 still gets security updates | true | Corroborated |
-| ChatGPT Plus costs $20/month | true | Corroborated |
-| Sam Altman is CEO of OpenAI | true | Corroborated |
-| Python 2.7 still gets security updates | outdated | Contradicted by sources |
-| Jack Dorsey is CEO of Twitter | outdated | Contradicted by sources |
-| GPT-4 is OpenAI's newest model | outdated | Contradicted by sources |
+| Exact verdict (Current/Corroborated for true claims, Contradicted by sources or Likely outdated for outdated ones) | 14 of 15 | **13 of 15** |
+| Right direction (also counting “Supported but unconfirmed” and “Conflicting”) | 15 of 15 | **15 of 15** |
+| Outdated claims confirmed as true | 0 | **0** |
+| True claims marked as contradicted | 0 | **0** |
+
+| Claim | Known answer | Live run | Current rules |
+|---|---|---|---|
+| Salário mínimo 2026 é R$ 1.621 | true | Corroborated | Corroborated |
+| Salário mínimo 2026 é R$ 1.518 | outdated | Likely outdated | Likely outdated |
+| Selic está em 13,75% | true | Corroborated | Corroborated |
+| Selic está em 10,5% | outdated | Contradicted by sources | Contradicted by sources |
+| Netflix Padrão custa R$ 44,90 | outdated (R$ 51,90 since 15 Oct) | Conflicting (partial) | Conflicting (partial) |
+| Qdenga no SUS, 10 a 14 anos | true | Corroborated | Corroborated |
+| LGPD em vigor desde 2020 | true | Corroborated | Corroborated |
+| Pix gratuito para pessoa física | true | Corroborated | Supported, unconfirmed (partial) |
+| Node.js 20 is Active LTS | outdated (EOL 30 Apr 2026) | Contradicted by sources | Contradicted by sources |
+| Node.js 22 still gets security updates | true | Corroborated | Corroborated |
+| ChatGPT Plus costs $20/month | true | Corroborated | Corroborated |
+| Sam Altman is CEO of OpenAI | true | Corroborated | Corroborated |
+| Python 2.7 still gets security updates | outdated | Contradicted by sources | Contradicted by sources |
+| Jack Dorsey is CEO of Twitter | outdated | Contradicted by sources | Contradicted by sources |
+| GPT-4 is OpenAI's newest model | outdated | Contradicted by sources | Contradicted by sources |
+
+Why Pix dropped: four of its five supporting sources are company blogs, and “Corroborated” now needs supporting weight of at least 4 (one official source plus one news outlet, for example), so three or four weak sites are not enough. It is still on the right side: “Supported, unconfirmed” tells the reader to look closer.
 
 **Read these numbers with their limits:**
 - **How strong each “outdated” verdict is.** Of the 6 outdated claims caught, 1 was contradicted by a current official source with a date (*Likely outdated*). The other 5 were contradicted by most independent sources, but no official source dated the fact (*Contradicted by sources*, internally `CONTRADICAO_FRACA`, “weak contradiction”). The interface presents those 5 as a strong warning, not a final ruling.
 - **The partial case.** Netflix found sources with both the old and the new price, so the verdict was *Conflicting* instead of contradicted. It still tells the reader not to rely on the claim.
-- **Low freshness on true claims.** Some true claims (LGPD, Pix, ChatGPT Plus, Node.js 22) came back *Corroborated* with a low freshness score. That is intended: the sources that confirm them are older than the window for that kind of fact, so the report labels them *Aging* and suggests looking for a recent source.
-- **Tuned on the same cases.** The rules were improved after the first run on these same 15 claims, so 14 of 15 is not an independent accuracy estimate. To check that honestly, `avaliacao/casos-novos-2026-11-13.json` holds 8 new claims (4 true, 4 outdated) written after the fixes and never used to tune anything. Run them with `CASOS=avaliacao/casos-novos-2026-11-13.json node avaliacao/rodar-casos-reais.js`. The news `time_range` filter was added after the 13 Nov run, so these new cases also test it.
+- **Low freshness on true claims.** Some true claims (Pix, ChatGPT Plus) come back with a low freshness score. That is intended: the non-blog sources that confirm them are older than the window for that kind of fact, so the report labels them *Aging* and suggests looking for a recent source.
+- **Tuned on the same cases.** The rules were improved after the first run on these same 15 claims, so these numbers are not an independent accuracy estimate. To check that honestly, `avaliacao/casos-novos-2026-11-13.json` holds 8 new claims (4 true, 4 outdated) written after the fixes and never used to tune anything. Run them with `CASOS=avaliacao/casos-novos-2026-11-13.json node avaliacao/rodar-casos-reais.js`. The news `time_range` filter was added after the 13 Nov run, so these new cases also test it.
 - **Compared with what?** `avaliacao/linha-de-base.js` asks the model alone (through Bifrost, no search) whether each claim is still true, with today's date, so the gain of Entrelinhas over “just asking the AI” can be measured on the same cases.
 - **Small sample.** 15 claims show behavior; they are not a statistical accuracy estimate.
 
@@ -161,6 +163,15 @@ What the run taught us, already fixed:
 - Long-standing facts (“em vigor desde 2020”) were scored only by the date the fact started, so freshness also uses the page dates of the sources that confirm the claim. When every confirming page is old, the claim still comes back *Aging* (LGPD, Pix and ChatGPT Plus in the 13 Nov run): it holds, but no recent source confirmed it. The card says so.
 - After the run, a third review found that the freshness score still **averaged** all dated sources, so one recent confirmation was diluted by older pages (ChatGPT Plus showed 21 next to *Current*). Version 1.1 of the score uses the newest confirming source. The public demo's recordings were re-scored with 1.1 from the data they already store (dates, stances, agreement, check date), with no new calls; each re-scored card keeps `recalculated_from: "1.0.0"`. The 13 Nov benchmark files are kept exactly as recorded.
 - The updated answer, which is the last call, sometimes hit the free tier's per-minute limit, so the client now waits for Bifrost's `retry_after_ms`.
+- An adversarial review by five simulated judges (13 Nov) tried to break the engine and found real holes, now closed with a test for each:
+  - a claim could be green while most weighted sources disagreed; now it becomes *Conflicting*;
+  - an invented quote (or an instruction hidden in a page that the model obeyed) still counted; now a stance whose quote is not in the source text is not counted;
+  - a fact date older than the page (“em vigor desde 2020” in a 2026 article) made the page look incoherent and discarded it (LGPD scored 0); now the page confirms the fact on its publication date;
+  - three weak sites could make a claim *Corroborated*, and one blog could make it *Contradicted*; both now need real weight;
+  - look-alike domains (salariominimo.com.br) and company forums counted as official, blogs from the news search counted as news, and subdomains counted as separate sources; all fixed;
+  - the same article wrapped in different menus, or copied with one word changed, counted several times; now grouped;
+  - a recent blog post could make an old fact look current; freshness now prefers stronger sources;
+  - the local server accepted requests from other websites (CSRF and DNS rebinding); now it checks the content type, the Origin and the Host.
 - One updated answer came back in the wrong language, so the language is now pinned.
 
 15 claims is a small sample: this shows behavior on real cases, not a statistical accuracy estimate.
@@ -257,7 +268,7 @@ Request (JSON):
 | `modo` | yes | `"real"` for a live check (Tavily + Bifrost), `"exemplo"` for the offline simulated example. |
 | `dominiosOficiais` | no | Extra trusted sites, for example `["gov.br", "nodejs.org"]`. Adds one Tavily search per claim. |
 | `tipo` | no | Force one claim type: `preco`, `versao_api`, `regulamento` or `empresa`. By default it is detected per claim. |
-| `simularQuedaModelo` | no | `true` sends the first model call to a model that does not exist, to show Bifrost answering from a backup. |
+| `simularQuedaModelo` | no | `true` sends every model call of the check to a model that does not exist first, so Bifrost answers each one from a backup. |
 
 ```bash
 curl -s http://127.0.0.1:3000/api/verificar \

@@ -9,6 +9,7 @@ const { criarBanco } = require("../src/banco");
 const { criarVerificadorExemplo, listarExemplos } = require("../src/modo-exemplo");
 const { configuracaoModelos } = require("../src/bifrost");
 const { calcularAtualidadeAfirmacao } = require("../src/atualidade-afirmacao");
+const { reavaliarGravacao } = require("./reavaliar-gravacao");
 const { VALIDADE_MAX_DIAS } = require("../src/atualidade");
 
 // Gravações antigas foram feitas com a versão 1.0 da nota de atualidade
@@ -90,7 +91,8 @@ async function principal() {
   const gravacoes = [];
   for (const item of selecao) {
     const dados = JSON.parse(fs.readFileSync(path.join(RAIZ, "gravacoes", item.arquivo), "utf8"));
-    recalcularAtualidade(dados);
+    // Mesmas fontes e mesma leitura do modelo, com as regras atuais.
+    reavaliarGravacao(dados);
     const destino = `dados/gravacoes/${item.arquivo}`;
     fs.writeFileSync(path.join(DOCS, destino), JSON.stringify(dados));
     gravacoes.push({ rotulo: item.rotulo, texto: dados.texto_original, arquivo: destino, data: dados.gravado_em ?? dados.verificado_em });
