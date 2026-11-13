@@ -26,7 +26,7 @@ function exemplos(agora) {
   });
   return {
     en: {
-      rotulo: "Example · English",
+      rotulo: "Simulated example · EN",
       texto: "Acme Cloud's Pro plan costs $20 per month. The Acme API still supports the /v1/completions endpoint. Under the Data Act of 2025, companies with more than 50 employees must appoint a data protection officer.",
       dominios: ["acme.example", "gov.example"],
       afirmacoes: [
@@ -48,7 +48,7 @@ function exemplos(agora) {
       ]
     },
     pt: {
-      rotulo: "Exemplo · Português",
+      rotulo: "Simulated example · PT",
       texto: "O plano Premium da Fictícia Telecom custa a partir de R$ 99,90 por mês. A Fictícia Telecom atualmente tem cerca de 5 mil funcionários.",
       dominios: ["ficticiatelecom.example"],
       afirmacoes: [

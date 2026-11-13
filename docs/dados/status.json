@@ -4,7 +4,7 @@
  "exemplos": [
   {
    "id": "en",
-   "rotulo": "Example · English",
+   "rotulo": "Simulated example · EN",
    "texto": "Acme Cloud's Pro plan costs $20 per month. The Acme API still supports the /v1/completions endpoint. Under the Data Act of 2025, companies with more than 50 employees must appoint a data protection officer.",
    "dominios": [
     "acme.example",
@@ -14,7 +14,7 @@
   },
   {
    "id": "pt",
-   "rotulo": "Exemplo · Português",
+   "rotulo": "Simulated example · PT",
    "texto": "O plano Premium da Fictícia Telecom custa a partir de R$ 99,90 por mês. A Fictícia Telecom atualmente tem cerca de 5 mil funcionários.",
    "dominios": [
     "ficticiatelecom.example"
@@ -30,19 +30,19 @@
    "data": "2026-11-12T23:26:59.580Z"
   },
   {
-   "rotulo": "Ao vivo · Salário mínimo + Selic",
+   "rotulo": "Live · Brazil minimum wage + Selic rate (PT)",
    "texto": "O salário mínimo em 2026 é de R$ 1.518 e a taxa Selic está atualmente em 10,5% ao ano.",
    "arquivo": "dados/gravacoes/2026-11-12T23-45-04-017Z-o-salario-minimo-em-2026-e-de-r-1-518-e-a-taxa-s.json",
    "data": "2026-11-12T23:45:04.018Z"
   },
   {
-   "rotulo": "Ao vivo · Netflix, com gíria",
+   "rotulo": "Live · Netflix price, in slang (PT)",
    "texto": "O Netflix padrão tá saindo por 44,90 conto por mês.",
    "arquivo": "dados/gravacoes/2026-11-12T23-10-42-867Z-o-netflix-padrao-ta-saindo-por-44-90-conto-por-m.json",
    "data": "2026-11-12T23:10:42.867Z"
   },
   {
-   "rotulo": "Ao vivo · Vacina Qdenga no SUS",
+   "rotulo": "Live · Dengue vaccine on Brazil's SUS (PT)",
    "texto": "A vacina da dengue Qdenga é aplicada pelo SUS em crianças e adolescentes de 10 a 14 anos.",
    "arquivo": "dados/gravacoes/2026-11-12T23-15-31-545Z-a-vacina-da-dengue-qdenga-e-aplicada-pelo-sus-em.json",
    "data": "2026-11-12T23:15:31.545Z"

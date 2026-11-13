@@ -41,7 +41,7 @@
     <section class="hero" aria-labelledby="titulo-hero">
       <p class="sobretitulo">A stale-answer detector for AI applications</p>
       <h1 id="titulo-hero">Every AI answer has <br class="quebra">an <em>expiry date.</em></h1>
-      <p class="hero-texto">Entrelinhas reads between the lines. It finds the claims that go out of date, checks each one against live sources, scores how fresh it still is and rewrites the answer with citations.</p>
+      <p class="hero-texto">Entrelinhas, Portuguese for “between the lines”, reads what an AI answer takes for granted. It finds the claims that go out of date, checks each one against live sources, scores how fresh it still is and rewrites the answer with citations.</p>
 
       <section class="console" aria-labelledby="titulo-entrada">
         <h2 id="titulo-entrada" class="sr">Check an answer</h2>
@@ -70,7 +70,8 @@
           </details>
         </div>
         <div class="exemplos-linha">
-          <span class="rotulo">Try</span>
+          <button id="ver-real" class="ver-real" type="button">See a real check</button>
+          <span class="exemplos-ou">or try</span>
           <div id="exemplos" class="exemplos" aria-label="Load an example"></div>
         </div>
         <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
@@ -145,9 +146,10 @@
         <p class="rotulo">The problem</p>
         <h2 id="titulo-problema">Models freeze the world on the day they were trained. <span class="apagado">The world keeps moving.</span></h2>
       </div>
+      <div class="parede" aria-hidden="true"><span class="">Node.js 16 is the current LTS release.</span><span class="laranja">A Selic está em 2% ao ano.</span><span class="">Python 2.7 still gets security updates.</span><span class="laranja">Twitter is run by Jack Dorsey.</span><span class="">Internet Explorer is Microsoft’s default browser.</span><span class="">O salário mínimo é R$ 1.212.</span><span class="laranja">Queen Elizabeth II is the UK’s monarch.</span><span class="">Windows 10 is the latest Windows.</span><span class="">The UK is a member of the EU.</span><span class="laranja">Pluto is the ninth planet.</span><span class="">Node.js 20 is the recommended version for production.</span><span class="laranja">Python 2 is still supported.</span><span class="">Node.js 16 is the current LTS release.</span><span class="laranja">A Selic está em 2% ao ano.</span><span class="">Python 2.7 still gets security updates.</span><span class="laranja">Twitter is run by Jack Dorsey.</span><span class="">Internet Explorer is Microsoft’s default browser.</span><span class="">O salário mínimo é R$ 1.212.</span><span class="laranja">Queen Elizabeth II is the UK’s monarch.</span><span class="">Windows 10 is the latest Windows.</span><span class="">The UK is a member of the EU.</span><span class="laranja">Pluto is the ninth planet.</span><span class="">Node.js 20 is the recommended version for production.</span><span class="laranja">Python 2 is still supported.</span></div>
       <div class="ladrilhos quatro">
         <div class="ladrilho"><p class="validade-rotulo">Goes stale in about</p><p class="validade">a month</p><h3>Prices</h3><p>Plans and fees change monthly. A month-old price is already a guess.</p></div>
-        <div class="ladrilho"><p class="validade-rotulo">Goes stale in about</p><p class="validade">a quarter</p><h3>Software versions</h3><p>Releases and LTS lines turn over every few months.</p></div>
+        <div class="ladrilho"><p class="validade-rotulo">Goes stale in about</p><p class="validade">a quarter</p><h3>Software versions</h3><p>Releases and long-term support versions turn over every few months.</p></div>
         <div class="ladrilho"><p class="validade-rotulo">Goes stale in about</p><p class="validade">six months</p><h3>Company facts</h3><p>Leaders, products and policies drift quietly.</p></div>
         <div class="ladrilho"><p class="validade-rotulo">Goes stale in about</p><p class="validade">a year</p><h3>Laws and rules</h3><p>Slow to change, and costly when an answer misses it.</p></div>
       </div>
@@ -204,10 +206,30 @@
       </figure>
     </div>
 
+    <figure class="previa">
+      <div class="previa-texto">
+        <p class="rotulo">Every claim gets its own score</p>
+        <h3>Not one verdict for the whole answer. A verdict, an agreement score and a freshness status for each claim.</h3>
+        <p>From the same recorded check. Two claims, two very different outcomes.</p>
+      </div>
+      <div class="previa-linhas">
+        <div class="previa-linha">
+          <p class="previa-afirmacao">Node.js 20 is the current Active LTS release</p>
+          <span class="pilula tom-ruim">Contradicted by sources</span>
+          <dl><div><dt>Source agreement</dt><dd>0<small>/100</small></dd></div><div><dt>Sources</dt><dd>5 <small>contradict</small></dd></div><div><dt>Freshness</dt><dd class="ruim">Contradicted</dd></div></dl>
+        </div>
+        <div class="previa-linha">
+          <p class="previa-afirmacao">ChatGPT Plus costs $20 per month</p>
+          <span class="pilula tom-corroborado">Corroborated</span>
+          <dl><div><dt>Source agreement</dt><dd>100<small>/100</small></dd></div><div><dt>Sources</dt><dd>5 <small>support</small></dd></div><div><dt>Freshness</dt><dd class="bom">Current, newest 2 days old</dd></div></dl>
+        </div>
+      </div>
+    </figure>
+
     <div class="ladrilhos tres numeros">
       <div class="ladrilho numero"><p class="numero-grande">15<span> of 15</span></p><p>real claims placed on the right side: still true or out of date</p></div>
       <div class="ladrilho numero"><p class="numero-grande">0</p><p>stale claims ever confirmed as true</p></div>
-      <div class="ladrilho numero"><p class="numero-grande">23<span> of 50</span></p><p>model calls answered by a backup model when the main one hit its limit</p></div>
+      <div class="ladrilho numero"><p class="numero-grande">23</p><p>times Bifrost switched to a backup model on its own, so no check was lost to a rate limit</p></div>
     </div>
   </section>
 
@@ -229,6 +251,17 @@
 }
 <span class="c">→</span> claims, verdicts, freshness,
   updated answer, gateway trace</code></pre>
+        <p class="api-link"><a href="https://github.com/contatoalicecandido-lab/entrelinhas#readme">Read the API guide ↗</a></p>
+      </div>
+    </div>
+
+    <div class="usos">
+      <p class="rotulo">Built for teams that ship AI answers</p>
+      <div class="usos-grade">
+        <div class="uso"><h3>Support chatbots</h3><p>Catch the outdated price or policy before your bot tells a customer.</p></div>
+        <div class="uso"><h3>AI product teams</h3><p>One API call after generation adds verdicts, freshness and citations to any answer.</p></div>
+        <div class="uso"><h3>Content and newsrooms</h3><p>Check drafts written with AI against today’s sources before they go out.</p></div>
+        <div class="uso"><h3>Health, legal and finance</h3><p>Where a stale rule is a liability, every claim comes with its evidence trail.</p></div>
       </div>
     </div>
   </section>

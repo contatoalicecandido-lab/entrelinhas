@@ -143,19 +143,7 @@ function configurarModo() {
 function montarExemplos() {
   const caixa = $("exemplos");
   caixa.replaceChildren();
-  for (const ex of estado.status?.exemplos ?? []) {
-    const b = el("button", null, ex.rotulo);
-    b.type = "button";
-    b.addEventListener("click", () => {
-      $("texto").value = ex.texto;
-      $("dominios").value = ex.dominios.join(", ");
-      document.querySelector('input[name="modo"][value="exemplo"]').checked = true;
-      atualizarEntrada();
-      mostrarMensagem("");
-    });
-    caixa.append(b);
-  }
-  // Gravações de checagens reais (só na demonstração pública).
+  // Gravações de checagens reais primeiro (só na demonstração pública).
   for (const g of estado.status?.gravacoes ?? []) {
     const b = el("button", "gravacao", g.rotulo);
     b.type = "button";
@@ -170,6 +158,25 @@ function montarExemplos() {
     });
     caixa.append(b);
   }
+  for (const ex of estado.status?.exemplos ?? []) {
+    const b = el("button", null, ex.rotulo);
+    b.type = "button";
+    b.title = "Built-in example: the real engine with simulated, fictional sources";
+    b.addEventListener("click", () => {
+      $("texto").value = ex.texto;
+      $("dominios").value = ex.dominios.join(", ");
+      document.querySelector('input[name="modo"][value="exemplo"]').checked = true;
+      atualizarEntrada();
+      mostrarMensagem("");
+    });
+    caixa.append(b);
+  }
+  // "See a real check": carrega a primeira gravação real (ou o primeiro exemplo) e já verifica.
+  const verReal = $("ver-real");
+  const primeiro = caixa.querySelector("button.gravacao") ?? caixa.querySelector("button");
+  verReal.hidden = !primeiro;
+  if (!caixa.querySelector("button.gravacao")) verReal.textContent = "See an example check";
+  verReal.onclick = () => { if (!primeiro) return; primeiro.click(); verificar(); };
 }
 
 // Botão de favoritos: selecione um trecho em qualquer site (ChatGPT, Gemini,

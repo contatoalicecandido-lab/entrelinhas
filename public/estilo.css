@@ -466,18 +466,91 @@ a.fonte-titulo:hover { color: var(--laranja); }
 .validade-rotulo { margin: 0 0 8px; font-size: 13px; font-weight: 500; color: var(--suave); }
 .problema h3 { margin-top: 56px; }
 
-/* The problem: vidro de verdade, com formas de luz por trás */
-.problema .ladrilhos { position: relative; isolation: isolate; }
-.problema .ladrilhos::before, .problema .ladrilhos::after { content: ""; position: absolute; z-index: -1; border-radius: 50%; filter: blur(46px); pointer-events: none; }
-.problema .ladrilhos::before { width: 46%; height: 150%; left: 6%; top: -20%; background: rgba(255, 106, 48, .55); }
-.problema .ladrilhos::after { width: 34%; height: 120%; right: 4%; top: 0; background: rgba(255, 176, 137, .7); }
-.problema .ladrilho {
-  background: linear-gradient(150deg, rgba(255, 255, 255, .55), rgba(255, 255, 255, .18));
-  backdrop-filter: blur(22px) saturate(160%); -webkit-backdrop-filter: blur(22px) saturate(160%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .95), inset 0 0 0 1px rgba(255, 255, 255, .55), 0 24px 48px -30px rgba(120, 40, 10, .45);
-}
-.problema .ladrilho::before { display: none; }
 .metodo-requisitos { max-width: 480px; margin: 18px 0 0; font-size: 15px; font-weight: 600; color: #ffb089 !important; }
 .noite .rotulo { color: var(--laranja); }
 main.folha { overflow: hidden; }
 .problema h3 { white-space: nowrap; font-size: clamp(16px, 1.45vw, 20px); }
+
+/* =====================================================================
+   v6
+   ===================================================================== */
+/* Método: vidro escuro limpo; a luz laranja acende só no hover */
+.passos li {
+  background: linear-gradient(180deg, rgba(255, 255, 255, .07), rgba(255, 255, 255, .025));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .09), inset 0 0 0 1px rgba(255, 255, 255, .05), 0 20px 40px -24px rgba(0, 0, 0, .9);
+}
+.passos li:hover {
+  background: radial-gradient(120% 90% at 115% 40%, rgba(255, 90, 31, .3), rgba(255, 90, 31, 0) 55%), linear-gradient(180deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .03));
+  box-shadow: inset -8px 1px 14px -6px rgba(255, 84, 27, .6), inset 0 1px 0 rgba(255, 255, 255, .12), 0 24px 50px -20px rgba(255, 90, 31, .3);
+}
+
+/* The problem: um muro de respostas vencidas por trás, cartões de vidro preto na frente */
+.problema { position: relative; overflow: hidden; isolation: isolate; }
+.problema .secao-cabeca { position: relative; z-index: 2; }
+.parede {
+  position: absolute; z-index: 0; inset: 40% -4% -6% -4%; display: flex; flex-wrap: wrap; align-content: flex-start; gap: 10px 34px;
+  transform: rotate(-4deg); pointer-events: none; user-select: none;
+  mask-image: linear-gradient(180deg, transparent 0%, #000 22%, #000 78%, transparent 100%);
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 22%, #000 78%, transparent 100%);
+}
+.parede span { font-size: clamp(22px, 2.6vw, 36px); font-weight: 600; letter-spacing: -.04em; line-height: 1.25; white-space: nowrap; color: rgba(10, 10, 11, .11); text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: rgba(196, 58, 44, .35); }
+.parede span.laranja { color: rgba(255, 90, 31, .42); text-decoration-color: rgba(10, 10, 11, .3); }
+.problema .ladrilhos { position: relative; z-index: 1; }
+.problema .ladrilho {
+  color: #f3f2ee;
+  background: linear-gradient(155deg, rgba(24, 23, 22, .9), rgba(10, 10, 11, .82));
+  backdrop-filter: blur(14px) saturate(130%); -webkit-backdrop-filter: blur(14px) saturate(130%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .12), inset 0 0 0 1px rgba(255, 255, 255, .06), 0 30px 60px -28px rgba(0, 0, 0, .6);
+}
+.problema .ladrilho::before { display: none; }
+.problema .ladrilho:hover { transform: translateY(-3px); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .14), inset -8px 1px 14px -6px rgba(255, 84, 27, .55), 0 34px 70px -28px rgba(0, 0, 0, .7); }
+.problema .validade-rotulo { color: #9b9a96; }
+.problema h3 { color: #fff; }
+.problema .ladrilho p:not(.validade):not(.validade-rotulo) { color: #b6b4ae; }
+
+/* Hero: atalho para uma checagem real */
+.exemplos-linha { align-items: center; flex-wrap: wrap; gap: 10px 14px; }
+.ver-real { display: inline-flex; align-items: center; gap: 8px; border: 0; padding: 9px 16px; border-radius: 12px; background: rgba(255, 255, 255, .1); color: #fff; font-size: 14px; font-weight: 600; box-shadow: inset 0 1px 0 rgba(255, 255, 255, .14); transition: background .2s; }
+.ver-real::after { content: "↗"; color: var(--laranja); }
+.ver-real:hover { background: rgba(255, 255, 255, .16); }
+.exemplos-ou { font-size: 13px; color: #85837e; }
+
+/* Prévia de um relatório: cada afirmação com sua nota */
+.previa { margin: 12px 0 0; display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 12px; }
+.previa-texto { padding: 34px; border-radius: 28px; background: var(--papel); display: flex; flex-direction: column; justify-content: center; }
+.previa-texto h3 { font-size: clamp(22px, 2.2vw, 28px); font-weight: 400; letter-spacing: -.04em; line-height: 1.2; margin: 14px 0 12px; }
+.previa-texto p:not(.rotulo) { margin: 0; color: var(--suave); font-size: 14.5px; }
+.previa-linhas { display: grid; gap: 10px; padding: 14px; border-radius: 28px; background: var(--tinta); }
+.previa-linha { padding: 20px 22px; border-radius: 20px; background: linear-gradient(180deg, rgba(255, 255, 255, .07), rgba(255, 255, 255, .025)); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08); }
+.previa-afirmacao { margin: 0 0 6px; color: #fff; font-size: 18px; letter-spacing: -.03em; }
+.previa-linha .pilula { font-size: 15px; }
+.previa-linha .tom-ruim { --cor: #ff6a4f; --cor2: #ffb3a1; }
+.previa-linha .tom-corroborado { --cor: #5cc1e6; --cor2: #b5e8fa; }
+.previa-linha dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 14px 0 0; }
+.previa-linha dl div { padding: 12px 14px; border-radius: 14px; background: rgba(255, 255, 255, .05); }
+.previa-linha dt { font-size: 12px; color: #9b9a96; }
+.previa-linha dd { margin: 4px 0 0; color: #fff; font-size: 22px; font-weight: 300; letter-spacing: -.04em; }
+.previa-linha dd small { font-size: 12px; color: #9b9a96; letter-spacing: 0; }
+.previa-linha dd.ruim, .previa-linha dd.bom { font-size: 14px; font-weight: 600; letter-spacing: -.01em; padding-top: 6px; }
+.previa-linha dd.ruim { color: #ff8a70; }
+.previa-linha dd.bom { color: #6fd29a; }
+
+/* Para quem é + link da API */
+.api-link { margin: 18px 0 0 !important; }
+.api-link a { color: #fff; font-weight: 600; text-decoration: none; }
+.api-link a:hover { color: var(--laranja-claro); }
+.usos { position: relative; z-index: 1; margin-top: clamp(64px, 8vw, 96px); }
+.usos-grade { margin-top: 20px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.uso { padding: 26px; border-radius: 24px; background: linear-gradient(180deg, rgba(255, 255, 255, .07), rgba(255, 255, 255, .02)); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .09), inset 0 0 0 1px rgba(255, 255, 255, .05); transition: box-shadow .3s, transform .3s; }
+.uso:hover { transform: translateY(-3px); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .12), inset -8px 1px 14px -6px rgba(255, 84, 27, .55); }
+.uso h3 { font-size: 18px; font-weight: 600; letter-spacing: -.03em; color: #fff; }
+.uso p { margin: 8px 0 0; font-size: 14px; }
+
+@media (max-width: 1000px) {
+  .usos-grade { grid-template-columns: 1fr 1fr; }
+  .previa { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .usos-grade, .previa-linha dl { grid-template-columns: 1fr; }
+  .parede { inset: 30% -10% -4% -10%; }
+}
