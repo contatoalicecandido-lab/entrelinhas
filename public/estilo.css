@@ -479,3 +479,5 @@ a.fonte-titulo:hover { color: var(--laranja); }
 .problema .ladrilho::before { display: none; }
 .metodo-requisitos { max-width: 480px; margin: 18px 0 0; font-size: 15px; font-weight: 600; color: #ffb089 !important; }
 .noite .rotulo { color: var(--laranja); }
+main.folha { overflow: hidden; }
+.problema h3 { white-space: nowrap; font-size: clamp(16px, 1.45vw, 20px); }
