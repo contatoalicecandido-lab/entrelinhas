@@ -8,6 +8,28 @@ const path = require("node:path");
 const { criarBanco } = require("../src/banco");
 const { criarVerificadorExemplo, listarExemplos } = require("../src/modo-exemplo");
 const { configuracaoModelos } = require("../src/bifrost");
+const { calcularAtualidadeAfirmacao } = require("../src/atualidade-afirmacao");
+const { VALIDADE_MAX_DIAS } = require("../src/atualidade");
+
+// Gravações antigas foram feitas com a versão 1.0 da nota de atualidade
+// (média das fontes). A nota é calculada só a partir de dados que a gravação
+// já guarda (datas, posições, concordância, data da checagem), então dá para
+// recalculá-la com a regra atual sem nenhuma chamada nova. O resto da
+// gravação (fontes, veredito, resposta corrigida) fica exatamente como foi.
+function recalcularAtualidade(dados) {
+  let mudou = false;
+  for (const a of dados.afirmacoes ?? []) {
+    const ag = a.agregacao;
+    const janela = VALIDADE_MAX_DIAS[a.tipo_afirmacao];
+    if (!ag?.atualidade_afirmacao || !Number.isInteger(janela) || !ag.concordancia) continue;
+    if (ag.atualidade_afirmacao.algorithm_version === "1.1.0") continue;
+    const nova = calcularAtualidadeAfirmacao({ freshness: ag.freshness, recenciaPagina: ag.recencia_pagina, concordancia: ag.concordancia, janelaDias: janela });
+    if (!Number.isFinite(nova.score)) continue;
+    ag.atualidade_afirmacao = { ...nova, recalculated_from: ag.atualidade_afirmacao.algorithm_version };
+    mudou = true;
+  }
+  return mudou;
+}
 
 const RAIZ = path.join(__dirname, "..");
 const DOCS = path.join(RAIZ, "docs");
@@ -27,6 +49,8 @@ function enxugar(resultado) {
 
 async function principal() {
   fs.mkdirSync(path.join(DADOS, "exemplos"), { recursive: true });
+  // Recomeça a pasta de gravações: só entram as listadas em selecao.json.
+  fs.rmSync(path.join(DADOS, "gravacoes"), { recursive: true, force: true });
   fs.mkdirSync(path.join(DADOS, "gravacoes"), { recursive: true });
 
   // 1. Página: caminhos relativos, script do modo estático, CSP equivalente.
@@ -66,6 +90,7 @@ async function principal() {
   const gravacoes = [];
   for (const item of selecao) {
     const dados = JSON.parse(fs.readFileSync(path.join(RAIZ, "gravacoes", item.arquivo), "utf8"));
+    recalcularAtualidade(dados);
     const destino = `dados/gravacoes/${item.arquivo}`;
     fs.writeFileSync(path.join(DOCS, destino), JSON.stringify(dados));
     gravacoes.push({ rotulo: item.rotulo, texto: dados.texto_original, arquivo: destino, data: dados.gravado_em ?? dados.verificado_em });

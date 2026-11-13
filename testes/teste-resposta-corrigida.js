@@ -80,6 +80,22 @@ async function principal() {
       ok("faltou citação: pede de novo dizendo o que faltou; se ainda faltar, anexa");
     } finally { global.fetch = fetchOriginal2; }
   }
+  {
+    // O registro de mudanças nunca diz "kept" para uma afirmação contradita.
+    const fetchOriginal3 = global.fetch;
+    global.fetch = async () => new Response(JSON.stringify({ choices: [{ message: { content:
+      "{\"answer\":\"O mínimo é R$ 1.621 [1]. Pix é gratuito [4].\",\"changes\":[{\"claim_id\":\"afirmacao_1\",\"what\":\"kept\"},{\"claim_id\":\"afirmacao_2\",\"what\":\"kept\"}]}" } }] }), { status: 200 });
+    try {
+      const r = await gerarRespostaCorrigida("t", resultados, {});
+      const porId = Object.fromEntries(r.mudancas.map(m => [m.claim_id, m.what]));
+      const verdicts = Object.fromEntries(resultados.map(x => [x.id, x.agregacao?.veredito]));
+      for (const [id, what] of Object.entries(porId)) {
+        const contradita = ["CONTRADICAO_FRACA", "CONTRADITA_POR_FONTE_ATUAL"].includes(verdicts[id]);
+        if (contradita) assert.notEqual(what, "kept", `${id} é contradita: não pode ficar como kept`);
+      }
+      ok("registro de mudanças: afirmação contradita nunca aparece como kept");
+    } finally { global.fetch = fetchOriginal3; }
+  }
   console.log(`\n${n} testes passaram.`);
 }
 principal().catch(e => { console.error(e); process.exit(1); });

@@ -538,7 +538,7 @@ function criarMetricas(afirmacao) {
         : st.texto;
     m2.append(el("p", `metrica-etiqueta status-${at.status.toLowerCase()}`, rotuloStatus));
     if (at.status === "CURRENT" && at.score < 50) {
-      m2.append(el("p", "metrica-nota", "The score is lower because most confirming pages are older. The newest one is what keeps the claim current."));
+      m2.append(el("p", "metrica-nota", "The score is lower because even the newest confirming source is getting older. It is still inside the window, so the claim counts as current."));
     }
     const janela = at.basis === "PAGE_DATE_GENERAL_WINDOW"
       ? `general ${at.window_days}-day window`

@@ -78,6 +78,14 @@ async function testarDecompositor() {
   }
 }
 
+{
+  const { inferirTipoPorRegras } = require("../src/tipo-afirmacao");
+  for (const t of ["O zap é de graça.", "WhatsApp is free.", "O app é grátis."]) {
+    assert.equal(inferirTipoPorRegras(t), "preco", `"${t}" é afirmação de preço (de graça = R$ 0)`);
+    total += 1;
+  }
+}
+
 testarDecompositor().then(() => {
   console.log(`Resultado: ${total}/${total} casos de categoria passaram. Sem rede e sem banco.`);
 }).catch(erro => { console.error("FALHOU:", erro); process.exitCode = 1; });

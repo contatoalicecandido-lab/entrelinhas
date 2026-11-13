@@ -30,10 +30,10 @@
    "data": "2026-11-12T23:26:59.580Z"
   },
   {
-   "rotulo": "Live · Bifrost outage drill",
-   "texto": "Sam Altman is the CEO of OpenAI.",
-   "arquivo": "dados/gravacoes/2026-11-12T23-17-52-501Z-sam-altman-is-the-ceo-of-openai.json",
-   "data": "2026-11-12T23:17:52.501Z"
+   "rotulo": "Live · Netflix price, in slang (PT)",
+   "texto": "O Netflix padrão tá saindo por 44,90 conto por mês e o zap é de graça",
+   "arquivo": "dados/gravacoes/2026-11-13T14-04-12-875Z-o-netflix-padrao-ta-saindo-por-44-90-conto-por-m.json",
+   "data": "2026-11-13T14:04:12.875Z"
   },
   {
    "rotulo": "Live · Brazil minimum wage, old value (PT)",
@@ -42,16 +42,16 @@
    "data": "2026-11-13T13:23:46.585Z"
   },
   {
+   "rotulo": "Live · Bifrost outage drill",
+   "texto": "Sam Altman is the CEO of OpenAI.",
+   "arquivo": "dados/gravacoes/2026-11-12T23-17-52-501Z-sam-altman-is-the-ceo-of-openai.json",
+   "data": "2026-11-12T23:17:52.501Z"
+  },
+  {
    "rotulo": "Live · Selic rate, old value (PT)",
    "texto": "A taxa Selic está atualmente em 10,5% ao ano.",
    "arquivo": "dados/gravacoes/2026-11-13T13-25-47-199Z-a-taxa-selic-esta-atualmente-em-10-5-ao-ano.json",
    "data": "2026-11-13T13:25:47.199Z"
-  },
-  {
-   "rotulo": "Live · Netflix price, in slang (PT)",
-   "texto": "O Netflix padrão tá saindo por 44,90 conto por mês e o zap é de graça",
-   "arquivo": "dados/gravacoes/2026-11-13T14-04-12-875Z-o-netflix-padrao-ta-saindo-por-44-90-conto-por-m.json",
-   "data": "2026-11-13T14:04:12.875Z"
   },
   {
    "rotulo": "Live · Dengue vaccine on Brazil's SUS (PT)",

@@ -70,7 +70,7 @@ AI answer
 
 **Freshness score (0 to 100) = source recency × support share.**
 
-- **Source recency** uses a half-life equal to half of the category's validity window: `100 × 2^(−age / (window / 2))`.
+- **Source recency** is the recency of the **newest source that confirms the claim** (not an average: one recent confirmation is enough to show the fact still holds). It uses a half-life equal to half of the category's validity window: `100 × 2^(−age / (window / 2))`.
   - A source exactly half a window old scores 50.
   - A source one full window old scores 25 and is marked stale.
   - The age comes from the **date of the fact** when a source states it (for example “a partir de 1º de janeiro”, quoted and checked against the text: higher confidence). Otherwise it comes from the **page date** (low confidence).
@@ -144,6 +144,7 @@ Run it against a live server with `node avaliacao/rodar-casos-reais.js`. It paus
 - **The partial case.** Netflix found sources with both the old and the new price, so the verdict was *Conflicting* instead of contradicted. It still tells the reader not to rely on the claim.
 - **Low freshness on true claims.** Some true claims (LGPD, Pix, ChatGPT Plus, Node.js 22) came back *Corroborated* with a low freshness score. That is intended: the sources that confirm them are older than the window for that kind of fact, so the report labels them *Aging* and suggests looking for a recent source.
 - **Tuned on the same cases.** The rules were improved after the first run on these same 15 claims, so 14 of 15 is not an independent accuracy estimate. To check that honestly, `avaliacao/casos-novos-2026-11-13.json` holds 8 new claims (4 true, 4 outdated) written after the fixes and never used to tune anything. Run them with `CASOS=avaliacao/casos-novos-2026-11-13.json node avaliacao/rodar-casos-reais.js`. The news `time_range` filter was added after the 13 Nov run, so these new cases also test it.
+- **Compared with what?** `avaliacao/linha-de-base.js` asks the model alone (through Bifrost, no search) whether each claim is still true, with today's date, so the gain of Entrelinhas over “just asking the AI” can be measured on the same cases.
 - **Small sample.** 15 claims show behavior; they are not a statistical accuracy estimate.
 
 **Bifrost during this run** (`avaliacao/gateway-casos-reais-2026-11-13.json`, built by `node avaliacao/resumir-gateway.js 2026-11-13T13` from the 15 recorded checks in `gravacoes/`): 60 model calls, **22 answered by the backup model** when the main one hit the free tier's limit, 4 answers in an invalid format that Entrelinhas retried, and all 15 checks finished.
@@ -152,7 +153,8 @@ The first run, on 12 Nov 2026, scored 11 of 15 exact and 15 of 15 in the right d
 
 What the run taught us, already fixed:
 - Portuguese claims got international English news (Selic), so news search now uses Brazilian outlets only.
-- Long-standing facts (“em vigor desde 2020”) were scored only by the date the fact started, so freshness now also uses the page dates of the sources that confirm the claim, and the newest one counts. When every confirming page is old, the claim still comes back *Aging* (LGPD, Pix and ChatGPT Plus in the 13 Nov run): it holds, but no recent source confirmed it. The card says so.
+- Long-standing facts (“em vigor desde 2020”) were scored only by the date the fact started, so freshness also uses the page dates of the sources that confirm the claim. When every confirming page is old, the claim still comes back *Aging* (LGPD, Pix and ChatGPT Plus in the 13 Nov run): it holds, but no recent source confirmed it. The card says so.
+- After the run, a third review found that the freshness score still **averaged** all dated sources, so one recent confirmation was diluted by older pages (ChatGPT Plus showed 21 next to *Current*). Version 1.1 of the score uses the newest confirming source. The public demo's recordings were re-scored with 1.1 from the data they already store (dates, stances, agreement, check date), with no new calls; each re-scored card keeps `recalculated_from: "1.0.0"`. The 13 Nov benchmark files are kept exactly as recorded.
 - The updated answer, which is the last call, sometimes hit the free tier's per-minute limit, so the client now waits for Bifrost's `retry_after_ms`.
 - One updated answer came back in the wrong language, so the language is now pinned.
 
@@ -224,7 +226,7 @@ The demo runs claim decomposition, Tavily Search and Extract, source corresponde
 
 Available claim types are `preco`, `versao_api`, `regulamento`, and `empresa`. If no type is given, the category is resolved automatically: the model proposes one during decomposition (validated against the allowed list) and deterministic keyword rules are the fallback. The origin is recorded in `origem_tipo_afirmacao` (`CONFIGURADO`, `MODELO` or `HEURISTICA`). Official domains are optional. When supplied, Entrelinhas makes one additional Tavily search per claim to seek those domains while retaining the general search. This adds Tavily usage.
 
-Missing, invalid, future, or page-only dates do not produce a claim freshness score. Tavily `published_date`, HTTP `Last-Modified`, article metadata and document `dateModified` remain page/document-scoped. Visible “Updated/Atualizado em” labels remain `PAGE`; “prices consulted on” is recorded as `OBSERVATION`; only a visible update date linked to the claim's entity/value can become `ATTRIBUTE`. Schema.org `priceValidUntil` is retained as an `OFFER` validity signal and is not treated as an update timestamp. See [Tavily Search API](https://docs.tavily.com/documentation/api-reference/endpoint/search), [Tavily Extract API](https://docs.tavily.com/documentation/api-reference/endpoint/extract), and the detailed [temporal signal contract](notas/ESPECIFICACAO_FRESHNESS_SCORE.md).
+Missing, invalid or future dates never produce a score. Page-only dates (publication or update of the whole page) are used only as a low-confidence fallback when no source dates the fact itself, and the card then says the basis is the page date. Tavily `published_date`, HTTP `Last-Modified`, article metadata and document `dateModified` remain page/document-scoped. Visible “Updated/Atualizado em” labels remain `PAGE`; “prices consulted on” is recorded as `OBSERVATION`; only a visible update date linked to the claim's entity/value can become `ATTRIBUTE`. Schema.org `priceValidUntil` is retained as an `OFFER` validity signal and is not treated as an update timestamp. See [Tavily Search API](https://docs.tavily.com/documentation/api-reference/endpoint/search), [Tavily Extract API](https://docs.tavily.com/documentation/api-reference/endpoint/extract), and the detailed [temporal signal contract](notas/ESPECIFICACAO_FRESHNESS_SCORE.md).
 
 For up to three extracted URLs, production execution attempts a separate direct page metadata read: HTTPS only, public IPv4 DNS result pinned to the connection, redirects manually followed and revalidated, 1 MiB body cap, 5-second timeout, and HTML/XHTML only. This is a best-effort read; network failures, non-HTML pages, unsafe URLs, missing dates, or unlinked dates remain explicit and do not become freshness evidence. In tests this request is injected/mocked; no page or provider network calls are made.
 
@@ -458,24 +460,7 @@ entrelinhas/
 
 ## Testing and validation
 
-The automated test suite currently covers:
-
-- Valid and invalid source dates
-- Claim-specific freshness thresholds
-- Missing and malformed evidence
-- Evidence preparation and fallback behavior
-- Source snapshot comparison
-- Impact evaluation
-- SQLite persistence and history recovery
-- Controlled verification flow
-- Bifrost and Tavily trace metadata using simulated dependencies
-
-- Automatic claim categorization and its precedence rules
-- Web interface: input validation, body/text limits, CSP, example mode, no credential exposure
-
-The controlled traceability test uses simulated dependencies and does not make external API calls.
-
-Real API integration is checked separately through `node index.js`.
+See [5. Run the automated tests](#5-run-the-automated-tests) for what the 52 offline test files cover, and [Accuracy on real claims](#accuracy-on-real-claims) for the live benchmark. Real API connectivity is checked separately with `node index.js`.
 
 ## Current scope and limitations
 
@@ -495,7 +480,7 @@ Entrelinhas aims to make evidence more transparent, traceable, and temporally aw
 
 **Who it is for first.** The first users are teams that already ship AI answers to customers: support chatbots and AI products, where one outdated price or policy becomes a complaint. They would call the API after generation and show the verdicts or block the risky claims. People who rely on AI for everyday decisions use the same check through the browser button. A hosted version would charge per check for teams and a low monthly plan for individuals; this is a plan, not a tested business.
 
-**What it costs and how long it takes today.** Each check uses a few Tavily searches and extractions per claim and 3 to 7 model calls through Bifrost. On free tiers a check takes about 15 to 70 seconds, so it fits review before reuse (support macros, published content, decisions) better than real-time chat. Faster paid models and caching repeated claims would cut that time.
+**What it costs and how long it takes today.** Measured on the 15 recorded checks of 13 Nov (one claim each): on average 2.2 basic Tavily searches + 1 extraction of 5 pages (about 3.3 Tavily credits) and about 9,350 input + 3,900 output model tokens per claim. At list prices (Tavily pay-as-you-go US$ 0.008 per credit; Groq gpt-oss-20b US$ 0.075 per million input and US$ 0.30 per million output tokens) that is about **US$ 0.03 per claim, almost all of it Tavily**; on Tavily's largest monthly plan (US$ 0.005 per credit) about US$ 0.02. Prices change; check the providers before relying on these numbers. On free tiers a check takes about 15 to 90 seconds (12 to 71 s for the 15 single-claim checks of the 13 Nov run, 91 s for the three-claim demo check), so it fits review before reuse (support macros, published content, decisions) better than real-time chat. Faster paid models and caching repeated claims would cut that time.
 
 ---
 

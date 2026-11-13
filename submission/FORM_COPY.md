@@ -86,7 +86,7 @@ On 15 real claims with known answers (8 true, 7 outdated, in Portuguese and Engl
 
 How to read it honestly:
 - of the 6 outdated claims caught, 1 was contradicted by a dated official source and 5 by most independent sources without an official date. The interface says so;
-- the rules were improved after a first run on the same 15 claims (11 of 15 exact on 12 Nov), so `avaliacao/casos-novos-2026-11-13.json` adds 8 new claims written after the fixes, to be run as an independent check;
+- the rules were improved after a first run on the same 15 claims (11 of 15 exact on 12 Nov), so `avaliacao/casos-novos-2026-11-13.json` adds 8 new claims written after the fixes, to be run as an independent check of the current code (the news time filter and freshness score v1.1 came after the 13 Nov run);
 - 15 claims show behavior; they are not a statistical accuracy estimate.
 
 Every check of the run is recorded in `gravacoes/`, and the results are in `avaliacao/`.
@@ -104,7 +104,7 @@ Every check of the run is recorded in `gravacoes/`, and the results are in `aval
 - Live checks run locally with your own Tavily and Bifrost keys. The public demo (https://contatoalicecandido-lab.github.io/entrelinhas/) replays recorded live checks and built-in examples without keys.
 - Scores are documented heuristics, not calibrated probabilities; independent sources can share an error.
 - Validity windows are configurable defaults; the Selic rate, for example, moves faster than the yearly window for rules.
-- The free model tier limits tokens per minute; a check takes about 15 to 70 s.
+- The free model tier limits tokens per minute; a check takes about 15 to 90 s.
 
 ## Repository and demo
 

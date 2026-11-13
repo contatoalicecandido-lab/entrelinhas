@@ -5,9 +5,11 @@
 //   nota = recência das evidências × parcela de apoio entre as fontes
 //
 // - Recência das evidências (0–100): meia-vida pela janela da categoria
-//   (preço 30 d, versão 90 d, empresa 180 d, regulamento 365 d). Usa a data
-//   do FATO citada na fonte quando existe (confiança maior); senão, a data
-//   da página (confiança baixa). Sem categoria, janela geral de 180 dias.
+//   (preço 30 d, versão 90 d, empresa 180 d, regulamento 365 d), calculada
+//   sobre a fonte MAIS NOVA que confirma a afirmação (não a média: uma
+//   confirmação recente basta para mostrar que o fato ainda vale). Usa a
+//   data do FATO citada na fonte quando existe (confiança maior); senão, a
+//   data da página (confiança baixa). Sem categoria, janela geral de 180 dias.
 // - Parcela de apoio (0–1): peso das fontes que confirmam ÷ peso total
 //   (oficial e científica 3, notícia 2, referência 1,5, outro 1, blog 0,25).
 //
@@ -15,11 +17,23 @@
 // recentes → nota alta; confirmada só por fontes antigas → nota baixa
 // ("envelhecendo"). Não é probabilidade de verdade.
 const ALGORITHM_ID = "CLAIM_CURRENCY_SCORE";
-const ALGORITHM_VERSION = "1.0.0";
+const ALGORITHM_VERSION = "1.1.0";
 const JANELA_GERAL_DIAS = 180;
 
 const NIVEIS = ["LOW", "MEDIUM", "HIGH"];
 const rebaixar = nivel => NIVEIS[Math.max(0, NIVEIS.indexOf(nivel) - 1)];
+
+// Recência (0–100) da fonte mais nova da lista, preferindo as que confirmam a
+// afirmação. Cada item traz age_days e posture; sem itens, devolve null.
+function recenciaDaMaisNova(itens, janela) {
+  if (!Array.isArray(itens) || !Number.isInteger(janela) || janela <= 0) return null;
+  const datados = itens.filter(i => Number.isFinite(i?.age_days) && i.age_days >= 0);
+  if (!datados.length) return null;
+  const confirmam = datados.filter(i => i.posture === "SUPPORTS");
+  const base = confirmam.length ? confirmam : datados;
+  const maisNova = base.reduce((a, b) => (b.age_days < a.age_days ? b : a));
+  return { recencia: Math.round(100 * Math.pow(2, -maisNova.age_days / (janela / 2))), data: maisNova.date ?? null };
+}
 
 function calcularAtualidadeAfirmacao({ freshness, recenciaPagina, recenciaGeral, concordancia, janelaDias } = {}) {
   const base = {
@@ -34,15 +48,19 @@ function calcularAtualidadeAfirmacao({ freshness, recenciaPagina, recenciaGeral,
   // RECENTE: "em vigor desde 2020" confirmado por páginas de 2026 continua
   // atual; a data em que o fato começou a valer não é a data da confirmação.
   const candidatas = [];
+  const janelaCategoria = Number.isInteger(janelaDias) ? janelaDias : null;
   if (freshness && Number.isFinite(freshness.score)) {
     const datas = (freshness.drivers ?? []).map(d => d.date).filter(Boolean).sort();
-    candidatas.push({ recencia: freshness.score, fundamento: "FACT_DATE",
-      confianca: freshness.confidence === "ADEQUATE" ? "HIGH" : "MEDIUM", data: datas.at(-1) ?? null });
+    const nova = recenciaDaMaisNova(freshness.drivers, janelaCategoria);
+    candidatas.push({ recencia: nova?.recencia ?? freshness.score, fundamento: "FACT_DATE",
+      confianca: freshness.confidence === "ADEQUATE" ? "HIGH" : "MEDIUM", data: nova?.data ?? datas.at(-1) ?? null });
   }
   if (recenciaPagina && Number.isFinite(recenciaPagina.score)) {
-    candidatas.push({ recencia: recenciaPagina.score, fundamento: "PAGE_DATE", confianca: "LOW", data: recenciaPagina.newest_date ?? null });
+    const nova = recenciaDaMaisNova(recenciaPagina.sources, janelaCategoria);
+    candidatas.push({ recencia: nova?.recencia ?? recenciaPagina.score, fundamento: "PAGE_DATE", confianca: "LOW", data: nova?.data ?? recenciaPagina.newest_date ?? null });
   } else if (recenciaGeral && Number.isFinite(recenciaGeral.score)) {
-    candidatas.push({ recencia: recenciaGeral.score, fundamento: "PAGE_DATE_GENERAL_WINDOW", confianca: "LOW", data: recenciaGeral.newest_date ?? null });
+    const nova = recenciaDaMaisNova(recenciaGeral.sources, JANELA_GERAL_DIAS);
+    candidatas.push({ recencia: nova?.recencia ?? recenciaGeral.score, fundamento: "PAGE_DATE_GENERAL_WINDOW", confianca: "LOW", data: nova?.data ?? recenciaGeral.newest_date ?? null });
   }
   // Maior recência vence; em empate, a data do fato (mais confiável).
   const escolhida = candidatas.sort((a, b) => b.recencia - a.recencia)[0] ?? null;
@@ -96,4 +114,4 @@ function calcularAtualidadeAfirmacao({ freshness, recenciaPagina, recenciaGeral,
   };
 }
 
-module.exports = { calcularAtualidadeAfirmacao, ALGORITHM_ID, JANELA_GERAL_DIAS };
+module.exports = { calcularAtualidadeAfirmacao, recenciaDaMaisNova, ALGORITHM_ID, JANELA_GERAL_DIAS };

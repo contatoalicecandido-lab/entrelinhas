@@ -15,7 +15,7 @@ const CATEGORIAS = Object.keys(VALIDADE_MAX_DIAS);
 const REGRAS = [
   {
     tipo: "preco",
-    padrao: /(R\$|US\$|\$\s?\d|€\s?\d|£\s?\d|\d\s?(reais|dólares|dolares|euros)\b|\bpre[çc]os?\b|\bcusta(m|r)?\b|\bcost(s)?\b|\bpric(e|es|ing)\b|\bmensalidade\b|\bassinatura\b|\bper month\b|\bpor m[eê]s\b|\/m[eê]s\b|\btarifa\b|\bfee(s)?\b)/i
+    padrao: /(R\$|US\$|\$\s?\d|€\s?\d|£\s?\d|\d\s?(reais|dólares|dolares|euros)\b|\bpre[çc]os?\b|\bcusta(m|r)?\b|\bcost(s)?\b|\bpric(e|es|ing)\b|\bmensalidade\b|\bassinatura\b|\bper month\b|\bpor m[eê]s\b|\/m[eê]s\b|\btarifa\b|\bfee(s)?\b|\bde gra[çc]a\b|\bgr[aá]tis\b|\bgratuit[oa]s?\b|\bfree of charge\b|\bfor free\b|\bis free\b)/i
   },
   {
     tipo: "versao_api",

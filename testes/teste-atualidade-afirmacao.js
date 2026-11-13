@@ -108,3 +108,24 @@ const conc = (score, sup, con, cobertura = "STRONG") => ({ score, supporting: su
 }
 
 console.log(`\n${n} testes passaram.`);
+
+// v1.1: vale a fonte MAIS NOVA que confirma, não a média das fontes.
+{
+  const { recenciaDaMaisNova } = require("../src/atualidade-afirmacao");
+  const fontes = [
+    { date: "2023-02-01", age_days: 1381, posture: "SUPPORTS" },
+    { date: "2026-11-10", age_days: 2, posture: "SUPPORTS" },
+    { date: "2026-11-12", age_days: 0, posture: "CONTRADICTS" }
+  ];
+  const r = recenciaDaMaisNova(fontes, 30);
+  assert.equal(r.data, "2026-11-10", "a fonte mais nova que CONFIRMA, não a que contradiz");
+  assert.ok(r.recencia >= 90, "confirmação de 2 dias numa janela de 30: recência alta");
+  const nota = calcularAtualidadeAfirmacao({
+    recenciaPagina: { score: 21, newest_date: "2026-11-10", sources: fontes, as_of: "2026-11-12T00:00:00Z" },
+    concordancia: { score: 100, independent_sources: 3, supporting: 3, contradicting: 0, coverage: "STRONG" },
+    janelaDias: 30
+  });
+  assert.ok(nota.score >= 90, `uma confirmação recente não é diluída pelas antigas (nota ${nota.score})`);
+  assert.equal(nota.status, "CURRENT");
+  console.log("PASSOU: a nota usa a fonte mais nova que confirma, não a média");
+}

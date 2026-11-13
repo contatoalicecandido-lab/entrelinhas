@@ -149,8 +149,18 @@ async function gerarRespostaCorrigida(textoOriginal, resultados, opcoes = {}) {
     citacoesAnexadas = true;
   }
 
+  // O registro de mudanças vem do modelo e pode dizer "kept" para uma
+  // afirmação que as fontes contradizem (e que o texto de fato trocou). O
+  // veredito é determinístico, então ele decide: contradita nunca é "kept".
+  const verdictPorId = new Map(afirmacoes.map(a => [a.claim_id, a.verdict]));
+  const mudancas = (validada.mudancas ?? []).map(m =>
+    verdictPorId.get(m.claim_id) === "CONTRADICTED" && /^\s*kept\b/i.test(m.what)
+      ? { ...m, what: "replaced with what current sources say", ajustado_pelo_veredito: true }
+      : m);
+
   return {
     ...validada,
+    mudancas,
     tentativas,
     citacoes_anexadas: citacoesAnexadas,
     fontes: fontes.map(({ n, url, title, type, stance, date }) => ({ n, url, titulo: title, tipo: type, postura: stance, data: date })),

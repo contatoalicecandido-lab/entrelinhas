@@ -1,25 +1,167 @@
 {
-  "nome": "Entrelinhas · casos reais com resposta conhecida",
-  "data_referencia": "2026-11-12",
-  "como_pontuar": {
-    "ATUAL_ESPERADO": "acerto se ATUAL ou CORROBORADA; parcial se SUPORTE_FRACO; erro se contradita; sem decisão se NAO_VERIFICAVEL ou CONFLITO",
-    "DESATUALIZADA_ESPERADO": "acerto se CONTRADITA_POR_FONTE_ATUAL ou CONTRADICAO_FRACA; parcial se CONFLITO; erro grave se ATUAL, CORROBORADA ou SUPORTE_FRACO (confirmou algo velho); sem decisão se NAO_VERIFICAVEL"
+ "nome": "Entrelinhas · casos reais com resposta conhecida",
+ "data_referencia": "2026-11-12",
+ "como_pontuar": {
+  "ATUAL_ESPERADO": "acerto se ATUAL ou CORROBORADA; parcial se SUPORTE_FRACO; erro se contradita; sem decisão se NAO_VERIFICAVEL ou CONFLITO",
+  "DESATUALIZADA_ESPERADO": "acerto se CONTRADITA_POR_FONTE_ATUAL ou CONTRADICAO_FRACA; parcial se CONFLITO; erro grave se ATUAL, CORROBORADA ou SUPORTE_FRACO (confirmou algo velho); sem decisão se NAO_VERIFICAVEL"
+ },
+ "casos": [
+  {
+   "id": "pt-salario-1621",
+   "texto": "O salário mínimo em 2026 é de R$ 1.621.",
+   "esperado": "ATUAL",
+   "verdade": "R$ 1.621 desde 1º/1/2026 (Decreto 12.797/2025)",
+   "fontes_gabarito": [
+    "https://www.barbieriadvogados.com/salario-minimo-valor-atual-tabela/",
+    "https://www.dieese.org.br/notatecnica/2025/notaTec289salarioMinimo.pdf",
+    "https://www.band.com.br/economia/noticias/decreto-do-governo-estabelece-valor-do-salario-minimo-a-partir-de-1-de-janeiro-em-r-162100-202512241121"
+   ]
   },
-  "casos": [
-    { "id": "pt-salario-1621", "texto": "O salário mínimo em 2026 é de R$ 1.621.", "esperado": "ATUAL", "verdade": "R$ 1.621 desde 1º/1/2026 (Decreto 12.797/2025)", "fontes_gabarito": ["https://www.barbieriadvogados.com/salario-minimo-valor-atual-tabela/", "https://www.dieese.org.br/notatecnica/2025/notaTec289salarioMinimo.pdf", "https://www.band.com.br/economia/noticias/decreto-do-governo-estabelece-valor-do-salario-minimo-a-partir-de-1-de-janeiro-em-r-162100-202512241121"] },
-    { "id": "pt-salario-1518", "texto": "O salário mínimo em 2026 é de R$ 1.518.", "esperado": "DESATUALIZADA", "verdade": "R$ 1.518 era o valor de 2025", "fontes_gabarito": ["https://www.barbieriadvogados.com/salario-minimo-valor-atual-tabela/", "https://bpmoney.com.br/?p=396781"] },
-    { "id": "pt-selic-1375", "texto": "A taxa Selic está atualmente em 13,75% ao ano.", "esperado": "ATUAL", "verdade": "Copom manteve 13,75% em 4/11/2026", "fontes_gabarito": ["https://atlaspublico.com.br/bcb/noticias/copom-mantem-selic-em-13-75pct-ao-ano-por-unanimidade-e-ve-99107", "https://istoe.com.br/copom-mantem-selic-1375-novembro-2026", "https://www.oliberal.com/economia/bc-copom-interrompe-ciclo-de-calibracao-e-mantem-taxa-selic-em-13-75-ao-ano-1.1190560"] },
-    { "id": "pt-selic-105", "texto": "A taxa Selic está atualmente em 10,5% ao ano.", "esperado": "DESATUALIZADA", "verdade": "Selic em 13,75% (nov/2026)", "fontes_gabarito": ["https://atlaspublico.com.br/bcb/noticias/copom-mantem-selic-em-13-75pct-ao-ano-por-unanimidade-e-ve-99107"] },
-    { "id": "pt-netflix-4490", "texto": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.", "esperado": "DESATUALIZADA", "verdade": "R$ 51,90 desde 15/10/2026", "fontes_gabarito": ["https://canaltech.com.br/apps/netflix-aumenta-precos-no-brasil-e-plano-mais-caro-passa-dos-r-70-veja-novos-valores/", "https://investidor10.com.br/noticias/netflix-nflx34-aumenta-precos-no-brasil-veja-novos-valores-123285/", "https://gameoverdrive.com.br/netflix-aumenta-precos-brasil-outubro-2026/"] },
-    { "id": "pt-qdenga-sus", "texto": "A vacina da dengue Qdenga é aplicada pelo SUS em crianças e adolescentes de 10 a 14 anos.", "esperado": "ATUAL", "verdade": "público-alvo 10 a 14 anos (nota técnica MS e notícias de out/2026)", "fontes_gabarito": ["https://www.gov.br/saude/pt-br/vacinacao/esavi/notas-tecnicas/nota-tecnica-no-15-2026-cgfam-dpni-svsa-ms", "https://www.jb.com.br/editorias/2026/10/16/vacina-dengue-sus-2026-quem-pode-tomar.html"] },
-    { "id": "pt-lgpd-vigor", "texto": "A LGPD está em vigor no Brasil desde 2020.", "esperado": "ATUAL", "verdade": "vigência desde setembro de 2020 (Lei 13.709/2018)", "fontes_gabarito": [] },
-    { "id": "pt-pix-gratis-pf", "texto": "O Pix é gratuito para pessoas físicas que fazem transferências.", "esperado": "ATUAL", "verdade": "regra do Banco Central: gratuito para pessoa física em transferências e compras", "fontes_gabarito": [] },
-    { "id": "en-node20-lts", "texto": "Node.js 20 is in Active LTS and is the recommended version for production.", "esperado": "DESATUALIZADA", "verdade": "Node.js 20 reached end of life on 30 April 2026", "fontes_gabarito": ["https://nodesource.com/blog/nodejs-versions-lts-eol-outdated-release-risks", "https://endoflife.date/nodejs"] },
-    { "id": "en-node22-security", "texto": "Node.js 22 still receives official security updates.", "esperado": "ATUAL", "verdade": "supported (Maintenance LTS) until 30 April 2027", "fontes_gabarito": ["https://nodesource.com/blog/nodejs-versions-lts-eol-outdated-release-risks", "https://ecorpit.com/nodejs-22-end-of-life-april-2027-migration/"] },
-    { "id": "en-chatgpt-plus-20", "texto": "ChatGPT Plus costs $20 per month.", "esperado": "ATUAL", "verdade": "US$ 20/month (live check on 2026-11-11 corroborated by multiple sources)", "fontes_gabarito": [] },
-    { "id": "en-openai-ceo", "texto": "Sam Altman is the CEO of OpenAI.", "esperado": "ATUAL", "verdade": "CEO as of Nov 2026", "fontes_gabarito": ["https://www.unifygtm.com/insights/executives/openai-ceo"] },
-    { "id": "en-python2-security", "texto": "Python 2.7 still receives official security updates from the Python Software Foundation.", "esperado": "DESATUALIZADA", "verdade": "Python 2 reached end of life on 1 January 2020", "fontes_gabarito": [] },
-    { "id": "en-twitter-dorsey", "texto": "Jack Dorsey is the current CEO of Twitter.", "esperado": "DESATUALIZADA", "verdade": "Dorsey left as CEO in 2021; Twitter is now X", "fontes_gabarito": [] },
-    { "id": "en-gpt4-newest", "texto": "GPT-4 is OpenAI's newest and most advanced model.", "esperado": "DESATUALIZADA", "verdade": "superseded by several newer models", "fontes_gabarito": [] }
-  ]
+  {
+   "id": "pt-salario-1518",
+   "texto": "O salário mínimo em 2026 é de R$ 1.518.",
+   "esperado": "DESATUALIZADA",
+   "verdade": "R$ 1.518 era o valor de 2025",
+   "fontes_gabarito": [
+    "https://www.barbieriadvogados.com/salario-minimo-valor-atual-tabela/",
+    "https://bpmoney.com.br/?p=396781"
+   ]
+  },
+  {
+   "id": "pt-selic-1375",
+   "texto": "A taxa Selic está atualmente em 13,75% ao ano.",
+   "esperado": "ATUAL",
+   "verdade": "Copom manteve 13,75% em 4/11/2026",
+   "fontes_gabarito": [
+    "https://atlaspublico.com.br/bcb/noticias/copom-mantem-selic-em-13-75pct-ao-ano-por-unanimidade-e-ve-99107",
+    "https://istoe.com.br/copom-mantem-selic-1375-novembro-2026",
+    "https://www.oliberal.com/economia/bc-copom-interrompe-ciclo-de-calibracao-e-mantem-taxa-selic-em-13-75-ao-ano-1.1190560"
+   ]
+  },
+  {
+   "id": "pt-selic-105",
+   "texto": "A taxa Selic está atualmente em 10,5% ao ano.",
+   "esperado": "DESATUALIZADA",
+   "verdade": "Selic em 13,75% (nov/2026)",
+   "fontes_gabarito": [
+    "https://atlaspublico.com.br/bcb/noticias/copom-mantem-selic-em-13-75pct-ao-ano-por-unanimidade-e-ve-99107"
+   ]
+  },
+  {
+   "id": "pt-netflix-4490",
+   "texto": "O plano Padrão da Netflix no Brasil custa R$ 44,90 por mês.",
+   "esperado": "DESATUALIZADA",
+   "verdade": "R$ 51,90 desde 15/10/2026",
+   "fontes_gabarito": [
+    "https://canaltech.com.br/apps/netflix-aumenta-precos-no-brasil-e-plano-mais-caro-passa-dos-r-70-veja-novos-valores/",
+    "https://investidor10.com.br/noticias/netflix-nflx34-aumenta-precos-no-brasil-veja-novos-valores-123285/",
+    "https://gameoverdrive.com.br/netflix-aumenta-precos-brasil-outubro-2026/"
+   ]
+  },
+  {
+   "id": "pt-qdenga-sus",
+   "texto": "A vacina da dengue Qdenga é aplicada pelo SUS em crianças e adolescentes de 10 a 14 anos.",
+   "esperado": "ATUAL",
+   "verdade": "público-alvo 10 a 14 anos (nota técnica MS e notícias de out/2026)",
+   "fontes_gabarito": [
+    "https://www.gov.br/saude/pt-br/vacinacao/esavi/notas-tecnicas/nota-tecnica-no-15-2026-cgfam-dpni-svsa-ms",
+    "https://www.jb.com.br/editorias/2026/10/16/vacina-dengue-sus-2026-quem-pode-tomar.html"
+   ]
+  },
+  {
+   "id": "pt-lgpd-vigor",
+   "texto": "A LGPD está em vigor no Brasil desde 2020.",
+   "esperado": "ATUAL",
+   "verdade": "vigência desde setembro de 2020 (Lei 13.709/2018)",
+   "fontes_gabarito": [
+    "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+    "https://www.gov.br/anpd/pt-br",
+    "https://pt.wikipedia.org/wiki/Lei_Geral_de_Prote%C3%A7%C3%A3o_de_Dados_Pessoais"
+   ]
+  },
+  {
+   "id": "pt-pix-gratis-pf",
+   "texto": "O Pix é gratuito para pessoas físicas que fazem transferências.",
+   "esperado": "ATUAL",
+   "verdade": "regra do Banco Central: gratuito para pessoa física em transferências e compras",
+   "fontes_gabarito": [
+    "https://www.bcb.gov.br/estabilidadefinanceira/pix",
+    "https://www.bcb.gov.br/estabilidadefinanceira/perguntaserespostaspix",
+    "https://pt.wikipedia.org/wiki/Pix_(sistema_de_pagamentos)"
+   ]
+  },
+  {
+   "id": "en-node20-lts",
+   "texto": "Node.js 20 is in Active LTS and is the recommended version for production.",
+   "esperado": "DESATUALIZADA",
+   "verdade": "Node.js 20 reached end of life on 30 April 2026",
+   "fontes_gabarito": [
+    "https://nodesource.com/blog/nodejs-versions-lts-eol-outdated-release-risks",
+    "https://endoflife.date/nodejs"
+   ]
+  },
+  {
+   "id": "en-node22-security",
+   "texto": "Node.js 22 still receives official security updates.",
+   "esperado": "ATUAL",
+   "verdade": "supported (Maintenance LTS) until 30 April 2027",
+   "fontes_gabarito": [
+    "https://nodesource.com/blog/nodejs-versions-lts-eol-outdated-release-risks",
+    "https://ecorpit.com/nodejs-22-end-of-life-april-2027-migration/"
+   ]
+  },
+  {
+   "id": "en-chatgpt-plus-20",
+   "texto": "ChatGPT Plus costs $20 per month.",
+   "esperado": "ATUAL",
+   "verdade": "US$ 20/month (live check on 2026-11-11 corroborated by multiple sources)",
+   "fontes_gabarito": [
+    "https://openai.com/chatgpt/pricing/",
+    "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+    "https://en.wikipedia.org/wiki/ChatGPT"
+   ]
+  },
+  {
+   "id": "en-openai-ceo",
+   "texto": "Sam Altman is the CEO of OpenAI.",
+   "esperado": "ATUAL",
+   "verdade": "CEO as of Nov 2026",
+   "fontes_gabarito": [
+    "https://www.unifygtm.com/insights/executives/openai-ceo"
+   ]
+  },
+  {
+   "id": "en-python2-security",
+   "texto": "Python 2.7 still receives official security updates from the Python Software Foundation.",
+   "esperado": "DESATUALIZADA",
+   "verdade": "Python 2 reached end of life on 1 January 2020",
+   "fontes_gabarito": [
+    "https://www.python.org/doc/sunset-python-2/",
+    "https://peps.python.org/pep-0373/",
+    "https://devguide.python.org/versions/"
+   ]
+  },
+  {
+   "id": "en-twitter-dorsey",
+   "texto": "Jack Dorsey is the current CEO of Twitter.",
+   "esperado": "DESATUALIZADA",
+   "verdade": "Dorsey left as CEO in 2021; Twitter is now X",
+   "fontes_gabarito": [
+    "https://en.wikipedia.org/wiki/Jack_Dorsey",
+    "https://en.wikipedia.org/wiki/Twitter,_Inc.",
+    "https://en.wikipedia.org/wiki/Twitter"
+   ]
+  },
+  {
+   "id": "en-gpt4-newest",
+   "texto": "GPT-4 is OpenAI's newest and most advanced model.",
+   "esperado": "DESATUALIZADA",
+   "verdade": "superseded by several newer models",
+   "fontes_gabarito": [
+    "https://platform.openai.com/docs/models",
+    "https://openai.com/index/hello-gpt-4o/",
+    "https://en.wikipedia.org/wiki/GPT-4"
+   ]
+  }
+ ]
 }
