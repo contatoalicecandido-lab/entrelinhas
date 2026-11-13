@@ -33,10 +33,30 @@ function validarData(dataTexto) {
   );
 }
 
+// Janelas por ENTIDADE: alguns valores oficiais mudam bem mais rápido que a
+// regra geral de "leis e regras, cerca de um ano". Cada janela tem um motivo
+// público e verificável. Valem para qualquer categoria em que o termo apareça.
+const JANELAS_POR_ENTIDADE = [
+  { entidade: "selic", padrao: /\bselic\b/i, dias: 45,
+    motivo: "Brazil's Copom reviews the Selic rate about every 45 days (8 meetings a year)" },
+  { entidade: "inflacao", padrao: /\b(ipca|inpc|infla[çc][ãa]o|inflation rate|consumer price index|CPI)\b/i, dias: 30,
+    motivo: "official inflation figures are published every month" }
+];
+
+// Janela de validade de uma afirmação: a da entidade, se houver; senão, a da
+// categoria. Devolve null quando não há categoria nem entidade conhecida.
+function janelaDeValidade(tipoAfirmacao, texto = "") {
+  const entidade = JANELAS_POR_ENTIDADE.find(j => j.padrao.test(String(texto)));
+  if (entidade) return { dias: entidade.dias, origem: "ENTITY", entidade: entidade.entidade, motivo: entidade.motivo };
+  const dias = VALIDADE_MAX_DIAS[tipoAfirmacao];
+  return Number.isInteger(dias) ? { dias, origem: "CATEGORY", entidade: null, motivo: null } : null;
+}
+
 function avaliarAtualidade(
   evidencia,
   tipoAfirmacao,
-  dataReferencia = new Date()
+  dataReferencia = new Date(),
+  janelaDias = null
 ) {
   if (
     !evidencia ||
@@ -123,7 +143,7 @@ function avaliarAtualidade(
     (referencia - dataEvidencia) / (1000 * 60 * 60 * 24)
   );
 
-  const validadeMaxima = VALIDADE_MAX_DIAS[tipoAfirmacao];
+  const validadeMaxima = Number.isInteger(janelaDias) && janelaDias > 0 ? janelaDias : VALIDADE_MAX_DIAS[tipoAfirmacao];
 
   if (idadeDias > validadeMaxima) {
     return {
@@ -148,5 +168,7 @@ module.exports = {
   avaliarAtualidade,
   validarData,
   VALIDADE_MAX_DIAS,
+  JANELAS_POR_ENTIDADE,
+  janelaDeValidade,
   TIPOS_FONTE_VALIDOS
 };

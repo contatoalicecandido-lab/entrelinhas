@@ -17,10 +17,14 @@ const PRESENTE_EN = /\b(currently|still|now|today|latest|newest|current(ly)?|as 
 const NIVEIS = ["LOW", "MEDIUM", "HIGH"];
 const subir = nivel => NIVEIS[Math.min(NIVEIS.length - 1, NIVEIS.indexOf(nivel) + 1)];
 
-function avaliarRiscoDesatualizacao({ texto = "", tipo = null, nuances = null, dataReferencia = new Date() } = {}) {
+function avaliarRiscoDesatualizacao({ texto = "", tipo = null, janela = null, nuances = null, dataReferencia = new Date() } = {}) {
   const motivos = [];
   let nivel;
-  if (tipo && BASE[tipo]) {
+  if (janela?.origem === "ENTITY") {
+    // Valor oficial que muda rápido (Selic, inflação): janela própria e risco alto.
+    nivel = "HIGH";
+    motivos.push(`${janela.motivo[0].toUpperCase()}${janela.motivo.slice(1)} (checked against a ${janela.dias}-day window)`);
+  } else if (tipo && BASE[tipo]) {
     nivel = BASE[tipo].nivel;
     motivos.push(`${BASE[tipo].motivo} (checked against a ${VALIDADE_MAX_DIAS[tipo]}-day window)`);
   } else {

@@ -94,11 +94,16 @@ In the API response this claim score is `agregacao.atualidade_afirmacao` (the nu
 | Company facts and leadership | **180 days** | Headcount, leadership and funding change less often than prices and are typically confirmed in semiannual or annual reporting. |
 | Laws and official rules | **365 days** | Most official values in Brazil reset once a year: the minimum wage every 1 January by decree, tax tables per fiscal year. Laws themselves change through slower processes. |
 
-These windows are **configurable product defaults** (`VALIDADE_MAX_DIAS` in `src/atualidade.js`), not universal truths. The known exception is the Selic rate, which the Copom revisits about every 45 days. Two things compensate:
-- the triage marks any “currently” claim as high risk;
-- the verdict relies on what current sources say, not on the window.
+These windows are **configurable product defaults** (`VALIDADE_MAX_DIAS` in `src/atualidade.js`), not universal truths.
 
-Per-entity windows (Selic 45 days, inflation monthly) are next on the list. Calibrating the windows against labeled cases is future work, using the benchmark below.
+Some official values move faster than their category, so they get their own window (`JANELAS_POR_ENTIDADE` in `src/atualidade.js`), and the triage says why:
+
+| Value | Window | Why |
+|---|---|---|
+| Selic rate | **45 days** | Brazil's Copom reviews it about every 45 days (8 meetings a year). |
+| Inflation (IPCA, INPC, CPI) | **30 days** | Official inflation figures are published every month. |
+
+Calibrating the windows against labeled cases is future work, using the benchmark below. (The 13 Nov benchmark ran before these entity windows existed. They make the check stricter, never looser: an official page about the Selic that is older than 45 days no longer counts as a current confirmation, so the verdict can only move toward caution.)
 
 **Important distinctions:**
 - A publication date is not the date a fact changed.

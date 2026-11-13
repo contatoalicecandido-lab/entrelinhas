@@ -523,7 +523,8 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
   const concordancia = calcularConcordancia(grupos);
   const veredito = determinarVeredito(grupos, concordancia);
   const score = calcularScore(grupos);
-  const validade = VALIDADE_MAX_DIAS[afirmacao.tipo_afirmacao];
+  // Janela da entidade (Selic 45 d, inflação 30 d) quando houver; senão, a da categoria.
+  const validade = afirmacao.janela_validade?.dias ?? VALIDADE_MAX_DIAS[afirmacao.tipo_afirmacao];
   const freshnessScore = calculateClaimFreshnessScore(
     evidencias.map(evidencia => ({
       match: true,

@@ -16,6 +16,7 @@ const { pedeEvidenciaCientifica } = require("./tipo-fonte");
 
 const {
   avaliarAtualidade,
+  janelaDeValidade,
   VALIDADE_MAX_DIAS
 } = require("./atualidade");
 
@@ -366,7 +367,7 @@ async function analisarEvidenciasEmLote(afirmacao, evidenciasSelecionadas, resul
         data_fato: { ...dataFato, origem: "QUOTED_IN_SOURCE_TEXT" }
       };
     }
-    const atualidade = avaliarAtualidade(p.fonte, resultado.tipo_afirmacao, opcoes.dataReferencia);
+    const atualidade = avaliarAtualidade(p.fonte, resultado.tipo_afirmacao, opcoes.dataReferencia, resultado.janela_validade?.dias);
     if (!p.preparacao) {
       resultado.evidencias.push({
         fonte: p.fonte,
@@ -420,9 +421,11 @@ async function verificarAfirmacao(afirmacao, opcoes) {
     );
     resultado.tipo_afirmacao = tipoResolvido.tipo;
     resultado.origem_tipo_afirmacao = tipoResolvido.origem;
+    resultado.janela_validade = janelaDeValidade(resultado.tipo_afirmacao, afirmacao.texto);
     resultado.risco_desatualizacao = avaliarRiscoDesatualizacao({
       texto: afirmacao.texto,
       tipo: resultado.tipo_afirmacao,
+      janela: resultado.janela_validade,
       nuances: resultado.nuances,
       dataReferencia: opcoes.dataReferencia instanceof Date ? opcoes.dataReferencia : new Date()
     });
@@ -511,7 +514,8 @@ async function verificarAfirmacao(afirmacao, opcoes) {
         atualidade: avaliarAtualidade(
           fonte,
           resultado.tipo_afirmacao,
-          opcoes.dataReferencia
+          opcoes.dataReferencia,
+          resultado.janela_validade?.dias
         )
       });
 
@@ -608,7 +612,8 @@ async function verificarAfirmacao(afirmacao, opcoes) {
     const atualidade = avaliarAtualidade(
       fonte,
       resultado.tipo_afirmacao,
-      opcoes.dataReferencia
+      opcoes.dataReferencia,
+      resultado.janela_validade?.dias
     );
 
     // 5. Guarda a fonte original separada dos dados de coleta.
