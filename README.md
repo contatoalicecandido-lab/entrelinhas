@@ -1,6 +1,6 @@
 # Entrelinhas
 
-### Every AI answer has an expiry date. A stale-answer detector for AI applications, in English and Portuguese
+### Read between the lines of any AI answer. A stale-answer detector for AI applications, in English and Portuguese
 
 AI assistants tend to agree with whatever you bring them. Paste a blog post or a hunch into a chatbot and it will often confirm it. Entrelinhas does the opposite: it takes an AI-generated answer, splits it into claims and checks each one against **independent, current sources**: official sites first, then news and scientific articles, with blogs counting least.
 

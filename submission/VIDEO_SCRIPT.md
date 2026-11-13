@@ -18,7 +18,7 @@ Record the screen at 1920×1080 and the voice separately. Cut on actions, not on
 
 | Time | Screen | Narration |
 |---|---|---|
-| 0:00-0:10 | Home, top of the page: "Every AI answer has an expiry date." | "Every AI answer has an expiry date. Nothing on the screen tells you when it passed." |
+| 0:00-0:10 | Home, top of the page: "Read between the lines of any AI answer." | "An AI answer sounds just as sure when it is current, outdated or simply wrong. Entrelinhas reads between the lines." |
 | 0:10-0:25 | Scroll slowly past the hero: the glass cards over the wall of struck-out answers, then **About** ("between the lines"). | "Models freeze the world on the day they were trained. Prices go stale in about a month, software versions in a quarter, company facts in six months, laws in a year." |
 | 0:25-0:42 | Back to the top. Paste text **A** and click **Check answer**. The box turns into the four progress steps. | "Entrelinhas checks an answer claim by claim. Tavily searches official sites, the news and science, live. A model reads every source through the Bifrost gateway." |
 | 0:42-0:55 | Report: **What still holds**, then the **Stale-risk triage** block. | "Before searching, it flags which claims can go stale, and why." |

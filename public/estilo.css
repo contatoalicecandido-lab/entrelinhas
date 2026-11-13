@@ -779,3 +779,6 @@ main.folha { overflow: hidden; }
   .sobre-grade { padding: 28px; }
   .ajuda::after { left: auto; right: -10px; transform: none; }
 }
+
+/* hero: keep the highlighted phrase together */
+#titulo-hero em{white-space:nowrap}

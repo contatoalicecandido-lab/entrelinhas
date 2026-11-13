@@ -6,11 +6,11 @@
 
 ## Project title
 
-Entrelinhas · Every AI answer has an expiry date
+Entrelinhas · Read between the lines of any AI answer
 
 ## Short description
 
-Every AI answer has an expiry date, and nothing on the screen tells you when it passed. Entrelinhas (Portuguese for “between the lines”) checks an AI answer claim by claim against independent, current sources found live with Tavily: official sites, news and scientific articles first, blogs last. A model reads them through Bifrost. Each claim gets:
+AI answers sound equally sure when they are current, outdated or simply wrong, and nothing on the screen tells them apart. Entrelinhas (Portuguese for “between the lines”) checks an AI answer claim by claim against independent, current sources found live with Tavily: official sites, news and scientific articles first, blogs last. A model reads them through Bifrost. Each claim gets:
 - a stale-risk flag;
 - a verdict;
 - a freshness score;
