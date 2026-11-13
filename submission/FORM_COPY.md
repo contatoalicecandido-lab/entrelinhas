@@ -30,12 +30,12 @@ Entrelinhas works in six steps.
    - an official-domain search. Brazilian authorities such as the Banco Central or gov.br are detected automatically.
 
    It extracts up to five sources of different types and never two from one site (subdomains count as the same site).
-3. **Reads the sources.** One Bifrost call per claim reads all of them, knowing today's date, and decides for each source whether it supports or contradicts the claim. The output is validated: every quote and every fact date must exist in the source text, and a stance whose quote is not in the source is not counted.
+3. **Reads the sources.** One Bifrost call per claim reads all of them, knowing today's date, and decides for each source whether it supports or contradicts the claim. The output is validated: every quote and every fact date must exist in the source text (a quote with “...” must stay inside one sentence, and every number in it must match), and a stance whose quote is not in the source is not counted.
 4. **Weighs.** Deterministic rules group copies, weigh source types (official and scientific 3, news 2, reference 1.5, other 1, blog 0.25) and compute:
    - source agreement;
    - a **freshness score per claim**: source recency × support share, with its basis and confidence;
    - a verdict.
-5. **Corrects the answer.** A final Bifrost call writes an **updated answer** using only verified quotes, with numbered citations, shown next to what the AI said.
+5. **Corrects the answer.** A final Bifrost call writes an **updated answer** from the sources, taking numbers and dates only from quotes checked against the page, with numbered citations, shown next to what the AI said.
 6. **Records.** Everything is stored in SQLite.
 
 **Bifrost does visible work.**
@@ -59,7 +59,7 @@ Entrelinhas works in six steps.
 **Differentiators:**
 - independent voices weighted by source type, against confirmation bias;
 - a freshness score that states its basis and confidence;
-- a corrected answer written only from verified quotes;
+- a corrected answer whose numbers and dates come only from verified quotes;
 - Bifrost failover in the report;
 - Portuguese-aware reading;
 - a real-claims benchmark.
@@ -81,12 +81,12 @@ Entrelinhas works in six steps.
 
 On 15 real claims with known answers (8 true, 7 outdated, in Portuguese and English):
 - live run on 13 Nov 2026: **14 of 15** exact verdicts, **15 of 15** on the right side;
-- the same recorded evidence re-scored with the current, stricter rules (after an adversarial review): **13 of 15** exact, **15 of 15** on the right side. Pix dropped to “Supported, unconfirmed” because most of its sources are company blogs;
+- the same recorded evidence re-scored with the current, stricter rules (1.4.0, after two adversarial reviews): **13 of 15** exact, **15 of 15** on the right side. Pix dropped to “Supported, unconfirmed” because most of its sources are company blogs;
 - in both, **0** outdated claims were confirmed as true and **0** true claims were marked as contradicted.
 
-Independent check: **8 new claims** written after the rules were tuned (never used to tune them): **6 of 8 exact, 0 wrong, 0 outdated claims confirmed**. The two misses (a too-literal quote check, and a search anchored on the old value) were fixed after the run, and both came back exact when re-run live; they are reported separately because the fixes came after seeing them.
+Independent check: **8 new claims** written after the rules were tuned (never used to tune them), run live in two parts on 13 Nov (3 with rules 1.2.0, 5 with 1.3.0): **6 of 8 exact, 0 wrong**. The two misses (a too-literal quote check, and a search anchored on the old value) were fixed after the run, and both came back exact when re-run live; they are reported separately because the fixes came after seeing them. A final adversarial review then tightened the rules again (1.4.0). Re-scored with them, the same evidence gives **4 of 8 exact, 2 partial, 2 not verifiable, still 0 wrong**: Pichai's sources are Wikipedia, company profiles and a Facebook post with no official or news source, and Node.js 18 was contradicted only by one vendor blog, so both are now cautious instead of confident.
 
-Compared with **the same model alone**, asked with today's date and no search, on the same 23 claims: the model alone got **4 wrong**, including confirming the outdated R$ 1.518 minimum wage as valid; Entrelinhas got **0 wrong**, and every verdict comes with sources.
+Compared with **the same model alone**, asked with today's date and no search, on the same 23 claims: both get **17** exact, but the model alone got **5 wrong**, with full confidence, including confirming the outdated R$ 1.518 minimum wage as valid; Entrelinhas (current rules) got **0 wrong** and marked the other 6 as unsure, and every verdict comes with sources.
 
 The rules were first improved on the same 15 claims (11 of 15 exact on 12 Nov), which is why the 8 new claims matter. 23 claims show behavior; they are not a statistical accuracy estimate.
 

@@ -22,11 +22,11 @@ const GRUPO_VEREDITO = {
 const PRIORIDADE_TIPO = { OFICIAL: 0, ACADEMICO: 1, NOTICIA: 2, REFERENCIA: 3, OUTRO: 4, BLOG_FORUM: 5 };
 
 const INSTRUCOES = `You correct an AI-generated answer so that it is accurate as of reference_date.
-You receive: the original answer, the verdict for each claim found in it, and numbered sources whose quotes were verified against the source text.
+You receive: the original answer, the verdict for each claim found in it, and numbered sources. A source with "quote_verified": true has a quote checked word for word against the page; a source with "quote_verified": false has no checked quote.
 
 Rules:
 - Write the answer in answer_language (the language of the original answer), keeping its tone and structure. Never translate it.
-- Use ONLY facts present in the provided source quotes. Never add numbers, dates or names that are not in them.
+- Use ONLY facts present in the verified quotes. Never add numbers, dates or names that are not in them. A source without a verified quote may be cited for the verdict, but never as the origin of a number, date or name.
 - CONTRADICTED: replace the claim with what the sources say, and cite them like [1] or [2][3].
 - SUPPORTED: keep the claim and cite a supporting source.
 - WEAKLY_SUPPORTED: keep it, cite the source, and add a brief hedge (e.g. "according to one source" / "segundo uma fonte").
@@ -41,14 +41,19 @@ Return ONLY JSON: {"answer": "<corrected answer>", "changes": [{"claim_id": "afi
 function montarFontesNumeradas(resultados) {
   const fontes = [];
   for (const r of resultados) {
+    // Fontes com citação conferida no texto vêm primeiro; sem citação, a fonte
+    // entra marcada como "quote_verified: false" e o modelo é instruído a não
+    // tirar dela nenhum número ou data.
     const candidatas = (r.evidencias ?? [])
       .filter(e => e?.correspondencia?.status === "MATCH" && ["SUPPORTS", "CONTRADICTS"].includes(e?.classificacao?.postura))
       .sort((a, b) =>
+        Number(Boolean(b.preparacao?.citacao_chave)) - Number(Boolean(a.preparacao?.citacao_chave)) ||
         Number(b.classificacao.postura === "CONTRADICTS") - Number(a.classificacao.postura === "CONTRADICTS") ||
         (PRIORIDADE_TIPO[a.fonte?.categoria_fonte] ?? 9) - (PRIORIDADE_TIPO[b.fonte?.categoria_fonte] ?? 9));
     for (const e of candidatas.slice(0, MAX_POR_AFIRMACAO)) {
       if (fontes.length >= MAX_FONTES) break;
-      const citacao = e.preparacao?.citacao_chave || String(e.fonte?.conteudo ?? "").slice(0, 300);
+      const verificada = Boolean(e.preparacao?.citacao_chave);
+      const citacao = verificada ? e.preparacao.citacao_chave : "";
       fontes.push({
         n: fontes.length + 1,
         claim_id: r.id,
@@ -57,7 +62,8 @@ function montarFontesNumeradas(resultados) {
         title: e.fonte?.titulo ?? "",
         type: e.fonte?.categoria_fonte ?? "OUTRO",
         date: e.fonte?.data_fato?.data ?? e.fonte?.data_atualizacao ?? e.fonte?.data_publicacao ?? null,
-        quote: citacao
+        quote: citacao,
+        quote_verified: verificada
       });
     }
   }
@@ -110,7 +116,7 @@ async function gerarRespostaCorrigida(textoOriginal, resultados, opcoes = {}) {
     answer_language: NOMES_IDIOMA[detectarIdioma(textoOriginal).idioma] ?? "the language of original_answer",
     original_answer: textoOriginal,
     claims: afirmacoes,
-    sources: fontes.map(({ n, claim_id, stance, type, title, date, quote }) => ({ n, claim_id, stance, type, title, date, quote }))
+    sources: fontes.map(({ n, claim_id, stance, type, title, date, quote, quote_verified }) => ({ n, claim_id, stance, type, title, date, quote, quote_verified }))
   }, null, 2);
 
   const perguntar = (texto, tentativa) => perguntarAoModelo(texto, INSTRUCOES, {

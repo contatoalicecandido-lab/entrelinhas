@@ -6,7 +6,7 @@ const { clusterizarDependencias } = require("./independencia-fontes");
 const { calcularConcordancia, estaCorroborada } = require("./concordancia");
 const { classificarFonte } = require("./tipo-fonte");
 
-const VERSAO_REGRAS = "1.3.0";
+const VERSAO_REGRAS = "1.4.0";
 
 const VEREDITOS = [
   "ATUAL",
@@ -359,8 +359,11 @@ function determinarVeredito(grupos, concordancia = null) {
       grupo => grupo.atual && grupo.postura === "CONTRADICTS"
     );
     const maioriaDiscorda = concordancia && Number.isFinite(concordancia.score) && concordancia.score < 50;
+    // Uma voz forte (oficial, científica ou notícia) que contradiz nunca fica
+    // escondida atrás do apoio: vira conflito para o leitor olhar.
+    const contradicaoForte = concordancia && (concordancia.strong_contradicting ?? 0) >= 1;
 
-    return haContradicaoAtual || maioriaDiscorda
+    return haContradicaoAtual || maioriaDiscorda || contradicaoForte
       ? "CONFLITO"
       : "ATUAL";
   }
@@ -407,7 +410,8 @@ function determinarVeredito(grupos, concordancia = null) {
   // Exige peso mínimo: um único blog ou fórum que discorda não basta para
   // dizer "contradita"; fica como não verificável (amarelo, "olhe de perto").
   if (haContradicao) {
-    return concordancia && Number.isFinite(concordancia.contradict_weight) && concordancia.contradict_weight < 1
+    // Precisa de peso 2 ou mais: uma notícia ou fonte oficial, ou dois sites.
+    return concordancia && Number.isFinite(concordancia.contradict_weight) && concordancia.contradict_weight < 2
       ? "NAO_VERIFICAVEL"
       : "CONTRADICAO_FRACA";
   }

@@ -296,6 +296,7 @@ main.folha { padding: 1px 0 0; }
 a.fonte-titulo:hover { color: var(--laranja); }
 .fonte-dominio { font-size: 12.5px; color: var(--suave); }
 .datas-linha { margin: 8px 0 0; font-size: 12.5px; color: var(--suave); }
+.sem-citacao { margin: 10px 0 0; font-size: 13px; color: #6b5a50; font-style: italic; }
 .citacao { margin: 12px 0 0; padding: 12px 16px; border-radius: 14px; background: #fff3ec; font-size: 15px; line-height: 1.5; color: #3b2418; overflow-wrap: anywhere; }
 .trecho-det { margin-top: 10px; }
 .trecho-det summary { cursor: pointer; font-size: 12.5px; color: var(--suave); }
@@ -531,9 +532,10 @@ main.folha { overflow: hidden; }
 .previa-linha dt { font-size: 12px; color: #9b9a96; }
 .previa-linha dd { margin: 4px 0 0; color: #fff; font-size: 22px; font-weight: 300; letter-spacing: -.04em; }
 .previa-linha dd small { font-size: 12px; color: #9b9a96; letter-spacing: 0; }
-.previa-linha dd.ruim, .previa-linha dd.bom { font-size: 14px; font-weight: 600; letter-spacing: -.01em; padding-top: 6px; }
+.previa-linha dd.ruim, .previa-linha dd.bom, .previa-linha dd.medio { font-size: 14px; font-weight: 600; letter-spacing: -.01em; padding-top: 6px; }
 .previa-linha dd.ruim { color: #ff8a70; }
 .previa-linha dd.bom { color: #6fd29a; }
+.previa-linha dd.medio { color: #f0c048; }
 
 /* Para quem é + link da API */
 .api-link { margin: 18px 0 0 !important; }
@@ -555,7 +557,7 @@ main.folha { overflow: hidden; }
   .parede { inset: 30% -10% -4% -10%; }
 }
 @media (max-width: 1000px) { .previa-texto { order: -1; } }
-.previa-linha dd.bom, .previa-linha dd.ruim { white-space: normal; }
+.previa-linha dd.bom, .previa-linha dd.ruim, .previa-linha dd.medio { white-space: normal; }
 
 /* =====================================================================
    v7: disciplina de sistema

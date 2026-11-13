@@ -1,16 +1,16 @@
 {
-  "gerado_em": "2026-11-13T23:21:59.928Z",
-  "regras": "1.3.0",
+  "gerado_em": "2026-11-13T23:37:47.192Z",
+  "regras": "1.4.0",
   "metodo": "Same recorded evidence as the live run, re-scored with the current rules. No new searches or model calls.",
   "resumo": {
     "total": 8,
-    "acertos": 6,
-    "parciais": 1,
-    "sem_decisao": 1,
+    "acertos": 4,
+    "parciais": 2,
+    "sem_decisao": 2,
     "erros": 0,
     "erros_graves_confirmou_desatualizada": 0,
-    "acuracia_estrita": 0.75,
-    "direcao_correta": 0.875
+    "acuracia_estrita": 0.5,
+    "direcao_correta": 0.75
   },
   "linhas": [
     {
@@ -26,9 +26,9 @@
       "id": "en-pichai-ceo",
       "esperado": "ATUAL",
       "veredito_na_rodada": "CORROBORADA",
-      "veredito_regras_atuais": "CORROBORADA",
+      "veredito_regras_atuais": "SUPORTE_FRACO",
       "nota_atualidade": 91,
-      "resultado": "ACERTO",
+      "resultado": "PARCIAL",
       "gravacao": "gravacoes/2026-11-13T17-15-59-023Z-sundar-pichai-is-the-ceo-of-alphabet-google-s-pa.json"
     },
     {
@@ -53,9 +53,9 @@
       "id": "en-node18-support",
       "esperado": "DESATUALIZADA",
       "veredito_na_rodada": "CONTRADICAO_FRACA",
-      "veredito_regras_atuais": "CONTRADICAO_FRACA",
+      "veredito_regras_atuais": "NAO_VERIFICAVEL",
       "nota_atualidade": 0,
-      "resultado": "ACERTO",
+      "resultado": "SEM_DECISAO",
       "gravacao": "gravacoes/2026-11-13T23-07-14-315Z-node-js-18-is-still-officially-supported-with-se.json"
     },
     {

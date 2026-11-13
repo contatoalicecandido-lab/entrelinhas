@@ -265,11 +265,21 @@ async function tratarVerificacao(req, res) {
   if (ocupado) {
     return responderJson(res, 429, { erro: "A check is already running. Wait for it to finish." });
   }
+  // Lê o pedido ANTES de ocupar o servidor: um pedido que nunca termina de
+  // chegar não trava as checagens de ninguém (o servidor corta em 15 s).
+  let corpo;
+  try {
+    corpo = await lerCorpo(req);
+  } catch (erro) {
+    return responderJson(res, erro.status ?? 400, { erro: erro.message });
+  }
+  if (ocupado) {
+    return responderJson(res, 429, { erro: "A check is already running. Wait for it to finish." });
+  }
   ocupado = true;
   let trabalho = null;
   const inicio = Date.now();
   try {
-    const corpo = await lerCorpo(req);
     let dados;
     try { dados = JSON.parse(corpo); } catch { throw erroDeEntrada("Invalid JSON."); }
     const pedido = validarPedido(dados);
@@ -310,7 +320,7 @@ function servirArquivo(res, nome, tipo) {
 }
 
 function criarServidor() {
-  return http.createServer((req, res) => {
+  const servidor = http.createServer((req, res) => {
     // Só aceita pedidos endereçados a este computador (contra DNS rebinding)
     // e, quando o navegador informa a origem, só da própria página (contra
     // um site qualquer disparar checagens e gastar os créditos de quem roda).
@@ -353,6 +363,10 @@ function criarServidor() {
     }
     responderJson(res, 404, { erro: "Not found." });
   });
+  // Pedido que demora para chegar (cabeçalhos ou corpo) é cortado.
+  servidor.headersTimeout = 15000;
+  servidor.requestTimeout = 15000;
+  return servidor;
 }
 
 if (require.main === module) {

@@ -7,7 +7,7 @@ AI assistants tend to agree with whatever you bring them. Paste a blog post or a
 For every answer it shows, in this order:
 
 1. **Stale-risk triage** (before searching): *“3 claims found · 2 time-sensitive (prices change ~monthly, laws and rules ~yearly)”*, with the reason for each flag.
-2. **An updated answer**: the original answer rewritten using only verified source quotes, with numbered citations, next to what the AI said.
+2. **An updated answer**: the original answer rewritten from the sources, with numbers and dates taken only from quotes checked against the page, and numbered citations, next to what the AI said.
 3. **One card per claim** with:
    - a **verdict**: Current, Corroborated, Supported but unconfirmed, Conflicting, Contradicted by sources, Likely outdated or Not verifiable;
    - a **freshness score (0 to 100)**: source recency × share of sources that support the claim, with its basis and confidence;
@@ -51,7 +51,7 @@ Large language models confidently repeat facts that have changed: prices go up, 
    - agreement, freshness and a verdict are computed.
 
    A contradiction is never hidden behind majority support.
-6. **Writes the updated answer** with one more Bifrost call, using only verified quotes. Citations to sources that do not exist are removed. If citations are missing, the model is asked once more, and any still missing are appended.
+6. **Writes the updated answer** with one more Bifrost call. Numbers and dates come only from quotes checked against the page; sources without one are marked `quote_verified: false`. Citations to sources that do not exist are removed. If citations are missing, the model is asked once more, and any still missing are appended.
 7. **Stores everything** in SQLite: claims, sources, collection IDs, model calls and search operations.
 
 ## How it works
@@ -146,35 +146,38 @@ Run it against a live server with `node avaliacao/rodar-casos-reais.js`. It paus
 
 Why Pix dropped: four of its five supporting sources are company blogs, and “Corroborated” now needs supporting weight of at least 4 (one official source plus one news outlet, for example), so three or four weak sites are not enough. It is still on the right side: “Supported, unconfirmed” tells the reader to look closer.
 
-**Independent check: 8 new claims** written after the rules were tuned and never used to tune them (`avaliacao/casos-novos-2026-11-13.json`, 4 true and 4 outdated, run live on 13 Nov: `avaliacao/resultado-casos-novos-2026-11-13.json`, recordings in `gravacoes/`):
+**Independent check: 8 new claims** written after the rules were tuned and never used to tune them (`avaliacao/casos-novos-2026-11-13.json`, 4 true and 4 outdated, recordings in `gravacoes/`). The live run had two parts on 13 Nov: the first 3 claims at 17:14 UTC with rules 1.2.0, the other 5 at 23:06 UTC with rules 1.3.0 (`avaliacao/resultado-casos-novos-2026-11-13.json`). After a final adversarial review the rules were tightened again, and the same recorded evidence was re-scored with them (`avaliacao/reavaliacao-casos-novos-2026-11-13.json`, no new calls):
 
-| Claim | Known answer | Entrelinhas |
-|---|---|---|
-| Satya Nadella is the CEO of Microsoft | true | Corroborated |
-| Sundar Pichai is the CEO of Alphabet | true | Corroborated |
-| Em 2026, o salário mínimo diário é R$ 54,04 | true | Corroborated |
-| Python 3.12 still receives security fixes | true | Supported, unconfirmed (partial) |
-| Node.js 18 is still supported | outdated | Contradicted by sources |
-| Python 3.8 still receives security updates | outdated | Likely outdated |
-| Ubuntu 20.04 LTS is still in standard support | outdated | Contradicted by sources |
-| O salário mínimo atual é R$ 1.412 | outdated | Not verifiable (no decision) |
+| Claim | Known answer | Live run | Current rules (same evidence) |
+|---|---|---|---|
+| Satya Nadella is the CEO of Microsoft | true | Corroborated | Corroborated |
+| Sundar Pichai is the CEO of Alphabet | true | Corroborated | Supported, unconfirmed (partial) |
+| Em 2026, o salário mínimo diário é R$ 54,04 | true | Corroborated | Corroborated |
+| Python 3.12 still receives security fixes | true | Supported, unconfirmed (partial) | Supported, unconfirmed (partial) |
+| Node.js 18 is still supported | outdated | Contradicted by sources | Not verifiable (no decision) |
+| Python 3.8 still receives security updates | outdated | Likely outdated | Likely outdated |
+| Ubuntu 20.04 LTS is still in standard support | outdated | Contradicted by sources | Contradicted by sources |
+| O salário mínimo atual é R$ 1.412 | outdated | Not verifiable (no decision) | Not verifiable (no decision) |
 
-**6 of 8 exact, 0 wrong, 0 outdated claims confirmed as true.** The two misses taught us two things, both fixed after the run (so these two cases are no longer independent tests):
+**Live: 6 of 8 exact. Current rules: 4 of 8 exact, 2 partial, 2 no decision. Both: 0 wrong, 0 outdated claims confirmed as true.** The stricter rules cost two exact answers on purpose: Pichai's five supporting sources are Wikipedia, two company profiles, the World Bank's speaker page and a Facebook post, with no official or news source, so it is no longer *Corroborated*; Node.js 18 was contradicted by a single vendor blog while nodejs.org's own page gave no clear stance, which is now *Not verifiable* instead of red. We prefer a cautious answer to a confident one built on weak sources.
+
+The two live misses taught us two things, both fixed after the run (so these two cases are no longer independent tests):
 - *Python 3.12*: the quote check was too literal and dropped three good sources, including python.org, over curly quotes and markdown. It now ignores differences that do not change the text and still rejects any quote with a different number or sentence.
 - *R$ 1.412*: searching with the old value only found 2024 news repeating it. A claim with a value now also gets a search without the value and with the current year, to find today's value.
 
-Re-run live after the fixes (`avaliacao/resultado-casos-novos-depois-das-correcoes-2026-11-13.json`): Python 3.12 came back *Corroborated* and R$ 1.412 *Contradicted by sources*, both exact. They are reported separately because the fixes were made after seeing these cases.
+Re-run live after the fixes (`avaliacao/resultado-casos-novos-depois-das-correcoes-2026-11-13.json`): Python 3.12 came back *Corroborated* (python.org among the sources, with a checked quote) and R$ 1.412 *Contradicted by sources*, both exact, and both still exact under the current rules. They are reported separately because the fixes were made after seeing these cases.
 
 **Compared with the model alone** (`avaliacao/linha-de-base.js`: the same model, through Bifrost, asked with today's date whether each claim is still true, with no search):
 
 | On the same 23 claims | Model alone | Entrelinhas (current rules) |
 |---|---|---|
-| Right answer | 17 | 19 exact, 3 cautious (partial or not verifiable) |
-| Wrong answer | **4** | **0** |
+| Right answer | 17 | 17 exact |
+| Cautious (partial or not verifiable) | 1 (no answer on the old Selic) | 6 |
+| Wrong answer | **5** | **0** |
 | Outdated claim confirmed as true | **1** (said the 2025 minimum wage, R$ 1.518, is still valid) | **0** |
 | Sources the reader can check | none | every verdict |
 
-The model alone also called Brazil's current minimum wage (R$ 1.621) and the current Selic and dengue vaccine policy outdated. Results: `avaliacao/linha-de-base-casos-reais-2026-11-13.json` and `avaliacao/linha-de-base-casos-novos-2026-11-13.json`.
+The model alone also called Brazil's current minimum wage (R$ 1.621), the current daily minimum wage, the current Selic and the dengue vaccine policy outdated. Same number of exact answers, but where Entrelinhas is not sure it says so and shows the sources; the model alone is wrong with full confidence. Results: `avaliacao/linha-de-base-casos-reais-2026-11-13.json` and `avaliacao/linha-de-base-casos-novos-2026-11-13.json`.
 
 **Read these numbers with their limits:**
 - **How strong each “outdated” verdict is.** Of the 6 outdated claims caught, 1 was contradicted by a current official source with a date (*Likely outdated*). The other 5 were contradicted by most independent sources, but no official source dated the fact (*Contradicted by sources*, internally `CONTRADICAO_FRACA`, “weak contradiction”). The interface presents those 5 as a strong warning, not a final ruling.
@@ -201,9 +204,16 @@ What the run taught us, already fixed:
   - the same article wrapped in different menus, or copied with one word changed, counted several times; now grouped;
   - a recent blog post could make an old fact look current; freshness now prefers stronger sources;
   - the local server accepted requests from other websites (CSRF and DNS rebinding); now it checks the content type, the Origin and the Host.
+- A final panel of five simulated judges (13 Nov) found more, closed in rules 1.4.0 with tests (`testes/teste-regras-1-4-0.js`):
+  - a quote could be stitched from two distant sentences with “...”, or match while hiding a different number; quotes with “...” must now stay inside one sentence, and every number in the quote must be in the matched text;
+  - the updated answer could take a number from the start of a page whose quote was not checked; now only checked quotes reach it, sources without one are marked `quote_verified: false`, and the model is told not to take numbers, dates or names from them. In the source list, a page with a stance but no exact quote says so;
+  - hosts like `bcb.gov.br.example.com` or `netflix.blog.br` could pass as official; now only real government suffixes and the company's own registrable domain count. ResearchGate and Google Scholar no longer count as scientific (anyone can upload there);
+  - a strong source (official, scientific or news) against a green claim now makes it *Conflicting*; *Corroborated* needs at least one strong supporting source; red needs contradicting weight of at least 2 (one blog alone is not enough);
+  - the Brazilian authority found in a claim (Selic → bcb.gov.br, minimum wage → gov.br) only gave weight to sources found by chance; now it is also searched directly;
+  - a slow request could hold the local server's single check slot; the body is now read before the slot is taken, and stalled requests are cut after 15 s.
 - One updated answer came back in the wrong language, so the language is now pinned.
 
-15 claims is a small sample: this shows behavior on real cases, not a statistical accuracy estimate.
+23 claims is a small sample: this shows behavior on real cases, not a statistical accuracy estimate.
 
 ## Technology stack
 

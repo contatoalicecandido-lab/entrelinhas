@@ -535,7 +535,10 @@ function criarMetricas(afirmacao) {
       ? `Current: a source from ${idade} confirms it, inside the ${at.window_days}-day window`
       : at.status === "AGING" && idade
         ? `Aging: the newest source that confirms it is from ${idade}. It may still hold; look for a recent source.`
-        : st.texto;
+        : at.status === "CONTRADICTED" && ag.veredito === "NAO_VERIFICAVEL"
+          // Só fontes fracas discordam: a regra não deixa isso virar vermelho.
+          ? "Only weak sources disagree: not enough to call it outdated"
+          : st.texto;
     m2.append(el("p", `metrica-etiqueta status-${at.status.toLowerCase()}`, rotuloStatus));
     if (at.status === "CURRENT" && at.score < 50) {
       m2.append(el("p", "metrica-nota", "The score is lower because even the newest confirming source is getting older. It is still inside the window, so the claim counts as current."));
@@ -638,6 +641,11 @@ function criarFonte(evidencia, simulado) {
 
   const citacao = evidencia.preparacao?.citacao_chave;
   if (citacao) item.append(el("blockquote", "citacao", `“${limparTrecho(citacao)}”`));
+  else if (["SUPPORTS", "CONTRADICTS"].includes(evidencia.classificacao?.postura) && evidencia.preparacao?.metodo_analise === "LOTE") {
+    // Sem trecho conferido: a postura conta, mas a fonte não fornece números
+    // nem datas para a resposta corrigida. Dizemos isso na tela.
+    item.append(el("p", "sem-citacao", "No exact quote from this page: its stance counts, but no number or date is taken from it."));
+  }
 
   const datas = [];
   if (fonte.data_fato?.citacao) datas.push(`Fact date: ${formatarDataCurta(fonte.data_fato.data)} (quoted in the source)`);

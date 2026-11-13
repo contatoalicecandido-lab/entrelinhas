@@ -150,27 +150,37 @@ function citacaoExisteNoTexto(citacao, texto) {
   if (partes.length >= 2) {
     let desde = 0;
     let todas = true;
-    for (const p of partes) { const i = t.indexOf(p, desde); if (i === -1) { todas = false; break; } desde = i + p.length; }
+    // As partes precisam estar perto umas das outras (até 200 caracteres):
+    // costurar trechos distantes pode mudar o sentido.
+    let primeira = true;
+    for (const p of partes) {
+      const i = t.indexOf(p, desde);
+      // Mesma frase: entre as partes não pode haver fim de frase.
+      if (i === -1 || (!primeira && (i - desde > 200 || /[.!?]\s/.test(t.slice(desde, i))))) { todas = false; break; }
+      desde = i + p.length;
+      primeira = false;
+    }
     if (todas) return true;
   }
   const tc = tokensDe(citacao);
   const tt = tokensDe(texto);
   if (tc.length < 4) return false;
-  const numeros = tc.filter(x => /\d/.test(x));
-  const conjunto = new Set(tt);
-  if (numeros.some(n => !conjunto.has(n))) return false;
   // Maior trecho contínuo da citação que aparece igual no texto.
   const posicoes = new Map();
   tt.forEach((tok, i) => { if (!posicoes.has(tok)) posicoes.set(tok, []); posicoes.get(tok).push(i); });
   let melhor = 0;
+  let inicioMelhor = 0;
   for (let i = 0; i < tc.length; i++) {
     for (const inicio of posicoes.get(tc[i]) ?? []) {
       let k = 0;
       while (i + k < tc.length && inicio + k < tt.length && tc[i + k] === tt[inicio + k]) k++;
-      if (k > melhor) melhor = k;
+      if (k > melhor) { melhor = k; inicioMelhor = i; }
     }
   }
-  return melhor / tc.length >= 0.85;
+  if (melhor / tc.length < 0.85) return false;
+  // Todo número da citação precisa estar DENTRO do trecho que bateu igual:
+  // trocar o valor no fim da frase não passa.
+  return tc.every((tok, idx) => !/\d/.test(tok) || (idx >= inicioMelhor && idx < inicioMelhor + melhor));
 }
 
 // Valida a resposta do modelo; nunca aceita ids desconhecidos, valores fora

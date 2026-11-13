@@ -52,6 +52,19 @@ async function main() {
     assert.ok(rpt.afirmacoes[0].nuances.notas.some(t => /lower bound/.test(t)));
     ok("exemplo em português: 'a partir de' compatível com preço maior; 'atualmente cerca de 5 mil' contradito");
 
+    // Um pedido que nunca termina de chegar não pode travar o servidor.
+    const net = require("node:net");
+    const lento = net.connect(servidor.address().port, "127.0.0.1");
+    await new Promise(r => lento.once("connect", r));
+    lento.write(`POST /api/verificar HTTP/1.1\r\nHost: 127.0.0.1:${servidor.address().port}\r\nContent-Type: application/json\r\nContent-Length: 500\r\n\r\n{"texto":"`);
+    await new Promise(r => setTimeout(r, 150));
+    const enquantoLento = await postar({ texto: TEXTO_EXEMPLO, modo: "exemplo" });
+    assert.equal(enquantoLento.status, 200, "o pedido lento não ocupa o servidor");
+    lento.destroy();
+    assert.equal(servidor.requestTimeout, 15000);
+    assert.equal(servidor.headersTimeout, 15000);
+    ok("pedido lento não trava as checagens; servidor corta pedidos parados em 15 s");
+
     for (const [nome, corpo, tipo, esperado] of [
       ["texto vazio", { texto: "  " }, undefined, 400],
       ["JSON inválido", "{oops", undefined, 400],

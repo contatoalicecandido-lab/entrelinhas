@@ -189,10 +189,21 @@ testar("Não transforma contradição de fonte fraca em veredito definitivo", ()
     ])
   );
 
-  // Desde 12/11/2026: sinaliza a contradição sem torná-la definitiva
-  // (antes era NAO_VERIFICAVEL, o que escondia a contradição encontrada).
-  assert.equal(resultado.veredito, "CONTRADICAO_FRACA");
+  // Regras 1.4.0: um único site comum (peso 1) contra a afirmação não basta
+  // para pintar de vermelho. Fica "não verificável", e a fonte contrária
+  // continua listada no cartão com a postura dela.
+  assert.equal(resultado.veredito, "NAO_VERIFICAVEL");
   assert.notEqual(resultado.veredito, "CONTRADITA_POR_FONTE_ATUAL");
+});
+
+testar("Duas fontes comuns independentes contra viram contradição fraca", () => {
+  const resultado = agregarEvidencias(
+    criarAfirmacao([
+      criarEvidencia({ url: "https://fonte-a.com/artigo", postura: "CONTRADICTS" }),
+      criarEvidencia({ url: "https://fonte-b.com/artigo", postura: "CONTRADICTS" })
+    ])
+  );
+  assert.equal(resultado.veredito, "CONTRADICAO_FRACA");
 });
 
 testar("Score é heurístico e fica entre 0 e 100", () => {

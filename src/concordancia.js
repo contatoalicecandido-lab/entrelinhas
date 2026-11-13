@@ -74,6 +74,9 @@ function calcularConcordancia(grupos) {
     source_types: tipos,
     supporting: apoio.length,
     support_weight: Math.round(pesoApoio * 100) / 100,
+    // Vozes fortes: oficial, científica ou notícia (peso 2 ou mais).
+    strong_supporting: apoio.filter(v => v.peso >= 2).length,
+    strong_contradicting: contra.filter(v => v.peso >= 2).length,
     contradict_weight: Math.round(pesoContra * 100) / 100,
     authoritative_supporting: apoioComAutoridade,
     contradicting: contra.length,
@@ -95,6 +98,8 @@ function estaCorroborada(concordancia) {
   // Três vozes fracas (sites quaisquer, blogs) não bastam: o apoio precisa
   // pesar pelo menos o mesmo que uma fonte oficial mais uma notícia.
   if (Number.isFinite(concordancia.support_weight) && concordancia.support_weight < 4) return false;
+  // E pelo menos uma voz forte (oficial, científica ou notícia) entre as que apoiam.
+  if (Number.isFinite(concordancia.strong_supporting) && concordancia.strong_supporting < 1) return false;
   if (concordancia.supporting >= 3) return true;
   return concordancia.supporting >= 2 && (concordancia.authoritative_supporting ?? 0) >= 1 && concordancia.source_types.length >= 2;
 }

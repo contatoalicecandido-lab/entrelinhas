@@ -447,7 +447,15 @@ async function verificarAfirmacao(afirmacao, opcoes) {
     return agregarResultadoAfirmacao(resultado, opcoes);
   }
 
-  const dominiosOficiais = obterDominiosOficiais(resultado, opcoes);
+  // Domínios oficiais da BUSCA: os configurados pela aplicação e, para
+  // afirmações em português, as autoridades brasileiras reconhecidas no texto
+  // (Selic → bcb.gov.br, salário mínimo → gov.br). Antes, as autoridades só
+  // davam peso às fontes encontradas; agora a Tavily também busca nelas.
+  const dominiosConfiguradosBusca = obterDominiosOficiais(resultado, opcoes);
+  const autoridadesBusca = opcoes.paisAutomatico
+    ? (resultado.nuances?.dominios_oficiais_sugeridos ?? []).filter(d => !dominiosConfiguradosBusca.includes(d))
+    : [];
+  const dominiosOficiais = [...dominiosConfiguradosBusca, ...autoridadesBusca];
   resultado.dominios_oficiais_usados = [...dominiosOficiais];
 
   let evidenciasEncontradas;

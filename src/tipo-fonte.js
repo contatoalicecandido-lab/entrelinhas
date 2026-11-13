@@ -1,3 +1,4 @@
+const { dominioRegistravel } = require("./dominio");
 // Classifica o TIPO de uma fonte para medir diversidade e pesar a
 // concordância entre fontes. Determinístico, por domínio e origem da busca.
 // O tipo não é uma nota de autoridade: uma notícia pode estar errada e um
@@ -21,11 +22,11 @@ const NOTICIAS = [
 
 // Ciência: artigos revisados, bases acadêmicas e universidades.
 const ACADEMICO = [
-  "scholar.google.com", "arxiv.org", "nature.com", "science.org", "sciencedirect.com", "springer.com",
+  "arxiv.org", "nature.com", "science.org", "sciencedirect.com", "springer.com",
   "link.springer.com", "wiley.com", "onlinelibrary.wiley.com", "pubmed.ncbi.nlm.nih.gov", "ncbi.nlm.nih.gov",
   "nih.gov", "thelancet.com", "nejm.org", "bmj.com", "jamanetwork.com", "cell.com", "plos.org",
   "frontiersin.org", "mdpi.com", "acm.org", "dl.acm.org", "ieee.org", "ieeexplore.ieee.org",
-  "semanticscholar.org", "researchgate.net", "ssrn.com", "jstor.org", "cochranelibrary.com",
+  "semanticscholar.org", "ssrn.com", "jstor.org", "cochranelibrary.com",
   "scielo.org", "scielo.br", "periodicos.capes.gov.br", "fapesp.br", "revistapesquisa.fapesp.br", "fiocruz.br"
 ];
 const SUFIXOS_ACADEMICOS = [/\.edu$/, /\.edu\.[a-z]{2}$/, /\.ac\.[a-z]{2}$/, /(^|\.)(usp|unicamp|ufsc|ufrj|ufmg|ufrgs|unb|unesp|ufpr|ufpe|ufba|ufc|puc-?rio|pucsp|fgv)\.br$/];
@@ -70,6 +71,8 @@ function compacto(texto) {
 
 // O site oficial da entidade citada: nodejs.org para "Node.js", openai.com
 // para "ChatGPT", nubank.com.br para "Nubank".
+const SUFIXOS_DE_EMPRESA = new Set(["com", "org", "net", "io", "ai", "dev", "co", "com.br", "org.br", "net.br", "co.uk", "de", "fr", "es", "it", "pt", "nl", "se", "jp", "us", "ca", "eu"]);
+
 function ehSiteDaEntidade(h, afirmacao) {
   if (!afirmacao) return false;
   const texto = compacto(afirmacao);
@@ -79,9 +82,16 @@ function ehSiteDaEntidade(h, afirmacao) {
   // O nome do site precisa ser uma PALAVRA da afirmação ("Nubank" →
   // nubank.com.br, "Node.js" → nodejs.org), não um pedaço do texto:
   // salariominimo.com.br ou taxaselic.com.br não viram oficiais.
-  const nome = nomeDoSite(h);
+  // E o próprio endereço registrado precisa ser NOME + sufixo comum de
+  // empresa (netflix.com, nubank.com.br, nodejs.org): netflix.blog.br,
+  // netflix.tech ou netflix.com.br.info não falam pela Netflix.
+  const registravel = dominioRegistravel(h);
+  if (!registravel) return false;
+  const [rotulo, ...resto] = registravel.split(".");
+  const sufixo = resto.join(".");
+  if (!SUFIXOS_DE_EMPRESA.has(sufixo)) return false;
   const palavras = new Set(String(afirmacao).split(/\s+/).map(compacto).filter(Boolean));
-  return Boolean(nome && nome.length >= 3 && palavras.has(nome));
+  return Boolean(rotulo && rotulo.length >= 3 && palavras.has(rotulo));
 }
 
 const ROTULOS = {
@@ -106,7 +116,9 @@ function pertence(h, lista) {
 }
 
 function pareceGoverno(h) {
-  return /(^|\.)gov(\.[a-z]{2})?$/.test(h) || /\.gov\./.test(h) || /(^|\.)(jus|leg|mil)\.br$/.test(h) ||
+  // ".gov" só vale no FIM do endereço (gov.br, gov.uk, nih.gov): um site como
+  // salario.gov.br.noticias-hoje.com não é governo.
+  return /(^|\.)gov(\.[a-z]{2})?$/.test(h) || /(^|\.)(jus|leg|mil|mp|def)\.br$/.test(h) ||
     /(^|\.)europa\.eu$/.test(h) || /(^|\.)gob\.[a-z]{2}$/.test(h);
 }
 
