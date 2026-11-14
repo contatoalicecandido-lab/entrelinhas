@@ -684,8 +684,10 @@ main.folha { overflow: hidden; }
 .publico .ajustes { display: none; }
 
 /* Demonstração pública */
-.aviso-publico a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
-.aviso-publico { margin: 0 0 4px; padding: 14px 18px; border-radius: 16px; background: rgba(255, 90, 31, .12); color: #f3dccf; font-size: 14px; line-height: 1.5; }
+.aviso-publico a { color: #e8e6e3; text-decoration: underline; text-decoration-color: rgba(255, 255, 255, .35); text-underline-offset: 3px; }
+.aviso-publico a:hover { text-decoration-color: #ff5a1f; }
+.aviso-publico { margin: 4px 0 8px; padding: 0 25px; background: none; color: #9b9a96; font-size: 13px; line-height: 1.55; }
+.aviso-publico strong { color: #e8e6e3; font-weight: 500; }
 .publico .campo { display: none; }
 .publico .exemplos-linha { margin-top: 14px; }
 .publico .exemplos { gap: 8px; }

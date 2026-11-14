@@ -162,9 +162,16 @@ function atualizarAvisoCota() {
   if (!cota || !estado.status?.modo_real_disponivel) return;
   const afirmacoes = estado.status?.limites?.afirmacoes ?? 3;
   aviso.hidden = false;
-  aviso.textContent = cota.restantes_hoje_no_total <= 0
-    ? "Live public demo: today's live checks are used up. Try a recorded check or an example below, or come back tomorrow."
-    : `Live public demo: paste any AI answer and it is checked now, with Tavily and Bifrost. You have ${cota.restantes_hoje_para_voce} of ${cota.por_pessoa} live checks left today (up to ${afirmacoes} claims each). A check takes 15 to 90 seconds; the first one after a quiet period can take a minute longer while the server wakes up.`;
+  aviso.replaceChildren();
+  if (cota.restantes_hoje_no_total <= 0) {
+    aviso.textContent = "Today's live checks are used up. Try a recorded check or an example below, or come back tomorrow.";
+    return;
+  }
+  // Uma linha discreta: o essencial em destaque, o resto em cinza.
+  aviso.append(
+    el("strong", null, `Live: ${cota.restantes_hoje_para_voce} of ${cota.por_pessoa} checks left today`),
+    document.createTextNode(` · up to ${afirmacoes} claims each · 15 to 90 s, a bit longer if the server was asleep`)
+  );
 }
 
 function montarExemplos() {
