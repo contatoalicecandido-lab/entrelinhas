@@ -1,22 +1,7 @@
 {
-  "executado_em": "2026-11-13T23:57:25.285Z",
+  "executado_em": "2026-11-14T00:50:39.578Z",
   "servidor": "http://127.0.0.1:3001",
-  "resumo": {
-    "total": 3,
-    "acertos": 3,
-    "parciais": 0,
-    "sem_decisao": 0,
-    "erros": 0,
-    "erros_graves_confirmou_desatualizada": 0,
-    "acuracia_estrita": 1,
-    "direcao_correta": 1,
-    "falhas_execucao": 5,
-    "gateway": {
-      "chamadas_ao_modelo": 11,
-      "respondidas_por_modelo_reserva": 6,
-      "respostas_invalidas_refeitas": 1
-    }
-  },
+  "parcial": true,
   "linhas": [
     {
       "id": "en-nadella-ceo",
@@ -63,12 +48,16 @@
     {
       "id": "en-python312-security",
       "esperado": "ATUAL",
-      "veredito": null,
-      "nota_atualidade": null,
-      "resultado": "FALHA_EXECUCAO",
-      "segundos": 0,
-      "gateway": null,
-      "erro": "A check is already running. Wait for it to finish."
+      "veredito": "CORROBORADA",
+      "nota_atualidade": 82,
+      "resultado": "ACERTO",
+      "segundos": 9,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 1,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
     },
     {
       "id": "en-node18-support",
@@ -76,9 +65,9 @@
       "veredito": null,
       "nota_atualidade": null,
       "resultado": "FALHA_EXECUCAO",
-      "segundos": 0,
+      "segundos": 240,
       "gateway": null,
-      "erro": "A check is already running. Wait for it to finish."
+      "erro": "The check took longer than 240 s and was stopped. The providers may be at their usage limit (rate limit); try again in a few minutes."
     },
     {
       "id": "en-python38-security",
@@ -86,29 +75,9 @@
       "veredito": null,
       "nota_atualidade": null,
       "resultado": "FALHA_EXECUCAO",
-      "segundos": 0,
+      "segundos": 240,
       "gateway": null,
-      "erro": "A check is already running. Wait for it to finish."
-    },
-    {
-      "id": "en-ubuntu2004-standard",
-      "esperado": "DESATUALIZADA",
-      "veredito": null,
-      "nota_atualidade": null,
-      "resultado": "FALHA_EXECUCAO",
-      "segundos": 0,
-      "gateway": null,
-      "erro": "A check is already running. Wait for it to finish."
-    },
-    {
-      "id": "pt-salario-1412",
-      "esperado": "DESATUALIZADA",
-      "veredito": null,
-      "nota_atualidade": null,
-      "resultado": "FALHA_EXECUCAO",
-      "segundos": 0,
-      "gateway": null,
-      "erro": "A check is already running. Wait for it to finish."
+      "erro": "The check took longer than 240 s and was stopped. The providers may be at their usage limit (rate limit); try again in a few minutes."
     }
   ]
 }

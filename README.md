@@ -162,6 +162,8 @@ Why Pix dropped: four of its five supporting sources are company blogs, and “C
 
 **Live: 6 of 8 exact. Current rules: 4 of 8 exact, 2 partial, 2 no decision. Both: 0 wrong, 0 outdated claims confirmed as true.** The stricter rules cost two exact answers on purpose: Pichai's five supporting sources are Wikipedia, two company profiles, the World Bank's speaker page and a Facebook post, with no official or news source, so it is no longer *Corroborated*; Node.js 18 was contradicted by a single vendor blog while nodejs.org's own page gave no clear stance, which is now *Not verifiable* instead of red. We prefer a cautious answer to a confident one built on weak sources.
 
+Re-run live with the final rules (1.4.0) the same night (`avaliacao/resultado-casos-novos-regras-1-4-0-2026-11-13.json`): the first 4 claims came back exact (Nadella, Pichai and the daily minimum wage *Corroborated*, Python 3.12 *Corroborated*; the minimum wage search went straight to gov.br). The other 4 could not run: the free model tier hit its daily limit. We report them as not run rather than guess.
+
 The two live misses taught us two things, both fixed after the run (so these two cases are no longer independent tests):
 - *Python 3.12*: the quote check was too literal and dropped three good sources, including python.org, over curly quotes and markdown. It now ignores differences that do not change the text and still rejects any quote with a different number or sentence.
 - *R$ 1.412*: searching with the old value only found 2024 news repeating it. A claim with a value now also gets a search without the value and with the current year, to find today's value.
