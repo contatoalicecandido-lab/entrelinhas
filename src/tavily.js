@@ -5,6 +5,7 @@ const { validarEvidencia } = require("./evidencia");
 const { normalizarFonte } = require("./normalizar-fonte");
 const sinaisTemporais = require("./sinais-temporais");
 const { classificarFonte, ACADEMICO } = require("./tipo-fonte");
+const { limiteDaChamada } = require("./prazo");
 
 const MAX_RESULTADOS_BUSCA = 5;
 const MAX_FONTES_EXTRAIDAS = 3;
@@ -120,7 +121,7 @@ async function fazerRequisicaoTavily(endpoint, corpo) {
           "Content-Type": "application/json"
         },
         body: JSON.stringify(corpo),
-        signal: AbortSignal.timeout(TEMPO_LIMITE_TAVILY_MS)
+        signal: AbortSignal.timeout(limiteDaChamada(TEMPO_LIMITE_TAVILY_MS))
       }
     );
   } catch (erro) {

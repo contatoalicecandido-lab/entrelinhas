@@ -35,12 +35,17 @@ console.log(`\n${n} testes passaram.`);
 {
   const assert = require("node:assert/strict");
   const { janelaDeValidade, avaliarAtualidade } = require("../src/atualidade");
-  const { avaliarRiscoDesatualizacao } = require("../src/risco-desatualizacao");
   const selic = janelaDeValidade("regulamento", "A taxa Selic está atualmente em 10,5% ao ano.");
   assert.equal(selic.dias, 45); assert.equal(selic.origem, "ENTITY");
   assert.equal(janelaDeValidade("regulamento", "O IPCA de outubro foi 0,4%.").dias, 30);
   assert.equal(janelaDeValidade("regulamento", "A LGPD está em vigor desde 2020.").dias, 365);
   assert.equal(janelaDeValidade(null, "Texto qualquer"), null);
+  // Salário mínimo: valor oficial reajustado uma vez por ano. Mesmo quando o
+  // modelo chama de "preço", a janela é de um ano, não de 30 dias.
+  const salario = janelaDeValidade("preco", "Em 2026, o valor diário do salário mínimo é de R$ 54,04.");
+  assert.equal(salario.dias, 365);
+  assert.equal(salario.origem, "ENTITY");
+  assert.equal(avaliarRiscoDesatualizacao({ texto: "O salário mínimo é R$ 1.621.", tipo: "preco", janela: salario }).nivel, "MEDIUM");
   const risco = avaliarRiscoDesatualizacao({ texto: "A Selic está em 15%.", tipo: "regulamento", janela: selic });
   assert.equal(risco.nivel, "HIGH");
   assert.ok(risco.motivos.some(m => /45-day window/.test(m) && /Copom/.test(m)));

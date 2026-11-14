@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-13T23:37:47.192Z",
+  "gerado_em": "2026-11-14T00:06:43.527Z",
   "regras": "1.4.0",
   "metodo": "Same recorded evidence as the live run, re-scored with the current rules. No new searches or model calls.",
   "resumo": {
@@ -36,7 +36,7 @@
       "esperado": "ATUAL",
       "veredito_na_rodada": "CORROBORADA",
       "veredito_regras_atuais": "CORROBORADA",
-      "nota_atualidade": 0,
+      "nota_atualidade": 51,
       "resultado": "ACERTO",
       "gravacao": "gravacoes/2026-11-13T17-16-57-969Z-em-2026-o-valor-diario-do-salario-minimo-e-de-r-.json"
     },

@@ -21,8 +21,9 @@ function avaliarRiscoDesatualizacao({ texto = "", tipo = null, janela = null, nu
   const motivos = [];
   let nivel;
   if (janela?.origem === "ENTITY") {
-    // Valor oficial que muda rápido (Selic, inflação): janela própria e risco alto.
-    nivel = "HIGH";
+    // Valor oficial com janela própria. Muda rápido (Selic, inflação): risco
+    // alto. Muda uma vez por ano (salário mínimo): risco médio.
+    nivel = janela.dias <= 90 ? "HIGH" : "MEDIUM";
     motivos.push(`${janela.motivo[0].toUpperCase()}${janela.motivo.slice(1)} (checked against a ${janela.dias}-day window)`);
   } else if (tipo && BASE[tipo]) {
     nivel = BASE[tipo].nivel;

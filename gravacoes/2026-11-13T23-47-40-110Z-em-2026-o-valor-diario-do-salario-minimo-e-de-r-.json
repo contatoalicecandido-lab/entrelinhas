@@ -1,0 +1,2462 @@
+{
+ "sistema": "Entrelinhas",
+ "id_verificacao": "3d450e5b-aab4-41c5-ac0b-39320d40cdfb",
+ "texto_original": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+ "verificado_em": "2026-11-13T23:47:40.092Z",
+ "total_afirmacoes": 1,
+ "sintese": {
+  "veredito": "CORROBORADA",
+  "resumo": "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
+  "total_afirmacoes": 1,
+  "contagem_vereditos": {
+   "CORROBORADA": 1
+  }
+ },
+ "afirmacoes": [
+  {
+   "id": "afirmacao_1",
+   "texto": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+   "tipo_afirmacao": "preco",
+   "origem_tipo_afirmacao": "MODELO",
+   "nuances": {
+    "idioma": "pt",
+    "variante": "pt-BR",
+    "confianca_idioma": 1,
+    "valores": [
+     {
+      "tipo": "MONETARIO",
+      "texto": "R$ 54,04",
+      "valor": 54.04,
+      "moeda": "BRL",
+      "periodo": null,
+      "qualificador": null
+     }
+    ],
+    "datas": [],
+    "expressoes_temporais": [],
+    "condicoes": [],
+    "mudancas": [],
+    "tempo_coloquial": [],
+    "girias": {
+     "aliases": [],
+     "expressoes": []
+    },
+    "consulta_busca": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+    "dominios_oficiais_sugeridos": [
+     "gov.br"
+    ],
+    "autoridades": [
+     {
+      "dominio": "gov.br",
+      "autoridade": "Federal government (gov.br)",
+      "termo": "salário mínimo"
+     }
+    ],
+    "notas": [
+     "\"R$ 54,04\" uses Brazilian number format: BRL 54.04.",
+     "\"salário mínimo\" points to a Brazilian authority: Federal government (gov.br) (gov.br) is searched as an official source."
+    ]
+   },
+   "evidencias": [
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OFICIAL",
+      "titulo": "Publicado decreto que reajusta salário mínimo para R$ 1.621 a partir de 1º de janeiro — Planalto",
+      "url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro",
+      "conteudo": "[Abrir menu principal de navegação](#)\n\nTermos mais buscados\n\n* [Desenrola Brasil](https://www.gov.br/planalto/pt-br/search?origem=termos&SearchableText=Desenrola Brasil)\n* [assinatura](https://www.gov.br/planalto/pt-br/search?origem=termos&SearchableText=assinatura)\n* [mei](https://www.gov.br/planalto/pt-br/search?origem=termos&SearchableText=mei)\n* [imposto de renda](https://www.gov.br/planalto/pt-br/search?origem=termos&SearchableText=imposto de renda)\n* [cnh](https://www.gov.br/planalto/pt-br/search?origem=termos&SearchableText=cnh)\n\nTermos mais buscados\n\n* [Desenrola Brasil](https://www.gov.br/planalto/pt-br/search?origem=termos&SearchableText=Desenrola Brasil)\n* [assinatura](https://ww…",
+      "coletado_em": "2026-11-13T23:47:33.537Z",
+      "data_publicacao": "2025-12-24",
+      "data_atualizacao": "2026-01-01",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro",
+      "relevancia": 0.8292156,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "f9dfbd9f-9010-46c1-aba5-1ca6038f22ea",
+       "resultado_id": "48d2f7-00",
+       "response_time_busca": 1.21,
+       "response_time_extracao": 0.02,
+       "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+       "origem_principal": {
+        "id_operacao": "5613458b-5b5c-43d7-ba18-5c69ff481604",
+        "request_id": "f9dfbd9f-9010-46c1-aba5-1ca6038f22ea",
+        "modo_busca": "DOMINIOS_OFICIAIS",
+        "resultado_id": "48d2f7-00",
+        "parametros": {
+         "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "include_domains": [
+          "gov.br"
+         ]
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "5613458b-5b5c-43d7-ba18-5c69ff481604",
+         "request_id": "f9dfbd9f-9010-46c1-aba5-1ca6038f22ea",
+         "modo_busca": "DOMINIOS_OFICIAIS",
+         "resultado_id": "48d2f7-00",
+         "parametros": {
+          "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "include_domains": [
+           "gov.br"
+          ]
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Wed, 24 Dec 2025 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 24 Dec 2025 00:00:00 GMT",
+         "value_normalized": "2025-12-24",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2025-12-24T11:47:21-03:00",
+         "value_normalized": "2025-12-24",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-26T01:09:16-03:00",
+         "value_normalized": "2026-10-26",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "24/12/2025",
+         "value_normalized": "2025-12-24",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Atualizado em",
+         "value_original": "26/10/2026",
+         "value_normalized": "2026-10-26",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "24/12/2025",
+         "value_normalized": "2025-12-24",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Atualizado em",
+         "value_original": "26/10/2026",
+         "value_normalized": "2026-10-26",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro",
+        "capturado_em": "2026-11-13T23:47:32.997Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "cfe0bd35-a6bf-41e4-ba4e-d2b3e6d12e20",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2026-01-01",
+       "precisao": "DIA",
+       "citacao": "a partir de 1º de janeiro de 2026",
+       "origem": "QUOTED_IN_SOURCE_TEXT",
+       "confirmada_em": "2026-01-01"
+      }
+     },
+     "coleta": {
+      "id_coleta": "b724c456-d661-4888-af40-2146ee6018e7",
+      "id_verificacao": "3d450e5b-aab4-41c5-ac0b-39320d40cdfb",
+      "url_original": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro",
+      "url_canonica": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "b6b5c85672d5a83affbeb2cf7aed740ac9f0994c9d5ddc5a6f8266c403983cee",
+      "coletado_em": "2026-11-13T23:47:33.537Z",
+      "id_operacao_busca": "5613458b-5b5c-43d7-ba18-5c69ff481604",
+      "id_operacao_extracao": "e80c3e59-3720-44f4-82fc-63ab1032605b",
+      "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+      "parametros_busca": {
+       "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "include_domains": [
+        "gov.br"
+       ]
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro",
+        "https://exame.com/economia/qual-sera-o-valor-do-salario-minimo-por-dia-em-2026",
+        "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+        "https://transparencia.itauba.mt.gov.br/fotos_downloads/9124.pdf",
+        "https://leafpayrh.com.br/salario-minimo-2026"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "f9dfbd9f-9010-46c1-aba5-1ca6038f22ea",
+       "operacoes_busca": [
+        {
+         "id_operacao": "5613458b-5b5c-43d7-ba18-5c69ff481604",
+         "request_id": "f9dfbd9f-9010-46c1-aba5-1ca6038f22ea",
+         "modo_busca": "DOMINIOS_OFICIAIS",
+         "resultado_id": "48d2f7-00",
+         "parametros": {
+          "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "include_domains": [
+           "gov.br"
+          ]
+         }
+        }
+       ],
+       "request_id_extracao": "cfe0bd35-a6bf-41e4-ba4e-d2b3e6d12e20",
+       "resultado_id": "48d2f7-00",
+       "relevancia": 0.8292156,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 24 Dec 2025 00:00:00 GMT",
+         "value_normalized": "2025-12-24",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2025-12-24T11:47:21-03:00",
+         "value_normalized": "2025-12-24",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-26T01:09:16-03:00",
+         "value_normalized": "2026-10-26",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "24/12/2025",
+         "value_normalized": "2025-12-24",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Atualizado em",
+         "value_original": "26/10/2026",
+         "value_normalized": "2026-10-26",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "24/12/2025",
+         "value_normalized": "2025-12-24",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Atualizado em",
+         "value_original": "26/10/2026",
+         "value_normalized": "2026-10-26",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro",
+        "capturado_em": "2026-11-13T23:47:32.997Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Publicado decreto que reajusta salário mínimo para R$ 1.621 a partir de 1º de janeiro — Planalto",
+      "url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 7233,
+      "caracteres_preparados": 7233,
+      "trecho_analisado": "TÍTULO DA FONTE: Publicado decreto que reajusta salário mínimo para R$ 1.621 a partir de 1º de janeiro — Planalto\nURL DA FONTE: https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro\n\nCONTEÚDO DA FONTE:\n[Abrir menu principal de navegação](#)\n\nTermos mais buscados\n\n* [Desenrola Brasil](https://www.gov.br/planalto/pt-br/search?origem=termos&SearchableText=Desenrola Brasil)\n* [assinatura](https://www.gov.br/planalto/pt-br/search?origem=termos&SearchableText=assinatura)\n* [mei](https://www.gov.br/planalto/pt-br/search?origem=termos&SearchableText=mei)\n* [imposto de renda](https://www.gov.br/planalto/pt-br/search?origem=termos&SearchableText=imposto de renda)\n* [cnh](https://www.gov.br/planalto/pt-br/search?origem=termos&SearchableText=cnh)\n\nTermos mais buscados\n\n* [Desenrola Brasil](https://www.gov.br/planalto/pt-br/search?origem=termos&SearchableText=Desenrola Brasil)\n* [assinatura](https://www.gov.br/planalto/pt-br/search?origem=termos&SearchableText=assinatura)\n* [mei](https://www.gov.br/planalto/pt-br/search?origem=termos&SearchableText=mei)\n\nInfo\n\nNotícias\n\nECONOMIA\n\n# Publicado d",
+      "citacao_chave": "O valor diário do mínimo corresponderá a R$ 54,04",
+      "citacao_verificada": true,
+      "citacao_rejeitada": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The official decree states that the daily minimum wage will be R$ 54.04 starting 1 January 2026."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The official decree states that the daily minimum wage will be R$ 54.04 starting 1 January 2026."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 316,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2026-01-01"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OFICIAL",
+      "titulo": "decreto nº. 003, de 05 de janeiro de 2026.",
+      "url": "https://transparencia.itauba.mt.gov.br/fotos_downloads/9124.pdf",
+      "conteudo": "Avenida Tancredo Neves,799, Centro – CEP 78.510-000 CNPJ: 03.238.961/0001-27 Fone: (66) 9 9995-1826 www.itauba.mt.gov.br DECRETO Nº. 003, DE 05 DE JANEIRO DE 2026. “DISPÕE SOBRE O VALOR DO SALÁRIO-MÍNIMO VIGENTE, A PARTIR DE 1O DE JANEIRO DE 2026, E DÁ OUTRAS PROVIDÊNCIAS.” O EXMO. PREFEITO MUNICIPAL DE ITAÚBA, ESTADO DE MATO GROSSO SR. ANTONIO FERREIRA DE OLIVEIRA NETO, NO USO DAS ATRIBUIÇÕES LEGAIS QUE LHE SÃO CONFERIDAS POR LEI: CONSIDERANDO o disposto no inciso VII do artigo 7º da Constituição Federal; CONSIDERANDO o disposto no § 3º do artigo 39 da Constituição Federal; e, CONSIDERANDO o Decreto nº 12.797 de 23 de dezembro de 2025, da Presidência da República; DECRETA Art. 1° A partir d…",
+      "coletado_em": "2026-11-13T23:47:33.537Z",
+      "data_publicacao": null,
+      "data_atualizacao": "2026-01-01",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": null,
+      "relevancia": 0.81257004,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "f9dfbd9f-9010-46c1-aba5-1ca6038f22ea",
+       "resultado_id": "b26ece-01",
+       "response_time_busca": 1.21,
+       "response_time_extracao": 0.02,
+       "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+       "origem_principal": {
+        "id_operacao": "5613458b-5b5c-43d7-ba18-5c69ff481604",
+        "request_id": "f9dfbd9f-9010-46c1-aba5-1ca6038f22ea",
+        "modo_busca": "DOMINIOS_OFICIAIS",
+        "resultado_id": "b26ece-01",
+        "parametros": {
+         "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "include_domains": [
+          "gov.br"
+         ]
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "5613458b-5b5c-43d7-ba18-5c69ff481604",
+         "request_id": "f9dfbd9f-9010-46c1-aba5-1ca6038f22ea",
+         "modo_busca": "DOMINIOS_OFICIAIS",
+         "resultado_id": "b26ece-01",
+         "parametros": {
+          "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "include_domains": [
+           "gov.br"
+          ]
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": null,
+       "sinais_data": [],
+       "metadados_pagina": {
+        "status": "SKIPPED",
+        "motivo": "NOT_HTML",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "cfe0bd35-a6bf-41e4-ba4e-d2b3e6d12e20",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2026-01-01",
+       "precisao": "DIA",
+       "citacao": "A partir de 1o de janeiro de 2026",
+       "origem": "QUOTED_IN_SOURCE_TEXT",
+       "confirmada_em": "2026-01-01"
+      }
+     },
+     "coleta": {
+      "id_coleta": "3de03e99-169d-4ef7-9c78-77360c1704aa",
+      "id_verificacao": "3d450e5b-aab4-41c5-ac0b-39320d40cdfb",
+      "url_original": "https://transparencia.itauba.mt.gov.br/fotos_downloads/9124.pdf",
+      "url_canonica": "https://transparencia.itauba.mt.gov.br/fotos_downloads/9124.pdf",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "7b91c55870aaf1d8481076e9acad17eccb4d464aa4762f9533b42ef15fefad96",
+      "coletado_em": "2026-11-13T23:47:33.537Z",
+      "id_operacao_busca": "5613458b-5b5c-43d7-ba18-5c69ff481604",
+      "id_operacao_extracao": "e80c3e59-3720-44f4-82fc-63ab1032605b",
+      "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+      "parametros_busca": {
+       "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "include_domains": [
+        "gov.br"
+       ]
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro",
+        "https://exame.com/economia/qual-sera-o-valor-do-salario-minimo-por-dia-em-2026",
+        "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+        "https://transparencia.itauba.mt.gov.br/fotos_downloads/9124.pdf",
+        "https://leafpayrh.com.br/salario-minimo-2026"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "f9dfbd9f-9010-46c1-aba5-1ca6038f22ea",
+       "operacoes_busca": [
+        {
+         "id_operacao": "5613458b-5b5c-43d7-ba18-5c69ff481604",
+         "request_id": "f9dfbd9f-9010-46c1-aba5-1ca6038f22ea",
+         "modo_busca": "DOMINIOS_OFICIAIS",
+         "resultado_id": "b26ece-01",
+         "parametros": {
+          "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "include_domains": [
+           "gov.br"
+          ]
+         }
+        }
+       ],
+       "request_id_extracao": "cfe0bd35-a6bf-41e4-ba4e-d2b3e6d12e20",
+       "resultado_id": "b26ece-01",
+       "relevancia": 0.81257004,
+       "sinais_data": [],
+       "metadados_pagina": {
+        "status": "SKIPPED",
+        "motivo": "NOT_HTML",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "decreto nº. 003, de 05 de janeiro de 2026.",
+      "url": "https://transparencia.itauba.mt.gov.br/fotos_downloads/9124.pdf",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 1787,
+      "caracteres_preparados": 1787,
+      "trecho_analisado": "TÍTULO DA FONTE: decreto nº. 003, de 05 de janeiro de 2026.\nURL DA FONTE: https://transparencia.itauba.mt.gov.br/fotos_downloads/9124.pdf\n\nCONTEÚDO DA FONTE:\nAvenida Tancredo Neves,799, Centro – CEP 78.510-000 CNPJ: 03.238.961/0001-27 Fone: (66) 9 9995-1826 www.itauba.mt.gov.br DECRETO Nº. 003, DE 05 DE JANEIRO DE 2026. “DISPÕE SOBRE O VALOR DO SALÁRIO-MÍNIMO VIGENTE, A PARTIR DE 1O DE JANEIRO DE 2026, E DÁ OUTRAS PROVIDÊNCIAS.” O EXMO. PREFEITO MUNICIPAL DE ITAÚBA, ESTADO DE MATO GROSSO SR. ANTONIO FERREIRA DE OLIVEIRA NETO, NO USO DAS ATRIBUIÇÕES LEGAIS QUE LHE SÃO CONFERIDAS POR LEI: CONSIDERANDO o disposto no inciso VII do artigo 7º da Constituição Federal; CONSIDERANDO o disposto no § 3º do artigo 39 da Constituição Federal; e, CONSIDERANDO o Decreto nº 12.797 de 23 de dezembro de 2025, da Presidência da República; DECRETA Art. 1° A partir de 1o de janeiro de 2026, o valor do salário-mínimo no âmbito da Administração Direta e Indireta dos Poderes Executivo e Legislativo do Município de ITÁUBA/MT será de R$ 1.621,00 (mil seiscentos e vinte e um reais). Parágrafo único. Em virtude do disposto no caput, o valor diário do salário-mínimo corresponderá a R$ 54,04 (cinquenta e quatro",
+      "citacao_chave": "o valor diário do salário‑mínimo corresponderá a R$ 54,04",
+      "citacao_verificada": true,
+      "citacao_rejeitada": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The municipal decree reiterates the federal decree, confirming a daily minimum wage of R$ 54.04 from 1 January 2026."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The municipal decree reiterates the federal decree, confirming a daily minimum wage of R$ 54.04 from 1 January 2026."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 316,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2026-01-01"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "NOTICIA",
+      "titulo": "Qual será o valor do salário mínimo por dia em 2026? | Exame",
+      "url": "https://exame.com/economia/qual-sera-o-valor-do-salario-minimo-por-dia-em-2026",
+      "conteudo": "Mais pesquisados:\n\n[EXAME - Negócios, Economia, Tecnologia e Carreira](https://exame.com/)\n\n[Entrar](https://id.exame.com/login?origin=exame&redirectUrl=https%3A%2F%2Fexame.com%2Feconomia%2Fqual-sera-o-valor-do-salario-minimo-por-dia-em-2026%2F)\n\n[Economia](https://exame.com/economia/)\n\n[Macro em Pauta](https://exame.com/economia/macro-em-pauta/)\n\n# Qual será o valor do salário mínimo por dia em 2026?\n\n## Valores são calculados a partir do piso mensal de R$ 1.621 e seguem regras da legislação trabalhista\n\n[Da Redação](https://exame.com/autor/redacao-exame/)\n\nRedação Exame\n\nPublicado em 24 de dezembro de 2025 às12h07.\n\n[Priorizar nos meus resultados Google](https://google.com/preferences/sour…",
+      "coletado_em": "2026-11-13T23:47:33.537Z",
+      "data_publicacao": "2025-12-24",
+      "data_atualizacao": "2026-01-01",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": null,
+      "relevancia": 0.8477158,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "388d629f-7450-4022-abcc-1f9d673c00c2",
+       "resultado_id": "8b1bd4-01",
+       "response_time_busca": 1.05,
+       "response_time_extracao": 0.02,
+       "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+       "origem_principal": {
+        "id_operacao": "5135e52c-24ff-411d-9a49-4b53dad0a305",
+        "request_id": "388d629f-7450-4022-abcc-1f9d673c00c2",
+        "modo_busca": "GERAL",
+        "resultado_id": "8b1bd4-01",
+        "parametros": {
+         "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "5135e52c-24ff-411d-9a49-4b53dad0a305",
+         "request_id": "388d629f-7450-4022-abcc-1f9d673c00c2",
+         "modo_busca": "GERAL",
+         "resultado_id": "8b1bd4-01",
+         "parametros": {
+          "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Wed, 24 Dec 2025 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 24 Dec 2025 00:00:00 GMT",
+         "value_normalized": "2025-12-24",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "24 de dezembro de 2025",
+         "value_normalized": "2025-12-24",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://exame.com/economia/qual-sera-o-valor-do-salario-minimo-por-dia-em-2026/",
+        "capturado_em": "2026-11-13T23:47:35.288Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "cfe0bd35-a6bf-41e4-ba4e-d2b3e6d12e20",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2026-01-01",
+       "precisao": "DIA",
+       "citacao": "que entra em vigor em 1º de janeiro de 2026",
+       "origem": "QUOTED_IN_SOURCE_TEXT",
+       "confirmada_em": "2026-01-01"
+      }
+     },
+     "coleta": {
+      "id_coleta": "b7b8c80e-faef-4e3b-a21d-43fb652312b1",
+      "id_verificacao": "3d450e5b-aab4-41c5-ac0b-39320d40cdfb",
+      "url_original": "https://exame.com/economia/qual-sera-o-valor-do-salario-minimo-por-dia-em-2026",
+      "url_canonica": "https://exame.com/economia/qual-sera-o-valor-do-salario-minimo-por-dia-em-2026",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "d60f3d1152e49ea9a7c53b62e37773a1e104f8317195d6e2c2150abfbad50689",
+      "coletado_em": "2026-11-13T23:47:33.537Z",
+      "id_operacao_busca": "5135e52c-24ff-411d-9a49-4b53dad0a305",
+      "id_operacao_extracao": "e80c3e59-3720-44f4-82fc-63ab1032605b",
+      "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+      "parametros_busca": {
+       "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro",
+        "https://exame.com/economia/qual-sera-o-valor-do-salario-minimo-por-dia-em-2026",
+        "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+        "https://transparencia.itauba.mt.gov.br/fotos_downloads/9124.pdf",
+        "https://leafpayrh.com.br/salario-minimo-2026"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "388d629f-7450-4022-abcc-1f9d673c00c2",
+       "operacoes_busca": [
+        {
+         "id_operacao": "5135e52c-24ff-411d-9a49-4b53dad0a305",
+         "request_id": "388d629f-7450-4022-abcc-1f9d673c00c2",
+         "modo_busca": "GERAL",
+         "resultado_id": "8b1bd4-01",
+         "parametros": {
+          "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "cfe0bd35-a6bf-41e4-ba4e-d2b3e6d12e20",
+       "resultado_id": "8b1bd4-01",
+       "relevancia": 0.8477158,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Wed, 24 Dec 2025 00:00:00 GMT",
+         "value_normalized": "2025-12-24",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Publicado em",
+         "value_original": "24 de dezembro de 2025",
+         "value_normalized": "2025-12-24",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://exame.com/economia/qual-sera-o-valor-do-salario-minimo-por-dia-em-2026/",
+        "capturado_em": "2026-11-13T23:47:35.288Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Qual será o valor do salário mínimo por dia em 2026? | Exame",
+      "url": "https://exame.com/economia/qual-sera-o-valor-do-salario-minimo-por-dia-em-2026",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 5312,
+      "caracteres_preparados": 5312,
+      "trecho_analisado": "TÍTULO DA FONTE: Qual será o valor do salário mínimo por dia em 2026? | Exame\nURL DA FONTE: https://exame.com/economia/qual-sera-o-valor-do-salario-minimo-por-dia-em-2026\n\nCONTEÚDO DA FONTE:\nMais pesquisados:\n\n[EXAME - Negócios, Economia, Tecnologia e Carreira](https://exame.com/)\n\n[Entrar](https://id.exame.com/login?origin=exame&redirectUrl=https%3A%2F%2Fexame.com%2Feconomia%2Fqual-sera-o-valor-do-salario-minimo-por-dia-em-2026%2F)\n\n[Economia](https://exame.com/economia/)\n\n[Macro em Pauta](https://exame.com/economia/macro-em-pauta/)\n\n# Qual será o valor do salário mínimo por dia em 2026?\n\n## Valores são calculados a partir do piso mensal de R$ 1.621 e seguem regras da legislação trabalhista\n\n[Da Redação](https://exame.com/autor/redacao-exame/)\n\nRedação Exame\n\nPublicado em 24 de dezembro de 2025 às12h07.\n\n[Priorizar nos meus resultados Google](https://google.com/preferences/source?q=exame.com)\n\nO **salário mínimo de R$ 1.621**, que entra em vigor em **1º de janeiro de 2026**, corresponde a um valor diário de **R$ 54,04** e a um valor horário de **R$ 7,37**. Os números constam do **Decreto nº 12.797**, publicado no **Diário Oficial da União** desta quarta-feira, 24.\n\nOs cálculos seg",
+      "citacao_chave": "corresponde a um valor diário de R$ 54,04",
+      "citacao_verificada": true,
+      "citacao_rejeitada": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The news article reports that the minimum wage of R$ 1,621 effective 1 January 2026 translates to a daily value of R$ 54.04."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The news article reports that the minimum wage of R$ 1,621 effective 1 January 2026 translates to a daily value of R$ 54.04."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 316,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2026-01-01"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Salário mínimo 2026: valor, reajuste, tabela e impactos",
+      "url": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+      "conteudo": "[Pular para o conteúdo](#conteudo-principal)\n\n[![Barbieri Advogados](https://www.barbieriadvogados.com/wp-content/themes/barbieri/images/logo_barbieri30anos_branco.svg) ![Barbieri Advogados](https://www.barbieriadvogados.com/wp-content/themes/barbieri/images/logo_barbieri30anos_colorido2.svg)](https://www.barbieriadvogados.com/) \n\n* [PT](#)\n* [EN](#)\n* [中文](#)\n\n[![Barbieri Advogados](https://www.barbieriadvogados.com/wp-content/themes/barbieri/images/logo_barbieri30anos_branco.svg)](https://www.barbieriadvogados.com/)\n\n# Salário mínimo 2026: valor, reajuste, tabela e impactos\n\n|\n\n[Direito Trabalhista](https://www.barbieriadvogados.com/category/direito-trabalhista/)\n\n|\n\n18 min de leitura\n\n*At…",
+      "coletado_em": "2026-11-13T23:47:33.537Z",
+      "data_publicacao": "2026-05-18",
+      "data_atualizacao": "2026-05-18",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela/",
+      "relevancia": 0.8498466,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "388d629f-7450-4022-abcc-1f9d673c00c2",
+       "resultado_id": "9f924d-00",
+       "response_time_busca": 1.05,
+       "response_time_extracao": 0.02,
+       "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+       "origem_principal": {
+        "id_operacao": "5135e52c-24ff-411d-9a49-4b53dad0a305",
+        "request_id": "388d629f-7450-4022-abcc-1f9d673c00c2",
+        "modo_busca": "GERAL",
+        "resultado_id": "9f924d-00",
+        "parametros": {
+         "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "5135e52c-24ff-411d-9a49-4b53dad0a305",
+         "request_id": "388d629f-7450-4022-abcc-1f9d673c00c2",
+         "modo_busca": "GERAL",
+         "resultado_id": "9f924d-00",
+         "parametros": {
+          "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        },
+        {
+         "id_operacao": "4384e604-8aee-4eee-bf8b-83f27516aa49",
+         "request_id": "ded5cc7c-08ed-46f6-9d12-b113228851a3",
+         "modo_busca": "GERAL_SEM_VALOR",
+         "resultado_id": "2647ac-00",
+         "parametros": {
+          "query": "Em 2026, o valor diário do salário mínimo",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Mon, 18 May 2026 20:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 18 May 2026 20:00:00 GMT",
+         "value_normalized": "2026-05-18",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-05-18T17:00:00-03:00",
+         "value_normalized": "2026-05-18",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-11-07T23:56:07-03:00",
+         "value_normalized": "2026-11-08",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-05-18T17:00:00-03:00",
+         "value_normalized": "2026-05-18",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-07T23:56:07-03:00",
+         "value_normalized": "2026-11-08",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-05-18",
+         "value_normalized": "2026-05-18",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-07",
+         "value_normalized": "2026-11-07",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela/",
+        "capturado_em": "2026-11-13T23:47:32.894Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "cfe0bd35-a6bf-41e4-ba4e-d2b3e6d12e20",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2026-01-01",
+       "precisao": "DIA",
+       "citacao": "desde 1.º de janeiro de 2026",
+       "origem": "QUOTED_IN_SOURCE_TEXT",
+       "confirmada_em": "2026-05-18"
+      }
+     },
+     "coleta": {
+      "id_coleta": "c2d03914-3163-42c0-907c-0afd35b18b39",
+      "id_verificacao": "3d450e5b-aab4-41c5-ac0b-39320d40cdfb",
+      "url_original": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+      "url_canonica": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "2f19deaa6bfc0ef9c075e7e40c42ba8a894f3892b03631c49fb68002bfd3b6d1",
+      "coletado_em": "2026-11-13T23:47:33.537Z",
+      "id_operacao_busca": "5135e52c-24ff-411d-9a49-4b53dad0a305",
+      "id_operacao_extracao": "e80c3e59-3720-44f4-82fc-63ab1032605b",
+      "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+      "parametros_busca": {
+       "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro",
+        "https://exame.com/economia/qual-sera-o-valor-do-salario-minimo-por-dia-em-2026",
+        "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+        "https://transparencia.itauba.mt.gov.br/fotos_downloads/9124.pdf",
+        "https://leafpayrh.com.br/salario-minimo-2026"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "388d629f-7450-4022-abcc-1f9d673c00c2",
+       "operacoes_busca": [
+        {
+         "id_operacao": "5135e52c-24ff-411d-9a49-4b53dad0a305",
+         "request_id": "388d629f-7450-4022-abcc-1f9d673c00c2",
+         "modo_busca": "GERAL",
+         "resultado_id": "9f924d-00",
+         "parametros": {
+          "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        },
+        {
+         "id_operacao": "4384e604-8aee-4eee-bf8b-83f27516aa49",
+         "request_id": "ded5cc7c-08ed-46f6-9d12-b113228851a3",
+         "modo_busca": "GERAL_SEM_VALOR",
+         "resultado_id": "2647ac-00",
+         "parametros": {
+          "query": "Em 2026, o valor diário do salário mínimo",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "cfe0bd35-a6bf-41e4-ba4e-d2b3e6d12e20",
+       "resultado_id": "9f924d-00",
+       "relevancia": 0.8498466,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 18 May 2026 20:00:00 GMT",
+         "value_normalized": "2026-05-18",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-05-18T17:00:00-03:00",
+         "value_normalized": "2026-05-18",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-11-07T23:56:07-03:00",
+         "value_normalized": "2026-11-08",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-05-18T17:00:00-03:00",
+         "value_normalized": "2026-05-18",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-07T23:56:07-03:00",
+         "value_normalized": "2026-11-08",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-05-18",
+         "value_normalized": "2026-05-18",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-07",
+         "value_normalized": "2026-11-07",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "blogposting"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela/",
+        "capturado_em": "2026-11-13T23:47:32.894Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Salário mínimo 2026: valor, reajuste, tabela e impactos",
+      "url": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 33009,
+      "caracteres_preparados": 7998,
+      "trecho_analisado": "TÍTULO DA FONTE: Salário mínimo 2026: valor, reajuste, tabela e impactos\nURL DA FONTE: https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n[![Barbieri Advogados](https://www.barbieriadvogados.com/wp-content/themes/barbieri/images/logo_barbieri30anos_branco.svg)](https://www.barbieriadvogados.com/)\n\n# Salário mínimo 2026: valor, reajuste, tabela e impactos\n\n|\n\n*Atualizado em outubro de 2026.*\n\nO **salário mínimo 2026** é de R$ 1.621,00 por mês, valor em vigor desde 1.º de janeiro de 2026 por força do [Decreto n.\n\n12.797/2025](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/D12797.htm), que fixou também o valor diário em R$ 54,04 e o valor horário em R$ 7,37.\n\nO reajuste sobre os R$ 1.518,00 de 2025 foi de 6,79%, ou R$ 103,00.\n\nEste artigo reúne o valor atual e a tabela do salário mínimo, a regra de reajuste, o histórico desde o Plano Real, os reflexos previdenciários e trabalhistas, os pisos regionais e a previsão para 2027.\n\n> **Em resumo:** o salário mínimo nacional é de R$ 1.621,00 desde 1.º/1/2026 (Decreto n.\n\n12.797/2025), com valor diário de R$ 54,04 e horário de R$ 7,37, calculado sobre 220 horas mensai",
+      "citacao_chave": "valor diário em R$ 54,04",
+      "citacao_verificada": true,
+      "citacao_rejeitada": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The article cites the official decree and confirms the daily minimum wage is R$ 54.04 since 1 January 2026."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The article cites the official decree and confirms the daily minimum wage is R$ 54.04 since 1 January 2026."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 179,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2026-05-18"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Salário Mínimo 2026: Novo Valor, tabela diária, horária e Impactos na Folha",
+      "url": "https://leafpayrh.com.br/salario-minimo-2026",
+      "conteudo": "[Ir para o conteúdo](#content)\n\n\n[![](https://leafpayrh.com.br/wp-content/uploads/2021/01/Leafpay-02.svg)](https://leafpayrh.com.br)\n\n[Entre em contato](https://leafpayrh.com.br/#contato)\n\n![](https://leafpayrh.com.br/wp-content/uploads/2026/01/Thumb-salario-minimo-2026-1024x574.png)\n\n# Salário Mínimo 2026: Novo Valor, tabela diária, horária e Impactos na Folha\n\n2025 já começa com uma grande novidade: o novo **salário** **mínimo entra em vigor a partir da primeira semana de janeiro.** Este reajuste impacta milhões de brasileiros e é essencial estar atualizado sobre as mudanças. Veja os detalhes do novo salário mínimo, como ele afeta sua folha de pagamento e o que você precisa fazer para se a…",
+      "coletado_em": "2026-11-13T23:47:33.537Z",
+      "data_publicacao": "2026-01-12",
+      "data_atualizacao": "2026-01-12",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": "https://leafpayrh.com.br/salario-minimo-2026/",
+      "relevancia": 0.81286734,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "388d629f-7450-4022-abcc-1f9d673c00c2",
+       "resultado_id": "6a58f6-03",
+       "response_time_busca": 1.05,
+       "response_time_extracao": 0.02,
+       "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+       "origem_principal": {
+        "id_operacao": "5135e52c-24ff-411d-9a49-4b53dad0a305",
+        "request_id": "388d629f-7450-4022-abcc-1f9d673c00c2",
+        "modo_busca": "GERAL",
+        "resultado_id": "6a58f6-03",
+        "parametros": {
+         "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true,
+         "country": "brazil"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "5135e52c-24ff-411d-9a49-4b53dad0a305",
+         "request_id": "388d629f-7450-4022-abcc-1f9d673c00c2",
+         "modo_busca": "GERAL",
+         "resultado_id": "6a58f6-03",
+         "parametros": {
+          "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Mon, 12 Jan 2026 14:29:18 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 12 Jan 2026 14:29:18 GMT",
+         "value_normalized": "2026-01-12",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://leafpayrh.com.br/salario-minimo-2026/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-01-12T14:29:18+00:00",
+         "value_normalized": "2026-01-12",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-09-23T20:57:02+00:00",
+         "value_normalized": "2026-09-23",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-01-12T14:29:18+00:00",
+         "value_normalized": "2026-01-12",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-09-23T20:57:02+00:00",
+         "value_normalized": "2026-09-23",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://leafpayrh.com.br/salario-minimo-2026/",
+        "capturado_em": "2026-11-13T23:47:34.049Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "cfe0bd35-a6bf-41e4-ba4e-d2b3e6d12e20",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2026-01-01",
+       "precisao": "DIA",
+       "citacao": "a partir de 1º de janeiro de 2026",
+       "origem": "QUOTED_IN_SOURCE_TEXT",
+       "confirmada_em": "2026-01-12"
+      }
+     },
+     "coleta": {
+      "id_coleta": "788421da-3e74-4c30-b947-379f42c327ee",
+      "id_verificacao": "3d450e5b-aab4-41c5-ac0b-39320d40cdfb",
+      "url_original": "https://leafpayrh.com.br/salario-minimo-2026",
+      "url_canonica": "https://leafpayrh.com.br/salario-minimo-2026",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "3de13baf709c4f8e6090e173c41e9dfe4dcadae181143039dc4afadd47742d09",
+      "coletado_em": "2026-11-13T23:47:33.537Z",
+      "id_operacao_busca": "5135e52c-24ff-411d-9a49-4b53dad0a305",
+      "id_operacao_extracao": "e80c3e59-3720-44f4-82fc-63ab1032605b",
+      "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+      "parametros_busca": {
+       "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true,
+       "country": "brazil"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro",
+        "https://exame.com/economia/qual-sera-o-valor-do-salario-minimo-por-dia-em-2026",
+        "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+        "https://transparencia.itauba.mt.gov.br/fotos_downloads/9124.pdf",
+        "https://leafpayrh.com.br/salario-minimo-2026"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "388d629f-7450-4022-abcc-1f9d673c00c2",
+       "operacoes_busca": [
+        {
+         "id_operacao": "5135e52c-24ff-411d-9a49-4b53dad0a305",
+         "request_id": "388d629f-7450-4022-abcc-1f9d673c00c2",
+         "modo_busca": "GERAL",
+         "resultado_id": "6a58f6-03",
+         "parametros": {
+          "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true,
+          "country": "brazil"
+         }
+        }
+       ],
+       "request_id_extracao": "cfe0bd35-a6bf-41e4-ba4e-d2b3e6d12e20",
+       "resultado_id": "6a58f6-03",
+       "relevancia": 0.81286734,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 12 Jan 2026 14:29:18 GMT",
+         "value_normalized": "2026-01-12",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://leafpayrh.com.br/salario-minimo-2026/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-01-12T14:29:18+00:00",
+         "value_normalized": "2026-01-12",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-09-23T20:57:02+00:00",
+         "value_normalized": "2026-09-23",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-01-12T14:29:18+00:00",
+         "value_normalized": "2026-01-12",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-09-23T20:57:02+00:00",
+         "value_normalized": "2026-09-23",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://leafpayrh.com.br/salario-minimo-2026/",
+        "capturado_em": "2026-11-13T23:47:34.049Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Salário Mínimo 2026: Novo Valor, tabela diária, horária e Impactos na Folha",
+      "url": "https://leafpayrh.com.br/salario-minimo-2026",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 7736,
+      "caracteres_preparados": 7736,
+      "trecho_analisado": "TÍTULO DA FONTE: Salário Mínimo 2026: Novo Valor, tabela diária, horária e Impactos na Folha\nURL DA FONTE: https://leafpayrh.com.br/salario-minimo-2026\n\nCONTEÚDO DA FONTE:\n[Ir para o conteúdo](#content)\n\n\n[![](https://leafpayrh.com.br/wp-content/uploads/2021/01/Leafpay-02.svg)](https://leafpayrh.com.br)\n\n[Entre em contato](https://leafpayrh.com.br/#contato)\n\n![](https://leafpayrh.com.br/wp-content/uploads/2026/01/Thumb-salario-minimo-2026-1024x574.png)\n\n# Salário Mínimo 2026: Novo Valor, tabela diária, horária e Impactos na Folha\n\n2025 já começa com uma grande novidade: o novo **salário** **mínimo entra em vigor a partir da primeira semana de janeiro.** Este reajuste impacta milhões de brasileiros e é essencial estar atualizado sobre as mudanças. Veja os detalhes do novo salário mínimo, como ele afeta sua folha de pagamento e o que você precisa fazer para se adequar.\n\n**Calcule na hora:** informe qualquer salário bruto e veja quanto sobra depois de INSS e IRRF na [Calculadora de Salário Líquido da LeafPay](https://app.leafpayrh.com.br/ferramentas/calculadora-salario-liquido). É gratuita.\n\n## Reajuste do Salário Mínimo Nacional\n\nO salário mínimo federal vigora em **R$ 1.621,00** a p",
+      "citacao_chave": null,
+      "citacao_verificada": false,
+      "citacao_rejeitada": "Diário | R$ 54,04",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "Not counted: the model quoted text that is not in this source. Model's reason: The guide states that from 01/01/2026 the daily minimum wage amount is R$ 54.04."
+     },
+     "classificacao": {
+      "postura": "INSUFFICIENT",
+      "justificativa": "Not counted: the model quoted text that is not in this source. Model's reason: The guide states that from 01/01/2026 the daily minimum wage amount is R$ 54.04."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 305,
+      "validade_maxima_dias": 30,
+      "data_utilizada": "2026-01-12"
+     }
+    }
+   ],
+   "erro_busca": null,
+   "janela_validade": {
+    "dias": 30,
+    "origem": "CATEGORY",
+    "entidade": null,
+    "motivo": null
+   },
+   "risco_desatualizacao": {
+    "nivel": "HIGH",
+    "sensivel_ao_tempo": true,
+    "motivos": [
+     "Prices change often (checked against a 30-day window)"
+    ]
+   },
+   "dominios_oficiais_usados": [
+    "gov.br"
+   ],
+   "dominios_oficiais_automaticos": [
+    "gov.br"
+   ],
+   "agregacao": {
+    "status": "CLASSIFICADO",
+    "conclusao_factual": {
+     "status": "APOIA",
+     "resumo": "As evidências utilizáveis apoiam a afirmação. Isso, por si só, não demonstra que ela continua válida agora."
+    },
+    "veredito": "CORROBORADA",
+    "resumo": "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
+    "afirmacao": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+    "score_qualidade_evidencia": {
+     "valor": 50,
+     "escala": "0-100",
+     "natureza": "HEURISTICA",
+     "interpretacao": "Qualidade estrutural das evidências, não probabilidade de verdade.",
+     "componentes": {
+      "autoridade": 20,
+      "atualidade": 0,
+      "diversidade_fontes": 20,
+      "concordancia": 10
+     }
+    },
+    "freshness": {
+     "score": 0,
+     "status": "STALE",
+     "confidence": "ADEQUATE",
+     "algorithm_id": "CLAIM_FRESHNESS_SCORE",
+     "algorithm_version": "1.1.0",
+     "policy_id": "preco:30d:v1",
+     "as_of": "2026-11-13T23:47:21.837Z",
+     "evidence_summary": {
+      "received": 4,
+      "eligible": 4,
+      "independent_domains": 4,
+      "fresh": 0,
+      "stale": 4,
+      "excluded": 0
+     },
+     "drivers": [
+      {
+       "code": "ATTRIBUTE_DATED_STALE_EVIDENCE",
+       "evidence_id": null,
+       "date": "2026-01-01",
+       "age_days": 316,
+       "posture": "SUPPORTS",
+       "source_type": "OFICIAL",
+       "domain": "gov.br",
+       "dependency_group": "source_cluster_001"
+      },
+      {
+       "code": "ATTRIBUTE_DATED_STALE_EVIDENCE",
+       "evidence_id": null,
+       "date": "2026-01-01",
+       "age_days": 316,
+       "posture": "SUPPORTS",
+       "source_type": "OFICIAL",
+       "domain": "transparencia.itauba.mt.gov.br",
+       "dependency_group": "source_cluster_002"
+      },
+      {
+       "code": "ATTRIBUTE_DATED_STALE_EVIDENCE",
+       "evidence_id": null,
+       "date": "2026-01-01",
+       "age_days": 316,
+       "posture": "SUPPORTS",
+       "source_type": "NOTICIA",
+       "domain": "exame.com",
+       "dependency_group": "source_cluster_003"
+      },
+      {
+       "code": "ATTRIBUTE_DATED_STALE_EVIDENCE",
+       "evidence_id": null,
+       "date": "2026-05-18",
+       "age_days": 179,
+       "posture": "SUPPORTS",
+       "source_type": "OUTRO",
+       "domain": "barbieriadvogados.com",
+       "dependency_group": "source_cluster_004"
+      }
+     ],
+     "limitations": [
+      "Índice temporal determinístico; não é probabilidade de verdade.",
+      "Datas de página sem vínculo explícito ao atributo foram excluídas."
+     ]
+    },
+    "concordancia": {
+     "algorithm_id": "SOURCE_AGREEMENT_INDEX",
+     "algorithm_version": "1.1.0",
+     "weights": {
+      "OFICIAL": 3,
+      "ACADEMICO": 3,
+      "NOTICIA": 2,
+      "REFERENCIA": 1.5,
+      "OUTRO": 1,
+      "BLOG_FORUM": 0.25
+     },
+     "score": 100,
+     "coverage": "STRONG",
+     "independent_sources": 4,
+     "source_types": [
+      "OFICIAL",
+      "NOTICIA",
+      "OUTRO"
+     ],
+     "supporting": 4,
+     "support_weight": 9,
+     "strong_supporting": 3,
+     "strong_contradicting": 0,
+     "contradict_weight": 0,
+     "authoritative_supporting": 2,
+     "contradicting": 0,
+     "split": 0,
+     "by_type": {
+      "OFICIAL": {
+       "supports": 2,
+       "contradicts": 0,
+       "split": 0
+      },
+      "NOTICIA": {
+       "supports": 1,
+       "contradicts": 0,
+       "split": 0
+      },
+      "OUTRO": {
+       "supports": 1,
+       "contradicts": 0,
+       "split": 0
+      }
+     },
+     "limitations": [
+      "Agreement between sources is not a probability of truth: sources can share the same mistake.",
+      "Copies and pages from the same site count once; independence is approximated by domain and text similarity."
+     ]
+    },
+    "recencia_pagina": {
+     "algorithm_id": "PAGE_DATE_RECENCY_INDEX",
+     "algorithm_version": "1.0.0",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "as_of": "2026-11-13T23:47:21.837Z",
+     "score": 0,
+     "status": "STALE",
+     "policy_id": "preco:30d:page:v1",
+     "newest_date": "2026-05-18",
+     "sources": [
+      {
+       "date": "2026-01-01",
+       "age_days": 316,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "source_type": "OFICIAL",
+       "domain": "gov.br",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-01-01",
+       "age_days": 316,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "source_type": "OFICIAL",
+       "domain": "transparencia.itauba.mt.gov.br",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-01-01",
+       "age_days": 316,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "source_type": "NOTICIA",
+       "domain": "exame.com",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-05-18",
+       "age_days": 179,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "source_type": "OUTRO",
+       "domain": "barbieriadvogados.com",
+       "evidence_id": null
+      }
+     ],
+     "limitations": [
+      "Baseado na data da página, não na data em que o dado específico mudou: confiança baixa.",
+      "Não substitui o índice de atualidade principal e não é probabilidade de verdade."
+     ]
+    },
+    "atualidade_afirmacao": {
+     "algorithm_id": "CLAIM_CURRENCY_SCORE",
+     "algorithm_version": "1.1.0",
+     "formula": "evidence_recency × support_share",
+     "window_days": 30,
+     "score": 0,
+     "status": "AGING",
+     "basis": "FACT_DATE",
+     "confidence": "HIGH",
+     "evidence_recency": 0,
+     "support_share": 1,
+     "newest_date": "2026-05-18",
+     "newest_age_days": 179,
+     "within_window": false
+    },
+    "versao_regras": "1.4.0",
+    "metodo": "AGREGACAO_DETERMINISTICA",
+    "fontes_independentes": 4,
+    "grupos_distintos_de_evidencia": 4,
+    "dependencia_detectada": 0,
+    "dependencia_nao_verificada": true,
+    "nota_independencia": "Cópias exatas, quase duplicadas, URLs canônicas iguais e páginas do mesmo domínio são agrupadas; domínios sem sinal de cópia não têm independência editorial comprovada.",
+    "total_evidencias_utilizaveis": 4,
+    "fontes": [
+     {
+      "dominio": "gov.br",
+      "dominios": [
+       "gov.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_001",
+      "oficial": true,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Publicado decreto que reajusta salário mínimo para R$ 1.621 a partir de 1º de janeiro — Planalto",
+        "url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro",
+        "categoria_fonte": "OFICIAL",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T23:47:33.537Z",
+        "data_publicacao": "2025-12-24",
+        "data_atualizacao": "2026-01-01",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Wed, 24 Dec 2025 00:00:00 GMT",
+          "value_normalized": "2025-12-24",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2025-12-24T11:47:21-03:00",
+          "value_normalized": "2025-12-24",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "newsarticle"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-10-26T01:09:16-03:00",
+          "value_normalized": "2026-10-26",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "newsarticle"
+          ]
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Publicado em",
+          "value_original": "24/12/2025",
+          "value_normalized": "2025-12-24",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Atualizado em",
+          "value_original": "26/10/2026",
+          "value_normalized": "2026-10-26",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Publicado em",
+          "value_original": "24/12/2025",
+          "value_normalized": "2025-12-24",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Atualizado em",
+          "value_original": "26/10/2026",
+          "value_normalized": "2026-10-26",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_001",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "transparencia.itauba.mt.gov.br",
+      "dominios": [
+       "transparencia.itauba.mt.gov.br"
+      ],
+      "grupo_dependencia_id": "source_cluster_002",
+      "oficial": true,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://transparencia.itauba.mt.gov.br/fotos_downloads/9124.pdf"
+      ],
+      "evidencias": [
+       {
+        "titulo": "decreto nº. 003, de 05 de janeiro de 2026.",
+        "url": "https://transparencia.itauba.mt.gov.br/fotos_downloads/9124.pdf",
+        "categoria_fonte": "OFICIAL",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T23:47:33.537Z",
+        "data_publicacao": null,
+        "data_atualizacao": "2026-01-01",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [],
+        "grupo_dependencia_id": "source_cluster_002",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "exame.com",
+      "dominios": [
+       "exame.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_003",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://exame.com/economia/qual-sera-o-valor-do-salario-minimo-por-dia-em-2026"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Qual será o valor do salário mínimo por dia em 2026? | Exame",
+        "url": "https://exame.com/economia/qual-sera-o-valor-do-salario-minimo-por-dia-em-2026",
+        "categoria_fonte": "NOTICIA",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T23:47:33.537Z",
+        "data_publicacao": "2025-12-24",
+        "data_atualizacao": "2026-01-01",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Wed, 24 Dec 2025 00:00:00 GMT",
+          "value_normalized": "2025-12-24",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "VISIBLE_PAGE_DATE",
+          "field": "Publicado em",
+          "value_original": "24 de dezembro de 2025",
+          "value_normalized": "2025-12-24",
+          "scope": "PAGE",
+          "source": "VISIBLE_PAGE_LABEL",
+          "parse_status": "PARSED"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_003",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     },
+     {
+      "dominio": "barbieriadvogados.com",
+      "dominios": [
+       "barbieriadvogados.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_004",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Salário mínimo 2026: valor, reajuste, tabela e impactos",
+        "url": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+        "categoria_fonte": "OUTRO",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": true,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T23:47:33.537Z",
+        "data_publicacao": "2026-05-18",
+        "data_atualizacao": "2026-05-18",
+        "escopo_data": "ATTRIBUTE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Mon, 18 May 2026 20:00:00 GMT",
+          "value_normalized": "2026-05-18",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2026-05-18T17:00:00-03:00",
+          "value_normalized": "2026-05-18",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "ARTICLE_MODIFIED_TIME",
+          "field": "article:modified_time",
+          "value_original": "2026-11-07T23:56:07-03:00",
+          "value_normalized": "2026-11-08",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-05-18T17:00:00-03:00",
+          "value_normalized": "2026-05-18",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "webpage"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-11-07T23:56:07-03:00",
+          "value_normalized": "2026-11-08",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "webpage"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-05-18",
+          "value_normalized": "2026-05-18",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "blogposting"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-11-07",
+          "value_normalized": "2026-11-07",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "blogposting"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_004",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     }
+    ],
+    "limitacoes": [
+     "Nenhuma evidência possui data verificável e status de atualidade FRESH.",
+     "Domínios sem sinal detectado de duplicação não têm independência editorial comprovada; republicação com edição extensa ainda pode passar despercebida."
+    ],
+    "avaliado_em": "2026-11-13T23:47:39.503Z"
+   }
+  }
+ ],
+ "afirmacoes_omitidas": [],
+ "resposta_corrigida": {
+  "texto": "Em 2026, o valor diário do salário mínimo é de R$ 54,04 [1][2][3].",
+  "mudancas": [
+   {
+    "claim_id": "afirmacao_1",
+    "what": "kept"
+   }
+  ],
+  "fontes_citadas": [
+   1,
+   2,
+   3
+  ],
+  "tentativas": 1,
+  "citacoes_anexadas": false,
+  "fontes": [
+   {
+    "n": 1,
+    "url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro",
+    "titulo": "Publicado decreto que reajusta salário mínimo para R$ 1.621 a partir de 1º de janeiro — Planalto",
+    "tipo": "OFICIAL",
+    "postura": "SUPPORTS",
+    "data": "2026-01-01"
+   },
+   {
+    "n": 2,
+    "url": "https://transparencia.itauba.mt.gov.br/fotos_downloads/9124.pdf",
+    "titulo": "decreto nº. 003, de 05 de janeiro de 2026.",
+    "tipo": "OFICIAL",
+    "postura": "SUPPORTS",
+    "data": "2026-01-01"
+   },
+   {
+    "n": 3,
+    "url": "https://exame.com/economia/qual-sera-o-valor-do-salario-minimo-por-dia-em-2026",
+    "titulo": "Qual será o valor do salário mínimo por dia em 2026? | Exame",
+    "tipo": "NOTICIA",
+    "postura": "SUPPORTS",
+    "data": "2026-01-01"
+   }
+  ],
+  "metodo": "MODEL_REWRITE_FROM_VERIFIED_EVIDENCE"
+ },
+ "rastreabilidade_modelo": [
+  {
+   "id_chamada": "5935791a-dab4-4561-a3a4-6ee70feeb357",
+   "id_requisicao_enviada": "ede79aa2-958c-4d1a-b485-a5bd2169d21c",
+   "id_verificacao": "3d450e5b-aab4-41c5-ac0b-39320d40cdfb",
+   "etapa": "DECOMPOSICAO",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 706,
+   "tokens": {
+    "entrada": 847,
+    "saida": 182,
+    "total": 1029
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "ede79aa2-958c-4d1a-b485-a5bd2169d21c",
+   "id_trace": "10f09401cd5a4725842b2aa66498d538",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 815.707,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:47:21.838Z"
+  },
+  {
+   "id_chamada": "fb8a0fb3-92f7-45fc-94eb-ad32921139b1",
+   "id_requisicao_enviada": "21c20c3d-7586-4a8a-ae05-a89c8f9ada95",
+   "id_verificacao": "3d450e5b-aab4-41c5-ac0b-39320d40cdfb",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 4083,
+   "tokens": {
+    "entrada": 4567,
+    "saida": 1685,
+    "total": 6252
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "21c20c3d-7586-4a8a-ae05-a89c8f9ada95",
+   "id_trace": "72e8cc998e1447528cbec6dc2de24d61",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 4123.854,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:47:35.324Z"
+  },
+  {
+   "id_chamada": "1534eaa1-5f8f-4d50-b22c-df59dadecfb8",
+   "id_requisicao_enviada": "20634e3c-cea2-4d30-8db7-44b5f1863ca0",
+   "id_verificacao": "3d450e5b-aab4-41c5-ac0b-39320d40cdfb",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 568,
+   "tokens": {
+    "entrada": 964,
+    "saida": 127,
+    "total": 1091
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "20634e3c-cea2-4d30-8db7-44b5f1863ca0",
+   "id_trace": "45f1cc960ab246bd8dbd5e263d49196f",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 568.482,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:47:39.503Z"
+  }
+ ],
+ "rastreabilidade_pesquisa": [
+  {
+   "id_operacao": "5135e52c-24ff-411d-9a49-4b53dad0a305",
+   "id_verificacao": "3d450e5b-aab4-41c5-ac0b-39320d40cdfb",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:47:22.842Z",
+   "finalizada_em": "2026-11-13T23:47:24.400Z",
+   "duracao_ms": 1558,
+   "request_id": "388d629f-7450-4022-abcc-1f9d673c00c2",
+   "response_time": 1.05,
+   "erro": null,
+   "modo_busca": "GERAL",
+   "parametros": {
+    "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true,
+    "country": "brazil"
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "9f924d-00",
+     "titulo": "Salário mínimo 2026: valor, reajuste, tabela e impactos",
+     "url": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+     "relevancia": 0.8498466,
+     "data_publicacao": "2026-05-18"
+    },
+    {
+     "resultado_id": "8b1bd4-01",
+     "titulo": "Qual será o valor do salário mínimo por dia em 2026? | Exame",
+     "url": "https://exame.com/economia/qual-sera-o-valor-do-salario-minimo-por-dia-em-2026",
+     "relevancia": 0.8477158,
+     "data_publicacao": "2025-12-24"
+    },
+    {
+     "resultado_id": "66d504-02",
+     "titulo": "Novo salário mínimo 2026: confira o valor do reajuste",
+     "url": "https://blog.convenia.com.br/novo-salario-minimo",
+     "relevancia": 0.8433798,
+     "data_publicacao": "2025-12-30"
+    },
+    {
+     "resultado_id": "6a58f6-03",
+     "titulo": "Salário Mínimo 2026: Novo Valor, tabela diária, horária e Impactos na Folha",
+     "url": "https://leafpayrh.com.br/salario-minimo-2026",
+     "relevancia": 0.81286734,
+     "data_publicacao": "2026-01-12"
+    },
+    {
+     "resultado_id": "8e7370-04",
+     "titulo": "3.1K views · 75 reactions | TRABALHADORES | O novo salário mínimo de R$ 1.621 começa a ser pago nesta segunda-feira (2). O reajuste foi de 6,79%, equivalente a R$ 103.\n\nSegundo o Departamento Intersindical de Estatística e Estudos Socioeconômicos (Dieese), o novo salário mínimo impacta 61,9 milhões de brasileiros. O aumento deve injetar R$ 81,7 bilhões na economia em 2026.\n\nQuanto vale o mínimo em 2026?\nMensal: R$ 1.621;\nDiário: R$ 54,04;\nHora: R$ 7,37.\n\n#salário #brasil #economia #governolula #trabalho #tvtnews #notícias | Rede TVT",
+     "url": "https://www.facebook.com/redetvt/videos/trabalhadores-o-novo-sal%C3%A1rio-m%C3%ADnimo-de-r-1621-come%C3%A7a-a-ser-pago-nesta-segunda-fe/2872395909624979",
+     "relevancia": 0.8119744,
+     "data_publicacao": "2026-02-15"
+    }
+   ]
+  },
+  {
+   "id_operacao": "4384e604-8aee-4eee-bf8b-83f27516aa49",
+   "id_verificacao": "3d450e5b-aab4-41c5-ac0b-39320d40cdfb",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Em 2026, o valor diário do salário mínimo",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:47:24.403Z",
+   "finalizada_em": "2026-11-13T23:47:25.844Z",
+   "duracao_ms": 1441,
+   "request_id": "ded5cc7c-08ed-46f6-9d12-b113228851a3",
+   "response_time": 0.91,
+   "erro": null,
+   "modo_busca": "GERAL_SEM_VALOR",
+   "parametros": {
+    "query": "Em 2026, o valor diário do salário mínimo",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true,
+    "country": "brazil"
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "2647ac-00",
+     "titulo": "Salário mínimo 2026: valor, reajuste, tabela e impactos",
+     "url": "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+     "relevancia": 0.8478418,
+     "data_publicacao": "2026-05-18"
+    },
+    {
+     "resultado_id": "8b66af-01",
+     "titulo": "Novo salário mínimo 2026: confira o valor do reajuste",
+     "url": "https://blog.convenia.com.br/novo-salario-minimo",
+     "relevancia": 0.82949203,
+     "data_publicacao": "2025-12-30"
+    },
+    {
+     "resultado_id": "9edd67-02",
+     "titulo": "Salário mínimo 2026 por dia e por hora: veja os valores atualizados e como calcular | Blog Contabilidade.com",
+     "url": "https://contabilidade.com/blog/salario-minimo-2026-por-dia-e-por-hora-veja-os-valores-atualizados-e-como-calcular",
+     "relevancia": 0.7913377,
+     "data_publicacao": "2026-03-21"
+    },
+    {
+     "resultado_id": "659c2b-03",
+     "titulo": "3.1K views · 75 reactions | TRABALHADORES | O novo salário mínimo de R$ 1.621 começa a ser pago nesta segunda-feira (2). O reajuste foi de 6,79%, equivalente a R$ 103.\n\nSegundo o Departamento Intersindical de Estatística e Estudos Socioeconômicos (Dieese), o novo salário mínimo impacta 61,9 milhões de brasileiros. O aumento deve injetar R$ 81,7 bilhões na economia em 2026.\n\nQuanto vale o mínimo em 2026?\nMensal: R$ 1.621;\nDiário: R$ 54,04;\nHora: R$ 7,37.\n\n#salário #brasil #economia #governolula #trabalho #tvtnews #notícias | Rede TVT",
+     "url": "https://www.facebook.com/redetvt/videos/trabalhadores-o-novo-sal%C3%A1rio-m%C3%ADnimo-de-r-1621-come%C3%A7a-a-ser-pago-nesta-segunda-fe/2872395909624979",
+     "relevancia": 0.7895584,
+     "data_publicacao": "2026-02-15"
+    },
+    {
+     "resultado_id": "cf9ad1-04",
+     "titulo": "Valor do salário-mínimo em 2026: valores atualizados",
+     "url": "https://www.serasa.com.br/blog/valor-do-salario-minimo",
+     "relevancia": 0.7874412,
+     "data_publicacao": "2026-03-24"
+    }
+   ]
+  },
+  {
+   "id_operacao": "3bbb733e-7de3-4cb4-805c-ba961653b2d1",
+   "id_verificacao": "3d450e5b-aab4-41c5-ac0b-39320d40cdfb",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:47:25.844Z",
+   "finalizada_em": "2026-11-13T23:47:30.861Z",
+   "duracao_ms": 5017,
+   "request_id": "3524d1ab-ef81-4003-a12f-7166e72e8b8b",
+   "response_time": 4.76,
+   "erro": null,
+   "modo_busca": "NOTICIAS_BR",
+   "parametros": {
+    "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+    "search_depth": "basic",
+    "max_results": 4,
+    "include_answer": false,
+    "include_published_date": true,
+    "topic": "news",
+    "time_range": "month",
+    "include_domains": [
+     "g1.globo.com",
+     "oglobo.globo.com",
+     "valor.globo.com",
+     "folha.uol.com.br",
+     "uol.com.br",
+     "estadao.com.br",
+     "agenciabrasil.ebc.com.br",
+     "cnnbrasil.com.br",
+     "infomoney.com.br",
+     "exame.com",
+     "poder360.com.br",
+     "correiobraziliense.com.br",
+     "metropoles.com",
+     "veja.abril.com.br",
+     "terra.com.br",
+     "band.com.br",
+     "r7.com",
+     "bbc.com",
+     "jota.info",
+     "canaltech.com.br"
+    ]
+   },
+   "quantidade_resultados": 4,
+   "resultados": [
+    {
+     "resultado_id": "42328f-00",
+     "titulo": "Brazil's Congress approves shorter workweek in win for Lula - BBC",
+     "url": "https://www.bbc.com/news/articles/cmwy43pp08elo",
+     "relevancia": 0.011115014,
+     "data_publicacao": "2026-10-15"
+    },
+    {
+     "resultado_id": "f553f5-01",
+     "titulo": "Brazil election: How a changing working class is reshaping the presidential race - BBC",
+     "url": "https://www.bbc.com/news/articles/cw80zx79nkvno",
+     "relevancia": 0.006145092,
+     "data_publicacao": "2026-10-24"
+    },
+    {
+     "resultado_id": "3f3e2e-02",
+     "titulo": "How do US voters rate Trump's presidency so far? - BBC",
+     "url": "https://www.bbc.com/news/videos/cqr7yk2pe1jlo",
+     "relevancia": 0.005281334,
+     "data_publicacao": "2026-11-03"
+    },
+    {
+     "resultado_id": "e50dd4-03",
+     "titulo": "Bolsonaro and Lula supporters rally ahead of Brazil election - BBC",
+     "url": "https://www.bbc.com/news/videos/c6j9kr72v90no",
+     "relevancia": 0.0037654135,
+     "data_publicacao": "2026-10-25"
+    }
+   ]
+  },
+  {
+   "id_operacao": "5613458b-5b5c-43d7-ba18-5c69ff481604",
+   "id_verificacao": "3d450e5b-aab4-41c5-ac0b-39320d40cdfb",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:47:30.861Z",
+   "finalizada_em": "2026-11-13T23:47:32.595Z",
+   "duracao_ms": 1734,
+   "request_id": "f9dfbd9f-9010-46c1-aba5-1ca6038f22ea",
+   "response_time": 1.21,
+   "erro": null,
+   "modo_busca": "DOMINIOS_OFICIAIS",
+   "parametros": {
+    "query": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true,
+    "include_domains": [
+     "gov.br"
+    ]
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "48d2f7-00",
+     "titulo": "Publicado decreto que reajusta salário mínimo para R$ 1.621 a partir de 1º de janeiro — Planalto",
+     "url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro",
+     "relevancia": 0.8292156,
+     "data_publicacao": "2025-12-24"
+    },
+    {
+     "resultado_id": "b26ece-01",
+     "titulo": "decreto nº. 003, de 05 de janeiro de 2026.",
+     "url": "https://transparencia.itauba.mt.gov.br/fotos_downloads/9124.pdf",
+     "relevancia": 0.81257004,
+     "data_publicacao": null
+    },
+    {
+     "resultado_id": "c9584d-02",
+     "titulo": "Prefeitura Municipal de Rio Branco",
+     "url": "https://riobranco.mt.gov.br/transparencia/legislacao/decretos/3683-decreto-municipal-n-076-de-29-de-dezembro-d",
+     "relevancia": 0.7898827,
+     "data_publicacao": "2025-12-29"
+    },
+    {
+     "resultado_id": "6fc065-03",
+     "titulo": "D12797",
+     "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12797.htm",
+     "relevancia": 0.7627777,
+     "data_publicacao": "2025-12-24"
+    },
+    {
+     "resultado_id": "27174c-04",
+     "titulo": "Câmara Municipal de Sobral",
+     "url": "https://www.camarasobral.ce.gov.br/arquivos/5367/LEI_MUNICIPAL_2712_2026_0000001.pdf",
+     "relevancia": 0.5795789,
+     "data_publicacao": "2026-01-01"
+    }
+   ]
+  },
+  {
+   "id_operacao": "e80c3e59-3720-44f4-82fc-63ab1032605b",
+   "id_verificacao": "3d450e5b-aab4-41c5-ac0b-39320d40cdfb",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "EXTRACAO",
+   "consulta": "Em 2026, o valor diário do salário mínimo é de R$ 54,04.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:47:32.598Z",
+   "finalizada_em": "2026-11-13T23:47:33.537Z",
+   "duracao_ms": 940,
+   "request_id": "cfe0bd35-a6bf-41e4-ba4e-d2b3e6d12e20",
+   "response_time": 0.02,
+   "erro": null,
+   "urls_solicitadas": [
+    "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro",
+    "https://exame.com/economia/qual-sera-o-valor-do-salario-minimo-por-dia-em-2026",
+    "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+    "https://transparencia.itauba.mt.gov.br/fotos_downloads/9124.pdf",
+    "https://leafpayrh.com.br/salario-minimo-2026"
+   ],
+   "parametros": {
+    "urls": [
+     "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro",
+     "https://exame.com/economia/qual-sera-o-valor-do-salario-minimo-por-dia-em-2026",
+     "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+     "https://transparencia.itauba.mt.gov.br/fotos_downloads/9124.pdf",
+     "https://leafpayrh.com.br/salario-minimo-2026"
+    ],
+    "extract_depth": "basic",
+    "format": "markdown",
+    "include_images": false
+   },
+   "quantidade_resultados": 5,
+   "urls_extraidas": [
+    "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/12/publicado-decreto-que-reajusta-salario-minimo-para-r-1-621-a-partir-de-1o-de-janeiro",
+    "https://exame.com/economia/qual-sera-o-valor-do-salario-minimo-por-dia-em-2026",
+    "https://www.barbieriadvogados.com/salario-minimo-2026-valor-atual-tabela",
+    "https://transparencia.itauba.mt.gov.br/fotos_downloads/9124.pdf",
+    "https://leafpayrh.com.br/salario-minimo-2026"
+   ]
+  }
+ ],
+ "modo": "real",
+ "simulado": false,
+ "gateway": {
+  "gateway": "bifrost",
+  "chamadas": 3,
+  "falhas": 0,
+  "cadeia_modelos": [
+   "groq/openai/gpt-oss-20b",
+   "groq/openai/gpt-oss-120b"
+  ],
+  "queda_simulada": false,
+  "respostas_por_modelo": [
+   {
+    "modelo": "groq/openai/gpt-oss-120b",
+    "chamadas": 2
+   },
+   {
+    "modelo": "groq/openai/gpt-oss-20b",
+    "chamadas": 1
+   }
+  ],
+  "respostas_de_reserva": 2,
+  "tokens_total": 8372,
+  "latencia_media_ms": 1836
+ },
+ "duracao_ms": 18278,
+ "gravado_em": "2026-11-13T23:47:40.110Z"
+}

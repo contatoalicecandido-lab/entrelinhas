@@ -96,14 +96,15 @@ In the API response this claim score is `agregacao.atualidade_afirmacao` (the nu
 
 These windows are **configurable product defaults** (`VALIDADE_MAX_DIAS` in `src/atualidade.js`), not universal truths.
 
-Some official values move faster than their category, so they get their own window (`JANELAS_POR_ENTIDADE` in `src/atualidade.js`), and the triage says why:
+Some official values move at their own pace, whatever category the model gives them, so they get their own window (`JANELAS_POR_ENTIDADE` in `src/atualidade.js`), and the triage says why:
 
 | Value | Window | Why |
 |---|---|---|
 | Selic rate | **45 days** | Brazil's Copom reviews it about every 45 days (8 meetings a year). |
 | Inflation (IPCA, INPC, CPI) | **30 days** | Official inflation figures are published every month. |
+| Brazil's minimum wage | **365 days** | Set once a year, in force from 1 January. A live check filed the daily minimum wage as a *price* (30 days) and scored a correct 2026 value as aging; the entity window fixes that. |
 
-Calibrating the windows against labeled cases is future work, using the benchmark below. (The 13 Nov benchmark ran before these entity windows existed. They make the check stricter, never looser: an official page about the Selic that is older than 45 days no longer counts as a current confirmation, so the verdict can only move toward caution.)
+Calibrating the windows against labeled cases is future work, using the benchmark below. (The 13 Nov benchmark ran before these entity windows existed. The Selic and inflation windows make the check stricter: an official page about the Selic that is older than 45 days no longer counts as a current confirmation. The minimum wage window only changes the freshness score; re-scoring the recorded evidence gives the same verdicts.)
 
 **Important distinctions:**
 - A publication date is not the date a fact changed.
@@ -211,6 +212,7 @@ What the run taught us, already fixed:
   - a strong source (official, scientific or news) against a green claim now makes it *Conflicting*; *Corroborated* needs at least one strong supporting source; red needs contradicting weight of at least 2 (one blog alone is not enough);
   - the Brazilian authority found in a claim (Selic → bcb.gov.br, minimum wage → gov.br) only gave weight to sources found by chance; now it is also searched directly;
   - a slow request could hold the local server's single check slot; the body is now read before the slot is taken, and stalled requests are cut after 15 s.
+- A live re-run that night found one more: when the free model tier slowed down, a check passed the server's 4-minute limit but kept running in the background, so the next checks were refused as "already running". Each check now has a deadline (`src/prazo.js`): every Tavily and Bifrost call gets only the time that is left, and calls still running at the deadline are cancelled, so the server is free again right after the limit (`testes/teste-prazo.js`).
 - One updated answer came back in the wrong language, so the language is now pinned.
 
 23 claims is a small sample: this shows behavior on real cases, not a statistical accuracy estimate.

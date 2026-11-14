@@ -1,0 +1,38 @@
+{
+  "executado_em": "2026-11-13T23:58:10.732Z",
+  "servidor": "http://127.0.0.1:3001",
+  "resumo": {
+    "total": 0,
+    "acertos": 0,
+    "parciais": 0,
+    "sem_decisao": 0,
+    "erros": 0,
+    "erros_graves_confirmou_desatualizada": 0,
+    "acuracia_estrita": null,
+    "direcao_correta": null,
+    "falhas_execucao": 2,
+    "gateway": null
+  },
+  "linhas": [
+    {
+      "id": "pt-selic-1375",
+      "esperado": "ATUAL",
+      "veredito": null,
+      "nota_atualidade": null,
+      "resultado": "FALHA_EXECUCAO",
+      "segundos": 0,
+      "gateway": null,
+      "erro": "A check is already running. Wait for it to finish."
+    },
+    {
+      "id": "pt-selic-105",
+      "esperado": "DESATUALIZADA",
+      "veredito": null,
+      "nota_atualidade": null,
+      "resultado": "FALHA_EXECUCAO",
+      "segundos": 0,
+      "gateway": null,
+      "erro": "A check is already running. Wait for it to finish."
+    }
+  ]
+}

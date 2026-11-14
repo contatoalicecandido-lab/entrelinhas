@@ -39,6 +39,8 @@ function validarData(dataTexto) {
 const JANELAS_POR_ENTIDADE = [
   { entidade: "selic", padrao: /\bselic\b/i, dias: 45,
     motivo: "Brazil's Copom reviews the Selic rate about every 45 days (8 meetings a year)" },
+  { entidade: "salario_minimo", padrao: /sal[áa]rio m[íi]nimo/i, dias: 365,
+    motivo: "Brazil's minimum wage is set once a year, in force from 1 January" },
   { entidade: "inflacao", padrao: /\b(ipca|inpc|infla[çc][ãa]o|inflation rate|consumer price index|CPI)\b/i, dias: 30,
     motivo: "official inflation figures are published every month" }
 ];

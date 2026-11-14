@@ -1,0 +1,2008 @@
+{
+ "sistema": "Entrelinhas",
+ "id_verificacao": "85d543c1-dab5-4592-833a-759d8346de94",
+ "texto_original": "Satya Nadella is the CEO of Microsoft.",
+ "verificado_em": "2026-11-13T23:45:39.657Z",
+ "total_afirmacoes": 1,
+ "sintese": {
+  "veredito": "CORROBORADA",
+  "resumo": "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
+  "total_afirmacoes": 1,
+  "contagem_vereditos": {
+   "CORROBORADA": 1
+  }
+ },
+ "afirmacoes": [
+  {
+   "id": "afirmacao_1",
+   "texto": "Satya Nadella is the CEO of Microsoft.",
+   "tipo_afirmacao": "empresa",
+   "origem_tipo_afirmacao": "MODELO",
+   "nuances": {
+    "idioma": "en",
+    "variante": null,
+    "confianca_idioma": 1,
+    "valores": [],
+    "datas": [],
+    "expressoes_temporais": [],
+    "condicoes": [],
+    "mudancas": [],
+    "tempo_coloquial": [],
+    "girias": {
+     "aliases": [],
+     "expressoes": []
+    },
+    "consulta_busca": "Satya Nadella is the CEO of Microsoft.",
+    "dominios_oficiais_sugeridos": [],
+    "autoridades": [],
+    "notas": []
+   },
+   "evidencias": [
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OFICIAL",
+      "titulo": "Satya Nadella - Source",
+      "url": "https://news.microsoft.com/source/exec/satya-nadella",
+      "conteudo": "[![Microsoft](https://uhf.microsoft.com/images/microsoft/RE1Mu3b.png)](https://www.microsoft.com)   [Source](https://news.microsoft.com/source)     [Signal blog](https://news.microsoft.com/signal/) [Official Microsoft Blog](https://blogs.microsoft.com) [Command Line](https://commandline.microsoft.com/) [Microsoft On The Issues](https://blogs.microsoft.com/on-the-issues/) [Asia](https://news.microsoft.com/apac/) [Canada](https://news.microsoft.com/source/canada/) [Europe, Middle East and Africa](https://news.microsoft.com/europe/) [Latin America](https://news.microsoft.com/es-xl/) [The Code of Us](https://news.microsoft.com/codeofus)  [What's new](https://news.microsoft.com/signal/) [AI](http…",
+      "coletado_em": "2026-11-13T23:45:30.733Z",
+      "data_publicacao": "2014-02-04",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://news.microsoft.com/source/exec/satya-nadella/",
+      "relevancia": 0.88059187,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "fd3dff7e-5f9a-43a0-9bc1-4ccc5fea8d27",
+       "resultado_id": "00e9f3-00",
+       "response_time_busca": 1.21,
+       "response_time_extracao": 0.02,
+       "consulta": "Satya Nadella is the CEO of Microsoft.",
+       "origem_principal": {
+        "id_operacao": "f7fc0ae9-b239-413e-82b9-bddb2366728e",
+        "request_id": "fd3dff7e-5f9a-43a0-9bc1-4ccc5fea8d27",
+        "modo_busca": "GERAL",
+        "resultado_id": "00e9f3-00",
+        "parametros": {
+         "query": "Satya Nadella is the CEO of Microsoft.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "f7fc0ae9-b239-413e-82b9-bddb2366728e",
+         "request_id": "fd3dff7e-5f9a-43a0-9bc1-4ccc5fea8d27",
+         "modo_busca": "GERAL",
+         "resultado_id": "00e9f3-00",
+         "parametros": {
+          "query": "Satya Nadella is the CEO of Microsoft.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Tue, 04 Feb 2014 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 04 Feb 2014 00:00:00 GMT",
+         "value_normalized": "2014-02-04",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Thu, 05 Nov 2026 22:42:20 GMT",
+         "value_normalized": "2026-11-05",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://news.microsoft.com/source/exec/satya-nadella/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-11-06T06:42:20+00:00",
+         "value_normalized": "2026-11-06",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2025-12-08T20:22:43+00:00",
+         "value_normalized": "2025-12-08",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-06T06:42:20+00:00",
+         "value_normalized": "2026-11-06",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://news.microsoft.com/source/exec/satya-nadella",
+        "capturado_em": "2026-11-13T23:45:30.575Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "10f400d1-4962-4ba5-b8c6-bd7112dd4747",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "c26f84f6-390f-40a8-9574-acf8dc6c3337",
+      "id_verificacao": "85d543c1-dab5-4592-833a-759d8346de94",
+      "url_original": "https://news.microsoft.com/source/exec/satya-nadella",
+      "url_canonica": "https://news.microsoft.com/source/exec/satya-nadella",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "7283167d8734f7ed19071c442631888c56c76dc0593acc1c24bc51519f728852",
+      "coletado_em": "2026-11-13T23:45:30.733Z",
+      "id_operacao_busca": "f7fc0ae9-b239-413e-82b9-bddb2366728e",
+      "id_operacao_extracao": "a2f18cc5-b0a8-4aa4-a814-37aa971eb504",
+      "consulta": "Satya Nadella is the CEO of Microsoft.",
+      "parametros_busca": {
+       "query": "Satya Nadella is the CEO of Microsoft.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://news.microsoft.com/source/exec/satya-nadella",
+        "https://en.wikipedia.org/wiki/Satya_Nadella",
+        "https://www.businessroundtable.org/members/satya-nadella",
+        "https://www.britannica.com/money/Satya-Nadella",
+        "https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "fd3dff7e-5f9a-43a0-9bc1-4ccc5fea8d27",
+       "operacoes_busca": [
+        {
+         "id_operacao": "f7fc0ae9-b239-413e-82b9-bddb2366728e",
+         "request_id": "fd3dff7e-5f9a-43a0-9bc1-4ccc5fea8d27",
+         "modo_busca": "GERAL",
+         "resultado_id": "00e9f3-00",
+         "parametros": {
+          "query": "Satya Nadella is the CEO of Microsoft.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "10f400d1-4962-4ba5-b8c6-bd7112dd4747",
+       "resultado_id": "00e9f3-00",
+       "relevancia": 0.88059187,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 04 Feb 2014 00:00:00 GMT",
+         "value_normalized": "2014-02-04",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Thu, 05 Nov 2026 22:42:20 GMT",
+         "value_normalized": "2026-11-05",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://news.microsoft.com/source/exec/satya-nadella/",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_MODIFIED_TIME",
+         "field": "article:modified_time",
+         "value_original": "2026-11-06T06:42:20+00:00",
+         "value_normalized": "2026-11-06",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2025-12-08T20:22:43+00:00",
+         "value_normalized": "2025-12-08",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-11-06T06:42:20+00:00",
+         "value_normalized": "2026-11-06",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "webpage"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://news.microsoft.com/source/exec/satya-nadella",
+        "capturado_em": "2026-11-13T23:45:30.575Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Satya Nadella - Source",
+      "url": "https://news.microsoft.com/source/exec/satya-nadella",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 15705,
+      "caracteres_preparados": 7983,
+      "trecho_analisado": "TÍTULO DA FONTE: Satya Nadella - Source\nURL DA FONTE: https://news.microsoft.com/source/exec/satya-nadella\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n[![Microsoft](https://uhf.microsoft.com/images/microsoft/RE1Mu3b.png)](https://www.microsoft.com)   [Source](https://news.microsoft.com/source)     [Signal blog](https://news.microsoft.com/signal/) [Official Microsoft Blog](https://blogs.microsoft.com) [Command Line](https://commandline.microsoft.com/) [Microsoft On The Issues](https://blogs.microsoft.com/on-the-issues/) [Asia](https://news.microsoft.com/apac/) [Canada](https://news.microsoft.com/source/canada/) [Europe, Middle East and Africa](https://news.microsoft.com/europe/) [Latin America](https://news.microsoft.com/es-xl/) [The Code of Us](https://news.microsoft.com/codeofus)  [What's new](https://news.microsoft.com/signal/) [AI](https://news.microsoft.com/source/topics/ai/) [Innovation](https://news.microsoft.com/source/topics/innovation/) [Digital Transformation](https://news.microsoft.com/source/topics/digital-transformation/) [Sustainability](https://news.microsoft.com/source/topics/sustainability/) [Security](https://news.microsoft.com/source/topics/security/) [Work & Life](https",
+      "citacao_chave": "Satya Nadella is Chairman and Chief Executive Officer of Microsoft.",
+      "citacao_verificada": true,
+      "citacao_rejeitada": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source explicitly states Satya Nadella is Chairman and Chief Executive Officer of Microsoft."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The source explicitly states Satya Nadella is Chairman and Chief Executive Officer of Microsoft."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 4665,
+      "validade_maxima_dias": 180,
+      "data_utilizada": "2014-02-04"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "REFERENCIA",
+      "titulo": "Satya Nadella - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Satya_Nadella",
+      "conteudo": "[Jump to content](#bodyContent)\n\n[![](/static/images/icons/enwiki-25.svg)  ![Wikipedia](/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](/wiki/Main_Page)\n\n[Search](/wiki/Special:Search \"Search Wikipedia [f]\")\n\n## Contents\n\n* [1 Early life](#Early_life)\n* [2 Career](#Career)\n  + [2.1 Sun Microsystems](#Sun_Microsystems)\n  + [2.2 Microsoft](#Microsoft)\n    - [2.2.1 1992–2014](#1992–2014)\n    - [2.2.2 Chief executive officer (2014–present)](#Chief_executive_officer_(2014–present))\n    - [2.2.3 Sports](#Sports)\n  + [2.3 Boards and committees](#Boards_and_committees)\n* [3 Awards and recognition](#A…",
+      "coletado_em": "2026-11-13T23:45:30.733Z",
+      "data_publicacao": "2026-01-30",
+      "data_atualizacao": "2026-01-30",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": "https://en.wikipedia.org/wiki/Satya_Nadella",
+      "relevancia": 0.8729984,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "fd3dff7e-5f9a-43a0-9bc1-4ccc5fea8d27",
+       "resultado_id": "7f4939-01",
+       "response_time_busca": 1.21,
+       "response_time_extracao": 0.02,
+       "consulta": "Satya Nadella is the CEO of Microsoft.",
+       "origem_principal": {
+        "id_operacao": "f7fc0ae9-b239-413e-82b9-bddb2366728e",
+        "request_id": "fd3dff7e-5f9a-43a0-9bc1-4ccc5fea8d27",
+        "modo_busca": "GERAL",
+        "resultado_id": "7f4939-01",
+        "parametros": {
+         "query": "Satya Nadella is the CEO of Microsoft.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "f7fc0ae9-b239-413e-82b9-bddb2366728e",
+         "request_id": "fd3dff7e-5f9a-43a0-9bc1-4ccc5fea8d27",
+         "modo_busca": "GERAL",
+         "resultado_id": "7f4939-01",
+         "parametros": {
+          "query": "Satya Nadella is the CEO of Microsoft.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Fri, 30 Jan 2026 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 30 Jan 2026 00:00:00 GMT",
+         "value_normalized": "2026-01-30",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 19:03:18 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://en.wikipedia.org/wiki/Satya_Nadella",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2013-01-23T20:04:05Z",
+         "value_normalized": "2013-01-23",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-31T22:53:02Z",
+         "value_normalized": "2026-10-31",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://en.wikipedia.org/wiki/Satya_Nadella",
+        "capturado_em": "2026-11-13T23:45:30.459Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "10f400d1-4962-4ba5-b8c6-bd7112dd4747",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2014-02-04",
+       "precisao": "DIA",
+       "citacao": "On 4 February 2014, Nadella was announced as the new CEO of Microsoft",
+       "origem": "QUOTED_IN_SOURCE_TEXT",
+       "confirmada_em": "2026-01-30"
+      }
+     },
+     "coleta": {
+      "id_coleta": "761f277c-4623-4875-b092-076ea7300514",
+      "id_verificacao": "85d543c1-dab5-4592-833a-759d8346de94",
+      "url_original": "https://en.wikipedia.org/wiki/Satya_Nadella",
+      "url_canonica": "https://en.wikipedia.org/wiki/Satya_Nadella",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "9b4a1acc158ff848ee1b287a6aad24f915e50d1540a3d3e340d696466682d517",
+      "coletado_em": "2026-11-13T23:45:30.733Z",
+      "id_operacao_busca": "f7fc0ae9-b239-413e-82b9-bddb2366728e",
+      "id_operacao_extracao": "a2f18cc5-b0a8-4aa4-a814-37aa971eb504",
+      "consulta": "Satya Nadella is the CEO of Microsoft.",
+      "parametros_busca": {
+       "query": "Satya Nadella is the CEO of Microsoft.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://news.microsoft.com/source/exec/satya-nadella",
+        "https://en.wikipedia.org/wiki/Satya_Nadella",
+        "https://www.businessroundtable.org/members/satya-nadella",
+        "https://www.britannica.com/money/Satya-Nadella",
+        "https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "fd3dff7e-5f9a-43a0-9bc1-4ccc5fea8d27",
+       "operacoes_busca": [
+        {
+         "id_operacao": "f7fc0ae9-b239-413e-82b9-bddb2366728e",
+         "request_id": "fd3dff7e-5f9a-43a0-9bc1-4ccc5fea8d27",
+         "modo_busca": "GERAL",
+         "resultado_id": "7f4939-01",
+         "parametros": {
+          "query": "Satya Nadella is the CEO of Microsoft.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "10f400d1-4962-4ba5-b8c6-bd7112dd4747",
+       "resultado_id": "7f4939-01",
+       "relevancia": 0.8729984,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 30 Jan 2026 00:00:00 GMT",
+         "value_normalized": "2026-01-30",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTTP_LAST_MODIFIED",
+         "field": "Last-Modified",
+         "value_original": "Fri, 13 Nov 2026 19:03:18 GMT",
+         "value_normalized": "2026-11-13",
+         "scope": "PAGE",
+         "source": "HTTP_HEADER"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://en.wikipedia.org/wiki/Satya_Nadella",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2013-01-23T20:04:05Z",
+         "value_normalized": "2013-01-23",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        },
+        {
+         "signal_type": "SCHEMA_DATE_MODIFIED",
+         "field": "dateModified",
+         "value_original": "2026-10-31T22:53:02Z",
+         "value_normalized": "2026-10-31",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "article"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://en.wikipedia.org/wiki/Satya_Nadella",
+        "capturado_em": "2026-11-13T23:45:30.459Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Satya Nadella - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Satya_Nadella",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 112285,
+      "caracteres_preparados": 7940,
+      "trecho_analisado": "TÍTULO DA FONTE: Satya Nadella - Wikipedia\nURL DA FONTE: https://en.wikipedia.org/wiki/Satya_Nadella\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n| Signature |\n\n**Satya Narayana Nadella**[[a]](#cite_note-2) (born 19 August 1967) is an [Indian-American](https://en.wikipedia.org/wiki/Indian_Americans \"Indian Americans\") business executive.\n\nHe is the chairman and [chief executive officer](https://en.wikipedia.org/wiki/Chief_executive_officer \"Chief executive officer\") (CEO) of [Microsoft](https://en.wikipedia.org/wiki/Microsoft \"Microsoft\"), succeeding [Steve Ballmer](https://en.wikipedia.org/wiki/Steve_Ballmer \"Steve Ballmer\") in 2014 as CEO and [John W.\n\nThompson](https://en.wikipedia.org/wiki/John_W._Thompson \"John W.\n\n#### 1992–2014\n\n[![](//thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Satya_Nadella%2C_CEO_of_Microsoft%2C_with_former_CEOs_Bill_Gates%2C_and_Steve_Ballmer.jpg/250px-Satya_Nadella%2C_CEO_of_Microsoft%2C_with_former_CEOs_Bill_Gates%2C_and_Steve_Ballmer.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Satya_Nadella,_CEO_of_Microsoft,_with_former_CEOs_Bill_Gates,_and_Steve_Ballmer.jpg)\n\nNadella on his first day as ",
+      "citacao_chave": null,
+      "citacao_verificada": false,
+      "citacao_rejeitada": "He is the chairman and chief executive officer (CEO) of Microsoft... On 4 February 2014, Nadella was announced as the new CEO of Microsoft.",
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "Not counted: the model quoted text that is not in this source. Model's reason: Wikipedia confirms he is the current CEO of Microsoft and notes his appointment date."
+     },
+     "classificacao": {
+      "postura": "INSUFFICIENT",
+      "justificativa": "Not counted: the model quoted text that is not in this source. Model's reason: Wikipedia confirms he is the current CEO of Microsoft and notes his appointment date."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 287,
+      "validade_maxima_dias": 180,
+      "data_utilizada": "2026-01-30"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "Satya Nadella | Business Roundtable",
+      "url": "https://www.businessroundtable.org/members/satya-nadella",
+      "conteudo": "[![BRT Logo](/_next/image?url=https%3A%2F%2Fdjhius9upau4z.cloudfront.net%2Fbuilder%2Fapi%2Fv1%2Fimage%2Fassets%252F679146658e6d45af922aa9d9409fb683%252F466eb94d9b39432cae1fec050fb4deea&w=640&q=75)](/)\n\n# Satya Nadella\n\n## Chairman and Chief Executive Officer\n\nMicrosoft Corporation\n\nSatya Nadella is Chairman and Chief Executive Officer of Microsoft. Before being named CEO in February 2014, Nadella held leadership roles in both enterprise and consumer businesses across the company.\n\nJoining Microsoft in 1992, he quickly became known as a leader who could span a breadth of technologies and businesses to transform some of Microsoft’s biggest product offerings.\n\nMost recently, Nadella was executi…",
+      "coletado_em": "2026-11-13T23:45:30.733Z",
+      "data_publicacao": "2014-02-04",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://www.businessroundtable.org/members/satya-nadella",
+      "relevancia": 0.8702668,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "fd3dff7e-5f9a-43a0-9bc1-4ccc5fea8d27",
+       "resultado_id": "3d408a-02",
+       "response_time_busca": 1.21,
+       "response_time_extracao": 0.02,
+       "consulta": "Satya Nadella is the CEO of Microsoft.",
+       "origem_principal": {
+        "id_operacao": "f7fc0ae9-b239-413e-82b9-bddb2366728e",
+        "request_id": "fd3dff7e-5f9a-43a0-9bc1-4ccc5fea8d27",
+        "modo_busca": "GERAL",
+        "resultado_id": "3d408a-02",
+        "parametros": {
+         "query": "Satya Nadella is the CEO of Microsoft.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "f7fc0ae9-b239-413e-82b9-bddb2366728e",
+         "request_id": "fd3dff7e-5f9a-43a0-9bc1-4ccc5fea8d27",
+         "modo_busca": "GERAL",
+         "resultado_id": "3d408a-02",
+         "parametros": {
+          "query": "Satya Nadella is the CEO of Microsoft.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Tue, 04 Feb 2014 00:00:00 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 04 Feb 2014 00:00:00 GMT",
+         "value_normalized": "2014-02-04",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.businessroundtable.org/members/satya-nadella",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.businessroundtable.org/members/satya-nadella",
+        "capturado_em": "2026-11-13T23:45:30.556Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "10f400d1-4962-4ba5-b8c6-bd7112dd4747",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "3f6da4d4-e5e2-4604-a986-50b59bbaaa0a",
+      "id_verificacao": "85d543c1-dab5-4592-833a-759d8346de94",
+      "url_original": "https://www.businessroundtable.org/members/satya-nadella",
+      "url_canonica": "https://www.businessroundtable.org/members/satya-nadella",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "0551213f2d012c55cc639cc375b7294f0c2f6d228cef887ed1ce1b8975ad9450",
+      "coletado_em": "2026-11-13T23:45:30.733Z",
+      "id_operacao_busca": "f7fc0ae9-b239-413e-82b9-bddb2366728e",
+      "id_operacao_extracao": "a2f18cc5-b0a8-4aa4-a814-37aa971eb504",
+      "consulta": "Satya Nadella is the CEO of Microsoft.",
+      "parametros_busca": {
+       "query": "Satya Nadella is the CEO of Microsoft.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://news.microsoft.com/source/exec/satya-nadella",
+        "https://en.wikipedia.org/wiki/Satya_Nadella",
+        "https://www.businessroundtable.org/members/satya-nadella",
+        "https://www.britannica.com/money/Satya-Nadella",
+        "https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "fd3dff7e-5f9a-43a0-9bc1-4ccc5fea8d27",
+       "operacoes_busca": [
+        {
+         "id_operacao": "f7fc0ae9-b239-413e-82b9-bddb2366728e",
+         "request_id": "fd3dff7e-5f9a-43a0-9bc1-4ccc5fea8d27",
+         "modo_busca": "GERAL",
+         "resultado_id": "3d408a-02",
+         "parametros": {
+          "query": "Satya Nadella is the CEO of Microsoft.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "10f400d1-4962-4ba5-b8c6-bd7112dd4747",
+       "resultado_id": "3d408a-02",
+       "relevancia": 0.8702668,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Tue, 04 Feb 2014 00:00:00 GMT",
+         "value_normalized": "2014-02-04",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://www.businessroundtable.org/members/satya-nadella",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://www.businessroundtable.org/members/satya-nadella",
+        "capturado_em": "2026-11-13T23:45:30.556Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Satya Nadella | Business Roundtable",
+      "url": "https://www.businessroundtable.org/members/satya-nadella",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 1824,
+      "caracteres_preparados": 1824,
+      "trecho_analisado": "TÍTULO DA FONTE: Satya Nadella | Business Roundtable\nURL DA FONTE: https://www.businessroundtable.org/members/satya-nadella\n\nCONTEÚDO DA FONTE:\n[![BRT Logo](/_next/image?url=https%3A%2F%2Fdjhius9upau4z.cloudfront.net%2Fbuilder%2Fapi%2Fv1%2Fimage%2Fassets%252F679146658e6d45af922aa9d9409fb683%252F466eb94d9b39432cae1fec050fb4deea&w=640&q=75)](/)\n\n# Satya Nadella\n\n## Chairman and Chief Executive Officer\n\nMicrosoft Corporation\n\nSatya Nadella is Chairman and Chief Executive Officer of Microsoft. Before being named CEO in February 2014, Nadella held leadership roles in both enterprise and consumer businesses across the company.\n\nJoining Microsoft in 1992, he quickly became known as a leader who could span a breadth of technologies and businesses to transform some of Microsoft’s biggest product offerings.\n\nMost recently, Nadella was executive vice president of Microsoft’s Cloud and Enterprise group. In this role he led the transformation to the cloud infrastructure and services business, which outperformed the market and took share from competition. Previously, Nadella led R&D for the Online Services Division and was vice president of the Microsoft Business Division. Before joining Microso",
+      "citacao_chave": "Chairman and Chief Executive Officer Satya Nadella is Chairman and Chief Executive Officer of Microsoft.",
+      "citacao_verificada": true,
+      "citacao_rejeitada": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The Business Roundtable page states Satya Nadella is Chairman and Chief Executive Officer of Microsoft."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The Business Roundtable page states Satya Nadella is Chairman and Chief Executive Officer of Microsoft."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 4665,
+      "validade_maxima_dias": 180,
+      "data_utilizada": "2014-02-04"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "REFERENCIA",
+      "titulo": "Satya Nadella",
+      "url": "https://www.britannica.com/money/Satya-Nadella",
+      "conteudo": "[History & Society](https://www.britannica.com/History-Society)[Science & Tech](https://www.britannica.com/Science-Tech)[Biographies](https://www.britannica.com/Biographies)[Animals & Nature](https://www.britannica.com/Animals-Nature)[Geography & Travel](https://www.britannica.com/Geography-Travel)[Arts & Culture](https://www.britannica.com/Arts-Culture)[ProCon](https://www.britannica.com/procon)[Games & Quizzes](https://www.britannica.com/quiz/browse)[Videos](https://www.britannica.com/videos)[Today in History](https://www.britannica.com/on-this-day)[Dictionary](https://www.britannica.com/dictionary)[History & Society](https://www.britannica.com/History-Society)\n*   [History](https://www.br…",
+      "coletado_em": "2026-11-13T23:45:30.733Z",
+      "data_publicacao": "2015-07-10",
+      "data_atualizacao": "2015-07-10",
+      "escopo_data": "ATTRIBUTE",
+      "canonical_url": null,
+      "relevancia": 0.8625833,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "fd3dff7e-5f9a-43a0-9bc1-4ccc5fea8d27",
+       "resultado_id": "a3a3a5-03",
+       "response_time_busca": 1.21,
+       "response_time_extracao": 0.02,
+       "consulta": "Satya Nadella is the CEO of Microsoft.",
+       "origem_principal": {
+        "id_operacao": "f7fc0ae9-b239-413e-82b9-bddb2366728e",
+        "request_id": "fd3dff7e-5f9a-43a0-9bc1-4ccc5fea8d27",
+        "modo_busca": "GERAL",
+        "resultado_id": "a3a3a5-03",
+        "parametros": {
+         "query": "Satya Nadella is the CEO of Microsoft.",
+         "search_depth": "basic",
+         "max_results": 5,
+         "include_answer": false,
+         "include_published_date": true
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "f7fc0ae9-b239-413e-82b9-bddb2366728e",
+         "request_id": "fd3dff7e-5f9a-43a0-9bc1-4ccc5fea8d27",
+         "modo_busca": "GERAL",
+         "resultado_id": "a3a3a5-03",
+         "parametros": {
+          "query": "Satya Nadella is the CEO of Microsoft.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Fri, 10 Jul 2015 21:46:24 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 10 Jul 2015 21:46:24 GMT",
+         "value_normalized": "2015-07-10",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Updated",
+         "value_original": "Oct. 12, 2026",
+         "value_normalized": "2026-10-12",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "HTTP_403",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "10f400d1-4962-4ba5-b8c6-bd7112dd4747",
+        "erro": null
+       }
+      },
+      "data_fato": {
+       "data": "2014-02-04",
+       "precisao": "DIA",
+       "citacao": "On February 4, 2014, Nadella became CEO of Microsoft",
+       "origem": "QUOTED_IN_SOURCE_TEXT",
+       "confirmada_em": "2015-07-10"
+      }
+     },
+     "coleta": {
+      "id_coleta": "faa8e3ca-2fce-432b-9261-3d7a51ed33a4",
+      "id_verificacao": "85d543c1-dab5-4592-833a-759d8346de94",
+      "url_original": "https://www.britannica.com/money/Satya-Nadella",
+      "url_canonica": "https://www.britannica.com/money/Satya-Nadella",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "b2c61731c9cdbea3717690147b62b10fb430130a01f840a3e0425225413049e6",
+      "coletado_em": "2026-11-13T23:45:30.733Z",
+      "id_operacao_busca": "f7fc0ae9-b239-413e-82b9-bddb2366728e",
+      "id_operacao_extracao": "a2f18cc5-b0a8-4aa4-a814-37aa971eb504",
+      "consulta": "Satya Nadella is the CEO of Microsoft.",
+      "parametros_busca": {
+       "query": "Satya Nadella is the CEO of Microsoft.",
+       "search_depth": "basic",
+       "max_results": 5,
+       "include_answer": false,
+       "include_published_date": true
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://news.microsoft.com/source/exec/satya-nadella",
+        "https://en.wikipedia.org/wiki/Satya_Nadella",
+        "https://www.businessroundtable.org/members/satya-nadella",
+        "https://www.britannica.com/money/Satya-Nadella",
+        "https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "fd3dff7e-5f9a-43a0-9bc1-4ccc5fea8d27",
+       "operacoes_busca": [
+        {
+         "id_operacao": "f7fc0ae9-b239-413e-82b9-bddb2366728e",
+         "request_id": "fd3dff7e-5f9a-43a0-9bc1-4ccc5fea8d27",
+         "modo_busca": "GERAL",
+         "resultado_id": "a3a3a5-03",
+         "parametros": {
+          "query": "Satya Nadella is the CEO of Microsoft.",
+          "search_depth": "basic",
+          "max_results": 5,
+          "include_answer": false,
+          "include_published_date": true
+         }
+        }
+       ],
+       "request_id_extracao": "10f400d1-4962-4ba5-b8c6-bd7112dd4747",
+       "resultado_id": "a3a3a5-03",
+       "relevancia": 0.8625833,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Fri, 10 Jul 2015 21:46:24 GMT",
+         "value_normalized": "2015-07-10",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "VISIBLE_PAGE_DATE",
+         "field": "Updated",
+         "value_original": "Oct. 12, 2026",
+         "value_normalized": "2026-10-12",
+         "scope": "PAGE",
+         "source": "VISIBLE_PAGE_LABEL",
+         "parse_status": "PARSED"
+        }
+       ],
+       "metadados_pagina": {
+        "status": "UNAVAILABLE",
+        "motivo": "HTTP_403",
+        "detalhe": null,
+        "url_final": null,
+        "capturado_em": null
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "Satya Nadella",
+      "url": "https://www.britannica.com/money/Satya-Nadella",
+      "reducao_aplicada": true,
+      "conteudo_incompleto": true,
+      "motivo_preparacao": "TRECHOS_RELEVANTES_SELECIONADOS",
+      "caracteres_originais": 12961,
+      "caracteres_preparados": 6340,
+      "trecho_analisado": "TÍTULO DA FONTE: Satya Nadella\nURL DA FONTE: https://www.britannica.com/money/Satya-Nadella\n\nCONTEÚDO SELECIONADO PARA ANÁLISE:\n[Biographies](https://www.britannica.com/money/browse/Biographies)\n\n[Finance & the Economy](https://www.britannica.com/money/browse/history-and-theory)\n\nRead More\n\n[![Image 2: Microsoft Chairman and Chief Executive Officer (CEO) Satya Nadella, 2025](https://cdn.britannica.com/76/275876-050-BBDC9B50/microsoft-chairman-and-ceo-satya-nadella-microsoft-build-2025-seattle-washington-may-19-2025.jpg?c=crop&h=40&w=50) Microsoft Corporation](https://www.britannica.com/money/Microsoft-Corporation)\n\nTable Of Contents\n\n[Biographies](https://www.britannica.com/money/browse/Biographies)[Business Executives](https://www.britannica.com/money/browse/Businesspeople-Executives)\n\n# Satya Nadella\n\nIndian-born business executive\n\nPrint Cite Share Links\n\nAlso known as:Satya Narayana Nadella\n\n**Written by**Sherman Hollar\n\n[Sherman Hollar](https://www.britannica.com/money/author/Sherman-Hollar/6482)\n\nSherman Hollar is a senior editor at Encyclopædia Britannica.\n\n**Fact-checked by**The Editors of Encyclopaedia Britannica\n\n[The Editors of Encyclopaedia Britannica](https://www.brita",
+      "citacao_chave": "On February 4, 2014, Nadella became CEO of Microsoft.",
+      "citacao_verificada": true,
+      "citacao_rejeitada": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The source notes the date he became CEO (2014) but does not explicitly confirm he still holds the position in 2026."
+     },
+     "classificacao": {
+      "postura": "INSUFFICIENT",
+      "justificativa": "The source notes the date he became CEO (2014) but does not explicitly confirm he still holds the position in 2026."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 4144,
+      "validade_maxima_dias": 180,
+      "data_utilizada": "2015-07-10"
+     }
+    },
+    {
+     "fonte": {
+      "tipo_fonte": "tavily_extract",
+      "categoria_fonte": "OUTRO",
+      "titulo": "How CEO Satya Nadella Reset Culture at Microsoft | Business Chief",
+      "url": "https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft",
+      "conteudo": "[![](https://assets.bizclikmedia.net/original/6e93ca698c0112cb236c9cc8ce170d80:ee1100267e160cc344a7dc03f0828da3/business-chief-light-logo.png)](/ \"Home\")\n\nArticle\n\nPeople\n\n# How CEO Satya Nadella Reset Culture at Microsoft\n\nBy[Georgia Greetham](/author/georgia-greetham)\n\nFebruary 02, 2026\n\nundefined mins\n\nShare this article\n\n**Prioritise Us** on Google\n\nShare this article\n\n**Prioritise Us** on Google\n\n![](https://assets.bizclikmedia.net/138/e126d9bf98cb9dab38724f79d1414b23:6947ca1f6645cf162922853a0cc4d6e9/satya-nadella-microsoft.webp)\n\nSatya Nadella, CEO of Microsoft (Credit: Microsoft)\n\nMicrosoft Chief Executive Satya Nadella has transformed the company's culture to redefine its approach to…",
+      "coletado_em": "2026-11-13T23:45:30.733Z",
+      "data_publicacao": "2026-02-02",
+      "data_atualizacao": null,
+      "escopo_data": "PAGE",
+      "canonical_url": "https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft",
+      "relevancia": 0.8005361,
+      "metadados_provedor": {
+       "provedor": "tavily",
+       "request_id": "7b2c1934-3173-49f3-93a5-34b475f32a3a",
+       "resultado_id": "fd6563-01",
+       "response_time_busca": 1.02,
+       "response_time_extracao": 0.02,
+       "consulta": "Satya Nadella is the CEO of Microsoft.",
+       "origem_principal": {
+        "id_operacao": "f61c6637-fb4e-48d0-a996-ca9d5e0fec0a",
+        "request_id": "7b2c1934-3173-49f3-93a5-34b475f32a3a",
+        "modo_busca": "NOTICIAS",
+        "resultado_id": "fd6563-01",
+        "parametros": {
+         "query": "Satya Nadella is the CEO of Microsoft.",
+         "search_depth": "basic",
+         "max_results": 4,
+         "include_answer": false,
+         "include_published_date": true,
+         "topic": "news",
+         "time_range": "year"
+        }
+       },
+       "buscas": [
+        {
+         "id_operacao": "f61c6637-fb4e-48d0-a996-ca9d5e0fec0a",
+         "request_id": "7b2c1934-3173-49f3-93a5-34b475f32a3a",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "fd6563-01",
+         "parametros": {
+          "query": "Satya Nadella is the CEO of Microsoft.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "time_range": "year"
+         }
+        }
+       ],
+       "raw_content_busca": null,
+       "data_publicacao_original": "Mon, 02 Feb 2026 16:43:28 GMT",
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 02 Feb 2026 16:43:28 GMT",
+         "value_normalized": "2026-02-02",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-02-02T16:43:28Z",
+         "value_normalized": "2026-02-02",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-02-02T16:43:28Z",
+         "value_normalized": "2026-02-02",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft",
+        "capturado_em": "2026-11-13T23:45:31.329Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "request_id": "10f400d1-4962-4ba5-b8c6-bd7112dd4747",
+        "erro": null
+       }
+      }
+     },
+     "coleta": {
+      "id_coleta": "06f92174-3bb4-41b4-9a80-6c2fd2cae683",
+      "id_verificacao": "85d543c1-dab5-4592-833a-759d8346de94",
+      "url_original": "https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft",
+      "url_canonica": "https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft",
+      "versao_canonicalizacao": "1.0.0",
+      "tipo_fonte": "tavily_extract",
+      "status_coleta": "SUCCESS",
+      "hash_conteudo": "62025a2c10ccd7db47e1f6eead1596b53ad89aebb5ad8a439c606436d26e3ab6",
+      "coletado_em": "2026-11-13T23:45:30.733Z",
+      "id_operacao_busca": "f61c6637-fb4e-48d0-a996-ca9d5e0fec0a",
+      "id_operacao_extracao": "a2f18cc5-b0a8-4aa4-a814-37aa971eb504",
+      "consulta": "Satya Nadella is the CEO of Microsoft.",
+      "parametros_busca": {
+       "query": "Satya Nadella is the CEO of Microsoft.",
+       "search_depth": "basic",
+       "max_results": 4,
+       "include_answer": false,
+       "include_published_date": true,
+       "topic": "news",
+       "time_range": "year"
+      },
+      "parametros_extracao": {
+       "urls": [
+        "https://news.microsoft.com/source/exec/satya-nadella",
+        "https://en.wikipedia.org/wiki/Satya_Nadella",
+        "https://www.businessroundtable.org/members/satya-nadella",
+        "https://www.britannica.com/money/Satya-Nadella",
+        "https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft"
+       ],
+       "extract_depth": "basic",
+       "format": "markdown",
+       "include_images": false
+      },
+      "metadados": {
+       "provedor": "tavily",
+       "request_id_busca": "7b2c1934-3173-49f3-93a5-34b475f32a3a",
+       "operacoes_busca": [
+        {
+         "id_operacao": "f61c6637-fb4e-48d0-a996-ca9d5e0fec0a",
+         "request_id": "7b2c1934-3173-49f3-93a5-34b475f32a3a",
+         "modo_busca": "NOTICIAS",
+         "resultado_id": "fd6563-01",
+         "parametros": {
+          "query": "Satya Nadella is the CEO of Microsoft.",
+          "search_depth": "basic",
+          "max_results": 4,
+          "include_answer": false,
+          "include_published_date": true,
+          "topic": "news",
+          "time_range": "year"
+         }
+        }
+       ],
+       "request_id_extracao": "10f400d1-4962-4ba5-b8c6-bd7112dd4747",
+       "resultado_id": "fd6563-01",
+       "relevancia": 0.8005361,
+       "sinais_data": [
+        {
+         "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+         "field": "published_date",
+         "value_original": "Mon, 02 Feb 2026 16:43:28 GMT",
+         "value_normalized": "2026-02-02",
+         "source": "TAVILY_SEARCH_RESULT",
+         "scope": "PAGE"
+        },
+        {
+         "signal_type": "HTML_CANONICAL_URL",
+         "field": "rel=canonical",
+         "value_original": "https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft",
+         "scope": "PAGE",
+         "source": "HTML_LINK"
+        },
+        {
+         "signal_type": "ARTICLE_PUBLISHED_TIME",
+         "field": "article:published_time",
+         "value_original": "2026-02-02T16:43:28Z",
+         "value_normalized": "2026-02-02",
+         "scope": "PAGE",
+         "source": "HTML_META"
+        },
+        {
+         "signal_type": "SCHEMA_DATE_PUBLISHED",
+         "field": "datePublished",
+         "value_original": "2026-02-02T16:43:28Z",
+         "value_normalized": "2026-02-02",
+         "scope": "DOCUMENT",
+         "source": "JSON_LD",
+         "schema_type": [
+          "newsarticle"
+         ]
+        }
+       ],
+       "metadados_pagina": {
+        "status": "SUCCESS",
+        "motivo": null,
+        "detalhe": null,
+        "url_final": "https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft",
+        "capturado_em": "2026-11-13T23:45:31.329Z"
+       },
+       "extracao": {
+        "tentada": true,
+        "concluida": true,
+        "erro": null
+       }
+      }
+     },
+     "preparacao": {
+      "titulo": "How CEO Satya Nadella Reset Culture at Microsoft | Business Chief",
+      "url": "https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft",
+      "reducao_aplicada": false,
+      "conteudo_incompleto": false,
+      "motivo_preparacao": "CONTEUDO_DENTRO_DO_LIMITE",
+      "caracteres_originais": 5475,
+      "caracteres_preparados": 5475,
+      "trecho_analisado": "TÍTULO DA FONTE: How CEO Satya Nadella Reset Culture at Microsoft | Business Chief\nURL DA FONTE: https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft\n\nCONTEÚDO DA FONTE:\n[![](https://assets.bizclikmedia.net/original/6e93ca698c0112cb236c9cc8ce170d80:ee1100267e160cc344a7dc03f0828da3/business-chief-light-logo.png)](/ \"Home\")\n\nArticle\n\nPeople\n\n# How CEO Satya Nadella Reset Culture at Microsoft\n\nBy[Georgia Greetham](/author/georgia-greetham)\n\nFebruary 02, 2026\n\nundefined mins\n\nShare this article\n\n**Prioritise Us** on Google\n\nShare this article\n\n**Prioritise Us** on Google\n\n![](https://assets.bizclikmedia.net/138/e126d9bf98cb9dab38724f79d1414b23:6947ca1f6645cf162922853a0cc4d6e9/satya-nadella-microsoft.webp)\n\nSatya Nadella, CEO of Microsoft (Credit: Microsoft)\n\nMicrosoft Chief Executive Satya Nadella has transformed the company's culture to redefine its approach to leadership, employee development and growth\n\nWhen [Satya Nadella](https://businesschief.com/news/why-satya-nadellas-pay-rise-reflects-microsofts-ai-success) became CEO of Microsoft in 2014, he inherited a highly competitive internal culture.\n\nSuccess had too often been measured by how individuals outs",
+      "citacao_chave": "Satya Nadella, CEO of Microsoft",
+      "citacao_verificada": true,
+      "citacao_rejeitada": null,
+      "metodo_analise": "LOTE"
+     },
+     "correspondencia": {
+      "status": "MATCH",
+      "justificativa": "The article refers to Satya Nadella as CEO of Microsoft, indicating he holds the role."
+     },
+     "classificacao": {
+      "postura": "SUPPORTS",
+      "justificativa": "The article refers to Satya Nadella as CEO of Microsoft, indicating he holds the role."
+     },
+     "atualidade": {
+      "status": "STALE",
+      "motivo": "EVIDENCE_EXPIRED",
+      "idade_dias": 284,
+      "validade_maxima_dias": 180,
+      "data_utilizada": "2026-02-02"
+     }
+    }
+   ],
+   "erro_busca": null,
+   "janela_validade": {
+    "dias": 180,
+    "origem": "CATEGORY",
+    "entidade": null,
+    "motivo": null
+   },
+   "risco_desatualizacao": {
+    "nivel": "MEDIUM",
+    "sensivel_ao_tempo": true,
+    "motivos": [
+     "Company facts and leadership change within months (checked against a 180-day window)"
+    ]
+   },
+   "dominios_oficiais_usados": [],
+   "dominios_oficiais_automaticos": [],
+   "agregacao": {
+    "status": "CLASSIFICADO",
+    "conclusao_factual": {
+     "status": "APOIA",
+     "resumo": "As evidências utilizáveis apoiam a afirmação. Isso, por si só, não demonstra que ela continua válida agora."
+    },
+    "veredito": "CORROBORADA",
+    "resumo": "Várias fontes independentes, de tipos diferentes, apoiam a afirmação e nenhuma a contradiz, mas nenhuma fonte oficial com data ligada ao fato a confirma. Isso não é garantia absoluta de verdade.",
+    "afirmacao": "Satya Nadella is the CEO of Microsoft.",
+    "score_qualidade_evidencia": {
+     "valor": 50,
+     "escala": "0-100",
+     "natureza": "HEURISTICA",
+     "interpretacao": "Qualidade estrutural das evidências, não probabilidade de verdade.",
+     "componentes": {
+      "autoridade": 20,
+      "atualidade": 0,
+      "diversidade_fontes": 20,
+      "concordancia": 10
+     }
+    },
+    "freshness": {
+     "score": null,
+     "status": "UNVERIFIABLE",
+     "confidence": "INSUFFICIENT",
+     "algorithm_id": "CLAIM_FRESHNESS_SCORE",
+     "algorithm_version": "1.1.0",
+     "policy_id": "empresa:180d:v1",
+     "as_of": "2026-11-13T23:45:26.074Z",
+     "evidence_summary": {
+      "received": 3,
+      "eligible": 0,
+      "independent_domains": 0,
+      "excluded": 3
+     },
+     "drivers": [
+      {
+       "code": "NO_ATTRIBUTE_DATED_EVIDENCE"
+      }
+     ],
+     "limitations": [
+      "Não há evidência com data verificável ligada ao atributo desta afirmação."
+     ]
+    },
+    "concordancia": {
+     "algorithm_id": "SOURCE_AGREEMENT_INDEX",
+     "algorithm_version": "1.1.0",
+     "weights": {
+      "OFICIAL": 3,
+      "ACADEMICO": 3,
+      "NOTICIA": 2,
+      "REFERENCIA": 1.5,
+      "OUTRO": 1,
+      "BLOG_FORUM": 0.25
+     },
+     "score": 100,
+     "coverage": "STRONG",
+     "independent_sources": 2,
+     "source_types": [
+      "OFICIAL",
+      "OUTRO"
+     ],
+     "supporting": 2,
+     "support_weight": 4,
+     "strong_supporting": 1,
+     "strong_contradicting": 0,
+     "contradict_weight": 0,
+     "authoritative_supporting": 1,
+     "contradicting": 0,
+     "split": 0,
+     "by_type": {
+      "OFICIAL": {
+       "supports": 1,
+       "contradicts": 0,
+       "split": 0
+      },
+      "OUTRO": {
+       "supports": 1,
+       "contradicts": 0,
+       "split": 0
+      }
+     },
+     "limitations": [
+      "Agreement between sources is not a probability of truth: sources can share the same mistake.",
+      "Copies and pages from the same site count once; independence is approximated by domain and text similarity."
+     ]
+    },
+    "recencia_pagina": {
+     "algorithm_id": "PAGE_DATE_RECENCY_INDEX",
+     "algorithm_version": "1.0.0",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "as_of": "2026-11-13T23:45:26.074Z",
+     "score": 6,
+     "status": "STALE",
+     "policy_id": "empresa:180d:page:v1",
+     "newest_date": "2026-02-02",
+     "sources": [
+      {
+       "date": "2014-02-04",
+       "age_days": 4665,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "source_type": "OFICIAL",
+       "domain": "news.microsoft.com",
+       "evidence_id": null
+      },
+      {
+       "date": "2026-02-02",
+       "age_days": 284,
+       "status": "STALE",
+       "posture": "SUPPORTS",
+       "source_type": "OUTRO",
+       "domain": "businesschief.com",
+       "evidence_id": null
+      }
+     ],
+     "limitations": [
+      "Baseado na data da página, não na data em que o dado específico mudou: confiança baixa.",
+      "Não substitui o índice de atualidade principal e não é probabilidade de verdade."
+     ]
+    },
+    "atualidade_afirmacao": {
+     "algorithm_id": "CLAIM_CURRENCY_SCORE",
+     "algorithm_version": "1.1.0",
+     "formula": "evidence_recency × support_share",
+     "window_days": 180,
+     "score": 11,
+     "status": "AGING",
+     "basis": "PAGE_DATE",
+     "confidence": "LOW",
+     "evidence_recency": 11,
+     "support_share": 1,
+     "newest_date": "2026-02-02",
+     "newest_age_days": 284,
+     "within_window": false
+    },
+    "versao_regras": "1.4.0",
+    "metodo": "AGREGACAO_DETERMINISTICA",
+    "fontes_independentes": 2,
+    "grupos_distintos_de_evidencia": 2,
+    "dependencia_detectada": 2,
+    "dependencia_nao_verificada": true,
+    "nota_independencia": "Cópias exatas, quase duplicadas, URLs canônicas iguais e páginas do mesmo domínio são agrupadas; domínios sem sinal de cópia não têm independência editorial comprovada.",
+    "total_evidencias_utilizaveis": 3,
+    "fontes": [
+     {
+      "dominio": "news.microsoft.com",
+      "dominios": [
+       "news.microsoft.com",
+       "businessroundtable.org"
+      ],
+      "grupo_dependencia_id": "source_cluster_001",
+      "oficial": true,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 2,
+      "urls": [
+       "https://news.microsoft.com/source/exec/satya-nadella",
+       "https://www.businessroundtable.org/members/satya-nadella"
+      ],
+      "evidencias": [
+       {
+        "titulo": "Satya Nadella - Source",
+        "url": "https://news.microsoft.com/source/exec/satya-nadella",
+        "categoria_fonte": "OFICIAL",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T23:45:30.733Z",
+        "data_publicacao": "2014-02-04",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Tue, 04 Feb 2014 00:00:00 GMT",
+          "value_normalized": "2014-02-04",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTTP_LAST_MODIFIED",
+          "field": "Last-Modified",
+          "value_original": "Thu, 05 Nov 2026 22:42:20 GMT",
+          "value_normalized": "2026-11-05",
+          "scope": "PAGE",
+          "source": "HTTP_HEADER"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://news.microsoft.com/source/exec/satya-nadella/",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_MODIFIED_TIME",
+          "field": "article:modified_time",
+          "value_original": "2026-11-06T06:42:20+00:00",
+          "value_normalized": "2026-11-06",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2025-12-08T20:22:43+00:00",
+          "value_normalized": "2025-12-08",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "webpage"
+          ]
+         },
+         {
+          "signal_type": "SCHEMA_DATE_MODIFIED",
+          "field": "dateModified",
+          "value_original": "2026-11-06T06:42:20+00:00",
+          "value_normalized": "2026-11-06",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "webpage"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_001",
+        "dependencia_detectada": true,
+        "motivo_dependencia": "TEXT_CONTAINED_0.860"
+       },
+       {
+        "titulo": "Satya Nadella | Business Roundtable",
+        "url": "https://www.businessroundtable.org/members/satya-nadella",
+        "categoria_fonte": "OUTRO",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T23:45:30.733Z",
+        "data_publicacao": "2014-02-04",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Tue, 04 Feb 2014 00:00:00 GMT",
+          "value_normalized": "2014-02-04",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://www.businessroundtable.org/members/satya-nadella",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_001",
+        "dependencia_detectada": true,
+        "motivo_dependencia": "TEXT_CONTAINED_0.860"
+       }
+      ]
+     },
+     {
+      "dominio": "businesschief.com",
+      "dominios": [
+       "businesschief.com"
+      ],
+      "grupo_dependencia_id": "source_cluster_002",
+      "oficial": false,
+      "atual": false,
+      "postura": "SUPPORTS",
+      "quantidade_evidencias": 1,
+      "urls": [
+       "https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft"
+      ],
+      "evidencias": [
+       {
+        "titulo": "How CEO Satya Nadella Reset Culture at Microsoft | Business Chief",
+        "url": "https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft",
+        "categoria_fonte": "OUTRO",
+        "postura": "SUPPORTS",
+        "atual": false,
+        "data_vinculada_ao_atributo": false,
+        "status_atualidade": "STALE",
+        "status_datas_declaradas": "VERIFICAVEL",
+        "consultado_em": "2026-11-13T23:45:30.733Z",
+        "data_publicacao": "2026-02-02",
+        "data_atualizacao": null,
+        "escopo_data": "PAGE",
+        "sinais_data": [
+         {
+          "signal_type": "TAVILY_PUBLISHED_DATE_ESTIMATE",
+          "field": "published_date",
+          "value_original": "Mon, 02 Feb 2026 16:43:28 GMT",
+          "value_normalized": "2026-02-02",
+          "source": "TAVILY_SEARCH_RESULT",
+          "scope": "PAGE"
+         },
+         {
+          "signal_type": "HTML_CANONICAL_URL",
+          "field": "rel=canonical",
+          "value_original": "https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft",
+          "scope": "PAGE",
+          "source": "HTML_LINK"
+         },
+         {
+          "signal_type": "ARTICLE_PUBLISHED_TIME",
+          "field": "article:published_time",
+          "value_original": "2026-02-02T16:43:28Z",
+          "value_normalized": "2026-02-02",
+          "scope": "PAGE",
+          "source": "HTML_META"
+         },
+         {
+          "signal_type": "SCHEMA_DATE_PUBLISHED",
+          "field": "datePublished",
+          "value_original": "2026-02-02T16:43:28Z",
+          "value_normalized": "2026-02-02",
+          "scope": "DOCUMENT",
+          "source": "JSON_LD",
+          "schema_type": [
+           "newsarticle"
+          ]
+         }
+        ],
+        "grupo_dependencia_id": "source_cluster_002",
+        "dependencia_detectada": false,
+        "motivo_dependencia": "NO_DUPLICATE_SIGNAL_DETECTED_IN_SMALL_RESULT_SET"
+       }
+      ]
+     }
+    ],
+    "limitacoes": [
+     "Nenhuma evidência possui data verificável e status de atualidade FRESH.",
+     "Uma data da página ou do resultado de busca não comprova quando o atributo da afirmação foi publicado ou atualizado.",
+     "Evidências do mesmo domínio, URL canônica ou conteúdo duplicado/quase duplicado foram agrupadas para não inflar diversidade.",
+     "Domínios sem sinal detectado de duplicação não têm independência editorial comprovada; republicação com edição extensa ainda pode passar despercebida."
+    ],
+    "avaliado_em": "2026-11-13T23:45:38.202Z"
+   }
+  }
+ ],
+ "afirmacoes_omitidas": [],
+ "resposta_corrigida": {
+  "texto": "Satya Nadella is the CEO of Microsoft [1][2][3].",
+  "mudancas": [
+   {
+    "claim_id": "afirmacao_1",
+    "what": "added citations"
+   }
+  ],
+  "fontes_citadas": [
+   1,
+   2,
+   3
+  ],
+  "tentativas": 2,
+  "citacoes_anexadas": false,
+  "fontes": [
+   {
+    "n": 1,
+    "url": "https://news.microsoft.com/source/exec/satya-nadella",
+    "titulo": "Satya Nadella - Source",
+    "tipo": "OFICIAL",
+    "postura": "SUPPORTS",
+    "data": "2014-02-04"
+   },
+   {
+    "n": 2,
+    "url": "https://www.businessroundtable.org/members/satya-nadella",
+    "titulo": "Satya Nadella | Business Roundtable",
+    "tipo": "OUTRO",
+    "postura": "SUPPORTS",
+    "data": "2014-02-04"
+   },
+   {
+    "n": 3,
+    "url": "https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft",
+    "titulo": "How CEO Satya Nadella Reset Culture at Microsoft | Business Chief",
+    "tipo": "OUTRO",
+    "postura": "SUPPORTS",
+    "data": "2026-02-02"
+   }
+  ],
+  "metodo": "MODEL_REWRITE_FROM_VERIFIED_EVIDENCE"
+ },
+ "rastreabilidade_modelo": [
+  {
+   "id_chamada": "49952264-30fa-4a55-bdaa-3c0aecc23c9d",
+   "id_requisicao_enviada": "f72ec7bc-b633-4f4f-8d64-510f1a674abe",
+   "id_verificacao": "85d543c1-dab5-4592-833a-759d8346de94",
+   "etapa": "DECOMPOSICAO",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 663,
+   "tokens": {
+    "entrada": 840,
+    "saida": 102,
+    "total": 942
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "f72ec7bc-b633-4f4f-8d64-510f1a674abe",
+   "id_trace": "d869954dffb24d5d90c3a440251628ff",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 663.598,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:45:26.076Z"
+  },
+  {
+   "id_chamada": "cf8dae35-0fd4-4c9e-b5fa-e9179f345f23",
+   "id_requisicao_enviada": "2529a7ae-6dec-4518-9fbb-929047273e1c",
+   "id_verificacao": "85d543c1-dab5-4592-833a-759d8346de94",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 2823,
+   "tokens": {
+    "entrada": 3559,
+    "saida": 2048,
+    "total": 5607
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "2529a7ae-6dec-4518-9fbb-929047273e1c",
+   "id_trace": "cca5e48f659c4b0395048419b2e1e7b8",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 2823.825,
+   "status_http": 200,
+   "status": "RESPOSTA_INVALIDA",
+   "registrada_em": "2026-11-13T23:45:31.380Z",
+   "erro": "Resposta vazia ou em formato inesperado."
+  },
+  {
+   "id_chamada": "3d18c47d-fd86-426f-900b-2d308fdc1c88",
+   "id_requisicao_enviada": "a7df8777-6b69-4697-ba61-65e4199272f9",
+   "id_verificacao": "85d543c1-dab5-4592-833a-759d8346de94",
+   "etapa": "ANALISE_EM_LOTE",
+   "id_afirmacao": "afirmacao_1",
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 3867,
+   "tokens": {
+    "entrada": 3559,
+    "saida": 1665,
+    "total": 5224
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "a7df8777-6b69-4697-ba61-65e4199272f9",
+   "id_trace": "282838a3fa06475db4f30d7ef79efcf8",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 3901.829,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:45:34.239Z"
+  },
+  {
+   "id_chamada": "434578cc-2f17-49af-bd31-c063ba2090f7",
+   "id_requisicao_enviada": "b059f309-03bd-47dd-905e-069dabb43ba3",
+   "id_verificacao": "85d543c1-dab5-4592-833a-759d8346de94",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 1,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": false,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-20b"
+   },
+   "latencia_total_s": 397,
+   "tokens": {
+    "entrada": 901,
+    "saida": 79,
+    "total": 980
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-20b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "b059f309-03bd-47dd-905e-069dabb43ba3",
+   "id_trace": "f01c7f06001148198fcf7f11bb848508",
+   "indice_fallback": null,
+   "latencia_upstream_ms": 397.625,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:45:38.204Z"
+  },
+  {
+   "id_chamada": "4673a3f0-eb68-47ae-8a5c-476fd84cf6da",
+   "id_requisicao_enviada": "c3174c6f-65fd-46d6-857f-8d92ecfbbeac",
+   "id_verificacao": "85d543c1-dab5-4592-833a-759d8346de94",
+   "etapa": "RESPOSTA_CORRIGIDA",
+   "id_afirmacao": null,
+   "url_evidencia": null,
+   "tentativa": 2,
+   "provedor": "groq",
+   "modelo_solicitado": "groq/openai/gpt-oss-20b",
+   "cadeia_modelos": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+   ],
+   "queda_simulada": false,
+   "foi_fallback": true,
+   "servido_por": {
+    "provedor": "groq",
+    "modelo": "openai/gpt-oss-120b"
+   },
+   "latencia_total_s": 956,
+   "tokens": {
+    "entrada": 947,
+    "saida": 307,
+    "total": 1254
+   },
+   "espera_limite_ms": null,
+   "modelo_resolvido": "openai/gpt-oss-120b",
+   "modelo_original": "openai/gpt-oss-20b",
+   "id_bifrost": "c3174c6f-65fd-46d6-857f-8d92ecfbbeac",
+   "id_trace": "fb344282a0824d4f82b1b91eb2734c33",
+   "indice_fallback": "1",
+   "latencia_upstream_ms": 991.855,
+   "status_http": 200,
+   "status": "SUCESSO",
+   "registrada_em": "2026-11-13T23:45:38.652Z"
+  }
+ ],
+ "rastreabilidade_pesquisa": [
+  {
+   "id_operacao": "f7fc0ae9-b239-413e-82b9-bddb2366728e",
+   "id_verificacao": "85d543c1-dab5-4592-833a-759d8346de94",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Satya Nadella is the CEO of Microsoft.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:45:26.891Z",
+   "finalizada_em": "2026-11-13T23:45:28.703Z",
+   "duracao_ms": 1812,
+   "request_id": "fd3dff7e-5f9a-43a0-9bc1-4ccc5fea8d27",
+   "response_time": 1.21,
+   "erro": null,
+   "modo_busca": "GERAL",
+   "parametros": {
+    "query": "Satya Nadella is the CEO of Microsoft.",
+    "search_depth": "basic",
+    "max_results": 5,
+    "include_answer": false,
+    "include_published_date": true
+   },
+   "quantidade_resultados": 5,
+   "resultados": [
+    {
+     "resultado_id": "00e9f3-00",
+     "titulo": "Satya Nadella - Source",
+     "url": "https://news.microsoft.com/source/exec/satya-nadella",
+     "relevancia": 0.88059187,
+     "data_publicacao": "2014-02-04"
+    },
+    {
+     "resultado_id": "7f4939-01",
+     "titulo": "Satya Nadella - Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Satya_Nadella",
+     "relevancia": 0.8729984,
+     "data_publicacao": "2026-01-30"
+    },
+    {
+     "resultado_id": "3d408a-02",
+     "titulo": "Satya Nadella | Business Roundtable",
+     "url": "https://www.businessroundtable.org/members/satya-nadella",
+     "relevancia": 0.8702668,
+     "data_publicacao": "2014-02-04"
+    },
+    {
+     "resultado_id": "a3a3a5-03",
+     "titulo": "Satya Nadella",
+     "url": "https://www.britannica.com/money/Satya-Nadella",
+     "relevancia": 0.8625833,
+     "data_publicacao": "2015-07-10"
+    },
+    {
+     "resultado_id": "66dc65-04",
+     "titulo": "Satya Nadella - Chairman and CEO at Microsoft",
+     "url": "https://linkedin.com/in/satya-nadella-3145136",
+     "relevancia": 0.8468312,
+     "data_publicacao": null
+    }
+   ]
+  },
+  {
+   "id_operacao": "f61c6637-fb4e-48d0-a996-ca9d5e0fec0a",
+   "id_verificacao": "85d543c1-dab5-4592-833a-759d8346de94",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "BUSCA",
+   "consulta": "Satya Nadella is the CEO of Microsoft.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:45:28.705Z",
+   "finalizada_em": "2026-11-13T23:45:30.181Z",
+   "duracao_ms": 1476,
+   "request_id": "7b2c1934-3173-49f3-93a5-34b475f32a3a",
+   "response_time": 1.02,
+   "erro": null,
+   "modo_busca": "NOTICIAS",
+   "parametros": {
+    "query": "Satya Nadella is the CEO of Microsoft.",
+    "search_depth": "basic",
+    "max_results": 4,
+    "include_answer": false,
+    "include_published_date": true,
+    "topic": "news",
+    "time_range": "year"
+   },
+   "quantidade_resultados": 4,
+   "resultados": [
+    {
+     "resultado_id": "ebf764-00",
+     "titulo": "Satya Nadella - Chairman and CEO at Microsoft",
+     "url": "https://linkedin.com/in/satya-nadella-3145136",
+     "relevancia": 0.8468312,
+     "data_publicacao": null
+    },
+    {
+     "resultado_id": "fd6563-01",
+     "titulo": "How CEO Satya Nadella Reset Culture at Microsoft | Business Chief",
+     "url": "https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft",
+     "relevancia": 0.8005361,
+     "data_publicacao": "2026-02-02"
+    },
+    {
+     "resultado_id": "d2ccf2-02",
+     "titulo": "From H-1B to CEO: How Satya Nadella traveled the path the U.S. just cut off for Microsoft workers – GeekWire",
+     "url": "https://www.geekwire.com/2026/from-h-1b-to-ceo-how-satya-nadella-traveled-the-path-the-u-s-just-cut-off-for-microsoft-workers",
+     "relevancia": 0.7606507,
+     "data_publicacao": "2026-10-09"
+    },
+    {
+     "resultado_id": "68b3f8-03",
+     "titulo": "Announcing Copilot leadership update - The Official Microsoft Blog",
+     "url": "https://blogs.microsoft.com/blog/2026/03/17/announcing-copilot-leadership-update",
+     "relevancia": 0.755637,
+     "data_publicacao": "2026-03-17"
+    }
+   ]
+  },
+  {
+   "id_operacao": "a2f18cc5-b0a8-4aa4-a814-37aa971eb504",
+   "id_verificacao": "85d543c1-dab5-4592-833a-759d8346de94",
+   "id_afirmacao": "afirmacao_1",
+   "provedor": "tavily",
+   "etapa": "EXTRACAO",
+   "consulta": "Satya Nadella is the CEO of Microsoft.",
+   "status": "SUCESSO",
+   "iniciada_em": "2026-11-13T23:45:30.190Z",
+   "finalizada_em": "2026-11-13T23:45:30.733Z",
+   "duracao_ms": 543,
+   "request_id": "10f400d1-4962-4ba5-b8c6-bd7112dd4747",
+   "response_time": 0.02,
+   "erro": null,
+   "urls_solicitadas": [
+    "https://news.microsoft.com/source/exec/satya-nadella",
+    "https://en.wikipedia.org/wiki/Satya_Nadella",
+    "https://www.businessroundtable.org/members/satya-nadella",
+    "https://www.britannica.com/money/Satya-Nadella",
+    "https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft"
+   ],
+   "parametros": {
+    "urls": [
+     "https://news.microsoft.com/source/exec/satya-nadella",
+     "https://en.wikipedia.org/wiki/Satya_Nadella",
+     "https://www.businessroundtable.org/members/satya-nadella",
+     "https://www.britannica.com/money/Satya-Nadella",
+     "https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft"
+    ],
+    "extract_depth": "basic",
+    "format": "markdown",
+    "include_images": false
+   },
+   "quantidade_resultados": 5,
+   "urls_extraidas": [
+    "https://news.microsoft.com/source/exec/satya-nadella",
+    "https://en.wikipedia.org/wiki/Satya_Nadella",
+    "https://www.businessroundtable.org/members/satya-nadella",
+    "https://www.britannica.com/money/Satya-Nadella",
+    "https://businesschief.com/news/how-ceo-satya-nadella-reset-culture-at-microsoft"
+   ]
+  }
+ ],
+ "modo": "real",
+ "simulado": false,
+ "gateway": {
+  "gateway": "bifrost",
+  "chamadas": 5,
+  "falhas": 1,
+  "cadeia_modelos": [
+   "groq/openai/gpt-oss-20b",
+   "groq/openai/gpt-oss-120b"
+  ],
+  "queda_simulada": false,
+  "respostas_por_modelo": [
+   {
+    "modelo": "groq/openai/gpt-oss-20b",
+    "chamadas": 2
+   },
+   {
+    "modelo": "groq/openai/gpt-oss-120b",
+    "chamadas": 2
+   }
+  ],
+  "respostas_de_reserva": 2,
+  "tokens_total": 8400,
+  "latencia_media_ms": 1489
+ },
+ "duracao_ms": 13631,
+ "gravado_em": "2026-11-13T23:45:39.677Z"
+}

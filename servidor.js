@@ -11,6 +11,7 @@ require("dotenv").config({ quiet: true });
 const http = require("node:http");
 const fs = require("node:fs");
 const path = require("node:path");
+const { executarComPrazo } = require("./src/prazo");
 const { criarBanco } = require("./src/banco");
 const {
   TEXTO_EXEMPLO,
@@ -293,7 +294,10 @@ async function tratarVerificacao(req, res) {
     });
     // "ocupado" só volta a falso quando a checagem termina de fato, mesmo
     // depois do tempo limite: assim duas checagens nunca rodam juntas.
-    trabalho = executarVerificacao(pedido);
+    // A checagem recebe um prazo um pouco menor que o limite: quando ele
+    // acaba, as chamadas externas em andamento são canceladas, então a
+    // checagem termina de verdade e o servidor fica livre logo depois.
+    trabalho = executarComPrazo(Math.max(1000, TEMPO_MAXIMO_VERIFICACAO_MS - 3000), () => executarVerificacao(pedido));
     trabalho.catch(() => {}).finally(() => { ocupado = false; });
     const resultado = await Promise.race([trabalho, limite]).finally(() => clearTimeout(temporizador));
     resultado.duracao_ms = Date.now() - inicio;

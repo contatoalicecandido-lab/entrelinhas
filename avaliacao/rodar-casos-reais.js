@@ -100,7 +100,7 @@ async function principal() {
     }
     let linha = await verificarCaso(caso);
     for (let tentativa = 2; linha.resultado === "FALHA_EXECUCAO" && tentativa <= 4; tentativa += 1) {
-      const espera = esperaPedida(linha.erro) ?? (/limite|limit|240 s/i.test(linha.erro) ? 120000 : null);
+      const espera = esperaPedida(linha.erro) ?? (/limite|limit|240 s|already running/i.test(linha.erro) ? 120000 : null);
       if (!espera || espera > ESPERA_MAXIMA_MS) break;
       console.log(`Limite de uso do modelo. Esperando ${Math.round(espera / 1000)} s e tentando de novo (${tentativa}/4)...`);
       await new Promise(r => setTimeout(r, espera));

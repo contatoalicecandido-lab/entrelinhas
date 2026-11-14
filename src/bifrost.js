@@ -1,6 +1,7 @@
 
 const { randomUUID } = require("node:crypto");
 const { AsyncLocalStorage } = require("node:async_hooks");
+const { limiteDaChamada, tempoRestante } = require("./prazo");
 
 // Cadeia de modelos servida pelo Bifrost. O principal responde normalmente;
 // se ele falhar (erro, limite de uso do provedor, modelo indisponível), o
@@ -102,7 +103,8 @@ async function perguntarAoModelo(
   const idRequisicao = randomUUID();
 
   const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 90000);
+  // 90 s por chamada, ou menos se a checagem estiver perto do prazo.
+  const timeout = setTimeout(() => controller.abort(), limiteDaChamada(90000));
 
   const rastreabilidade = {
     id_chamada: idChamada,
@@ -230,7 +232,8 @@ async function perguntarAoModelo(
           if (t?.status_code === 429) esperas.push(tempoDeEspera({ headers: { get: () => null } }, { error: { message: t.message ?? "" }, extra_fields: { retry_after_ms: t.retry_after_ms } }));
         }
         const espera = Math.min(...esperas.filter(Number.isFinite));
-        if (espera <= ESPERA_MAXIMA_LIMITE_MS) {
+        // Só espera se ainda sobra tempo na checagem para a nova tentativa.
+        if (espera <= ESPERA_MAXIMA_LIMITE_MS && espera + 5000 < tempoRestante()) {
           rastreabilidade.espera_limite_ms = espera + 500;
           await esperar(espera + 500);
           resposta = await enviar();
