@@ -22,6 +22,8 @@ It is **built for Portuguese, not translated into it**. It reads:
 - slang such as “9 pau” (R$ 9 mil), “50 conto” and “zap”;
 - Brazilian authorities (Banco Central, gov.br, Anatel…), which it searches automatically.
 
+**Check your own text live:** <https://entrelinhas-qwgp.onrender.com/>. Paste any AI answer and it runs now, with Tavily and Bifrost (OpenRouter, Groq as backup). Limits protect the credits: 5 live checks per person and 25 in total per day, up to 3 claims each; the free server sleeps when idle, so the first check can take a minute longer.
+
 **Try it now, no install:** <https://contatoalicecandido-lab.github.io/entrelinhas/>. Click **See a real check**. The public demo replays real live checks (real Tavily searches, real model calls through Bifrost) and the built-in examples, without API keys. To check your own text, run it locally (see [Getting started](#getting-started)).
 
 **Check any AI answer from any site:** with Entrelinhas running locally, drag the **Check with Entrelinhas** button (on the page, in the section “Use Entrelinhas on any AI app”) to your bookmarks bar. Select an answer on ChatGPT, Gemini or any page and click it: Entrelinhas opens with the text ready. Apps can call the same check with `POST /api/verificar` (see [API](#api)).

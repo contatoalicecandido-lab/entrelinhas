@@ -684,6 +684,7 @@ main.folha { overflow: hidden; }
 .publico .ajustes { display: none; }
 
 /* Demonstração pública */
+.aviso-publico a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
 .aviso-publico { margin: 0 0 4px; padding: 14px 18px; border-radius: 16px; background: rgba(255, 90, 31, .12); color: #f3dccf; font-size: 14px; line-height: 1.5; }
 .publico .campo { display: none; }
 .publico .exemplos-linha { margin-top: 14px; }

@@ -134,7 +134,7 @@ function configurarModo() {
   $("aviso-publico").hidden = !API.estatico;
   document.body.classList.toggle("publico", Boolean(API.estatico));
   if (API.estatico) { const dica = document.querySelector(".rodape-dica"); if (dica) dica.textContent = "Back to the top to try a recorded check."; }
-  if (API.estatico) $("texto").placeholder = "Pick a recorded check below. To check your own text, run Entrelinhas on your computer.";
+  if (API.estatico) $("texto").placeholder = "Pick a recorded check below. To check your own text, use the live demo at entrelinhas-qwgp.onrender.com.";
   // Servidor público na nuvem: checagens ao vivo para qualquer pessoa, com cota diária.
   if (!API.estatico && estado.status?.publico) {
     document.body.classList.add("publico-ao-vivo");

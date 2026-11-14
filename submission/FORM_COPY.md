@@ -113,7 +113,7 @@ Every check of the run is recorded in `gravacoes/`, and the results are in `aval
 
 Public repository: https://github.com/contatoalicecandido-lab/entrelinhas
 
-Public demo, no install: https://contatoalicecandido-lab.github.io/entrelinhas/ (click **See a real check**). Pitch deck: `submission/Entrelinhas_Pitch_Deck.pptx`.
+Live demo, check your own text: https://entrelinhas-qwgp.onrender.com/ (5 live checks per person per day; the first one can take a minute while the free server wakes up). Recorded checks, no wait: https://contatoalicecandido-lab.github.io/entrelinhas/ (click **See a real check**). Pitch deck: `submission/Entrelinhas_Pitch_Deck.pptx`.
 
 Run `npm run web:exemplo` for the no-key demo, or `npm run web` with Tavily and Bifrost configured for live verification. Video script: `submission/VIDEO_SCRIPT.md`.
 
