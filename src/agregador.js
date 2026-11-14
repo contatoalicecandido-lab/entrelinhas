@@ -6,7 +6,9 @@ const { clusterizarDependencias } = require("./independencia-fontes");
 const { calcularConcordancia, estaCorroborada } = require("./concordancia");
 const { classificarFonte } = require("./tipo-fonte");
 
-const VERSAO_REGRAS = "1.4.0";
+const VERSAO_REGRAS = "1.5.0";
+// Palavras que dizem que a afirmação vale agora (inglês e português).
+const AFIRMA_QUE_VALE_HOJE = /\b(currently|still|now|today|latest|newest|most recent|current|as of now|right now)\b|\b(atualmente|ainda|hoje|mais recente|atual|vigente)\b|(^|\s)últim[oa]s?(\s|$)/iu;
 
 const VEREDITOS = [
   "ATUAL",
@@ -534,7 +536,7 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
 
   const conclusaoFactual = determinarConclusaoFactual(grupos);
   const concordancia = calcularConcordancia(grupos);
-  const veredito = determinarVeredito(grupos, concordancia);
+  let veredito = determinarVeredito(grupos, concordancia);
   const score = calcularScore(grupos);
   // Janela da entidade (Selic 45 d, inflação 30 d) quando houver; senão, a da categoria.
   const validade = afirmacao.janela_validade?.dias ?? VALIDADE_MAX_DIAS[afirmacao.tipo_afirmacao];
@@ -605,6 +607,22 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
   });
 
   const limitacoes = [];
+
+  // "É a mais nova", "ainda recebe", "atualmente": a afirmação diz que algo
+  // vale HOJE. Se todas as fontes que a confirmam são mais velhas que a janela
+  // desse tipo de fato, elas não provam o "hoje" (Python 3.14 "newest" foi
+  // confirmado por páginas de 2025, e o 3.15 saiu em outubro de 2026).
+  // Fica "apoiada, sem confirmação", não verde.
+  if (
+    veredito === "CORROBORADA" &&
+    atualidadeAfirmacao?.status === "AGING" &&
+    AFIRMA_QUE_VALE_HOJE.test(afirmacao.texto)
+  ) {
+    veredito = "SUPORTE_FRACO";
+    limitacoes.push(
+      "A afirmação diz que algo vale hoje, mas todas as fontes que a confirmam são mais antigas que a janela desse tipo de fato."
+    );
+  }
 
   if (evidencias.length === 0) {
     limitacoes.push(

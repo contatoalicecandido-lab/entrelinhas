@@ -1,0 +1,270 @@
+{
+  "gerado_em": "2026-11-14T02:39:30.894Z",
+  "regras": "1.5.0",
+  "metodo": "Same recorded evidence as the live run, re-scored with the current rules. No new searches or model calls.",
+  "resumo": {
+    "total": 27,
+    "acertos": 15,
+    "parciais": 4,
+    "sem_decisao": 7,
+    "erros": 0,
+    "erros_graves_confirmou_desatualizada": 1,
+    "acuracia_estrita": 0.556,
+    "direcao_correta": 0.704,
+    "nao_rodaram": 1
+  },
+  "linhas": [
+    {
+      "id": "en-ternus-ceo",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "CORROBORADA",
+      "veredito_regras_atuais": "CORROBORADA",
+      "nota_atualidade": 64,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-14T01-51-51-725Z-john-ternus-is-the-ceo-of-apple.json"
+    },
+    {
+      "id": "en-cook-ceo",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "NAO_VERIFICAVEL",
+      "veredito_regras_atuais": "NAO_VERIFICAVEL",
+      "nota_atualidade": null,
+      "resultado": "SEM_DECISAO",
+      "gravacao": "gravacoes/2026-11-14T01-52-48-247Z-tim-cook-is-the-ceo-of-apple.json"
+    },
+    {
+      "id": "en-huang-ceo",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "CONFLITO",
+      "veredito_regras_atuais": "CONFLITO",
+      "nota_atualidade": 0,
+      "resultado": "PARCIAL",
+      "gravacao": "gravacoes/2026-11-14T01-53-30-495Z-jensen-huang-is-the-ceo-of-nvidia.json"
+    },
+    {
+      "id": "pt-galipolo-bc",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "CORROBORADA",
+      "veredito_regras_atuais": "CORROBORADA",
+      "nota_atualidade": 99,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-14T01-54-06-857Z-gabriel-galipolo-e-o-presidente-do-banco-central.json"
+    },
+    {
+      "id": "pt-campos-neto-bc",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "CONTRADITA_POR_FONTE_ATUAL",
+      "veredito_regras_atuais": "CONTRADITA_POR_FONTE_ATUAL",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-14T01-55-00-873Z-roberto-campos-neto-e-o-presidente-do-banco-cent.json"
+    },
+    {
+      "id": "pt-magda-petrobras",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "CORROBORADA",
+      "veredito_regras_atuais": "CORROBORADA",
+      "nota_atualidade": 98,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-14T01-55-34-849Z-magda-chambriard-e-a-presidente-da-petrobras.json"
+    },
+    {
+      "id": "pt-prates-petrobras",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "CONTRADICAO_FRACA",
+      "veredito_regras_atuais": "CONTRADICAO_FRACA",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-14T01-56-31-897Z-jean-paul-prates-e-o-presidente-da-petrobras.json"
+    },
+    {
+      "id": "pt-selic-15",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "CONFLITO",
+      "veredito_regras_atuais": "CONFLITO",
+      "nota_atualidade": 0,
+      "resultado": "PARCIAL",
+      "gravacao": "gravacoes/2026-11-14T01-57-28-842Z-a-taxa-selic-esta-em-15-ao-ano.json"
+    },
+    {
+      "id": "pt-pix-automatico",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "SUPORTE_FRACO",
+      "veredito_regras_atuais": "SUPORTE_FRACO",
+      "nota_atualidade": 5,
+      "resultado": "PARCIAL",
+      "gravacao": "gravacoes/2026-11-14T01-58-06-938Z-o-pix-automatico-ja-esta-disponivel-para-pagar-c.json"
+    },
+    {
+      "id": "pt-pix-automatico-futuro",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": null,
+      "veredito_regras_atuais": null,
+      "nota_atualidade": null,
+      "resultado": "NAO_RODOU",
+      "gravacao": null
+    },
+    {
+      "id": "en-python315-newest",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "ATUAL",
+      "veredito_regras_atuais": "ATUAL",
+      "nota_atualidade": 61,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-14T01-59-00-817Z-python-3-15-is-the-newest-python-release.json"
+    },
+    {
+      "id": "en-python314-newest",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "CORROBORADA",
+      "veredito_regras_atuais": "SUPORTE_FRACO",
+      "nota_atualidade": 0,
+      "resultado": "ERRO_GRAVE",
+      "gravacao": "gravacoes/2026-11-14T01-59-37-429Z-python-3-14-is-the-newest-python-release.json"
+    },
+    {
+      "id": "en-python39-security",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "CONTRADICAO_FRACA",
+      "veredito_regras_atuais": "CONTRADICAO_FRACA",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-14T02-00-23-835Z-python-3-9-still-receives-security-fixes.json"
+    },
+    {
+      "id": "en-python310-security",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "CONTRADICAO_FRACA",
+      "veredito_regras_atuais": "CONTRADICAO_FRACA",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-14T02-01-17-177Z-python-3-10-still-receives-security-fixes.json"
+    },
+    {
+      "id": "en-python313-security",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "CORROBORADA",
+      "veredito_regras_atuais": "CORROBORADA",
+      "nota_atualidade": 78,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-14T02-02-14-716Z-python-3-13-still-receives-security-fixes.json"
+    },
+    {
+      "id": "en-ubuntu2604-lts",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "CORROBORADA",
+      "veredito_regras_atuais": "CORROBORADA",
+      "nota_atualidade": 30,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-14T02-03-16-560Z-ubuntu-26-04-is-the-latest-lts-release-of-ubuntu.json"
+    },
+    {
+      "id": "en-ubuntu2404-latest",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "CONFLITO",
+      "veredito_regras_atuais": "CONFLITO",
+      "nota_atualidade": 0,
+      "resultado": "PARCIAL",
+      "gravacao": "gravacoes/2026-11-14T02-04-11-992Z-ubuntu-24-04-is-the-latest-lts-release-of-ubuntu.json"
+    },
+    {
+      "id": "en-node26-lts",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "CORROBORADA",
+      "veredito_regras_atuais": "CORROBORADA",
+      "nota_atualidade": 70,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-14T02-05-01-201Z-node-js-26-is-an-lts-release.json"
+    },
+    {
+      "id": "en-node24-active",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "NAO_VERIFICAVEL",
+      "veredito_regras_atuais": "NAO_VERIFICAVEL",
+      "nota_atualidade": 0,
+      "resultado": "SEM_DECISAO",
+      "gravacao": "gravacoes/2026-11-14T02-06-06-779Z-node-js-24-is-the-current-active-lts-release.json"
+    },
+    {
+      "id": "en-node20-security",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "NAO_VERIFICAVEL",
+      "veredito_regras_atuais": "NAO_VERIFICAVEL",
+      "nota_atualidade": 0,
+      "resultado": "SEM_DECISAO",
+      "gravacao": "gravacoes/2026-11-14T02-06-48-650Z-node-js-20-still-receives-security-updates.json"
+    },
+    {
+      "id": "en-java25-lts",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "CONFLITO",
+      "veredito_regras_atuais": "CONFLITO",
+      "nota_atualidade": 65,
+      "resultado": "SEM_DECISAO",
+      "gravacao": "gravacoes/2026-11-14T02-07-41-517Z-java-25-is-the-latest-java-lts-release.json"
+    },
+    {
+      "id": "en-java21-latest-lts",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "NAO_VERIFICAVEL",
+      "veredito_regras_atuais": "NAO_VERIFICAVEL",
+      "nota_atualidade": 0,
+      "resultado": "SEM_DECISAO",
+      "gravacao": "gravacoes/2026-11-14T02-08-45-320Z-java-21-is-the-latest-java-lts-release.json"
+    },
+    {
+      "id": "en-ios27-latest",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "CORROBORADA",
+      "veredito_regras_atuais": "CORROBORADA",
+      "nota_atualidade": 75,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-14T02-09-25-616Z-ios-27-is-the-latest-major-version-of-ios.json"
+    },
+    {
+      "id": "en-ios26-latest",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "CONTRADICAO_FRACA",
+      "veredito_regras_atuais": "CONTRADICAO_FRACA",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-14T02-10-06-191Z-ios-26-is-the-latest-version-of-ios.json"
+    },
+    {
+      "id": "en-leo-pope",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "CORROBORADA",
+      "veredito_regras_atuais": "CORROBORADA",
+      "nota_atualidade": 78,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-14T02-10-40-024Z-leo-xiv-is-the-current-pope.json"
+    },
+    {
+      "id": "en-francis-pope",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "NAO_VERIFICAVEL",
+      "veredito_regras_atuais": "NAO_VERIFICAVEL",
+      "nota_atualidade": null,
+      "resultado": "SEM_DECISAO",
+      "gravacao": "gravacoes/2026-11-14T02-11-25-382Z-pope-francis-is-the-current-pope.json"
+    },
+    {
+      "id": "en-win10-esu-2027",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "CORROBORADA",
+      "veredito_regras_atuais": "CORROBORADA",
+      "nota_atualidade": 71,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-14T02-12-13-870Z-windows-10-home-users-enrolled-in-extended-secur.json"
+    },
+    {
+      "id": "en-win10-esu-2026",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "NAO_VERIFICAVEL",
+      "veredito_regras_atuais": "NAO_VERIFICAVEL",
+      "nota_atualidade": null,
+      "resultado": "SEM_DECISAO",
+      "gravacao": "gravacoes/2026-11-14T02-13-13-987Z-free-windows-10-security-updates-for-home-users-.json"
+    }
+  ]
+}

@@ -66,6 +66,21 @@ const af = evidencias => ({ texto: "Afirmação de teste.", evidencias });
   ok("contradição com peso menor que 2 fica 'não verificável'");
 }
 
+{
+  // Regras 1.5.0: "é a mais nova" confirmado só por fontes velhas não fica verde.
+  const evd = (url, cat, data) => ({ ...ev(url, "SUPPORTS", cat), fonte: { ...ev(url, "SUPPORTS", cat).fonte, data_publicacao: data } });
+  const velhas = [evd("https://www.python.org/x", "OFICIAL", "2025-10-07"), evd("https://jornal.com/2025/11/x", "NOTICIA", "2025-11-18"), evd("https://c.com/x", "OUTRO", "2025-12-01")];
+  const quando = { asOf: new Date("2026-11-14T00:00:00Z") };
+  const maisNova = agregarEvidencias({ texto: "Python 3.14 is the newest Python release.", tipo_afirmacao: "versao_api", evidencias: velhas }, quando);
+  assert.equal(maisNova.atualidade_afirmacao.status, "AGING");
+  assert.equal(maisNova.veredito, "SUPORTE_FRACO", "'newest' com fontes velhas fica amarelo");
+  const semHoje = agregarEvidencias({ texto: "Python 3.14 has a JIT compiler.", tipo_afirmacao: "versao_api", evidencias: velhas }, quando);
+  assert.equal(semHoje.veredito, "CORROBORADA", "fato que não diz 'hoje' continua corroborado");
+  const pt = agregarEvidencias({ texto: "O Python 3.14 é a versão mais recente.", tipo_afirmacao: "versao_api", evidencias: velhas }, quando);
+  assert.equal(pt.veredito, "SUPORTE_FRACO", "também em português");
+  ok("'a mais nova' ou 'ainda vale' só fica verde se uma fonte recente confirmar");
+}
+
 // 3. Resposta corrigida: fonte sem citação conferida não fornece números.
 {
   const r = [{ id: "afirmacao_1", evidencias: [

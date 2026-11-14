@@ -42,6 +42,12 @@
    "data": "2026-11-13T13:23:46.585Z"
   },
   {
+   "rotulo": "Live · Nvidia CEO, changed 2 days ago",
+   "texto": "Jensen Huang is the CEO of Nvidia.",
+   "arquivo": "dados/gravacoes/2026-11-14T01-53-30-495Z-jensen-huang-is-the-ceo-of-nvidia.json",
+   "data": "2026-11-14T01:53:30.495Z"
+  },
+  {
    "rotulo": "Live · Bifrost outage drill",
    "texto": "Sam Altman is the CEO of OpenAI.",
    "arquivo": "dados/gravacoes/2026-11-12T23-17-52-501Z-sam-altman-is-the-ceo-of-openai.json",

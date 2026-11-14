@@ -31,7 +31,9 @@ for (const f of gravacoes) {
 
 const linhas = casos.map(caso => {
   const arquivo = porTexto.get(norm(caso.texto));
-  if (!arquivo) throw new Error(`Sem gravação para ${caso.id}`);
+  // Caso que falhou na rodada (sem gravação): fica registrado como não rodado,
+  // fora da contagem. Nada é inventado para ele.
+  if (!arquivo) return { id: caso.id, esperado: caso.esperado, veredito_na_rodada: original.get(caso.id)?.veredito ?? null, veredito_regras_atuais: null, nota_atualidade: null, resultado: "NAO_RODOU", gravacao: null };
   const dados = reavaliarGravacao(JSON.parse(fs.readFileSync(path.join(RAIZ, "gravacoes", arquivo), "utf8")));
   const a = dados.afirmacoes[0];
   return {
@@ -48,7 +50,7 @@ const saida = {
   gerado_em: new Date().toISOString(),
   regras: VERSAO_REGRAS,
   metodo: "Same recorded evidence as the live run, re-scored with the current rules. No new searches or model calls.",
-  resumo: resumir(linhas),
+  resumo: { ...resumir(linhas.filter(l => l.resultado !== "NAO_RODOU")), nao_rodaram: linhas.filter(l => l.resultado === "NAO_RODOU").length },
   linhas
 };
 const destino = process.env.SAIDA ? path.resolve(process.env.SAIDA) : path.join(__dirname, "reavaliacao-casos-reais-2026-11-13.json");

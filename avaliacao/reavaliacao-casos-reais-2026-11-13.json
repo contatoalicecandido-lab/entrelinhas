@@ -1,6 +1,6 @@
 {
-  "gerado_em": "2026-11-14T00:06:43.386Z",
-  "regras": "1.4.0",
+  "gerado_em": "2026-11-14T02:39:10.960Z",
+  "regras": "1.5.0",
   "metodo": "Same recorded evidence as the live run, re-scored with the current rules. No new searches or model calls.",
   "resumo": {
     "total": 15,

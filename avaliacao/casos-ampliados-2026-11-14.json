@@ -1,94 +1,319 @@
 {
-  "nome": "Entrelinhas · conjunto ampliado (29 afirmações novas, escritas em 14/11/2026, nunca usadas para ajustar regras)",
+  "nome": "Entrelinhas · conjunto ampliado (28 afirmações novas, escritas em 14/11/2026, nunca usadas para ajustar regras)",
   "data_referencia": "2026-11-14",
   "como_pontuar": {
     "ATUAL_ESPERADO": "acerto se ATUAL ou CORROBORADA; parcial se SUPORTE_FRACO; erro se contradita; sem decisão se NAO_VERIFICAVEL ou CONFLITO",
     "DESATUALIZADA_ESPERADO": "acerto se CONTRADITA_POR_FONTE_ATUAL ou CONTRADICAO_FRACA; parcial se CONFLITO; erro grave se ATUAL, CORROBORADA ou SUPORTE_FRACO (confirmou algo velho); sem decisão se NAO_VERIFICAVEL"
   },
   "casos": [
-    { "id": "en-ternus-ceo", "texto": "John Ternus is the CEO of Apple.", "esperado": "ATUAL",
+    {
+      "id": "en-ternus-ceo",
+      "texto": "John Ternus is the CEO of Apple.",
+      "esperado": "ATUAL",
       "verdade": "Ternus became Apple's CEO on 1 September 2026; Tim Cook became executive chairman",
-      "fontes_gabarito": ["https://www.macrumors.com/2026/09/01/john-ternus-is-now-apple-ceo/", "https://www.aljazeera.com/economy/2026/9/1/john-ternus-succeeds-tim-cook-as-apple-ceo-after-15-years", "https://tbreak.com/apple-leadership-transition-john-ternus-ceo/"] },
-    { "id": "en-cook-ceo", "texto": "Tim Cook is the CEO of Apple.", "esperado": "DESATUALIZADA",
+      "fontes_gabarito": [
+        "https://www.macrumors.com/2026/09/01/john-ternus-is-now-apple-ceo/",
+        "https://www.aljazeera.com/economy/2026/9/1/john-ternus-succeeds-tim-cook-as-apple-ceo-after-15-years",
+        "https://tbreak.com/apple-leadership-transition-john-ternus-ceo/"
+      ]
+    },
+    {
+      "id": "en-cook-ceo",
+      "texto": "Tim Cook is the CEO of Apple.",
+      "esperado": "DESATUALIZADA",
       "verdade": "Cook was CEO until 31 August 2026; since 1 September 2026 he is executive chairman",
-      "fontes_gabarito": ["https://www.macrumors.com/2026/09/01/john-ternus-is-now-apple-ceo/", "https://www.euronews.com/next/2026/09/02/end-of-the-cook-era-apple-has-a-new-ceo-for-the-first-time-in-15-years", "https://tech-insider.org/tim-cook-steps-down-apple-ceo-2026/"] },
-    { "id": "en-huang-ceo", "texto": "Jensen Huang is the CEO of Nvidia.", "esperado": "ATUAL",
-      "verdade": "Co-founder and CEO since 1993, still CEO in November 2026",
-      "fontes_gabarito": ["https://bdnews24.com/technology/oi7i0up7v3", "https://www.rootdata.com/news/821743", "https://fortune.com/tag/jensen-huang/page/6/"] },
-    { "id": "pt-galipolo-bc", "texto": "Gabriel Galípolo é o presidente do Banco Central do Brasil.", "esperado": "ATUAL",
+      "fontes_gabarito": [
+        "https://www.macrumors.com/2026/09/01/john-ternus-is-now-apple-ceo/",
+        "https://www.euronews.com/next/2026/09/02/end-of-the-cook-era-apple-has-a-new-ceo-for-the-first-time-in-15-years",
+        "https://tech-insider.org/tim-cook-steps-down-apple-ceo-2026/"
+      ]
+    },
+    {
+      "id": "en-huang-ceo",
+      "texto": "Jensen Huang is the CEO of Nvidia.",
+      "esperado": "DESATUALIZADA",
+      "verdade": "Huang resigned as CEO on 12 November 2026; CFO Colette Kress was appointed interim CEO (Nvidia 8-K). Gabarito corrigido depois da rodada: ao escrever o caso em 14/11 eu (Claude) usei notícias de 10/11 e não vi a renúncia de 12/11; foi o próprio Entrelinhas que trouxe as fontes da renúncia.",
+      "fontes_gabarito": [
+        "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm",
+        "https://www.npr.org/2026/11/12/nx-s1-6037833/jensen-huang-nvidia-stepped-down",
+        "https://www.wired.com/story/nvidia-ceo-jensen-huang-steps-down"
+      ],
+      "gabarito_corrigido_depois_da_rodada": true
+    },
+    {
+      "id": "pt-galipolo-bc",
+      "texto": "Gabriel Galípolo é o presidente do Banco Central do Brasil.",
+      "esperado": "ATUAL",
       "verdade": "Presidente do BC desde janeiro de 2025, mandato até 2028; no cargo em novembro de 2026",
-      "fontes_gabarito": ["https://sbtnews.sbt.com.br/noticia/economia/galipolo-descarta-assumir-fazenda-no-proximo-mandato-de-lula", "https://www.tribunadosertao.com.br/financas/2026/11/10/1018162-galipolo-defende-atuacao-do-bc-contra-inflacao-tem-efeitos-colaterais-mas-sao-menores-do-que-deixar-a-doenca-desnaturar-o-paciente", "https://www.riotimesonline.com/?p=768049"] },
-    { "id": "pt-campos-neto-bc", "texto": "Roberto Campos Neto é o presidente do Banco Central do Brasil.", "esperado": "DESATUALIZADA",
+      "fontes_gabarito": [
+        "https://sbtnews.sbt.com.br/noticia/economia/galipolo-descarta-assumir-fazenda-no-proximo-mandato-de-lula",
+        "https://www.tribunadosertao.com.br/financas/2026/11/10/1018162-galipolo-defende-atuacao-do-bc-contra-inflacao-tem-efeitos-colaterais-mas-sao-menores-do-que-deixar-a-doenca-desnaturar-o-paciente",
+        "https://www.riotimesonline.com/?p=768049"
+      ]
+    },
+    {
+      "id": "pt-campos-neto-bc",
+      "texto": "Roberto Campos Neto é o presidente do Banco Central do Brasil.",
+      "esperado": "DESATUALIZADA",
       "verdade": "Campos Neto deixou a presidência no fim de 2024; Galípolo assumiu em janeiro de 2025",
-      "fontes_gabarito": ["https://www.cartacapital.com.br/?p=451033", "https://renovainvest.com.br/?p=60334", "https://sbtnews.sbt.com.br/noticia/economia/galipolo-descarta-assumir-fazenda-no-proximo-mandato-de-lula"] },
-    { "id": "pt-magda-petrobras", "texto": "Magda Chambriard é a presidente da Petrobras.", "esperado": "ATUAL",
+      "fontes_gabarito": [
+        "https://www.cartacapital.com.br/?p=451033",
+        "https://renovainvest.com.br/?p=60334",
+        "https://sbtnews.sbt.com.br/noticia/economia/galipolo-descarta-assumir-fazenda-no-proximo-mandato-de-lula"
+      ]
+    },
+    {
+      "id": "pt-magda-petrobras",
+      "texto": "Magda Chambriard é a presidente da Petrobras.",
+      "esperado": "ATUAL",
       "verdade": "Presidente da Petrobras desde 24/05/2024, no cargo em novembro de 2026",
-      "fontes_gabarito": ["https://www.jornaldocomercio.com/economia/2026/11/1270147-recorde-de-producao-ja-foi-superado-3-vezes-ao-longo-deste-ano-diz-presidente-da-petrobras.html", "https://www.riotimesonline.com/petrobras-lula-state-companies-banco-do-brasil-caixa-2026/", "https://www.infomoney.com.br/mercados/petrobras-faz-hoje-assembleia-que-deve-confirmar-novo-presidente-do-seu-conselho/"] },
-    { "id": "pt-prates-petrobras", "texto": "Jean Paul Prates é o presidente da Petrobras.", "esperado": "DESATUALIZADA",
+      "fontes_gabarito": [
+        "https://www.jornaldocomercio.com/economia/2026/11/1270147-recorde-de-producao-ja-foi-superado-3-vezes-ao-longo-deste-ano-diz-presidente-da-petrobras.html",
+        "https://www.riotimesonline.com/petrobras-lula-state-companies-banco-do-brasil-caixa-2026/",
+        "https://www.infomoney.com.br/mercados/petrobras-faz-hoje-assembleia-que-deve-confirmar-novo-presidente-do-seu-conselho/"
+      ]
+    },
+    {
+      "id": "pt-prates-petrobras",
+      "texto": "Jean Paul Prates é o presidente da Petrobras.",
+      "esperado": "DESATUALIZADA",
       "verdade": "Prates presidiu a Petrobras de 2023 a maio de 2024; Magda Chambriard é a presidente desde então",
-      "fontes_gabarito": ["https://www.infomoney.com.br/mercados/petrobras-faz-hoje-assembleia-que-deve-confirmar-novo-presidente-do-seu-conselho/", "https://www.jornaldocomercio.com/economia/2026/11/1270147-recorde-de-producao-ja-foi-superado-3-vezes-ao-longo-deste-ano-diz-presidente-da-petrobras.html", "https://api.mziq.com/mzfilemanager/v2/d/25fdf098-34f5-4608-b7fa-17d60b2de47d/e803ba8f-bb77-b040-90bb-8a7eb72af7fa?origin=2"] },
-    { "id": "pt-selic-15", "texto": "A taxa Selic está em 15% ao ano.", "esperado": "DESATUALIZADA",
+      "fontes_gabarito": [
+        "https://www.infomoney.com.br/mercados/petrobras-faz-hoje-assembleia-que-deve-confirmar-novo-presidente-do-seu-conselho/",
+        "https://www.jornaldocomercio.com/economia/2026/11/1270147-recorde-de-producao-ja-foi-superado-3-vezes-ao-longo-deste-ano-diz-presidente-da-petrobras.html",
+        "https://api.mziq.com/mzfilemanager/v2/d/25fdf098-34f5-4608-b7fa-17d60b2de47d/e803ba8f-bb77-b040-90bb-8a7eb72af7fa?origin=2"
+      ]
+    },
+    {
+      "id": "pt-selic-15",
+      "texto": "A taxa Selic está em 15% ao ano.",
+      "esperado": "DESATUALIZADA",
       "verdade": "A Selic foi de 15% em 2025; caiu ao longo de 2026 e o Copom a manteve em 13,75% em 4 de novembro de 2026",
-      "fontes_gabarito": ["https://timesbrasil.com.br/brasil/indicacoes-de-lula-ao-banco-central-geram-temor-de-presidente-paralelo-a-galipolo/", "https://renovainvest.com.br/?p=60334", "https://www.bcb.gov.br/controleinflacao/historicotaxasjuros"] },
-    { "id": "pt-pix-automatico", "texto": "O Pix Automático já está disponível para pagar contas recorrentes.", "esperado": "ATUAL",
+      "fontes_gabarito": [
+        "https://timesbrasil.com.br/brasil/indicacoes-de-lula-ao-banco-central-geram-temor-de-presidente-paralelo-a-galipolo/",
+        "https://renovainvest.com.br/?p=60334",
+        "https://www.bcb.gov.br/controleinflacao/historicotaxasjuros"
+      ]
+    },
+    {
+      "id": "pt-pix-automatico",
+      "texto": "O Pix Automático já está disponível para pagar contas recorrentes.",
+      "esperado": "ATUAL",
       "verdade": "Lançado pelo Banco Central e disponível nos bancos desde 16 de junho de 2025",
-      "fontes_gabarito": ["https://agenciagov.ebc.com.br/noticias/202506/bancos-passam-a-oferecer-pix-automatico-a-partir-desta-segunda-16", "https://teletime.com.br/04/06/2025/pix-automatico-para-pagamentos-recorrentes-fica-disponivel-dia-16/", "https://canaltech.com.br/mercado/bc-lanca-pix-automatico-para-facilitar-pagamento-de-contas-e-assinaturas/"] },
-    { "id": "pt-pix-automatico-futuro", "texto": "O Pix Automático ainda não foi lançado pelo Banco Central.", "esperado": "DESATUALIZADA",
+      "fontes_gabarito": [
+        "https://agenciagov.ebc.com.br/noticias/202506/bancos-passam-a-oferecer-pix-automatico-a-partir-desta-segunda-16",
+        "https://teletime.com.br/04/06/2025/pix-automatico-para-pagamentos-recorrentes-fica-disponivel-dia-16/",
+        "https://canaltech.com.br/mercado/bc-lanca-pix-automatico-para-facilitar-pagamento-de-contas-e-assinaturas/"
+      ]
+    },
+    {
+      "id": "pt-pix-automatico-futuro",
+      "texto": "O Pix Automático ainda não foi lançado pelo Banco Central.",
+      "esperado": "DESATUALIZADA",
       "verdade": "Foi lançado em 4 de junho de 2025 e começou a funcionar em 16 de junho de 2025",
-      "fontes_gabarito": ["https://agenciabrasil.ebc.com.br/economia/noticia/2025-06/banco-central-anuncia-o-pix-automatico", "https://agenciagov.ebc.com.br/noticias/202506/bancos-passam-a-oferecer-pix-automatico-a-partir-desta-segunda-16", "https://brasil61.com/n/pix-automatico-comeca-a-funcionar-nesta-segunda-16-bras2514121"] },
-    { "id": "en-python315-newest", "texto": "Python 3.15 is the newest Python release.", "esperado": "ATUAL",
+      "fontes_gabarito": [
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2025-06/banco-central-anuncia-o-pix-automatico",
+        "https://agenciagov.ebc.com.br/noticias/202506/bancos-passam-a-oferecer-pix-automatico-a-partir-desta-segunda-16",
+        "https://brasil61.com/n/pix-automatico-comeca-a-funcionar-nesta-segunda-16-bras2514121"
+      ]
+    },
+    {
+      "id": "en-python315-newest",
+      "texto": "Python 3.15 is the newest Python release.",
+      "esperado": "ATUAL",
       "verdade": "Python 3.15.0 was released on 9 October 2026",
-      "fontes_gabarito": ["https://docs.python.org/3.15/whatsnew/3.15.html", "https://phoronix.com/news/Python-3.15-Released", "https://betanews.com/article/python-3-15-release/"] },
-    { "id": "en-python314-newest", "texto": "Python 3.14 is the newest Python release.", "esperado": "DESATUALIZADA",
+      "fontes_gabarito": [
+        "https://docs.python.org/3.15/whatsnew/3.15.html",
+        "https://phoronix.com/news/Python-3.15-Released",
+        "https://betanews.com/article/python-3-15-release/"
+      ]
+    },
+    {
+      "id": "en-python314-newest",
+      "texto": "Python 3.14 is the newest Python release.",
+      "esperado": "DESATUALIZADA",
       "verdade": "Python 3.15 replaced it as the newest release on 9 October 2026",
-      "fontes_gabarito": ["https://docs.python.org/3.15/whatsnew/3.15.html", "https://realpython.com/python-news-november-2026/", "https://endoflife.ai/python/3.15"] },
-    { "id": "en-python39-security", "texto": "Python 3.9 still receives security fixes.", "esperado": "DESATUALIZADA",
+      "fontes_gabarito": [
+        "https://docs.python.org/3.15/whatsnew/3.15.html",
+        "https://realpython.com/python-news-november-2026/",
+        "https://endoflife.ai/python/3.15"
+      ]
+    },
+    {
+      "id": "en-python39-security",
+      "texto": "Python 3.9 still receives security fixes.",
+      "esperado": "DESATUALIZADA",
       "verdade": "Python 3.9 reached end of life on 31 October 2025",
-      "fontes_gabarito": ["https://devguide.python.org/versions/", "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline", "https://hidekazu-konishi.com/entry/python_version_support_and_eol_timeline.html"] },
-    { "id": "en-python310-security", "texto": "Python 3.10 still receives security fixes.", "esperado": "DESATUALIZADA",
+      "fontes_gabarito": [
+        "https://devguide.python.org/versions/",
+        "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+        "https://hidekazu-konishi.com/entry/python_version_support_and_eol_timeline.html"
+      ]
+    },
+    {
+      "id": "en-python310-security",
+      "texto": "Python 3.10 still receives security fixes.",
+      "esperado": "DESATUALIZADA",
       "verdade": "Python 3.10 reached end of life in October 2026 (final release 3.10.22)",
-      "fontes_gabarito": ["https://tech-insider.org/ie/python-3-15-release-3-10-end-of-life-2026/", "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline", "https://devguide.python.org/versions/"] },
-    { "id": "en-python313-security", "texto": "Python 3.13 still receives security fixes.", "esperado": "ATUAL",
+      "fontes_gabarito": [
+        "https://tech-insider.org/ie/python-3-15-release-3-10-end-of-life-2026/",
+        "https://www.herodevs.com/blog-posts/python-end-of-life-dates-every-versions-support-timeline",
+        "https://devguide.python.org/versions/"
+      ]
+    },
+    {
+      "id": "en-python313-security",
+      "texto": "Python 3.13 still receives security fixes.",
+      "esperado": "ATUAL",
       "verdade": "Python 3.13 is in its security-fix phase; 3.13.16 shipped on 1 October 2026",
-      "fontes_gabarito": ["https://tech-insider.org/ie/?p=1663", "https://devguide.python.org/versions/", "https://hidekazu-konishi.com/entry/python_version_support_and_eol_timeline.html"] },
-    { "id": "en-ubuntu2604-lts", "texto": "Ubuntu 26.04 is the latest LTS release of Ubuntu.", "esperado": "ATUAL",
+      "fontes_gabarito": [
+        "https://tech-insider.org/ie/?p=1663",
+        "https://devguide.python.org/versions/",
+        "https://hidekazu-konishi.com/entry/python_version_support_and_eol_timeline.html"
+      ]
+    },
+    {
+      "id": "en-ubuntu2604-lts",
+      "texto": "Ubuntu 26.04 is the latest LTS release of Ubuntu.",
+      "esperado": "ATUAL",
       "verdade": "Ubuntu 26.04 LTS was released on 23 April 2026",
-      "fontes_gabarito": ["https://canonical.com/blog/canonical-releases-ubuntu-26-04-lts-resolute-raccoon", "https://documentation.ubuntu.com/release-notes/26.04/", "https://lists.ubuntu.com/archives/ubuntu-announce/2026-April/000323.html"] },
-    { "id": "en-ubuntu2404-latest", "texto": "Ubuntu 24.04 is the latest LTS release of Ubuntu.", "esperado": "DESATUALIZADA",
+      "fontes_gabarito": [
+        "https://canonical.com/blog/canonical-releases-ubuntu-26-04-lts-resolute-raccoon",
+        "https://documentation.ubuntu.com/release-notes/26.04/",
+        "https://lists.ubuntu.com/archives/ubuntu-announce/2026-April/000323.html"
+      ]
+    },
+    {
+      "id": "en-ubuntu2404-latest",
+      "texto": "Ubuntu 24.04 is the latest LTS release of Ubuntu.",
+      "esperado": "DESATUALIZADA",
       "verdade": "Ubuntu 26.04 LTS replaced it as the latest LTS on 23 April 2026",
-      "fontes_gabarito": ["https://canonical.com/blog/canonical-releases-ubuntu-26-04-lts-resolute-raccoon", "https://debugpoint.com/ubuntu-26-04-lts", "https://linuxconfig.org/ubuntu-26-04-release-date-and-new-features-in-resolute-raccoon"] },
-    { "id": "en-node26-lts", "texto": "Node.js 26 is an LTS release.", "esperado": "ATUAL",
+      "fontes_gabarito": [
+        "https://canonical.com/blog/canonical-releases-ubuntu-26-04-lts-resolute-raccoon",
+        "https://debugpoint.com/ubuntu-26-04-lts",
+        "https://linuxconfig.org/ubuntu-26-04-release-date-and-new-features-in-resolute-raccoon"
+      ]
+    },
+    {
+      "id": "en-node26-lts",
+      "texto": "Node.js 26 is an LTS release.",
+      "esperado": "ATUAL",
       "verdade": "Node.js 26 entered Active LTS on 28 October 2026 (v26.13.0)",
-      "fontes_gabarito": ["https://endoflife.date/nodejs", "https://www.linuxcompatible.org/story/nodejs-26130-lithium-reaches-lts-support-through-april-2029/", "https://fireup.pro/news/nodejs-26-lts-whats-new-upgrade"] },
-    { "id": "en-node24-active", "texto": "Node.js 24 is the current Active LTS release.", "esperado": "DESATUALIZADA",
+      "fontes_gabarito": [
+        "https://endoflife.date/nodejs",
+        "https://www.linuxcompatible.org/story/nodejs-26130-lithium-reaches-lts-support-through-april-2029/",
+        "https://fireup.pro/news/nodejs-26-lts-whats-new-upgrade"
+      ]
+    },
+    {
+      "id": "en-node24-active",
+      "texto": "Node.js 24 is the current Active LTS release.",
+      "esperado": "DESATUALIZADA",
       "verdade": "Node.js 24 moved to Maintenance LTS on 20 October 2026; Node.js 26 is the Active LTS",
-      "fontes_gabarito": ["https://endoflife.date/nodejs", "https://fireup.pro/news/nodejs-26-lts-whats-new-upgrade", "https://www.linuxcompatible.org/story/nodejs-releases-v2682-and-v24210-lts-with-openssl-358-and-crypto-upgrades/"] },
-    { "id": "en-node20-security", "texto": "Node.js 20 still receives security updates.", "esperado": "DESATUALIZADA",
+      "fontes_gabarito": [
+        "https://endoflife.date/nodejs",
+        "https://fireup.pro/news/nodejs-26-lts-whats-new-upgrade",
+        "https://www.linuxcompatible.org/story/nodejs-releases-v2682-and-v24210-lts-with-openssl-358-and-crypto-upgrades/"
+      ]
+    },
+    {
+      "id": "en-node20-security",
+      "texto": "Node.js 20 still receives security updates.",
+      "esperado": "DESATUALIZADA",
       "verdade": "Node.js 20 reached end of life on 30 April 2026",
-      "fontes_gabarito": ["https://endoflife.date/nodejs", "https://nodesource.com/blog/nodejs-versions-lts-eol-outdated-release-risks", "https://lilting.ch/en/articles/nodejs-26-current-temporal-undici"] },
-    { "id": "en-java25-lts", "texto": "Java 25 is the latest Java LTS release.", "esperado": "ATUAL",
+      "fontes_gabarito": [
+        "https://endoflife.date/nodejs",
+        "https://nodesource.com/blog/nodejs-versions-lts-eol-outdated-release-risks",
+        "https://lilting.ch/en/articles/nodejs-26-current-temporal-undici"
+      ]
+    },
+    {
+      "id": "en-java25-lts",
+      "texto": "Java 25 is the latest Java LTS release.",
+      "esperado": "ATUAL",
       "verdade": "Java 25 (September 2025) is the latest LTS; Java 26 and 27 are non-LTS; the next LTS is Java 29 (September 2027)",
-      "fontes_gabarito": ["https://www.oracle.com/au/java/technologies/java-se-support-roadmap.html", "https://www.azul.com/?p=91817", "https://www.jrebel.com/blog/java-26"] },
-    { "id": "en-java21-latest-lts", "texto": "Java 21 is the latest Java LTS release.", "esperado": "DESATUALIZADA",
+      "fontes_gabarito": [
+        "https://www.oracle.com/au/java/technologies/java-se-support-roadmap.html",
+        "https://www.azul.com/?p=91817",
+        "https://www.jrebel.com/blog/java-26"
+      ]
+    },
+    {
+      "id": "en-java21-latest-lts",
+      "texto": "Java 21 is the latest Java LTS release.",
+      "esperado": "DESATUALIZADA",
       "verdade": "Java 25 replaced Java 21 as the latest LTS in September 2025",
-      "fontes_gabarito": ["https://www.oracle.com/au/java/technologies/java-se-support-roadmap.html", "https://sdtimes.com/softwaredev/java-25-lts-is-now-available-with-features-like-module-import-declarations-compact-source-files/", "https://www.azul.com/?p=92071"] },
-    { "id": "en-ios27-latest", "texto": "iOS 27 is the latest major version of iOS.", "esperado": "ATUAL",
+      "fontes_gabarito": [
+        "https://www.oracle.com/au/java/technologies/java-se-support-roadmap.html",
+        "https://sdtimes.com/softwaredev/java-25-lts-is-now-available-with-features-like-module-import-declarations-compact-source-files/",
+        "https://www.azul.com/?p=92071"
+      ]
+    },
+    {
+      "id": "en-ios27-latest",
+      "texto": "iOS 27 is the latest major version of iOS.",
+      "esperado": "ATUAL",
       "verdade": "iOS 27 was released on 14 September 2026",
-      "fontes_gabarito": ["https://www.macrumors.com/2026/09/14/apple-releases-ios-27/", "https://telecomtalk.info/ios-27-release-date-announced/1011715/", "https://www.notebookcheck.net/Apple-confirms-iOS-27-release-date-satellite-connectivity-remains-free-for-now.1395039.0.html"] },
-    { "id": "en-ios26-latest", "texto": "iOS 26 is the latest version of iOS.", "esperado": "DESATUALIZADA",
+      "fontes_gabarito": [
+        "https://www.macrumors.com/2026/09/14/apple-releases-ios-27/",
+        "https://telecomtalk.info/ios-27-release-date-announced/1011715/",
+        "https://www.notebookcheck.net/Apple-confirms-iOS-27-release-date-satellite-connectivity-remains-free-for-now.1395039.0.html"
+      ]
+    },
+    {
+      "id": "en-ios26-latest",
+      "texto": "iOS 26 is the latest version of iOS.",
+      "esperado": "DESATUALIZADA",
       "verdade": "iOS 27 replaced it on 14 September 2026",
-      "fontes_gabarito": ["https://macrumors.com/2026/09/09/apple-announces-ios-27-release-date/", "https://tech-insider.org/ios-27-release-date-what-apple-confirmed-for-september-14/", "https://comparecellular.whistleout.com/CellPhones/Guides/what-is-the-latest-version-of-ios"] },
-    { "id": "en-leo-pope", "texto": "Leo XIV is the current pope.", "esperado": "ATUAL",
+      "fontes_gabarito": [
+        "https://macrumors.com/2026/09/09/apple-announces-ios-27-release-date/",
+        "https://tech-insider.org/ios-27-release-date-what-apple-confirmed-for-september-14/",
+        "https://comparecellular.whistleout.com/CellPhones/Guides/what-is-the-latest-version-of-ios"
+      ]
+    },
+    {
+      "id": "en-leo-pope",
+      "texto": "Leo XIV is the current pope.",
+      "esperado": "ATUAL",
       "verdade": "Pope since 8 May 2025; celebrating Masses in November 2026",
-      "fontes_gabarito": ["https://www.vatican.va/content/leo-xiv/en/apost_letters.html", "https://www.ucanews.com/news/pope-leo-to-offer-12-public-masses-in-november/115931", "https://www.ewtnnews.com/?n=401"] },
-    { "id": "en-francis-pope", "texto": "Pope Francis is the current pope.", "esperado": "DESATUALIZADA",
+      "fontes_gabarito": [
+        "https://www.vatican.va/content/leo-xiv/en/apost_letters.html",
+        "https://www.ucanews.com/news/pope-leo-to-offer-12-public-masses-in-november/115931",
+        "https://www.ewtnnews.com/?n=401"
+      ]
+    },
+    {
+      "id": "en-francis-pope",
+      "texto": "Pope Francis is the current pope.",
+      "esperado": "DESATUALIZADA",
       "verdade": "Pope Francis died in April 2025; Leo XIV was elected on 8 May 2025",
-      "fontes_gabarito": ["https://www.vatican.va/content/leo-xiv/en/apost_letters.html", "https://press.vatican.va/content/leo-xiv/en/messages/pont-messages/2026.index.html", "https://www.ucanews.com/news/pope-leo-to-offer-12-public-masses-in-november/115931"] },
-    { "id": "en-win10-esu-2027", "texto": "Windows 10 home users enrolled in Extended Security Updates get security updates until October 2027.", "esperado": "ATUAL",
+      "fontes_gabarito": [
+        "https://www.vatican.va/content/leo-xiv/en/apost_letters.html",
+        "https://press.vatican.va/content/leo-xiv/en/messages/pont-messages/2026.index.html",
+        "https://www.ucanews.com/news/pope-leo-to-offer-12-public-masses-in-november/115931"
+      ]
+    },
+    {
+      "id": "en-win10-esu-2027",
+      "texto": "Windows 10 home users enrolled in Extended Security Updates get security updates until October 2027.",
+      "esperado": "ATUAL",
       "verdade": "Microsoft extended the consumer ESU program to 12 October 2027 (announced June 2026)",
-      "fontes_gabarito": ["https://bleepingcomputer.com/news/microsoft/microsoft-quietly-extends-free-windows-10-esu-support-to-october-2027", "https://www.thurrott.com/?p=337939", "https://pureinfotech.com/windows-10-esu-extended-2027-microsoft-update/"] },
-    { "id": "en-win10-esu-2026", "texto": "Free Windows 10 security updates for home users end in October 2026.", "esperado": "DESATUALIZADA",
+      "fontes_gabarito": [
+        "https://bleepingcomputer.com/news/microsoft/microsoft-quietly-extends-free-windows-10-esu-support-to-october-2027",
+        "https://www.thurrott.com/?p=337939",
+        "https://pureinfotech.com/windows-10-esu-extended-2027-microsoft-update/"
+      ]
+    },
+    {
+      "id": "en-win10-esu-2026",
+      "texto": "Free Windows 10 security updates for home users end in October 2026.",
+      "esperado": "DESATUALIZADA",
       "verdade": "That was the original date; in June 2026 Microsoft extended the consumer ESU program to October 2027",
-      "fontes_gabarito": ["https://bleepingcomputer.com/news/microsoft/microsoft-quietly-extends-free-windows-10-esu-support-to-october-2027", "https://www.notebookcheck.net/Windows-10-October-13-is-not-what-stops-your-security-updates.1409238.0.html", "https://tomshardware.com/software/windows/microsoft-extends-free-windows-10-security-updates-for-a-second-year"] }
+      "fontes_gabarito": [
+        "https://bleepingcomputer.com/news/microsoft/microsoft-quietly-extends-free-windows-10-esu-support-to-october-2027",
+        "https://www.notebookcheck.net/Windows-10-October-13-is-not-what-stops-your-security-updates.1409238.0.html",
+        "https://tomshardware.com/software/windows/microsoft-extends-free-windows-10-security-updates-for-a-second-year"
+      ]
+    }
   ]
 }

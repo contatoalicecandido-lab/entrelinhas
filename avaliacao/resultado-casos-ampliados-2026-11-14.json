@@ -1,0 +1,410 @@
+{
+  "executado_em": "2026-11-14T02:13:14.000Z",
+  "servidor": "http://127.0.0.1:3001",
+  "resumo": {
+    "total": 27,
+    "acertos": 15,
+    "parciais": 3,
+    "sem_decisao": 8,
+    "erros": 0,
+    "erros_graves_confirmou_desatualizada": 1,
+    "acuracia_estrita": 0.556,
+    "direcao_correta": 0.667,
+    "falhas_execucao": 1,
+    "gateway": {
+      "chamadas_ao_modelo": 90,
+      "respondidas_por_modelo_reserva": 0,
+      "respostas_invalidas_refeitas": 0
+    }
+  },
+  "linhas": [
+    {
+      "id": "en-ternus-ceo",
+      "esperado": "ATUAL",
+      "veredito": "CORROBORADA",
+      "nota_atualidade": 64,
+      "resultado": "ACERTO",
+      "segundos": 10,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-cook-ceo",
+      "esperado": "DESATUALIZADA",
+      "veredito": "NAO_VERIFICAVEL",
+      "nota_atualidade": null,
+      "resultado": "SEM_DECISAO",
+      "segundos": 42,
+      "gateway": {
+        "chamadas": 4,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-huang-ceo",
+      "esperado": "ATUAL",
+      "veredito": "CONFLITO",
+      "nota_atualidade": 0,
+      "resultado": "SEM_DECISAO",
+      "segundos": 27,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "pt-galipolo-bc",
+      "esperado": "ATUAL",
+      "veredito": "CORROBORADA",
+      "nota_atualidade": 99,
+      "resultado": "ACERTO",
+      "segundos": 21,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "pt-campos-neto-bc",
+      "esperado": "DESATUALIZADA",
+      "veredito": "CONTRADITA_POR_FONTE_ATUAL",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "segundos": 39,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "pt-magda-petrobras",
+      "esperado": "ATUAL",
+      "veredito": "CORROBORADA",
+      "nota_atualidade": 98,
+      "resultado": "ACERTO",
+      "segundos": 19,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "pt-prates-petrobras",
+      "esperado": "DESATUALIZADA",
+      "veredito": "CONTRADICAO_FRACA",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "segundos": 42,
+      "gateway": {
+        "chamadas": 4,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "pt-selic-15",
+      "esperado": "DESATUALIZADA",
+      "veredito": "CONFLITO",
+      "nota_atualidade": 0,
+      "resultado": "PARCIAL",
+      "segundos": 42,
+      "gateway": {
+        "chamadas": 4,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "pt-pix-automatico",
+      "esperado": "ATUAL",
+      "veredito": "SUPORTE_FRACO",
+      "nota_atualidade": 5,
+      "resultado": "PARCIAL",
+      "segundos": 23,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "pt-pix-automatico-futuro",
+      "esperado": "DESATUALIZADA",
+      "veredito": null,
+      "nota_atualidade": null,
+      "resultado": "FALHA_EXECUCAO",
+      "segundos": 4,
+      "gateway": null,
+      "erro": "An external service (search or AI model) failed. Details are in the server log; try again in a few minutes."
+    },
+    {
+      "id": "en-python315-newest",
+      "esperado": "ATUAL",
+      "veredito": "ATUAL",
+      "nota_atualidade": 61,
+      "resultado": "ACERTO",
+      "segundos": 20,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-python314-newest",
+      "esperado": "DESATUALIZADA",
+      "veredito": "CORROBORADA",
+      "nota_atualidade": 0,
+      "resultado": "ERRO_GRAVE",
+      "segundos": 22,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-python39-security",
+      "esperado": "DESATUALIZADA",
+      "veredito": "CONTRADICAO_FRACA",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "segundos": 31,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-python310-security",
+      "esperado": "DESATUALIZADA",
+      "veredito": "CONTRADICAO_FRACA",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "segundos": 38,
+      "gateway": {
+        "chamadas": 4,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-python313-security",
+      "esperado": "ATUAL",
+      "veredito": "CORROBORADA",
+      "nota_atualidade": 78,
+      "resultado": "ACERTO",
+      "segundos": 43,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-ubuntu2604-lts",
+      "esperado": "ATUAL",
+      "veredito": "CORROBORADA",
+      "nota_atualidade": 30,
+      "resultado": "ACERTO",
+      "segundos": 47,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-ubuntu2404-latest",
+      "esperado": "DESATUALIZADA",
+      "veredito": "CONFLITO",
+      "nota_atualidade": 0,
+      "resultado": "PARCIAL",
+      "segundos": 40,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-node26-lts",
+      "esperado": "ATUAL",
+      "veredito": "CORROBORADA",
+      "nota_atualidade": 70,
+      "resultado": "ACERTO",
+      "segundos": 34,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-node24-active",
+      "esperado": "DESATUALIZADA",
+      "veredito": "NAO_VERIFICAVEL",
+      "nota_atualidade": 0,
+      "resultado": "SEM_DECISAO",
+      "segundos": 51,
+      "gateway": {
+        "chamadas": 4,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-node20-security",
+      "esperado": "DESATUALIZADA",
+      "veredito": "NAO_VERIFICAVEL",
+      "nota_atualidade": 0,
+      "resultado": "SEM_DECISAO",
+      "segundos": 27,
+      "gateway": {
+        "chamadas": 4,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-java25-lts",
+      "esperado": "ATUAL",
+      "veredito": "CONFLITO",
+      "nota_atualidade": 65,
+      "resultado": "SEM_DECISAO",
+      "segundos": 38,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-java21-latest-lts",
+      "esperado": "DESATUALIZADA",
+      "veredito": "NAO_VERIFICAVEL",
+      "nota_atualidade": 0,
+      "resultado": "SEM_DECISAO",
+      "segundos": 49,
+      "gateway": {
+        "chamadas": 4,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-ios27-latest",
+      "esperado": "ATUAL",
+      "veredito": "CORROBORADA",
+      "nota_atualidade": 75,
+      "resultado": "ACERTO",
+      "segundos": 25,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-ios26-latest",
+      "esperado": "DESATUALIZADA",
+      "veredito": "CONTRADICAO_FRACA",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "segundos": 26,
+      "gateway": {
+        "chamadas": 4,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-leo-pope",
+      "esperado": "ATUAL",
+      "veredito": "CORROBORADA",
+      "nota_atualidade": 78,
+      "resultado": "ACERTO",
+      "segundos": 19,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-francis-pope",
+      "esperado": "DESATUALIZADA",
+      "veredito": "NAO_VERIFICAVEL",
+      "nota_atualidade": null,
+      "resultado": "SEM_DECISAO",
+      "segundos": 30,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-win10-esu-2027",
+      "esperado": "ATUAL",
+      "veredito": "CORROBORADA",
+      "nota_atualidade": 71,
+      "resultado": "ACERTO",
+      "segundos": 33,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-win10-esu-2026",
+      "esperado": "DESATUALIZADA",
+      "veredito": "NAO_VERIFICAVEL",
+      "nota_atualidade": null,
+      "resultado": "SEM_DECISAO",
+      "segundos": 45,
+      "gateway": {
+        "chamadas": 4,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    }
+  ]
+}

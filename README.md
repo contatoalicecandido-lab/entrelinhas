@@ -162,13 +162,32 @@ Why Pix dropped: four of its five supporting sources are company blogs, and “C
 
 **Live: 6 of 8 exact. Current rules: 4 of 8 exact, 2 partial, 2 no decision. Both: 0 wrong, 0 outdated claims confirmed as true.** The stricter rules cost two exact answers on purpose: Pichai's five supporting sources are Wikipedia, two company profiles, the World Bank's speaker page and a Facebook post, with no official or news source, so it is no longer *Corroborated*; Node.js 18 was contradicted by a single vendor blog while nodejs.org's own page gave no clear stance, which is now *Not verifiable* instead of red. We prefer a cautious answer to a confident one built on weak sources.
 
-Re-run live with the final rules (1.4.0) the same night (`avaliacao/resultado-casos-novos-regras-1-4-0-2026-11-13.json`): the first 4 claims came back exact (Nadella, Pichai and the daily minimum wage *Corroborated*, Python 3.12 *Corroborated*; the minimum wage search went straight to gov.br). The other 4 could not run: the free model tier hit its daily limit. We report them as not run rather than guess.
+Re-run live with the final rules (1.4.0) the same night (`avaliacao/resultado-casos-novos-regras-1-4-0-2026-11-13.json`): **7 of 8 exact, 1 no decision (R$ 1.412), 0 wrong**. The first 4 ran on Groq; Groq's free tier then hit its daily limit, and the last 4 ran on OpenRouter with the same model (see *What Bifrost does*). Python 3.12 and Node.js 18 are among the 7; the minimum wage search went straight to gov.br.
+
+The two Selic claims of the benchmark were also re-run live with rules 1.4.0 (`avaliacao/resultado-selic-regras-1-4-0-2026-11-13.json`): both exact (13,75% *Corroborated*, 10,5% *Contradicted by sources*), and both checks used bcb.gov.br pages found by the new search on the Brazilian authority's own site.
 
 The two live misses taught us two things, both fixed after the run (so these two cases are no longer independent tests):
 - *Python 3.12*: the quote check was too literal and dropped three good sources, including python.org, over curly quotes and markdown. It now ignores differences that do not change the text and still rejects any quote with a different number or sentence.
 - *R$ 1.412*: searching with the old value only found 2024 news repeating it. A claim with a value now also gets a search without the value and with the current year, to find today's value.
 
 Re-run live after the fixes (`avaliacao/resultado-casos-novos-depois-das-correcoes-2026-11-13.json`): Python 3.12 came back *Corroborated* (python.org among the sources, with a checked quote) and R$ 1.412 *Contradicted by sources*, both exact, and both still exact under the current rules. They are reported separately because the fixes were made after seeing these cases.
+
+**Larger run: 28 more claims, written on 14 Nov** (`avaliacao/casos-ampliados-2026-11-14.json`, 12 true and 16 outdated after one correction explained below, each answer backed by three sources; run live with rules 1.4.0, all 90 model calls answered by OpenRouter: `avaliacao/resultado-casos-ampliados-2026-11-14.json`; re-scored with rules 1.5.0: `avaliacao/reavaliacao-casos-ampliados-2026-11-14.json`):
+
+| | Result |
+|---|---|
+| Claims that ran | 27 of 28 (one failed with an external service error and is not counted) |
+| Exact verdict | **15** |
+| Right direction but cautious (partial) | 4 |
+| No decision (not verifiable) | 7 |
+| True claims marked as contradicted | **0** |
+| Outdated claim confirmed (serious error) | **1**: “Python 3.14 is the newest Python release” |
+
+What this run showed, without softening it:
+- **One serious error.** Every page the search found for Python 3.14 was from 2025 or early 2026; none mentioned Python 3.15, released on 9 October 2026. Five sources agreed, so the claim came back green. Rules 1.5.0 (written after seeing this case, so it is no longer an independent test) keep a claim that says *newest*, *latest*, *still* or *currently* out of green when every confirming source is older than the window for that kind of fact; re-scored, it is *Supported, unconfirmed* (yellow). Our scoring still counts yellow on an outdated claim as a serious error, so it stays counted as one.
+- **The test-writer got one wrong, and Entrelinhas caught it.** We labeled “Jensen Huang is the CEO of Nvidia” as true, from news of 10 November. Entrelinhas came back *Conflicting*: Nvidia's own page still listed him as CEO, while NPR and Wired reported on 12 November that he had resigned. Nvidia's 8-K filing confirms the resignation, so we corrected the label to outdated (marked `gabarito_corrigido_depois_da_rodada` in the file). Under the corrected label the result is partial, not exact.
+- **The main weakness: successors.** When a source says “Leo XIV is the current pope” or names a newer version, the model often marks it as *insufficient* for “Pope Francis is the current pope” instead of *contradicts*. That is why 6 of the 15 outdated claims that ran ended as *Not verifiable* (one of them because the analysis failed): honest, but not useful enough. Teaching the analysis that a named successor contradicts the claim is the next fix, and it needs its own new test set.
+- “Tim Cook is the CEO of Apple” got no verdict because the model's analysis of its sources failed; it is counted as *no decision*, not as a pass.
 
 **Compared with the model alone** (`avaliacao/linha-de-base.js`: the same model, through Bifrost, asked with today's date whether each claim is still true, with no search):
 
@@ -187,7 +206,7 @@ The model alone also called Brazil's current minimum wage (R$ 1.621), the curren
 - **The partial case.** Netflix found sources with both the old and the new price, so the verdict was *Conflicting* instead of contradicted. It still tells the reader not to rely on the claim.
 - **Low freshness on true claims.** Some true claims (Pix, ChatGPT Plus) come back with a low freshness score. That is intended: the non-blog sources that confirm them are older than the window for that kind of fact, so the report labels them *Aging* and suggests looking for a recent source.
 - **Tuned on the same cases.** The rules were improved after the first run on these same 15 claims, so those numbers are not an independent accuracy estimate; the 8 new claims above are.
-- **Small sample.** 23 claims show behavior; they are not a statistical accuracy estimate.
+- **Small sample.** 50 claims in all (15 + 8 + 27 that ran) show behavior; they are not a statistical accuracy estimate.
 
 **Bifrost during this run** (`avaliacao/gateway-casos-reais-2026-11-13.json`, built by `node avaliacao/resumir-gateway.js 2026-11-13T13` from the 15 recorded checks in `gravacoes/`): 60 model calls, **22 answered by the backup model** when the main one hit the free tier's limit, 4 answers in an invalid format that Entrelinhas retried, and all 15 checks finished.
 
@@ -214,6 +233,7 @@ What the run taught us, already fixed:
   - a strong source (official, scientific or news) against a green claim now makes it *Conflicting*; *Corroborated* needs at least one strong supporting source; red needs contradicting weight of at least 2 (one blog alone is not enough);
   - the Brazilian authority found in a claim (Selic → bcb.gov.br, minimum wage → gov.br) only gave weight to sources found by chance; now it is also searched directly;
   - a slow request could hold the local server's single check slot; the body is now read before the slot is taken, and stalled requests are cut after 15 s.
+- The larger run of 14 Nov found a serious error (Python 3.14 confirmed as the newest release by old pages). Rules 1.5.0: a claim that says it holds *now* (“newest”, “latest”, “still”, “currently”, “mais recente”, “atualmente”, “ainda”) is not green when every confirming source is older than its window (`testes/teste-regras-1-4-0.js`). Re-scoring all earlier runs with 1.5.0 moved no other case between exact, partial, no decision and error.
 - A live re-run that night found one more: when the free model tier slowed down, a check passed the server's 4-minute limit but kept running in the background, so the next checks were refused as "already running". Each check now has a deadline (`src/prazo.js`): every Tavily and Bifrost call gets only the time that is left, and calls still running at the deadline are cancelled, so the server is free again right after the limit (`testes/teste-prazo.js`).
 - One updated answer came back in the wrong language, so the language is now pinned.
 
