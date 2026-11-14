@@ -6,7 +6,7 @@ const { clusterizarDependencias } = require("./independencia-fontes");
 const { calcularConcordancia, estaCorroborada } = require("./concordancia");
 const { classificarFonte } = require("./tipo-fonte");
 
-const VERSAO_REGRAS = "1.5.0";
+const VERSAO_REGRAS = "1.6.0";
 // Palavras que dizem que a afirmação vale agora (inglês e português).
 const AFIRMA_QUE_VALE_HOJE = /\b(currently|still|now|today|latest|newest|most recent|current|as of now|right now)\b|\b(atualmente|ainda|hoje|mais recente|atual|vigente)\b|(^|\s)últim[oa]s?(\s|$)/iu;
 

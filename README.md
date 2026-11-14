@@ -291,8 +291,9 @@ Open <http://localhost:3000>; use `PORT=3001 npm run web` if port 3000 is busy. 
 - Portuguese example: “custa **a partir de** R$ 99,90” matches an official page listing R$ 99,90 to R$ 119,90. “**atualmente** tem **cerca de 5 mil** funcionários” is contradicted by sources saying 3,200 today.
 
 The server is built defensively:
-- it binds to `127.0.0.1` and runs one verification at a time;
-- it caps input at 4,000 characters and 6 claims;
+- locally it binds to `127.0.0.1`; in public mode (`ENTRELINHAS_PUBLICO=1`, used by the live site) it limits each person to 5 checks a day and the whole site to 25, caps input at 1,500 characters and 3 claims, and gives a check back to the quota when a provider fails;
+- it runs one verification at a time, with a time limit for the whole check;
+- locally it caps input at 4,000 characters and 6 claims;
 - it sends a strict Content-Security-Policy and renders all content as text;
 - it never returns credentials;
 - it stores every verification in SQLite `:memory:`.

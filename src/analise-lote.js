@@ -78,6 +78,19 @@ RULES
    quote that contains it. Do not use the page's publication date, the
    copyright year or any date not tied to this fact. Otherwise use null.
 
+9. SUCCESSOR OR REPLACEMENT: when the claim says something is the current,
+   newest, latest or still valid holder, version, release, status or date
+   (for example "X is the current pope", "Y is the CEO", "version N is the
+   latest LTS", "support ends in 2026"), and the source EXPLICITLY names a
+   different current holder for the same role, a newer release that replaced
+   it in the same line, or a status or date that replaced the claimed one,
+   use CONTRADICTS, not INSUFFICIENT. Examples: "Leo XIV is the current pope"
+   contradicts "Francis is the current pope"; "Node.js 26 is now the Active
+   LTS" contradicts "Node.js 24 is the Active LTS". A source that only
+   mentions another version or person without saying it replaced the claimed
+   one stays INSUFFICIENT. A newer release does not contradict a claim about
+   support of an older one unless the source says that support ended.
+
 OUTPUT
 Reply with valid JSON only, no Markdown:
 {

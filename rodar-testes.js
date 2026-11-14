@@ -7,6 +7,7 @@ const path = require("node:path");
 const TESTES = [
   "testes/teste-atualidade.js",
   "testes/teste-regras-1-4-0.js",
+  "testes/teste-regras-1-6-0.js",
   "testes/teste-prazo.js",
   "testes/teste-servidor-publico.js",
   "testes/teste-evidencia.js",
