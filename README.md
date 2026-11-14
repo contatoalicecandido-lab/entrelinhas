@@ -547,7 +547,7 @@ See [5. Run the automated tests](#5-run-the-automated-tests) for what the 52 off
 
 ## Current scope and limitations
 
-Entrelinhas is a working hackathon prototype. Live checks run locally with your own Tavily and Bifrost keys; the public demo replays recorded live checks and built-in examples without keys. It is not yet a hosted, multi-user product.
+Entrelinhas is a working hackathon prototype. Live checks run on the public live demo (https://entrelinhas-qwgp.onrender.com/, with a daily quota) or locally with your own Tavily and Bifrost keys; the public demo replays recorded live checks and built-in examples without keys. It is not yet a hosted, multi-user product.
 
 Freshness assessment is not a guarantee of factual correctness. Results depend on source availability, date detection, configured validity rules, and the quality of the retrieved evidence.
 
