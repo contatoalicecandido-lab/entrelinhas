@@ -1,0 +1,211 @@
+{
+  "executado_em": "2026-11-14T12:38:04.199Z",
+  "metodo": "modelo sozinho via Bifrost, sem busca",
+  "resumo": {
+    "total": 28,
+    "acertos": 14,
+    "sem_decisao": 2,
+    "erros": 8,
+    "erros_graves_confirmou_desatualizada": 4,
+    "acuracia_estrita": 0.5,
+    "falhas_execucao": 0
+  },
+  "linhas": [
+    {
+      "id": "en-ternus-ceo",
+      "esperado": "ATUAL",
+      "resposta": "OUTDATED",
+      "resultado": "ERRO",
+      "erro": null
+    },
+    {
+      "id": "en-cook-ceo",
+      "esperado": "DESATUALIZADA",
+      "resposta": "TRUE",
+      "resultado": "ERRO_GRAVE",
+      "erro": null
+    },
+    {
+      "id": "en-huang-ceo",
+      "esperado": "DESATUALIZADA",
+      "resposta": "TRUE",
+      "resultado": "ERRO_GRAVE",
+      "erro": null
+    },
+    {
+      "id": "pt-galipolo-bc",
+      "esperado": "ATUAL",
+      "resposta": "OUTDATED",
+      "resultado": "ERRO",
+      "erro": null
+    },
+    {
+      "id": "pt-campos-neto-bc",
+      "esperado": "DESATUALIZADA",
+      "resposta": "UNSURE",
+      "resultado": "SEM_DECISAO",
+      "erro": null
+    },
+    {
+      "id": "pt-magda-petrobras",
+      "esperado": "ATUAL",
+      "resposta": "OUTDATED",
+      "resultado": "ERRO",
+      "erro": null
+    },
+    {
+      "id": "pt-prates-petrobras",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "pt-selic-15",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "pt-pix-automatico",
+      "esperado": "ATUAL",
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "pt-pix-automatico-futuro",
+      "esperado": "DESATUALIZADA",
+      "resposta": "UNSURE",
+      "resultado": "SEM_DECISAO",
+      "erro": null
+    },
+    {
+      "id": "en-python315-newest",
+      "esperado": "ATUAL",
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-python314-newest",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-python39-security",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-python310-security",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-python313-security",
+      "esperado": "ATUAL",
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-ubuntu2604-lts",
+      "esperado": "ATUAL",
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-ubuntu2404-latest",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-node26-lts",
+      "esperado": "ATUAL",
+      "resposta": "OUTDATED",
+      "resultado": "ERRO",
+      "erro": null
+    },
+    {
+      "id": "en-node24-active",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-node20-security",
+      "esperado": "DESATUALIZADA",
+      "resposta": "TRUE",
+      "resultado": "ERRO_GRAVE",
+      "erro": null
+    },
+    {
+      "id": "en-java25-lts",
+      "esperado": "ATUAL",
+      "resposta": "OUTDATED",
+      "resultado": "ERRO",
+      "erro": null
+    },
+    {
+      "id": "en-java21-latest-lts",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-ios27-latest",
+      "esperado": "ATUAL",
+      "resposta": "OUTDATED",
+      "resultado": "ERRO",
+      "erro": null
+    },
+    {
+      "id": "en-ios26-latest",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-leo-pope",
+      "esperado": "ATUAL",
+      "resposta": "OUTDATED",
+      "resultado": "ERRO",
+      "erro": null
+    },
+    {
+      "id": "en-francis-pope",
+      "esperado": "DESATUALIZADA",
+      "resposta": "TRUE",
+      "resultado": "ERRO_GRAVE",
+      "erro": null
+    },
+    {
+      "id": "en-win10-esu-2027",
+      "esperado": "ATUAL",
+      "resposta": "OUTDATED",
+      "resultado": "ERRO",
+      "erro": null
+    },
+    {
+      "id": "en-win10-esu-2026",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    }
+  ]
+}

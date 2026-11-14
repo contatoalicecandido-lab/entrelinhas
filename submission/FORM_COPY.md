@@ -2,7 +2,7 @@
 
 **Selected Problem Statement:** Build a Stale-Answer Detector for AI Applications (requires Tavily and Bifrost).
 
-**Status (13 Nov 2026):** working prototype with a web interface, live Tavily + Bifrost verification, a public demo that replays recorded live checks without keys, a real-claims accuracy benchmark and 52 offline test files.
+**Status (13 Nov 2026):** working prototype with a web interface, live Tavily + Bifrost verification, a public demo that replays recorded live checks without keys, a real-claims accuracy benchmark and 56 offline test files.
 
 ## Project title
 
@@ -90,7 +90,11 @@ Larger run (14 Nov): **28 more claims**, 27 ran (1 external error). **15 exact, 
 
 Compared with **the same model alone**, asked with today's date and no search, on the same 23 claims: both get **17** exact, but the model alone got **5 wrong**, with full confidence, including confirming the outdated R$ 1.518 minimum wage as valid; Entrelinhas (current rules) got **0 wrong** and marked the other 6 as unsure, and every verdict comes with sources.
 
-The rules were first improved on the same 15 claims (11 of 15 exact on 12 Nov), which is why the 8 new claims matter. 50 claims in all show behavior; they are not a statistical accuracy estimate.
+Then we fixed that weakness (rules 1.6.0: a source naming a successor contradicts the old claim) and re-ran the same 28 live: **18 exact (was 15), 2 not verifiable (was 7), 0 true claims called false, and 3 serious errors (was 1)**. Francis, Tim Cook, Java 21 and Nvidia now come back red. The new serious errors: Node.js 24 came back green because the model inferred "Active LTS" from a support end date on a fresh page that does not say so, and Ubuntu 24.04 came back yellow with a single source. Searches are live, so part of the difference is search variation. The rule was written after seeing these cases, so it is not an independent test.
+
+The same model alone on those 28: **14 exact and 12 wrong**: it said Tim Cook and Jensen Huang are still CEOs and Francis is still pope, and called Leo XIV, Galípolo at the central bank and Node.js 26 LTS outdated. Across all 51 distinct claims: Entrelinhas **35 exact and 1 confident wrong answer**; the model alone **31 exact and 17 confident wrong answers**.
+
+The rules were first improved on the same 15 claims (11 of 15 exact on 12 Nov), which is why the 8 new claims matter. 51 claims in all show behavior; they are not a statistical accuracy estimate.
 
 Every check of the run is recorded in `gravacoes/`, and the results are in `avaliacao/`.
 

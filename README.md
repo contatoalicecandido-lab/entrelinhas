@@ -191,6 +191,32 @@ What this run showed, without softening it:
 - **The main weakness: successors.** When a source says “Leo XIV is the current pope” or names a newer version, the model often marks it as *insufficient* for “Pope Francis is the current pope” instead of *contradicts*. That is why 6 of the 15 outdated claims that ran ended as *Not verifiable* (one of them because the analysis failed): honest, but not useful enough. Teaching the analysis that a named successor contradicts the claim is the next fix, and it needs its own new test set.
 - “Tim Cook is the CEO of Apple” got no verdict because the model's analysis of its sources failed; it is counted as *no decision*, not as a pass.
 
+**Rules 1.6.0, re-run live on the same 28** (`avaliacao/resultado-casos-ampliados-regras-1-6-0-2026-11-14.json`). The main weakness above was successors, so rules 1.6.0 tell the model that a source naming a different current holder or a newer release in the same line *contradicts* a claim that the old one is current (and that a source only mentioning another version does not). This rule was written after seeing these cases, so this is not an independent test:
+
+| Same 28 claims | Rules 1.5.0 (re-scored) | Rules 1.6.0 (live) |
+|---|---|---|
+| Exact verdict | 15 | **18** |
+| Partial | 4 | 5 |
+| No decision | 7 | **2** |
+| True claims marked as contradicted | 0 | **0** |
+| Outdated claim not flagged red (serious error) | 1 | **3** |
+
+The successor rule worked where it should: Pope Francis, Tim Cook, Java 21 and Nvidia's CEO now come back red. The serious errors went from 1 to 3, and we report why:
+- **Node.js 24 “is the current Active LTS” came back green.** This run's search found an endoflife.date page from October that lists Node.js 24 with support until 2028, and the model *inferred* from that end date that it is the Active LTS line. The page does not say so. This is the only outdated claim confirmed green in the 51 claims of this README.
+- **Ubuntu 24.04 “latest LTS”** came back yellow with a single supporting source, and **Python 3.14** stays yellow (see above). Our scoring counts yellow on an outdated claim as a serious error, even though yellow tells the reader not to rely on it.
+- Searches are live, so two runs on the same claims get different pages: part of the change between columns is search variation, not the rule.
+
+**The model alone on the same 28** (`avaliacao/linha-de-base-casos-ampliados-2026-11-14.json`, same model through Bifrost, today's date, no search):
+
+| Same 28 claims | Model alone | Entrelinhas (rules 1.6.0) |
+|---|---|---|
+| Exact | 14 | **18** |
+| Outdated claim called true | **4** (Tim Cook and Jensen Huang still CEOs, Francis still pope, Node.js 20 still patched) | 1 green, 2 yellow |
+| True claim called outdated | **8** (including Leo XIV as pope, Galípolo at the central bank, Node.js 26 LTS) | **0** |
+| No decision | 2 | 2 |
+
+Most of the model's mistakes are facts that changed after it was trained, which is the problem Entrelinhas exists for.
+
 **Compared with the model alone** (`avaliacao/linha-de-base.js`: the same model, through Bifrost, asked with today's date whether each claim is still true, with no search):
 
 | On the same 23 claims | Model alone | Entrelinhas (current rules) |
@@ -208,7 +234,7 @@ The model alone also called Brazil's current minimum wage (R$ 1.621), the curren
 - **The partial case.** Netflix found sources with both the old and the new price, so the verdict was *Conflicting* instead of contradicted. It still tells the reader not to rely on the claim.
 - **Low freshness on true claims.** Some true claims (Pix, ChatGPT Plus) come back with a low freshness score. That is intended: the non-blog sources that confirm them are older than the window for that kind of fact, so the report labels them *Aging* and suggests looking for a recent source.
 - **Tuned on the same cases.** The rules were improved after the first run on these same 15 claims, so those numbers are not an independent accuracy estimate; the 8 new claims above are.
-- **Small sample.** 50 claims in all (15 + 8 + 27 that ran) show behavior; they are not a statistical accuracy estimate.
+- **Small sample.** 51 distinct claims in all (15 + 8 + 28) show behavior; they are not a statistical accuracy estimate. Across them, against the same model alone: 35 exact vs 31, and 1 confident wrong answer (an outdated claim confirmed green) vs 17 (5 on the first 23 claims, 12 on these 28). The first 23 use rules 1.5.0 on their recorded evidence; the 28 use rules 1.6.0 live.
 
 **Bifrost during this run** (`avaliacao/gateway-casos-reais-2026-11-13.json`, built by `node avaliacao/resumir-gateway.js 2026-11-13T13` from the 15 recorded checks in `gravacoes/`): 60 model calls, **22 answered by the backup model** when the main one hit the free tier's limit, 4 answers in an invalid format that Entrelinhas retried, and all 15 checks finished.
 
@@ -236,6 +262,7 @@ What the run taught us, already fixed:
   - the Brazilian authority found in a claim (Selic → bcb.gov.br, minimum wage → gov.br) only gave weight to sources found by chance; now it is also searched directly;
   - a slow request could hold the local server's single check slot; the body is now read before the slot is taken, and stalled requests are cut after 15 s.
 - The larger run of 14 Nov found a serious error (Python 3.14 confirmed as the newest release by old pages). Rules 1.5.0: a claim that says it holds *now* (“newest”, “latest”, “still”, “currently”, “mais recente”, “atualmente”, “ainda”) is not green when every confirming source is older than its window (`testes/teste-regras-1-4-0.js`). Re-scoring all earlier runs with 1.5.0 moved no other case between exact, partial, no decision and error.
+- Rules 1.6.0: a source that names a successor (a new holder of the role, a newer release in the same line, a replaced date) contradicts a claim that the old one is current; a source that only mentions another version does not (`testes/teste-regras-1-6-0.js`). Re-run live on the 28 claims of 14 Nov, see *Rules 1.6.0* above. The 15 + 8 earlier claims were not re-run with 1.6.0.
 - A live re-run that night found one more: when the free model tier slowed down, a check passed the server's 4-minute limit but kept running in the background, so the next checks were refused as "already running". Each check now has a deadline (`src/prazo.js`): every Tavily and Bifrost call gets only the time that is left, and calls still running at the deadline are cancelled, so the server is free again right after the limit (`testes/teste-prazo.js`).
 - One updated answer came back in the wrong language, so the language is now pinned.
 
@@ -467,7 +494,7 @@ Provider API keys (OpenRouter, Groq) belong in the Bifrost configuration, not in
 npm test
 ```
 
-`npm test` runs `rodar-testes.js`, which executes all 52 offline test files and prints a summary. Every test uses simulated Tavily/Bifrost responses and SQLite `:memory:`; credentials are blanked for the run, so no paid call is possible. Coverage includes Portuguese reading (numbers, currency, qualifiers, dates), source types and diverse selection, batch analysis validation, source agreement and verdict rules, freshness scoring, date scopes, claim categorization, aggregation policy (including adversarial cases), source independence, Tavily collection IDs, the 18 temporal-comparison criteria, persistence, robustness against malformed model output, and the web server (input validation, size limits, CSP, no credential exposure).
+`npm test` runs `rodar-testes.js`, which executes all 56 offline test files and prints a summary. Every test uses simulated Tavily/Bifrost responses and SQLite `:memory:`; credentials are blanked for the run, so no paid call is possible. Coverage includes Portuguese reading (numbers, currency, qualifiers, dates), source types and diverse selection, batch analysis validation, source agreement and verdict rules, freshness scoring, date scopes, claim categorization, aggregation policy (including adversarial cases), source independence, Tavily collection IDs, the 18 temporal-comparison criteria, persistence, robustness against malformed model output, and the web server (input validation, size limits, CSP, no credential exposure).
 
 ### 6. Start the web interface
 
@@ -544,7 +571,7 @@ entrelinhas/
 
 ## Testing and validation
 
-See [5. Run the automated tests](#5-run-the-automated-tests) for what the 52 offline test files cover, and [Accuracy on real claims](#accuracy-on-real-claims) for the live benchmark. Real API connectivity is checked separately with `node index.js`.
+See [5. Run the automated tests](#5-run-the-automated-tests) for what the 56 offline test files cover, and [Accuracy on real claims](#accuracy-on-real-claims) for the live benchmark. Real API connectivity is checked separately with `node index.js`.
 
 ## Current scope and limitations
 
