@@ -226,7 +226,7 @@ What the run taught us, already fixed:
 | Node.js 22.5+ (no framework) | Server, pipeline and tests; built-in `node:sqlite` |
 | Tavily Search and Extract | General, news (filtered by `time_range` per claim type), scientific and official-domain search; page extraction |
 | Bifrost by Maxim AI | AI gateway for every model call: fallback chain, routing info, rate-limit handling, per-stage labels |
-| Groq (gpt-oss-20b, gpt-oss-120b) | Models served through Bifrost; more models or providers can be chained |
+| OpenRouter and Groq (gpt-oss-20b, gpt-oss-120b) | The same open model from two providers, chained by Bifrost. The 13 Nov runs used Groq only; see the note below |
 | SQLite | Full verification trace |
 
 ### What Bifrost does in Entrelinhas
@@ -236,6 +236,7 @@ Every model call goes to `http://localhost:8080/v1/chat/completions` (or the gat
 - **Fallback chain.** Each request names a main model and backups: `groq/openai/gpt-oss-20b` → `groq/openai/gpt-oss-120b` by default. Set `BIFROST_MODEL` and `BIFROST_FALLBACKS` (comma-separated) to add more, for example a Gemini model, for failover across providers. When the main model fails or hits the free tier's per-minute token limit, Bifrost retries the backups on its own, so Entrelinhas has no retry code for that. In the 13 Nov benchmark, the backup model answered **22 of 60** model calls when the main model hit its limit, and all 15 checks finished (`avaliacao/gateway-casos-reais-2026-11-13.json`).
 - **Routing info.** `extra_fields.routing_info` (provider, model, `is_fallback`), token usage and latency are recorded for every call and shown in the **AI gateway · Bifrost** panel.
 - **Rate limits.** If the whole chain is limited, Entrelinhas waits the `retry_after_ms` that Bifrost reports (at most 25 s) and tries once more. A daily quota cannot be waited out: on Groq's free tier, gpt-oss-20b has a daily token limit, which is why a second provider in the chain matters.
+- **It already happened for real.** On the night of 13 Nov, Groq's free tier hit its daily limit in the middle of a test run, and Groq's paid plan was "temporarily unavailable due to high demand". We moved the same model, `gpt-oss-20b`, to OpenRouter as the main provider, with Groq kept as the backup: one provider added in Bifrost and two lines of configuration (`BIFROST_MODEL=openrouter/openai/gpt-oss-20b`, `BIFROST_FALLBACKS=groq/openai/gpt-oss-20b,groq/openai/gpt-oss-120b`). No code changed. Runs before that switch (the 13 Nov benchmark, the held-out run and the public demo's recordings) used Groq; later runs say which provider answered in their gateway summary.
 - **Labels for observability.** Requests carry `x-bf-dim-app` and `x-bf-dim-stage` (decomposition, batch analysis, updated answer), plus request and verification IDs.
 - **Outage drill.** In live mode, the option *Simulate an outage of the main model* sends that check to a model that does not exist. The panel then shows Bifrost serving every step from a backup, without any change to the request code.
 
@@ -398,11 +399,12 @@ Open the Bifrost interface:
 http://localhost:8080
 ```
 
-Configure the Groq provider and create a virtual key in Bifrost.
+Configure a provider and create a virtual key in Bifrost. We use OpenRouter as the main provider and Groq as the backup, both serving the same open model, `gpt-oss-20b`.
 
 Make sure the configured models are allowed for your virtual key (all models, or at least these):
 
 ```text
+openrouter/openai/gpt-oss-20b
 groq/openai/gpt-oss-20b
 groq/openai/gpt-oss-120b
 ```
@@ -432,7 +434,7 @@ Optional settings:
 | `PORT` | `3000` | Port of the web interface. |
 | `ENTRELINHAS_GRAVAR` | off | `1` records every live check to `gravacoes/` (used for the public demo and the benchmark proof). |
 
-The Groq provider API key belongs in the Bifrost configuration, not in the Entrelinhas `.env` file.
+Provider API keys (OpenRouter, Groq) belong in the Bifrost configuration, not in the Entrelinhas `.env` file. With no `BIFROST_MODEL` set, Entrelinhas uses `groq/openai/gpt-oss-20b` with `groq/openai/gpt-oss-120b` as backup.
 
 **Never commit `.env` or API credentials to the repository.**
 

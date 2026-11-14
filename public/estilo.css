@@ -113,6 +113,7 @@ h1 em, h2 em { font-style: normal; color: var(--laranja); }
 .lg-tavily .lg-icone { width: 24px; height: 24px; }
 .lg-tavily .lg-texto { height: 27px; }
 .lg-groq .lg-texto { height: 30px; }
+.lg-openrouter .lg-texto { height: 24px; }
 img.lg-bifrost { height: 26px; width: auto; opacity: .86; }
 
 /* ---------------------------------------------------------------- Folhas claras */

@@ -1,5 +1,5 @@
 {
-  "executado_em": "2026-11-14T00:50:39.578Z",
+  "executado_em": "2026-11-14T01:48:34.815Z",
   "servidor": "http://127.0.0.1:3001",
   "parcial": true,
   "linhas": [
@@ -62,22 +62,30 @@
     {
       "id": "en-node18-support",
       "esperado": "DESATUALIZADA",
-      "veredito": null,
-      "nota_atualidade": null,
-      "resultado": "FALHA_EXECUCAO",
-      "segundos": 240,
-      "gateway": null,
-      "erro": "The check took longer than 240 s and was stopped. The providers may be at their usage limit (rate limit); try again in a few minutes."
+      "veredito": "CONTRADICAO_FRACA",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "segundos": 26,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
     },
     {
       "id": "en-python38-security",
       "esperado": "DESATUALIZADA",
-      "veredito": null,
-      "nota_atualidade": null,
-      "resultado": "FALHA_EXECUCAO",
-      "segundos": 240,
-      "gateway": null,
-      "erro": "The check took longer than 240 s and was stopped. The providers may be at their usage limit (rate limit); try again in a few minutes."
+      "veredito": "CONTRADITA_POR_FONTE_ATUAL",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "segundos": 33,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
     }
   ]
 }
