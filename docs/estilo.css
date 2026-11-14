@@ -708,7 +708,6 @@ main.folha { overflow: hidden; }
 .aviso-publico a:hover { text-decoration-color: #ff5a1f; }
 .aviso-publico { margin: 4px 0 8px; padding: 0 25px; background: none; color: #9b9a96; font-size: 13px; line-height: 1.55; }
 .aviso-publico strong { color: #e8e6e3; font-weight: 500; }
-.publico .campo { display: none; }
 .publico .exemplos-linha { margin-top: 14px; }
 .publico .exemplos { gap: 8px; }
 .publico .exemplos button:not(.mais) { padding: 9px 14px; border-radius: 12px; background: rgba(255, 255, 255, .07); border: 0; color: #f3f2ee; }

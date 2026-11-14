@@ -134,7 +134,7 @@ function configurarModo() {
   $("aviso-publico").hidden = !API.estatico;
   document.body.classList.toggle("publico", Boolean(API.estatico));
   if (API.estatico) { const dica = document.querySelector(".botao-topo-texto"); if (dica) dica.textContent = "Back to the top to try a recorded check"; }
-  if (API.estatico) $("texto").placeholder = "Pick a recorded check below. To check your own text, use the live demo at entrelinhas-qwgp.onrender.com.";
+  if (API.estatico) $("texto").placeholder = "Paste an AI answer to check it on the live site, or pick a recorded check below.";
   // Servidor público na nuvem: checagens ao vivo para qualquer pessoa, com cota diária.
   if (!API.estatico && estado.status?.publico) {
     document.body.classList.add("publico-ao-vivo");
@@ -789,7 +789,7 @@ async function iniciar() {
   const recebido = new URLSearchParams(location.search).get("text") ?? new URLSearchParams(location.search).get("texto");
   if (recebido) {
     $("texto").value = recebido.slice(0, 4000);
-    mostrarMensagem(API.estatico ? "" : "Text received. Choose a mode and click Check answer.");
+    mostrarMensagem(API.estatico ? "" : (estado.status?.publico ? "Text received. Click Check answer." : "Text received. Choose a mode and click Check answer."));
   }
   atualizarEntrada();
 }
