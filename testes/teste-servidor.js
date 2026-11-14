@@ -20,7 +20,7 @@ async function main() {
     const pagina = await fetch(`${base}/`);
     assert.equal(pagina.status, 200);
     assert.match(pagina.headers.get("content-security-policy"), /script-src 'self'/);
-    assert.match(await pagina.text(), /class="marca-nome">entrelinhas<em>\.<\/em></);
+    assert.match(await pagina.text(), /class="marca-nome">entre<em>linhas\.<\/em></);
     const fonte = await fetch(`${base}/fonts/Geist-Variable.woff2`);
     assert.equal(fonte.status, 200);
     assert.equal(fonte.headers.get("content-type"), "font/woff2");
