@@ -133,7 +133,7 @@ function configurarModo() {
   if (API.estatico) selo.textContent = "Public demo";
   $("aviso-publico").hidden = !API.estatico;
   document.body.classList.toggle("publico", Boolean(API.estatico));
-  if (API.estatico) { const dica = document.querySelector(".rodape-dica"); if (dica) dica.textContent = "Back to the top to try a recorded check."; }
+  if (API.estatico) { const dica = document.querySelector(".botao-topo-texto"); if (dica) dica.textContent = "Back to the top to try a recorded check"; }
   if (API.estatico) $("texto").placeholder = "Pick a recorded check below. To check your own text, use the live demo at entrelinhas-qwgp.onrender.com.";
   // Servidor público na nuvem: checagens ao vivo para qualquer pessoa, com cota diária.
   if (!API.estatico && estado.status?.publico) {
@@ -229,12 +229,12 @@ function montarExemplos() {
 function configurarFavorito() {
   const link = $("favorito");
   if (!link) return;
-  const destino = API.estatico ? "http://localhost:3000" : location.origin;
+  // No site das checagens gravadas, o botão de favoritos abre o site ao vivo.
+  const destino = API.estatico ? "https://entrelinhas-qwgp.onrender.com" : location.origin;
   const codigo = `(()=>{const t=String(getSelection()).trim()||prompt('Paste the AI answer to check');if(t)open('${destino}/?text='+encodeURIComponent(t.slice(0,4000)),'_blank')})()`;
   link.setAttribute("href", `javascript:${codigo}`);
   link.addEventListener("click", e => { e.preventDefault(); mostrarMensagem("Drag this button to your bookmarks bar, then use it on any page with an AI answer."); });
   $("favorito-destino").textContent = destino;
-  if ($("favorito-aviso")) $("favorito-aviso").hidden = !API.estatico;
 }
 
 function montarLegenda() {

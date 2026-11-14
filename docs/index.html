@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Entrelinhas · read between the lines of any AI answer</title>
   <meta name="description" content="Entrelinhas checks each claim in an AI answer against today's sources, shows what still holds, what is outdated and what is wrong, and rewrites the answer with citations.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A0B'/%3E%3Cpath d='M14 20h36M14 44h36' stroke='%23ffffff' stroke-opacity='.4' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M14 32h22' stroke='%23FF5A1F' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='32' r='4.5' fill='%23FF5A1F'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23FF5A1F'/%3E%3Cpath d='M15 21h34M15 43h34' stroke='%23fff' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M15 32h20' stroke='%230A0A0B' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="preload" href="fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="estilo.css">
   <script src="estatico.js" defer></script>
@@ -28,8 +28,8 @@
   <div class="palco">
     <header class="barra">
       <a class="marca" href="./" aria-label="Entrelinhas home">
-        <svg class="marca-icone" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 18h48M8 46h48" stroke="currentColor" stroke-opacity=".38" stroke-width="3.5" stroke-linecap="round"/><path d="M8 32h28" stroke="#FF5A1F" stroke-width="3.5" stroke-linecap="round"/><circle cx="46" cy="32" r="5" fill="#FF5A1F"/></svg>
-        <span class="marca-nome">Entre<em>linhas</em></span>
+        <svg class="marca-icone" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#FF5A1F"/><path d="M15 21h34M15 43h34" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path d="M15 32h20" stroke="#0A0A0B" stroke-width="5" stroke-linecap="round"/></svg>
+        <span class="marca-nome">entrelinhas<em>.</em></span>
       </a>
       <nav class="barra-links" aria-label="Sections">
         <a href="#sobre">About</a>
@@ -146,7 +146,7 @@
 
     <section class="secao problema" aria-labelledby="titulo-problema">
       <div class="secao-cabeca">
-        <h2 id="titulo-problema">Models freeze the world on the day they were trained. <span class="apagado">The world keeps moving.</span></h2>
+        <h2 id="titulo-problema">Models <strong>freeze the world</strong> on the day they were trained. <span class="apagado">The world <strong>keeps moving.</strong></span></h2>
       </div>
       <div class="parede" aria-hidden="true"><span class="">Node.js 16 is the current LTS release.</span><span class="laranja">A Selic está em 2% ao ano.</span><span class="">Python 2.7 still gets security updates.</span><span class="laranja">Twitter is run by Jack Dorsey.</span><span class="">Internet Explorer is Microsoft’s default browser.</span><span class="">O salário mínimo é R$ 1.212.</span><span class="laranja">Queen Elizabeth II is the UK’s monarch.</span><span class="">Windows 10 is the latest Windows.</span><span class="">The UK is a member of the EU.</span><span class="laranja">Pluto is the ninth planet.</span><span class="">Node.js 20 is the recommended version for production.</span><span class="laranja">Python 2 is still supported.</span><span class="">Node.js 16 is the current LTS release.</span><span class="laranja">A Selic está em 2% ao ano.</span><span class="">Python 2.7 still gets security updates.</span><span class="laranja">Twitter is run by Jack Dorsey.</span><span class="">Internet Explorer is Microsoft’s default browser.</span><span class="">O salário mínimo é R$ 1.212.</span><span class="laranja">Queen Elizabeth II is the UK’s monarch.</span><span class="">Windows 10 is the latest Windows.</span><span class="">The UK is a member of the EU.</span><span class="laranja">Pluto is the ninth planet.</span><span class="">Node.js 20 is the recommended version for production.</span><span class="laranja">Python 2 is still supported.</span></div>
       <div class="ladrilhos quatro">
@@ -159,11 +159,21 @@
 
     <section id="sobre" class="secao sobre" aria-labelledby="titulo-sobre">
       <div class="sobre-grade">
-        <h2 id="titulo-sobre"><em>Entrelinhas</em> means “between the lines” in Portuguese.</h2>
+        <h2 id="titulo-sobre"><strong class="nome-forte">entrelinhas</strong> means <strong>“between the lines”</strong> in Portuguese.</h2>
         <div class="sobre-texto">
           <p>It reads an AI answer the way a careful editor would. It breaks the answer into single statements, checks each one against today's sources, and shows which still hold, which have changed and which nobody can confirm. Then it rewrites the answer with sources.</p>
           <p>It is not only about dates. Prices, software versions, who runs a company, laws, numbers: anything an AI states with confidence and that may be out of date, or simply wrong.</p>
         </div>
+      </div>
+    </section>
+    <section id="para-quem" class="secao usos usos-claro" aria-labelledby="titulo-usos">
+      <h2 id="titulo-usos">For anyone who doesn't want <br class="quebra">to rely <em>only on AI answers.</em></h2>
+      <div class="usos-grade cinco">
+        <div class="uso"><h3>Everyday questions</h3><p>Before you pay, sign or decide something, check the prices, rules and facts the AI gave you.</p></div>
+        <div class="uso"><h3>Support chatbots</h3><p>Catch the wrong or outdated price or policy before your bot tells a customer.</p></div>
+        <div class="uso"><h3>AI product teams</h3><p>One API call after generation adds verdicts, sources and freshness to any answer.</p></div>
+        <div class="uso"><h3>Content and newsrooms</h3><p>Check drafts written with AI against today's sources before they go out.</p></div>
+        <div class="uso"><h3>Health, legal and finance</h3><p>Where a wrong or outdated rule is a liability, every claim comes with its evidence.</p></div>
       </div>
     </section>
   </main>
@@ -238,7 +248,7 @@
 
   <section id="como-ler" class="folha secao como-ler" aria-labelledby="titulo-ler">
     <div class="secao-cabeca">
-      <h2 id="titulo-ler">What the results mean.</h2>
+      <h2 id="titulo-ler">What the results <em>mean.</em></h2>
       <p class="secao-sub">Every claim gets one of seven verdicts, grouped in three colors.</p>
     </div>
     <div id="legenda" class="legenda"></div>
@@ -258,19 +268,18 @@
   <section id="favorito-secao" class="noite favorito-secao" aria-labelledby="titulo-favorito">
     <div class="favorito-grade">
       <div>
-        <h2 id="titulo-favorito">Use Entrelinhas on <br class="quebra"><em>any AI app.</em></h2>
-        <p class="favorito-intro">Check an answer right where you read it, in your browser.</p>
+        <h2 id="titulo-favorito">Use Entrelinhas <br class="quebra">in <em>any browser.</em></h2>
+        <p class="favorito-intro">Check an AI answer right where you read it: ChatGPT, Gemini, Claude or any web page, in a computer browser (Chrome, Edge, Firefox or Safari).</p>
         <ul class="passos-favorito">
           <li><strong>Drag</strong> the button below to your bookmarks bar.</li>
           <li><strong>Open</strong> your favorite AI (ChatGPT, Gemini, Claude or any other page) and <strong>select</strong> the whole answer, as if you were going to copy it.</li>
-          <li><strong>Click</strong> Check with Entrelinhas in your bookmarks. Entrelinhas opens with the text ready to check.</li>
+          <li><strong>Click</strong> <span class="nome-botao">Check with Entrelinhas</span> in your bookmarks. Entrelinhas opens with the text ready to check.</li>
         </ul>
         <p class="favorito-acao"><a id="favorito" class="botao-favorito" href="#">Check with Entrelinhas</a><span id="favorito-destino" hidden></span></p>
-        <p id="favorito-aviso" class="favorito-aviso" hidden>On this public demo the button opens Entrelinhas on your own computer, so it works once Entrelinhas runs locally (see Getting started in the README).</p>
-      </div>
+              </div>
       <div class="api">
         <h3>For developers</h3>
-        <p>Add Entrelinhas to your own app. Send an answer to the API and get back the claims, verdicts, freshness scores and the corrected answer.</p>
+        <p>Add Entrelinhas to your own app. Your app sends the AI answer to the API; the API sends back each claim with its verdict, sources and freshness score, plus the corrected answer.</p>
         <pre><code><span class="c">POST</span> /api/verificar
 {
   "texto": "the AI answer",
@@ -278,27 +287,17 @@
 }
 <span class="c">→</span> claims, verdicts, freshness,
   updated answer, gateway trace</code></pre>
+        <p class="api-host">Live server: entrelinhas-qwgp.onrender.com (5 checks a day per person)</p>
         <p class="api-link"><a href="https://github.com/contatoalicecandido-lab/entrelinhas#api">Read the API guide ↗</a></p>
       </div>
     </div>
 
-    <div class="usos">
-      <h2>For anyone who relies <br class="quebra">on <em>AI answers.</em></h2>
-      <div class="usos-grade cinco">
-        <div class="uso"><h3>Everyday questions</h3><p>Before you pay, sign or decide, check that the price, rule or fact the AI gave you still holds.</p></div>
-        <div class="uso"><h3>Support chatbots</h3><p>Catch the outdated price or policy before your bot tells a customer.</p></div>
-        <div class="uso"><h3>AI product teams</h3><p>One API call after generation adds verdicts, freshness and sources to any answer.</p></div>
-        <div class="uso"><h3>Content and newsrooms</h3><p>Check drafts written with AI against today's sources before they go out.</p></div>
-        <div class="uso"><h3>Health, legal and finance</h3><p>Where an outdated rule is a liability, every claim comes with its evidence.</p></div>
-      </div>
-    </div>
   </section>
 
   <footer class="rodape noite">
-    <a class="rodape-chamada" href="#titulo-hero"><span>Check an answer</span><span class="seta" aria-hidden="true">↑</span></a>
-    <p class="rodape-dica">Back to the top to paste an answer.</p>
+    <div class="rodape-chamada"><span>Check an <strong>answer.</strong></span><a class="botao-topo" href="#titulo-hero"><span class="botao-topo-texto">Back to the top to paste an answer</span><span class="seta" aria-hidden="true">↑</span></a></div>
     <div class="rodape-linha">
-      <span class="marca-nome">Entre<em>linhas</em></span>
+      <span class="marca-nome">entrelinhas<em>.</em></span>
       <span>Geek Room Global AI Hackathon 2026</span>
       <span>Tavily, Bifrost and SQLite</span>
     </div>
