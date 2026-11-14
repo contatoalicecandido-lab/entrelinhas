@@ -16,6 +16,14 @@ services:
         value: "5"
       - key: ENTRELINHAS_LIMITE_DIA
         value: "25"
+      # Mesmo modelo (gpt-oss-20b) em dois provedores: OpenRouter primeiro,
+      # Groq como reserva. O Bifrost troca sozinho se um deles falhar.
+      - key: BIFROST_MODEL
+        value: openrouter/openai/gpt-oss-20b
+      - key: BIFROST_FALLBACKS
+        value: groq/openai/gpt-oss-20b,groq/openai/gpt-oss-120b
+      - key: OPENROUTER_API_KEY
+        sync: false
       - key: TAVILY_API_KEY
         sync: false
       - key: GROQ_API_KEY

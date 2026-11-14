@@ -1,14 +1,36 @@
 {
   "$schema": "https://www.getbifrost.ai/schema",
-  "config_store": { "enabled": false },
-  "logs_store": { "enabled": false },
+  "config_store": {
+    "enabled": false
+  },
+  "logs_store": {
+    "enabled": false
+  },
   "providers": {
     "groq": {
       "keys": [
         {
           "name": "groq-main",
           "value": "env.GROQ_API_KEY",
-          "models": ["*"],
+          "models": [
+            "*"
+          ],
+          "weight": 1.0
+        }
+      ],
+      "network_config": {
+        "default_request_timeout_in_seconds": 60,
+        "max_retries": 1
+      }
+    },
+    "openrouter": {
+      "keys": [
+        {
+          "name": "openrouter-main",
+          "value": "env.OPENROUTER_API_KEY",
+          "models": [
+            "*"
+          ],
           "weight": 1.0
         }
       ],
