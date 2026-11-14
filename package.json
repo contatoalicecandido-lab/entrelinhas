@@ -24,5 +24,8 @@
   "type": "commonjs",
   "dependencies": {
     "dotenv": "^18.0.9"
+  },
+  "engines": {
+    "node": ">=22.13"
   }
 }
