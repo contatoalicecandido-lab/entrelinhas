@@ -22,10 +22,20 @@ const {
 
 const SO_EXEMPLO = process.argv.includes("--exemplo");
 const PORTA = Number(process.env.PORT) || 3000;
-const HOST = "127.0.0.1";
+// Modo público (ENTRELINHAS_PUBLICO=1): o servidor roda na nuvem para qualquer
+// pessoa testar. Escuta em todas as interfaces, aceita só o próprio endereço
+// público e limita quantas checagens reais cada pessoa e o dia inteiro podem
+// fazer, para ninguém gastar os créditos de Tavily e do modelo.
+const PUBLICO = process.env.ENTRELINHAS_PUBLICO === "1";
+const HOST = PUBLICO ? "0.0.0.0" : "127.0.0.1";
+const HOST_PUBLICO = String(process.env.ENTRELINHAS_HOST_PUBLICO || process.env.RENDER_EXTERNAL_HOSTNAME || "").toLowerCase();
+const inteiroPositivo = (valor, padrao) => (Number.isInteger(Number(valor)) && Number(valor) > 0 ? Number(valor) : padrao);
+const LIMITE_POR_PESSOA_DIA = inteiroPositivo(process.env.ENTRELINHAS_LIMITE_IP_DIA, 5);
+const LIMITE_TOTAL_DIA = inteiroPositivo(process.env.ENTRELINHAS_LIMITE_DIA, 25);
 const LIMITE_CORPO_BYTES = 32 * 1024;
-const LIMITE_TEXTO = 4000;
-const MAX_AFIRMACOES = 6;
+const LIMITE_TEXTO = PUBLICO ? 1500 : 4000;
+// No modo público, no máximo 3 afirmações por checagem (custo e tempo).
+const MAX_AFIRMACOES = PUBLICO ? 3 : 6;
 // O modo real lê até 5 fontes diversas por afirmação (oficial, notícia,
 // referência, outros sites, blogs) e as analisa numa única chamada ao modelo
 // por afirmação. Ajustável com ENTRELINHAS_MAX_FONTES (1 a 6).
@@ -279,11 +289,17 @@ async function tratarVerificacao(req, res) {
   }
   ocupado = true;
   let trabalho = null;
+  let cotaReservada = false;
   const inicio = Date.now();
   try {
     let dados;
     try { dados = JSON.parse(corpo); } catch { throw erroDeEntrada("Invalid JSON."); }
     const pedido = validarPedido(dados);
+    if (PUBLICO && pedido.modo === "real" && modoRealDisponivel) {
+      const recusa = reservarCota(req);
+      if (recusa) throw Object.assign(new Error(recusa), { status: 429 });
+      cotaReservada = true;
+    }
     // Tempo máximo de uma verificação inteira: se algo travar lá dentro
     // (rede, provedor), o pedido falha com aviso e o servidor fica livre.
     let temporizador;
@@ -306,6 +322,8 @@ async function tratarVerificacao(req, res) {
     responderJson(res, 200, resultado);
   } catch (erro) {
     const status = erro.status ?? 502;
+    // Falha do provedor ou do tempo limite não gasta a cota de quem tentou.
+    if (cotaReservada && status >= 500) devolverCota(req);
     // Mensagens internas podem citar o provedor; nunca contêm credenciais.
     console.error(`[${new Date().toISOString()}] falha (${status}): ${erro.message}`);
     responderJson(res, status, { erro: mensagemPublica(erro, status) });
@@ -323,6 +341,46 @@ function servirArquivo(res, nome, tipo) {
   });
 }
 
+// Cota diária do modo público (em memória; zera à meia-noite UTC e quando o
+// servidor reinicia). Conta só checagens reais; o modo exemplo é livre.
+const cota = { dia: null, total: 0, porPessoa: new Map() };
+function diaAtual() { return new Date().toISOString().slice(0, 10); }
+function renovarCota() {
+  const hoje = diaAtual();
+  if (cota.dia !== hoje) { cota.dia = hoje; cota.total = 0; cota.porPessoa.clear(); }
+}
+function pessoaDoPedido(req) {
+  // Atrás do proxy da hospedagem, o endereço real vem no X-Forwarded-For.
+  const encaminhado = String(req.headers["x-forwarded-for"] ?? "").split(",")[0].trim();
+  return (PUBLICO && encaminhado) || req.socket?.remoteAddress || "desconhecido";
+}
+function situacaoCota(req) {
+  renovarCota();
+  const usadas = cota.porPessoa.get(pessoaDoPedido(req)) ?? 0;
+  return {
+    restantes_hoje_para_voce: Math.max(0, LIMITE_POR_PESSOA_DIA - usadas),
+    restantes_hoje_no_total: Math.max(0, LIMITE_TOTAL_DIA - cota.total),
+    por_pessoa: LIMITE_POR_PESSOA_DIA,
+    total: LIMITE_TOTAL_DIA
+  };
+}
+// Reserva uma checagem; devolve a mensagem de recusa ou null.
+function reservarCota(req) {
+  renovarCota();
+  const pessoa = pessoaDoPedido(req);
+  const usadas = cota.porPessoa.get(pessoa) ?? 0;
+  if (cota.total >= LIMITE_TOTAL_DIA) return "The public demo reached today's limit of live checks. Try again tomorrow, or use the recorded checks and the examples.";
+  if (usadas >= LIMITE_POR_PESSOA_DIA) return `You used your ${LIMITE_POR_PESSOA_DIA} live checks for today. Try again tomorrow, or use the recorded checks and the examples.`;
+  cota.total += 1;
+  cota.porPessoa.set(pessoa, usadas + 1);
+  return null;
+}
+function devolverCota(req) {
+  const pessoa = pessoaDoPedido(req);
+  cota.total = Math.max(0, cota.total - 1);
+  cota.porPessoa.set(pessoa, Math.max(0, (cota.porPessoa.get(pessoa) ?? 1) - 1));
+}
+
 function criarServidor() {
   const servidor = http.createServer((req, res) => {
     // Só aceita pedidos endereçados a este computador (contra DNS rebinding)
@@ -330,8 +388,9 @@ function criarServidor() {
     // um site qualquer disparar checagens e gastar os créditos de quem roda).
     const porta = req.socket?.localPort ?? PORTA;
     const hostsValidos = new Set([`127.0.0.1:${porta}`, `localhost:${porta}`]);
+    if (PUBLICO && HOST_PUBLICO) hostsValidos.add(HOST_PUBLICO);
     if (!hostsValidos.has(String(req.headers.host ?? "").toLowerCase())) {
-      return responderJson(res, 421, { erro: "This server only answers requests for 127.0.0.1 or localhost." });
+      return responderJson(res, 421, { erro: PUBLICO ? "Unknown host." : "This server only answers requests for 127.0.0.1 or localhost." });
     }
     // GET e HEAD só leem a página (o botão de favoritos abre a página vindo de
     // outro site, e isso precisa funcionar); pedidos que fazem algo, não.
@@ -353,6 +412,8 @@ function criarServidor() {
     if (leitura && url.pathname === "/api/status") {
       return responderJson(res, 200, {
         modo_real_disponivel: modoRealDisponivel,
+        publico: PUBLICO,
+        ...(PUBLICO ? { cota: situacaoCota(req) } : {}),
         texto_exemplo: TEXTO_EXEMPLO,
         dominios_exemplo: DOMINIOS_OFICIAIS_EXEMPLO,
         exemplos: listarExemplos(),
@@ -384,7 +445,9 @@ if (require.main === module) {
     throw erro;
   });
   servidor.listen(PORTA, HOST, () => {
-    console.log(`Entrelinhas rodando em http://localhost:${PORTA}`);
+    console.log(PUBLICO
+      ? `Entrelinhas público em ${HOST}:${PORTA} (host ${HOST_PUBLICO || "não definido"}; ${LIMITE_POR_PESSOA_DIA} checagens por pessoa e ${LIMITE_TOTAL_DIA} por dia)`
+      : `Entrelinhas rodando em http://localhost:${PORTA}`);
     console.log(modoRealDisponivel
       ? "Modo real disponível (Tavily + Bifrost). O modo exemplo também pode ser usado."
       : SO_EXEMPLO
@@ -394,4 +457,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { criarServidor, validarPedido };
+module.exports = { criarServidor, validarPedido, reservarCota, devolverCota, situacaoCota };

@@ -172,6 +172,9 @@ async function perguntarAoModelo(
       "x-bf-lh-call-id": idChamada,
       "x-bf-lh-etapa": rastreabilidade.etapa
     };
+    // Bifrost privado, no mesmo servidor e sem chaves virtuais (deploy na
+    // nuvem): BIFROST_KEY=none não envia cabeçalho de chave virtual.
+    if (process.env.BIFROST_KEY === "none") delete headers["x-bf-vk"];
 
     if (opcoes.idVerificacao) {
       headers["x-bf-lh-verification-id"] =

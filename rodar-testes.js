@@ -8,6 +8,7 @@ const TESTES = [
   "testes/teste-atualidade.js",
   "testes/teste-regras-1-4-0.js",
   "testes/teste-prazo.js",
+  "testes/teste-servidor-publico.js",
   "testes/teste-evidencia.js",
   "testes/teste-preparar-evidencia.js",
   "testes/teste-integracao-persistencia-comparador.js",

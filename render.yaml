@@ -1,0 +1,22 @@
+# Deploy do Entrelinhas no Render (plano gratuito): um serviço web que roda
+# o Bifrost privado e o Entrelinhas em modo público, com cota diária.
+services:
+  - type: web
+    name: entrelinhas
+    runtime: node
+    plan: free
+    buildCommand: npm ci --omit=dev
+    startCommand: bash deploy/iniciar.sh
+    envVars:
+      - key: NODE_VERSION
+        value: 22.12.0
+      - key: ENTRELINHAS_PUBLICO
+        value: "1"
+      - key: ENTRELINHAS_LIMITE_IP_DIA
+        value: "5"
+      - key: ENTRELINHAS_LIMITE_DIA
+        value: "25"
+      - key: TAVILY_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false

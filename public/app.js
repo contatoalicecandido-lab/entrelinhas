@@ -135,6 +135,18 @@ function configurarModo() {
   document.body.classList.toggle("publico", Boolean(API.estatico));
   if (API.estatico) { const dica = document.querySelector(".rodape-dica"); if (dica) dica.textContent = "Back to the top to try a recorded check."; }
   if (API.estatico) $("texto").placeholder = "Pick a recorded check below. To check your own text, run Entrelinhas on your computer.";
+  // Servidor público na nuvem: checagens ao vivo para qualquer pessoa, com cota diária.
+  if (!API.estatico && estado.status?.publico) {
+    document.body.classList.add("publico-ao-vivo");
+    selo.textContent = real ? "Live public demo" : "Public demo";
+    atualizarAvisoCota();
+  }
+  const limiteTexto = estado.status?.limites?.caracteres;
+  if (Number.isInteger(limiteTexto)) {
+    $("texto").maxLength = limiteTexto;
+    const total = document.querySelector(".contador");
+    if (total) total.lastChild.textContent = ` of ${limiteTexto.toLocaleString("en-US")}`;
+  }
   (real ? radio : document.querySelector('input[name="modo"][value="exemplo"]')).checked = true;
   const atualizarQueda = () => {
     const temReserva = (estado.status?.bifrost?.reservas ?? []).length > 0;
@@ -142,6 +154,17 @@ function configurarModo() {
   };
   for (const r of document.querySelectorAll('input[name="modo"]')) r.addEventListener("change", atualizarQueda);
   atualizarQueda();
+}
+
+function atualizarAvisoCota() {
+  const cota = estado.status?.cota;
+  const aviso = $("aviso-publico");
+  if (!cota || !estado.status?.modo_real_disponivel) return;
+  const afirmacoes = estado.status?.limites?.afirmacoes ?? 3;
+  aviso.hidden = false;
+  aviso.textContent = cota.restantes_hoje_no_total <= 0
+    ? "Live public demo: today's live checks are used up. Try a recorded check or an example below, or come back tomorrow."
+    : `Live public demo: paste any AI answer and it is checked now, with Tavily and Bifrost. You have ${cota.restantes_hoje_para_voce} of ${cota.por_pessoa} live checks left today (up to ${afirmacoes} claims each). A check takes 15 to 90 seconds; the first one after a quiet period can take a minute longer while the server wakes up.`;
 }
 
 function montarExemplos() {
@@ -290,6 +313,10 @@ async function verificar() {
     pararProgresso();
     botao.disabled = false;
     botao.textContent = "Check answer";
+    // Modo público: atualiza quantas checagens ao vivo ainda restam hoje.
+    if (!API.estatico && estado.status?.publico) {
+      try { estado.status = { ...estado.status, ...(await API.status()) }; atualizarAvisoCota(); } catch { /* sem efeito */ }
+    }
   }
 }
 
