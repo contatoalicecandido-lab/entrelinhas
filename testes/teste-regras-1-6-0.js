@@ -11,5 +11,5 @@ assert.match(INSTRUCOES_LOTE, /use CONTRADICTS, not INSUFFICIENT/);
 // O limite da regra também precisa estar escrito, para não virar contradição demais.
 assert.match(INSTRUCOES_LOTE, /stays INSUFFICIENT/);
 assert.match(INSTRUCOES_LOTE, /does not contradict a claim about\s+support of an older one/);
-assert.equal(VERSAO_REGRAS, "1.6.0");
+assert.ok(["1.6.0", "1.7.0"].includes(VERSAO_REGRAS));
 console.log("ok regras 1.6.0: sucessor nomeado contradiz");

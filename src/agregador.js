@@ -5,8 +5,9 @@ const { calcularAtualidadeAfirmacao, JANELA_GERAL_DIAS } = require("./atualidade
 const { clusterizarDependencias } = require("./independencia-fontes");
 const { calcularConcordancia, estaCorroborada } = require("./concordancia");
 const { classificarFonte } = require("./tipo-fonte");
+const { ehFatoHistorico } = require("./fato-historico");
 
-const VERSAO_REGRAS = "1.6.0";
+const VERSAO_REGRAS = "1.7.0";
 // Palavras que dizem que a afirmação vale agora (inglês e português).
 const AFIRMA_QUE_VALE_HOJE = /\b(currently|still|now|today|latest|newest|most recent|current|as of now|right now)\b|\b(atualmente|ainda|hoje|mais recente|atual|vigente)\b|(^|\s)últim[oa]s?(\s|$)/iu;
 
@@ -598,13 +599,23 @@ function agregarEvidencias(afirmacao, opcoes = {}) {
         { claimType: "general", validityDays: JANELA_GERAL_DIAS, asOf: opcoes.asOf ?? new Date() }
       );
 
-  const atualidadeAfirmacao = calcularAtualidadeAfirmacao({
+  let atualidadeAfirmacao = calcularAtualidadeAfirmacao({
     freshness: freshnessScore,
     recenciaPagina,
     recenciaGeral,
     concordancia,
     janelaDias: validade ?? null
   });
+  // Regras 1.7.0: fato histórico ("fundou em 1993") não envelhece. Uma fonte
+  // antiga prova tanto quanto uma nova, então não há nota de atualidade.
+  if (ehFatoHistorico(afirmacao.texto, opcoes.asOf ?? new Date())) {
+    atualidadeAfirmacao = {
+      ...(atualidadeAfirmacao ?? {}),
+      score: null,
+      status: "NOT_SCORED",
+      reason: "HISTORICAL_FACT"
+    };
+  }
 
   const limitacoes = [];
 

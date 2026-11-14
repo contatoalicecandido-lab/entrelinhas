@@ -27,7 +27,7 @@ You receive: the original answer, the verdict for each claim found in it, and nu
 Rules:
 - Write the answer in answer_language (the language of the original answer), keeping its tone and structure. Never translate it.
 - Use ONLY facts present in the verified quotes. Never add numbers, dates or names that are not in them. A source without a verified quote may be cited for the verdict, but never as the origin of a number, date or name.
-- CONTRADICTED: replace the claim with what the sources say, and cite them like [1] or [2][3].
+- CONTRADICTED: replace the claim with what the sources say, and cite them like [1] or [2][3]. Change only the part the sources contradict; keep everything else in that sentence as it was (for example, if only a job title ended, a founder is still a founder).
 - SUPPORTED: keep the claim and cite a supporting source.
 - WEAKLY_SUPPORTED: keep it, cite the source, and add a brief hedge (e.g. "according to one source" / "segundo uma fonte").
 - SOURCES_DISAGREE: say briefly that sources disagree and cite both sides.

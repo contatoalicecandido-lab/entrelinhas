@@ -589,10 +589,14 @@ function criarMetricas(afirmacao) {
       `${at.newest_date ? ` · newest ${formatarDataCurta(at.newest_date)}` : ""}.`));
     m2.append(el("p", `confianca conf-${(at.confidence ?? "low").toLowerCase()}`, `${CONFIANCAS[at.confidence] ?? "Low"} confidence`));
   } else {
-    m2.append(el("p", "metrica-etiqueta", at?.reason === "NO_SOURCE_DATE" ? "Not scored: no source gave a date" : "Not scored: no source took a position"));
-    m2.append(el("p", "metrica-nota", at?.reason === "NO_SOURCE_DATE"
-      ? "Sources discussed the claim but none says when it was published or updated."
-      : "None of the sources found confirms or contradicts this claim."));
+    const historico = at?.reason === "HISTORICAL_FACT";
+    m2.append(el("p", "metrica-etiqueta", historico ? "Not needed: a past event does not change"
+      : at?.reason === "NO_SOURCE_DATE" ? "Not scored: no source gave a date" : "Not scored: no source took a position"));
+    m2.append(el("p", "metrica-nota", historico
+      ? "This claim is about something that happened on a past date. An old source proves it as well as a new one, so source age does not matter here."
+      : at?.reason === "NO_SOURCE_DATE"
+        ? "Sources discussed the claim but none says when it was published or updated."
+        : "None of the sources found confirms or contradicts this claim."));
   }
   grade.append(m2);
 
@@ -674,7 +678,7 @@ function criarFonte(evidencia, simulado) {
   if (motivo) item.append(el("p", "motivo", emIngles(motivo).replace(/^(The )?source S\d+\s*/i, "The source ")));
 
   const citacao = evidencia.preparacao?.citacao_chave;
-  if (citacao) item.append(el("blockquote", "citacao", `“${limparTrecho(citacao)}”`));
+  if (citacao) item.append(el("blockquote", "citacao", `“${limparTrecho(citacao).replace(/^["“”'\s]+|["“”'\s]+$/g, "")}”`));
   else if (["SUPPORTS", "CONTRADICTS"].includes(evidencia.classificacao?.postura) && evidencia.preparacao?.metodo_analise === "LOTE") {
     // Sem trecho conferido: a postura conta, mas a fonte não fornece números
     // nem datas para a resposta corrigida. Dizemos isso na tela.

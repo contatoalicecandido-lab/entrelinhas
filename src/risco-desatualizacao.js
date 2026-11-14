@@ -5,6 +5,7 @@
 //   - marcas de tempo no texto: "atualmente", "ainda", "currently", "latest",
 //     "até 2025", um ano explícito (que envelhece).
 const { VALIDADE_MAX_DIAS } = require("./atualidade");
+const { ehFatoHistorico } = require("./fato-historico");
 
 const BASE = {
   preco: { nivel: "HIGH", motivo: "Prices change often" },
@@ -20,6 +21,9 @@ const subir = nivel => NIVEIS[Math.min(NIVEIS.length - 1, NIVEIS.indexOf(nivel) 
 function avaliarRiscoDesatualizacao({ texto = "", tipo = null, janela = null, nuances = null, dataReferencia = new Date() } = {}) {
   const motivos = [];
   let nivel;
+  if (ehFatoHistorico(texto, dataReferencia)) {
+    return { nivel: "LOW", sensivel_ao_tempo: false, motivos: ["A past event with a date: it does not go out of date"] };
+  }
   if (janela?.origem === "ENTITY") {
     // Valor oficial com janela própria. Muda rápido (Selic, inflação): risco
     // alto. Muda uma vez por ano (salário mínimo): risco médio.

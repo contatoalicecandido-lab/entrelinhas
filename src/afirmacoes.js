@@ -38,6 +38,12 @@ REGRAS FUNDAMENTAIS:
 13. Escreva cada afirmação NO MESMO IDIOMA do texto original (campo
     "idioma_do_texto"). Nunca traduza: texto em inglês gera afirmações em
     inglês; texto em português gera afirmações em português.
+14. Cada afirmação precisa se entender sozinha, fora do texto. Troque
+    pronomes e referências ("ele", "ela", "isso", "a empresa", "he", "she",
+    "it", "they", "the company") pelo nome a que se referem no texto.
+    Exemplo: "Jensen Huang fundou a Nvidia. Ele lidera a empresa desde então."
+    vira "Jensen Huang lidera a Nvidia desde então." Não troque se o texto
+    não disser a quem a palavra se refere.
 
 EXEMPLOS IMPORTANTES:
 
@@ -168,5 +174,6 @@ async function decomporEmAfirmacoes(texto, opcoes = {}) {
 }
 
 module.exports = {
+  INSTRUCOES_DECOMPOSICAO,
   decomporEmAfirmacoes
 };
