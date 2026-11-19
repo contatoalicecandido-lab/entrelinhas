@@ -111,9 +111,12 @@ function detectarIdiomaRapido(texto) {
 function atualizarEntrada() {
   const texto = $("texto").value;
   $("contador").textContent = texto.length.toLocaleString("en-US");
-  $("idioma-detectado").textContent = /^https?:\/\/\S+$/i.test(texto.trim())
+  const ehLink = /^https?:\/\/\S+$/i.test(texto.trim());
+  $("idioma-detectado").textContent = ehLink
     ? "Page link: Tavily will read the page and check its facts"
     : detectarIdiomaRapido(texto);
+  const botao = $("botao-verificar");
+  if (!botao.disabled) botao.textContent = ehLink ? "Check page" : "Check answer";
 }
 
 function mostrarMensagem(texto) { $("mensagem").textContent = texto || ""; }
@@ -136,7 +139,7 @@ function configurarModo() {
   $("aviso-publico").hidden = !API.estatico;
   document.body.classList.toggle("publico", Boolean(API.estatico));
   if (API.estatico) { const dica = document.querySelector(".botao-topo-texto"); if (dica) dica.textContent = "Back to the top to try a recorded check"; }
-  if (API.estatico) $("texto").placeholder = "Paste an AI answer to check it on the live site, or pick a recorded check below.";
+  if (API.estatico) $("texto").placeholder = "Paste an AI answer, or the link of a page to audit, and check it on the live site. Or pick a recorded check below.";
   // Servidor público na nuvem: checagens ao vivo para qualquer pessoa, com cota diária.
   if (!API.estatico && estado.status?.publico) {
     document.body.classList.add("publico-ao-vivo");
@@ -321,7 +324,7 @@ async function verificar() {
   } finally {
     pararProgresso();
     botao.disabled = false;
-    botao.textContent = "Check answer";
+    atualizarEntrada();
     // Modo público: atualiza quantas checagens ao vivo ainda restam hoje.
     if (!API.estatico && estado.status?.publico) {
       try { estado.status = { ...estado.status, ...(await API.status()) }; atualizarAvisoCota(); } catch { /* sem efeito */ }
