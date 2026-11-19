@@ -204,7 +204,9 @@ function resumirGateway(chamadas, modo) {
     respostas_por_modelo: [...servidos].map(([modelo, n]) => ({ modelo, chamadas: n })),
     respostas_de_reserva: reservas,
     tokens_total: comTokens ? tokens : null,
-    latencia_media_ms: comLatencia ? Math.round(latencia / comLatencia) : null
+    latencia_media_ms: comLatencia ? Math.round(latencia / comLatencia) : null,
+    // Chave virtual do Bifrost usada (só o rótulo, nunca o valor da chave).
+    chave_virtual: modo === "exemplo" ? null : (process.env.BIFROST_VK_ROTULO || null)
   };
 }
 
@@ -284,6 +286,11 @@ function gravarVerificacao(resultado) {
 function mensagemPublica(erro, status) {
   const texto = String(erro?.message ?? "");
   if (status !== 502) return texto;
+  // Orçamento da chave virtual do Bifrost esgotado (governança): o gateway
+  // recusa a chamada antes de gastar. O dia do site acabou, não é uma falha.
+  if (/\b402\b|budget/i.test(texto)) {
+    return "Today's AI budget for this public site is used up (a limit set in Bifrost). Try again tomorrow, or use the recorded checks.";
+  }
   if (/429|rate.?limit|limite/i.test(texto)) {
     const espera = /try again in ([\dhms.]+)/i.exec(texto)?.[1];
     return `The AI model hit its usage limit (rate limit).${espera ? ` Try again in ${espera}.` : " Try again in a few minutes."}`;

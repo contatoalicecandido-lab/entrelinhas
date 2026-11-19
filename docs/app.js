@@ -477,7 +477,9 @@ function mostrarGateway(g, simulado) {
 
   const cadeia = el("ol", "cadeia");
   g.cadeia_modelos.forEach((m, i) => {
-    const usado = g.respostas_por_modelo.some(r => r.modelo === m || m.endsWith(`/${r.modelo}`) || r.modelo.endsWith(m.split("/").slice(1).join("/")));
+    // Com provedor no nome (openrouter/openai/x), só vale a igualdade exata:
+    // o mesmo modelo em outro provedor (groq/openai/x) não "respondeu".
+    const usado = g.respostas_por_modelo.some(r => r.modelo === m || (r.modelo.split("/").length < 3 && m.endsWith(`/${r.modelo}`)));
     const li = el("li", usado ? "usado" : (g.queda_simulada && i === 0 ? "caiu" : null));
     li.append(el("span", "papel", i === 0 ? "Main" : `Backup ${i}`));
     li.append(el("code", null, m));
@@ -497,6 +499,7 @@ function mostrarGateway(g, simulado) {
 
   const quem = g.respostas_por_modelo.map(r => `${r.modelo} (${r.chamadas})`).join(", ");
   caixa.append(el("p", "dica", `Answered by: ${quem || "n/a"}.${g.falhas ? ` ${g.falhas} call(s) failed.` : ""}`));
+  if (g.chave_virtual) caixa.append(el("p", "dica", `Bifrost virtual key ${g.chave_virtual}. When the budget runs out, Bifrost refuses the call before any money is spent.`));
   if (g.queda_simulada) {
     caixa.append(el("p", "aviso", g.respostas_de_reserva > 0
       ? `Outage drill: the main model was unavailable, and Bifrost served ${g.respostas_de_reserva} of ${g.chamadas} calls from a backup model. Entrelinhas sent the same request and changed nothing.`
