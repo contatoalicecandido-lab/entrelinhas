@@ -90,6 +90,14 @@ RULES
    mentions another version or person without saying it replaced the claimed
    one stays INSUFFICIENT. A newer release does not contradict a claim about
    support of an older one unless the source says that support ended.
+10. NO INFERENCE: SUPPORTS needs the source to STATE the specific attribute
+   of the claim. Do not deduce a status, role or rank from other facts. An
+   end-of-support date, a release date, a list of versions, or "has served
+   since its inception" written years ago does not prove that something is
+   the current, Active, latest or newest one today. If the source does not
+   say it in words, use INSUFFICIENT. Example: a page listing "Node.js 24:
+   support until 2028" is INSUFFICIENT for "Node.js 24 is the current
+   Active LTS".
 
 OUTPUT
 Reply with valid JSON only, no Markdown:

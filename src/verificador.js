@@ -728,16 +728,19 @@ async function verificarTexto(texto, opcoes = {}) {
 
   // 2. Verificação individual de cada afirmação.
 
-  const resultados = [];
-
-  for (const afirmacao of afirmacoesVerificadas) {
-    const resultado = await verificarAfirmacao(
-      afirmacao,
-      opcoesExecucao
-    );
-
-    resultados.push(resultado);
-  }
+  // Afirmações independentes são verificadas em paralelo (até
+  // VERIFICACAO_PARALELA de cada vez, padrão 3), mantendo a ordem original.
+  // Uma checagem de 3 afirmações passa a levar o tempo da mais lenta, não a soma.
+  const paralelas = Math.max(1, Number.parseInt(process.env.VERIFICACAO_PARALELA ?? "3", 10) || 1);
+  const resultados = new Array(afirmacoesVerificadas.length);
+  let proxima = 0;
+  const trabalhar = async () => {
+    while (proxima < afirmacoesVerificadas.length) {
+      const indice = proxima++;
+      resultados[indice] = await verificarAfirmacao(afirmacoesVerificadas[indice], opcoesExecucao);
+    }
+  };
+  await Promise.all(Array.from({ length: Math.min(paralelas, afirmacoesVerificadas.length) }, trabalhar));
 
   // 3. Resposta corrigida, escrita só com as evidências verificadas.
   //    Opcional e não bloqueante: uma falha aqui não invalida a verificação.
