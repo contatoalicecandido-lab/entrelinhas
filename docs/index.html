@@ -50,7 +50,7 @@
         <h2 id="titulo-entrada" class="sr">Check an answer</h2>
         <div class="campo">
           <label class="sr" for="texto">AI-generated answer</label>
-          <textarea id="texto" rows="4" maxlength="4000" spellcheck="false" placeholder="Paste an AI answer, for example: “ChatGPT Plus costs $20 a month and Node.js 20 is the current LTS.”"></textarea>
+          <textarea id="texto" rows="4" maxlength="4000" spellcheck="false" placeholder="Paste an AI answer, for example: “ChatGPT Plus costs $20 a month and Node.js 20 is the current LTS.” Or paste the link of a page, like your help center, FAQ or pricing page, to audit its facts."></textarea>
           <div class="campo-rodape">
             <span class="campo-info"><span id="idioma-detectado"></span><span class="contador"><span id="contador">0</span><span> of 4,000</span></span></span>
             <button id="botao-verificar" class="botao-enviar" type="button">Check answer</button>
@@ -111,6 +111,7 @@
         <p class="rotulo">Your report</p>
         <h2 id="titulo-resultado">What still holds</h2>
         <p id="resumo-frase" class="resumo-frase"></p>
+        <p id="origem-pagina" class="origem-pagina" hidden></p>
         <div id="contagens" class="contagens"></div>
       </header>
 
@@ -170,7 +171,7 @@
       <h2 id="titulo-usos">For anyone who doesn't want <br class="quebra">to rely <em>only on AI answers.</em></h2>
       <div class="usos-grade cinco">
         <div class="uso"><h3>Everyday questions</h3><p>Before you pay, sign or decide something, check the prices, rules and facts the AI gave you.</p></div>
-        <div class="uso"><h3>Support chatbots</h3><p>Catch the wrong or outdated price or policy before your bot tells a customer.</p></div>
+        <div class="uso"><h3>Support teams</h3><p>Paste the link of your help center or FAQ and see which facts went stale, before your chatbot repeats them to a customer.</p></div>
         <div class="uso"><h3>AI product teams</h3><p>One API call after generation adds verdicts, sources and freshness to any answer.</p></div>
         <div class="uso"><h3>Content and newsrooms</h3><p>Check drafts written with AI against today's sources before they go out.</p></div>
         <div class="uso"><h3>Health, legal and finance</h3><p>Where a wrong or outdated rule is a liability, every claim comes with its evidence.</p></div>

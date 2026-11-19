@@ -817,3 +817,7 @@ main.folha { overflow: hidden; }
 /* claim card: slang normalized before searching */
 .lida-como { margin: -4px 0 12px; font-size: 14.5px; color: var(--suave); }
 .lida-como-rotulo { display: inline-block; margin-right: 6px; padding: 2px 9px; border-radius: 999px; background: rgba(255, 90, 31, .12); color: #b4461c; font-size: 12.5px; font-weight: 600; }
+
+.origem-pagina { margin: 10px 0 0; max-width: 760px; font-size: 14.5px; line-height: 1.55; color: var(--suave); }
+.origem-pagina strong { color: var(--tinta); font-weight: 600; }
+.origem-pagina a { color: var(--tinta); text-decoration: underline; text-decoration-color: rgba(255, 90, 31, .5); text-underline-offset: 3px; overflow-wrap: anywhere; }

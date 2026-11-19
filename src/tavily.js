@@ -829,5 +829,6 @@ module.exports = {
   ehResultadoUtil,
   NOTICIAS_BR,
   selecionarFontesDiversas,
-  pesquisarComTavily
+  pesquisarComTavily,
+  extrairConteudo
 };

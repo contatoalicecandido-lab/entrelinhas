@@ -95,7 +95,9 @@ async function principal() {
     reavaliarGravacao(dados);
     const destino = `dados/gravacoes/${item.arquivo}`;
     fs.writeFileSync(path.join(DOCS, destino), JSON.stringify(dados));
-    gravacoes.push({ rotulo: item.rotulo, texto: dados.texto_original, arquivo: destino, data: dados.gravado_em ?? dados.verificado_em });
+    // Auditoria de página: o botão preenche o link, não o texto da página.
+    const textoBotao = dados.origem?.tipo === "PAGINA" ? dados.origem.url : dados.texto_original;
+    gravacoes.push({ rotulo: item.rotulo, texto: textoBotao, arquivo: destino, data: dados.gravado_em ?? dados.verificado_em });
   }
 
   const status = {

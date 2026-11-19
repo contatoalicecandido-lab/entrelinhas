@@ -111,7 +111,9 @@ function detectarIdiomaRapido(texto) {
 function atualizarEntrada() {
   const texto = $("texto").value;
   $("contador").textContent = texto.length.toLocaleString("en-US");
-  $("idioma-detectado").textContent = detectarIdiomaRapido(texto);
+  $("idioma-detectado").textContent = /^https?:\/\/\S+$/i.test(texto.trim())
+    ? "Page link: Tavily will read the page and check its facts"
+    : detectarIdiomaRapido(texto);
 }
 
 function mostrarMensagem(texto) { $("mensagem").textContent = texto || ""; }
@@ -334,7 +336,7 @@ function renderizarResultado(dados) {
   $("aviso-simulado").hidden = !dados.simulado;
   const g = dados.gravacao;
   $("aviso-gravado").hidden = !g;
-  if (g) $("aviso-gravado").textContent = `Recorded live check from ${formatarDataCurta(String(g.data).slice(0, 10))}: real web sources found with Tavily and real model calls through Bifrost, replayed here without API keys.${dados.reavaliacao ? " Verdicts and scores are recomputed with the current rules from those same sources; the updated answer is the one written at recording time." : ""} To check your own text, run Entrelinhas locally (see the GitHub README).`;
+  if (g) $("aviso-gravado").textContent = `Recorded live check from ${formatarDataCurta(String(g.data).slice(0, 10))}: real web sources found with Tavily and real model calls through Bifrost, replayed here without API keys.${dados.reavaliacao ? " Verdicts and scores are recomputed with the current rules from those same sources; the updated answer is the one written at recording time." : ""} To check your own text, use the live site.`;
   const afirmacoes = dados.afirmacoes ?? [];
   const porVeredito = {};
   for (const a of afirmacoes) {
@@ -352,9 +354,23 @@ function renderizarResultado(dados) {
     if (!porVeredito[v]) continue;
     contagens.append(el("span", `pilula ${VEREDITOS[v].tom}`, `${porVeredito[v]} ${VEREDITOS[v].nome}`));
   }
+  // Auditoria de página: de onde vieram os fatos checados.
+  const origem = dados.origem?.tipo === "PAGINA" ? dados.origem : null;
+  $("origem-pagina").hidden = !origem;
+  if (origem) {
+    const linha = $("origem-pagina");
+    linha.replaceChildren();
+    linha.append(el("strong", null, "Page audited: "));
+    const link = el("a", null, origem.titulo || origem.url);
+    link.href = origem.url; link.target = "_blank"; link.rel = "noopener";
+    linha.append(link);
+    linha.append(document.createTextNode(` · read with Tavily${origem.cortado ? `, first ${Number(origem.caracteres_lidos).toLocaleString("en-US")} characters` : ""}. The page itself never counts as proof of its own facts.`));
+  }
   const omitidas = dados.afirmacoes_omitidas ?? [];
   $("omitidas").hidden = omitidas.length === 0;
-  $("omitidas").textContent = omitidas.length ? `${omitidas.length} more claim(s) were not checked to limit cost. Send them separately.` : "";
+  $("omitidas").textContent = !omitidas.length ? ""
+    : origem ? `${omitidas.length} more fact(s) from this page were not checked to limit cost.`
+      : `${omitidas.length} more claim(s) were not checked to limit cost. Send them separately.`;
   $("cartoes").replaceChildren(...afirmacoes.map(a => criarCartao(a, dados.simulado)));
   mostrarCorrigida(dados);
   mostrarTriagem(afirmacoes);

@@ -36,6 +36,8 @@ const LIMITE_CORPO_BYTES = 32 * 1024;
 const LIMITE_TEXTO = PUBLICO ? 1500 : 4000;
 // No modo público, no máximo 3 afirmações por checagem (custo e tempo).
 const MAX_AFIRMACOES = PUBLICO ? 3 : 6;
+// Auditoria de página: um pouco mais de fatos, checados em paralelo.
+const MAX_AFIRMACOES_PAGINA = PUBLICO ? 5 : 8;
 // O modo real lê até 5 fontes diversas por afirmação (oficial, notícia,
 // referência, outros sites, blogs) e as analisa numa única chamada ao modelo
 // por afirmação. Ajustável com ENTRELINHAS_MAX_FONTES (1 a 6).
@@ -122,7 +124,18 @@ function validarPedido(dados) {
   if (!dados || typeof dados !== "object" || Array.isArray(dados)) {
     throw erroDeEntrada("Invalid request format.");
   }
-  const texto = typeof dados.texto === "string" ? dados.texto.trim() : "";
+  let texto = typeof dados.texto === "string" ? dados.texto.trim() : "";
+  // Auditoria de página: um link sozinho (no campo url ou colado no texto).
+  const candidatoUrl = typeof dados.url === "string" && dados.url.trim()
+    ? dados.url.trim()
+    : (/^https?:\/\/\S+$/i.test(texto) ? texto : "");
+  if (candidatoUrl) {
+    const { validarUrlPublica } = require("./src/auditoria-pagina");
+    const url = validarUrlPublica(candidatoUrl);
+    if (!url) throw erroDeEntrada("This link is not a public web page. Use a full link starting with https://.");
+    if (dados.modo !== "real") throw erroDeEntrada("Page checks need live mode.");
+    return { texto: "", url, modo: "real", dominiosOficiais: [], tipo: null, simularQuedaModelo: false };
+  }
   if (!texto) throw erroDeEntrada("Paste an AI answer to check.");
   if (texto.length > LIMITE_TEXTO) {
     throw erroDeEntrada(`The text is longer than ${LIMITE_TEXTO} characters. Send a shorter part.`);
@@ -201,7 +214,7 @@ async function executarVerificacao(pedido) {
     const opcoesComuns = {
       banco,
       maxEvidencias: pedido.modo === "exemplo" ? MAX_EVIDENCIAS_EXEMPLO : MAX_EVIDENCIAS_REAL,
-      maxAfirmacoes: MAX_AFIRMACOES
+      maxAfirmacoes: pedido.url ? MAX_AFIRMACOES_PAGINA : MAX_AFIRMACOES
     };
 
     if (pedido.modo === "exemplo") {
@@ -217,7 +230,14 @@ async function executarVerificacao(pedido) {
     const { verificarTexto } = require("./src/verificador");
     const tiposPorAfirmacao = pedido.tipo ? { afirmacao_1: pedido.tipo } : {};
     const { executarComContextoGateway } = require("./src/bifrost");
-    const resultado = await executarComContextoGateway({ simularQuedaPrincipal: pedido.simularQuedaModelo }, () => verificarTexto(pedido.texto, {
+    // Auditoria de página: a Tavily lê a página (Extract) e o texto dela vira
+    // a entrada; a própria página fica fora das fontes de prova.
+    let pagina = null;
+    if (pedido.url) {
+      const { lerPaginaParaAuditoria } = require("./src/auditoria-pagina");
+      pagina = await lerPaginaParaAuditoria(pedido.url);
+    }
+    const resultado = await executarComContextoGateway({ simularQuedaPrincipal: pedido.simularQuedaModelo }, () => verificarTexto(pagina ? pagina.texto : pedido.texto, {
       ...opcoesComuns,
       dominiosOficiais: pedido.dominiosOficiais,
       tiposPorAfirmacao,
@@ -226,8 +246,13 @@ async function executarVerificacao(pedido) {
       fontesDiversas: true,
       paisAutomatico: true,
       cienciaAutomatica: true,
-      respostaCorrigida: true
+      respostaCorrigida: !pagina,
+      urlsExcluidas: pagina ? [pagina.url] : []
     }));
+    if (pagina) {
+      resultado.origem = { tipo: "PAGINA", url: pagina.url, titulo: pagina.titulo, caracteres_lidos: pagina.caracteres_lidos, cortado: pagina.cortado };
+      resultado.rastreabilidade_pesquisa = [pagina.registro, ...(resultado.rastreabilidade_pesquisa ?? [])];
+    }
     return prepararParaNavegador(resultado, "real");
   } finally {
     banco.fechar();

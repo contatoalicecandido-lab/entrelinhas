@@ -194,8 +194,20 @@ function validarOpcoes(opcoes) {
     tiposPorAfirmacao,
     dominiosOficiais,
     dominiosOficiaisPorTipo,
-    dominiosOficiaisPorAfirmacao
+    dominiosOficiaisPorAfirmacao,
+    // Auditoria de página: a própria página auditada não pode servir de prova
+    // para os fatos dela mesma.
+    urlsExcluidas: Array.isArray(opcoes.urlsExcluidas) ? opcoes.urlsExcluidas.map(normalizarUrlComparavel).filter(Boolean) : []
   };
+}
+
+function normalizarUrlComparavel(valor) {
+  try {
+    const u = new URL(String(valor));
+    return `${u.hostname.replace(/^www\./, "").toLowerCase()}${u.pathname.replace(/\/+$/, "")}`;
+  } catch {
+    return null;
+  }
 }
 
 function obterDominiosOficiais(resultado, opcoes) {
@@ -483,6 +495,12 @@ async function verificarAfirmacao(afirmacao, opcoes) {
   } catch (erro) {
     resultado.erro_busca = erro.message;
     return agregarResultadoAfirmacao(resultado, opcoes);
+  }
+
+  if (opcoes.urlsExcluidas?.length) {
+    evidenciasEncontradas = evidenciasEncontradas.filter(
+      e => !opcoes.urlsExcluidas.includes(normalizarUrlComparavel(e?.url))
+    );
   }
 
   const evidenciasPrioritarias = priorizarFontesOficiais(
@@ -786,5 +804,6 @@ async function verificarTexto(texto, opcoes = {}) {
 }
 
 module.exports = {
+  normalizarUrlComparavel,
   verificarTexto
 };
