@@ -5,6 +5,15 @@
 // Uso: node avaliacao/linha-de-base.js            (os 15 casos de 13 nov)
 //      CASOS=avaliacao/casos-novos-2026-11-13.json node avaliacao/linha-de-base.js
 require("dotenv").config({ quiet: true });
+// LINHA_BASE_WEB=1: o mesmo modelo, agora COM busca na web (plugin web da
+// OpenRouter, sufixo ":online"), sem reservas. Responde à pergunta "e se a IA
+// já pesquisasse na internet, ainda precisaria do Entrelinhas?".
+const COM_WEB = process.env.LINHA_BASE_WEB === "1";
+if (COM_WEB) {
+  const base = (process.env.BIFROST_MODEL || "openrouter/openai/gpt-oss-20b").replace(/:online$/, "");
+  process.env.BIFROST_MODEL = `${base}:online`;
+  process.env.BIFROST_FALLBACKS = "none";
+}
 const fs = require("node:fs");
 const path = require("node:path");
 const { perguntarAoModelo } = require("../src/bifrost");
@@ -30,7 +39,7 @@ function esperaPedida(mensagem) {
 }
 const semIdOrganizacao = texto => String(texto ?? "").replace(/org_[A-Za-z0-9]+/g, "org_<redacted>");
 const nomeBase = process.env.CASOS ? path.basename(process.env.CASOS, ".json").replace(/-\d{4}-\d{2}-\d{2}$/, "") : "casos-reais";
-const destino = process.env.RESULTADO ? path.resolve(process.env.RESULTADO) : path.join(__dirname, `linha-de-base-${nomeBase}-${hoje}.json`);
+const destino = process.env.RESULTADO ? path.resolve(process.env.RESULTADO) : path.join(__dirname, `linha-de-base${COM_WEB ? "-com-busca-web" : ""}-${nomeBase}-${hoje}.json`);
 
 async function perguntarCaso(caso) {
   try {
@@ -74,7 +83,7 @@ async function principal() {
     acuracia_estrita: validas.length ? +(conta("ACERTO") / validas.length).toFixed(3) : null,
     falhas_execucao: linhas.length - validas.length
   };
-  fs.writeFileSync(destino, JSON.stringify({ executado_em: new Date().toISOString(), metodo: "modelo sozinho via Bifrost, sem busca", resumo, linhas }, null, 2));
+  fs.writeFileSync(destino, JSON.stringify({ executado_em: new Date().toISOString(), metodo: COM_WEB ? `mesmo modelo via Bifrost COM busca na web (${process.env.BIFROST_MODEL})` : "modelo sozinho via Bifrost, sem busca", resumo, linhas }, null, 2));
   console.log("\n", resumo, `\nSalvo em ${destino}`);
 }
 
