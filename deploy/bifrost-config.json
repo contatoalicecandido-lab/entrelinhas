@@ -1,10 +1,62 @@
 {
   "$schema": "https://www.getbifrost.ai/schema",
   "config_store": {
-    "enabled": false
+    "enabled": true,
+    "type": "sqlite",
+    "config": {
+      "path": "./config.db"
+    }
   },
   "logs_store": {
     "enabled": false
+  },
+  "governance": {
+    "budgets": [
+      {
+        "id": "budget-site-publico",
+        "max_limit": 2.0,
+        "reset_duration": "1d",
+        "virtual_key_id": "vk-site-publico"
+      }
+    ],
+    "rate_limits": [
+      {
+        "id": "rl-site-publico",
+        "request_max_limit": 300,
+        "request_reset_duration": "1h"
+      }
+    ],
+    "virtual_keys": [
+      {
+        "id": "vk-site-publico",
+        "name": "entrelinhas-public-site",
+        "value": "env.BIFROST_VK_PUBLICO",
+        "is_active": true,
+        "rate_limit_id": "rl-site-publico",
+        "provider_configs": [
+          {
+            "provider": "openrouter",
+            "allowed_models": [
+              "*"
+            ],
+            "key_ids": [
+              "*"
+            ],
+            "weight": 1
+          },
+          {
+            "provider": "groq",
+            "allowed_models": [
+              "*"
+            ],
+            "key_ids": [
+              "*"
+            ],
+            "weight": 1
+          }
+        ]
+      }
+    ]
   },
   "providers": {
     "groq": {
