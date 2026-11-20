@@ -1,0 +1,216 @@
+{
+  "gerado_em": "2026-11-20T19:33:32.895Z",
+  "regras": "1.9.0",
+  "metodo": "Same recorded evidence as the live run, re-scored with the current rules. No new searches or model calls.",
+  "resumo": {
+    "total": 21,
+    "acertos": 10,
+    "parciais": 6,
+    "sem_decisao": 5,
+    "erros": 0,
+    "erros_graves_confirmou_desatualizada": 0,
+    "acuracia_estrita": 0.476,
+    "direcao_correta": 0.762,
+    "nao_rodaram": 1
+  },
+  "linhas": [
+    {
+      "id": "en-abel-berkshire",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "SUPORTE_FRACO",
+      "veredito_regras_atuais": "CORROBORADA",
+      "nota_atualidade": 51,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-20T18-51-03-912Z-greg-abel-is-the-ceo-of-berkshire-hathaway.json"
+    },
+    {
+      "id": "en-buffett-berkshire",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "NAO_VERIFICAVEL",
+      "veredito_regras_atuais": "NAO_VERIFICAVEL",
+      "nota_atualidade": null,
+      "resultado": "SEM_DECISAO",
+      "gravacao": "gravacoes/2026-11-20T18-52-29-242Z-warren-buffett-is-the-ceo-of-berkshire-hathaway.json"
+    },
+    {
+      "id": "en-damaro-disney",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "SUPORTE_FRACO",
+      "veredito_regras_atuais": "SUPORTE_FRACO",
+      "nota_atualidade": 15,
+      "resultado": "PARCIAL",
+      "gravacao": "gravacoes/2026-11-20T18-53-44-413Z-josh-d-amaro-is-the-ceo-of-disney.json"
+    },
+    {
+      "id": "pt-iger-disney",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "CONTRADICAO_FRACA",
+      "veredito_regras_atuais": "CONTRADICAO_FRACA",
+      "nota_atualidade": 5,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-20T18-54-45-932Z-o-ceo-da-disney-e-bob-iger.json"
+    },
+    {
+      "id": "pt-bulgaria-euro",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "SUPORTE_FRACO",
+      "veredito_regras_atuais": "SUPORTE_FRACO",
+      "nota_atualidade": 24,
+      "resultado": "PARCIAL",
+      "gravacao": "gravacoes/2026-11-20T18-55-57-430Z-a-moeda-oficial-da-bulgaria-e-o-euro.json"
+    },
+    {
+      "id": "en-bulgaria-lev",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "CONFLITO",
+      "veredito_regras_atuais": "CONFLITO",
+      "nota_atualidade": 11,
+      "resultado": "PARCIAL",
+      "gravacao": "gravacoes/2026-11-20T18-56-25-855Z-bulgaria-s-currency-is-the-lev.json"
+    },
+    {
+      "id": "en-croatia-kuna",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "NAO_VERIFICAVEL",
+      "veredito_regras_atuais": "NAO_VERIFICAVEL",
+      "nota_atualidade": null,
+      "resultado": "SEM_DECISAO",
+      "gravacao": "gravacoes/2026-11-20T18-58-46-371Z-croatia-s-currency-is-the-kuna.json"
+    },
+    {
+      "id": "en-debian13-stable",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "SUPORTE_FRACO",
+      "veredito_regras_atuais": "SUPORTE_FRACO",
+      "nota_atualidade": 0,
+      "resultado": "PARCIAL",
+      "gravacao": "gravacoes/2026-11-20T18-59-46-801Z-debian-13-trixie-is-the-current-stable-release-o.json"
+    },
+    {
+      "id": "en-debian12-stable",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "CONTRADICAO_FRACA",
+      "veredito_regras_atuais": "CONTRADICAO_FRACA",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-20T19-00-10-474Z-debian-12-bookworm-is-the-current-stable-release.json"
+    },
+    {
+      "id": "pt-ir-5mil",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "CORROBORADA",
+      "veredito_regras_atuais": "CORROBORADA",
+      "nota_atualidade": 81,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-20T19-02-00-445Z-em-2026-quem-ganha-ate-r-5-mil-por-mes-esta-isen.json"
+    },
+    {
+      "id": "pt-ir-2824",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "CONTRADITA_POR_FONTE_ATUAL",
+      "veredito_regras_atuais": "CONTRADITA_POR_FONTE_ATUAL",
+      "nota_atualidade": 1,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-20T19-16-33-553Z-a-isencao-do-imposto-de-renda-vale-so-para-quem-.json"
+    },
+    {
+      "id": "en-tan-intel",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "SUPORTE_FRACO",
+      "veredito_regras_atuais": "SUPORTE_FRACO",
+      "nota_atualidade": 4,
+      "resultado": "PARCIAL",
+      "gravacao": "gravacoes/2026-11-20T19-02-35-109Z-lip-bu-tan-is-the-ceo-of-intel.json"
+    },
+    {
+      "id": "en-gelsinger-intel",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "NAO_VERIFICAVEL",
+      "veredito_regras_atuais": "NAO_VERIFICAVEL",
+      "nota_atualidade": null,
+      "resultado": "SEM_DECISAO",
+      "gravacao": "gravacoes/2026-11-20T19-17-30-305Z-pat-gelsinger-is-the-ceo-of-intel.json"
+    },
+    {
+      "id": "en-guterres-un",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "SUPORTE_FRACO",
+      "veredito_regras_atuais": "CORROBORADA",
+      "nota_atualidade": 62,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-20T19-18-13-999Z-antonio-guterres-is-the-secretary-general-of-the.json"
+    },
+    {
+      "id": "en-macos27-newest",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "CORROBORADA",
+      "veredito_regras_atuais": "CORROBORADA",
+      "nota_atualidade": 79,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-20T19-19-07-824Z-macos-27-golden-gate-is-the-newest-version-of-ma.json"
+    },
+    {
+      "id": "en-tahoe-newest",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "CONFLITO",
+      "veredito_regras_atuais": "CONFLITO",
+      "nota_atualidade": 38,
+      "resultado": "PARCIAL",
+      "gravacao": "gravacoes/2026-11-20T19-20-05-267Z-macos-tahoe-is-the-newest-version-of-macos.json"
+    },
+    {
+      "id": "pt-teto-inss-8475",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": null,
+      "veredito_regras_atuais": null,
+      "nota_atualidade": null,
+      "resultado": "NAO_RODOU",
+      "gravacao": null
+    },
+    {
+      "id": "pt-teto-inss-8157",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "CONTRADICAO_FRACA",
+      "veredito_regras_atuais": "CONTRADICAO_FRACA",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-20T19-21-45-631Z-o-teto-do-inss-hoje-e-de-r-8-157-41.json"
+    },
+    {
+      "id": "pt-bpc-1621",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "CORROBORADA",
+      "veredito_regras_atuais": "CORROBORADA",
+      "nota_atualidade": 36,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-20T19-22-09-757Z-o-bpc-pago-a-idosos-e-pessoas-com-deficiencia-e-.json"
+    },
+    {
+      "id": "pt-bpc-1518",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "NAO_VERIFICAVEL",
+      "veredito_regras_atuais": "NAO_VERIFICAVEL",
+      "nota_atualidade": 0,
+      "resultado": "SEM_DECISAO",
+      "gravacao": "gravacoes/2026-11-20T19-22-49-213Z-o-bpc-pago-a-idosos-e-pessoas-com-deficiencia-e-.json"
+    },
+    {
+      "id": "en-spotify-1299",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "CONFLITO",
+      "veredito_regras_atuais": "CONFLITO",
+      "nota_atualidade": 55,
+      "resultado": "SEM_DECISAO",
+      "gravacao": "gravacoes/2026-11-20T19-23-40-064Z-spotify-premium-individual-costs-12-99-per-month.json"
+    },
+    {
+      "id": "en-spotify-1199",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "NAO_VERIFICAVEL",
+      "veredito_regras_atuais": "CONTRADICAO_FRACA",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-20T19-24-35-279Z-spotify-premium-individual-costs-11-99-per-month.json"
+    }
+  ]
+}

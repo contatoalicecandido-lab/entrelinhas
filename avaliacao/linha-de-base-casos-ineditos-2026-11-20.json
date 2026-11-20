@@ -1,0 +1,169 @@
+{
+  "executado_em": "2026-11-20T19:28:13.546Z",
+  "metodo": "modelo sozinho via Bifrost, sem busca",
+  "resumo": {
+    "total": 22,
+    "acertos": 11,
+    "sem_decisao": 0,
+    "erros": 8,
+    "erros_graves_confirmou_desatualizada": 3,
+    "acuracia_estrita": 0.5,
+    "falhas_execucao": 0
+  },
+  "linhas": [
+    {
+      "id": "en-abel-berkshire",
+      "esperado": "ATUAL",
+      "resposta": "OUTDATED",
+      "resultado": "ERRO",
+      "erro": null
+    },
+    {
+      "id": "en-buffett-berkshire",
+      "esperado": "DESATUALIZADA",
+      "resposta": "TRUE",
+      "resultado": "ERRO_GRAVE",
+      "erro": null
+    },
+    {
+      "id": "en-damaro-disney",
+      "esperado": "ATUAL",
+      "resposta": "OUTDATED",
+      "resultado": "ERRO",
+      "erro": null
+    },
+    {
+      "id": "pt-iger-disney",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "pt-bulgaria-euro",
+      "esperado": "ATUAL",
+      "resposta": "OUTDATED",
+      "resultado": "ERRO",
+      "erro": null
+    },
+    {
+      "id": "en-bulgaria-lev",
+      "esperado": "DESATUALIZADA",
+      "resposta": "TRUE",
+      "resultado": "ERRO_GRAVE",
+      "erro": null
+    },
+    {
+      "id": "en-croatia-kuna",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-debian13-stable",
+      "esperado": "ATUAL",
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-debian12-stable",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "pt-ir-5mil",
+      "esperado": "ATUAL",
+      "resposta": "OUTDATED",
+      "resultado": "ERRO",
+      "erro": null
+    },
+    {
+      "id": "pt-ir-2824",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-tan-intel",
+      "esperado": "ATUAL",
+      "resposta": "OUTDATED",
+      "resultado": "ERRO",
+      "erro": null
+    },
+    {
+      "id": "en-gelsinger-intel",
+      "esperado": "DESATUALIZADA",
+      "resposta": "TRUE",
+      "resultado": "ERRO_GRAVE",
+      "erro": null
+    },
+    {
+      "id": "en-guterres-un",
+      "esperado": "ATUAL",
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-macos27-newest",
+      "esperado": "ATUAL",
+      "resposta": "OUTDATED",
+      "resultado": "ERRO",
+      "erro": null
+    },
+    {
+      "id": "en-tahoe-newest",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "pt-teto-inss-8475",
+      "esperado": "ATUAL",
+      "resposta": "OUTDATED",
+      "resultado": "ERRO",
+      "erro": null
+    },
+    {
+      "id": "pt-teto-inss-8157",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "pt-bpc-1621",
+      "esperado": "ATUAL",
+      "resposta": "OUTDATED",
+      "resultado": "ERRO",
+      "erro": null
+    },
+    {
+      "id": "pt-bpc-1518",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-spotify-1299",
+      "esperado": "ATUAL",
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
+    },
+    {
+      "id": "en-spotify-1199",
+      "esperado": "DESATUALIZADA",
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
+    }
+  ]
+}

@@ -1,0 +1,326 @@
+{
+  "executado_em": "2026-11-20T19:24:35.297Z",
+  "servidor": "http://127.0.0.1:3001",
+  "resumo": {
+    "total": 21,
+    "acertos": 7,
+    "parciais": 8,
+    "sem_decisao": 6,
+    "erros": 0,
+    "erros_graves_confirmou_desatualizada": 0,
+    "acuracia_estrita": 0.333,
+    "direcao_correta": 0.714,
+    "falhas_execucao": 1,
+    "gateway": {
+      "chamadas_ao_modelo": 71,
+      "respondidas_por_modelo_reserva": 0,
+      "respostas_invalidas_refeitas": 1
+    }
+  },
+  "linhas": [
+    {
+      "id": "en-abel-berkshire",
+      "esperado": "ATUAL",
+      "veredito": "SUPORTE_FRACO",
+      "nota_atualidade": 51,
+      "resultado": "PARCIAL",
+      "segundos": 54,
+      "gateway": {
+        "chamadas": 4,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-buffett-berkshire",
+      "esperado": "DESATUALIZADA",
+      "veredito": "NAO_VERIFICAVEL",
+      "nota_atualidade": null,
+      "resultado": "SEM_DECISAO",
+      "segundos": 77,
+      "gateway": {
+        "chamadas": 4,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-damaro-disney",
+      "esperado": "ATUAL",
+      "veredito": "SUPORTE_FRACO",
+      "nota_atualidade": 15,
+      "resultado": "PARCIAL",
+      "segundos": 67,
+      "gateway": {
+        "chamadas": 4,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "pt-iger-disney",
+      "esperado": "DESATUALIZADA",
+      "veredito": "CONTRADICAO_FRACA",
+      "nota_atualidade": 5,
+      "resultado": "ACERTO",
+      "segundos": 54,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "pt-bulgaria-euro",
+      "esperado": "ATUAL",
+      "veredito": "SUPORTE_FRACO",
+      "nota_atualidade": 24,
+      "resultado": "PARCIAL",
+      "segundos": 63,
+      "gateway": {
+        "chamadas": 4,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-bulgaria-lev",
+      "esperado": "DESATUALIZADA",
+      "veredito": "CONFLITO",
+      "nota_atualidade": 11,
+      "resultado": "PARCIAL",
+      "segundos": 20,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-croatia-kuna",
+      "esperado": "DESATUALIZADA",
+      "veredito": "NAO_VERIFICAVEL",
+      "nota_atualidade": null,
+      "resultado": "SEM_DECISAO",
+      "segundos": 133,
+      "gateway": {
+        "chamadas": 4,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 1
+      },
+      "erro": null
+    },
+    {
+      "id": "en-debian13-stable",
+      "esperado": "ATUAL",
+      "veredito": "SUPORTE_FRACO",
+      "nota_atualidade": 0,
+      "resultado": "PARCIAL",
+      "segundos": 52,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-debian12-stable",
+      "esperado": "DESATUALIZADA",
+      "veredito": "CONTRADICAO_FRACA",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "segundos": 16,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "pt-ir-5mil",
+      "esperado": "ATUAL",
+      "veredito": "CORROBORADA",
+      "nota_atualidade": 81,
+      "resultado": "ACERTO",
+      "segundos": 102,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "pt-ir-2824",
+      "esperado": "DESATUALIZADA",
+      "veredito": "CONTRADITA_POR_FONTE_ATUAL",
+      "nota_atualidade": 1,
+      "resultado": "ACERTO",
+      "segundos": 89,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-tan-intel",
+      "esperado": "ATUAL",
+      "veredito": "SUPORTE_FRACO",
+      "nota_atualidade": 4,
+      "resultado": "PARCIAL",
+      "segundos": 15,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-gelsinger-intel",
+      "esperado": "DESATUALIZADA",
+      "veredito": "NAO_VERIFICAVEL",
+      "nota_atualidade": null,
+      "resultado": "SEM_DECISAO",
+      "segundos": 49,
+      "gateway": {
+        "chamadas": 4,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-guterres-un",
+      "esperado": "ATUAL",
+      "veredito": "SUPORTE_FRACO",
+      "nota_atualidade": 62,
+      "resultado": "PARCIAL",
+      "segundos": 36,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-macos27-newest",
+      "esperado": "ATUAL",
+      "veredito": "CORROBORADA",
+      "nota_atualidade": 79,
+      "resultado": "ACERTO",
+      "segundos": 46,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-tahoe-newest",
+      "esperado": "DESATUALIZADA",
+      "veredito": "CONFLITO",
+      "nota_atualidade": 26,
+      "resultado": "PARCIAL",
+      "segundos": 49,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "pt-teto-inss-8475",
+      "esperado": "ATUAL",
+      "veredito": null,
+      "nota_atualidade": null,
+      "resultado": "FALHA_EXECUCAO",
+      "segundos": 2,
+      "gateway": null,
+      "erro": "An external service (search or AI model) failed. Details are in the server log; try again in a few minutes."
+    },
+    {
+      "id": "pt-teto-inss-8157",
+      "esperado": "DESATUALIZADA",
+      "veredito": "CONTRADICAO_FRACA",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "segundos": 82,
+      "gateway": {
+        "chamadas": 5,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "pt-bpc-1621",
+      "esperado": "ATUAL",
+      "veredito": "CORROBORADA",
+      "nota_atualidade": 36,
+      "resultado": "ACERTO",
+      "segundos": 16,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "pt-bpc-1518",
+      "esperado": "DESATUALIZADA",
+      "veredito": "NAO_VERIFICAVEL",
+      "nota_atualidade": 0,
+      "resultado": "SEM_DECISAO",
+      "segundos": 31,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-spotify-1299",
+      "esperado": "ATUAL",
+      "veredito": "CONFLITO",
+      "nota_atualidade": 54,
+      "resultado": "SEM_DECISAO",
+      "segundos": 43,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    },
+    {
+      "id": "en-spotify-1199",
+      "esperado": "DESATUALIZADA",
+      "veredito": "NAO_VERIFICAVEL",
+      "nota_atualidade": 0,
+      "resultado": "SEM_DECISAO",
+      "segundos": 47,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
+    }
+  ]
+}

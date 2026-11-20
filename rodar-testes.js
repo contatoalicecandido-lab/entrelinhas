@@ -9,6 +9,7 @@ const TESTES = [
   "testes/teste-regras-1-4-0.js",
   "testes/teste-regras-1-6-0.js",
   "testes/teste-regras-1-7-0.js",
+  "testes/teste-regras-1-9-0.js",
   "testes/teste-auditoria-pagina.js",
   "testes/teste-prazo.js",
   "testes/teste-servidor-publico.js",

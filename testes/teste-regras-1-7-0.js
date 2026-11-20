@@ -9,7 +9,7 @@ const { INSTRUCOES_DECOMPOSICAO } = require("../src/afirmacoes");
 const { INSTRUCOES } = require("../src/resposta-corrigida");
 
 const hoje = new Date("2026-11-14T12:00:00Z");
-assert.ok(["1.7.0", "1.8.0"].includes(VERSAO_REGRAS));
+assert.ok(["1.7.0", "1.8.0", "1.9.0"].includes(VERSAO_REGRAS));
 
 // O que é e o que não é fato histórico.
 for (const t of ["He co-founded NVIDIA in 1993.", "A Nvidia foi fundada em 1993.", "Apple launched the iPhone in 2007.", "Node.js 20 was released in 2023.", "Lula foi eleito em 2022."]) {

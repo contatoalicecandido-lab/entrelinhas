@@ -12,6 +12,13 @@ const NOTICIAS = [
   "economist.com", "forbes.com", "axios.com", "techcrunch.com", "theverge.com",
   "wired.com", "arstechnica.com", "zdnet.com", "engadget.com", "venturebeat.com",
   "theinformation.com", "businessinsider.com", "politico.com", "npr.org", "aljazeera.com",
+  // regras 1.9.0: grandes redações que antes caíam em "outro site"
+  "cbsnews.com", "nbcnews.com", "abcnews.go.com", "usatoday.com", "latimes.com", "fortune.com",
+  "marketwatch.com", "barrons.com", "foxbusiness.com", "finance.yahoo.com", "news.yahoo.com",
+  "economictimes.indiatimes.com", "timesofindia.indiatimes.com", "theatlantic.com", "time.com",
+  "newsweek.com", "cbc.ca", "dw.com", "france24.com", "euronews.com", "lemonde.fr", "elpais.com",
+  "spiegel.de", "nikkei.com", "scmp.com", "theregister.com", "techradar.com", "macrumors.com",
+  "9to5mac.com", "9to5google.com", "macworld.com", "tomshardware.com", "theinformation.com",
   // brasileiras
   "g1.globo.com", "globo.com", "oglobo.globo.com", "valor.globo.com", "folha.uol.com.br",
   "uol.com.br", "estadao.com.br", "cnnbrasil.com.br", "exame.com", "infomoney.com.br",
@@ -118,8 +125,11 @@ function pertence(h, lista) {
 function pareceGoverno(h) {
   // ".gov" só vale no FIM do endereço (gov.br, gov.uk, nih.gov): um site como
   // salario.gov.br.noticias-hoje.com não é governo.
+  // Regras 1.9.0: organismos internacionais (.int, un.org) também falam
+  // oficialmente pelos fatos deles (o secretário-geral da ONU, por exemplo).
   return /(^|\.)gov(\.[a-z]{2})?$/.test(h) || /(^|\.)(jus|leg|mil|mp|def)\.br$/.test(h) ||
-    /(^|\.)europa\.eu$/.test(h) || /(^|\.)gob\.[a-z]{2}$/.test(h);
+    /(^|\.)europa\.eu$/.test(h) || /(^|\.)gob\.[a-z]{2}$/.test(h) ||
+    /(^|\.)un\.org$/.test(h) || /\.int$/.test(h);
 }
 
 /**

@@ -11,7 +11,7 @@ assert.match(INSTRUCOES_LOTE, /use CONTRADICTS, not INSUFFICIENT/);
 // O limite da regra também precisa estar escrito, para não virar contradição demais.
 assert.match(INSTRUCOES_LOTE, /stays INSUFFICIENT/);
 assert.match(INSTRUCOES_LOTE, /does not contradict a claim about\s+support of an older one/);
-assert.ok(["1.6.0", "1.7.0", "1.8.0"].includes(VERSAO_REGRAS));
+assert.ok(["1.6.0", "1.7.0", "1.8.0", "1.9.0"].includes(VERSAO_REGRAS));
 console.log("ok regras 1.6.0: sucessor nomeado contradiz");
 // Regras 1.8.0: não deduzir status de datas (caso Node.js 24 "Active LTS").
 assert.match(INSTRUCOES_LOTE, /NO INFERENCE/);
