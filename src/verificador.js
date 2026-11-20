@@ -729,7 +729,8 @@ async function verificarTexto(texto, opcoes = {}) {
     texto,
     {
       idVerificacao,
-      onMetadata: registrarChamadaModelo
+      onMetadata: registrarChamadaModelo,
+      ...(opcoes.origemTexto === "pagina" ? { origem: "pagina" } : {})
     }
   );
 

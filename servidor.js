@@ -249,7 +249,8 @@ async function executarVerificacao(pedido) {
       paisAutomatico: true,
       cienciaAutomatica: true,
       respostaCorrigida: !pagina,
-      urlsExcluidas: pagina ? [pagina.url] : []
+      urlsExcluidas: pagina ? [pagina.url] : [],
+      origemTexto: pagina ? "pagina" : "texto"
     }));
     if (pagina) {
       resultado.origem = { tipo: "PAGINA", url: pagina.url, titulo: pagina.titulo, caracteres_lidos: pagina.caracteres_lidos, cortado: pagina.cortado };

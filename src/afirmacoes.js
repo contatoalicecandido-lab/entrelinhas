@@ -156,14 +156,28 @@ function validarAfirmacoes(resultado) {
   });
 }
 
+// Auditoria de página: o texto vem de uma página inteira, com títulos, avisos
+// e chamadas que não são fatos sobre o mundo.
+const INSTRUCOES_PAGINA = `
+
+MODO PÁGINA:
+O texto é o conteúdo de uma página da web (central de ajuda, FAQ, página de
+preços). Extraia SOMENTE afirmações factuais verificáveis sobre o mundo:
+preços, valores, cargos, versões, regras, prazos, moedas, datas. Ignore
+títulos e subtítulos, menus, avisos sobre a própria página ou o site,
+instruções ao leitor ("cole este link", "clique aqui"), chamadas para ação,
+datas de revisão da página e frases sobre quem escreveu a página. Na dúvida
+se algo é um fato sobre o mundo, não inclua.`;
+
 async function decomporEmAfirmacoes(texto, opcoes = {}) {
   validarTexto(texto);
+  const { origem, ...opcoesModelo } = opcoes;
 
   const resposta = await perguntarAoModelo(
     JSON.stringify({ idioma_do_texto: NOMES_IDIOMA[detectarIdioma(texto).idioma] ?? "o mesmo do texto", texto: texto.trim() }),
-    INSTRUCOES_DECOMPOSICAO,
+    origem === "pagina" ? INSTRUCOES_DECOMPOSICAO + INSTRUCOES_PAGINA : INSTRUCOES_DECOMPOSICAO,
     {
-      ...opcoes,
+      ...opcoesModelo,
       etapa: "DECOMPOSICAO"
     }
   );
@@ -175,5 +189,6 @@ async function decomporEmAfirmacoes(texto, opcoes = {}) {
 
 module.exports = {
   INSTRUCOES_DECOMPOSICAO,
+  INSTRUCOES_PAGINA,
   decomporEmAfirmacoes
 };

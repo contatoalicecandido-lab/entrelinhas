@@ -52,8 +52,9 @@ assert.equal(normalizarUrlComparavel("https://www.Example.com/faq/"), normalizar
   const Module = require("node:module");
   const ARQ = path.join(__dirname, "..", "src", "verificador.js");
   let analisadas = null;
+  let origemRecebida = null;
   const simulados = {
-    "./afirmacoes": { async decomporEmAfirmacoes() { return [{ id: "afirmacao_1", texto: "O plano Básico custa R$ 29,90 por mês.", categoria_sugerida: "preco" }]; } },
+    "./afirmacoes": { async decomporEmAfirmacoes(_t, o) { origemRecebida = o?.origem ?? null; return [{ id: "afirmacao_1", texto: "O plano Básico custa R$ 29,90 por mês.", categoria_sugerida: "preco" }]; } },
     "./tavily": { async pesquisarComTavily() {
       return [
         { url: "https://www.help.example.com/precos/", title: "Própria página", content: "O plano Básico custa R$ 29,90 por mês." },
@@ -73,10 +74,17 @@ assert.equal(normalizarUrlComparavel("https://www.Example.com/faq/"), normalizar
   const { criarBanco } = require("../src/banco");
   const banco = criarBanco({ caminho: ":memory:" });
   try {
-    const r = await verificarTexto("O plano Básico custa R$ 29,90 por mês.", { banco, maxEvidencias: 3, urlsExcluidas: ["https://help.example.com/precos"] });
+    const r = await verificarTexto("O plano Básico custa R$ 29,90 por mês.", { banco, maxEvidencias: 3, urlsExcluidas: ["https://help.example.com/precos"], origemTexto: "pagina" });
+    assert.equal(origemRecebida, "pagina");
     const urls = r.afirmacoes[0].evidencias.map(e => e.fonte?.url ?? e.url);
     assert.ok(!urls.some(u => /help\.example\.com/.test(String(u))), `fontes: ${JSON.stringify(urls)}`);
     assert.ok(urls.some(u => /noticias\.example\.org/.test(String(u))), `fontes: ${JSON.stringify(urls)}`);
   } finally { banco.fechar(); }
   console.log("ok auditoria de página: link, limpeza, leitura pela Tavily, página excluída das provas");
 })().catch(e => { console.error(e); process.exit(1); });
+// Modo página: a separação em fatos ignora títulos, avisos e instruções.
+{
+  const { INSTRUCOES_PAGINA } = require("../src/afirmacoes");
+  require("node:assert/strict").match(INSTRUCOES_PAGINA, /SOMENTE afirmações factuais/);
+  require("node:assert/strict").match(INSTRUCOES_PAGINA, /avisos sobre a própria página/);
+}
