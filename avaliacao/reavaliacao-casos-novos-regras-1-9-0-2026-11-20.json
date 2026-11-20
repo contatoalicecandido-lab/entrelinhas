@@ -1,0 +1,90 @@
+{
+  "gerado_em": "2026-11-20T20:23:50.092Z",
+  "regras": "1.9.0",
+  "metodo": "Same recorded evidence as the live run, re-scored with the current rules. No new searches or model calls.",
+  "resumo": {
+    "total": 8,
+    "acertos": 7,
+    "parciais": 0,
+    "sem_decisao": 1,
+    "erros": 0,
+    "erros_graves_confirmou_desatualizada": 0,
+    "acuracia_estrita": 0.875,
+    "direcao_correta": 0.875,
+    "nao_rodaram": 0
+  },
+  "linhas": [
+    {
+      "id": "en-nadella-ceo",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "CORROBORADA",
+      "veredito_regras_atuais": "CORROBORADA",
+      "nota_atualidade": 11,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-13T23-45-39-677Z-satya-nadella-is-the-ceo-of-microsoft.json"
+    },
+    {
+      "id": "en-pichai-ceo",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "CORROBORADA",
+      "veredito_regras_atuais": "CORROBORADA",
+      "nota_atualidade": 91,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-13T23-46-36-791Z-sundar-pichai-is-the-ceo-of-alphabet-google-s-pa.json"
+    },
+    {
+      "id": "pt-salario-diario",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "CORROBORADA",
+      "veredito_regras_atuais": "ATUAL",
+      "nota_atualidade": 51,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-13T23-47-40-110Z-em-2026-o-valor-diario-do-salario-minimo-e-de-r-.json"
+    },
+    {
+      "id": "en-python312-security",
+      "esperado": "ATUAL",
+      "veredito_na_rodada": "CORROBORADA",
+      "veredito_regras_atuais": "CORROBORADA",
+      "nota_atualidade": 82,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-14T00-09-08-795Z-python-3-12-still-receives-official-security-fix.json"
+    },
+    {
+      "id": "en-node18-support",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "CONTRADICAO_FRACA",
+      "veredito_regras_atuais": "CONTRADICAO_FRACA",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-14T01-47-46-782Z-node-js-18-is-still-officially-supported-with-se.json"
+    },
+    {
+      "id": "en-python38-security",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "CONTRADITA_POR_FONTE_ATUAL",
+      "veredito_regras_atuais": "CONTRADITA_POR_FONTE_ATUAL",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-14T01-48-34-806Z-python-3-8-still-receives-official-security-upda.json"
+    },
+    {
+      "id": "en-ubuntu2004-standard",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "CONTRADICAO_FRACA",
+      "veredito_regras_atuais": "CONTRADICAO_FRACA",
+      "nota_atualidade": 0,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-14T01-49-17-982Z-ubuntu-20-04-lts-is-still-in-standard-support.json"
+    },
+    {
+      "id": "pt-salario-1412",
+      "esperado": "DESATUALIZADA",
+      "veredito_na_rodada": "NAO_VERIFICAVEL",
+      "veredito_regras_atuais": "NAO_VERIFICAVEL",
+      "nota_atualidade": null,
+      "resultado": "SEM_DECISAO",
+      "gravacao": "gravacoes/2026-11-14T01-50-39-316Z-o-salario-minimo-atual-no-brasil-e-de-r-1-412.json"
+    }
+  ]
+}

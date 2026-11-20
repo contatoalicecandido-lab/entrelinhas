@@ -15,6 +15,8 @@ For every answer it shows, in this order:
    - **every source** with its stance, a quote checked against the source text, and its dates.
 4. **The AI gateway panel**: which model answered each step through Bifrost, whether a backup model took over, tokens and latency.
 
+**Audit a page, not only an answer.** Paste the link of a help center, FAQ or pricing page instead of text. Tavily reads the page (Extract), Entrelinhas keeps only the facts about the world (prices, values, roles, versions, rules) and checks each one against today's sources. The audited page never counts as proof of its own facts. This is the problem behind many support chatbots: a help page nobody revisits keeps feeding them old answers. Try it with our sample page, written with outdated facts on purpose: <https://contatoalicecandido-lab.github.io/entrelinhas/pagina-exemplo.html>.
+
 It is **built for Portuguese, not translated into it**. It reads:
 - Brazilian number and currency formats;
 - qualifiers such as “a partir de” and “cerca de”;
@@ -22,9 +24,9 @@ It is **built for Portuguese, not translated into it**. It reads:
 - slang such as “9 pau” (R$ 9 mil), “50 conto” and “zap”;
 - Brazilian authorities (Banco Central, gov.br, Anatel…), which it searches automatically.
 
-**Check your own text live:** <https://entrelinhas-qwgp.onrender.com/>. Paste any AI answer and it runs now, with Tavily and Bifrost (OpenRouter, Groq as backup). Limits protect the credits: 5 live checks per person and 25 in total per day, up to 3 claims each; the free server sleeps when idle, so the first check can take a minute longer.
+**Check your own text live:** <https://entrelinhas-qwgp.onrender.com/>. Paste any AI answer and it runs now, with Tavily and Bifrost (OpenRouter, Groq as backup). Limits protect the credits: 5 live checks per person and 25 in total per day, up to 3 claims per answer or 5 facts per page; on top of that, the site calls the model through a Bifrost virtual key with a daily budget and an hourly rate limit. The free server sleeps when idle, so the first check can take a minute longer.
 
-**Try it now, no install:** <https://contatoalicecandido-lab.github.io/entrelinhas/>. Click **See a real check**. The public demo replays real live checks (real Tavily searches, real model calls through Bifrost) and the built-in examples, without API keys. To check your own text, run it locally (see [Getting started](#getting-started)).
+**Try it now, no install:** <https://contatoalicecandido-lab.github.io/entrelinhas/>. Click **See a real check**. The public demo replays real live checks (real Tavily searches, real model calls through Bifrost) and the built-in examples, without API keys. Text or a link typed there opens on the live site.
 
 **Check any AI answer from any site:** with Entrelinhas running locally, drag the **Check with Entrelinhas** button (on the page, in the section “Use Entrelinhas on any AI app”) to your bookmarks bar. Select an answer on ChatGPT, Gemini or any page and click it: Entrelinhas opens with the text ready. Apps can call the same check with `POST /api/verificar` (see [API](#api)).
 
@@ -115,6 +117,35 @@ Calibrating the windows against labeled cases is future work, using the benchmar
 - Freshness does not guarantee truth.
 
 ## Accuracy on real claims
+
+**Summary.** 73 real claims with known answers, in four sets written between 12 and 19 Nov 2026, each set run live and then re-scored with the current rules (1.9.0) from the same recorded evidence, plus the same model asked alone:
+
+| 73 real claims | Entrelinhas (rules 1.9.0) | Same model alone, no search |
+|---|---|---|
+| Exact verdict | **50** | 42 |
+| Wrong with confidence (a true claim marked red, or an outdated claim marked green) | **1** | **28** |
+| Cautious (yellow, conflicting or not verifiable) | 22 | 3 |
+
+On the last 22 claims we also asked the same model **with web search** (OpenRouter's web plugin): it got **20 exact**, better than Entrelinhas on simple yes/no questions, and **1 wrong with confidence**, on Brazil's income tax exemption. Details in [Unseen set](#unseen-set-22-claims-written-on-19-nov). An AI with search gives you an answer; Entrelinhas shows its work: which sources agree, what kind they are, how recent they are, quotes checked against each page, and a warning instead of a guess when the evidence is weak.
+
+### Unseen set: 22 claims written on 19 Nov
+
+`avaliacao/casos-ineditos-2026-11-19.json`: 11 true and 11 outdated (8 in Portuguese), each answer backed by two or three sources, written after rules 1.8.0 and never used to tune them before the run. Topics: CEOs who changed in 2026 (Berkshire Hathaway, Disney, Intel), Bulgaria's switch to the euro, Debian 13, macOS 27, Brazil's 2026 income tax exemption, INSS ceiling and BPC, Spotify's US price and the UN Secretary-General.
+
+| Same 22 claims | Entrelinhas live (rules 1.8.0) | Entrelinhas, same evidence, rules 1.9.0 | Model alone | Model with web search |
+|---|---|---|---|---|
+| Exact | 8 | 11 | 11 | **20** |
+| Wrong with confidence | **0** | **0** | 11 | 1 |
+| Cautious | 14 | 11 | 0 | 1 |
+
+Files: `resultado-casos-ineditos-2026-11-19.json` (live), `reavaliacao-casos-ineditos-regras-1-9-0-2026-11-20.json` (re-scored), `linha-de-base-casos-ineditos-2026-11-20.json` and `linha-de-base-com-busca-web-casos-ineditos-2026-11-20.json` (`LINHA_BASE_WEB=1 node avaliacao/linha-de-base.js`, the same model through Bifrost with `:online`).
+
+What this run showed, without softening it:
+- **The model alone is dangerous**: it said Warren Buffett still runs Berkshire Hathaway, Pat Gelsinger still runs Intel and Bulgaria still uses the lev, and called the 2026 income tax exemption, the INSS ceiling and macOS 27 outdated.
+- **An AI with web search is strong** on single yes/no questions. Its one confident error was Brazil's income tax exemption ("only up to R$ 2,824"), which Entrelinhas marked *Likely outdated* from a current official source.
+- **Entrelinhas was too cautious.** It never claimed something false with confidence, but many true claims stayed yellow. Looking at the evidence, the main cause was source types: CBS News, Yahoo Finance and the Economic Times counted as "other website", and un.org was not official, so a true claim had no strong supporting source. Rules 1.9.0 fix that (`testes/teste-regras-1-9-0.js`) and move 3 claims to exact with no new error, and no claim of the earlier sets got worse. **The 1.9.0 column was written after seeing these cases**, so the independent result is the live column.
+- One check failed once with an external service error and was re-run (`pt-teto-inss-8475`), already with rules 1.9.0.
+
 
 `avaliacao/casos-reais-2026-11.json` lists 15 real claims with answers known on 12 Nov 2026, 8 still true and 7 outdated, in Portuguese and English: minimum wage, Selic, Netflix prices, dengue vaccine, LGPD, Pix, Node.js 20 and 22, ChatGPT Plus, OpenAI's CEO, Python 2, Twitter's CEO and GPT-4. Each case lists the sources used to set the answer.
 
@@ -234,7 +265,7 @@ The model alone also called Brazil's current minimum wage (R$ 1.621), the curren
 - **The partial case.** Netflix found sources with both the old and the new price, so the verdict was *Conflicting* instead of contradicted. It still tells the reader not to rely on the claim.
 - **Low freshness on true claims.** Some true claims (Pix, ChatGPT Plus) come back with a low freshness score. That is intended: the non-blog sources that confirm them are older than the window for that kind of fact, so the report labels them *Aging* and suggests looking for a recent source.
 - **Tuned on the same cases.** The rules were improved after the first run on these same 15 claims, so those numbers are not an independent accuracy estimate; the 8 new claims above are.
-- **Small sample.** 51 distinct claims in all (15 + 8 + 28) show behavior; they are not a statistical accuracy estimate. Across them, against the same model alone: 35 exact vs 31, and 1 confident wrong answer (an outdated claim confirmed green) vs 17 (5 on the first 23 claims, 12 on these 28). The first 23 use rules 1.5.0 on their recorded evidence; the 28 use rules 1.6.0 live.
+- **Small sample.** 73 distinct claims in all (15 + 8 + 28 + 22) show behavior; they are not a statistical accuracy estimate. See the summary at the top of this section for the totals with rules 1.9.0.
 
 **Bifrost during this run** (`avaliacao/gateway-casos-reais-2026-11-13.json`, built by `node avaliacao/resumir-gateway.js 2026-11-13T13` from the 15 recorded checks in `gravacoes/`): 60 model calls, **22 answered by the backup model** when the main one hit the free tier's limit, 4 answers in an invalid format that Entrelinhas retried, and all 15 checks finished.
 
@@ -264,6 +295,10 @@ What the run taught us, already fixed:
 - The larger run of 14 Nov found a serious error (Python 3.14 confirmed as the newest release by old pages). Rules 1.5.0: a claim that says it holds *now* (“newest”, “latest”, “still”, “currently”, “mais recente”, “atualmente”, “ainda”) is not green when every confirming source is older than its window (`testes/teste-regras-1-4-0.js`). Re-scoring all earlier runs with 1.5.0 moved no other case between exact, partial, no decision and error.
 - Rules 1.6.0: a source that names a successor (a new holder of the role, a newer release in the same line, a replaced date) contradicts a claim that the old one is current; a source that only mentions another version does not (`testes/teste-regras-1-6-0.js`). Re-run live on the 28 claims of 14 Nov, see *Rules 1.6.0* above. The 15 + 8 earlier claims were not re-run with 1.6.0.
 - Rules 1.7.0, after a live test with a real ChatGPT answer about Nvidia: a past event with a date ("co-founded Nvidia in 1993") no longer gets a freshness score or a "getting old" warning, because an old source proves it as well as a new one (`src/fato-historico.js`, conservative: an event verb, a past year, and no "now", "still" or "since"); claims are split so each one makes sense alone ("He has led the company" becomes "Jensen Huang has led Nvidia"); and the corrected answer changes only the part the sources contradict. None of the 101 recorded checks contains a claim affected by the historical rule, so the benchmark numbers do not change (`testes/teste-regras-1-7-0.js`).
+- Rules 1.8.0: the model may not infer a status from other facts. An end-of-support date or a list of versions does not prove that something is "the current Active LTS"; the source has to say it (the Node.js 24 error of 14 Nov). Claims of one answer are now checked in parallel (`VERIFICACAO_PARALELA`, default 3), so a three-claim answer takes about as long as its slowest claim.
+- Rules 1.9.0, after the unseen set of 19 Nov (see above): major newsrooms (CBS News, NBC News, Yahoo Finance, the Economic Times and others) count as news, and international organizations (`.int`, `un.org`) as official sources.
+- Page audit (19 Nov): `POST /api/verificar` also takes `{"url": "...", "modo": "real"}`; see [What Entrelinhas does](#entrelinhas).
+- The public site calls the model through a Bifrost virtual key with a US$ 2 daily budget and 300 calls an hour (`deploy/bifrost-config.json`, governance). When the budget runs out, Bifrost refuses the call before any spend and the page says so.
 - A live re-run that night found one more: when the free model tier slowed down, a check passed the server's 4-minute limit but kept running in the background, so the next checks were refused as "already running". Each check now has a deadline (`src/prazo.js`): every Tavily and Bifrost call gets only the time that is left, and calls still running at the deadline are cancelled, so the server is free again right after the limit (`testes/teste-prazo.js`).
 - One updated answer came back in the wrong language, so the language is now pinned.
 
@@ -274,7 +309,7 @@ What the run taught us, already fixed:
 | Technology | Purpose |
 |---|---|
 | Node.js 22.5+ (no framework) | Server, pipeline and tests; built-in `node:sqlite` |
-| Tavily Search and Extract | General, news (filtered by `time_range` per claim type), scientific and official-domain search; page extraction |
+| Tavily Search and Extract | General, news (filtered by `time_range` per claim type), scientific and official-domain search; page extraction; reading the page to audit (page audit) |
 | Bifrost by Maxim AI | AI gateway for every model call: fallback chain, routing info, rate-limit handling, per-stage labels |
 | OpenRouter and Groq (gpt-oss-20b, gpt-oss-120b) | The same open model from two providers, chained by Bifrost. The 13 Nov runs used Groq only; see the note below |
 | SQLite | Full verification trace |
@@ -288,6 +323,7 @@ Every model call goes to `http://localhost:8080/v1/chat/completions` (or the gat
 - **Rate limits.** If the whole chain is limited, Entrelinhas waits the `retry_after_ms` that Bifrost reports (at most 25 s) and tries once more. A daily quota cannot be waited out: on Groq's free tier, gpt-oss-20b has a daily token limit, which is why a second provider in the chain matters.
 - **It already happened for real.** On the night of 13 Nov, Groq's free tier hit its daily limit in the middle of a test run, and Groq's paid plan was "temporarily unavailable due to high demand". We moved the same model, `gpt-oss-20b`, to OpenRouter as the main provider, with Groq kept as the backup: one provider added in Bifrost and two lines of configuration (`BIFROST_MODEL=openrouter/openai/gpt-oss-20b`, `BIFROST_FALLBACKS=groq/openai/gpt-oss-20b,groq/openai/gpt-oss-120b`). No code changed. Runs before that switch (the 13 Nov benchmark, the held-out run and the public demo's recordings) used Groq; later runs say which provider answered in their gateway summary.
 - **Labels for observability.** Requests carry `x-bf-dim-app` and `x-bf-dim-stage` (decomposition, batch analysis, updated answer), plus request and verification IDs.
+- **Governance: a budget per site, per customer.** The public site does not call the model with a provider key. It uses a Bifrost **virtual key** with a US$ 2 daily budget and 300 calls an hour (`deploy/bifrost-config.json`, created fresh at each start by `deploy/iniciar.sh`). When the budget runs out, Bifrost refuses the call before any money is spent, and the page explains it. The same mechanism is how a paid version would work: one virtual key, with its own budget and allowed models, per customer plan. Tested before going live with `TESTAR-BIFROST.command`: the right key reaches the provider, a wrong key is refused by the gateway.
 - **Outage drill.** In live mode, the option *Simulate an outage of the main model* sends that check to a model that does not exist. The panel then shows Bifrost serving every step from a backup, without any change to the request code.
 
 ### Geek Room Global AI Hackathon 2026: challenge requirements
@@ -300,7 +336,7 @@ The selected problem statement is **Build a Stale-Answer Detector for AI Applica
 | 2. Freshness detection | Stale-risk triage before searching, with reasons such as category window, “currently” and past years (`src/risco-desatualizacao.js`), shown as the first panel. |
 | 3. Live verification | Tavily general, news, scientific and official searches plus extraction (`src/tavily.js`); one validated Bifrost analysis per claim (`src/analise-lote.js`). |
 | 4. Freshness score per claim | 0 to 100 = source recency × support share, with basis and confidence (`src/atualidade-afirmacao.js`). |
-| Tavily and Bifrost, meaningfully | Tavily for every search and extraction. Bifrost for every model call, with fallback chain, routing info, rate-limit handling and an outage drill (`src/bifrost.js`). |
+| Tavily and Bifrost, meaningfully | Tavily for every search and extraction, and to read the page in a page audit (`src/auditoria-pagina.js`). Bifrost for every model call, with fallback chain, routing info, rate-limit handling, an outage drill (`src/bifrost.js`) and, on the public site, a virtual key with a daily budget (`deploy/bifrost-config.json`). |
 | Expected outcome: which claims are supported by current sources | Verdict, agreement and sources per claim, plus the **updated answer** with citations (`src/resposta-corrigida.js`). |
 
 The scores are documented heuristics, not calibrated probabilities. See [`submission/FORM_COPY.md`](submission/FORM_COPY.md) and [`ESPECIFICACAO_FRESHNESS_SCORE.md`](notas/ESPECIFICACAO_FRESHNESS_SCORE.md). Official event: [HackCulture](https://hackculture.io/hackathons/ai-global-hackathon).
@@ -495,7 +531,7 @@ Provider API keys (OpenRouter, Groq) belong in the Bifrost configuration, not in
 npm test
 ```
 
-`npm test` runs `rodar-testes.js`, which executes all 56 offline test files and prints a summary. Every test uses simulated Tavily/Bifrost responses and SQLite `:memory:`; credentials are blanked for the run, so no paid call is possible. Coverage includes Portuguese reading (numbers, currency, qualifiers, dates), source types and diverse selection, batch analysis validation, source agreement and verdict rules, freshness scoring, date scopes, claim categorization, aggregation policy (including adversarial cases), source independence, Tavily collection IDs, the 18 temporal-comparison criteria, persistence, robustness against malformed model output, and the web server (input validation, size limits, CSP, no credential exposure).
+`npm test` runs `rodar-testes.js`, which executes all 59 offline test files and prints a summary. Every test uses simulated Tavily/Bifrost responses and SQLite `:memory:`; credentials are blanked for the run, so no paid call is possible. Coverage includes Portuguese reading (numbers, currency, qualifiers, dates), source types and diverse selection, batch analysis validation, source agreement and verdict rules, freshness scoring, date scopes, claim categorization, aggregation policy (including adversarial cases), source independence, Tavily collection IDs, the 18 temporal-comparison criteria, persistence, robustness against malformed model output, and the web server (input validation, size limits, CSP, no credential exposure).
 
 ### 6. Start the web interface
 
@@ -572,7 +608,7 @@ entrelinhas/
 
 ## Testing and validation
 
-See [5. Run the automated tests](#5-run-the-automated-tests) for what the 56 offline test files cover, and [Accuracy on real claims](#accuracy-on-real-claims) for the live benchmark. Real API connectivity is checked separately with `node index.js`.
+See [5. Run the automated tests](#5-run-the-automated-tests) for what the 59 offline test files cover, and [Accuracy on real claims](#accuracy-on-real-claims) for the live benchmark. Real API connectivity is checked separately with `node index.js`.
 
 ## Current scope and limitations
 

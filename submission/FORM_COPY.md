@@ -2,7 +2,7 @@
 
 **Selected Problem Statement:** Build a Stale-Answer Detector for AI Applications (requires Tavily and Bifrost).
 
-**Status (13 Nov 2026):** working prototype with a web interface, live Tavily + Bifrost verification, a public demo that replays recorded live checks without keys, a real-claims accuracy benchmark and 56 offline test files.
+**Status (20 Nov 2026):** working prototype with a web interface, live Tavily + Bifrost verification, a public demo that replays recorded live checks without keys, page audit by link, a real-claims benchmark (73 claims, against the model alone and with web search) and 59 offline test files.
 
 ## Project title
 
@@ -62,7 +62,9 @@ Entrelinhas works in six steps.
 - a corrected answer whose numbers and dates come only from verified quotes;
 - Bifrost failover in the report;
 - Portuguese-aware reading;
-- a real-claims benchmark.
+- **page audit**: paste the link of a help center or FAQ, Tavily reads it, and each fact is checked (the page never proves itself);
+- **Bifrost governance on the live site**: a virtual key with a daily budget, the same mechanism a paid plan would use per customer;
+- a real-claims benchmark against the model alone and the model with web search.
 
 **Potential impact:** AI products, support teams and newsrooms could recheck answers before reuse, including for Portuguese-speaking users. This is a potential benefit, not a measured deployment result.
 
@@ -79,28 +81,32 @@ Entrelinhas works in six steps.
 
 ## Accuracy on real claims
 
-On 15 real claims with known answers (8 true, 7 outdated, in Portuguese and English):
-- live run on 13 Nov 2026: **14 of 15** exact verdicts, **15 of 15** on the right side;
-- the same recorded evidence re-scored with the current, stricter rules (1.4.0, after two adversarial reviews): **13 of 15** exact, **15 of 15** on the right side. Pix dropped to “Supported, unconfirmed” because most of its sources are company blogs;
-- in both, **0** outdated claims were confirmed as true and **0** true claims were marked as contradicted.
+**73 real claims with known answers**, in four sets written between 12 and 19 Nov 2026 (Portuguese and English), each run live and re-scored with the current rules (1.9.0) from the same recorded evidence, compared with the same model asked alone:
 
-Independent check: **8 new claims** written after the rules were tuned (never used to tune them), run live in two parts on 13 Nov (3 with rules 1.2.0, 5 with 1.3.0): **6 of 8 exact, 0 wrong**. The two misses (a too-literal quote check, and a search anchored on the old value) were fixed after the run, and both came back exact when re-run live; they are reported separately because the fixes came after seeing them. A final adversarial review then tightened the rules again (1.4.0). Re-scored with them, the same evidence gives **4 of 8 exact, 2 partial, 2 not verifiable, still 0 wrong**: Pichai's sources are Wikipedia, company profiles and a Facebook post with no official or news source, and Node.js 18 was contradicted only by one vendor blog, so both are now cautious instead of confident. Re-run live with the final rules the same night: **7 of 8 exact, 1 not verifiable, 0 wrong**; the two Selic claims re-run live were both exact, with bcb.gov.br pages among the sources.
+| 73 real claims | Entrelinhas | Same model alone |
+|---|---|---|
+| Exact verdict | **50** | 42 |
+| Wrong with confidence | **1** | **28** |
+| Cautious (yellow, conflicting, not verifiable) | 22 | 3 |
 
-Larger run (14 Nov): **28 more claims**, 27 ran (1 external error). **15 exact, 4 partial, 7 not verifiable, 0 true claims called false, and 1 serious error**: “Python 3.14 is the newest release” was confirmed by pages from before Python 3.15 came out. We fixed the rule (a claim that says it holds *now* is not green when every confirming source is older than its window), but that case is no longer an independent test and we still count it as an error. In the same run, Entrelinhas caught a change our own test labels missed: Nvidia's CEO resigned two days earlier, and the check came back *Conflicting* with the news sources that reported it. Main weakness found: when a source names a successor (a new pope, a newer version), the model often calls it “insufficient” instead of “contradicts”, so 6 outdated claims ended as not verifiable.
+**Unseen set (22 claims written on 19 Nov, never used to tune the rules before the run).** We also asked the same model **with web search** (OpenRouter's web plugin):
 
-Compared with **the same model alone**, asked with today's date and no search, on the same 23 claims: both get **17** exact, but the model alone got **5 wrong**, with full confidence, including confirming the outdated R$ 1.518 minimum wage as valid; Entrelinhas (current rules) got **0 wrong** and marked the other 6 as unsure, and every verdict comes with sources.
+| Same 22 claims | Entrelinhas live | Entrelinhas, rules 1.9.0 | Model alone | Model with web search |
+|---|---|---|---|---|
+| Exact | 8 | 11 | 11 | **20** |
+| Wrong with confidence | **0** | **0** | 11 | 1 |
 
-Then we fixed that weakness (rules 1.6.0: a source naming a successor contradicts the old claim) and re-ran the same 28 live: **18 exact (was 15), 2 not verifiable (was 7), 0 true claims called false, and 3 serious errors (was 1)**. Francis, Tim Cook, Java 21 and Nvidia now come back red. The new serious errors: Node.js 24 came back green because the model inferred "Active LTS" from a support end date on a fresh page that does not say so, and Ubuntu 24.04 came back yellow with a single source. Searches are live, so part of the difference is search variation. The rule was written after seeing these cases, so it is not an independent test.
+What we learned, without softening it:
+- The model alone said Warren Buffett still runs Berkshire Hathaway, Pat Gelsinger still runs Intel and Bulgaria still uses the lev.
+- An AI with web search is strong on single yes/no questions. Its one confident error was Brazil's income tax exemption, which Entrelinhas caught with a current official source.
+- Entrelinhas never stated something false with confidence on this set, but it was too cautious: big newsrooms counted as "other website" and un.org was not official. Rules 1.9.0 fix that; that column was written after seeing these cases, so the live column is the independent one.
+- Over all 73 claims, the one confident error was "Node.js 24 is the current Active LTS", inferred by the model from a support end date. Rules 1.8.0 now forbid inferring a status the source does not state.
 
-The same model alone on those 28: **14 exact and 12 wrong**: it said Tim Cook and Jensen Huang are still CEOs and Francis is still pope, and called Leo XIV, Galípolo at the central bank and Node.js 26 LTS outdated. Across all 51 distinct claims: Entrelinhas **35 exact and 1 confident wrong answer**; the model alone **31 exact and 17 confident wrong answers**.
-
-The rules were first improved on the same 15 claims (11 of 15 exact on 12 Nov), which is why the 8 new claims matter. 51 claims in all show behavior; they are not a statistical accuracy estimate.
-
-Every check of the run is recorded in `gravacoes/`, and the results are in `avaliacao/`.
+**Our message:** an AI with search gives you an answer; Entrelinhas shows its work, claim by claim: which sources agree, what kind they are, how recent they are, quotes checked against each page, and a warning instead of a guess when the evidence is weak. 73 claims show behavior; they are not a statistical accuracy estimate. Every check is recorded in `gravacoes/`, and all results are in `avaliacao/`.
 
 ## Architecture and technology
 
-- Node.js 22.5+ (built-in `node:sqlite`), no framework; local web server on 127.0.0.1.
+- Node.js 22.13+ (built-in `node:sqlite`), no framework; web server local or public (Render), with per-person and daily limits.
 - Tavily Search (general, Brazilian news, scientific and official domains) and Tavily Extract.
 - Bifrost HTTP gateway: fallback chain across providers (gpt-oss-20b on OpenRouter → gpt-oss-20b and gpt-oss-120b on Groq; the 13 Nov runs used Groq only), routing info, `x-bf-dim-*` labels, rate-limit retry.
 - Deterministic modules: categories, triage, Portuguese reading, source types, dependency grouping, agreement, freshness, verdicts.
@@ -108,7 +114,7 @@ Every check of the run is recorded in `gravacoes/`, and the results are in `aval
 
 ## Limitations
 
-- Live checks run locally with your own Tavily and Bifrost keys. The public demo (https://contatoalicecandido-lab.github.io/entrelinhas/) replays recorded live checks and built-in examples without keys.
+- The live site is limited to protect credits: 5 checks per person and 25 in total per day, up to 3 claims per answer or 5 facts per page, plus a Bifrost daily budget. The public demo (https://contatoalicecandido-lab.github.io/entrelinhas/) replays recorded live checks with no wait.
 - Scores are documented heuristics, not calibrated probabilities; independent sources can share an error.
 - Validity windows are configurable defaults. Fast official values have their own (Selic 45 days, inflation 30 days); others may still need one.
 - The free model tier limits tokens per minute; a check takes about 15 to 90 s.
