@@ -1,17 +1,17 @@
 {
-  "gerado_em": "2026-11-20T19:33:32.895Z",
+  "gerado_em": "2026-11-20T20:20:27.191Z",
   "regras": "1.9.0",
   "metodo": "Same recorded evidence as the live run, re-scored with the current rules. No new searches or model calls.",
   "resumo": {
-    "total": 21,
-    "acertos": 10,
+    "total": 22,
+    "acertos": 11,
     "parciais": 6,
     "sem_decisao": 5,
     "erros": 0,
     "erros_graves_confirmou_desatualizada": 0,
-    "acuracia_estrita": 0.476,
-    "direcao_correta": 0.762,
-    "nao_rodaram": 1
+    "acuracia_estrita": 0.5,
+    "direcao_correta": 0.773,
+    "nao_rodaram": 0
   },
   "linhas": [
     {
@@ -161,11 +161,11 @@
     {
       "id": "pt-teto-inss-8475",
       "esperado": "ATUAL",
-      "veredito_na_rodada": null,
-      "veredito_regras_atuais": null,
-      "nota_atualidade": null,
-      "resultado": "NAO_RODOU",
-      "gravacao": null
+      "veredito_na_rodada": "ATUAL",
+      "veredito_regras_atuais": "ATUAL",
+      "nota_atualidade": 49,
+      "resultado": "ACERTO",
+      "gravacao": "gravacoes/2026-11-20T19-45-27-453Z-o-teto-do-inss-em-2026-e-de-r-8-475-55.json"
     },
     {
       "id": "pt-teto-inss-8157",

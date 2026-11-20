@@ -1,18 +1,18 @@
 {
-  "executado_em": "2026-11-20T19:24:35.297Z",
+  "executado_em": "2026-11-20T19:45:35.483Z",
   "servidor": "http://127.0.0.1:3001",
   "resumo": {
-    "total": 21,
-    "acertos": 7,
+    "total": 22,
+    "acertos": 8,
     "parciais": 8,
     "sem_decisao": 6,
     "erros": 0,
     "erros_graves_confirmou_desatualizada": 0,
-    "acuracia_estrita": 0.333,
-    "direcao_correta": 0.714,
-    "falhas_execucao": 1,
+    "acuracia_estrita": 0.364,
+    "direcao_correta": 0.727,
+    "falhas_execucao": 0,
     "gateway": {
-      "chamadas_ao_modelo": 71,
+      "chamadas_ao_modelo": 74,
       "respondidas_por_modelo_reserva": 0,
       "respostas_invalidas_refeitas": 1
     }
@@ -245,12 +245,16 @@
     {
       "id": "pt-teto-inss-8475",
       "esperado": "ATUAL",
-      "veredito": null,
-      "nota_atualidade": null,
-      "resultado": "FALHA_EXECUCAO",
-      "segundos": 2,
-      "gateway": null,
-      "erro": "An external service (search or AI model) failed. Details are in the server log; try again in a few minutes."
+      "veredito": "ATUAL",
+      "nota_atualidade": 49,
+      "resultado": "ACERTO",
+      "segundos": 40,
+      "gateway": {
+        "chamadas": 3,
+        "respondidas_por_reserva": 0,
+        "respostas_invalidas_refeitas": 0
+      },
+      "erro": null
     },
     {
       "id": "pt-teto-inss-8157",

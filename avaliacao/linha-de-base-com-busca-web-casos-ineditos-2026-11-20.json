@@ -1,169 +1,169 @@
 {
-  "executado_em": "2026-11-20T19:29:17.144Z",
+  "executado_em": "2026-11-20T19:48:44.159Z",
   "metodo": "mesmo modelo via Bifrost COM busca na web (openrouter/openai/gpt-oss-20b:online)",
   "resumo": {
-    "total": 0,
-    "acertos": 0,
-    "sem_decisao": 0,
+    "total": 22,
+    "acertos": 20,
+    "sem_decisao": 1,
     "erros": 0,
-    "erros_graves_confirmou_desatualizada": 0,
-    "acuracia_estrita": null,
-    "falhas_execucao": 22
+    "erros_graves_confirmou_desatualizada": 1,
+    "acuracia_estrita": 0.909,
+    "falhas_execucao": 0
   },
   "linhas": [
     {
       "id": "en-abel-berkshire",
       "esperado": "ATUAL",
-      "resposta": null,
-      "resultado": "FALHA_EXECUCAO",
-      "erro": "Erro Bifrost (403): {\"type\":\"model_blocked\",\"is_bifrost_error\":false,\"status_code\":403,\"error\":{\"message\":\"Model 'openai/gpt-oss-20b:online' is not allowed for virtual key 'entrelinhas-dev'\"},\"extra_fields\":{\"routing_info\":{},\"provider\":\"openrouter\",\"original_model_requested\":\"openai/gpt-oss-20b:online\",\"resolved_model_used\":\"openai/gpt-oss-20b:online\",\"request_type\":\"chat_completion\",\"error_type\":\"policy_model_blocked\"}}"
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
     },
     {
       "id": "en-buffett-berkshire",
       "esperado": "DESATUALIZADA",
-      "resposta": null,
-      "resultado": "FALHA_EXECUCAO",
-      "erro": "Erro Bifrost (403): {\"type\":\"model_blocked\",\"is_bifrost_error\":false,\"status_code\":403,\"error\":{\"message\":\"Model 'openai/gpt-oss-20b:online' is not allowed for virtual key 'entrelinhas-dev'\"},\"extra_fields\":{\"routing_info\":{},\"provider\":\"openrouter\",\"original_model_requested\":\"openai/gpt-oss-20b:online\",\"resolved_model_used\":\"openai/gpt-oss-20b:online\",\"request_type\":\"chat_completion\",\"error_type\":\"policy_model_blocked\"}}"
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
     },
     {
       "id": "en-damaro-disney",
       "esperado": "ATUAL",
-      "resposta": null,
-      "resultado": "FALHA_EXECUCAO",
-      "erro": "Erro Bifrost (403): {\"type\":\"model_blocked\",\"is_bifrost_error\":false,\"status_code\":403,\"error\":{\"message\":\"Model 'openai/gpt-oss-20b:online' is not allowed for virtual key 'entrelinhas-dev'\"},\"extra_fields\":{\"routing_info\":{},\"provider\":\"openrouter\",\"original_model_requested\":\"openai/gpt-oss-20b:online\",\"resolved_model_used\":\"openai/gpt-oss-20b:online\",\"request_type\":\"chat_completion\",\"error_type\":\"policy_model_blocked\"}}"
+      "resposta": "UNSURE",
+      "resultado": "SEM_DECISAO",
+      "erro": null
     },
     {
       "id": "pt-iger-disney",
       "esperado": "DESATUALIZADA",
-      "resposta": null,
-      "resultado": "FALHA_EXECUCAO",
-      "erro": "Erro Bifrost (403): {\"type\":\"model_blocked\",\"is_bifrost_error\":false,\"status_code\":403,\"error\":{\"message\":\"Model 'openai/gpt-oss-20b:online' is not allowed for virtual key 'entrelinhas-dev'\"},\"extra_fields\":{\"routing_info\":{},\"provider\":\"openrouter\",\"original_model_requested\":\"openai/gpt-oss-20b:online\",\"resolved_model_used\":\"openai/gpt-oss-20b:online\",\"request_type\":\"chat_completion\",\"error_type\":\"policy_model_blocked\"}}"
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
     },
     {
       "id": "pt-bulgaria-euro",
       "esperado": "ATUAL",
-      "resposta": null,
-      "resultado": "FALHA_EXECUCAO",
-      "erro": "Erro Bifrost (403): {\"type\":\"model_blocked\",\"is_bifrost_error\":false,\"status_code\":403,\"error\":{\"message\":\"Model 'openai/gpt-oss-20b:online' is not allowed for virtual key 'entrelinhas-dev'\"},\"extra_fields\":{\"routing_info\":{},\"provider\":\"openrouter\",\"original_model_requested\":\"openai/gpt-oss-20b:online\",\"resolved_model_used\":\"openai/gpt-oss-20b:online\",\"request_type\":\"chat_completion\",\"error_type\":\"policy_model_blocked\"}}"
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
     },
     {
       "id": "en-bulgaria-lev",
       "esperado": "DESATUALIZADA",
-      "resposta": null,
-      "resultado": "FALHA_EXECUCAO",
-      "erro": "Erro Bifrost (403): {\"type\":\"model_blocked\",\"is_bifrost_error\":false,\"status_code\":403,\"error\":{\"message\":\"Model 'openai/gpt-oss-20b:online' is not allowed for virtual key 'entrelinhas-dev'\"},\"extra_fields\":{\"routing_info\":{},\"provider\":\"openrouter\",\"original_model_requested\":\"openai/gpt-oss-20b:online\",\"resolved_model_used\":\"openai/gpt-oss-20b:online\",\"request_type\":\"chat_completion\",\"error_type\":\"policy_model_blocked\"}}"
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
     },
     {
       "id": "en-croatia-kuna",
       "esperado": "DESATUALIZADA",
-      "resposta": null,
-      "resultado": "FALHA_EXECUCAO",
-      "erro": "Erro Bifrost (403): {\"type\":\"model_blocked\",\"is_bifrost_error\":false,\"status_code\":403,\"error\":{\"message\":\"Model 'openai/gpt-oss-20b:online' is not allowed for virtual key 'entrelinhas-dev'\"},\"extra_fields\":{\"routing_info\":{},\"provider\":\"openrouter\",\"original_model_requested\":\"openai/gpt-oss-20b:online\",\"resolved_model_used\":\"openai/gpt-oss-20b:online\",\"request_type\":\"chat_completion\",\"error_type\":\"policy_model_blocked\"}}"
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
     },
     {
       "id": "en-debian13-stable",
       "esperado": "ATUAL",
-      "resposta": null,
-      "resultado": "FALHA_EXECUCAO",
-      "erro": "Erro Bifrost (403): {\"type\":\"model_blocked\",\"is_bifrost_error\":false,\"status_code\":403,\"error\":{\"message\":\"Model 'openai/gpt-oss-20b:online' is not allowed for virtual key 'entrelinhas-dev'\"},\"extra_fields\":{\"routing_info\":{},\"provider\":\"openrouter\",\"original_model_requested\":\"openai/gpt-oss-20b:online\",\"resolved_model_used\":\"openai/gpt-oss-20b:online\",\"request_type\":\"chat_completion\",\"error_type\":\"policy_model_blocked\"}}"
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
     },
     {
       "id": "en-debian12-stable",
       "esperado": "DESATUALIZADA",
-      "resposta": null,
-      "resultado": "FALHA_EXECUCAO",
-      "erro": "Erro Bifrost (403): {\"type\":\"model_blocked\",\"is_bifrost_error\":false,\"status_code\":403,\"error\":{\"message\":\"Model 'openai/gpt-oss-20b:online' is not allowed for virtual key 'entrelinhas-dev'\"},\"extra_fields\":{\"routing_info\":{},\"provider\":\"openrouter\",\"original_model_requested\":\"openai/gpt-oss-20b:online\",\"resolved_model_used\":\"openai/gpt-oss-20b:online\",\"request_type\":\"chat_completion\",\"error_type\":\"policy_model_blocked\"}}"
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
     },
     {
       "id": "pt-ir-5mil",
       "esperado": "ATUAL",
-      "resposta": null,
-      "resultado": "FALHA_EXECUCAO",
-      "erro": "Erro Bifrost (403): {\"type\":\"model_blocked\",\"is_bifrost_error\":false,\"status_code\":403,\"error\":{\"message\":\"Model 'openai/gpt-oss-20b:online' is not allowed for virtual key 'entrelinhas-dev'\"},\"extra_fields\":{\"routing_info\":{},\"provider\":\"openrouter\",\"original_model_requested\":\"openai/gpt-oss-20b:online\",\"resolved_model_used\":\"openai/gpt-oss-20b:online\",\"request_type\":\"chat_completion\",\"error_type\":\"policy_model_blocked\"}}"
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
     },
     {
       "id": "pt-ir-2824",
       "esperado": "DESATUALIZADA",
-      "resposta": null,
-      "resultado": "FALHA_EXECUCAO",
-      "erro": "Erro Bifrost (403): {\"type\":\"model_blocked\",\"is_bifrost_error\":false,\"status_code\":403,\"error\":{\"message\":\"Model 'openai/gpt-oss-20b:online' is not allowed for virtual key 'entrelinhas-dev'\"},\"extra_fields\":{\"routing_info\":{},\"provider\":\"openrouter\",\"original_model_requested\":\"openai/gpt-oss-20b:online\",\"resolved_model_used\":\"openai/gpt-oss-20b:online\",\"request_type\":\"chat_completion\",\"error_type\":\"policy_model_blocked\"}}"
+      "resposta": "TRUE",
+      "resultado": "ERRO_GRAVE",
+      "erro": null
     },
     {
       "id": "en-tan-intel",
       "esperado": "ATUAL",
-      "resposta": null,
-      "resultado": "FALHA_EXECUCAO",
-      "erro": "Erro Bifrost (403): {\"type\":\"model_blocked\",\"is_bifrost_error\":false,\"status_code\":403,\"error\":{\"message\":\"Model 'openai/gpt-oss-20b:online' is not allowed for virtual key 'entrelinhas-dev'\"},\"extra_fields\":{\"routing_info\":{},\"provider\":\"openrouter\",\"original_model_requested\":\"openai/gpt-oss-20b:online\",\"resolved_model_used\":\"openai/gpt-oss-20b:online\",\"request_type\":\"chat_completion\",\"error_type\":\"policy_model_blocked\"}}"
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
     },
     {
       "id": "en-gelsinger-intel",
       "esperado": "DESATUALIZADA",
-      "resposta": null,
-      "resultado": "FALHA_EXECUCAO",
-      "erro": "Erro Bifrost (403): {\"type\":\"model_blocked\",\"is_bifrost_error\":false,\"status_code\":403,\"error\":{\"message\":\"Model 'openai/gpt-oss-20b:online' is not allowed for virtual key 'entrelinhas-dev'\"},\"extra_fields\":{\"routing_info\":{},\"provider\":\"openrouter\",\"original_model_requested\":\"openai/gpt-oss-20b:online\",\"resolved_model_used\":\"openai/gpt-oss-20b:online\",\"request_type\":\"chat_completion\",\"error_type\":\"policy_model_blocked\"}}"
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
     },
     {
       "id": "en-guterres-un",
       "esperado": "ATUAL",
-      "resposta": null,
-      "resultado": "FALHA_EXECUCAO",
-      "erro": "Erro Bifrost (403): {\"type\":\"model_blocked\",\"is_bifrost_error\":false,\"status_code\":403,\"error\":{\"message\":\"Model 'openai/gpt-oss-20b:online' is not allowed for virtual key 'entrelinhas-dev'\"},\"extra_fields\":{\"routing_info\":{},\"provider\":\"openrouter\",\"original_model_requested\":\"openai/gpt-oss-20b:online\",\"resolved_model_used\":\"openai/gpt-oss-20b:online\",\"request_type\":\"chat_completion\",\"error_type\":\"policy_model_blocked\"}}"
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
     },
     {
       "id": "en-macos27-newest",
       "esperado": "ATUAL",
-      "resposta": null,
-      "resultado": "FALHA_EXECUCAO",
-      "erro": "Erro Bifrost (403): {\"type\":\"model_blocked\",\"is_bifrost_error\":false,\"status_code\":403,\"error\":{\"message\":\"Model 'openai/gpt-oss-20b:online' is not allowed for virtual key 'entrelinhas-dev'\"},\"extra_fields\":{\"routing_info\":{},\"provider\":\"openrouter\",\"original_model_requested\":\"openai/gpt-oss-20b:online\",\"resolved_model_used\":\"openai/gpt-oss-20b:online\",\"request_type\":\"chat_completion\",\"error_type\":\"policy_model_blocked\"}}"
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
     },
     {
       "id": "en-tahoe-newest",
       "esperado": "DESATUALIZADA",
-      "resposta": null,
-      "resultado": "FALHA_EXECUCAO",
-      "erro": "Erro Bifrost (403): {\"type\":\"model_blocked\",\"is_bifrost_error\":false,\"status_code\":403,\"error\":{\"message\":\"Model 'openai/gpt-oss-20b:online' is not allowed for virtual key 'entrelinhas-dev'\"},\"extra_fields\":{\"routing_info\":{},\"provider\":\"openrouter\",\"original_model_requested\":\"openai/gpt-oss-20b:online\",\"resolved_model_used\":\"openai/gpt-oss-20b:online\",\"request_type\":\"chat_completion\",\"error_type\":\"policy_model_blocked\"}}"
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
     },
     {
       "id": "pt-teto-inss-8475",
       "esperado": "ATUAL",
-      "resposta": null,
-      "resultado": "FALHA_EXECUCAO",
-      "erro": "Erro Bifrost (403): {\"type\":\"model_blocked\",\"is_bifrost_error\":false,\"status_code\":403,\"error\":{\"message\":\"Model 'openai/gpt-oss-20b:online' is not allowed for virtual key 'entrelinhas-dev'\"},\"extra_fields\":{\"routing_info\":{},\"provider\":\"openrouter\",\"original_model_requested\":\"openai/gpt-oss-20b:online\",\"resolved_model_used\":\"openai/gpt-oss-20b:online\",\"request_type\":\"chat_completion\",\"error_type\":\"policy_model_blocked\"}}"
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
     },
     {
       "id": "pt-teto-inss-8157",
       "esperado": "DESATUALIZADA",
-      "resposta": null,
-      "resultado": "FALHA_EXECUCAO",
-      "erro": "Erro Bifrost (403): {\"type\":\"model_blocked\",\"is_bifrost_error\":false,\"status_code\":403,\"error\":{\"message\":\"Model 'openai/gpt-oss-20b:online' is not allowed for virtual key 'entrelinhas-dev'\"},\"extra_fields\":{\"routing_info\":{},\"provider\":\"openrouter\",\"original_model_requested\":\"openai/gpt-oss-20b:online\",\"resolved_model_used\":\"openai/gpt-oss-20b:online\",\"request_type\":\"chat_completion\",\"error_type\":\"policy_model_blocked\"}}"
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
     },
     {
       "id": "pt-bpc-1621",
       "esperado": "ATUAL",
-      "resposta": null,
-      "resultado": "FALHA_EXECUCAO",
-      "erro": "Erro Bifrost (403): {\"type\":\"model_blocked\",\"is_bifrost_error\":false,\"status_code\":403,\"error\":{\"message\":\"Model 'openai/gpt-oss-20b:online' is not allowed for virtual key 'entrelinhas-dev'\"},\"extra_fields\":{\"routing_info\":{},\"provider\":\"openrouter\",\"original_model_requested\":\"openai/gpt-oss-20b:online\",\"resolved_model_used\":\"openai/gpt-oss-20b:online\",\"request_type\":\"chat_completion\",\"error_type\":\"policy_model_blocked\"}}"
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
     },
     {
       "id": "pt-bpc-1518",
       "esperado": "DESATUALIZADA",
-      "resposta": null,
-      "resultado": "FALHA_EXECUCAO",
-      "erro": "Erro Bifrost (403): {\"type\":\"model_blocked\",\"is_bifrost_error\":false,\"status_code\":403,\"error\":{\"message\":\"Model 'openai/gpt-oss-20b:online' is not allowed for virtual key 'entrelinhas-dev'\"},\"extra_fields\":{\"routing_info\":{},\"provider\":\"openrouter\",\"original_model_requested\":\"openai/gpt-oss-20b:online\",\"resolved_model_used\":\"openai/gpt-oss-20b:online\",\"request_type\":\"chat_completion\",\"error_type\":\"policy_model_blocked\"}}"
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
     },
     {
       "id": "en-spotify-1299",
       "esperado": "ATUAL",
-      "resposta": null,
-      "resultado": "FALHA_EXECUCAO",
-      "erro": "Erro Bifrost (403): {\"type\":\"model_blocked\",\"is_bifrost_error\":false,\"status_code\":403,\"error\":{\"message\":\"Model 'openai/gpt-oss-20b:online' is not allowed for virtual key 'entrelinhas-dev'\"},\"extra_fields\":{\"routing_info\":{},\"provider\":\"openrouter\",\"original_model_requested\":\"openai/gpt-oss-20b:online\",\"resolved_model_used\":\"openai/gpt-oss-20b:online\",\"request_type\":\"chat_completion\",\"error_type\":\"policy_model_blocked\"}}"
+      "resposta": "TRUE",
+      "resultado": "ACERTO",
+      "erro": null
     },
     {
       "id": "en-spotify-1199",
       "esperado": "DESATUALIZADA",
-      "resposta": null,
-      "resultado": "FALHA_EXECUCAO",
-      "erro": "Erro Bifrost (403): {\"type\":\"model_blocked\",\"is_bifrost_error\":false,\"status_code\":403,\"error\":{\"message\":\"Model 'openai/gpt-oss-20b:online' is not allowed for virtual key 'entrelinhas-dev'\"},\"extra_fields\":{\"routing_info\":{},\"provider\":\"openrouter\",\"original_model_requested\":\"openai/gpt-oss-20b:online\",\"resolved_model_used\":\"openai/gpt-oss-20b:online\",\"request_type\":\"chat_completion\",\"error_type\":\"policy_model_blocked\"}}"
+      "resposta": "OUTDATED",
+      "resultado": "ACERTO",
+      "erro": null
     }
   ]
 }
