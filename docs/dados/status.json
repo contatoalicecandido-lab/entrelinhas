@@ -30,6 +30,12 @@
    "data": "2026-11-12T23:26:59.580Z"
   },
   {
+   "rotulo": "Live · Page audit: a help page with old facts",
+   "texto": "https://contatoalicecandido-lab.github.io/entrelinhas/pagina-exemplo.html",
+   "arquivo": "dados/gravacoes/2026-11-20T20-35-46-920Z-this-is-a-sample-page-written-for-the-entrelinha.json",
+   "data": "2026-11-20T20:35:46.920Z"
+  },
+  {
    "rotulo": "Live · Netflix price, in slang (PT)",
    "texto": "O Netflix padrão tá saindo por 44,90 conto por mês e o zap é de graça",
    "arquivo": "dados/gravacoes/2026-11-13T14-04-12-875Z-o-netflix-padrao-ta-saindo-por-44-90-conto-por-m.json",
