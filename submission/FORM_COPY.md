@@ -63,7 +63,7 @@ Entrelinhas works in six steps.
 - Bifrost failover in the report;
 - Portuguese-aware reading;
 - **page audit**: paste the link of a help center or FAQ, Tavily reads it, and each fact is checked (the page never proves itself);
-- **Bifrost governance on the live site**: a virtual key with a daily budget, the same mechanism a paid plan would use per customer;
+- **Bifrost governance**: a virtual key with a daily budget, the same mechanism a paid plan would use per customer (tested locally; on Render's free plan Bifrost's SQLite store can lock at start, so the site falls back to file-only config);
 - a real-claims benchmark against the model alone and the model with web search.
 
 **Potential impact:** AI products, support teams and newsrooms could recheck answers before reuse, including for Portuguese-speaking users. This is a potential benefit, not a measured deployment result.
@@ -114,7 +114,7 @@ What we learned, without softening it:
 
 ## Limitations
 
-- The live site is limited to protect credits: 5 checks per person and 25 in total per day, up to 3 claims per answer or 5 facts per page, plus a Bifrost daily budget. The public demo (https://contatoalicecandido-lab.github.io/entrelinhas/) replays recorded live checks with no wait.
+- The live site is limited to protect credits: 5 checks per person and 25 in total per day, up to 3 claims per answer or 5 facts per page. The public demo (https://contatoalicecandido-lab.github.io/entrelinhas/) replays recorded live checks with no wait.
 - Scores are documented heuristics, not calibrated probabilities; independent sources can share an error.
 - Validity windows are configurable defaults. Fast official values have their own (Selic 45 days, inflation 30 days); others may still need one.
 - The free model tier limits tokens per minute; a check takes about 15 to 90 s.
